@@ -22,7 +22,7 @@ export default function CapitalPage() {
   return (
     <div className="pt-28 pb-20">
       {/* Capital Header */}
-      <section className="relative py-14 border-b border-white/[0.06] bg-[#07080A]">
+      <section className="relative py-14 border-b border-border bg-surface-100/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3 max-w-3xl">
@@ -30,14 +30,14 @@ export default function CapitalPage() {
                 <Badge variant="emerald" size="md" pulse>
                   1008 Capital // Seed Syndicate Board
                 </Badge>
-                <span className="text-xs font-mono text-muted">Curated Domain Deals</span>
+                <span className="text-xs font-mono text-muted-foreground">Curated Domain Deals</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans">
+              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
                 Back mature operators building in Bharat.
               </h1>
 
-              <p className="text-sm sm:text-base text-muted leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Access pre-screened seed-stage deal flow from 1008 Studio cohorts and network ventures.
                 Every deal features reference-checked corporate veterans, verified codebases, and audited unit economics.
               </p>
@@ -56,37 +56,37 @@ export default function CapitalPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         {/* Syndicate Standards Banner */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="p-4 rounded-xl bg-surface-100/60 border border-white/[0.06] flex items-start gap-3">
-            <ShieldCheck className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
+          <div className="p-4 rounded-xl bg-surface-50 border border-border flex items-start gap-3 shadow-xs">
+            <ShieldCheck className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
             <div>
-              <div className="text-xs font-mono uppercase text-white font-semibold mb-0.5">
+              <div className="text-xs font-mono uppercase text-foreground font-semibold mb-0.5">
                 Audited Codebases
               </div>
-              <p className="text-xs text-muted">
+              <p className="text-xs text-muted-foreground">
                 Production-grade Next.js, clean DB schemas, and full IP assignment to the Indian corporate entity.
               </p>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-surface-100/60 border border-white/[0.06] flex items-start gap-3">
-            <CheckCircle2 className="h-5 w-5 text-amber-400 shrink-0 mt-0.5" />
+          <div className="p-4 rounded-xl bg-surface-50 border border-border flex items-start gap-3 shadow-xs">
+            <CheckCircle2 className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
             <div>
-              <div className="text-xs font-mono uppercase text-white font-semibold mb-0.5">
+              <div className="text-xs font-mono uppercase text-foreground font-semibold mb-0.5">
                 Domain Veteran Founders
               </div>
-              <p className="text-xs text-muted">
+              <p className="text-xs text-muted-foreground">
                 Founders average 14+ years of leadership at Fortis, Marico, DLF, Bharat Forge, or Tier-1 banks.
               </p>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-surface-100/60 border border-white/[0.06] flex items-start gap-3">
-            <TrendingUp className="h-5 w-5 text-cyan-400 shrink-0 mt-0.5" />
+          <div className="p-4 rounded-xl bg-surface-50 border border-border flex items-start gap-3 shadow-xs">
+            <TrendingUp className="h-5 w-5 text-cyan-500 shrink-0 mt-0.5" />
             <div>
-              <div className="text-xs font-mono uppercase text-white font-semibold mb-0.5">
+              <div className="text-xs font-mono uppercase text-foreground font-semibold mb-0.5">
                 Standardized Term Sheets
               </div>
-              <p className="text-xs text-muted">
+              <p className="text-xs text-muted-foreground">
                 Clean founder reverse-vesting, 10%-12% ESOP trust, and transparent reporting governance.
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function CapitalPage() {
 
         {/* Live Deal Cards */}
         <div className="space-y-6">
-          <div className="flex items-center justify-between text-xs font-mono text-muted">
+          <div className="flex items-center justify-between text-xs font-mono text-muted-foreground">
             <span>ACTIVE SEED ALLOCATIONS ({initialDealCards.length})</span>
             <span>Allocations open to accredited angels & CXOs</span>
           </div>

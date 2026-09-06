@@ -33,17 +33,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-gradient-to-b from-amber-400 to-amber-500 text-black font-semibold shadow-[0_0_20px_rgba(245,158,11,0.25)] hover:shadow-[0_0_25px_rgba(245,158,11,0.4)] hover:from-amber-300 hover:to-amber-400 border border-amber-300/40",
+        "bg-gradient-to-b from-amber-400 to-amber-500 text-slate-950 font-semibold shadow-sm hover:shadow-md hover:from-amber-300 hover:to-amber-400 border border-amber-300/60 dark:border-amber-300/40",
       secondary:
-        "bg-surface-50/80 hover:bg-surface-50 text-foreground border border-white/[0.1] hover:border-white/[0.2] hover:text-white shadow-sm",
+        "bg-surface-100 hover:bg-surface-200 text-foreground border border-border hover:border-border-hover shadow-xs",
       outline:
-        "bg-transparent text-muted hover:text-foreground border border-white/[0.12] hover:border-white/[0.25]",
+        "bg-transparent text-muted-foreground hover:text-foreground border border-border hover:border-border-hover hover:bg-surface-100",
       ghost:
-        "bg-transparent text-muted hover:text-foreground hover:bg-white/[0.04]",
+        "bg-transparent text-muted-foreground hover:text-foreground hover:bg-surface-100",
       cyan:
-        "bg-gradient-to-b from-cyan-400 to-cyan-500 text-black font-semibold shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:from-cyan-300 hover:to-cyan-400 border border-cyan-300/40",
+        "bg-gradient-to-b from-cyan-400 to-cyan-500 text-slate-950 font-semibold shadow-sm hover:shadow-md hover:from-cyan-300 hover:to-cyan-400 border border-cyan-300/60 dark:border-cyan-300/40",
       danger:
-        "bg-red-500/10 text-red-400 border border-red-500/25 hover:bg-red-500/20",
+        "bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/25 hover:bg-red-500/20",
     };
 
     const sizeStyles = {

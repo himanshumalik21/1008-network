@@ -35,19 +35,19 @@ export default function HomePage() {
       <FAQSection />
 
       {/* 8. Global Conversion Banner */}
-      <section className="py-24 bg-gradient-to-b from-[#090A0C] via-[#0F1218] to-[#090A0C] border-t border-white/[0.08] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-amber-500/10 blur-[120px] pointer-events-none" />
+      <section className="py-24 bg-surface-100 border-t border-border relative overflow-hidden transition-colors">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-amber-500/[0.08] dark:bg-amber-500/[0.12] blur-[140px] pointer-events-none" />
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <Badge variant="amber" size="md" pulse>
             Next Studio Cohort Intake Open
           </Badge>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground font-sans">
             Ready to build a defensible venture in India?
           </h2>
 
-          <p className="text-base sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Stop waiting for the perfect moment or overpaying freelance agencies. Partner with 1008 for true execution muscle and shared upside.
           </p>
 
@@ -57,7 +57,7 @@ export default function HomePage() {
               size="lg"
               variant="primary"
               rightIcon={<ArrowUpRight className="h-4 w-4" />}
-              className="w-full sm:w-auto shadow-[0_0_30px_rgba(245,158,11,0.35)]"
+              className="w-full sm:w-auto shadow-md"
             >
               Apply to Build With Us
             </Button>
@@ -65,7 +65,7 @@ export default function HomePage() {
               href="/readiness"
               size="lg"
               variant="secondary"
-              leftIcon={<Sparkles className="h-4 w-4 text-amber-400" />}
+              leftIcon={<Sparkles className="h-4 w-4 text-amber-500" />}
               className="w-full sm:w-auto"
             >
               Take 2-Min Venture Readiness Quiz
@@ -74,7 +74,7 @@ export default function HomePage() {
 
           <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-mono">
             <span className="flex items-center gap-1.5">
-              <Shield className="h-3.5 w-3.5 text-emerald-400" /> Mutual NDA from Day 1
+              <Shield className="h-3.5 w-3.5 text-emerald-500" /> Mutual NDA from Day 1
             </span>
             <span>•</span>
             <span>Zero Upfront Consulting Fees</span>

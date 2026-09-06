@@ -62,14 +62,14 @@ export function PersonaMatrix() {
   ];
 
   return (
-    <section className="py-24 bg-[#090A0C] relative">
+    <section className="py-24 bg-background relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="cyan" size="sm">Target Audience</Badge>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground font-sans">
             Built for India&apos;s serious venture builders.
           </h2>
-          <p className="text-muted text-base sm:text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg">
             We don&apos;t cater to tourists or hype-chasers. We partner with operators who have lived the problem and have the conviction to build defensible enterprises.
           </p>
         </div>
@@ -80,32 +80,32 @@ export function PersonaMatrix() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-surface-100/60 border border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between hover:border-white/[0.18] transition-all duration-300 relative group"
+                className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 flex flex-col justify-between hover:border-border-hover transition-all duration-300 relative group shadow-xs"
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4">
-                    <div className="p-2.5 rounded-xl bg-white/[0.06] text-white border border-white/[0.1]">
-                      <Icon className="h-5 w-5 text-amber-400" />
+                    <div className="p-2.5 rounded-xl bg-surface-200 text-foreground border border-border">
+                      <Icon className="h-5 w-5 text-amber-500" />
                     </div>
                     <Badge variant={item.accent as any} size="sm">
                       {item.badge}
                     </Badge>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-muted leading-relaxed mb-4">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     {item.description}
                   </p>
 
-                  <div className="p-3.5 rounded-xl bg-surface-200/60 border border-white/[0.05] text-xs text-foreground mb-6 flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div className="p-3.5 rounded-xl bg-surface-100 border border-border text-xs text-foreground mb-6 flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
                     <span>{item.solution}</span>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/[0.06]">
+                <div className="pt-4 border-t border-border">
                   <Button
                     href={item.href}
                     variant="secondary"

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 import { Badge } from "@/components/brand/Badge";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { subscribeNewsletter } from "@/lib/actions";
 import {
   ArrowRight,
@@ -41,17 +42,13 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#060709] border-t border-white/[0.08] text-foreground pt-16 pb-12 overflow-hidden relative">
-      {/* Background Accent Grid */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-48 bg-amber-500/[0.04] blur-3xl pointer-events-none" />
-
+    <footer className="bg-surface-100 border-t border-border text-foreground pt-16 pb-12 overflow-hidden relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-border">
           {/* Col 1 & 2: Brand Identity & Positioning */}
           <div className="lg:col-span-2 space-y-4">
             <Logo size="lg" />
-            <p className="text-sm text-muted leading-relaxed max-w-sm">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
               The high-conviction venture-building partner and talent syndicate.
               We partner with experienced corporate leaders and domain experts to build, de-risk, and scale high-upside businesses across India.
             </p>
@@ -67,42 +64,42 @@ export function Footer() {
               </Badge>
             </div>
 
-            <div className="pt-4 flex items-center gap-2 text-xs font-mono text-muted">
-              <MapPin className="h-3.5 w-3.5 text-amber-400" />
+            <div className="pt-4 flex items-center gap-2 text-xs font-mono text-muted-foreground">
+              <MapPin className="h-3.5 w-3.5 text-amber-500" />
               <span>Headquartered in Delhi NCR • Operating Pan-India</span>
             </div>
           </div>
 
           {/* Col 3: Studio & Network */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-foreground font-semibold">
               Venture Engine
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/studio" className="text-muted hover:text-white transition-colors flex items-center justify-between group">
+                <Link href="/studio" className="text-muted-foreground hover:text-foreground transition-colors flex items-center justify-between group">
                   <span>Build With 1008</span>
-                  <span className="text-[10px] font-mono text-amber-400/80 opacity-0 group-hover:opacity-100 transition-opacity">180d</span>
+                  <span className="text-[10px] font-mono text-amber-500 opacity-0 group-hover:opacity-100 transition-opacity">180d</span>
                 </Link>
               </li>
               <li>
-                <Link href="/network" className="text-muted hover:text-white transition-colors flex items-center justify-between group">
+                <Link href="/network" className="text-muted-foreground hover:text-foreground transition-colors flex items-center justify-between group">
                   <span>Partner Network</span>
-                  <span className="text-[10px] font-mono text-cyan-400/80 opacity-0 group-hover:opacity-100 transition-opacity">60d</span>
+                  <span className="text-[10px] font-mono text-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity">60d</span>
                 </Link>
               </li>
               <li>
-                <Link href="/network/post" className="text-muted hover:text-white transition-colors">
+                <Link href="/network/post" className="text-muted-foreground hover:text-foreground transition-colors">
                   Post an Opportunity
                 </Link>
               </li>
               <li>
-                <Link href="/capital" className="text-muted hover:text-white transition-colors">
+                <Link href="/capital" className="text-muted-foreground hover:text-foreground transition-colors">
                   1008 Capital Syndicate
                 </Link>
               </li>
               <li>
-                <Link href="/readiness" className="text-muted hover:text-white transition-colors">
+                <Link href="/readiness" className="text-muted-foreground hover:text-foreground transition-colors">
                   Venture Readiness Quiz
                 </Link>
               </li>
@@ -111,27 +108,27 @@ export function Footer() {
 
           {/* Col 4: Knowledge & Strategy */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-foreground font-semibold">
               Knowledge & Thesis
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/knowledge" className="text-muted hover:text-white transition-colors">
+                <Link href="/knowledge" className="text-muted-foreground hover:text-foreground transition-colors">
                   Operational Playbooks
                 </Link>
               </li>
               <li>
-                <Link href="/manifesto" className="text-muted hover:text-white transition-colors">
+                <Link href="/manifesto" className="text-muted-foreground hover:text-foreground transition-colors">
                   The 1008 Manifesto
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-muted hover:text-white transition-colors">
+                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
                   About the Studio
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted hover:text-white transition-colors">
+                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
                   Contact & Office Hours
                 </Link>
               </li>
@@ -140,11 +137,11 @@ export function Footer() {
 
           {/* Col 5: Newsletter / Dispatch */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold flex items-center gap-1.5">
-              <Sparkles className="h-3.5 w-3.5 text-amber-400" />
+            <h4 className="text-xs font-mono uppercase tracking-wider text-foreground font-semibold flex items-center gap-1.5">
+              <Sparkles className="h-3.5 w-3.5 text-amber-500" />
               <span>Venture Dispatch</span>
             </h4>
-            <p className="text-xs text-muted leading-relaxed">
+            <p className="text-xs text-muted-foreground leading-relaxed">
               Bi-weekly analysis on Indian domain ventures, cap-table frameworks, and 0-to-1 operational playbooks.
             </p>
 
@@ -156,29 +153,29 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@domain.com"
                   required
-                  className="w-full bg-surface-200/80 border border-white/[0.1] rounded-lg px-3 py-2 text-xs text-foreground placeholder:text-muted/60 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
+                  className="w-full bg-surface-200 border border-border rounded-lg px-3 py-2 text-xs text-foreground placeholder:text-muted-dim focus:outline-none focus:border-amber-500"
                 />
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="absolute right-1 top-1 bottom-1 px-2.5 bg-amber-500 hover:bg-amber-400 text-black font-semibold rounded text-xs transition-colors flex items-center justify-center disabled:opacity-50"
+                  className="absolute right-1 top-1 bottom-1 px-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold rounded text-xs transition-colors flex items-center justify-center disabled:opacity-50 shadow-xs"
                   aria-label="Subscribe"
                 >
                   <ArrowRight className="h-3.5 w-3.5" />
                 </button>
               </div>
               {status === "success" && (
-                <p className="text-[11px] text-emerald-400 flex items-center gap-1">
+                <p className="text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-medium">
                   <CheckCircle2 className="h-3 w-3" /> {message}
                 </p>
               )}
               {status === "error" && (
-                <p className="text-[11px] text-red-400">{message}</p>
+                <p className="text-[11px] text-red-500">{message}</p>
               )}
             </form>
 
             <div className="pt-2 text-[11px] font-mono text-muted-foreground flex items-center gap-1.5">
-              <Mail className="h-3 w-3 text-amber-400" />
+              <Mail className="h-3 w-3 text-amber-500" />
               <span>Direct: join@1008.network</span>
             </div>
           </div>
@@ -191,16 +188,17 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-xs">
-            <Link href="/terms" className="hover:text-muted transition-colors">
+            <Link href="/terms" className="hover:text-foreground transition-colors">
               Terms & Syndicate Notice
             </Link>
-            <Link href="/privacy" className="hover:text-muted transition-colors">
+            <Link href="/privacy" className="hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
-            <div className="flex items-center gap-1.5 font-mono text-emerald-400/90">
+            <div className="flex items-center gap-1.5 font-mono text-emerald-600 dark:text-emerald-400 font-medium">
               <ShieldCheck className="h-3.5 w-3.5" />
               <span>Zero-Fee Studio Model</span>
             </div>
+            <ThemeToggle size="sm" />
           </div>
         </div>
       </div>

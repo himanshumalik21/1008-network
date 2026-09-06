@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { cn } from "@/lib/utils";
 import {
   Menu,
@@ -16,6 +17,7 @@ import {
   BookOpen,
   TrendingUp,
   Activity,
+  FileText,
 } from "lucide-react";
 
 export function Navbar() {
@@ -25,58 +27,62 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 15);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { label: "Studio", href: "/studio", icon: Layers, badge: "180-Day Build" },
-    { label: "Network", href: "/network", icon: Users, badge: "60-Day Match" },
-    { label: "Knowledge", href: "/knowledge", icon: BookOpen },
-    { label: "Capital", href: "/capital", icon: TrendingUp, badge: "Syndicate" },
-    { label: "Readiness", href: "/readiness", icon: Activity },
+    { label: "Studio", href: "/studio", badge: "180d Handover" },
+    { label: "Partner Network", href: "/network", badge: "60d Match" },
+    { label: "Knowledge Hub", href: "/knowledge" },
+    { label: "Capital", href: "/capital", badge: "Syndicate" },
+    { label: "Readiness", href: "/readiness" },
     { label: "Manifesto", href: "/manifesto" },
   ];
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-[#090A0C]/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.5)] py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/90 backdrop-blur-2xl border-b border-border shadow-[0_4px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3.5"
+          : "bg-background/60 backdrop-blur-md border-b border-border/50 py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo with Status Badge */}
-          <div className="flex items-center gap-4">
-            <Logo size="md" />
-            <Badge variant="amber" size="sm" pulse className="hidden lg:inline-flex">
-              Delhi NCR • Pan-India
-            </Badge>
+        <div className="flex items-center justify-between gap-6">
+          {/* 1. Large Brand Logo & Hub Status */}
+          <div className="flex items-center gap-4 shrink-0">
+            <Logo size="lg" />
+            <div className="hidden xl:flex items-center">
+              <Badge variant="amber" size="sm" pulse>
+                Delhi NCR • Pan-India
+              </Badge>
+            </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 rounded-full bg-surface-200/60 border border-white/[0.08] p-1.5 backdrop-blur-md">
+          {/* 2. Spacious Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+              const isActive =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href));
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 flex items-center gap-1.5",
+                    "px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1.5",
                     isActive
-                      ? "bg-white/10 text-white font-semibold shadow-sm"
-                      : "text-muted hover:text-white hover:bg-white/[0.04]"
+                      ? "bg-surface-200 text-foreground font-semibold shadow-xs"
+                      : "text-muted-foreground hover:text-foreground hover:bg-surface-100"
                   )}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
                   {link.badge && (
-                    <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-white/[0.06] text-amber-300/90 border border-amber-300/20">
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/25">
                       {link.badge}
                     </span>
                   )}
@@ -85,39 +91,44 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* 3. Action Buttons & Theme Toggle */}
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
+            <ThemeToggle size="md" />
+
             <Button
               href="/network"
-              variant="ghost"
+              variant="outline"
               size="sm"
-              className="text-xs font-mono text-muted hover:text-white"
+              className="text-xs font-mono hidden md:inline-flex"
             >
               Explore Network
             </Button>
+
             <Button
               href="/studio"
               variant="primary"
-              size="sm"
-              rightIcon={<ArrowUpRight className="h-3.5 w-3.5" />}
+              size="md"
+              rightIcon={<ArrowUpRight className="h-4 w-4" />}
+              className="text-xs sm:text-sm font-semibold shadow-md"
             >
               Build With Us
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="flex md:hidden items-center gap-2">
+          {/* Mobile Actions (Theme Toggle + Menu Trigger) */}
+          <div className="flex sm:hidden items-center gap-2">
+            <ThemeToggle size="sm" />
             <Button
               href="/studio"
               variant="primary"
               size="sm"
-              className="text-xs px-3 py-1.5 h-8"
+              className="text-xs px-2.5 h-8 font-semibold"
             >
               Build
             </Button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-muted hover:text-white hover:bg-white/[0.06] transition-colors focus:outline-none"
+              className="p-2 rounded-lg text-foreground hover:bg-surface-200 border border-border transition-colors focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -128,46 +139,48 @@ export function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0C0E13] border-b border-white/[0.08] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top duration-200 shadow-2xl">
-          <div className="flex items-center justify-between px-2 py-1 text-xs font-mono text-muted border-b border-white/[0.06] pb-2">
+        <div className="lg:hidden bg-background/95 backdrop-blur-3xl border-b border-border px-4 pt-4 pb-8 space-y-4 animate-in slide-in-from-top-2 duration-200 shadow-2xl">
+          <div className="flex items-center justify-between px-2 py-1 text-xs font-mono text-muted-foreground border-b border-border pb-3">
             <span>VENTURE PLATFORM</span>
-            <Badge variant="amber" size="sm" pulse>Active</Badge>
+            <Badge variant="amber" size="sm" pulse>Active Cohort</Badge>
           </div>
-          <div className="grid grid-cols-2 gap-2 pt-1">
+
+          <div className="grid grid-cols-2 gap-2.5 pt-1">
             {navLinks.map((link) => {
-              const Icon = link.icon || ArrowUpRight;
-              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+              const isActive =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href));
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
-                    "flex flex-col p-3 rounded-xl border transition-colors text-left",
+                    "flex flex-col p-3.5 rounded-xl border transition-all text-left",
                     isActive
-                      ? "bg-white/[0.08] border-amber-400/40 text-white"
-                      : "bg-surface-200/40 border-white/[0.05] text-muted hover:text-white hover:bg-surface-100"
+                      ? "bg-surface-200 border-amber-500/40 text-foreground font-semibold shadow-xs"
+                      : "bg-surface-100 border-border text-muted-foreground hover:text-foreground hover:bg-surface-200"
                   )}
                 >
-                  <div className="flex items-center justify-between mb-1">
-                    <Icon className="h-4 w-4 text-amber-400" />
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-sm font-semibold text-foreground">{link.label}</span>
                     {link.badge && (
-                      <span className="text-[9px] font-mono px-1 py-0.5 rounded bg-white/[0.06] text-amber-300">
+                      <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">
                         {link.badge}
                       </span>
                     )}
                   </div>
-                  <span className="text-sm font-medium text-foreground">{link.label}</span>
                 </Link>
               );
             })}
           </div>
-          <div className="pt-3 border-t border-white/[0.06] flex flex-col gap-2">
+
+          <div className="pt-3 border-t border-border flex flex-col gap-2.5">
             <Button
               href="/studio"
               variant="primary"
-              size="md"
-              className="w-full justify-center"
+              size="lg"
+              className="w-full justify-center text-sm font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Apply to Build With Us

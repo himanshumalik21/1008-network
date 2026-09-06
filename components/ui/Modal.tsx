@@ -52,7 +52,7 @@ export function Modal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
+        className="fixed inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -60,14 +60,14 @@ export function Modal({
       {/* Dialog Card */}
       <div
         className={cn(
-          "relative w-full z-10 my-8 rounded-2xl bg-[#0F1116] border border-white/[0.12] p-6 sm:p-8 text-foreground shadow-2xl shadow-black/80 transition-all duration-300 animate-in zoom-in-95",
+          "relative w-full z-10 my-8 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 text-foreground shadow-2xl transition-all duration-300 animate-in zoom-in-95",
           widthMap[maxWidth]
         )}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 p-2 rounded-lg text-muted hover:text-white hover:bg-white/[0.06] transition-colors focus:outline-none"
+          className="absolute right-4 top-4 p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-surface-200 transition-colors focus:outline-none"
           aria-label="Close modal"
         >
           <X className="h-5 w-5" />
@@ -75,14 +75,14 @@ export function Modal({
 
         {/* Header */}
         {(title || subtitle) && (
-          <div className="mb-6 pr-8 text-left border-b border-white/[0.06] pb-4">
+          <div className="mb-6 pr-8 text-left border-b border-border pb-4">
             {title && (
-              <h3 className="text-xl font-semibold tracking-tight text-white font-sans">
+              <h3 className="text-xl font-semibold tracking-tight text-foreground font-sans">
                 {title}
               </h3>
             )}
             {subtitle && (
-              <p className="mt-1 text-sm text-muted">
+              <p className="mt-1 text-sm text-muted-foreground">
                 {subtitle}
               </p>
             )}

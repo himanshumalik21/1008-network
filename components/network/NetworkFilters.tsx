@@ -64,16 +64,16 @@ export function NetworkFilters({
     showStudioOnly;
 
   return (
-    <div className="p-4 sm:p-5 rounded-2xl bg-surface-100/70 border border-white/[0.08] space-y-4 mb-8">
-      <div className="flex items-center justify-between border-b border-white/[0.06] pb-3">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase text-muted">
-          <Filter className="h-3.5 w-3.5 text-amber-400" />
+    <div className="p-4 sm:p-5 rounded-2xl bg-surface-50 border border-border space-y-4 mb-8 shadow-xs">
+      <div className="flex items-center justify-between border-b border-border pb-3">
+        <div className="flex items-center gap-2 text-xs font-mono uppercase text-foreground font-semibold">
+          <Filter className="h-3.5 w-3.5 text-amber-500" />
           <span>Filter 60-Day Active Opportunities</span>
         </div>
         {isFiltered && (
           <button
             onClick={onReset}
-            className="text-xs font-mono text-amber-400 hover:text-amber-300 flex items-center gap-1"
+            className="text-xs font-mono text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1 font-semibold"
           >
             <X className="h-3 w-3" /> Reset Filters
           </button>
@@ -83,14 +83,14 @@ export function NetworkFilters({
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Role Filter */}
         <div className="space-y-1 text-left">
-          <label className="text-[10px] font-mono uppercase text-muted">Target Role</label>
+          <label className="text-[10px] font-mono uppercase text-muted-foreground">Target Role</label>
           <select
             value={selectedRole}
             onChange={(e) => setSelectedRole(e.target.value)}
-            className="w-full bg-surface-200/90 border border-white/[0.1] rounded-lg px-3 py-2 text-xs text-foreground focus:outline-none focus:border-cyan-400"
+            className="w-full bg-surface-100 border border-border rounded-lg px-3 py-2 text-xs text-foreground focus:outline-none focus:border-cyan-500"
           >
             {roles.map((r) => (
-              <option key={r} value={r} className="bg-[#111317]">
+              <option key={r} value={r} className="bg-surface-50 text-foreground">
                 {r}
               </option>
             ))}
@@ -99,14 +99,14 @@ export function NetworkFilters({
 
         {/* Sector Filter */}
         <div className="space-y-1 text-left">
-          <label className="text-[10px] font-mono uppercase text-muted">Sector / Domain</label>
+          <label className="text-[10px] font-mono uppercase text-muted-foreground">Sector / Domain</label>
           <select
             value={selectedSector}
             onChange={(e) => setSelectedSector(e.target.value)}
-            className="w-full bg-surface-200/90 border border-white/[0.1] rounded-lg px-3 py-2 text-xs text-foreground focus:outline-none focus:border-cyan-400"
+            className="w-full bg-surface-100 border border-border rounded-lg px-3 py-2 text-xs text-foreground focus:outline-none focus:border-cyan-500"
           >
             {sectors.map((s) => (
-              <option key={s} value={s} className="bg-[#111317]">
+              <option key={s} value={s} className="bg-surface-50 text-foreground">
                 {s}
               </option>
             ))}
@@ -115,14 +115,14 @@ export function NetworkFilters({
 
         {/* Location Filter */}
         <div className="space-y-1 text-left">
-          <label className="text-[10px] font-mono uppercase text-muted">Hub Location</label>
+          <label className="text-[10px] font-mono uppercase text-muted-foreground">Hub Location</label>
           <select
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
-            className="w-full bg-surface-200/90 border border-white/[0.1] rounded-lg px-3 py-2 text-xs text-foreground focus:outline-none focus:border-cyan-400"
+            className="w-full bg-surface-100 border border-border rounded-lg px-3 py-2 text-xs text-foreground focus:outline-none focus:border-cyan-500"
           >
             {locations.map((l) => (
-              <option key={l} value={l} className="bg-[#111317]">
+              <option key={l} value={l} className="bg-surface-50 text-foreground">
                 {l}
               </option>
             ))}
@@ -137,8 +137,8 @@ export function NetworkFilters({
             className={cn(
               "w-full h-[38px] rounded-lg border text-xs font-mono flex items-center justify-center gap-2 transition-all",
               showStudioOnly
-                ? "bg-amber-500/15 border-amber-500/40 text-amber-300 font-semibold"
-                : "bg-surface-200/40 border-white/[0.08] text-muted hover:text-white"
+                ? "bg-amber-500/15 border-amber-500/40 text-amber-600 dark:text-amber-300 font-semibold"
+                : "bg-surface-100 border-border text-muted-foreground hover:text-foreground"
             )}
           >
             <span>1008 Studio Backed Only</span>

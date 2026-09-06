@@ -13,14 +13,14 @@ export function FAQSection() {
   const filteredFaqs = category === "all" ? faqs : faqs.filter((f) => f.category === category);
 
   return (
-    <section className="py-24 bg-[#090A0C] border-t border-white/[0.06] relative">
+    <section className="py-24 bg-background border-t border-border relative transition-colors">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 space-y-3">
           <Badge variant="amber" size="sm">Clarity & Conviction</Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white font-sans">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans">
             Frequently Answered Questions
           </h2>
-          <p className="text-muted text-base">
+          <p className="text-muted-foreground text-base">
             Everything you need to know about partnering with 1008, our equity model, and operational governance.
           </p>
 
@@ -33,8 +33,8 @@ export function FAQSection() {
                 className={cn(
                   "px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all",
                   category === cat
-                    ? "bg-white/15 text-white font-semibold border border-white/20"
-                    : "bg-surface-200/40 text-muted hover:text-white border border-transparent"
+                    ? "bg-surface-200 text-foreground font-semibold border border-border shadow-xs"
+                    : "bg-surface-100 text-muted-foreground hover:text-foreground border border-transparent"
                 )}
               >
                 {cat}
@@ -49,24 +49,24 @@ export function FAQSection() {
             return (
               <div
                 key={idx}
-                className="rounded-xl bg-surface-100/60 border border-white/[0.08] overflow-hidden transition-colors"
+                className="rounded-xl bg-surface-50 border border-border overflow-hidden transition-colors shadow-xs"
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
-                  <span className="text-base font-semibold text-white font-sans">
+                  <span className="text-base font-semibold text-foreground font-sans">
                     {faq.question}
                   </span>
                   <ChevronDown
                     className={cn(
-                      "h-4 w-4 text-muted shrink-0 transition-transform duration-200",
-                      isOpen && "rotate-180 text-amber-400"
+                      "h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-200",
+                      isOpen && "rotate-180 text-amber-500"
                     )}
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-sm text-muted leading-relaxed border-t border-white/[0.04]">
+                  <div className="px-5 pb-5 pt-1 text-sm text-muted-foreground leading-relaxed border-t border-border/50">
                     {faq.answer}
                   </div>
                 )}

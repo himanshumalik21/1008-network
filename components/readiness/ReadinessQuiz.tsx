@@ -201,26 +201,26 @@ export function ReadinessQuiz() {
   return (
     <div className="max-w-3xl mx-auto">
       {!isCompleted ? (
-        <div className="rounded-2xl bg-surface-100/90 border border-white/[0.1] p-6 sm:p-10 shadow-2xl backdrop-blur-xl relative">
+        <div className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-10 shadow-lg backdrop-blur-xl relative">
           {/* Progress Header */}
-          <div className="flex items-center justify-between gap-4 border-b border-white/[0.08] pb-4 mb-6 text-xs font-mono">
+          <div className="flex items-center justify-between gap-4 border-b border-border pb-4 mb-6 text-xs font-mono">
             <div className="flex items-center gap-2">
               <Badge variant="amber" size="sm">
                 Question {currentIdx + 1} of {quizQuestions.length}
               </Badge>
-              <span className="text-muted">• {currentQ.category}</span>
+              <span className="text-muted-foreground">• {currentQ.category}</span>
             </div>
-            <span className="text-amber-400 font-semibold">
+            <span className="text-amber-500 font-semibold">
               {Math.round(((currentIdx + 1) / quizQuestions.length) * 100)}% Completed
             </span>
           </div>
 
           {/* Question Body */}
           <div className="space-y-3 mb-6">
-            <h3 className="text-xl sm:text-2xl font-bold text-white font-sans leading-snug">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground font-sans leading-snug">
               {currentQ.question}
             </h3>
-            <p className="text-xs text-muted leading-relaxed font-mono">
+            <p className="text-xs text-muted-foreground leading-relaxed font-mono">
               {currentQ.context}
             </p>
           </div>
@@ -234,28 +234,28 @@ export function ReadinessQuiz() {
                   key={optIdx}
                   onClick={() => handleSelectOption(optIdx, opt.points)}
                   className={cn(
-                    "w-full p-4 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between group",
+                    "w-full p-4 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between group shadow-xs",
                     isSelected
-                      ? "bg-amber-500/10 border-amber-400/80 shadow-[0_0_20px_rgba(245,158,11,0.15)]"
-                      : "bg-surface-200/50 border-white/[0.06] hover:border-white/[0.18] hover:bg-surface-200"
+                      ? "bg-amber-500/10 border-amber-500 shadow-md"
+                      : "bg-surface-100 border-border hover:border-border-hover hover:bg-surface-200"
                   )}
                 >
                   <div className="flex items-start justify-between gap-3 mb-1">
-                    <span className={cn("text-sm font-medium", isSelected ? "text-amber-300 font-semibold" : "text-white")}>
+                    <span className={cn("text-sm font-medium", isSelected ? "text-amber-600 dark:text-amber-300 font-bold" : "text-foreground")}>
                       {opt.text}
                     </span>
                     <span
                       className={cn(
                         "h-4 w-4 rounded-full border shrink-0 flex items-center justify-center mt-0.5",
                         isSelected
-                          ? "border-amber-400 bg-amber-400 text-black"
-                          : "border-white/20 group-hover:border-white/40"
+                          ? "border-amber-500 bg-amber-500 text-black"
+                          : "border-border group-hover:border-foreground"
                       )}
                     >
-                      {isSelected && <span className="h-1.5 w-1.5 rounded-full bg-black" />}
+                      {isSelected && <span className="h-1.5 w-1.5 rounded-full bg-slate-950" />}
                     </span>
                   </div>
-                  <span className="text-[11px] text-muted leading-relaxed font-mono">
+                  <span className="text-[11px] text-muted-foreground leading-relaxed font-mono">
                     {opt.explanation}
                   </span>
                 </button>
@@ -264,7 +264,7 @@ export function ReadinessQuiz() {
           </div>
 
           {/* Quiz Navigation */}
-          <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+          <div className="flex items-center justify-between pt-4 border-t border-border">
             <Button
               variant="ghost"
               size="sm"
@@ -280,6 +280,7 @@ export function ReadinessQuiz() {
               size="md"
               disabled={answers[currentQ.id] === undefined}
               onClick={handleNext}
+              className="font-semibold shadow-sm"
               rightIcon={<ArrowRight className="h-4 w-4" />}
             >
               {currentIdx === quizQuestions.length - 1 ? "Calculate Venture Score" : "Next Question"}
@@ -288,33 +289,33 @@ export function ReadinessQuiz() {
         </div>
       ) : (
         /* Results View */
-        <div className="rounded-2xl bg-surface-100/90 border border-white/[0.12] p-6 sm:p-10 shadow-2xl backdrop-blur-xl relative text-center space-y-6 animate-in zoom-in-95">
+        <div className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-10 shadow-2xl backdrop-blur-xl relative text-center space-y-6 animate-in zoom-in-95">
           <Badge variant={recommendationTier.badgeVariant} size="md" pulse>
             Evaluation Complete
           </Badge>
 
           <div className="space-y-2">
-            <h3 className="text-3xl sm:text-4xl font-bold text-white font-sans">
-              Your Venture Readiness Score: <span className="text-amber-400 font-mono">{percentage}/100</span>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-foreground font-sans">
+              Your Venture Readiness Score: <span className="text-amber-500 font-mono">{percentage}/100</span>
             </h3>
-            <p className="text-base text-muted max-w-xl mx-auto">
-              Diagnostic tier: <strong className="text-white">{recommendationTier.title}</strong>
+            <p className="text-base text-muted-foreground max-w-xl mx-auto">
+              Diagnostic tier: <strong className="text-foreground">{recommendationTier.title}</strong>
             </p>
           </div>
 
           {/* Score Gauge */}
-          <div className="max-w-md mx-auto p-5 rounded-xl bg-surface-200/80 border border-white/[0.08] space-y-3 text-left">
+          <div className="max-w-md mx-auto p-5 rounded-xl bg-surface-100 border border-border space-y-3 text-left shadow-xs">
             <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-muted">Venture Viability Matrix</span>
-              <span className="text-amber-400 font-bold">{percentage}% High-Signal</span>
+              <span className="text-muted-foreground">Venture Viability Matrix</span>
+              <span className="text-amber-500 font-bold">{percentage}% High-Signal</span>
             </div>
-            <div className="w-full h-3 rounded-full bg-white/[0.06] overflow-hidden">
+            <div className="w-full h-3 rounded-full bg-surface-200 overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-cyan-500 via-amber-400 to-emerald-400 rounded-full"
                 style={{ width: `${percentage}%` }}
               />
             </div>
-            <p className="text-xs text-muted leading-relaxed font-sans pt-1">
+            <p className="text-xs text-muted-foreground leading-relaxed font-sans pt-1">
               {recommendationTier.summary}
             </p>
           </div>
@@ -326,7 +327,7 @@ export function ReadinessQuiz() {
               variant="primary"
               size="lg"
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto shadow-md font-semibold"
             >
               {recommendationTier.action}
             </Button>

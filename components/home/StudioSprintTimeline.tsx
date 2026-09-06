@@ -74,14 +74,14 @@ export function StudioSprintTimeline() {
   ];
 
   return (
-    <section className="py-24 bg-[#060709] border-t border-white/[0.06] relative overflow-hidden">
+    <section className="py-24 bg-surface-100/40 border-t border-border relative overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="amber" size="sm">The 180-Day Blueprint</Badge>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground font-sans">
             Build with you. Not forever for you.
           </h2>
-          <p className="text-muted text-base sm:text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg">
             A temporary, high-intensity 180-day venture-building partnership engineered to make you completely self-sustaining.
           </p>
         </div>
@@ -95,21 +95,21 @@ export function StudioSprintTimeline() {
                 key={phase.id}
                 onClick={() => setActivePhase(idx)}
                 className={cn(
-                  "p-4 rounded-xl text-left border transition-all duration-200 flex flex-col justify-between",
+                  "p-4 rounded-xl text-left border transition-all duration-200 flex flex-col justify-between shadow-xs",
                   isSelected
-                    ? "bg-surface-100 border-amber-400/60 shadow-[0_0_25px_rgba(245,158,11,0.15)]"
-                    : "bg-surface-200/40 border-white/[0.06] hover:border-white/[0.15] text-muted"
+                    ? "bg-surface-50 border-amber-500 shadow-md ring-1 ring-amber-500/20"
+                    : "bg-surface-100/80 border-border hover:border-border-hover text-muted-foreground"
                 )}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className={cn("text-xs font-mono font-semibold", isSelected ? "text-amber-400" : "text-muted")}>
+                  <span className={cn("text-xs font-mono font-semibold", isSelected ? "text-amber-500" : "text-muted-foreground")}>
                     {phase.days}
                   </span>
                   <Badge variant={isSelected ? "amber" : "slate"} size="sm">
                     {phase.tag}
                   </Badge>
                 </div>
-                <div className={cn("text-sm font-medium", isSelected ? "text-white font-semibold" : "text-foreground")}>
+                <div className={cn("text-sm font-semibold", isSelected ? "text-foreground" : "text-muted-foreground")}>
                   {phase.name.split(":")[1]}
                 </div>
               </button>
@@ -118,22 +118,22 @@ export function StudioSprintTimeline() {
         </div>
 
         {/* Active Phase Details Box */}
-        <div className="rounded-2xl bg-surface-100/90 border border-white/[0.1] p-6 sm:p-10 backdrop-blur-xl relative">
+        <div className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-10 backdrop-blur-xl relative shadow-md">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-3">
-                <span className="text-xs font-mono text-amber-400 font-semibold uppercase">
+                <span className="text-xs font-mono text-amber-500 font-semibold uppercase">
                   {phases[activePhase].days}
                 </span>
-                <span className="text-white/20">•</span>
-                <span className="text-xs font-mono text-muted">{phases[activePhase].tag}</span>
+                <span className="text-muted-foreground/30">•</span>
+                <span className="text-xs font-mono text-muted-foreground">{phases[activePhase].tag}</span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white font-sans">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground font-sans">
                 {phases[activePhase].name}
               </h3>
 
-              <p className="text-muted text-base leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 {phases[activePhase].headline}
               </p>
 
@@ -143,19 +143,19 @@ export function StudioSprintTimeline() {
                 </div>
                 {phases[activePhase].deliverables.map((del, dIdx) => (
                   <div key={dIdx} className="flex items-start gap-2.5 text-sm text-foreground">
-                    <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
                     <span>{del}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="lg:col-span-5 p-6 rounded-xl bg-surface-200/80 border border-white/[0.08] space-y-4">
-              <div className="text-xs font-mono text-muted uppercase tracking-wider flex items-center gap-2">
-                <Shield className="h-4 w-4 text-emerald-400" />
+            <div className="lg:col-span-5 p-6 rounded-xl bg-surface-100 border border-border space-y-4">
+              <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+                <Shield className="h-4 w-4 text-emerald-500" />
                 <span>The 1008 Studio Commitment</span>
               </div>
-              <p className="text-xs text-muted leading-relaxed font-sans">
+              <p className="text-xs text-muted-foreground leading-relaxed font-sans">
                 By Day 180, 1008 transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, production code, and zero vendor lock-in.
               </p>
               <div className="pt-2">

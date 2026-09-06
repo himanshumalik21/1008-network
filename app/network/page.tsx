@@ -9,8 +9,7 @@ import { NetworkFilters } from "@/components/network/NetworkFilters";
 import { ConnectModal } from "@/components/network/ConnectModal";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Users, Plus, Search, Sparkles } from "lucide-react";
+import { Users, Plus, Search } from "lucide-react";
 
 export default function NetworkPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -46,7 +45,7 @@ export default function NetworkPage() {
   return (
     <div className="pt-28 pb-20">
       {/* Network Header */}
-      <section className="relative py-14 border-b border-white/[0.06] bg-[#07080A]">
+      <section className="relative py-14 border-b border-border bg-surface-100/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3 max-w-3xl">
@@ -54,14 +53,14 @@ export default function NetworkPage() {
                 <Badge variant="cyan" size="md" pulse>
                   1008 Partner Network
                 </Badge>
-                <span className="text-xs font-mono text-muted">60-Day Active Matchmaking</span>
+                <span className="text-xs font-mono text-muted-foreground">60-Day Active Matchmaking</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans">
+              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
                 Build something with someone.
               </h1>
 
-              <p className="text-sm sm:text-base text-muted leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Connect with domain originators, technical CTOs, and GTM leaders building high-upside ventures across India.
                 Listings auto-expire after 60 days to guarantee responsive communication.
               </p>
@@ -81,13 +80,13 @@ export default function NetworkPage() {
         {/* Search Bar */}
         <div className="mb-6">
           <div className="relative max-w-md">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted pointer-events-none" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
             <input
               type="text"
               placeholder="Search by keywords, sector, or thesis..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-200/80 border border-white/[0.1] text-xs sm:text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-100 border border-border text-xs sm:text-sm text-foreground placeholder:text-muted-dim focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
             />
           </div>
         </div>
@@ -106,9 +105,9 @@ export default function NetworkPage() {
         />
 
         {/* Results Counter */}
-        <div className="flex items-center justify-between mb-6 text-xs font-mono text-muted">
+        <div className="flex items-center justify-between mb-6 text-xs font-mono text-muted-foreground">
           <span>
-            Showing <strong className="text-white">{filteredOpportunities.length}</strong> active opportunities
+            Showing <strong className="text-foreground">{filteredOpportunities.length}</strong> active opportunities
           </span>
           <span>All listings verified under 60-day lifecycle</span>
         </div>
@@ -125,10 +124,10 @@ export default function NetworkPage() {
             ))}
           </div>
         ) : (
-          <div className="p-12 text-center rounded-2xl bg-surface-100/50 border border-white/[0.06] space-y-4">
-            <Users className="h-8 w-8 text-muted mx-auto" />
-            <h3 className="text-lg font-bold text-white">No active listings match your filter criteria</h3>
-            <p className="text-xs text-muted max-w-md mx-auto">
+          <div className="p-12 text-center rounded-2xl bg-surface-50 border border-border space-y-4">
+            <Users className="h-8 w-8 text-muted-foreground mx-auto" />
+            <h3 className="text-lg font-bold text-foreground">No active listings match your filter criteria</h3>
+            <p className="text-xs text-muted-foreground max-w-md mx-auto">
               Try adjusting your role, sector, or location filters, or post your own custom opportunity on the 1008 Network.
             </p>
             <Button variant="secondary" size="sm" onClick={handleResetFilters}>

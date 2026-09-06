@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,25 +10,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#090A0C",
-        foreground: "#F4F4F6",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         surface: {
-          50: "#1A1D24",
-          100: "#14171E",
-          200: "#101217",
-          300: "#0C0E12",
-          DEFAULT: "#111317",
+          50: "var(--surface-50)",
+          100: "var(--surface-100)",
+          200: "var(--surface-200)",
+          300: "var(--surface-300)",
+          DEFAULT: "var(--surface-100)",
         },
         border: {
-          subtle: "rgba(255, 255, 255, 0.06)",
-          DEFAULT: "rgba(255, 255, 255, 0.10)",
-          hover: "rgba(255, 255, 255, 0.18)",
-          strong: "rgba(255, 255, 255, 0.25)",
+          subtle: "var(--border-subtle)",
+          DEFAULT: "var(--border)",
+          hover: "var(--border-hover)",
+          strong: "var(--border-strong)",
         },
         muted: {
-          DEFAULT: "#9496A1",
-          foreground: "#6E7180",
-          dim: "#4B4D58",
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+          dim: "var(--muted-dim)",
         },
         accent: {
           amber: {
@@ -68,24 +69,6 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "radial-highlight": "radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.15) 0%, transparent 65%)",
-        "radial-cyan": "radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.12) 0%, transparent 65%)",
-        "grid-pattern": "linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
-      },
-      animation: {
-        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        "shimmer": "shimmer 2.5s linear infinite",
-        "float": "float 6s ease-in-out infinite",
-      },
-      keyframes: {
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-6px)" },
-        }
       },
     },
   },

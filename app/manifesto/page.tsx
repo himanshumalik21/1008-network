@@ -13,18 +13,18 @@ export default function ManifestoPage() {
           <Badge variant="amber" size="md">
             The 1008 Philosophy
           </Badge>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-sans leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-foreground font-sans leading-tight">
             The Decacorns of Bharat Will Be Built by Domain Veterans.
           </h1>
-          <p className="text-base sm:text-lg text-muted">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Why the next wave of multi-billion dollar Indian enterprises belongs to 40-year-old industry leaders, not 20-year-old college dropouts.
           </p>
         </div>
 
         {/* Manifesto Content */}
-        <div className="rounded-2xl bg-surface-100/60 border border-white/[0.08] p-6 sm:p-10 space-y-8 text-sm sm:text-base text-muted leading-relaxed font-sans">
+        <div className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-10 space-y-8 text-sm sm:text-base text-muted-foreground leading-relaxed font-sans shadow-md">
           <div className="space-y-4">
-            <h2 className="text-xl font-bold text-white font-sans">
+            <h2 className="text-xl font-bold text-foreground font-sans">
               1. The Myth of the Unprepared Founder
             </h2>
             <p>
@@ -35,8 +35,8 @@ export default function ManifestoPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-white/[0.06]">
-            <h2 className="text-xl font-bold text-white font-sans">
+          <div className="space-y-4 pt-4 border-t border-border">
+            <h2 className="text-xl font-bold text-foreground font-sans">
               2. The Domain Dilemma
             </h2>
             <p>
@@ -47,8 +47,8 @@ export default function ManifestoPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-white/[0.06]">
-            <h2 className="text-xl font-bold text-white font-sans">
+          <div className="space-y-4 pt-4 border-t border-border">
+            <h2 className="text-xl font-bold text-foreground font-sans">
               3. The 1008 Thesis: Skin in the Game
             </h2>
             <p>
@@ -59,21 +59,21 @@ export default function ManifestoPage() {
             </p>
           </div>
 
-          <div className="p-6 rounded-xl bg-surface-200/80 border border-amber-500/20 space-y-3">
-            <div className="text-xs font-mono uppercase text-amber-400 font-semibold">
+          <div className="p-6 rounded-xl bg-surface-100 border border-amber-500/30 space-y-3">
+            <div className="text-xs font-mono uppercase text-amber-600 dark:text-amber-400 font-semibold">
               Our Core Operating Principles
             </div>
             <div className="space-y-2 text-xs text-foreground font-sans">
               <div className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
                 <span><strong>Radical Operational Pragmatism:</strong> Solve quantifiable financial bleeds, not theoretical problems.</span>
               </div>
               <div className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
                 <span><strong>Handover By Design:</strong> A venture studio must build founder autonomy, not permanent dependence.</span>
               </div>
               <div className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
                 <span><strong>True Skin in the Game:</strong> Shared upside alignment from Day 1 to liquidity.</span>
               </div>
             </div>

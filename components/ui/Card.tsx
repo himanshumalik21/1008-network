@@ -13,14 +13,14 @@ export function Card({
   children,
   ...props
 }: CardProps) {
-  const baseStyles = "relative rounded-xl border transition-all duration-300 overflow-hidden";
+  const baseStyles = "relative rounded-2xl border transition-all duration-300 overflow-hidden";
 
   const variantStyles = {
-    default: "bg-surface-100/60 border-white/[0.08] backdrop-blur-sm",
-    subtle: "bg-surface-200/40 border-white/[0.05]",
-    glow: "bg-surface-100/80 border-white/[0.1] shadow-[0_0_30px_rgba(0,0,0,0.5)]",
+    default: "bg-surface-100/80 border-border backdrop-blur-sm shadow-xs",
+    subtle: "bg-surface-200/50 border-border-subtle",
+    glow: "bg-surface-100/90 border-border shadow-lg",
     interactive:
-      "bg-surface-100/60 border-white/[0.08] hover:border-white/[0.18] hover:bg-surface-100/90 hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] cursor-pointer",
+      "bg-surface-100/80 border-border hover:border-border-hover hover:bg-surface-200 hover:shadow-md cursor-pointer",
   };
 
   return (

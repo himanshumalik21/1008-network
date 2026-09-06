@@ -19,24 +19,24 @@ export function Badge({
   icon,
 }: BadgeProps) {
   const variantStyles = {
-    amber: "bg-amber-500/10 text-amber-400 border-amber-500/25",
-    cyan: "bg-cyan-500/10 text-cyan-400 border-cyan-500/25",
-    emerald: "bg-emerald-500/10 text-emerald-400 border-emerald-500/25",
-    slate: "bg-white/[0.04] text-muted border-white/[0.08]",
-    outline: "bg-transparent text-foreground border-white/[0.15]",
+    amber: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
+    cyan: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/30",
+    emerald: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+    slate: "bg-surface-200 text-muted-foreground border-border",
+    outline: "bg-transparent text-foreground border-border",
   };
 
   const dotColors = {
-    amber: "bg-amber-400",
-    cyan: "bg-cyan-400",
-    emerald: "bg-emerald-400",
-    slate: "bg-muted",
-    outline: "bg-white",
+    amber: "bg-amber-500",
+    cyan: "bg-cyan-500",
+    emerald: "bg-emerald-500",
+    slate: "bg-muted-foreground",
+    outline: "bg-foreground",
   };
 
   const sizeStyles = {
-    sm: "text-[11px] px-2 py-0.5 font-mono",
-    md: "text-xs px-2.5 py-1 font-medium",
+    sm: "text-[11px] px-2.5 py-0.5 font-mono",
+    md: "text-xs px-3 py-1 font-medium",
   };
 
   return (

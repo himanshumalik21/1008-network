@@ -104,15 +104,15 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
     >
       {status === "success" ? (
         <div className="py-8 text-center space-y-4">
-          <div className="mx-auto w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/25">
+          <div className="mx-auto w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center border border-emerald-500/25">
             <CheckCircle2 className="h-6 w-6" />
           </div>
-          <h4 className="text-xl font-bold text-white">Application Received</h4>
-          <p className="text-sm text-muted max-w-md mx-auto leading-relaxed">
+          <h4 className="text-xl font-bold text-foreground">Application Received</h4>
+          <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
             {message}
           </p>
-          <div className="p-4 rounded-xl bg-surface-200/60 border border-white/[0.06] text-xs text-muted max-w-md mx-auto font-mono text-left">
-            <div className="text-white font-semibold mb-1">What Happens Next:</div>
+          <div className="p-4 rounded-xl bg-surface-100 border border-border text-xs text-muted-foreground max-w-md mx-auto font-mono text-left">
+            <div className="text-foreground font-semibold mb-1">What Happens Next:</div>
             <div>1. Confidential review by 1008 Venture Partners under NDA.</div>
             <div>2. 30-min Problem Diagnostic Call scheduled via email within 48 hours.</div>
           </div>
@@ -132,16 +132,16 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
       ) : (
         <form onSubmit={step === 3 ? handleSubmit : handleNext} className="space-y-5">
           {/* Step Progress Pills */}
-          <div className="flex items-center justify-between gap-2 pb-2 border-b border-white/[0.06] text-xs font-mono">
-            <span className={step >= 1 ? "text-amber-400 font-semibold" : "text-muted"}>
+          <div className="flex items-center justify-between gap-2 pb-2 border-b border-border text-xs font-mono">
+            <span className={step >= 1 ? "text-amber-500 font-semibold" : "text-muted-foreground"}>
               1. Profile & Domain
             </span>
-            <span className="text-muted/40">→</span>
-            <span className={step >= 2 ? "text-amber-400 font-semibold" : "text-muted"}>
+            <span className="text-muted-dim">→</span>
+            <span className={step >= 2 ? "text-amber-500 font-semibold" : "text-muted-foreground"}>
               2. Problem Thesis
             </span>
-            <span className="text-muted/40">→</span>
-            <span className={step === 3 ? "text-amber-400 font-semibold" : "text-muted"}>
+            <span className="text-muted-dim">→</span>
+            <span className={step === 3 ? "text-amber-500 font-semibold" : "text-muted-foreground"}>
               3. Execution Readiness
             </span>
           </div>
@@ -212,16 +212,16 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted">
-                    Primary Domain / Sector <span className="text-amber-400">*</span>
+                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground">
+                    Primary Domain / Sector <span className="text-amber-500">*</span>
                   </label>
                   <select
-                    className="w-full rounded-lg bg-surface-200/80 border border-white/[0.1] px-3.5 py-2.5 text-sm text-foreground focus:border-amber-400 focus:outline-none"
+                    className="w-full rounded-lg bg-surface-100 border border-border px-3.5 py-2.5 text-sm text-foreground focus:border-amber-500 focus:outline-none"
                     value={formData.primaryDomain}
                     onChange={(e) => setFormData({ ...formData, primaryDomain: e.target.value as SectorCategory })}
                   >
                     {sectors.map((s) => (
-                      <option key={s} value={s} className="bg-[#111317]">
+                      <option key={s} value={s} className="bg-surface-50">
                         {s}
                       </option>
                     ))}
@@ -229,16 +229,16 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                 </div>
 
                 <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted">
-                    Primary City / Hub <span className="text-amber-400">*</span>
+                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground">
+                    Primary City / Hub <span className="text-amber-500">*</span>
                   </label>
                   <select
-                    className="w-full rounded-lg bg-surface-200/80 border border-white/[0.1] px-3.5 py-2.5 text-sm text-foreground focus:border-amber-400 focus:outline-none"
+                    className="w-full rounded-lg bg-surface-100 border border-border px-3.5 py-2.5 text-sm text-foreground focus:border-amber-500 focus:outline-none"
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value as LocationType })}
                   >
                     {cities.map((c) => (
-                      <option key={c} value={c} className="bg-[#111317]">
+                      <option key={c} value={c} className="bg-surface-50">
                         {c}
                       </option>
                     ))}
@@ -281,44 +281,44 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           {step === 3 && (
             <div className="space-y-4 animate-in fade-in duration-150">
               <div className="space-y-1.5 text-left">
-                <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted">
+                <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground">
                   Current Transition & Time Commitment
                 </label>
                 <select
-                  className="w-full rounded-lg bg-surface-200/80 border border-white/[0.1] px-3.5 py-2.5 text-sm text-foreground focus:border-amber-400 focus:outline-none"
+                  className="w-full rounded-lg bg-surface-100 border border-border px-3.5 py-2.5 text-sm text-foreground focus:border-amber-500 focus:outline-none"
                   value={formData.timeCommitment}
                   onChange={(e) => setFormData({ ...formData, timeCommitment: e.target.value as any })}
                 >
-                  <option value="Exploring High Conviction" className="bg-[#111317]">
+                  <option value="Exploring High Conviction" className="bg-surface-50">
                     Confidential Exploration (Planning transition over 3–6 months)
                   </option>
-                  <option value="Transitioning over 3-6 Months" className="bg-[#111317]">
+                  <option value="Transitioning over 3-6 Months" className="bg-surface-50">
                     In Notice Period / Active Career Transition
                   </option>
-                  <option value="Full-Time Immediate" className="bg-[#111317]">
+                  <option value="Full-Time Immediate" className="bg-surface-50">
                     Full-Time Ready from Day 1
                   </option>
                 </select>
               </div>
 
-              <div className="p-4 rounded-xl bg-surface-200/60 border border-white/[0.08] space-y-2 text-xs">
-                <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
+              <div className="p-4 rounded-xl bg-surface-100 border border-border space-y-2 text-xs">
+                <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-semibold">
                   <ShieldCheck className="h-4 w-4" />
                   <span>Strict NDA & Zero Consulting Invoices Guarantee</span>
                 </div>
-                <p className="text-muted leading-relaxed font-sans">
+                <p className="text-muted-foreground leading-relaxed font-sans">
                   All discussions and problem theses submitted to 1008 are kept strictly confidential under mutual non-disclosure. 1008 invests execution muscle for equity upside.
                 </p>
               </div>
 
               {status === "error" && (
-                <p className="text-xs text-red-400">{message}</p>
+                <p className="text-xs text-red-500">{message}</p>
               )}
             </div>
           )}
 
           {/* Form Actions */}
-          <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+          <div className="pt-4 border-t border-border flex items-center justify-between">
             {step > 1 ? (
               <Button
                 type="button"
@@ -330,7 +330,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                 Back
               </Button>
             ) : (
-              <span className="text-xs font-mono text-muted">Step {step} of 3</span>
+              <span className="text-xs font-mono text-muted-foreground">Step {step} of 3</span>
             )}
 
             {step < 3 ? (
@@ -338,7 +338,8 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                 type="submit"
                 variant="primary"
                 size="sm"
-                rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
+                className="font-semibold"
+                rightIcon={<ArrowRight className="h-4 w-4" />}
               >
                 Continue
               </Button>
@@ -347,8 +348,9 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                 type="submit"
                 variant="primary"
                 size="md"
+                className="font-semibold shadow-md"
                 isLoading={status === "submitting"}
-                rightIcon={<Sparkles className="h-3.5 w-3.5" />}
+                rightIcon={<Sparkles className="h-4 w-4" />}
               >
                 Submit Studio Application
               </Button>

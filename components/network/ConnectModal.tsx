@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
 import { Opportunity } from "@/lib/types";
 import { applyToOpportunity } from "@/lib/actions";
-import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 interface ConnectModalProps {
   opportunity: Opportunity | null;
@@ -67,11 +67,11 @@ export function ConnectModal({ opportunity, isOpen, onClose }: ConnectModalProps
     >
       {status === "success" ? (
         <div className="py-8 text-center space-y-4">
-          <div className="mx-auto w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/25">
+          <div className="mx-auto w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center border border-emerald-500/25">
             <CheckCircle2 className="h-6 w-6" />
           </div>
-          <h4 className="text-xl font-bold text-white">Introduction Forwarded</h4>
-          <p className="text-sm text-muted max-w-md mx-auto leading-relaxed">
+          <h4 className="text-xl font-bold text-foreground">Introduction Forwarded</h4>
+          <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
             {message}
           </p>
           <div className="pt-4">
@@ -141,17 +141,18 @@ export function ConnectModal({ opportunity, isOpen, onClose }: ConnectModalProps
             hint="Be concise and high-signal."
           />
 
-          {status === "error" && <p className="text-xs text-red-400">{message}</p>}
+          {status === "error" && <p className="text-xs text-red-500">{message}</p>}
 
-          <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
-            <span className="text-xs font-mono text-muted">
-              Equity: <strong className="text-amber-400">{opportunity.equityRange}</strong>
+          <div className="pt-4 border-t border-border flex items-center justify-between">
+            <span className="text-xs font-mono text-muted-foreground">
+              Equity: <strong className="text-amber-500">{opportunity.equityRange}</strong>
             </span>
             <Button
               type="submit"
               variant="cyan"
               size="md"
               isLoading={status === "submitting"}
+              className="font-semibold shadow-sm"
               rightIcon={<ArrowRight className="h-4 w-4" />}
             >
               Send Introduction Request
