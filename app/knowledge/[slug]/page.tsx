@@ -19,6 +19,12 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  return initialKnowledgeResources.map((resource) => ({
+    slug: resource.slug,
+  }));
+}
+
 export default async function KnowledgeDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const resource = initialKnowledgeResources.find((r) => r.slug === slug);
