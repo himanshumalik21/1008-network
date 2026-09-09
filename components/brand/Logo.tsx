@@ -18,76 +18,95 @@ export function Logo({
   monochrome = false,
 }: LogoProps) {
   const sizeMap = {
-    sm: { icon: 26, text: "text-lg", domain: "text-xs", gap: "gap-2" },
-    md: { icon: 32, text: "text-2xl sm:text-3xl", domain: "text-sm", gap: "gap-2.5" },
-    lg: { icon: 38, text: "text-3xl sm:text-4xl", domain: "text-sm sm:text-base", gap: "gap-3" },
-    xl: { icon: 48, text: "text-4xl sm:text-5xl", domain: "text-base sm:text-lg", gap: "gap-3.5" },
-    hero: { icon: 60, text: "text-5xl sm:text-6xl", domain: "text-xl", gap: "gap-4" },
+    sm: {
+      iconBox: "h-7 w-7 rounded-lg",
+      iconSvg: "w-4 h-4",
+      text: "text-lg",
+      domain: "text-xs",
+      gap: "gap-2.5",
+    },
+    md: {
+      iconBox: "h-8 w-8 rounded-lg",
+      iconSvg: "w-4.5 h-4.5",
+      text: "text-xl",
+      domain: "text-xs",
+      gap: "gap-2.5",
+    },
+    lg: {
+      iconBox: "h-9 w-9 sm:h-10 sm:w-10 rounded-xl",
+      iconSvg: "w-5 h-5 sm:w-5.5 sm:h-5.5",
+      text: "text-2xl sm:text-[26px]",
+      domain: "text-sm",
+      gap: "gap-3",
+    },
+    xl: {
+      iconBox: "h-12 w-12 rounded-2xl",
+      iconSvg: "w-7 h-7",
+      text: "text-3xl sm:text-4xl",
+      domain: "text-base",
+      gap: "gap-3.5",
+    },
+    hero: {
+      iconBox: "h-14 w-14 rounded-2xl",
+      iconSvg: "w-8 h-8",
+      text: "text-4xl sm:text-5xl",
+      domain: "text-lg",
+      gap: "gap-4",
+    },
   };
 
   const currentSize = sizeMap[size];
 
   const content = (
-    <div className={cn("inline-flex items-center select-none group font-sans tracking-tight", currentSize.gap, className)}>
-      {/* Stripe-Grade High Precision Geometric Glyph */}
-      <div className="relative flex items-center justify-center shrink-0">
+    <div className={cn("inline-flex items-center select-none group font-sans", currentSize.gap, className)}>
+      {/* Stripe-Caliber Precision Minimalist Glyph */}
+      <div
+        className={cn(
+          "relative flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-105",
+          monochrome
+            ? "bg-[#0A2540] text-white"
+            : "bg-[#635BFF] text-white shadow-[0_2px_8px_rgba(99,91,255,0.25)]",
+          currentSize.iconBox
+        )}
+      >
         <svg
-          width={currentSize.icon}
-          height={currentSize.icon}
-          viewBox="0 0 40 40"
+          viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="transition-transform duration-300 group-hover:scale-105"
+          className={currentSize.iconSvg}
         >
-          {/* Subtle Outer Precision Rounded Rect */}
-          <rect
-            x="2"
-            y="2"
-            width="36"
-            height="36"
-            rx="10"
-            fill="#F6F9FC"
-            stroke="#E6E8EB"
-            strokeWidth="1.5"
+          {/* Minimalist 1008 Intersecting Infinity / Orbit Node Geometry */}
+          <path
+            d="M7 12C7 9.79086 8.79086 8 11 8C13.2091 8 15 9.79086 15 12C15 14.2091 13.2091 16 11 16C8.79086 16 7 14.2091 7 12Z"
+            stroke="white"
+            strokeWidth="2.2"
+            strokeLinecap="round"
           />
-          {/* Primary 1008 Geometry: Dual intersecting harmonic nodes */}
-          <circle
-            cx="14.5"
-            cy="20"
-            r="6.5"
-            stroke={monochrome ? "currentColor" : "#635BFF"}
-            strokeWidth="2.5"
-            className="transition-all duration-300 group-hover:stroke-[#5851EA]"
-          />
-          <circle
-            cx="25.5"
-            cy="20"
-            r="6.5"
-            stroke={monochrome ? "currentColor" : "#0A2540"}
-            strokeWidth="2.5"
+          <path
+            d="M13 12C13 9.79086 14.7909 8 17 8C19.2091 8 21 9.79086 21 12C21 14.2091 19.2091 16 17 16C14.7909 16 13 14.2091 13 12Z"
+            stroke="white"
+            strokeWidth="2.2"
+            strokeLinecap="round"
             strokeOpacity="0.85"
-            className="transition-all duration-300 group-hover:stroke-[#635BFF]"
           />
-          {/* Central Nexus Point */}
-          <circle
-            cx="20"
-            cy="20"
-            r="2.2"
-            fill={monochrome ? "currentColor" : "#00D4B2"}
-            className="transition-all duration-300 group-hover:scale-125"
-          />
+          <circle cx="4" cy="12" r="1.5" fill="white" />
         </svg>
       </div>
 
       {/* Typographic Wordmark */}
-      <div className="flex items-baseline">
-        <span className={cn("font-extrabold tracking-tight text-[#0A2540] font-sans transition-colors", currentSize.text)}>
+      <div className="flex items-baseline tracking-[-0.03em]">
+        <span
+          className={cn(
+            "font-bold text-[#0A2540] font-sans transition-colors duration-200 group-hover:text-[#635BFF]",
+            currentSize.text
+          )}
+        >
           1008
         </span>
         {showDomain && (
           <span
             className={cn(
-              "font-medium tracking-tight ml-1 text-[#627D98] group-hover:text-[#635BFF] transition-colors font-sans",
+              "font-medium ml-1 text-[#627D98] transition-colors duration-200 group-hover:text-[#425466]",
               currentSize.domain
             )}
           >
@@ -100,7 +119,11 @@ export function Logo({
 
   if (asLink) {
     return (
-      <Link href="/" aria-label="1008.network Homepage" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#635BFF]/50 rounded-lg inline-block">
+      <Link
+        href="/"
+        aria-label="1008.network Homepage"
+        className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#635BFF]/50 rounded-xl inline-block"
+      >
         {content}
       </Link>
     );
