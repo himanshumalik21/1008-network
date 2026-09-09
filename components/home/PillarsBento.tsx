@@ -21,6 +21,11 @@ export function PillarsBento() {
 
   return (
     <section className="py-24 bg-[#F6F9FC] border-y border-[#E6E8EB] relative overflow-hidden">
+      {/* Background Architectural Box Grid & Ambient Mesh */}
+      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-50 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[500px] bg-gradient-to-r from-[#635BFF]/06 via-[#00D4B2]/05 to-transparent blur-[140px] pointer-events-none animate-float-slow" />
+      <div className="absolute -bottom-20 right-10 w-[450px] h-[350px] bg-gradient-to-l from-[#FF7043]/05 to-transparent blur-[120px] pointer-events-none animate-float-reverse" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">

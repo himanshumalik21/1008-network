@@ -44,8 +44,12 @@ export function ComparisonSection() {
   ];
 
   return (
-    <section id="comparison" className="py-24 bg-white border-t border-[#E6E8EB] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="comparison" className="py-24 bg-white border-t border-[#E6E8EB] relative overflow-hidden">
+      {/* Subtle Architectural Box Grid & Ambient Motion */}
+      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-r from-[#635BFF]/05 via-[#00D4B2]/04 to-transparent blur-[140px] pointer-events-none animate-pulse-subtle" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">The Direct Comparison</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">

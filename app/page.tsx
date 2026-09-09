@@ -43,7 +43,11 @@ export default function HomePage() {
 
       {/* 8. Global Conversion Banner */}
       <section className="py-24 bg-[#F6F9FC] border-t border-[#E6E8EB] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-gradient-to-r from-[#635BFF]/[0.08] via-[#00D4B2]/[0.05] to-transparent blur-[120px] pointer-events-none" />
+        {/* Background Architectural Box Grid & Ambient Motion */}
+        <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-60 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-gradient-to-r from-[#635BFF]/12 via-[#00D4B2]/08 to-[#FF7043]/06 blur-[130px] pointer-events-none animate-pulse-subtle" />
+        <div className="absolute -top-10 -left-10 w-96 h-96 bg-gradient-to-br from-[#635BFF]/08 to-transparent blur-[120px] pointer-events-none animate-float-slow" />
+        <div className="absolute -bottom-10 -right-10 w-96 h-96 bg-gradient-to-tl from-[#00D4B2]/08 to-transparent blur-[120px] pointer-events-none animate-float-reverse" />
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <Badge variant="indigo" size="md" pulse>
