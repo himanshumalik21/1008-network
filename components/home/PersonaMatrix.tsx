@@ -1,81 +1,76 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import {
   Briefcase,
-  Code2,
+  Activity,
+  Truck,
+  Factory,
   Building2,
-  TrendingUp,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
 
 export function PersonaMatrix() {
-  const personas = [
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const domains = [
     {
-      icon: Briefcase,
-      badge: "Domain Leader",
-      title: "Corporate VP / Director / Senior GM",
+      icon: Activity,
+      badge: "Healthcare & MedTech",
+      title: "Hospital & Pharma Leaders (Ex-VP / Directors)",
       description:
-        "You have 8–20+ years of deep domain experience in Healthcare, Logistics, D2C, Industrial Manufacturing, or FinTech. You see clear market inefficiencies every day, but lack the tech team and full-stack execution setup to build it alone.",
-      solution: "Join the Build With 1008 Studio for our 180-day execution framework. We handle code, design, and hiring while you lead sector strategy.",
-      cta: "Apply as Domain Founder",
-      href: "/studio",
+        "You understand clinical workflows, tertiary hospital procurement bottlenecks, cold-chain regulatory compliance, and diagnostic data silos.",
+      thesisExample: "e.g. Automated Phase II/III clinical trial telemetry or B2B hospital consumables procurement ledger.",
       accent: "amber",
     },
     {
-      icon: Code2,
-      badge: "Technical & GTM",
-      title: "Technical Co-Founder / Operator",
+      icon: Factory,
+      badge: "Industrial & Manufacturing",
+      title: "Plant Heads & Auto-Ancillary GMs",
       description:
-        "You are a Staff Engineer, Engineering Lead, or VP of Sales looking to build an authentic 0-to-1 company with meaningful equity, but you don't want to work on trivial consumer gimmicks.",
-      solution: "Browse vetted domain opportunities with 60-day active lifecycles and partner with senior corporate veterans holding deep enterprise rolodexes.",
-      cta: "Find a Co-Founder",
-      href: "/network",
+        "You have run machining units, precision tooling clusters, or component supply lines in Pune, Manesar, or Coimbatore.",
+      thesisExample: "e.g. On-demand precision CNC jigs procurement or shop-floor downtime tracking software.",
       accent: "cyan",
     },
     {
-      icon: Building2,
-      badge: "Traditional SME",
-      title: "Family Business / Industrial SME",
+      icon: Truck,
+      badge: "Logistics & Supply Chain",
+      title: "Supply Chain & Operations Executives",
       description:
-        "You run an established manufacturing unit, distribution warehouse, or supply chain business. You want to launch a modern digital spin-out or modernize operations with automated tech.",
-      solution: "Co-build a high-margin digital venture leveraging your captive supplier and customer network with 1008's venture engineering stack.",
-      cta: "Explore Venture Spin-Out",
-      href: "/studio",
-      accent: "slate",
+        "You have managed 3PL fleets, FMCG distributor networks, warehouse reconciliation, or multi-state freight routes.",
+      thesisExample: "e.g. Real-time GST-to-Bank trade credit underwriting for Tier-2 distributors.",
+      accent: "emerald",
     },
     {
-      icon: TrendingUp,
-      badge: "Syndicate / Angel",
-      title: "Angel Investor / CXO Syndicate",
+      icon: Building2,
+      badge: "Enterprise & Real Estate",
+      title: "Commercial Asset & B2B Practice Leads",
       description:
-        "You seek high-signal early seed deals led by mature operators with proven unit economics, reference-checked backgrounds, and high technical defensibility.",
-      solution: "Access curated deal cards and syndicate allocations from 1008 Studio ventures with verified codebases and traction.",
-      cta: "Access 1008 Capital",
-      href: "/capital",
-      accent: "emerald",
+        "You know how large Indian family enterprises buy, manage Grade-A commercial leasing, or navigate compliance audits.",
+      thesisExample: "e.g. Unified tenant CAM billing automation or B2B enterprise procurement engines.",
+      accent: "slate",
     },
   ];
 
   return (
-    <section className="py-24 bg-background relative transition-colors">
+    <section id="personas" className="py-24 bg-background relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="cyan" size="sm">Target Audience</Badge>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground font-sans">
-            Built for India&apos;s serious venture builders.
+          <Badge variant="cyan" size="sm">Domain Expertise</Badge>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
+            Built for India&apos;s deep domain veterans.
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
-            We don&apos;t cater to tourists or hype-chasers. We partner with operators who have lived the problem and have the conviction to build defensible enterprises.
+            We partner with operators who have lived the problem for 10–20+ years and possess authentic customer trust.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {personas.map((item, idx) => {
+          {domains.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
@@ -101,19 +96,19 @@ export function PersonaMatrix() {
 
                   <div className="p-3.5 rounded-xl bg-surface-100 border border-border text-xs text-foreground mb-6 flex items-start gap-2">
                     <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>{item.solution}</span>
+                    <span><strong className="text-foreground">Venture Opportunity:</strong> {item.thesisExample}</span>
                   </div>
                 </div>
 
                 <div className="pt-4 border-t border-border">
                   <Button
-                    href={item.href}
+                    onClick={() => setModalOpen(true)}
                     variant="secondary"
                     size="sm"
-                    className="w-full justify-between"
+                    className="w-full justify-between font-semibold"
                     rightIcon={<ArrowRight className="h-4 w-4" />}
                   >
-                    {item.cta}
+                    Build in This Sector
                   </Button>
                 </div>
               </div>
@@ -121,6 +116,11 @@ export function PersonaMatrix() {
           })}
         </div>
       </div>
+
+      <StudioApplicationModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </section>
   );
 }

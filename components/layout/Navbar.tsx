@@ -13,11 +13,9 @@ import {
   X,
   ArrowUpRight,
   Layers,
-  Users,
-  BookOpen,
-  TrendingUp,
   Activity,
-  FileText,
+  BookOpen,
+  Sparkles,
 } from "lucide-react";
 
 export function Navbar() {
@@ -34,11 +32,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Studio", href: "/studio", badge: "180d Handover" },
-    { label: "Partner Network", href: "/network", badge: "60d Match" },
-    { label: "Knowledge Hub", href: "/knowledge" },
-    { label: "Capital", href: "/capital", badge: "Syndicate" },
-    { label: "Readiness", href: "/readiness" },
+    { label: "180-Day Blueprint", href: "/#blueprint" },
+    { label: "Who It's For", href: "/#personas" },
+    { label: "Why 1008", href: "/#comparison" },
+    { label: "Readiness Quiz", href: "/readiness", badge: "2-Min" },
+    { label: "Playbooks", href: "/knowledge" },
     { label: "Manifesto", href: "/manifesto" },
   ];
 
@@ -47,28 +45,28 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/90 backdrop-blur-2xl border-b border-border shadow-[0_4px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3.5"
+          ? "bg-background/90 backdrop-blur-2xl border-b border-border shadow-[0_4px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] py-3.5"
           : "bg-background/60 backdrop-blur-md border-b border-border/50 py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-6">
-          {/* 1. Large Brand Logo & Hub Status */}
+          {/* 1. Large Brand Logo & Studio Subtitle */}
           <div className="flex items-center gap-4 shrink-0">
             <Logo size="lg" />
             <div className="hidden xl:flex items-center">
               <Badge variant="amber" size="sm" pulse>
-                Delhi NCR • Pan-India
+                Venture Studio // Delhi NCR
               </Badge>
             </div>
           </div>
 
           {/* 2. Spacious Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
-                (link.href !== "/" && pathname.startsWith(link.href));
+                (link.href.startsWith("/") && link.href.length > 1 && pathname === link.href);
               return (
                 <Link
                   key={link.href}
@@ -96,12 +94,12 @@ export function Navbar() {
             <ThemeToggle size="md" />
 
             <Button
-              href="/network"
+              href="/readiness"
               variant="outline"
               size="sm"
               className="text-xs font-mono hidden md:inline-flex"
             >
-              Explore Network
+              Check Readiness
             </Button>
 
             <Button
@@ -111,7 +109,7 @@ export function Navbar() {
               rightIcon={<ArrowUpRight className="h-4 w-4" />}
               className="text-xs sm:text-sm font-semibold shadow-md"
             >
-              Build With Us
+              Apply for Studio
             </Button>
           </div>
 
@@ -124,7 +122,7 @@ export function Navbar() {
               size="sm"
               className="text-xs px-2.5 h-8 font-semibold"
             >
-              Build
+              Apply
             </Button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -141,38 +139,28 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-background/95 backdrop-blur-3xl border-b border-border px-4 pt-4 pb-8 space-y-4 animate-in slide-in-from-top-2 duration-200 shadow-2xl">
           <div className="flex items-center justify-between px-2 py-1 text-xs font-mono text-muted-foreground border-b border-border pb-3">
-            <span>VENTURE PLATFORM</span>
-            <Badge variant="amber" size="sm" pulse>Active Cohort</Badge>
+            <span>1008 VENTURE STUDIO</span>
+            <Badge variant="amber" size="sm" pulse>Cohort Open</Badge>
           </div>
 
           <div className="grid grid-cols-2 gap-2.5 pt-1">
-            {navLinks.map((link) => {
-              const isActive =
-                pathname === link.href ||
-                (link.href !== "/" && pathname.startsWith(link.href));
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={cn(
-                    "flex flex-col p-3.5 rounded-xl border transition-all text-left",
-                    isActive
-                      ? "bg-surface-200 border-amber-500/40 text-foreground font-semibold shadow-xs"
-                      : "bg-surface-100 border-border text-muted-foreground hover:text-foreground hover:bg-surface-200"
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex flex-col p-3.5 rounded-xl border border-border bg-surface-100 text-muted-foreground hover:text-foreground hover:bg-surface-200 transition-all text-left"
+              >
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm font-semibold text-foreground">{link.label}</span>
+                  {link.badge && (
+                    <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                      {link.badge}
+                    </span>
                   )}
-                >
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm font-semibold text-foreground">{link.label}</span>
-                    {link.badge && (
-                      <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">
-                        {link.badge}
-                      </span>
-                    )}
-                  </div>
-                </Link>
-              );
-            })}
+                </div>
+              </Link>
+            ))}
           </div>
 
           <div className="pt-3 border-t border-border flex flex-col gap-2.5">
@@ -186,13 +174,13 @@ export function Navbar() {
               Apply to Build With Us
             </Button>
             <Button
-              href="/network/post"
+              href="/readiness"
               variant="secondary"
               size="md"
               className="w-full justify-center text-xs"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Post a 60-Day Opportunity
+              Take 2-Min Venture Readiness Quiz
             </Button>
           </div>
         </div>

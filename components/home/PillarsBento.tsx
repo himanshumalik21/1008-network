@@ -1,222 +1,218 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import {
   Layers,
-  Users,
-  BookOpen,
-  TrendingUp,
-  ArrowUpRight,
+  Code2,
   ShieldCheck,
   Zap,
   CheckCircle2,
   Clock,
   Sparkles,
+  Lock,
+  ArrowUpRight,
+  TrendingUp,
 } from "lucide-react";
 
 export function PillarsBento() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section className="py-24 bg-surface-100/60 border-y border-border relative overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="amber" size="sm">The Integrated Venture Engine</Badge>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground font-sans">
-            Four unified pillars. One high-conviction partner.
+          <Badge variant="amber" size="sm">The Venture Studio Model</Badge>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
+            Everything you need to turn domain insight into an enterprise.
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
-            Whether you need hands-on execution muscle, a missing co-founder, operational playbooks, or seed capital — 1008 is engineered for venture creation in India.
+            We don&apos;t advise from the sidelines. We write production code, design the product, build standard operating procedures, and set up your initial revenue pipeline.
           </p>
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-6">
-          {/* Pillar 1: BUILD WITH 1008 (Large Feature 7 cols) */}
+        {/* Studio Pillars Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+          {/* Card 1: In-House Tech Team (7 cols) */}
           <div className="lg:col-span-7 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500 border border-amber-500/20">
-                    <Layers className="h-5 w-5" />
+                    <Code2 className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-mono text-amber-600 dark:text-amber-400 uppercase tracking-wider font-semibold">
-                    PILLAR 01 // VENTURE STUDIO
+                  <span className="text-xs font-mono text-amber-600 dark:text-amber-400 uppercase tracking-wider font-bold">
+                    FULL-STACK EXECUTION
                   </span>
                 </div>
-                <Badge variant="amber" size="sm">180-Day Handover</Badge>
+                <Badge variant="amber" size="sm">Production-Grade</Badge>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-                Build With 1008 (Venture Studio)
+                Full-Stack Tech & Product Architecture
               </h3>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
-                Hands-on execution partner for experienced corporate leaders. We design, build, and deploy the entire product architecture, systems, and initial commercial traction alongside you.
+                Never waste months searching for a technical co-founder or overpaying low-quality dev agencies. 1008 provides a battle-tested engineering and design team from Day 1.
               </p>
 
-              {/* Differentiators list */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs text-muted-foreground font-sans">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-foreground">Equity Upside:</strong> No hourly consulting invoices. True skin in the game.</span>
+                  <span><strong className="text-foreground">Next.js 15 & React 19:</strong> Blazing fast web apps & APIs.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-foreground">180-Day Exit:</strong> Engineered for founder independence, not endless retainers.</span>
+                  <span><strong className="text-foreground">Linear-Grade UI/UX:</strong> World-class design systems.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-foreground">Full Tech & Design Stack:</strong> Production code, UI/UX, and cloud infrastructure.</span>
+                  <span><strong className="text-foreground">Enterprise Security:</strong> Role-based auth, DB backups & SOC2 ready.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-foreground">Strict NDA:</strong> Test & validate while transitioning from corporate roles.</span>
+                  <span><strong className="text-foreground">100% IP Ownership:</strong> Transferred entirely to your entity.</span>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-border flex items-center justify-between">
-              <span className="text-xs font-mono text-muted-foreground">Cohort-based selection</span>
-              <Button href="/studio" variant="primary" size="sm" rightIcon={<ArrowUpRight className="h-3.5 w-3.5" />}>
-                Explore Studio Model
-              </Button>
+              <span className="text-xs font-mono text-muted-foreground">Zero freelance headache</span>
+              <button
+                onClick={() => setModalOpen(true)}
+                className="text-xs font-semibold text-amber-500 hover:underline flex items-center gap-1"
+              >
+                Explore Tech Stack <ArrowUpRight className="h-3.5 w-3.5" />
+              </button>
             </div>
           </div>
 
-          {/* Pillar 2: 1008 NETWORK (5 cols) */}
-          <div className="lg:col-span-5 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
+          {/* Card 2: Shared Equity & Upside (5 cols) */}
+          <div className="lg:col-span-5 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-500 border border-cyan-500/20">
-                    <Users className="h-5 w-5" />
+                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                    <ShieldCheck className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider font-semibold">
-                    PILLAR 02 // TALENT HUB
+                  <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-bold">
+                    SKIN IN THE GAME
                   </span>
                 </div>
-                <Badge variant="cyan" size="sm">60-Day Active Lifecycle</Badge>
+                <Badge variant="emerald" size="sm">Equity Aligned</Badge>
               </div>
 
               <h3 className="text-2xl font-bold text-foreground mb-3">
-                1008 Partner Network
+                No Consulting Invoices. True Equity Partnership.
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                Have the idea, missing the person? We match domain founders with vetted Technical CTOs, GTM co-founders, and operational leads offering meaningful equity.
+                Consultants get paid whether your business succeeds or fails. 1008 partners for shared equity and long-term valuation upside. Our incentives are 100% aligned with yours.
               </p>
 
-              <div className="p-3.5 rounded-xl bg-surface-100 border border-border space-y-2 mb-6 text-xs">
+              <div className="p-4 rounded-xl bg-surface-100 border border-border space-y-2 mb-6 text-xs">
                 <div className="flex items-center justify-between text-muted-foreground text-[11px] font-mono">
-                  <span>CURATION STANDARD</span>
-                  <span className="text-cyan-600 dark:text-cyan-400 font-semibold">NO DEAD LISTINGS</span>
+                  <span>FINANCIAL MODEL</span>
+                  <span className="text-emerald-600 dark:text-emerald-400 font-bold">ZERO FEES</span>
                 </div>
                 <p className="text-muted-foreground font-sans">
-                  Listings auto-expire in 60 days to keep the talent pipeline ultra-high signal and responsive.
+                  We invest development, design, and venture architecture for equity upside (8%–18%).
                 </p>
               </div>
             </div>
 
             <div className="pt-4 border-t border-border flex items-center justify-between">
-              <Link href="/network/post" className="text-xs font-mono text-muted-foreground hover:text-foreground transition-colors">
-                + Post Opportunity
-              </Link>
-              <Button href="/network" variant="secondary" size="sm" rightIcon={<ArrowUpRight className="h-3.5 w-3.5" />}>
-                Browse Network
-              </Button>
+              <span className="text-xs font-mono text-muted-foreground">Aligned from Day 1</span>
+              <button
+                onClick={() => setModalOpen(true)}
+                className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+              >
+                Review Equity Terms <ArrowUpRight className="h-3.5 w-3.5" />
+              </button>
             </div>
           </div>
 
-          {/* Pillar 3: KNOWLEDGE HUB (5 cols) */}
-          <div className="lg:col-span-5 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
+          {/* Card 3: 180-Day Handover (5 cols) */}
+          <div className="lg:col-span-5 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-surface-200 text-foreground border border-border">
-                    <BookOpen className="h-5 w-5" />
+                  <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-500 border border-cyan-500/20">
+                    <Clock className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider font-semibold">
-                    PILLAR 03 // RESOURCES
+                  <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider font-bold">
+                    FOUNDER AUTONOMY
                   </span>
                 </div>
-                <Badge variant="slate" size="sm">Actionable Playbooks</Badge>
+                <Badge variant="cyan" size="sm">180d Standard</Badge>
               </div>
 
               <h3 className="text-2xl font-bold text-foreground mb-3">
-                1008 Knowledge Hub
+                Build With You. Not Forever For You.
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                Zero fluff. Curated operational playbooks, legal & ESOP frameworks, book summaries (Andy Grove, Ben Horowitz), masterclasses, and India-specific venture tactics.
+                A great venture studio makes founders self-sustaining, not dependent. Over 180 days, we stabilize the business, recruit your permanent core hires, and transition complete autonomy back to you.
               </p>
-
-              <div className="space-y-2 mb-6">
-                <div className="text-xs text-foreground p-2 rounded bg-surface-100 border border-border flex items-center justify-between">
-                  <span>180-Day Corporate-to-Venture Transition</span>
-                  <span className="text-amber-500 font-mono text-[10px]">14 min</span>
-                </div>
-                <div className="text-xs text-foreground p-2 rounded bg-surface-100 border border-border flex items-center justify-between">
-                  <span>ESOP Structuring & Vesting under Indian Law</span>
-                  <span className="text-amber-500 font-mono text-[10px]">11 min</span>
-                </div>
-              </div>
             </div>
 
             <div className="pt-4 border-t border-border flex items-center justify-between">
-              <span className="text-xs font-mono text-muted-foreground">Free & open access</span>
-              <Button href="/knowledge" variant="outline" size="sm" rightIcon={<ArrowUpRight className="h-3.5 w-3.5" />}>
-                Read Playbooks
-              </Button>
+              <span className="text-xs font-mono text-muted-foreground">No agency lock-in</span>
+              <Link href="/#blueprint" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 hover:underline flex items-center gap-1">
+                View Sprint Stages <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
 
-          {/* Pillar 4: 1008 CAPITAL (7 cols) */}
-          <div className="lg:col-span-7 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
+          {/* Card 4: Confidential Corporate Transition (7 cols) */}
+          <div className="lg:col-span-7 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 relative group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
-                    <TrendingUp className="h-5 w-5" />
+                  <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                    <Lock className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-semibold">
-                    PILLAR 04 // SEED SYNDICATE
+                  <span className="text-xs font-mono text-amber-600 dark:text-amber-400 uppercase tracking-wider font-bold">
+                    CONFIDENTIALITY & NDA
                   </span>
                 </div>
-                <Badge variant="emerald" size="sm">Pre-Screened Deals</Badge>
+                <Badge variant="amber" size="sm">Mutual NDA</Badge>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-                1008 Capital (Deal Board)
+                Validate Before You Resign
               </h3>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
-                Curated seed-stage startup deal cards for vetted 1008-built and network ventures. Back seasoned Indian operators with validated unit economics, audited codebases, and institutional governance.
+                Leaving a VP or Director salary without validation is unnecessarily risky. We sign a strict mutual NDA on Day 1, helping you quantify customer willingness-to-pay before you make any public career transition.
               </p>
 
-              <div className="grid grid-cols-3 gap-3 p-3.5 rounded-xl bg-surface-100 border border-border mb-6 text-center font-mono">
-                <div>
-                  <div className="text-[10px] text-muted-foreground">AVG STAGE</div>
-                  <div className="text-sm text-foreground font-semibold">Pre-Seed / Seed</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-muted-foreground">FOUNDER PROFILE</div>
-                  <div className="text-sm text-amber-500 font-semibold">12+ Yrs Domain</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-muted-foreground">COMMITTED AVG</div>
-                  <div className="text-sm text-emerald-500 font-semibold">75%+ Allocation</div>
-                </div>
+              <div className="p-4 rounded-xl bg-surface-100 border border-border text-xs text-muted-foreground leading-relaxed font-sans mb-6">
+                <strong className="text-foreground block mb-1">De-Risked Career Transition:</strong>
+                Complete 25+ discovery interviews and architectural blueprints quietly. When customer pull is proven with 3 advance LOIs, execute your full-time transition with absolute conviction.
               </div>
             </div>
 
             <div className="pt-4 border-t border-border flex items-center justify-between">
-              <span className="text-xs font-mono text-muted-foreground">For accredited angels & CXOs</span>
-              <Button href="/capital" variant="secondary" size="sm" rightIcon={<ArrowUpRight className="h-3.5 w-3.5" />}>
-                View Deal Board
+              <span className="text-xs font-mono text-muted-foreground">Strict confidentiality guaranteed</span>
+              <Button
+                onClick={() => setModalOpen(true)}
+                variant="primary"
+                size="sm"
+                className="font-semibold"
+                rightIcon={<ArrowUpRight className="h-3.5 w-3.5" />}
+              >
+                Confidential Intake Call
               </Button>
             </div>
           </div>
         </div>
       </div>
+
+      <StudioApplicationModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </section>
   );
 }

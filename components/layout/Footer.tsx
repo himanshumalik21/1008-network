@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   MapPin,
   Sparkles,
+  Lock,
 } from "lucide-react";
 
 export function Footer() {
@@ -49,8 +50,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Logo size="lg" />
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              The high-conviction venture-building partner and talent syndicate.
-              We partner with experienced corporate leaders and domain experts to build, de-risk, and scale high-upside businesses across India.
+              The high-conviction venture studio for experienced Indian corporate leaders, VPs, and domain veterans. We architect, build, and deploy defensible businesses for shared equity upside.
             </p>
             <div className="pt-2 flex flex-wrap gap-2">
               <Badge variant="amber" size="sm">
@@ -59,8 +59,8 @@ export function Footer() {
               <Badge variant="cyan" size="sm">
                 180-Day Handover
               </Badge>
-              <Badge variant="slate" size="sm">
-                60-Day Network Board
+              <Badge variant="emerald" size="sm">
+                Mutual NDA Standard
               </Badge>
             </div>
 
@@ -70,10 +70,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 3: Studio & Network */}
+          {/* Col 3: Studio & Execution */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-wider text-foreground font-semibold">
-              Venture Engine
+              Venture Studio
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -83,19 +83,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/network" className="text-muted-foreground hover:text-foreground transition-colors flex items-center justify-between group">
-                  <span>Partner Network</span>
-                  <span className="text-[10px] font-mono text-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity">60d</span>
+                <Link href="/#blueprint" className="text-muted-foreground hover:text-foreground transition-colors">
+                  The 180-Day Blueprint
                 </Link>
               </li>
               <li>
-                <Link href="/network/post" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Post an Opportunity
-                </Link>
-              </li>
-              <li>
-                <Link href="/capital" className="text-muted-foreground hover:text-foreground transition-colors">
-                  1008 Capital Syndicate
+                <Link href="/#comparison" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Why 1008 vs. Agencies
                 </Link>
               </li>
               <li>
@@ -103,13 +97,18 @@ export function Footer() {
                   Venture Readiness Quiz
                 </Link>
               </li>
+              <li>
+                <Link href="/#personas" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Domain Archetypes
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Col 4: Knowledge & Strategy */}
+          {/* Col 4: Knowledge & Thesis */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-wider text-foreground font-semibold">
-              Knowledge & Thesis
+              Knowledge & Insights
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -189,14 +188,14 @@ export function Footer() {
 
           <div className="flex items-center gap-6 text-xs">
             <Link href="/terms" className="hover:text-foreground transition-colors">
-              Terms & Syndicate Notice
+              Terms & NDA Notice
             </Link>
             <Link href="/privacy" className="hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
             <div className="flex items-center gap-1.5 font-mono text-emerald-600 dark:text-emerald-400 font-medium">
               <ShieldCheck className="h-3.5 w-3.5" />
-              <span>Zero-Fee Studio Model</span>
+              <span>Zero Consulting Retainers</span>
             </div>
             <ThemeToggle size="sm" />
           </div>

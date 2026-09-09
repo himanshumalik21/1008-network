@@ -1,34 +1,34 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
-import { PersonaMatrix } from "@/components/home/PersonaMatrix";
+import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { StudioSprintTimeline } from "@/components/home/StudioSprintTimeline";
-import { NetworkTeaser } from "@/components/home/NetworkTeaser";
+import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { KnowledgeTeaser } from "@/components/home/KnowledgeTeaser";
 import { FAQSection } from "@/components/home/FAQSection";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Sparkles, Shield, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Sparkles, Shield, ArrowUpRight, Lock } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section with Razor-Sharp Hook */}
       <HeroSection />
 
-      {/* 2. The 4 Unified Pillars Bento Grid */}
+      {/* 2. The Venture Studio Advantage Bento Grid */}
       <PillarsBento />
 
-      {/* 3. The Persona Matrix */}
-      <PersonaMatrix />
+      {/* 3. Direct Comparison (Why Agencies and Incubators Fail Domain Leaders) */}
+      <ComparisonSection />
 
       {/* 4. The 180-Day Build & Handover Blueprint */}
       <StudioSprintTimeline />
 
-      {/* 5. Live Network Opportunities Teaser */}
-      <NetworkTeaser />
+      {/* 5. Target Domain Archetypes */}
+      <PersonaMatrix />
 
-      {/* 6. Knowledge Hub & Media Teaser */}
+      {/* 6. Tactical Operational Playbooks */}
       <KnowledgeTeaser />
 
       {/* 7. Frequently Answered Questions Accordion */}
@@ -48,7 +48,7 @@ export default function HomePage() {
           </h2>
 
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Stop waiting for the perfect moment or overpaying freelance agencies. Partner with 1008 for true execution muscle and shared upside.
+            Stop waiting for the perfect moment or overpaying freelance agencies. Partner with 1008 for true execution muscle and shared equity upside.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -57,7 +57,7 @@ export default function HomePage() {
               size="lg"
               variant="primary"
               rightIcon={<ArrowUpRight className="h-4 w-4" />}
-              className="w-full sm:w-auto shadow-md"
+              className="w-full sm:w-auto shadow-md font-semibold text-base px-8"
             >
               Apply to Build With Us
             </Button>
@@ -66,7 +66,7 @@ export default function HomePage() {
               size="lg"
               variant="secondary"
               leftIcon={<Sparkles className="h-4 w-4 text-amber-500" />}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto text-base"
             >
               Take 2-Min Venture Readiness Quiz
             </Button>
@@ -74,7 +74,7 @@ export default function HomePage() {
 
           <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-mono">
             <span className="flex items-center gap-1.5">
-              <Shield className="h-3.5 w-3.5 text-emerald-500" /> Mutual NDA from Day 1
+              <Lock className="h-3.5 w-3.5 text-emerald-500" /> Mutual NDA from Day 1
             </span>
             <span>•</span>
             <span>Zero Upfront Consulting Fees</span>

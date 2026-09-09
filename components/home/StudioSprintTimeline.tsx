@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import { cn } from "@/lib/utils";
 import {
   CheckCircle2,
@@ -17,6 +18,7 @@ import {
 
 export function StudioSprintTimeline() {
   const [activePhase, setActivePhase] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const phases = [
     {
@@ -66,7 +68,7 @@ export function StudioSprintTimeline() {
       deliverables: [
         "100% intellectual property (IP) assignment to founder entity",
         "Clean capitalization table structuring with 10%-12% ESOP pool",
-        "Seed investor data room & syndication on 1008 Capital board",
+        "Seed investor data room & institutional governance pack",
         "Complete transition to founder operational autonomy",
       ],
       tag: "Handover Gate",
@@ -74,11 +76,11 @@ export function StudioSprintTimeline() {
   ];
 
   return (
-    <section className="py-24 bg-surface-100/40 border-t border-border relative overflow-hidden transition-colors">
+    <section id="blueprint" className="py-24 bg-surface-100/40 border-t border-border relative overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="amber" size="sm">The 180-Day Blueprint</Badge>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground font-sans">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
             Build with you. Not forever for you.
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
@@ -159,7 +161,12 @@ export function StudioSprintTimeline() {
                 By Day 180, 1008 transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, production code, and zero vendor lock-in.
               </p>
               <div className="pt-2">
-                <Button href="/studio" variant="primary" size="md" className="w-full justify-center">
+                <Button
+                  onClick={() => setModalOpen(true)}
+                  variant="primary"
+                  size="md"
+                  className="w-full justify-center font-semibold"
+                >
                   Apply for Next Studio Cohort
                 </Button>
               </div>
@@ -167,6 +174,11 @@ export function StudioSprintTimeline() {
           </div>
         </div>
       </div>
+
+      <StudioApplicationModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </section>
   );
 }
