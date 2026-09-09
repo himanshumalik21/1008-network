@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/brand/Badge";
 import { submitStudioApplication } from "@/lib/actions";
 import { StudioApplicationData, SectorCategory, LocationType } from "@/lib/types";
+import { trackStudioApplicationSubmit } from "@/lib/analytics";
 import { CheckCircle2, ShieldCheck, ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
 
 interface StudioApplicationModalProps {
@@ -67,6 +68,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
       if (res.success) {
         setStatus("success");
         setMessage(res.message);
+        trackStudioApplicationSubmit(formData.primaryDomain, formData.yearsOfExperience);
       } else {
         setStatus("error");
         setMessage(res.message);

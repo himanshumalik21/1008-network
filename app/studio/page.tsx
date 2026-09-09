@@ -88,13 +88,12 @@ export default function StudioPage() {
               Apply to Build With Us
             </Button>
             <Button
-              href="/readiness"
+              href="/contact"
               size="lg"
               variant="secondary"
-              leftIcon={<Sparkles className="h-4 w-4 text-[#635BFF]" />}
               className="w-full sm:w-auto font-semibold"
             >
-              Check Venture Readiness Score
+              Contact Studio Team
             </Button>
           </div>
         </div>

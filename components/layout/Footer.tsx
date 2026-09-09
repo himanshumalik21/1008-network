@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 import { Badge } from "@/components/brand/Badge";
 import { subscribeNewsletter } from "@/lib/actions";
+import { trackNewsletterSignup } from "@/lib/analytics";
 import {
   ArrowRight,
   Mail,
@@ -29,6 +30,7 @@ export function Footer() {
       if (res.success) {
         setStatus("success");
         setMessage(res.message);
+        trackNewsletterSignup("footer");
         setEmail("");
       } else {
         setStatus("error");
@@ -91,13 +93,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/readiness" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Venture Readiness Quiz
+                <Link href="/#personas" className="text-[#425466] hover:text-[#635BFF] transition-colors">
+                  Domain Archetypes
                 </Link>
               </li>
               <li>
-                <Link href="/#personas" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Domain Archetypes
+                <Link href="/#faq" className="text-[#425466] hover:text-[#635BFF] transition-colors">
+                  Studio FAQ
                 </Link>
               </li>
             </ul>

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { submitContactInquiry } from "@/lib/actions";
+import { trackContactSubmit } from "@/lib/analytics";
 import {
   Mail,
   MapPin,
@@ -36,6 +37,7 @@ export default function ContactPage() {
       if (res.success) {
         setStatus("success");
         setMsg(res.message);
+        trackContactSubmit(formData.type);
         setFormData({ name: "", email: "", company: "", type: "Studio Inquiry", message: "" });
       } else {
         setStatus("error");

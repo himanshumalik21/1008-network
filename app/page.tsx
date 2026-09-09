@@ -69,13 +69,12 @@ export default function HomePage() {
               Apply to Build With Us
             </Button>
             <Button
-              href="/readiness"
+              href="/contact"
               size="lg"
               variant="secondary"
-              leftIcon={<Sparkles className="h-4 w-4 text-[#635BFF]" />}
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Take 2-Min Venture Readiness Quiz
+              Contact Studio Team
             </Button>
           </div>
 

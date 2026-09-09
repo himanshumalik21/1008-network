@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/brand/Badge";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
+import { trackStudioModalOpen } from "@/lib/analytics";
 import {
   ArrowRight,
   Shield,
@@ -21,6 +22,11 @@ import {
 
 export function HeroSection() {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    trackStudioModalOpen("hero_primary_cta");
+    setModalOpen(true);
+  };
 
   return (
     <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden bg-white">
@@ -60,20 +66,19 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="primary"
-              onClick={() => setModalOpen(true)}
+              onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold"
             >
               Apply to Build With Us
             </Button>
             <Button
-              href="/readiness"
+              href="/#blueprint"
               size="lg"
               variant="secondary"
-              leftIcon={<Sparkles className="h-4 w-4 text-[#635BFF]" />}
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Take 2-Min Venture Readiness Quiz
+              Explore 180-Day Blueprint
             </Button>
           </div>
 
