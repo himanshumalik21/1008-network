@@ -44,24 +44,24 @@ export function ComparisonSection() {
   ];
 
   return (
-    <section id="comparison" className="py-24 bg-surface-100/40 border-t border-border relative transition-colors">
+    <section id="comparison" className="py-24 bg-white border-t border-[#E6E8EB] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="amber" size="sm">The Direct Comparison</Badge>
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
+          <Badge variant="indigo" size="sm">The Direct Comparison</Badge>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
             Why traditional paths fail domain leaders.
           </h2>
-          <p className="text-muted-foreground text-base sm:text-lg">
+          <p className="text-[#425466] text-base sm:text-lg">
             Senior executives don&apos;t fail from lack of industry insight. They fail from broken execution models and misaligned incentives.
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-border bg-surface-50 shadow-lg">
+        <div className="overflow-x-auto rounded-2xl border border-[#E6E8EB] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)]">
           <table className="w-full text-left text-xs sm:text-sm">
-            <thead className="border-b border-border bg-surface-100 text-muted-foreground font-mono uppercase text-[11px]">
+            <thead className="border-b border-[#E6E8EB] bg-[#F6F9FC] text-[#627D98] uppercase text-[11px] font-semibold tracking-wider">
               <tr>
                 <th className="p-4 sm:p-5">Dimension</th>
-                <th className="p-4 sm:p-5 text-amber-600 dark:text-amber-400 bg-amber-500/10 border-x border-amber-500/20 font-bold">
+                <th className="p-4 sm:p-5 text-[#635BFF] bg-[#F0F0FF] border-x border-[#E0E0FF] font-bold">
                   1008 Venture Studio
                 </th>
                 <th className="p-4 sm:p-5">IT & Dev Agencies</th>
@@ -69,31 +69,31 @@ export function ComparisonSection() {
                 <th className="p-4 sm:p-5">Solo Freelancing</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-[#E6E8EB]">
               {comparison.map((row, idx) => (
-                <tr key={idx} className="hover:bg-surface-100/40 transition-colors">
-                  <td className="p-4 sm:p-5 font-bold text-foreground">
+                <tr key={idx} className="hover:bg-[#F6F9FC]/60 transition-colors">
+                  <td className="p-4 sm:p-5 font-bold text-[#0A2540]">
                     {row.dimension}
                   </td>
-                  <td className="p-4 sm:p-5 bg-amber-500/[0.04] border-x border-amber-500/20 text-foreground font-medium">
+                  <td className="p-4 sm:p-5 bg-[#F0F0FF]/40 border-x border-[#E0E0FF] text-[#0A2540] font-medium">
                     <div className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
                       <span>{row.studio1008}</span>
                     </div>
                   </td>
-                  <td className="p-4 sm:p-5 text-muted-foreground">
+                  <td className="p-4 sm:p-5 text-[#627D98]">
                     <div className="flex items-start gap-2">
                       <XCircle className="h-4 w-4 text-red-500/80 shrink-0 mt-0.5" />
                       <span>{row.agency}</span>
                     </div>
                   </td>
-                  <td className="p-4 sm:p-5 text-muted-foreground">
+                  <td className="p-4 sm:p-5 text-[#627D98]">
                     <div className="flex items-start gap-2">
-                      <AlertTriangle className="h-4 w-4 text-yellow-500/80 shrink-0 mt-0.5" />
+                      <AlertTriangle className="h-4 w-4 text-amber-500/80 shrink-0 mt-0.5" />
                       <span>{row.accelerator}</span>
                     </div>
                   </td>
-                  <td className="p-4 sm:p-5 text-muted-foreground">
+                  <td className="p-4 sm:p-5 text-[#627D98]">
                     <div className="flex items-start gap-2">
                       <XCircle className="h-4 w-4 text-red-500/80 shrink-0 mt-0.5" />
                       <span>{row.solo}</span>

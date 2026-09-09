@@ -8,11 +8,18 @@ import { KnowledgeTeaser } from "@/components/home/KnowledgeTeaser";
 import { FAQSection } from "@/components/home/FAQSection";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Sparkles, Shield, ArrowUpRight, Lock } from "lucide-react";
+import { Sparkles, ArrowRight, Lock } from "lucide-react";
+
+export function generateMetadata() {
+  return {
+    title: "1008 — High-Conviction Venture Studio for Senior Domain Leaders",
+    description: "You know where the industry bleeds money. We build the tech to capture it.",
+  };
+}
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white">
       {/* 1. Hero Section with Razor-Sharp Hook */}
       <HeroSection />
 
@@ -35,29 +42,29 @@ export default function HomePage() {
       <FAQSection />
 
       {/* 8. Global Conversion Banner */}
-      <section className="py-24 bg-surface-100 border-t border-border relative overflow-hidden transition-colors">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-amber-500/[0.08] dark:bg-amber-500/[0.12] blur-[140px] pointer-events-none" />
+      <section className="py-24 bg-[#F6F9FC] border-t border-[#E6E8EB] relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-gradient-to-r from-[#635BFF]/[0.08] via-[#00D4B2]/[0.05] to-transparent blur-[120px] pointer-events-none" />
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <Badge variant="amber" size="md" pulse>
+          <Badge variant="indigo" size="md" pulse>
             Next Studio Cohort Intake Open
           </Badge>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground font-sans">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
             Ready to build a defensible venture in India?
           </h2>
 
-          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
             Stop waiting for the perfect moment or overpaying freelance agencies. Partner with 1008 for true execution muscle and shared equity upside.
           </p>
 
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Button
               href="/studio"
               size="lg"
               variant="primary"
-              rightIcon={<ArrowUpRight className="h-4 w-4" />}
-              className="w-full sm:w-auto shadow-md font-semibold text-base px-8"
+              rightIcon={<ArrowRight className="h-4 w-4" />}
+              className="w-full sm:w-auto font-semibold text-base px-8"
             >
               Apply to Build With Us
             </Button>
@@ -65,16 +72,16 @@ export default function HomePage() {
               href="/readiness"
               size="lg"
               variant="secondary"
-              leftIcon={<Sparkles className="h-4 w-4 text-amber-500" />}
-              className="w-full sm:w-auto text-base"
+              leftIcon={<Sparkles className="h-4 w-4 text-[#635BFF]" />}
+              className="w-full sm:w-auto text-base font-semibold"
             >
               Take 2-Min Venture Readiness Quiz
             </Button>
           </div>
 
-          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-mono">
+          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-[#627D98] font-semibold">
             <span className="flex items-center gap-1.5">
-              <Lock className="h-3.5 w-3.5 text-emerald-500" /> Mutual NDA from Day 1
+              <Lock className="h-3.5 w-3.5 text-[#059669]" /> Mutual NDA from Day 1
             </span>
             <span>•</span>
             <span>Zero Upfront Consulting Fees</span>

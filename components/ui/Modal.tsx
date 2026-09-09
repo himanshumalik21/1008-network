@@ -52,7 +52,7 @@ export function Modal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
+        className="fixed inset-0 bg-[#0A2540]/40 backdrop-blur-sm transition-opacity animate-in fade-in duration-200"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -60,14 +60,14 @@ export function Modal({
       {/* Dialog Card */}
       <div
         className={cn(
-          "relative w-full z-10 my-8 rounded-2xl bg-surface-50 border border-border p-6 sm:p-8 text-foreground shadow-2xl transition-all duration-300 animate-in zoom-in-95",
+          "relative w-full z-10 my-8 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 text-[#0A2540] shadow-[0_20px_60px_-15px_rgba(10,37,64,0.15)] transition-all duration-300 animate-in zoom-in-95",
           widthMap[maxWidth]
         )}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-surface-200 transition-colors focus:outline-none"
+          className="absolute right-4 top-4 p-2 rounded-full text-[#627D98] hover:text-[#0A2540] hover:bg-[#F6F9FC] transition-colors focus:outline-none"
           aria-label="Close modal"
         >
           <X className="h-5 w-5" />
@@ -75,14 +75,14 @@ export function Modal({
 
         {/* Header */}
         {(title || subtitle) && (
-          <div className="mb-6 pr-8 text-left border-b border-border pb-4">
+          <div className="mb-6 pr-8 text-left border-b border-[#E6E8EB] pb-4">
             {title && (
-              <h3 className="text-xl font-semibold tracking-tight text-foreground font-sans">
+              <h3 className="text-xl font-bold tracking-tight text-[#0A2540] font-sans">
                 {title}
               </h3>
             )}
             {subtitle && (
-              <p className="mt-1 text-sm text-muted-foreground">
+              <p className="mt-1 text-sm text-[#425466]">
                 {subtitle}
               </p>
             )}

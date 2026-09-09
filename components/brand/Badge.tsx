@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "amber" | "cyan" | "emerald" | "slate" | "outline";
+  variant?: "primary" | "indigo" | "amber" | "cyan" | "emerald" | "slate" | "outline";
   size?: "sm" | "md";
   pulse?: boolean;
   className?: string;
@@ -19,30 +19,34 @@ export function Badge({
   icon,
 }: BadgeProps) {
   const variantStyles = {
-    amber: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
-    cyan: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/30",
-    emerald: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
-    slate: "bg-surface-200 text-muted-foreground border-border",
-    outline: "bg-transparent text-foreground border-border",
+    primary: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF] font-semibold",
+    indigo: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF] font-semibold",
+    amber: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2] font-semibold",
+    cyan: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA] font-semibold",
+    emerald: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0] font-semibold",
+    slate: "bg-[#F6F9FC] text-[#425466] border-[#E6E8EB] font-medium",
+    outline: "bg-white text-[#0A2540] border-[#E6E8EB] shadow-xs font-medium",
   };
 
   const dotColors = {
-    amber: "bg-amber-500",
-    cyan: "bg-cyan-500",
-    emerald: "bg-emerald-500",
-    slate: "bg-muted-foreground",
-    outline: "bg-foreground",
+    primary: "bg-[#635BFF]",
+    indigo: "bg-[#635BFF]",
+    amber: "bg-[#FF7043]",
+    cyan: "bg-[#00D4B2]",
+    emerald: "bg-[#10B981]",
+    slate: "bg-[#8898AA]",
+    outline: "bg-[#0A2540]",
   };
 
   const sizeStyles = {
-    sm: "text-[11px] px-2.5 py-0.5 font-mono",
-    md: "text-xs px-3 py-1 font-medium",
+    sm: "text-[11px] px-2.5 py-0.5 font-sans tracking-tight",
+    md: "text-xs px-3 py-1 font-sans tracking-tight",
   };
 
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border transition-all duration-200 tracking-tight select-none",
+        "inline-flex items-center gap-1.5 rounded-full border transition-all duration-200 select-none shadow-[0_1px_2px_rgba(0,0,0,0.02)]",
         variantStyles[variant],
         sizeStyles[size],
         className

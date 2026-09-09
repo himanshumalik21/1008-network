@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "cyan" | "danger";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "dark" | "cyan" | "danger";
   size?: "sm" | "md" | "lg" | "icon";
   isLoading?: boolean;
   href?: string;
@@ -29,28 +29,30 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "relative inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 disabled:opacity-50 disabled:pointer-events-none rounded-lg active:scale-[0.98] select-none";
+      "relative inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#635BFF]/40 disabled:opacity-50 disabled:pointer-events-none rounded-full active:scale-[0.98] select-none tracking-tight";
 
     const variantStyles = {
       primary:
-        "bg-gradient-to-b from-amber-400 to-amber-500 text-slate-950 font-semibold shadow-sm hover:shadow-md hover:from-amber-300 hover:to-amber-400 border border-amber-300/60 dark:border-amber-300/40",
+        "bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold shadow-[0_2px_4px_rgba(45,35,66,0.15),0_7px_13px_-3px_rgba(45,35,66,0.2)] hover:shadow-[0_4px_8px_rgba(45,35,66,0.2),0_10px_20px_-3px_rgba(45,35,66,0.25)] border border-[#635BFF]",
       secondary:
-        "bg-surface-100 hover:bg-surface-200 text-foreground border border-border hover:border-border-hover shadow-xs",
+        "bg-[#F6F9FC] hover:bg-[#E3E8EE] text-[#0A2540] border border-[#E6E8EB] hover:border-[#CBD5E1] shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-semibold",
       outline:
-        "bg-transparent text-muted-foreground hover:text-foreground border border-border hover:border-border-hover hover:bg-surface-100",
+        "bg-white hover:bg-[#F6F9FC] text-[#0A2540] border border-[#E6E8EB] hover:border-[#CBD5E1] shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-medium",
+      dark:
+        "bg-[#0A2540] hover:bg-[#1E3A5F] text-white font-semibold shadow-[0_2px_6px_rgba(10,37,64,0.2)]",
       ghost:
-        "bg-transparent text-muted-foreground hover:text-foreground hover:bg-surface-100",
+        "bg-transparent text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] font-medium",
       cyan:
-        "bg-gradient-to-b from-cyan-400 to-cyan-500 text-slate-950 font-semibold shadow-sm hover:shadow-md hover:from-cyan-300 hover:to-cyan-400 border border-cyan-300/60 dark:border-cyan-300/40",
+        "bg-[#00D4B2] hover:bg-[#00B89A] text-[#0A2540] font-semibold shadow-[0_2px_4px_rgba(0,212,178,0.2)]",
       danger:
-        "bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/25 hover:bg-red-500/20",
+        "bg-red-50 text-red-600 border border-red-200 hover:bg-red-100 font-medium",
     };
 
     const sizeStyles = {
-      sm: "text-xs px-3 py-1.5 gap-1.5 h-8",
-      md: "text-sm px-4 py-2.5 gap-2 h-10",
-      lg: "text-base px-6 py-3.5 gap-2.5 h-12",
-      icon: "h-10 w-10 p-0",
+      sm: "text-xs px-3.5 py-1.5 gap-1.5 h-8",
+      md: "text-sm px-5 py-2.5 gap-2 h-10",
+      lg: "text-base px-7 py-3.5 gap-2.5 h-12",
+      icon: "h-10 w-10 p-0 rounded-full",
     };
 
     const content = (

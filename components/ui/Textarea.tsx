@@ -16,23 +16,23 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="block text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]"
           >
             {label}
-            {props.required && <span className="text-amber-500 ml-1">*</span>}
+            {props.required && <span className="text-[#F4511E] ml-1">*</span>}
           </label>
         )}
         <textarea
           id={inputId}
           ref={ref}
           className={cn(
-            "w-full rounded-lg bg-surface-100 border border-border p-3.5 text-sm text-foreground placeholder:text-muted-dim transition-colors focus:border-amber-500 focus:bg-surface-50 focus:outline-none focus:ring-1 focus:ring-amber-500 disabled:opacity-50 min-h-[110px] resize-y shadow-xs",
+            "w-full rounded-xl bg-white border border-[#E6E8EB] p-3.5 text-sm text-[#0A2540] placeholder:text-[#8898AA] transition-colors focus:border-[#635BFF] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#635BFF] disabled:opacity-50 min-h-[110px] resize-y shadow-xs",
             error && "border-red-500 focus:border-red-500 focus:ring-red-500",
             className
           )}
           {...props}
         />
-        {hint && !error && <p className="text-xs text-muted-dim">{hint}</p>}
+        {hint && !error && <p className="text-xs text-[#8898AA]">{hint}</p>}
         {error && <p className="text-xs text-red-500">{error}</p>}
       </div>
     );

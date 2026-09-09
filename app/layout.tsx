@@ -3,7 +3,6 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,11 +18,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "1008 (1008.network) — Venture Studio, Partner Network & Knowledge Hub",
+    default: "1008 (1008.network) — Venture Studio for Senior Domain Leaders",
     template: "%s | 1008.network",
   },
   description:
-    "You bring the ambition. We build the business with you. 1008 is the high-conviction venture-building partner and talent syndicate for experienced Indian corporate leaders, domain experts, and entrepreneurs.",
+    "1008 partners with experienced corporate leaders & domain veterans to build, launch, and spin out high-margin B2B tech ventures in 180 days — zero agency fees, shared skin in the game.",
   keywords: [
     "Venture Studio India",
     "Co-founder Matchmaking",
@@ -42,15 +41,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://1008.network",
-    title: "1008 (1008.network) — You bring the ambition. We build the business with you.",
+    title: "1008 (1008.network) — Venture Studio for Domain Leaders",
     description:
-      "Venture Studio, 60-Day Partner Network, and Startup Knowledge Hub built for India's serious business builders.",
+      "You know where the industry bleeds money. We build the tech to capture it. 180-Day Venture Studio.",
     siteName: "1008.network",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 (1008.network) — Venture Studio & Partner Network",
-    description: "You bring the ambition. We build the business with you.",
+    title: "1008 (1008.network) — Venture Studio for Domain Leaders",
+    description: "You know where the industry bleeds money. We build the tech to capture it.",
   },
   robots: {
     index: true,
@@ -70,7 +69,7 @@ export default function RootLayout({
     url: "https://1008.network",
     logo: "https://1008.network/logo.png",
     description:
-      "High-conviction venture studio, talent syndicate, and startup knowledge hub for Indian corporate leaders and domain experts.",
+      "High-conviction venture studio for Indian corporate leaders and domain experts.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Delhi NCR",
@@ -84,7 +83,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
@@ -92,18 +91,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col antialiased selection:bg-amber-500/20 selection:text-amber-500`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

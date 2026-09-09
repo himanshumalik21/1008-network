@@ -5,11 +5,9 @@ import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import {
-  CheckCircle2,
   ArrowRight,
   ArrowLeft,
   RotateCcw,
-  Sparkles,
 } from "lucide-react";
 
 interface Question {
@@ -164,15 +162,13 @@ export function ReadinessQuiz() {
 
   let recommendationTier: {
     title: string;
-    color: string;
-    badgeVariant: "amber" | "cyan" | "slate" | "emerald" | "outline";
+    badgeVariant: "indigo" | "cyan" | "slate" | "emerald" | "outline";
     summary: string;
     action: string;
     href: string;
   } = {
     title: "1008 Studio Cohort Candidate",
-    color: "amber",
-    badgeVariant: "amber",
+    badgeVariant: "indigo",
     summary: "Your domain depth, problem clarity, and venture mindset place you in the top 10% of candidates. You are prime for the 180-Day Build With 1008 Studio cohort.",
     action: "Schedule 30-min Studio Intake Diagnostic",
     href: "/studio",
@@ -181,46 +177,44 @@ export function ReadinessQuiz() {
   if (percentage < 60) {
     recommendationTier = {
       title: "Problem Discovery & Co-Founder Search Required",
-      color: "slate",
       badgeVariant: "slate",
       summary: "Your venture idea needs further customer pain quantification and a complementary technical or commercial co-founder before entering an intensive studio sprint.",
-      action: "Explore 1008 Partner Network",
-      href: "/network",
+      action: "Review Venture Playbooks",
+      href: "/knowledge",
     };
   } else if (percentage < 80) {
     recommendationTier = {
-      title: "Partner Network & Validation Gate",
-      color: "cyan",
+      title: "Validation Gate Required",
       badgeVariant: "cyan",
-      summary: "Strong domain insights with high potential. We recommend posting your requirement on the 1008 Partner Network to find a CTO while completing our 45-day Discovery sprint.",
-      action: "Post Opportunity on Network",
-      href: "/network/post",
+      summary: "Strong domain insights with high potential. We recommend completing our 45-day Discovery validation blueprint before full code build.",
+      action: "Apply for Discovery Sprint",
+      href: "/studio",
     };
   }
 
   return (
     <div className="max-w-3xl mx-auto">
       {!isCompleted ? (
-        <div className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-10 shadow-lg backdrop-blur-xl relative">
+        <div className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.03)] relative">
           {/* Progress Header */}
-          <div className="flex items-center justify-between gap-4 border-b border-border pb-4 mb-6 text-xs font-mono">
+          <div className="flex items-center justify-between gap-4 border-b border-[#E6E8EB] pb-4 mb-6 text-xs">
             <div className="flex items-center gap-2">
-              <Badge variant="amber" size="sm">
+              <Badge variant="indigo" size="sm">
                 Question {currentIdx + 1} of {quizQuestions.length}
               </Badge>
-              <span className="text-muted-foreground">• {currentQ.category}</span>
+              <span className="text-[#627D98] font-medium">• {currentQ.category}</span>
             </div>
-            <span className="text-amber-500 font-semibold">
+            <span className="text-[#635BFF] font-bold">
               {Math.round(((currentIdx + 1) / quizQuestions.length) * 100)}% Completed
             </span>
           </div>
 
           {/* Question Body */}
-          <div className="space-y-3 mb-6">
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground font-sans leading-snug">
+          <div className="space-y-2.5 mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] font-sans leading-snug">
               {currentQ.question}
             </h3>
-            <p className="text-xs text-muted-foreground leading-relaxed font-mono">
+            <p className="text-xs text-[#627D98] leading-relaxed">
               {currentQ.context}
             </p>
           </div>
@@ -236,26 +230,26 @@ export function ReadinessQuiz() {
                   className={cn(
                     "w-full p-4 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between group shadow-xs",
                     isSelected
-                      ? "bg-amber-500/10 border-amber-500 shadow-md"
-                      : "bg-surface-100 border-border hover:border-border-hover hover:bg-surface-200"
+                      ? "bg-[#F0F0FF] border-[#635BFF] shadow-xs"
+                      : "bg-[#F6F9FC] border-[#E6E8EB] hover:border-[#CBD5E1] hover:bg-white"
                   )}
                 >
                   <div className="flex items-start justify-between gap-3 mb-1">
-                    <span className={cn("text-sm font-medium", isSelected ? "text-amber-600 dark:text-amber-300 font-bold" : "text-foreground")}>
+                    <span className={cn("text-sm font-semibold", isSelected ? "text-[#635BFF]" : "text-[#0A2540]")}>
                       {opt.text}
                     </span>
                     <span
                       className={cn(
                         "h-4 w-4 rounded-full border shrink-0 flex items-center justify-center mt-0.5",
                         isSelected
-                          ? "border-amber-500 bg-amber-500 text-black"
-                          : "border-border group-hover:border-foreground"
+                          ? "border-[#635BFF] bg-[#635BFF] text-white"
+                          : "border-[#CBD5E1] group-hover:border-[#0A2540]"
                       )}
                     >
-                      {isSelected && <span className="h-1.5 w-1.5 rounded-full bg-slate-950" />}
+                      {isSelected && <span className="h-1.5 w-1.5 rounded-full bg-white" />}
                     </span>
                   </div>
-                  <span className="text-[11px] text-muted-foreground leading-relaxed font-mono">
+                  <span className="text-[11px] text-[#627D98] leading-relaxed font-sans">
                     {opt.explanation}
                   </span>
                 </button>
@@ -264,7 +258,7 @@ export function ReadinessQuiz() {
           </div>
 
           {/* Quiz Navigation */}
-          <div className="flex items-center justify-between pt-4 border-t border-border">
+          <div className="flex items-center justify-between pt-4 border-t border-[#E6E8EB]">
             <Button
               variant="ghost"
               size="sm"
@@ -280,7 +274,7 @@ export function ReadinessQuiz() {
               size="md"
               disabled={answers[currentQ.id] === undefined}
               onClick={handleNext}
-              className="font-semibold shadow-sm"
+              className="font-semibold"
               rightIcon={<ArrowRight className="h-4 w-4" />}
             >
               {currentIdx === quizQuestions.length - 1 ? "Calculate Venture Score" : "Next Question"}
@@ -289,33 +283,33 @@ export function ReadinessQuiz() {
         </div>
       ) : (
         /* Results View */
-        <div className="rounded-2xl bg-surface-50 border border-border p-6 sm:p-10 shadow-2xl backdrop-blur-xl relative text-center space-y-6 animate-in zoom-in-95">
+        <div className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-10 shadow-[0_20px_40px_-15px_rgba(10,37,64,0.1)] relative text-center space-y-6 animate-in zoom-in-95">
           <Badge variant={recommendationTier.badgeVariant} size="md" pulse>
             Evaluation Complete
           </Badge>
 
           <div className="space-y-2">
-            <h3 className="text-3xl sm:text-4xl font-extrabold text-foreground font-sans">
-              Your Venture Readiness Score: <span className="text-amber-500 font-mono">{percentage}/100</span>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] font-sans">
+              Your Venture Readiness Score: <span className="text-[#635BFF] font-sans">{percentage}/100</span>
             </h3>
-            <p className="text-base text-muted-foreground max-w-xl mx-auto">
-              Diagnostic tier: <strong className="text-foreground">{recommendationTier.title}</strong>
+            <p className="text-base text-[#425466] max-w-xl mx-auto">
+              Diagnostic tier: <strong className="text-[#0A2540]">{recommendationTier.title}</strong>
             </p>
           </div>
 
           {/* Score Gauge */}
-          <div className="max-w-md mx-auto p-5 rounded-xl bg-surface-100 border border-border space-y-3 text-left shadow-xs">
-            <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-muted-foreground">Venture Viability Matrix</span>
-              <span className="text-amber-500 font-bold">{percentage}% High-Signal</span>
+          <div className="max-w-md mx-auto p-5 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-3 text-left shadow-xs">
+            <div className="flex items-center justify-between text-xs font-semibold">
+              <span className="text-[#627D98]">Venture Viability Matrix</span>
+              <span className="text-[#635BFF] font-bold">{percentage}% High-Signal</span>
             </div>
-            <div className="w-full h-3 rounded-full bg-surface-200 overflow-hidden">
+            <div className="w-full h-3 rounded-full bg-[#E3E8EE] overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-cyan-500 via-amber-400 to-emerald-400 rounded-full"
+                className="h-full bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#10B981] rounded-full"
                 style={{ width: `${percentage}%` }}
               />
             </div>
-            <p className="text-xs text-muted-foreground leading-relaxed font-sans pt-1">
+            <p className="text-xs text-[#425466] leading-relaxed font-sans pt-1">
               {recommendationTier.summary}
             </p>
           </div>
@@ -327,7 +321,7 @@ export function ReadinessQuiz() {
               variant="primary"
               size="lg"
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto shadow-md font-semibold"
+              className="w-full sm:w-auto font-semibold px-8"
             >
               {recommendationTier.action}
             </Button>
@@ -336,7 +330,7 @@ export function ReadinessQuiz() {
               size="lg"
               onClick={handleReset}
               leftIcon={<RotateCcw className="h-4 w-4" />}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto font-semibold"
             >
               Retake Evaluation
             </Button>
