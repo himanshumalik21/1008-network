@@ -26,6 +26,7 @@ export function Navbar() {
 
   const navLinks = [
     { label: "180-Day Blueprint", href: "/#blueprint" },
+    { label: "Invest Capital", href: "/capital" },
     { label: "Who It's For", href: "/#personas" },
     { label: "Why 1008 Network", href: "/#comparison" },
     { label: "Playbooks", href: "/knowledge" },
@@ -56,7 +57,7 @@ export function Navbar() {
             </div>
 
             {/* 2. Executive Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center gap-7 lg:gap-9">
+            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => {
                 const isActive =
                   pathname === link.href ||
@@ -68,7 +69,7 @@ export function Navbar() {
                     className={cn(
                       "text-[14px] font-medium tracking-[-0.01em] transition-colors duration-150",
                       isActive
-                        ? "text-[#0A2540] font-semibold"
+                        ? "text-[#635BFF] font-semibold"
                         : "text-[#425466] hover:text-[#0A2540]"
                     )}
                   >
@@ -78,7 +79,7 @@ export function Navbar() {
               })}
             </nav>
 
-            {/* 3. Single Unified Magnetic Action Button */}
+            {/* 3. Pitch Business Idea Action Button */}
             <div className="hidden sm:flex items-center shrink-0">
               <Button
                 variant="primary"
@@ -87,7 +88,7 @@ export function Navbar() {
                 rightIcon={<ArrowRight className="h-4 w-4" />}
                 className="font-semibold text-xs sm:text-sm px-5 h-10 shadow-[0_2px_4px_rgba(99,91,255,0.2)]"
               >
-                Apply to Build
+                Pitch Your Idea
               </Button>
             </div>
 
@@ -99,7 +100,7 @@ export function Navbar() {
                 onClick={handleOpenModal}
                 className="text-xs px-3.5 h-8 font-semibold"
               >
-                Apply
+                Pitch Idea
               </Button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -135,7 +136,7 @@ export function Navbar() {
                 className="w-full justify-center text-sm font-semibold"
                 onClick={handleOpenModal}
               >
-                Apply to Build With Us
+                Pitch Your Business Idea
               </Button>
             </div>
           </div>

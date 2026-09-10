@@ -50,17 +50,17 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Logo size="lg" />
             <p className="text-sm text-[#425466] leading-relaxed max-w-sm">
-              The hands-on venture studio for new ventures, early-stage founders, and businesses looking to reboot. We build production-grade software and 0-to-1 growth systems for shared equity upside.
+              The turnkey operations & venture partner for new ventures, early-stage founders, and businesses looking to reboot. We build feasibility prototypes, run end-to-end ground operations, and syndicate capital from our investor pool for shared equity upside.
             </p>
             <div className="pt-2 flex flex-wrap gap-2">
               <Badge variant="indigo" size="sm">
                 Equity & Upside Partner
               </Badge>
               <Badge variant="cyan" size="sm">
-                180-Day Handover
+                Turnkey Operations
               </Badge>
               <Badge variant="emerald" size="sm">
-                Mutual NDA Standard
+                Investor Syndicate
               </Badge>
             </div>
 
@@ -73,9 +73,15 @@ export function Footer() {
           {/* Col 3: Studio & Execution */}
           <div className="space-y-3">
             <h4 className="text-xs uppercase tracking-wider text-[#0A2540] font-bold">
-              Venture Studio
+              Execution & Capital
             </h4>
             <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link href="/capital" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group font-semibold text-[#635BFF]">
+                  <span>Invest Capital</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">Syndicate</span>
+                </Link>
+              </li>
               <li>
                 <Link href="/studio" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
                   <span>Build With 1008 Network</span>
@@ -95,11 +101,6 @@ export function Footer() {
               <li>
                 <Link href="/#personas" className="text-[#425466] hover:text-[#635BFF] transition-colors">
                   Domain Archetypes
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Studio FAQ
                 </Link>
               </li>
             </ul>

@@ -94,7 +94,7 @@ export function PillarsBento() {
             </div>
           </div>
 
-          {/* Card 2: Shared Equity & Upside (5 cols) */}
+          {/* Card 2: Investor Pool & Syndicate Funding (5 cols) */}
           <div className="lg:col-span-5 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
             <div>
               <div className="flex items-center justify-between gap-4 mb-5">
@@ -103,38 +103,38 @@ export function PillarsBento() {
                     <ShieldCheck className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#059669] tracking-wide font-bold uppercase">
-                    SKIN IN THE GAME
+                    CAPITAL & INVESTOR POOL
                   </span>
                 </div>
-                <Badge variant="emerald" size="sm">True Partnership</Badge>
+                <Badge variant="emerald" size="sm">Syndicate Backed</Badge>
               </div>
 
               <h3 className="text-2xl font-bold text-[#0A2540] mb-3">
-                You Fund the Capital. We Handle the Operations.
+                Investor Pool & Syndicate Funding
               </h3>
               <p className="text-[#425466] text-sm leading-relaxed mb-6">
-                All financial capital and investment is handled by the founder. 1008 Network drives the entire operational machinery for shared equity & growth upside. Zero vendor markups, 100% aligned.
+                Beyond ground operations, we connect high-conviction ventures to our network of active angel investors, family offices, and corporate CXOs looking to deploy capital tailored to their risk appetite.
               </p>
 
               <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 mb-6 text-xs">
                 <div className="flex items-center justify-between text-[#627D98] text-[11px] font-semibold">
-                  <span>COLLABORATION MODEL</span>
-                  <span className="text-[#059669] font-bold">MUTUAL CONVICTION ONLY</span>
+                  <span>CAPITAL DEPLOYMENT</span>
+                  <span className="text-[#059669] font-bold">₹2L TO ₹5CR+ ALLOCATIONS</span>
                 </div>
                 <p className="text-[#425466] font-sans">
-                  We talk with the founder, understand the vision, and only tie up with businesses where we see exceptional mutual growth potential.
+                  We match investors with de-risked businesses across Manufacturing, Healthcare, Hospitality, E-Commerce, and Tech where 1008 Network runs operations.
                 </p>
               </div>
             </div>
 
             <div className="pt-4 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Aligned from Day 1</span>
-              <button
-                onClick={() => setModalOpen(true)}
+              <span className="text-xs font-semibold text-[#627D98]">For Founders & Investors</span>
+              <Link
+                href="/capital"
                 className="text-xs font-semibold text-[#059669] hover:underline flex items-center gap-1"
               >
-                Explore Partnership Terms <ArrowRight className="h-3.5 w-3.5" />
-              </button>
+                Explore Investor Portal <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
 

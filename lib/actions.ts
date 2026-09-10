@@ -15,6 +15,18 @@ const localSubmissions = {
   networkPosts: [] as Array<NetworkPostData & { id: string; submittedAt: string }>,
   networkApplications: [] as Array<{ id: string; oppId: string; name: string; email: string; linkedin: string; pitch: string; submittedAt: string }>,
   dealEOIs: [] as Array<{ id: string; dealId: string; name: string; email: string; ticketSizeINR: number; submittedAt: string }>,
+  investorProfiles: [] as Array<{
+    id: string;
+    name: string;
+    email: string;
+    phone: string;
+    investorType: string;
+    capitalAmount: string;
+    riskAppetite: string;
+    preferredIndustries: string[];
+    notes?: string;
+    submittedAt: string;
+  }>,
   contactInquiries: [] as Array<{ id: string; name: string; email: string; type: string; message: string; submittedAt: string }>,
   newsletterSubscribers: [] as Array<{ email: string; subscribedAt: string }>,
 };
@@ -150,6 +162,46 @@ export async function submitDealEOI(payload: {
     return {
       success: false,
       message: "Failed to record EOI. Please contact join@1008.network.",
+      error: (err as Error).message,
+    };
+  }
+}
+
+export async function submitInvestorProfile(payload: {
+  name: string;
+  email: string;
+  phone: string;
+  investorType: string;
+  capitalAmount: string;
+  riskAppetite: string;
+  preferredIndustries: string[];
+  notes?: string;
+}): Promise<ActionResult> {
+  try {
+    if (!payload.name || !payload.email || !payload.phone || !payload.capitalAmount) {
+      return {
+        success: false,
+        message: "Please fill out your name, email, phone number, and capital allocation.",
+      };
+    }
+
+    const record = {
+      id: `inv-${Date.now()}`,
+      ...payload,
+      submittedAt: new Date().toISOString(),
+    };
+
+    localSubmissions.investorProfiles.push(record);
+
+    return {
+      success: true,
+      message: "Thank you! Your investor profile has been registered. Our venture partners will curate and introduce businesses matching your capital range and risk appetite within 24–48 hours.",
+      data: { id: record.id },
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: "Unable to submit your investor profile. Please email us directly at join@1008.network.",
       error: (err as Error).message,
     };
   }

@@ -60,16 +60,16 @@ export function HeroSection() {
 
           {/* Primary Razor-Sharp Hook Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            You bring the vision & capital.{" "}
+            Pitch your business idea.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We handle end-to-end operations to build & scale it.
+              We execute operations & connect you with investors.
             </span>
           </h1>
 
           {/* Core Subtitle Positioning */}
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Whether starting a manufacturing plant, setting up a hospital, school, or hotel, launching a D2C/e-commerce brand, or building a tech venture—<strong>1008 Network puts your vision to work</strong>. We execute real estate scouting, plant & facility setup, machinery procurement, registration paperwork, manpower hiring, tech stack, and marketing to acquire your initial customers.
+            Like <em>Shark Tank</em> with full-stack execution: You bring the idea. <strong>1008 Network runs end-to-end turnkey operations</strong>—from real estate scouting, plant setup, machinery procurement, and registrations to tech, staffing, and initial sales—and <strong>persuades our investor pool to fund your venture</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
@@ -81,39 +81,39 @@ export function HeroSection() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold"
             >
-              Partner With 1008 Network
+              Pitch Your Business Idea
             </Button>
             <Button
-              href="/#blueprint"
+              href="/capital"
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Explore 180-Day Execution Engine
+              Invest Capital With Us
             </Button>
           </div>
 
           {/* Core Proposition Proof Points */}
           <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-4xl mx-auto text-left">
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#635BFF] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Shield className="h-3.5 w-3.5" /> True Partnership
+              <div className="text-xs text-[#00A389] font-bold mb-1 flex items-center gap-1.5 font-sans">
+                <Briefcase className="h-3.5 w-3.5" /> Turnkey Setup
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">You fund the business, we run the operations for shared equity upside. No consulting fees.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Real estate scouting, plant setup, machinery, licensing & legal paperwork.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#00A389] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Briefcase className="h-3.5 w-3.5" /> Full Turnkey Setup
+              <div className="text-xs text-[#635BFF] font-bold mb-1 flex items-center gap-1.5 font-sans">
+                <Shield className="h-3.5 w-3.5" /> Investor Pool & Capital
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Real estate, plant setup, machinery, licensing, legal paperwork & staffing.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">We connect and pitch your validated venture to our active pool of investors.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#059669] font-bold mb-1 flex items-center gap-1.5 font-sans">
                 <Code2 className="h-3.5 w-3.5" /> Tech & Online Stack
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Feasibility MVPs, digital systems, and vetted tech teams hired within your budget.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Feasibility prototypes, internal systems, and vetted tech talent tailored to budget.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
