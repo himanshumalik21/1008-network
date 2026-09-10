@@ -5,6 +5,10 @@ import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
+import { IndustrialBlueprintGraphic } from "@/components/graphics/IndustrialBlueprintGraphic";
+import { SyndicateAllocationGraphic } from "@/components/graphics/SyndicateAllocationGraphic";
+import { DigitalSystemsGraphic } from "@/components/graphics/DigitalSystemsGraphic";
+import { CommercialGTMGraphic } from "@/components/graphics/CommercialGTMGraphic";
 import {
   Code2,
   ShieldCheck,
@@ -42,9 +46,9 @@ export function PillarsBento() {
         {/* Studio Pillars Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           {/* Card 1: Physical Commissioning (7 cols) */}
-          <div className="lg:col-span-7 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
+          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#635BFF]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">
                     <Briefcase className="h-5 w-5" />
@@ -56,34 +60,22 @@ export function PillarsBento() {
                 <Badge variant="indigo" size="sm">Turnkey Ground Execution</Badge>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                Site Scouting, Plant Setup, Machinery & Permits
-              </h3>
-              <p className="text-[#425466] text-sm leading-relaxed mb-5">
-                We handle the heavy lifting on the ground: securing industrial land, overseeing plant civil build-out, OEM machinery procurement at verified rates, and state statutory clearances.
-              </p>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
+                  Site Scouting, Plant Setup, Machinery & Permits
+                </h3>
+                <p className="text-[#425466] text-sm leading-relaxed">
+                  We handle the heavy lifting on the ground: securing industrial land, overseeing plant civil build-out, OEM machinery procurement at verified rates, and state statutory clearances.
+                </p>
+              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs text-[#425466]">
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong>Site & Zoning:</strong> Land acquisition & corridor approvals.</span>
-                </div>
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong>Machinery:</strong> OEM procurement, customs & testing.</span>
-                </div>
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong>Clearances:</strong> Pollution board, factory permits & GST.</span>
-                </div>
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong>Supply Chain:</strong> Raw materials & freight logistics.</span>
-                </div>
+              {/* Embedded Interactive CAD Blueprint Graphic */}
+              <div className="pt-2">
+                <IndustrialBlueprintGraphic />
               </div>
             </div>
 
-            <div className="pt-3.5 border-t border-[#E6E8EB] flex items-center justify-between">
+            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
               <span className="text-xs font-semibold text-[#627D98]">100% Turnkey Execution</span>
               <button
                 onClick={() => setModalOpen(true)}
@@ -95,9 +87,9 @@ export function PillarsBento() {
           </div>
 
           {/* Card 2: Investor Pool & Syndicate Funding (5 cols) */}
-          <div className="lg:col-span-5 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
+          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#059669]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0]">
                     <ShieldCheck className="h-5 w-5" />
@@ -109,25 +101,22 @@ export function PillarsBento() {
                 <Badge variant="emerald" size="sm">Syndicate Backed</Badge>
               </div>
 
-              <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                Curated Investor Pool & Co-Investment
-              </h3>
-              <p className="text-[#425466] text-sm leading-relaxed mb-5">
-                We present your de-risked business to our active syndicate of angel investors and family offices across ₹2L to ₹5Cr+ ticket sizes.
-              </p>
-
-              <div className="p-3.5 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 mb-6 text-xs">
-                <div className="flex items-center justify-between text-[#627D98] text-[11px] font-semibold">
-                  <span>DEPLOYMENT MANDATES</span>
-                  <span className="text-[#059669] font-bold">MATCHED BY RISK APPETITE</span>
-                </div>
-                <p className="text-[#425466]">
-                  From asset-heavy manufacturing plants to high-growth tech platforms.
+              <div>
+                <h3 className="text-xl font-bold text-[#0A2540] mb-2">
+                  Curated Investor Pool & Co-Investment
+                </h3>
+                <p className="text-[#425466] text-sm leading-relaxed">
+                  We present your de-risked business to our active syndicate of angel investors and family offices across ₹2L to ₹5Cr+ ticket sizes.
                 </p>
+              </div>
+
+              {/* Embedded Interactive Syndicate Allocation Graphic */}
+              <div className="pt-2">
+                <SyndicateAllocationGraphic />
               </div>
             </div>
 
-            <div className="pt-3.5 border-t border-[#E6E8EB] flex items-center justify-between">
+            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
               <span className="text-xs font-semibold text-[#627D98]">Aligned Capital</span>
               <Link
                 href="/capital"
@@ -139,9 +128,9 @@ export function PillarsBento() {
           </div>
 
           {/* Card 3: Digital & Systems Architecture (5 cols) */}
-          <div className="lg:col-span-5 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
+          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#00D4B2]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#E6FFFA] text-[#00A389] border border-[#B2F5EA]">
                     <Code2 className="h-5 w-5" />
@@ -153,25 +142,22 @@ export function PillarsBento() {
                 <Badge variant="cyan" size="sm">Lean & Scalable</Badge>
               </div>
 
-              <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                Pragmatic ERPs, MVPs & Systems
-              </h3>
-              <p className="text-[#425466] text-sm leading-relaxed mb-5">
-                We build rapid feasibility prototypes, lean internal inventory/booking ERPs, and hire budget-aligned technical talent.
-              </p>
-
-              <div className="p-3.5 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 mb-6 text-xs">
-                <div className="flex items-center justify-between text-[#627D98] text-[11px] font-semibold">
-                  <span>DEVELOPMENT PRINCIPLE</span>
-                  <span className="text-[#00A389] font-bold">ZERO OVER-ENGINEERING</span>
-                </div>
-                <p className="text-[#425466]">
-                  Engineered to automate workflows and scale with transaction volume.
+              <div>
+                <h3 className="text-xl font-bold text-[#0A2540] mb-2">
+                  Pragmatic ERPs, MVPs & Systems
+                </h3>
+                <p className="text-[#425466] text-sm leading-relaxed">
+                  We build rapid feasibility prototypes, lean internal inventory/booking ERPs, and hire budget-aligned technical talent.
                 </p>
+              </div>
+
+              {/* Embedded Interactive Digital Systems Terminal */}
+              <div className="pt-2">
+                <DigitalSystemsGraphic />
               </div>
             </div>
 
-            <div className="pt-3.5 border-t border-[#E6E8EB] flex items-center justify-between">
+            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
               <span className="text-xs font-semibold text-[#627D98]">100% IP Assigned to You</span>
               <button
                 onClick={() => setModalOpen(true)}
@@ -183,9 +169,9 @@ export function PillarsBento() {
           </div>
 
           {/* Card 4: Talent, GTM & Revenue (7 cols) */}
-          <div className="lg:col-span-7 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
+          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#FF7043]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#FFF4ED] text-[#F4511E] border border-[#FFE0D2]">
                     <Sparkles className="h-5 w-5" />
@@ -197,34 +183,22 @@ export function PillarsBento() {
                 <Badge variant="amber" size="sm">Opening Cash Flows</Badge>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                Key Hiring, Brand Launch & First Revenue
-              </h3>
-              <p className="text-[#425466] text-sm leading-relaxed mb-5">
-                We recruit your essential operational managers and floor staff, institute quality SOPs, and execute go-to-market campaigns to secure inaugural customer orders.
-              </p>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
+                  Key Hiring, Brand Launch & First Revenue
+                </h3>
+                <p className="text-[#425466] text-sm leading-relaxed">
+                  We recruit your essential operational managers and floor staff, institute quality SOPs, and execute go-to-market campaigns to secure inaugural customer orders.
+                </p>
+              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs text-[#425466]">
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
-                  <span><strong>Talent Vetting:</strong> Supervisors, operators & sales managers.</span>
-                </div>
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
-                  <span><strong>Positioning:</strong> Brand identity, PR & digital presence.</span>
-                </div>
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
-                  <span><strong>B2B Channels:</strong> Dealer recruitment & corporate buyers.</span>
-                </div>
-                <div className="p-2.5 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
-                  <span><strong>First Revenue:</strong> Closing initial commercial purchase orders.</span>
-                </div>
+              {/* Embedded Interactive Commercial GTM Board */}
+              <div className="pt-2">
+                <CommercialGTMGraphic />
               </div>
             </div>
 
-            <div className="pt-3.5 border-t border-[#E6E8EB] flex items-center justify-between">
+            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
               <span className="text-xs font-semibold text-[#627D98]">Full Commercial Activation</span>
               <Button
                 onClick={() => setModalOpen(true)}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { initialOpportunities } from "@/data/opportunities";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { NetworkRadarGraphic } from "@/components/graphics/NetworkRadarGraphic";
 import {
   Users,
   MapPin,
@@ -47,6 +48,11 @@ export function NetworkTeaser() {
               Explore All Partners ({initialOpportunities.length})
             </Button>
           </div>
+        </div>
+
+        {/* Interactive Matchmaking Radar Graphic */}
+        <div className="mb-10 max-w-4xl mx-auto">
+          <NetworkRadarGraphic />
         </div>
 
         {/* Featured Opportunity Cards */}
