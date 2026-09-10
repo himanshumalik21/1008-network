@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { PersonaMatrix } from "@/components/home/PersonaMatrix";
+import { NetworkTeaser } from "@/components/home/NetworkTeaser";
 import { KnowledgeTeaser } from "@/components/home/KnowledgeTeaser";
 import { FAQSection } from "@/components/home/FAQSection";
 import { Badge } from "@/components/brand/Badge";
@@ -32,6 +33,9 @@ export default function HomePage() {
       {/* 4. Target Domain Archetypes */}
       <PersonaMatrix />
 
+      {/* 5. Dedicated Co-Founder & Partner Network Teaser */}
+      <NetworkTeaser />
+
       {/* 6. Tactical Operational Playbooks */}
       <KnowledgeTeaser />
 
@@ -53,11 +57,11 @@ export default function HomePage() {
           </Badge>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Ready to turn your business vision into reality?
+            Ready to turn your industry insight into a running enterprise?
           </h2>
 
           <p className="text-base sm:text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Stop worrying about operational friction or contractor markups. Partner with 1008 Network for turnkey real estate, setup, machinery, staffing, tech, and marketing.
+            Stop fighting operational friction, contractor markups, or hiring delays alone. Partner with 1008 Network for turnkey execution on the ground.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
@@ -71,12 +75,12 @@ export default function HomePage() {
               Apply to Build With Us
             </Button>
             <Button
-              href="/contact"
+              href="/network"
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Contact Studio Team
+              Find a Co-Founder / Join Network
             </Button>
           </div>
 

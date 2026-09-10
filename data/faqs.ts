@@ -32,8 +32,8 @@ export const faqs: FAQItem[] = [
     category: "equity",
   },
   {
-    question: "What is the 'Build With You. Not Forever For You' phased principle?",
-    answer: "A true partner builds for your long-term independence, not for perpetual vendor dependency. Over disciplined operational phases tailored to your industry, 1008 Network builds the physical and digital infrastructure, institutes standard operating procedures (SOPs), recruits permanent on-site managers, activates initial commercial revenue, and hands over complete operational sovereignty to the founder.",
+    question: "How long does 1008 Network remain involved in a business?",
+    answer: "Because setting up an industrial manufacturing plant differs vastly from launching a tech SaaS or D2C consumer brand, we do not impose artificial calendar limits. Our engagement is structured around 4 milestone-driven phase gates. 1008 remains actively embedded in ground operations until the business achieves stable commercial revenue and is ready for full operational handover.",
     category: "studio",
   },
   {
