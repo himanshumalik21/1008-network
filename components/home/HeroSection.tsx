@@ -88,12 +88,12 @@ export function HeroSection() {
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
 
-      {/* 2. Stripe-Caliber Flowing Mesh Wave Artwork Canvas - Extended to Full Viewport Height */}
-      <FlowingMeshCanvas className="absolute -top-12 right-0 w-full md:w-[50%] lg:w-[46%] xl:w-[42%] h-[100vh] min-h-[750px] opacity-75 pointer-events-none z-0" />
+      {/* 2. Stripe-Caliber Flowing Mesh Wave Artwork Canvas - Seamlessly flowing through Hero and down into Turnkey Infrastructure */}
+      <FlowingMeshCanvas className="absolute -top-12 right-0 w-full md:w-[50%] lg:w-[46%] xl:w-[42%] h-[1600px] min-h-full opacity-80 pointer-events-none z-0" />
 
       {/* 3. Floating Ambient Motion Gradient Meshes */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[760px] h-[520px] bg-gradient-to-tr from-[#635BFF]/12 via-[#00D4B2]/08 to-transparent blur-[130px] pointer-events-none animate-float-slow" />
-      <div className="absolute top-1/4 -right-16 w-[440px] h-[80vh] bg-gradient-to-bl from-[#FF7043]/08 via-[#635BFF]/07 to-transparent blur-[130px] pointer-events-none animate-float-reverse" />
+      <div className="absolute top-1/4 -right-16 w-[480px] h-[1300px] bg-gradient-to-bl from-[#FF7043]/08 via-[#635BFF]/07 to-transparent blur-[140px] pointer-events-none animate-float-reverse" />
       <div className="absolute top-1/3 -left-28 w-[460px] h-[380px] bg-gradient-to-br from-[#00D4B2]/08 via-[#635BFF]/06 to-transparent blur-[120px] pointer-events-none animate-pulse-subtle" />
 
       {/* 4. Subtle Technical Dot Matrix Accent Corners */}
