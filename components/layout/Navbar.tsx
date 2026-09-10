@@ -25,17 +25,26 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Venture Studio", href: "/#blueprint" },
+    { label: "Venture Studio", href: "/studio" },
     { label: "Partner Network", href: "/network" },
     { label: "Capital", href: "/capital" },
     { label: "Playbooks", href: "/knowledge" },
   ];
 
   const isLinkActive = (href: string) => {
-    if (href === "/#blueprint" || href === "/studio") {
-      return pathname === "/" || pathname === "/studio";
+    if (href === "/studio") {
+      return pathname === "/studio";
     }
-    return pathname === href || pathname.startsWith(`${href}/`);
+    if (href === "/network") {
+      return pathname === "/network" || pathname.startsWith("/network");
+    }
+    if (href === "/capital") {
+      return pathname === "/capital" || pathname.startsWith("/capital");
+    }
+    if (href === "/knowledge") {
+      return pathname === "/knowledge" || pathname.startsWith("/knowledge");
+    }
+    return pathname === href;
   };
 
   const handleOpenModal = () => {

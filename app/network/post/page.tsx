@@ -87,45 +87,45 @@ export default function PostOpportunityPage() {
   };
 
   return (
-    <div className="pt-28 pb-20">
+    <div className="pt-28 pb-20 bg-white min-h-screen">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <Link
             href="/network"
-            className="inline-flex items-center gap-1.5 text-xs font-mono text-muted hover:text-white transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-mono text-[#627D98] hover:text-[#0A2540] transition-colors"
           >
-            <ArrowLeft className="h-3.5 w-3.5" /> Back to Network
+            <ArrowLeft className="h-3.5 w-3.5" /> Back to Partner Network
           </Link>
         </div>
 
         <div className="space-y-3 mb-8">
-          <Badge variant="cyan" size="sm" pulse>60-Day Opportunity Listing</Badge>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white font-sans">
+          <Badge variant="indigo" size="sm" pulse>60-Day Opportunity Listing</Badge>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] font-sans">
             Post an Opportunity on 1008 Network
           </h1>
-          <p className="text-sm text-muted">
+          <p className="text-sm text-[#425466] leading-relaxed">
             Find your missing technical CTO, sales lead, or operational co-founder. All approved listings remain live for 60 days.
           </p>
         </div>
 
         {status === "success" ? (
-          <div className="p-8 sm:p-12 rounded-2xl bg-surface-100/90 border border-white/[0.1] text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/25">
+          <div className="p-8 sm:p-12 rounded-3xl bg-[#F6F9FC] border border-[#E6E8EB] text-center space-y-4 shadow-xs">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-[#059669] flex items-center justify-center mx-auto border border-emerald-500/25">
               <CheckCircle2 className="h-6 w-6" />
             </div>
-            <h3 className="text-2xl font-bold text-white">Listing Submitted for Review</h3>
-            <p className="text-sm text-muted max-w-md mx-auto leading-relaxed">{message}</p>
+            <h3 className="text-2xl font-bold text-[#0A2540]">Listing Submitted for Review</h3>
+            <p className="text-sm text-[#425466] max-w-md mx-auto leading-relaxed">{message}</p>
             <div className="pt-4 flex items-center justify-center gap-3">
-              <Button href="/network" variant="secondary">
+              <Button href="/network" variant="secondary" size="md">
                 Return to Network Board
               </Button>
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="rounded-2xl bg-surface-100/70 border border-white/[0.08] p-6 sm:p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="rounded-3xl bg-[#F6F9FC] border border-[#E6E8EB] p-6 sm:p-8 space-y-6 shadow-xs">
             {/* Section 1: Founder Identity */}
             <div className="space-y-4">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-muted font-semibold">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-[#627D98] font-bold">
                 1. Domain Founder Credentials
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -175,8 +175,8 @@ export default function PostOpportunityPage() {
             </div>
 
             {/* Section 2: Opportunity Details */}
-            <div className="space-y-4 pt-4 border-t border-white/[0.06]">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-muted font-semibold">
+            <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-[#627D98] font-bold">
                 2. Role & Opportunity Requirements
               </h3>
 
@@ -190,16 +190,16 @@ export default function PostOpportunityPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted">
-                    Role Needed <span className="text-amber-400">*</span>
+                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-[#425466]">
+                    Role Needed <span className="text-[#635BFF]">*</span>
                   </label>
                   <select
                     value={formData.roleNeeded}
                     onChange={(e) => setFormData({ ...formData, roleNeeded: e.target.value as RoleCategory })}
-                    className="w-full bg-surface-200/80 border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-foreground focus:outline-none focus:border-cyan-400"
+                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/10 shadow-2xs"
                   >
                     {roles.map((r) => (
-                      <option key={r} value={r} className="bg-[#111317]">
+                      <option key={r} value={r}>
                         {r}
                       </option>
                     ))}
@@ -207,16 +207,16 @@ export default function PostOpportunityPage() {
                 </div>
 
                 <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted">
-                    Sector <span className="text-amber-400">*</span>
+                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-[#425466]">
+                    Sector <span className="text-[#635BFF]">*</span>
                   </label>
                   <select
                     value={formData.sector}
                     onChange={(e) => setFormData({ ...formData, sector: e.target.value as SectorCategory })}
-                    className="w-full bg-surface-200/80 border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-foreground focus:outline-none focus:border-cyan-400"
+                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/10 shadow-2xs"
                   >
                     {sectors.map((s) => (
-                      <option key={s} value={s} className="bg-[#111317]">
+                      <option key={s} value={s}>
                         {s}
                       </option>
                     ))}
@@ -224,16 +224,16 @@ export default function PostOpportunityPage() {
                 </div>
 
                 <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-muted">
-                    City / Location <span className="text-amber-400">*</span>
+                  <label className="block text-xs font-mono font-medium uppercase tracking-wider text-[#425466]">
+                    City / Location <span className="text-[#635BFF]">*</span>
                   </label>
                   <select
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
-                    className="w-full bg-surface-200/80 border border-white/[0.1] rounded-lg px-3 py-2.5 text-xs text-foreground focus:outline-none focus:border-cyan-400"
+                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/10 shadow-2xs"
                   >
                     {cities.map((c) => (
-                      <option key={c} value={c} className="bg-[#111317]">
+                      <option key={c} value={c}>
                         {c}
                       </option>
                     ))}
@@ -274,11 +274,11 @@ export default function PostOpportunityPage() {
               />
             </div>
 
-            {status === "error" && <p className="text-xs text-red-400">{message}</p>}
+            {status === "error" && <p className="text-xs text-red-500">{message}</p>}
 
-            <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
-              <span className="text-xs font-mono text-muted flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5 text-cyan-400" />
+            <div className="pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <span className="text-xs font-mono text-[#627D98] flex items-center gap-1.5">
+                <Clock className="h-3.5 w-3.5 text-[#635BFF]" />
                 <span>60-Day Active Board Standard</span>
               </span>
 
@@ -288,6 +288,7 @@ export default function PostOpportunityPage() {
                 size="lg"
                 isLoading={status === "submitting"}
                 rightIcon={<ArrowRight className="h-4 w-4" />}
+                className="font-semibold text-sm px-6"
               >
                 Submit for Editorial Approval
               </Button>

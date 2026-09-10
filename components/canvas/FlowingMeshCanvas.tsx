@@ -17,16 +17,31 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let width = (canvas.width = canvas.offsetWidth * (window.devicePixelRatio || 1));
-    let height = (canvas.height = canvas.offsetHeight * (window.devicePixelRatio || 1));
+    let isVisible = true;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    let width = (canvas.width = canvas.offsetWidth * dpr);
+    let height = (canvas.height = canvas.offsetHeight * dpr);
 
     const handleResize = () => {
       if (!canvas) return;
-      width = canvas.width = canvas.offsetWidth * (window.devicePixelRatio || 1);
-      height = canvas.height = canvas.offsetHeight * (window.devicePixelRatio || 1);
+      width = canvas.width = canvas.offsetWidth * dpr;
+      height = canvas.height = canvas.offsetHeight * dpr;
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && !animationFrameId) {
+            render();
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(canvas);
 
     let mouseX = 0.5;
     let mouseY = 0.5;
@@ -34,12 +49,13 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     let targetMouseY = 0.5;
 
     const handleMouseMove = (e: MouseEvent) => {
+      if (!isVisible) return;
       const rect = canvas.getBoundingClientRect();
       targetMouseX = (e.clientX - rect.left) / rect.width;
       targetMouseY = (e.clientY - rect.top) / rect.height;
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     let time = 0;
 
@@ -84,6 +100,11 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     ];
 
     const render = () => {
+      if (!isVisible) {
+        animationFrameId = 0;
+        return;
+      }
+
       time += 1;
       mouseX += (targetMouseX - mouseX) * 0.05;
       mouseY += (targetMouseY - mouseY) * 0.05;
@@ -154,9 +175,12 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     render();
 
     return () => {
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, []);
 
