@@ -26,6 +26,7 @@ export function Navbar() {
 
   const navLinks = [
     { label: "Execution Blueprint", href: "/#blueprint" },
+    { label: "Find a Partner", href: "/network" },
     { label: "Invest Capital", href: "/capital" },
     { label: "Who It's For", href: "/#personas" },
     { label: "Why 1008 Network", href: "/#comparison" },
@@ -58,28 +59,18 @@ export function Navbar() {
 
             {/* 2. Executive Desktop Navigation Links */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              {navLinks.map((link) => {
-                const isActive =
-                  pathname === link.href ||
-                  (link.href.startsWith("/") && link.href.length > 1 && pathname === link.href);
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      "text-[14px] font-medium tracking-[-0.01em] transition-colors duration-150",
-                      isActive
-                        ? "text-[#635BFF] font-semibold"
-                        : "text-[#425466] hover:text-[#0A2540]"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs sm:text-sm font-medium text-[#425466] hover:text-[#0A2540] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
 
-            {/* 3. Pitch Business Idea Action Button */}
+            {/* 3. Apply to Build Action Button */}
             <div className="hidden sm:flex items-center shrink-0">
               <Button
                 variant="primary"
@@ -88,7 +79,7 @@ export function Navbar() {
                 rightIcon={<ArrowRight className="h-4 w-4" />}
                 className="font-semibold text-xs sm:text-sm px-5 h-10 shadow-[0_2px_4px_rgba(99,91,255,0.2)]"
               >
-                Pitch Your Idea
+                Apply to Build
               </Button>
             </div>
 
@@ -100,7 +91,7 @@ export function Navbar() {
                 onClick={handleOpenModal}
                 className="text-xs px-3.5 h-8 font-semibold"
               >
-                Pitch Idea
+                Apply to Build
               </Button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -136,7 +127,7 @@ export function Navbar() {
                 className="w-full justify-center text-sm font-semibold"
                 onClick={handleOpenModal}
               >
-                Pitch Your Business Idea
+                Apply to Build With Us
               </Button>
             </div>
           </div>
