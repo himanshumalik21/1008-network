@@ -65,7 +65,7 @@ const quizQuestions: Question[] = [
     question: "What is your current technical architecture and software development capacity?",
     context: "Zero-to-one startups fail when non-technical founders hire low-quality outsourced agencies.",
     options: [
-      { text: "Partnering with 1008 Network for 180-day operational systems & feasibility MVP", points: 25, explanation: "Optimal path for domain founders needing execution excellence." },
+      { text: "Partnering with 1008 Network for phased operational systems & feasibility MVP", points: 25, explanation: "Optimal path for domain founders needing execution excellence." },
       { text: "I have a dedicated technical co-founder (Staff Engineer / CTO)", points: 25, explanation: "Strong internal engineering capability." },
       { text: "Evaluating freelance developers or traditional IT service agencies", points: 10, explanation: "High risk of delayed delivery, bloated code, and zero venture alignment." },
       { text: "No technical capability or plan yet", points: 5, explanation: "Utilize 1008 Network to source and vet engineering talent." },
@@ -169,7 +169,7 @@ export function ReadinessQuiz() {
   } = {
     title: "1008 Network Studio Candidate",
     badgeVariant: "indigo",
-    summary: "Your domain depth, problem clarity, and venture mindset place you in the top 10% of candidates. You are prime for the 180-Day Build With 1008 Network partnership.",
+    summary: "Your domain depth, problem clarity, and venture mindset place you in the top 10% of candidates. You are prime for the Build With 1008 Network operational partnership.",
     action: "Schedule 30-min Studio Intake Diagnostic",
     href: "/studio",
   };

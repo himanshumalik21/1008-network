@@ -91,7 +91,7 @@ export default function HomePage() {
             <span>•</span>
             <span>Zero Upfront Consulting Fees</span>
             <span>•</span>
-            <span>180-Day Handover Standard</span>
+            <span>Phased Handover Standard</span>
           </div>
         </div>
       </section>

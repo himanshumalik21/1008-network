@@ -32,8 +32,8 @@ export const faqs: FAQItem[] = [
     category: "equity",
   },
   {
-    question: "What is the 180-day 'Build With You. Not Forever For You' principle?",
-    answer: "A true partner builds for your long-term independence, not for perpetual vendor dependency. Over a rigorous 180-day cycle, 1008 Network builds the physical and digital infrastructure, institutes standard operating procedures (SOPs), recruits permanent on-site managers, activates initial commercial revenue, and hands over complete operational sovereignty to the founder.",
+    question: "What is the 'Build With You. Not Forever For You' phased principle?",
+    answer: "A true partner builds for your long-term independence, not for perpetual vendor dependency. Over disciplined operational phases tailored to your industry, 1008 Network builds the physical and digital infrastructure, institutes standard operating procedures (SOPs), recruits permanent on-site managers, activates initial commercial revenue, and hands over complete operational sovereignty to the founder.",
     category: "studio",
   },
   {

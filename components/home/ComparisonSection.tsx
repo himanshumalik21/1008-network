@@ -43,7 +43,7 @@ export function ComparisonSection() {
     },
     {
       dimension: "Duration & Exit to Autonomy",
-      studio1008: "Structured 180-day handover engineered to make the founder completely self-reliant with zero vendor lock-in.",
+      studio1008: "Structured phased handover engineered to make the founder completely self-reliant with zero vendor lock-in.",
       agency: "Incentivized to create vendor dependency and extend monthly retainer contracts indefinitely.",
       accelerator: "3-month cohort ending in a presentation, after which operational support disappears.",
       solo: "Indefinite survival battle leading to founder burnout and operational stagnation.",

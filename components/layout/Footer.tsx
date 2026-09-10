@@ -85,12 +85,12 @@ export function Footer() {
               <li>
                 <Link href="/studio" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
                   <span>Build With 1008 Network</span>
-                  <span className="text-[10px] font-bold text-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity">180d</span>
+                  <span className="text-[10px] font-bold text-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity">Phased</span>
                 </Link>
               </li>
               <li>
                 <Link href="/#blueprint" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  The 180-Day Blueprint
+                  The Execution Blueprint
                 </Link>
               </li>
               <li>

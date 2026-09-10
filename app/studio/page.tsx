@@ -31,7 +31,7 @@ export default function StudioPage() {
     },
     {
       dimension: "Duration & Handover",
-      studio1008: "180-Day Handover (Engineered for founder autonomy)",
+      studio1008: "Phased Handover (Tailored milestones engineered for founder autonomy)",
       agency: "Incentivized to keep you on endless retainers",
       accelerator: "3-month cohort ending in Demo Day pitch",
       solo: "Indefinite timeline with high execution fatigue",
@@ -66,7 +66,7 @@ export default function StudioPage() {
             <Badge variant="indigo" size="md" pulse>
               1008 Network // Turnkey Operations & Venture Studio
             </Badge>
-            <span className="text-xs font-semibold text-[#627D98]">180-Day Venture Execution Engine</span>
+            <span className="text-xs font-semibold text-[#627D98]">Phased Venture Execution Engine</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">

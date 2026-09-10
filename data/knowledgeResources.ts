@@ -2,8 +2,8 @@ import { KnowledgeResource } from "@/lib/types";
 
 export const initialKnowledgeResources: KnowledgeResource[] = [
   {
-    slug: "180-day-corporate-to-venture-blueprint",
-    title: "The 180-Day Corporate-to-Venture Transition Blueprint",
+    slug: "corporate-to-venture-transition-blueprint",
+    title: "The Phased Corporate-to-Venture Transition Blueprint",
     subtitle: "A structured, risk-mitigated operational roadmap for senior executives leaving corporate careers to build high-conviction ventures.",
     category: "playbook",
     sectorTags: ["Venture Building", "Leadership", "0-to-1"],
@@ -13,7 +13,7 @@ export const initialKnowledgeResources: KnowledgeResource[] = [
     summary: "Senior corporate executives possess immense domain depth, supplier networks, and customer trust, yet 80% fail when transitioning to startups due to speed mismatch, bloated initial hires, and lack of hands-on prototyping. This playbook details the exact 4-phase transition matrix to de-risk leaving employment.",
     keyTakeaways: [
       "Why domain veterans should never start by hiring an agency: agencies build specs, not businesses with customer feedback loops.",
-      "The 60-day parallel validation framework: how to conduct 40 problem-discovery interviews without violating corporate IP/NDAs.",
+      "The phased parallel validation framework: how to conduct 40 problem-discovery interviews without violating corporate IP/NDAs.",
       "Equity vs. Salary calculations: calculating your true venture runway and structuring personal cash reserves for 18-24 months.",
       "The 'Minimum Viable Signal' rule: securing 3 letters of intent (LOIs) or advance commitments before spending a single rupee on code.",
     ],
@@ -25,7 +25,7 @@ export const initialKnowledgeResources: KnowledgeResource[] = [
       "Establish a clean IP separation date and formal resignation timeline.",
     ],
     contentMarkdown: `
-# The 180-Day Corporate-to-Venture Transition Blueprint
+# The Phased Corporate-to-Venture Transition Blueprint
 
 Leaving a lucrative leadership role with compensation packages north of ₹60L–₹1.5Cr is one of the most high-friction decisions an Indian corporate executive will ever make. The primary failure mode is not a lack of sector intelligence; it is the fundamental difference in operating velocity, team leverage, and capital allocation.
 
@@ -33,7 +33,7 @@ In a corporate environment, you have specialized departments for legal, finance,
 
 ---
 
-## Phase 1: Problem Discovery & Customer Pain Ledger (Days 1–45)
+## Phase 1: Problem Discovery & Customer Pain Ledger
 Before writing any code or incorporating an entity, domain experts must validate whether their perceived market problem is a **hair-on-fire financial bleed** or merely an **operational annoyance**.
 
 ### The Rule of Quantifiable Bleed
@@ -45,7 +45,7 @@ If your target enterprise or SME cannot point to an explicit line-item loss of a
 
 ---
 
-## Phase 2: Rapid Prototyping & Architecture (Days 46–90)
+## Phase 2: Rapid Prototyping & Architecture
 During this stage, your objective is not to build a full enterprise ERP. It is to build the thinnest technical layer that executes the core transaction or workflow.
 
 - Use modular, production-ready full-stack boilerplates (Next.js, Tailwind, Server Actions, PostgreSQL).
@@ -54,7 +54,7 @@ During this stage, your objective is not to build a full enterprise ERP. It is t
 
 ---
 
-## Phase 3: The 3-LOI Commercial Gate (Days 91–135)
+## Phase 3: The 3-LOI Commercial Gate
 Do not raise institutional seed capital until you have secured proof of commercial pull.
 
 1. **Letter of Intent with Pre-Payment / Deposit:** The highest signal of customer conviction.
@@ -62,7 +62,7 @@ Do not raise institutional seed capital until you have secured proof of commerci
 
 ---
 
-## Phase 4: Founder Handover & Full Operational Independence (Days 136–180)
+## Phase 4: Founder Handover & Full Operational Independence
 The final stage establishes your corporate entity, cap table, initial hiring pipelines, and prepares your institutional data room.
 
 - Finalize founder vesting (4-year vesting with 1-year cliff).

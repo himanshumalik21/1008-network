@@ -20,8 +20,9 @@ export function StudioSprintTimeline() {
   const phases = [
     {
       id: 1,
+      phaseLabel: "PHASE 01",
       name: "Phase 1: Blueprint, Land & Regulatory Approvals",
-      days: "Days 1–45",
+      milestone: "Site & Regulatory Lock",
       headline: "De-risking the foundation: Financial modeling, site acquisition, and statutory clearances.",
       deliverables: [
         "Collaborative vision mapping, operational scoping & financial feasibility audit",
@@ -33,8 +34,9 @@ export function StudioSprintTimeline() {
     },
     {
       id: 2,
+      phaseLabel: "PHASE 02",
       name: "Phase 2: Plant Commissioning, Machinery & Systems",
-      days: "Days 46–90",
+      milestone: "Infrastructure & Systems",
       headline: "Physical & digital commissioning: Civil works, OEM equipment, and lean ERPs.",
       deliverables: [
         "Turnkey facility build-out, factory civil works & contractor governance",
@@ -46,8 +48,9 @@ export function StudioSprintTimeline() {
     },
     {
       id: 3,
+      phaseLabel: "PHASE 03",
       name: "Phase 3: Core Staffing, Brand GTM & First Revenue",
-      days: "Days 91–135",
+      milestone: "Commercial Activation",
       headline: "Commercial activation: Hiring mission-critical operators and winning opening customers.",
       deliverables: [
         "Recruiting verified plant supervisors, clinical staff, managers & frontline sales",
@@ -59,8 +62,9 @@ export function StudioSprintTimeline() {
     },
     {
       id: 4,
+      phaseLabel: "PHASE 04",
       name: "Phase 4: Institutional Handover & Full Autonomy",
-      days: "Days 136–180",
+      milestone: "Full Founder Independence",
       headline: "Achieving independence: Full IP assignment, operational governance, and zero vendor lock-in.",
       deliverables: [
         "100% legal assignment of all plant assets, machinery, software & IP to your entity",
@@ -85,12 +89,12 @@ export function StudioSprintTimeline() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">The 180-Day Blueprint</Badge>
+          <Badge variant="indigo" size="sm">The Execution Blueprint</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
             Build with you. Not forever for you.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            A temporary, high-intensity 180-day venture-building partnership engineered to make you completely self-sustaining.
+            A temporary, high-intensity venture-building partnership split into clear operational phases engineered to make you completely self-sustaining.
           </p>
         </div>
 
@@ -111,7 +115,7 @@ export function StudioSprintTimeline() {
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className={cn("text-xs font-semibold", isSelected ? "text-[#635BFF]" : "text-[#627D98]")}>
-                    {phase.days}
+                    {phase.phaseLabel}
                   </span>
                   <Badge variant={isSelected ? "indigo" : "slate"} size="sm">
                     {phase.tag}
@@ -131,8 +135,10 @@ export function StudioSprintTimeline() {
             <div className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-3">
                 <span className="text-xs text-[#635BFF] font-bold uppercase tracking-wider">
-                  {phases[activePhase].days}
+                  {phases[activePhase].phaseLabel}
                 </span>
+                <span className="text-[#CBD5E1]">•</span>
+                <span className="text-xs font-medium text-[#627D98]">{phases[activePhase].milestone}</span>
                 <span className="text-[#CBD5E1]">•</span>
                 <span className="text-xs font-medium text-[#627D98]">{phases[activePhase].tag}</span>
               </div>
@@ -147,7 +153,7 @@ export function StudioSprintTimeline() {
 
               <div className="pt-2 space-y-2.5">
                 <div className="text-xs uppercase tracking-wider text-[#627D98] font-bold">
-                  Key Sprint Deliverables:
+                  Key Phase Deliverables:
                 </div>
                 {phases[activePhase].deliverables.map((del, dIdx) => (
                   <div key={dIdx} className="flex items-start gap-2.5 text-sm text-[#0A2540]">
@@ -164,7 +170,7 @@ export function StudioSprintTimeline() {
                 <span>The 1008 Network Commitment</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed font-sans">
-                By Day 180, 1008 Network transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, scalable workflows, and zero vendor lock-in.
+                Upon phase completion, 1008 Network transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, scalable workflows, and zero vendor lock-in.
               </p>
               <div className="pt-2">
                 <Button

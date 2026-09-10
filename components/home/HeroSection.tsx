@@ -30,50 +30,50 @@ export function HeroSection() {
       label: "🏭 Manufacturing & Plants",
       headline: "Turnkey Industrial Plant & Assembly Commissioning",
       phases: [
-        { phase: "PHASE 01", days: "Days 1–45", title: "Site Scouting & Feasibility", desc: "Zoning approvals, industrial corridor land scouting & capital budgeting.", gate: "Foundation Gate" },
-        { phase: "PHASE 02", days: "Days 46–90", title: "Machinery & Plant Civil", desc: "OEM machinery sourcing, custom tooling, factory civil works & trial runs.", gate: "Commissioning Gate" },
-        { phase: "PHASE 03", days: "Days 91–135", title: "Staffing & Quality SOPs", desc: "Recruiting plant supervisors, machine operators & vendor supply contracts.", gate: "Operations Gate" },
-        { phase: "PHASE 04", days: "Days 136–180", title: "B2B Sales & Handover", desc: "Securing dealer purchase orders, full asset transfer & founder autonomy.", gate: "Autonomy Gate" },
+        { phase: "PHASE 01", milestone: "Scouting & Feasibility", title: "Site Scouting & Feasibility", desc: "Zoning approvals, industrial corridor land scouting & capital budgeting.", gate: "Foundation Gate" },
+        { phase: "PHASE 02", milestone: "Commissioning & Civil", title: "Machinery & Plant Civil", desc: "OEM machinery sourcing, custom tooling, factory civil works & trial runs.", gate: "Commissioning Gate" },
+        { phase: "PHASE 03", milestone: "Operations & Quality", title: "Staffing & Quality SOPs", desc: "Recruiting plant supervisors, machine operators & vendor supply contracts.", gate: "Operations Gate" },
+        { phase: "PHASE 04", milestone: "Full Turnkey Handover", title: "B2B Sales & Handover", desc: "Securing dealer purchase orders, full asset transfer & founder autonomy.", gate: "Autonomy Gate" },
       ]
     },
     healthcare: {
       label: "🏥 Healthcare & Clinics",
       headline: "Multi-Specialty Clinic, Diagnostic & Hospital Setup",
       phases: [
-        { phase: "PHASE 01", days: "Days 1–45", title: "Facility & Health Licensing", desc: "Commercial medical real estate scouting & state healthcare regulatory approvals.", gate: "Permit Gate" },
-        { phase: "PHASE 02", days: "Days 46–90", title: "Medical Equipment Leasing", desc: "Diagnostic lab machinery, sterile room build-out & hospital management software.", gate: "Setup Gate" },
-        { phase: "PHASE 03", days: "Days 91–135", title: "Clinical & Staff Hiring", desc: "Recruiting doctors, nursing officers, technicians & patient care protocols.", gate: "Staffing Gate" },
-        { phase: "PHASE 04", days: "Days 136–180", title: "Launch & Patient Flow", desc: "Hyper-local marketing, corporate tie-ups & 100% operational transition.", gate: "Handover Gate" },
+        { phase: "PHASE 01", milestone: "Licensing & Scouting", title: "Facility & Health Licensing", desc: "Commercial medical real estate scouting & state healthcare regulatory approvals.", gate: "Permit Gate" },
+        { phase: "PHASE 02", milestone: "Diagnostic Fit-out", title: "Medical Equipment Leasing", desc: "Diagnostic lab machinery, sterile room build-out & hospital management software.", gate: "Setup Gate" },
+        { phase: "PHASE 03", milestone: "Medical Staffing", title: "Clinical & Staff Hiring", desc: "Recruiting doctors, nursing officers, technicians & patient care protocols.", gate: "Staffing Gate" },
+        { phase: "PHASE 04", milestone: "Patient Flow & Handover", title: "Launch & Patient Flow", desc: "Hyper-local marketing, corporate tie-ups & 100% operational transition.", gate: "Handover Gate" },
       ]
     },
     hospitality: {
       label: "🏨 Hospitality & Hotels",
       headline: "Boutique Hotels, Resorts & Food & Beverage Networks",
       phases: [
-        { phase: "PHASE 01", days: "Days 1–45", title: "Location & Property Due Diligence", desc: "Site acquisition, tourism zoning clearance & architect design lock.", gate: "Feasibility Gate" },
-        { phase: "PHASE 02", days: "Days 46–90", title: "Interior & Kitchen Commissioning", desc: "Commercial kitchen equipment, interior fit-out, municipal & liquor permits.", gate: "Fit-out Gate" },
-        { phase: "PHASE 03", days: "Days 91–135", title: "Hospitality Crew & PMS Tech", desc: "Staff recruitment, property management software & culinary SOPs.", gate: "Readiness Gate" },
-        { phase: "PHASE 04", days: "Days 136–180", title: "Booking Launch & Occupancy", desc: "OTA channel distribution, inaugural guest marketing & operational handover.", gate: "Launch Gate" },
+        { phase: "PHASE 01", milestone: "Property Due Diligence", title: "Location & Property Due Diligence", desc: "Site acquisition, tourism zoning clearance & architect design lock.", gate: "Feasibility Gate" },
+        { phase: "PHASE 02", milestone: "Kitchen & Interior Fit-out", title: "Interior & Kitchen Commissioning", desc: "Commercial kitchen equipment, interior fit-out, municipal & liquor permits.", gate: "Fit-out Gate" },
+        { phase: "PHASE 03", milestone: "Crew & Management Tech", title: "Hospitality Crew & PMS Tech", desc: "Staff recruitment, property management software & culinary SOPs.", gate: "Readiness Gate" },
+        { phase: "PHASE 04", milestone: "Bookings & Handover", title: "Booking Launch & Occupancy", desc: "OTA channel distribution, inaugural guest marketing & operational handover.", gate: "Launch Gate" },
       ]
     },
     d2c: {
       label: "🛍️ Consumer Brands & D2C",
       headline: "Apparel Lines, Consumer Electronics & Packaged Goods",
       phases: [
-        { phase: "PHASE 01", days: "Days 1–45", title: "Formulation & Contract Mfg", desc: "OEM batch manufacturing contracts, packaging prototyping & lab testing.", gate: "Product Gate" },
-        { phase: "PHASE 02", days: "Days 46–90", title: "Supply Chain & Commerce Stack", desc: "Warehousing, 3PL logistics, custom digital storefront & payment rails.", gate: "Supply Gate" },
-        { phase: "PHASE 03", days: "Days 91–135", title: "GTM Launch & Paid Acquisition", desc: "Brand launch campaigns, influencer seeding & initial customer order volume.", gate: "Traction Gate" },
-        { phase: "PHASE 04", days: "Days 136–180", title: "Retail Channels & Unit Economics", desc: "Retail distributor placement, positive contribution margin & handover.", gate: "Scale Gate" },
+        { phase: "PHASE 01", milestone: "Formulation & Contract Mfg", title: "Formulation & Contract Mfg", desc: "OEM batch manufacturing contracts, packaging prototyping & lab testing.", gate: "Product Gate" },
+        { phase: "PHASE 02", milestone: "Supply Chain & Commerce", title: "Supply Chain & Commerce Stack", desc: "Warehousing, 3PL logistics, custom digital storefront & payment rails.", gate: "Supply Gate" },
+        { phase: "PHASE 03", milestone: "GTM Launch & Distribution", title: "GTM Launch & Paid Acquisition", desc: "Brand launch campaigns, influencer seeding & initial customer order volume.", gate: "Traction Gate" },
+        { phase: "PHASE 04", milestone: "Retail Channels & Handover", title: "Retail Channels & Unit Economics", desc: "Retail distributor placement, positive contribution margin & handover.", gate: "Scale Gate" },
       ]
     },
     turnaround: {
       label: "🔄 Business Turnaround & Reboot",
       headline: "Operational Restructuring & Cash-Flow Stabilization",
       phases: [
-        { phase: "PHASE 01", days: "Days 1–45", title: "Root-Cause Financial Audit", desc: "Stopping capital leaks, analyzing margin bleeds & restructuring supplier terms.", gate: "Diagnostic Gate" },
-        { phase: "PHASE 02", days: "Days 46–90", title: "Operational & Tech Overhaul", desc: "Streamlining bloated workflows, fixing broken software & optimizing inventory.", gate: "Repair Gate" },
-        { phase: "PHASE 03", days: "Days 91–135", title: "Commercial Sales Reignited", desc: "Re-activating dormant accounts, upgrading sales team & establishing positive cash flow.", gate: "Momentum Gate" },
-        { phase: "PHASE 04", days: "Days 136–180", title: "Self-Sustaining Autonomy", desc: "Institutionalized governance, profitable run-rate & sustainable growth.", gate: "Stability Gate" },
+        { phase: "PHASE 01", milestone: "Financial Diagnostic", title: "Root-Cause Financial Audit", desc: "Stopping capital leaks, analyzing margin bleeds & restructuring supplier terms.", gate: "Diagnostic Gate" },
+        { phase: "PHASE 02", milestone: "Systems Overhaul", title: "Operational & Tech Overhaul", desc: "Streamlining bloated workflows, fixing broken software & optimizing inventory.", gate: "Repair Gate" },
+        { phase: "PHASE 03", milestone: "Sales Reignited", title: "Commercial Sales Reignited", desc: "Re-activating dormant accounts, upgrading sales team & establishing positive cash flow.", gate: "Momentum Gate" },
+        { phase: "PHASE 04", milestone: "Autonomy & Growth", title: "Self-Sustaining Autonomy", desc: "Institutionalized governance, profitable run-rate & sustainable growth.", gate: "Stability Gate" },
       ]
     },
   };
@@ -150,7 +150,7 @@ export function HeroSection() {
               <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" /> ₹0 Consulting Retainers
             </span>
             <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF]" /> 180-Day Handover
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF]" /> Phased Handover to Autonomy
             </span>
             <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389]" /> 100% IP & Asset Ownership
@@ -190,7 +190,7 @@ export function HeroSection() {
             {/* Active Sector Scope Title */}
             <div className="mb-4 text-left">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#635BFF] block">
-                180-Day Turnkey Scope
+                Phased Turnkey Execution Scope
               </span>
               <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
                 {sectorPreviews[activeSector].headline}
@@ -204,7 +204,7 @@ export function HeroSection() {
                   <div>
                     <div className="flex items-center justify-between text-[#627D98] text-[10px] font-semibold mb-1">
                       <span className="text-[#635BFF] font-bold">{p.phase}</span>
-                      <span>{p.days}</span>
+                      <span className="text-[10px] text-[#0A2540] font-medium">{p.milestone}</span>
                     </div>
                     <div className="text-[#0A2540] font-bold text-xs mb-1">{p.title}</div>
                     <p className="text-[#425466] text-[11px] leading-relaxed">{p.desc}</p>
