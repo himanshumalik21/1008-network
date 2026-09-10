@@ -129,7 +129,7 @@ export function HeroSection() {
 
           {/* Core Subtitle - Concise & Impactful */}
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
-            1008 Network is India&apos;s turnkey venture execution partner. We manage plant setup, manufacturing, machinery sourcing, technical systems, and seed capital syndication for shared equity—with <strong>zero consulting retainers</strong>.
+            We engineer turnkey ground operations, deploy enterprise digital systems, and syndicate seed capital alongside ambitious founders—built entirely for shared equity with <strong>zero consulting retainers</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
