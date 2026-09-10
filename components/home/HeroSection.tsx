@@ -23,12 +23,42 @@ import {
 
 export function HeroSection() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [activeSector, setActiveSector] = useState<"manufacturing" | "healthcare" | "hospitality" | "d2c" | "turnaround">("manufacturing");
+  const [activeSector, setActiveSector] = useState<"tech" | "d2c" | "product" | "manufacturing" | "globalIndia" | "turnaround">("tech");
 
   const sectorPreviews = {
+    tech: {
+      label: "⚡ Tech Startups & SaaS",
+      headline: "Venture-Grade Architecture, Feasibility MVP & GTM Activation",
+      phases: [
+        { phase: "PHASE 01", milestone: "Architecture & Feasibility", title: "System Design & Feasibility MVP", desc: "Production Next.js / cloud architecture, technical scoping & budget allocation.", gate: "Architecture Gate" },
+        { phase: "PHASE 02", milestone: "Core Build & Integrations", title: "Rapid Engineering & Vetted Hiring", desc: "Building core database models, API pipelines & sourcing vetted engineering talent.", gate: "Build Gate" },
+        { phase: "PHASE 03", milestone: "Pilot Customer Traction", title: "Paid Pilots & GTM Launch", desc: "Securing 3+ paying pilot clients, onboarding telemetry & usage feedback loops.", gate: "Traction Gate" },
+        { phase: "PHASE 04", milestone: "Syndicate Syndication", title: "Data Room & Investor Syndication", desc: "Cap table optimization, investor syndicate matching & operational handover.", gate: "Scale Gate" },
+      ]
+    },
+    d2c: {
+      label: "🛍️ Consumer Brands & D2C",
+      headline: "Formulation, Batch Manufacturing, 3PL & Omnichannel Commerce",
+      phases: [
+        { phase: "PHASE 01", milestone: "Formulation & Contract Mfg", title: "Formulation & Contract Mfg", desc: "OEM batch manufacturing contracts, packaging prototyping & regulatory compliance.", gate: "Product Gate" },
+        { phase: "PHASE 02", milestone: "Supply Chain & Commerce", title: "Supply Chain & Commerce Stack", desc: "Warehousing, 3PL logistics, custom digital storefront & payment rails.", gate: "Supply Gate" },
+        { phase: "PHASE 03", milestone: "GTM Launch & Distribution", title: "GTM Launch & Paid Acquisition", desc: "Brand launch campaigns, influencer seeding & initial customer order volume.", gate: "Traction Gate" },
+        { phase: "PHASE 04", milestone: "Retail Channels & Handover", title: "Retail Channels & Unit Economics", desc: "Retail distributor placement, positive contribution margin & handover.", gate: "Autonomy Gate" },
+      ]
+    },
+    product: {
+      label: "📦 Product Brands & Hardware",
+      headline: "Industrial Design, Custom Tooling & Direct-to-Market Execution",
+      phases: [
+        { phase: "PHASE 01", milestone: "Design & Prototyping", title: "Industrial Prototyping & CAD", desc: "3D CAD modeling, material selection, functional prototyping & safety certifications.", gate: "Design Gate" },
+        { phase: "PHASE 02", milestone: "Tooling & Pilot Run", title: "Custom Molds & Batch Runs", desc: "Die tooling, contract manufacturing partner lock & quality assurance testing.", gate: "Tooling Gate" },
+        { phase: "PHASE 03", milestone: "Packaging & Logistics", title: "Packaging & Domestic Distribution", desc: "Retail-ready packaging, barcode compliance, freight forwarding & channel partners.", gate: "Channel Gate" },
+        { phase: "PHASE 04", milestone: "Commercial Rollout", title: "Commercial Rollout & Handover", desc: "Wholesale distributor fulfillment, warranty systems & operational transition.", gate: "Handover Gate" },
+      ]
+    },
     manufacturing: {
       label: "🏭 Manufacturing & Plants",
-      headline: "Turnkey Manufacturing Setup, Machinery Sourcing & Assembly",
+      headline: "Turnkey Plant Setup, OEM Machinery Sourcing & Assembly",
       phases: [
         { phase: "PHASE 01", milestone: "Scouting & Feasibility", title: "Site Scouting & Feasibility", desc: "Zoning approvals, industrial corridor land scouting & capital budgeting.", gate: "Foundation Gate" },
         { phase: "PHASE 02", milestone: "Commissioning & Civil", title: "Machinery & Plant Civil", desc: "OEM machinery sourcing, custom tooling, factory civil works & trial runs.", gate: "Commissioning Gate" },
@@ -36,34 +66,14 @@ export function HeroSection() {
         { phase: "PHASE 04", milestone: "Full Turnkey Handover", title: "B2B Sales & Handover", desc: "Securing dealer purchase orders, full asset transfer & founder autonomy.", gate: "Autonomy Gate" },
       ]
     },
-    healthcare: {
-      label: "🏥 Healthcare & Clinics",
-      headline: "Multi-Specialty Clinic, Diagnostic & Hospital Setup",
+    globalIndia: {
+      label: "🌐 India Market Entry & Co-Investment",
+      headline: "Semiconductor, EV & Advanced Manufacturing Entry in India",
       phases: [
-        { phase: "PHASE 01", milestone: "Licensing & Scouting", title: "Facility & Health Licensing", desc: "Commercial medical real estate scouting & state healthcare regulatory approvals.", gate: "Permit Gate" },
-        { phase: "PHASE 02", milestone: "Diagnostic Fit-out", title: "Medical Equipment Leasing", desc: "Diagnostic lab machinery, sterile room build-out & hospital management software.", gate: "Setup Gate" },
-        { phase: "PHASE 03", milestone: "Medical Staffing", title: "Clinical & Staff Hiring", desc: "Recruiting doctors, nursing officers, technicians & patient care protocols.", gate: "Staffing Gate" },
-        { phase: "PHASE 04", milestone: "Patient Flow & Handover", title: "Launch & Patient Flow", desc: "Hyper-local marketing, corporate tie-ups & 100% operational transition.", gate: "Handover Gate" },
-      ]
-    },
-    hospitality: {
-      label: "🏨 Hospitality & Hotels",
-      headline: "Boutique Hotels, Resorts & Food & Beverage Networks",
-      phases: [
-        { phase: "PHASE 01", milestone: "Property Due Diligence", title: "Location & Property Due Diligence", desc: "Site acquisition, tourism zoning clearance & architect design lock.", gate: "Feasibility Gate" },
-        { phase: "PHASE 02", milestone: "Kitchen & Interior Fit-out", title: "Interior & Kitchen Commissioning", desc: "Commercial kitchen equipment, interior fit-out, municipal & liquor permits.", gate: "Fit-out Gate" },
-        { phase: "PHASE 03", milestone: "Crew & Management Tech", title: "Hospitality Crew & PMS Tech", desc: "Staff recruitment, property management software & culinary SOPs.", gate: "Readiness Gate" },
-        { phase: "PHASE 04", milestone: "Bookings & Handover", title: "Booking Launch & Occupancy", desc: "OTA channel distribution, inaugural guest marketing & operational handover.", gate: "Launch Gate" },
-      ]
-    },
-    d2c: {
-      label: "🛍️ Consumer Brands & D2C",
-      headline: "Apparel Lines, Consumer Electronics & Packaged Goods",
-      phases: [
-        { phase: "PHASE 01", milestone: "Formulation & Contract Mfg", title: "Formulation & Contract Mfg", desc: "OEM batch manufacturing contracts, packaging prototyping & lab testing.", gate: "Product Gate" },
-        { phase: "PHASE 02", milestone: "Supply Chain & Commerce", title: "Supply Chain & Commerce Stack", desc: "Warehousing, 3PL logistics, custom digital storefront & payment rails.", gate: "Supply Gate" },
-        { phase: "PHASE 03", milestone: "GTM Launch & Distribution", title: "GTM Launch & Paid Acquisition", desc: "Brand launch campaigns, influencer seeding & initial customer order volume.", gate: "Traction Gate" },
-        { phase: "PHASE 04", milestone: "Retail Channels & Handover", title: "Retail Channels & Unit Economics", desc: "Retail distributor placement, positive contribution margin & handover.", gate: "Scale Gate" },
+        { phase: "PHASE 01", milestone: "Regulatory & Subsidy Lock", title: "State Subsidies & Legal Entity", desc: "PLI scheme optimization, state policy incentives & joint-venture entity setup.", gate: "Policy Gate" },
+        { phase: "PHASE 02", milestone: "Mega-Site & JV Partnering", title: "Industrial Corridors & Supply JV", desc: "Securing industrial corridor land, cleanroom/plant infra & local supplier joint ventures.", gate: "Infra Gate" },
+        { phase: "PHASE 03", milestone: "OEM Setup & Talent Hub", title: "Machinery Import & Engineering Hiring", desc: "Customs clearance for specialized tooling, local engineering recruitment & safety SOPs.", gate: "Execution Gate" },
+        { phase: "PHASE 04", milestone: "Commercial Production", title: "Production Ramp & Syndicate Co-Capital", desc: "Commercial volume production, domestic supply contracts & syndicate capital alignment.", gate: "Scale Gate" },
       ]
     },
     turnaround: {
