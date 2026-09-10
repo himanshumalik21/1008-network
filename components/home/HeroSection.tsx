@@ -17,6 +17,11 @@ import {
   Clock,
   Briefcase,
   Code2,
+  ShoppingBag,
+  Cpu,
+  Factory,
+  Globe,
+  RefreshCw,
   Lock,
   ChevronRight,
 } from "lucide-react";
@@ -27,7 +32,8 @@ export function HeroSection() {
 
   const sectorPreviews = {
     tech: {
-      label: "⚡ Tech Startups & SaaS",
+      icon: Code2,
+      label: "Tech & SaaS",
       headline: "Venture-Grade Architecture, Feasibility MVP & GTM Activation",
       phases: [
         { phase: "PHASE 01", milestone: "Architecture & Feasibility", title: "System Design & Feasibility MVP", desc: "Production Next.js / cloud architecture, technical scoping & budget allocation.", gate: "Architecture Gate" },
@@ -37,7 +43,8 @@ export function HeroSection() {
       ]
     },
     d2c: {
-      label: "🛍️ Consumer Brands & D2C",
+      icon: ShoppingBag,
+      label: "Consumer Brands & D2C",
       headline: "Formulation, Batch Manufacturing, 3PL & Omnichannel Commerce",
       phases: [
         { phase: "PHASE 01", milestone: "Formulation & Contract Mfg", title: "Formulation & Contract Mfg", desc: "OEM batch manufacturing contracts, packaging prototyping & regulatory compliance.", gate: "Product Gate" },
@@ -47,7 +54,8 @@ export function HeroSection() {
       ]
     },
     product: {
-      label: "📦 Product Brands & Hardware",
+      icon: Cpu,
+      label: "Hardware & Devices",
       headline: "Industrial Design, Custom Tooling & Direct-to-Market Execution",
       phases: [
         { phase: "PHASE 01", milestone: "Design & Prototyping", title: "Industrial Prototyping & CAD", desc: "3D CAD modeling, material selection, functional prototyping & safety certifications.", gate: "Design Gate" },
@@ -57,7 +65,8 @@ export function HeroSection() {
       ]
     },
     manufacturing: {
-      label: "🏭 Manufacturing & Plants",
+      icon: Factory,
+      label: "Manufacturing Plants",
       headline: "Turnkey Plant Setup, OEM Machinery Sourcing & Assembly",
       phases: [
         { phase: "PHASE 01", milestone: "Scouting & Feasibility", title: "Site Scouting & Feasibility", desc: "Zoning approvals, industrial corridor land scouting & capital budgeting.", gate: "Foundation Gate" },
@@ -67,7 +76,8 @@ export function HeroSection() {
       ]
     },
     globalIndia: {
-      label: "🌐 India Market Entry & Co-Investment",
+      icon: Globe,
+      label: "India Entry & JVs",
       headline: "Semiconductor, EV & Advanced Manufacturing Entry in India",
       phases: [
         { phase: "PHASE 01", milestone: "Regulatory & Subsidy Lock", title: "State Subsidies & Legal Entity", desc: "PLI scheme optimization, state policy incentives & joint-venture entity setup.", gate: "Policy Gate" },
@@ -77,7 +87,8 @@ export function HeroSection() {
       ]
     },
     turnaround: {
-      label: "🔄 Business Turnaround & Reboot",
+      icon: RefreshCw,
+      label: "Business Turnaround",
       headline: "Operational Restructuring & Cash-Flow Stabilization",
       phases: [
         { phase: "PHASE 01", milestone: "Financial Diagnostic", title: "Root-Cause Financial Audit", desc: "Stopping capital leaks, analyzing margin bleeds & restructuring supplier terms.", gate: "Diagnostic Gate" },
@@ -170,124 +181,112 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Revamped High-Impact Venture & Co-Investment Architecture Previewer */}
-        <div id="blueprint" className="mt-14 max-w-6xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-3 sm:p-5 shadow-[0_20px_50px_-12px_rgba(10,37,64,0.08)] relative scroll-mt-28">
-          {/* Header & Archetype Category Tabs */}
-          <div className="space-y-4 pb-6 border-b border-[#E6E8EB]">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 text-left px-2 sm:px-3 pt-2">
+        {/* Revamped High-Impact Venture Architecture Showcase (Linear / Stripe Grade) */}
+        <div id="blueprint" className="mt-16 max-w-6xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-4 sm:p-8 shadow-[0_12px_36px_-8px_rgba(10,37,64,0.06)] relative scroll-mt-28">
+          
+          {/* Header & Clean Segmented Track Pills */}
+          <div className="space-y-5 pb-6 border-b border-[#F1F5F9]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
               <div>
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#635BFF] flex items-center gap-1.5 mb-1">
-                  <Sparkles className="h-3.5 w-3.5 text-[#635BFF]" /> Turnkey Execution Tracks
-                </span>
-                <h3 className="text-lg sm:text-xl font-extrabold text-[#0A2540] tracking-tight">
-                  Select your venture archetype to explore operational milestones
+                <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#635BFF] mb-1">
+                  <Sparkles className="h-3.5 w-3.5" />
+                  <span>Turnkey Execution Tracks</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
+                  {sectorPreviews[activeSector].headline}
                 </h3>
               </div>
-              <span className="text-xs font-mono text-[#627D98] hidden sm:block">
-                Interactive Operational Blueprint
-              </span>
+
+              <div className="shrink-0">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] text-xs font-bold font-mono">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" /> ₹0 Retainers • Shared Equity
+                </span>
+              </div>
             </div>
 
-            {/* Clean Segmented Tab Buttons Bar */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-1 px-1 no-scrollbar">
+            {/* Segmented Archetype Selector Pills */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 no-scrollbar">
               {(Object.keys(sectorPreviews) as Array<keyof typeof sectorPreviews>).map((secKey) => {
                 const isSelected = activeSector === secKey;
+                const sec = sectorPreviews[secKey];
+                const IconComponent = sec.icon;
                 return (
                   <button
                     key={secKey}
                     type="button"
                     onClick={() => setActiveSector(secKey)}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap flex items-center gap-2 shrink-0 border ${
+                    className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-150 whitespace-nowrap flex items-center gap-2 shrink-0 border ${
                       isSelected
-                        ? "bg-[#0A2540] text-white border-[#0A2540] shadow-sm"
-                        : "bg-[#F6F9FC] text-[#425466] border-[#E6E8EB] hover:text-[#0A2540] hover:bg-white hover:border-[#CBD5E1]"
+                        ? "bg-[#0A2540] text-white border-[#0A2540] shadow-xs"
+                        : "bg-[#F8FAFC] text-[#425466] border-[#E6E8EB] hover:text-[#0A2540] hover:bg-white hover:border-[#CBD5E1]"
                     }`}
                   >
-                    <span>{sectorPreviews[secKey].label}</span>
+                    <IconComponent className={`h-3.5 w-3.5 ${isSelected ? "text-[#00D4B2]" : "text-[#627D98]"}`} />
+                    <span>{sec.label}</span>
                   </button>
                 );
               })}
             </div>
           </div>
 
-          {/* Active Track Overview & 4-Phase Grid */}
-          <div className="p-2 sm:p-4 space-y-6">
-            {/* Active Track Title & Assurance Badge */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left pt-2">
-              <div>
-                <span className="text-xs font-mono font-bold text-[#635BFF] uppercase tracking-wider">
-                  Operational Roadmap & Handover Protocol
-                </span>
-                <h4 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight mt-0.5">
-                  {sectorPreviews[activeSector].headline}
-                </h4>
-              </div>
-              <div className="shrink-0 flex items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] text-xs font-bold font-mono">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" /> ₹0 Retainers • Equity Aligned
-                </span>
-              </div>
-            </div>
-
-            {/* 4-Phase Connected Modern Milestone Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left font-sans">
-              {sectorPreviews[activeSector].phases.map((p, idx) => (
-                <div
-                  key={idx}
-                  className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-3 flex flex-col justify-between hover:bg-white hover:border-[#635BFF]/50 hover:shadow-md transition-all duration-200 relative group"
-                >
-                  <div className="space-y-2.5">
-                    {/* Top Step Pill & Milestone Subtitle */}
-                    <div className="flex items-center justify-between">
-                      <span className="px-2.5 py-0.5 rounded-md bg-[#F0F0FF] text-[#635BFF] font-mono font-bold text-[11px] tracking-wide border border-[#E0E0FF]">
-                        {p.phase}
-                      </span>
-                      <span className="text-[11px] font-mono font-semibold text-[#829AB1]">
-                        {p.milestone}
-                      </span>
-                    </div>
-
-                    <h5 className="text-[#0A2540] font-extrabold text-sm sm:text-base leading-snug">
-                      {p.title}
-                    </h5>
-
-                    <p className="text-[#425466] text-xs leading-relaxed font-normal">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  <div className="pt-3 border-t border-[#E6E8EB] flex items-center justify-between text-xs font-bold text-[#059669]">
-                    <span className="flex items-center gap-1.5 font-mono text-[11px]">
-                      <CheckCircle2 className="h-3.5 w-3.5" /> {p.gate}
+          {/* 4-Phase Connected Progress Stepper (Modern Light Grid) */}
+          <div className="py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left font-sans">
+            {sectorPreviews[activeSector].phases.map((p, idx) => (
+              <div
+                key={idx}
+                className="p-5 rounded-2xl bg-white border border-[#E6E8EB] flex flex-col justify-between space-y-3 hover:border-[#635BFF] hover:shadow-md transition-all duration-200 group relative"
+              >
+                <div className="space-y-3">
+                  {/* Step Number + Milestone Name */}
+                  <div className="flex items-center justify-between">
+                    <span className="w-7 h-7 rounded-lg bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF] font-mono text-xs font-extrabold flex items-center justify-center">
+                      0{idx + 1}
                     </span>
-                    <span className="text-[#CBD5E1] group-hover:text-[#635BFF] transition-colors font-bold text-sm">
-                      →
+                    <span className="text-[11px] font-mono font-semibold text-[#829AB1]">
+                      {p.milestone}
                     </span>
                   </div>
+
+                  <h4 className="text-sm sm:text-base font-extrabold text-[#0A2540] leading-snug">
+                    {p.title}
+                  </h4>
+
+                  <p className="text-xs text-[#425466] leading-relaxed">
+                    {p.desc}
+                  </p>
                 </div>
-              ))}
-            </div>
 
-            {/* Bottom Assurance & Contextual Action Bar */}
-            <div className="pt-5 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-              <div className="flex items-center gap-2.5 text-[#425466] text-left">
-                <Shield className="h-4 w-4 text-[#059669] shrink-0" />
-                <span className="leading-relaxed">
-                  <strong className="text-[#0A2540] font-bold">Execution Covenant:</strong> 100% legal ownership of all assets, IP, permits & leases assigned directly to your corporate entity.
-                </span>
+                <div className="pt-3 border-t border-[#F1F5F9] flex items-center justify-between text-xs font-bold text-[#059669]">
+                  <span className="flex items-center gap-1 font-mono text-[11px]">
+                    <CheckCircle2 className="h-3.5 w-3.5" /> {p.gate}
+                  </span>
+                  <span className="text-[#CBD5E1] group-hover:text-[#635BFF] transition-colors font-bold">
+                    →
+                  </span>
+                </div>
               </div>
-              
-              <div className="shrink-0 w-full sm:w-auto">
-                <Button
-                  variant="primary"
-                  size="md"
-                  onClick={handleOpenModal}
-                  rightIcon={<ArrowRight className="h-4 w-4" />}
-                  className="w-full sm:w-auto font-semibold text-xs sm:text-sm px-5 h-10 shadow-sm whitespace-nowrap"
-                >
-                  Pitch Your Venture
-                </Button>
-              </div>
+            ))}
+          </div>
+
+          {/* Bottom Covenant & Action Bar */}
+          <div className="pt-5 border-t border-[#F1F5F9] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div className="flex items-center gap-2.5 text-[#425466] text-left">
+              <Shield className="h-4 w-4 text-[#059669] shrink-0" />
+              <span>
+                <strong className="text-[#0A2540] font-bold">Execution Covenant:</strong> 100% legal ownership of all assets, IP, permits & leases assigned directly to your corporate entity.
+              </span>
+            </div>
+            
+            <div className="shrink-0 w-full sm:w-auto">
+              <Button
+                variant="primary"
+                size="md"
+                onClick={handleOpenModal}
+                rightIcon={<ArrowRight className="h-4 w-4" />}
+                className="w-full sm:w-auto font-semibold text-xs sm:text-sm px-5 h-10 shadow-xs whitespace-nowrap"
+              >
+                Apply to Build With Us
+              </Button>
             </div>
           </div>
         </div>
