@@ -120,10 +120,10 @@ export function HeroSection() {
           </div>
 
           {/* Primary Razor-Sharp Hook Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[68px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
-            <span className="block">You bring the industry expertise & vision.</span>
-            <span className="block mt-1 sm:mt-2 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We build the operating company on the ground with you.
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] leading-[1.15] font-sans">
+            <span className="block">You bring the domain vision.</span>
+            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
+              We build the operating company.
             </span>
           </h1>
 
