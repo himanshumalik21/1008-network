@@ -1,6 +1,12 @@
 "use server";
 
 import { StudioApplicationData, NetworkPostData } from "./types";
+import {
+  sendStudioPitchAlert,
+  sendNetworkPostAlert,
+  sendContactAlert,
+  sendInvestorProfileAlert,
+} from "./email";
 
 export interface ActionResult<T = unknown> {
   success: boolean;
@@ -49,6 +55,11 @@ export async function submitStudioApplication(formData: StudioApplicationData): 
 
     localSubmissions.studioApplications.push(newRecord);
 
+    // Dispatch automated email notification to join@1008.network
+    await sendStudioPitchAlert(formData).catch((err) => {
+      console.error("[Non-blocking Email Error]:", err);
+    });
+
     return {
       success: true,
       message: "Your application to Build With 1008 Network has been received. Our venture partners review every submission and respond within 48 business hours under NDA.",
@@ -80,6 +91,11 @@ export async function submitNetworkOpportunity(formData: NetworkPostData): Promi
     };
 
     localSubmissions.networkPosts.push(newPost);
+
+    // Dispatch automated email notification to join@1008.network
+    await sendNetworkPostAlert(formData).catch((err) => {
+      console.error("[Non-blocking Email Error]:", err);
+    });
 
     return {
       success: true,
@@ -193,6 +209,11 @@ export async function submitInvestorProfile(payload: {
 
     localSubmissions.investorProfiles.push(record);
 
+    // Dispatch automated email notification to join@1008.network
+    await sendInvestorProfileAlert(payload).catch((err) => {
+      console.error("[Non-blocking Email Error]:", err);
+    });
+
     return {
       success: true,
       message: "Thank you! Your investor profile has been registered. Our venture partners will curate and introduce businesses matching your capital range and risk appetite within 24–48 hours.",
@@ -226,6 +247,11 @@ export async function submitContactInquiry(payload: {
       id: `inq-${Date.now()}`,
       ...payload,
       submittedAt: new Date().toISOString(),
+    });
+
+    // Dispatch automated email notification to join@1008.network
+    await sendContactAlert(payload).catch((err) => {
+      console.error("[Non-blocking Email Error]:", err);
     });
 
     return {
