@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
 import { DealCard } from "@/lib/types";
 import { submitDealEOI } from "@/lib/actions";
+import { submitToWeb3Forms } from "@/lib/client-submit";
 import { formatCurrencyINR } from "@/lib/utils";
 import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
 
@@ -33,6 +34,24 @@ export function EOIModal({ deal, isOpen, onClose }: EOIModalProps) {
     setStatus("submitting");
 
     try {
+      // 1. Dispatch directly via Web3Forms
+      submitToWeb3Forms({
+        subject: `💼 [INVESTOR ALLOCATION EOI]: ${name} for ${deal.name} (₹${ticketSizeINR}L)`,
+        name,
+        email,
+        replyTo: email,
+        data: {
+          investorName: name,
+          email,
+          phone: phone || "Not provided",
+          investorType,
+          allocationTargetVenture: deal.name,
+          targetTicketSize: `₹${ticketSizeINR} Lakhs`,
+          notes: notes || "No additional notes",
+        },
+      }).catch((err) => console.warn("Web3Forms background dispatch:", err));
+
+      // 2. Server Action
       const res = await submitDealEOI({
         dealId: deal.id,
         name,

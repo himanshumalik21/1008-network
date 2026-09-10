@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { submitNetworkOpportunity } from "@/lib/actions";
+import { submitToWeb3Forms } from "@/lib/client-submit";
 import { RoleCategory, SectorCategory, LocationType, NetworkPostData } from "@/lib/types";
 import {
   ArrowLeft,
@@ -72,6 +73,30 @@ export default function PostOpportunityPage() {
     setStatus("submitting");
 
     try {
+      // 1. Dispatch directly via Web3Forms
+      submitToWeb3Forms({
+        subject: `🤝 [NEW NETWORK POSTING]: ${formData.roleNeeded} in ${formData.sector} - ${formData.founderName}`,
+        name: formData.founderName,
+        email: formData.founderEmail,
+        replyTo: formData.founderEmail,
+        data: {
+          founderName: formData.founderName,
+          founderEmail: formData.founderEmail,
+          founderLinkedin: formData.founderLinkedin,
+          founderPriorExperience: formData.founderPriorExperience,
+          domainYears: `${formData.domainYears}+ Years`,
+          opportunityTitle: formData.opportunityTitle,
+          roleNeeded: formData.roleNeeded,
+          sector: formData.sector,
+          location: formData.location,
+          equityOffered: formData.equityOffered,
+          stipendOffered: formData.stipendOffered,
+          ventureThesis: formData.ventureThesis,
+          idealCandidateProfile: formData.idealCandidateProfile,
+        },
+      }).catch((err) => console.warn("Web3Forms background dispatch:", err));
+
+      // 2. Server Action
       const res = await submitNetworkOpportunity(formData);
       if (res.success) {
         setStatus("success");

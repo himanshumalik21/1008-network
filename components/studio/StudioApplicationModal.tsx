@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/brand/Badge";
 import { submitStudioApplication } from "@/lib/actions";
+import { submitToWeb3Forms } from "@/lib/client-submit";
 import { StudioApplicationData, SectorCategory, LocationType } from "@/lib/types";
 import { trackStudioApplicationSubmit } from "@/lib/analytics";
 import { CheckCircle2, ShieldCheck, ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
@@ -66,6 +67,31 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
     setStatus("submitting");
 
     try {
+      // 1. Dispatch directly via Web3Forms client-side for guaranteed inbox delivery
+      submitToWeb3Forms({
+        subject: `⚡ [NEW VENTURE PITCH]: ${formData.fullName} (${formData.primaryDomain}) - ${formData.city}`,
+        name: formData.fullName,
+        email: formData.email,
+        replyTo: formData.email,
+        data: {
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          linkedinUrl: formData.linkedinUrl,
+          currentRole: formData.currentRole,
+          currentCompany: formData.currentCompany,
+          yearsOfExperience: `${formData.yearsOfExperience}+ Years`,
+          primaryDomain: formData.primaryDomain,
+          city: formData.city,
+          timeCommitment: formData.timeCommitment,
+          teamNeeds: (formData.teamNeeds || []).join(", "),
+          problemThesis: formData.problemThesis,
+          targetCustomer: formData.targetCustomer,
+          unfairAdvantage: formData.unfairAdvantage,
+        },
+      }).catch((err) => console.warn("Web3Forms background dispatch:", err));
+
+      // 2. Server Action for DB record and backup dispatch
       const res = await submitStudioApplication(formData);
       if (res.success) {
         setStatus("success");

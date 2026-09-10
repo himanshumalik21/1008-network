@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { submitContactInquiry } from "@/lib/actions";
+import { submitToWeb3Forms } from "@/lib/client-submit";
 import { trackContactSubmit } from "@/lib/analytics";
 import {
   Mail,
@@ -33,6 +34,22 @@ export default function ContactPage() {
     setStatus("submitting");
 
     try {
+      // 1. Dispatch directly via Web3Forms
+      submitToWeb3Forms({
+        subject: `📩 [CONTACT INQUIRY]: ${formData.type} - ${formData.name}`,
+        name: formData.name,
+        email: formData.email,
+        replyTo: formData.email,
+        data: {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || "Independent",
+          inquiryType: formData.type,
+          message: formData.message,
+        },
+      }).catch((err) => console.warn("Web3Forms background dispatch:", err));
+
+      // 2. Server Action
       const res = await submitContactInquiry(formData);
       if (res.success) {
         setStatus("success");
