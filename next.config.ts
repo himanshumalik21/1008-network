@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "assets.1008.network" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/build",
+        destination: "/studio",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

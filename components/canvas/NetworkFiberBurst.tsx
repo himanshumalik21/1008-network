@@ -17,18 +17,33 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let width = (canvas.width = canvas.offsetWidth * (window.devicePixelRatio || 1));
-    let height = (canvas.height = canvas.offsetHeight * (window.devicePixelRatio || 1));
+    let isVisible = true;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    let width = (canvas.width = canvas.offsetWidth * dpr);
+    let height = (canvas.height = canvas.offsetHeight * dpr);
 
     const handleResize = () => {
       if (!canvas) return;
-      width = canvas.width = canvas.offsetWidth * (window.devicePixelRatio || 1);
-      height = canvas.height = canvas.offsetHeight * (window.devicePixelRatio || 1);
+      width = canvas.width = canvas.offsetWidth * dpr;
+      height = canvas.height = canvas.offsetHeight * dpr;
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
 
-    const lineCount = 140;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && !animationFrameId) {
+            render();
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(canvas);
+
+    const lineCount = 120;
     const lines: Array<{
       angle: number;
       length: number;
@@ -57,6 +72,11 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
     let time = 0;
 
     const render = () => {
+      if (!isVisible) {
+        animationFrameId = 0;
+        return;
+      }
+
       time += 0.03;
       ctx.clearRect(0, 0, width, height);
 
@@ -119,8 +139,11 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
     render();
 
     return () => {
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, []);
 
