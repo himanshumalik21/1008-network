@@ -100,35 +100,6 @@ Without an integrated digital source of truth, the founder spends entire days fi
 
 Whether you are launching your first company or restructuring a business under pressure, you must transition from *passive spending* to *active co-building*.
 
-\`\`\`
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│     PHASE 1     │     │     PHASE 2     │     │     PHASE 3     │     │     PHASE 4     │
-│ Retainer Freeze │ ──> │ Cap Table Reset │ ──> │ Day-1 Cloud ERP │ ──> │  Shared-Equity  │
-│   & Cash Triage │     │  & SHA Vesting  │     │   Automation    │     │   Co-Building   │
-└─────────────────┘     └─────────────────┘     └─────────────────┘     └─────────────────┘
-\`\`\`
-
-\`\`\`
-Phase 1: Immediate Cash Triage & Retainer Freeze (Days 1–7)
-├── Terminate all non-performance marketing and advisory retainers.
-├── Calculate True Net Margin (Revenue minus direct COGS, gateway fees, and shipping).
-└── Strip monthly overhead to pure essentials (servers, essential raw stock, core stipends).
-
-Phase 2: Cap Table & Governance Restructuring (Days 8–21)
-├── Institute standard 4-year equity vesting with a 1-year cliff for all active founders.
-├── Clean up inactive equity holdings through formal buyback or sweat cancellation agreements.
-└── Execute explicit IP Assignment Agreements ensuring all code, designs, and domains belong to the entity.
-
-Phase 3: Deploying a Day-1 Digital ERP Backbone (Days 22–45)
-├── Deploy an open-source/low-cost cloud ERP (Frappe/ERPNext or customized Odoo).
-├── Centralize billing, vendor ledgers, inventory tracking, and CRM into one live dashboard.
-└── Automate customer notifications and order confirmations via WhatsApp Business APIs.
-
-Phase 4: Shared-Equity Co-Building & Capital Alignment (Ongoing)
-├── Partner with complementary operational and technical co-founders via dedicated equity pools.
-└── Align with a venture builder that invests execution muscle, infrastructure, and seed capital for shared equity.
-\`\`\`
-
 ---
 
 ## Decision Matrix: The Traditional Agency Trap vs. The 1008 Co-Building Model

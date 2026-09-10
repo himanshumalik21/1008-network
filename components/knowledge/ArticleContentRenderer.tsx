@@ -344,14 +344,15 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
           }
         }
 
-        // If block is already captured inside the traps section text, skip duplicate rendering
+        // If block is already captured inside the traps section text or phases, skip duplicate rendering
         if (
           trimmed.startsWith("When first-time founders lack specific technical") ||
           trimmed.startsWith("Two colleagues or friends decide to start up") ||
           trimmed.startsWith("Eight months later, when the initial excitement fades") ||
           trimmed.startsWith("The active founder is left doing 100%") ||
           trimmed.startsWith("When customer orders, vendor deliveries") ||
-          trimmed.startsWith("Without an integrated digital source of truth")
+          trimmed.startsWith("Without an integrated digital source of truth") ||
+          trimmed.startsWith("Whether you are launching your first company")
         ) {
           return null;
         }
