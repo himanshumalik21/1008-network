@@ -77,7 +77,7 @@ export default function StudioPage() {
           </h1>
 
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Whether establishing a manufacturing line, founding a hospital or clinic, setting up a boutique resort, launching a consumer product, or engineering a turnaround for a troubled enterprise—1008 Network stands shoulder-to-shoulder with you. We execute physical commissioning, machinery procurement, statutory clearances, hiring, digital architecture, and commercial GTM for <strong className="text-[#0A2540]">shared equity upside</strong>.
+            Whether establishing a manufacturing facility, launching a new product line, building a specialized commercial venture, or turning around an existing business—1008 Network stands shoulder-to-shoulder with you. We execute physical setup, machinery procurement, statutory clearances, hiring, digital systems, and commercial GTM for <strong className="text-[#0A2540]">shared equity upside</strong>.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">

@@ -106,12 +106,12 @@ export function PersonaMatrix() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Sector Specializations & Use Cases</Badge>
+          <Badge variant="indigo" size="sm">Turnkey Capabilities & Use Cases</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for any industry. From heavy manufacturing to consumer brands.
+            Built for any business. From manufacturing to consumer brands.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Whether starting from zero or revitalizing a struggling enterprise, 1008 Network executes the ground operations to build lasting enterprise value.
+            Whether launching a new venture from scratch or revitalizing an existing business, 1008 Network executes the ground operations to build lasting enterprise value.
           </p>
         </div>
 
