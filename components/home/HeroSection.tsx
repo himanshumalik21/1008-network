@@ -171,73 +171,118 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Live Interactive Sector Blueprint Feasibility Box (High Engagement Hook) */}
-        <div className="mt-12 max-w-5xl mx-auto rounded-2xl bg-white border border-[#E6E8EB] p-2 shadow-[0_20px_40px_-15px_rgba(10,37,64,0.08)] relative">
-          <div className="relative rounded-xl bg-[#F6F9FC] p-4 sm:p-6 overflow-hidden border border-[#E6E8EB]/60">
-            {/* Interactive Sector Switcher Pills */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E6E8EB] pb-4 mb-5">
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-bold text-[#0A2540] uppercase tracking-wider">Select Industry:</span>
+        {/* Revamped High-Impact Venture & Co-Investment Architecture Previewer */}
+        <div className="mt-14 max-w-5xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-2 sm:p-3 shadow-[0_24px_48px_-12px_rgba(10,37,64,0.08)] relative">
+          <div className="relative rounded-2xl bg-[#FAFCFF] p-5 sm:p-7 overflow-hidden border border-[#E6E8EB]/80">
+            
+            {/* Top Navigation Bar & Category Filter */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E6E8EB] pb-5 mb-6">
+              <div>
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#635BFF] flex items-center gap-1.5 mb-1">
+                  <Sparkles className="h-3.5 w-3.5" /> Turnkey Execution Tracks
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
+                  Select your venture archetype to view operational milestones
+                </h3>
               </div>
-              <div className="flex flex-wrap gap-1.5">
-                {(Object.keys(sectorPreviews) as Array<keyof typeof sectorPreviews>).map((secKey) => (
-                  <button
-                    key={secKey}
-                    type="button"
-                    onClick={() => setActiveSector(secKey)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                      activeSector === secKey
-                        ? "bg-[#635BFF] text-white shadow-xs"
-                        : "bg-white text-[#425466] border border-[#E6E8EB] hover:border-[#CBD5E1]"
-                    }`}
-                  >
-                    {sectorPreviews[secKey].label}
-                  </button>
-                ))}
+
+              {/* Segmented Interactive Switcher */}
+              <div className="flex flex-wrap items-center gap-1.5 bg-[#F0F3F8] p-1.5 rounded-xl border border-[#E2E8F0]">
+                {(Object.keys(sectorPreviews) as Array<keyof typeof sectorPreviews>).map((secKey) => {
+                  const isSelected = activeSector === secKey;
+                  return (
+                    <button
+                      key={secKey}
+                      type="button"
+                      onClick={() => setActiveSector(secKey)}
+                      className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 ${
+                        isSelected
+                          ? "bg-white text-[#635BFF] shadow-xs border border-[#E6E8EB]"
+                          : "text-[#627D98] hover:text-[#0A2540] hover:bg-white/60"
+                      }`}
+                    >
+                      {sectorPreviews[secKey].label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Active Sector Scope Title */}
-            <div className="mb-4 text-left">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#635BFF] block">
-                Phased Turnkey Execution Scope
-              </span>
-              <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
-                {sectorPreviews[activeSector].headline}
-              </h3>
+            {/* Active Track Headline & Value Header */}
+            <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+              <div>
+                <span className="text-xs font-bold text-[#627D98] uppercase tracking-wider">
+                  Operational Roadmap & Handover Protocol
+                </span>
+                <h4 className="text-lg sm:text-xl font-extrabold text-[#0A2540] mt-0.5">
+                  {sectorPreviews[activeSector].headline}
+                </h4>
+              </div>
+              <div className="shrink-0 flex items-center gap-2">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0] text-xs font-bold">
+                  <CheckCircle2 className="h-3.5 w-3.5" /> ₹0 Retainers • Equity Aligned
+                </span>
+              </div>
             </div>
 
-            {/* 4 Interactive Sprint Phases Matrix */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left font-sans text-xs">
+            {/* 4-Phase Connected Progress Stepper Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-left font-sans text-xs">
               {sectorPreviews[activeSector].phases.map((p, idx) => (
-                <div key={idx} className="p-3.5 rounded-xl bg-white border border-[#E6E8EB] space-y-1.5 shadow-xs flex flex-col justify-between">
+                <div
+                  key={idx}
+                  className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-2 shadow-xs flex flex-col justify-between hover:border-[#635BFF]/40 hover:shadow-md transition-all duration-200 relative group"
+                >
                   <div>
-                    <div className="flex items-center justify-between text-[#627D98] text-[10px] font-semibold mb-1">
-                      <span className="text-[#635BFF] font-bold">{p.phase}</span>
-                      <span className="text-[10px] text-[#0A2540] font-medium">{p.milestone}</span>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-0.5 rounded bg-[#F0F0FF] text-[#635BFF] font-extrabold text-[10px] tracking-wide border border-[#E0E0FF]">
+                        {p.phase}
+                      </span>
+                      <span className="text-[10px] text-[#627D98] font-bold">
+                        {p.milestone}
+                      </span>
                     </div>
-                    <div className="text-[#0A2540] font-bold text-xs mb-1">{p.title}</div>
-                    <p className="text-[#425466] text-[11px] leading-relaxed">{p.desc}</p>
+
+                    <div className="text-[#0A2540] font-bold text-xs sm:text-[13px] leading-snug mb-1">
+                      {p.title}
+                    </div>
+
+                    <p className="text-[#425466] text-[11px] leading-relaxed">
+                      {p.desc}
+                    </p>
                   </div>
-                  <div className="pt-2 text-[10px] text-[#059669] font-semibold flex items-center gap-1">
-                    <CheckCircle2 className="h-3 w-3" /> {p.gate}
+
+                  <div className="pt-3 border-t border-[#F0F3F8] flex items-center justify-between text-[10px] font-bold text-[#059669]">
+                    <span className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3 w-3" /> {p.gate}
+                    </span>
+                    <span className="text-[#CBD5E1] group-hover:text-[#635BFF] transition-colors">
+                      →
+                    </span>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Bottom Callout */}
-            <div className="mt-4 pt-3.5 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-              <span className="text-[#627D98]">
-                <strong className="text-[#0A2540]">Execution Assurance:</strong> All assets, machinery, licenses, and IP 100% owned by your corporate entity.
-              </span>
-              <button
-                onClick={handleOpenModal}
-                className="text-[#635BFF] hover:underline font-semibold flex items-center gap-1 shrink-0"
-              >
-                Pitch This Venture <ChevronRight className="h-3.5 w-3.5" />
-              </button>
+            {/* Bottom Assurance & Contextual Action Bar */}
+            <div className="mt-6 pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+              <div className="flex items-center gap-2 text-[#425466] text-left">
+                <Shield className="h-4 w-4 text-[#059669] shrink-0" />
+                <span>
+                  <strong className="text-[#0A2540]">Execution Covenant:</strong> 100% legal ownership of all assets, IP, permits & leases assigned directly to your corporate entity.
+                </span>
+              </div>
+              
+              <div className="flex items-center gap-3 shrink-0">
+                <button
+                  onClick={handleOpenModal}
+                  className="px-4 py-2 rounded-xl bg-[#635BFF] text-white hover:bg-[#534BE5] transition-all font-bold flex items-center gap-1.5 shadow-sm hover:shadow-md"
+                >
+                  <span>Pitch Your Venture</span>
+                  <ChevronRight className="h-3.5 w-3.5" />
+                </button>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
