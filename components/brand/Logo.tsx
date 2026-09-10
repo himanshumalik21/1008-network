@@ -12,7 +12,7 @@ interface LogoProps {
 
 export function Logo({
   className,
-  showDomain = true,
+  showDomain = false,
   size = "lg",
   asLink = true,
   monochrome = false,
@@ -27,7 +27,7 @@ export function Logo({
       domain: "text-xs",
     },
     lg: {
-      text: "text-2xl sm:text-[28px]",
+      text: "text-2xl sm:text-[30px]",
       domain: "text-xs sm:text-[13px]",
     },
     xl: {
@@ -49,7 +49,7 @@ export function Logo({
         className
       )}
     >
-      {/* Pure Stripe-Caliber Typographic Wordmark */}
+      {/* Pure Iconic 1008 Wordmark */}
       <span
         className={cn(
           "font-black leading-none transition-colors duration-150 font-sans",
@@ -81,7 +81,7 @@ export function Logo({
     return (
       <Link
         href="/"
-        aria-label="1008.network Homepage"
+        aria-label="1008 Homepage"
         className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#635BFF]/50 rounded-lg inline-flex items-baseline"
       >
         {content}
@@ -91,5 +91,6 @@ export function Logo({
 
   return content;
 }
+
 
 
