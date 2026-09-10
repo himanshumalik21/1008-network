@@ -9,6 +9,9 @@ const ALERT_RECIPIENT = process.env.ALERT_EMAIL_RECIPIENT || "join@1008.network"
 // Use onboarding@resend.dev as safe fallback for unverified domains in Resend
 const SENDER_EMAIL = process.env.SENDER_EMAIL || (process.env.RESEND_API_KEY ? "onboarding@resend.dev" : "notifications@1008.network");
 
+// Web3Forms Access Key
+const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY;
+
 // Initialize Resend if API key is provided
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
@@ -40,7 +43,32 @@ export async function sendEmail({
   replyTo,
 }: EmailPayload): Promise<{ success: boolean; error?: string }> {
   try {
-    // 1. Try Resend API first
+    // 1. Try Web3Forms if WEB3FORMS_ACCESS_KEY is provided
+    if (WEB3FORMS_KEY) {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject,
+          from_name: "1008 Network Alert",
+          replyto: replyTo || undefined,
+          message: html,
+        }),
+      });
+
+      const resData = await response.json();
+      if (!response.ok || !resData.success) {
+        console.error("[Email Error via Web3Forms]:", resData);
+        return { success: false, error: resData.message || "Web3Forms submission failed" };
+      }
+      return { success: true };
+    }
+
+    // 2. Try Resend API
     if (resend) {
       const { error } = await resend.emails.send({
         from: `1008 Network <${SENDER_EMAIL}>`,
