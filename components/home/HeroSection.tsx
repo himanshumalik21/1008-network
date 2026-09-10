@@ -138,7 +138,7 @@ export function HeroSection() {
                 <span className="ml-2 text-[#0A2540] font-bold font-sans">1008 Studio Execution Engine</span>
               </div>
               <div className="flex items-center gap-3">
-                <Badge variant="indigo" size="sm" pulse>Active Cohort Sprints</Badge>
+                <Badge variant="indigo" size="sm" pulse>Tailored Engagements</Badge>
                 <span className="text-[#627D98] text-[11px] font-medium hidden sm:inline">180-Day Build & Handover</span>
               </div>
             </div>
@@ -209,13 +209,13 @@ export function HeroSection() {
             {/* Bottom Callout */}
             <div className="mt-5 pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
               <span className="text-[#627D98]">
-                <strong className="text-[#0A2540]">Result:</strong> You walk away with a live product, paying customers, and complete independence.
+                <strong className="text-[#0A2540]">Result:</strong> Tailored specifically to your business model, customer base, and market dynamics.
               </span>
               <button
                 onClick={() => setModalOpen(true)}
                 className="text-[#635BFF] hover:underline font-semibold flex items-center gap-1 shrink-0"
               >
-                Apply for Next Studio Cohort <ChevronRight className="h-3.5 w-3.5" />
+                Apply to Build With Us <ChevronRight className="h-3.5 w-3.5" />
               </button>
             </div>
           </div>

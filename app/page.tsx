@@ -53,7 +53,7 @@ export default function HomePage() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <Badge variant="indigo" size="md" pulse>
-            Next Studio Cohort Intake Open
+            Tailored Venture Partnerships Open
           </Badge>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">

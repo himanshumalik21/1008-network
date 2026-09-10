@@ -162,10 +162,10 @@ export default function StudioPage() {
           <div className="mt-16 p-8 sm:p-10 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
             <div className="space-y-2 text-center sm:text-left">
               <h3 className="text-2xl font-bold text-[#0A2540] font-sans">
-                Ready to evaluate your domain thesis with 1008?
+                Ready to evaluate your business idea with 1008?
               </h3>
               <p className="text-sm text-[#425466]">
-                Cohort slots are strictly limited to maintain execution quality. Applications reviewed under mutual NDA.
+                We take on a limited number of bespoke venture partnerships to maintain execution excellence. All applications reviewed under mutual NDA.
               </p>
             </div>
             <Button
@@ -175,7 +175,7 @@ export default function StudioPage() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="shrink-0 font-semibold"
             >
-              Apply to Studio Cohort
+              Apply to Build With Us
             </Button>
           </div>
         </div>
