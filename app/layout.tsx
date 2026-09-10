@@ -19,22 +19,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "1008 (1008.network) — Venture Studio for Senior Domain Leaders",
-    template: "%s | 1008.network",
+    default: "1008 — Hands-On Venture Studio for New Ventures & Stalled Businesses",
+    template: "%s | 1008",
   },
   description:
-    "1008 partners with experienced corporate leaders & domain veterans to build, launch, and spin out high-margin B2B tech ventures in 180 days — zero agency fees, shared skin in the game.",
+    "1008 partners with founders, entrepreneurs, and businesses to build, launch, and scale high-growth tech ventures in 180 days — zero agency retainers, shared skin in the game.",
   keywords: [
     "Venture Studio India",
-    "Co-founder Matchmaking",
-    "Startup Studio Delhi NCR",
+    "Startup Studio",
+    "Technical Co-founder Studio",
+    "Turnaround Venture Studio",
     "Build With 1008",
-    "1008 Network",
-    "Indian Startup Talent Syndicate",
-    "Domain Venture Building",
+    "1008 Studio",
+    "Software Engineering Partner",
     "Seed Stage Syndicate India",
   ],
-  authors: [{ name: "1008 Studio Architecture Team", url: "https://1008.network" }],
+  authors: [{ name: "1008 Studio Team", url: "https://1008.network" }],
   creator: "1008",
   publisher: "1008.network",
   metadataBase: new URL("https://1008.network"),
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://1008.network",
-    title: "1008 (1008.network) — Venture Studio for Domain Leaders",
+    title: "1008 — Hands-On Venture Studio for New Ventures & Stalled Businesses",
     description:
-      "You know where the industry bleeds money. We build the tech to capture it. 180-Day Venture Studio.",
+      "Have a business idea or a venture that's stalled? We build the tech & execution muscle to scale it.",
     siteName: "1008.network",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 (1008.network) — Venture Studio for Domain Leaders",
-    description: "You know where the industry bleeds money. We build the tech to capture it.",
+    title: "1008 — Hands-On Venture Studio",
+    description: "Have a business idea or a venture that's stalled? We build the tech & execution muscle to scale it.",
   },
   robots: {
     index: true,

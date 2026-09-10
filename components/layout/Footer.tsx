@@ -50,7 +50,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Logo size="lg" />
             <p className="text-sm text-[#425466] leading-relaxed max-w-sm">
-              The high-conviction venture studio for experienced Indian corporate leaders, VPs, and domain veterans. We architect, build, and deploy defensible businesses for shared equity upside.
+              The hands-on venture studio for new ventures, early-stage founders, and businesses looking to reboot. We build production-grade software and 0-to-1 growth systems for shared equity upside.
             </p>
             <div className="pt-2 flex flex-wrap gap-2">
               <Badge variant="indigo" size="sm">

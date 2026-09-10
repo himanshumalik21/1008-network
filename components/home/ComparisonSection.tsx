@@ -36,10 +36,10 @@ export function ComparisonSection() {
     },
     {
       dimension: "Target Founder Fit",
-      studio1008: "10–20+ year senior corporate leaders, VPs, and industry experts.",
+      studio1008: "New venture founders, struggling business turnarounds, and domain builders.",
       agency: "Anyone with a credit card or bank transfer.",
-      accelerator: "Primarily 20-something first-time founders without domain depth.",
-      solo: "Solo operators risking career stability without team leverage.",
+      accelerator: "Broad cohorts with generic slide-deck mentorship.",
+      solo: "Solo operators risking burnout without full-stack leverage.",
     },
   ];
 
@@ -53,10 +53,10 @@ export function ComparisonSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">The Direct Comparison</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Why traditional paths fail domain leaders.
+            Why traditional paths fail new ventures.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Senior executives don&apos;t fail from lack of industry insight. They fail from broken execution models and misaligned incentives.
+            Great businesses don&apos;t fail from lack of ambition. They fail from brittle outsourced code, misaligned agency incentives, and missing technical execution.
           </p>
         </div>
 

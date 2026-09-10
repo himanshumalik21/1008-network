@@ -51,26 +51,26 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Venture Studio // Cohort Open
+              1008 Venture Studio // Now Accepting Applications
             </Badge>
             <span className="text-xs font-semibold text-[#627D98] hidden sm:inline-block">
-              For 10–20+ Yr Indian Corporate Leaders & Domain Veterans
+              For New Ventures, Stalled Businesses & Ambitious Builders
             </span>
           </div>
 
           {/* Primary Razor-Sharp Hook Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            You know where the industry bleeds money.{" "}
+            Have a business idea or a venture that&apos;s stalled?{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We build the tech to capture it.
+              We build the tech & execution muscle to scale it.
             </span>
           </h1>
 
           {/* Core Subtitle Positioning */}
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            1008 is the dedicated, hands-on venture-building partner for senior Indian corporate executives, VPs, and domain veterans.
-            We provide full-stack technical architecture, product design, and 0-to-1 operational systems for <span className="text-[#0A2540] font-semibold">shared equity upside—zero consulting retainers</span>.
+            1008 is the hands-on venture studio for new startups, early-stage founders, and businesses looking to reboot.
+            We provide full-stack software engineering, modern product design, and 0-to-1 go-to-market systems for <span className="text-[#0A2540] font-semibold">shared equity upside—zero expensive agency retainers</span>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
@@ -114,7 +114,7 @@ export function HeroSection() {
               <div className="text-xs text-[#059669] font-bold mb-1 flex items-center gap-1.5 font-sans">
                 <Lock className="h-3.5 w-3.5" /> 100% Confidential NDA
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Validate your thesis quietly before transitioning from corporate roles.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Protect your ideas and proprietary domain workflows under mutual NDA.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">

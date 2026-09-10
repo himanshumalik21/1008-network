@@ -45,10 +45,10 @@ export default function StudioPage() {
     },
     {
       dimension: "Target Founder Profile",
-      studio1008: "Senior corporate leaders & domain veterans (8–20+ yrs)",
+      studio1008: "New founders, entrepreneurs, struggling businesses & domain builders",
       agency: "Anyone who pays invoices",
-      accelerator: "Primarily 20-something college graduates",
-      solo: "Solo operators with high opportunity cost",
+      accelerator: "Broad batch cohorts without dedicated full-stack code",
+      solo: "Solo operators with high execution friction",
     },
   ];
 
@@ -64,20 +64,20 @@ export default function StudioPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              Build With 1008 // Studio Cohort
+              Build With 1008 // Studio Intake
             </Badge>
             <span className="text-xs font-semibold text-[#627D98]">180-Day Execution Engine</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            We partner with domain leaders to build{" "}
+            We partner with ambitious founders to build{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              defensible venture-scale businesses.
+              high-growth, defensible businesses.
             </span>
           </h1>
 
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            You bring 8–20+ years of sector expertise, customer trust, and structural insights. 1008 provides the full-stack engineering, product design, commercial systems, and seed readiness for <strong className="text-[#0A2540]">shared equity upside</strong>.
+            Whether launching a new venture from an idea or turning around a stalled product, 1008 provides the full-stack engineering, product design, commercial systems, and seed readiness for <strong className="text-[#0A2540]">shared equity upside</strong>.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">

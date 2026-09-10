@@ -5,10 +5,10 @@ import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import {
-  Activity,
-  Truck,
-  Factory,
-  Building2,
+  Sparkles,
+  RefreshCw,
+  Briefcase,
+  TrendingUp,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
@@ -18,44 +18,44 @@ export function PersonaMatrix() {
 
   const domains = [
     {
-      icon: Activity,
-      badge: "Healthcare & MedTech",
-      badgeVariant: "amber" as const,
-      iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
-      title: "Hospital & Pharma Leaders (Ex-VP / Directors)",
-      description:
-        "You understand clinical workflows, tertiary hospital procurement bottlenecks, cold-chain regulatory compliance, and diagnostic data silos.",
-      thesisExample: "e.g. Automated Phase II/III clinical trial telemetry or B2B hospital consumables procurement ledger.",
-    },
-    {
-      icon: Factory,
-      badge: "Industrial & Manufacturing",
-      badgeVariant: "cyan" as const,
-      iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
-      title: "Plant Heads & Auto-Ancillary GMs",
-      description:
-        "You have run machining units, precision tooling clusters, or component supply lines in Pune, Manesar, or Coimbatore.",
-      thesisExample: "e.g. On-demand precision CNC jigs procurement or shop-floor downtime tracking software.",
-    },
-    {
-      icon: Truck,
-      badge: "Logistics & Supply Chain",
-      badgeVariant: "emerald" as const,
-      iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
-      title: "Supply Chain & Operations Executives",
-      description:
-        "You have managed 3PL fleets, FMCG distributor networks, warehouse reconciliation, or multi-state freight routes.",
-      thesisExample: "e.g. Real-time GST-to-Bank trade credit underwriting for Tier-2 distributors.",
-    },
-    {
-      icon: Building2,
-      badge: "Enterprise & Real Estate",
+      icon: Sparkles,
+      badge: "Idea to Launch",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Commercial Asset & B2B Practice Leads",
+      title: "Aspiring Founders with a Strong Concept",
       description:
-        "You know how large Indian family enterprises buy, manage Grade-A commercial leasing, or navigate compliance audits.",
-      thesisExample: "e.g. Unified tenant CAM billing automation or B2B enterprise procurement engines.",
+        "You have identified a real market opportunity and want to build a business, but lack a dedicated technical co-founder or engineering team to build a scalable product.",
+      thesisExample: "e.g. B2B marketplaces, workflow automation tools, niche SaaS, and AI-powered service platforms.",
+    },
+    {
+      icon: RefreshCw,
+      badge: "Turnaround & Reboot",
+      badgeVariant: "amber" as const,
+      iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
+      title: "Struggling or Stalled Ventures",
+      description:
+        "You launched an MVP or early version, but got stuck with buggy outsourced code, poor user retention, or lack of traction. 1008 steps in as your turnaround partner to rebuild and relaunch.",
+      thesisExample: "e.g. Re-architecting brittle MVPs into production-grade Next.js platforms with streamlined onboarding.",
+    },
+    {
+      icon: Briefcase,
+      badge: "Domain Operators",
+      badgeVariant: "emerald" as const,
+      iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
+      title: "Professionals & Operators Starting a Business",
+      description:
+        "You know your industry inside out (Healthcare, Logistics, Retail, Manufacturing, Finance) and want to turn that deep insight into a high-margin tech company.",
+      thesisExample: "e.g. Specialized hospital procurement engines, auto-ancillary tracking tools, or supply chain portals.",
+    },
+    {
+      icon: TrendingUp,
+      badge: "Offline to Tech",
+      badgeVariant: "cyan" as const,
+      iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
+      title: "Established Businesses Modernizing",
+      description:
+        "You run an existing profitable business or distribution network and want to build a software arm, digital marketplace, or tech-enabled spin-out.",
+      thesisExample: "e.g. Digitizing dealer distributor networks, automating customer workflows, or building proprietary SaaS.",
     },
   ];
 
@@ -68,12 +68,12 @@ export function PersonaMatrix() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Domain Expertise</Badge>
+          <Badge variant="indigo" size="sm">Who We Build With</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for India&apos;s deep domain veterans.
+            Built for founders, operators & businesses ready to scale.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            We partner with operators who have lived the problem for 10–20+ years and possess authentic customer trust.
+            Whether you are starting from scratch with a fresh idea or fixing a stalled business, 1008 provides the technical execution to make it happen.
           </p>
         </div>
 
