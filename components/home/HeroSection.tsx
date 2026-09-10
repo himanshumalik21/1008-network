@@ -120,7 +120,7 @@ export function HeroSection() {
 
           {/* Core Subtitle - Concise & Impactful */}
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
-            Stop fighting operational friction alone. Whether setting up a manufacturing unit, launching a consumer brand, or revitalizing an existing business—<strong>1008 Network handles turnkey operations on the ground and connects you to growth capital</strong>.
+            Stop fighting operational friction alone. Whether setting up a manufacturing unit, launching a new product or consumer brand, or revitalizing an existing business—<strong>1008 Network handles turnkey operations on the ground and connects you to growth capital</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}

@@ -52,7 +52,7 @@ export default function ManifestoPage() {
               1008 Network was created to stand shoulder-to-shoulder with ambitious builders. We are not external advisors; we are full-stack operational co-builders with true skin in the game.
             </p>
             <p>
-              Whether setting up a manufacturing unit, scaling a consumer brand, establishing a commercial venture, or turning around an existing business—we manage physical setup, machinery procurement, statutory compliance, core hiring, lean tech, and go-to-market execution. We present vetted ventures to our syndicate pool of active investors, and work across disciplined, tailored phases to graduate each business to complete, profitable autonomy.
+              Whether setting up a manufacturing unit, launching a new product line, scaling a consumer brand, or turning around an existing business—we manage physical setup, machinery procurement, statutory compliance, core hiring, lean tech, and go-to-market execution. We present vetted ventures to our syndicate pool of active investors, and work across disciplined, tailored phases to graduate each business to complete, profitable autonomy.
             </p>
           </div>
 
