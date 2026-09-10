@@ -171,90 +171,96 @@ export function HeroSection() {
         </div>
 
         {/* Revamped High-Impact Venture & Co-Investment Architecture Previewer */}
-        <div className="mt-14 max-w-5xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-2 sm:p-3 shadow-[0_24px_48px_-12px_rgba(10,37,64,0.08)] relative">
-          <div className="relative rounded-2xl bg-[#FAFCFF] p-5 sm:p-7 overflow-hidden border border-[#E6E8EB]/80">
-            
-            {/* Top Navigation Bar & Category Filter */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E6E8EB] pb-5 mb-6">
+        <div className="mt-14 max-w-6xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-3 sm:p-5 shadow-[0_20px_50px_-12px_rgba(10,37,64,0.08)] relative">
+          {/* Header & Archetype Category Tabs */}
+          <div className="space-y-4 pb-6 border-b border-[#E6E8EB]">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 text-left px-2 sm:px-3 pt-2">
               <div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#635BFF] flex items-center gap-1.5 mb-1">
-                  <Sparkles className="h-3.5 w-3.5" /> Turnkey Execution Tracks
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#635BFF] flex items-center gap-1.5 mb-1">
+                  <Sparkles className="h-3.5 w-3.5 text-[#635BFF]" /> Turnkey Execution Tracks
                 </span>
-                <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
-                  Select your venture archetype to view operational milestones
+                <h3 className="text-lg sm:text-xl font-extrabold text-[#0A2540] tracking-tight">
+                  Select your venture archetype to explore operational milestones
                 </h3>
               </div>
-
-              {/* Segmented Interactive Switcher */}
-              <div className="flex flex-wrap items-center gap-1.5 bg-[#F0F3F8] p-1.5 rounded-xl border border-[#E2E8F0]">
-                {(Object.keys(sectorPreviews) as Array<keyof typeof sectorPreviews>).map((secKey) => {
-                  const isSelected = activeSector === secKey;
-                  return (
-                    <button
-                      key={secKey}
-                      type="button"
-                      onClick={() => setActiveSector(secKey)}
-                      className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 ${
-                        isSelected
-                          ? "bg-white text-[#635BFF] shadow-xs border border-[#E6E8EB]"
-                          : "text-[#627D98] hover:text-[#0A2540] hover:bg-white/60"
-                      }`}
-                    >
-                      {sectorPreviews[secKey].label}
-                    </button>
-                  );
-                })}
-              </div>
+              <span className="text-xs font-mono text-[#627D98] hidden sm:block">
+                Interactive Operational Blueprint
+              </span>
             </div>
 
-            {/* Active Track Headline & Value Header */}
-            <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+            {/* Clean Segmented Tab Buttons Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-1 px-1 no-scrollbar">
+              {(Object.keys(sectorPreviews) as Array<keyof typeof sectorPreviews>).map((secKey) => {
+                const isSelected = activeSector === secKey;
+                return (
+                  <button
+                    key={secKey}
+                    type="button"
+                    onClick={() => setActiveSector(secKey)}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap flex items-center gap-2 shrink-0 border ${
+                      isSelected
+                        ? "bg-[#0A2540] text-white border-[#0A2540] shadow-sm"
+                        : "bg-[#F6F9FC] text-[#425466] border-[#E6E8EB] hover:text-[#0A2540] hover:bg-white hover:border-[#CBD5E1]"
+                    }`}
+                  >
+                    <span>{sectorPreviews[secKey].label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Active Track Overview & 4-Phase Grid */}
+          <div className="p-2 sm:p-4 space-y-6">
+            {/* Active Track Title & Assurance Badge */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left pt-2">
               <div>
-                <span className="text-xs font-bold text-[#627D98] uppercase tracking-wider">
+                <span className="text-xs font-mono font-bold text-[#635BFF] uppercase tracking-wider">
                   Operational Roadmap & Handover Protocol
                 </span>
-                <h4 className="text-lg sm:text-xl font-extrabold text-[#0A2540] mt-0.5">
+                <h4 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight mt-0.5">
                   {sectorPreviews[activeSector].headline}
                 </h4>
               </div>
               <div className="shrink-0 flex items-center gap-2">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0] text-xs font-bold">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> ₹0 Retainers • Equity Aligned
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] text-xs font-bold font-mono">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" /> ₹0 Retainers • Equity Aligned
                 </span>
               </div>
             </div>
 
-            {/* 4-Phase Connected Progress Stepper Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-left font-sans text-xs">
+            {/* 4-Phase Connected Modern Milestone Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left font-sans">
               {sectorPreviews[activeSector].phases.map((p, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-2 shadow-xs flex flex-col justify-between hover:border-[#635BFF]/40 hover:shadow-md transition-all duration-200 relative group"
+                  className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-3 flex flex-col justify-between hover:bg-white hover:border-[#635BFF]/50 hover:shadow-md transition-all duration-200 relative group"
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="px-2 py-0.5 rounded bg-[#F0F0FF] text-[#635BFF] font-extrabold text-[10px] tracking-wide border border-[#E0E0FF]">
+                  <div className="space-y-2.5">
+                    {/* Top Step Pill & Milestone Subtitle */}
+                    <div className="flex items-center justify-between">
+                      <span className="px-2.5 py-0.5 rounded-md bg-[#F0F0FF] text-[#635BFF] font-mono font-bold text-[11px] tracking-wide border border-[#E0E0FF]">
                         {p.phase}
                       </span>
-                      <span className="text-[10px] text-[#627D98] font-bold">
+                      <span className="text-[11px] font-mono font-semibold text-[#829AB1]">
                         {p.milestone}
                       </span>
                     </div>
 
-                    <div className="text-[#0A2540] font-bold text-xs sm:text-[13px] leading-snug mb-1">
+                    <h5 className="text-[#0A2540] font-extrabold text-sm sm:text-base leading-snug">
                       {p.title}
-                    </div>
+                    </h5>
 
-                    <p className="text-[#425466] text-[11px] leading-relaxed">
+                    <p className="text-[#425466] text-xs leading-relaxed font-normal">
                       {p.desc}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-[#F0F3F8] flex items-center justify-between text-[10px] font-bold text-[#059669]">
-                    <span className="flex items-center gap-1">
-                      <CheckCircle2 className="h-3 w-3" /> {p.gate}
+                  <div className="pt-3 border-t border-[#E6E8EB] flex items-center justify-between text-xs font-bold text-[#059669]">
+                    <span className="flex items-center gap-1.5 font-mono text-[11px]">
+                      <CheckCircle2 className="h-3.5 w-3.5" /> {p.gate}
                     </span>
-                    <span className="text-[#CBD5E1] group-hover:text-[#635BFF] transition-colors">
+                    <span className="text-[#CBD5E1] group-hover:text-[#635BFF] transition-colors font-bold text-sm">
                       →
                     </span>
                   </div>
@@ -263,25 +269,26 @@ export function HeroSection() {
             </div>
 
             {/* Bottom Assurance & Contextual Action Bar */}
-            <div className="mt-6 pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-              <div className="flex items-center gap-2 text-[#425466] text-left">
+            <div className="pt-5 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+              <div className="flex items-center gap-2.5 text-[#425466] text-left">
                 <Shield className="h-4 w-4 text-[#059669] shrink-0" />
-                <span>
-                  <strong className="text-[#0A2540]">Execution Covenant:</strong> 100% legal ownership of all assets, IP, permits & leases assigned directly to your corporate entity.
+                <span className="leading-relaxed">
+                  <strong className="text-[#0A2540] font-bold">Execution Covenant:</strong> 100% legal ownership of all assets, IP, permits & leases assigned directly to your corporate entity.
                 </span>
               </div>
               
-              <div className="flex items-center gap-3 shrink-0">
-                <button
+              <div className="shrink-0 w-full sm:w-auto">
+                <Button
+                  variant="primary"
+                  size="md"
                   onClick={handleOpenModal}
-                  className="px-4 py-2 rounded-xl bg-[#635BFF] text-white hover:bg-[#534BE5] transition-all font-bold flex items-center gap-1.5 shadow-sm hover:shadow-md"
+                  rightIcon={<ArrowRight className="h-4 w-4" />}
+                  className="w-full sm:w-auto font-semibold text-xs sm:text-sm px-5 h-10 shadow-sm whitespace-nowrap"
                 >
-                  <span>Pitch Your Venture</span>
-                  <ChevronRight className="h-3.5 w-3.5" />
-                </button>
+                  Pitch Your Venture
+                </Button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
