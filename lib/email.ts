@@ -6,7 +6,8 @@ import {
 } from "./types";
 
 const ALERT_RECIPIENT = process.env.ALERT_EMAIL_RECIPIENT || "join@1008.network";
-const SENDER_EMAIL = process.env.SENDER_EMAIL || "notifications@1008.network";
+// Use onboarding@resend.dev as safe fallback for unverified domains in Resend
+const SENDER_EMAIL = process.env.SENDER_EMAIL || (process.env.RESEND_API_KEY ? "onboarding@resend.dev" : "notifications@1008.network");
 
 // Initialize Resend if API key is provided
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
