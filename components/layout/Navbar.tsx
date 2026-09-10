@@ -31,6 +31,13 @@ export function Navbar() {
     { label: "Playbooks", href: "/knowledge" },
   ];
 
+  const isLinkActive = (href: string) => {
+    if (href === "/#blueprint" || href === "/studio") {
+      return pathname === "/" || pathname === "/studio";
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   const handleOpenModal = () => {
     trackStudioModalOpen("navbar_cta");
     setModalOpen(true);
@@ -56,15 +63,26 @@ export function Navbar() {
 
             {/* 2. Executive Desktop Navigation Links */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-xs sm:text-sm font-medium text-[#425466] hover:text-[#0A2540] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const active = isLinkActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "text-xs sm:text-sm font-medium transition-all relative py-1 flex flex-col items-center",
+                      active
+                        ? "text-[#635BFF] font-semibold"
+                        : "text-[#425466] hover:text-[#0A2540]"
+                    )}
+                  >
+                    <span>{link.label}</span>
+                    {active && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#635BFF] rounded-full" />
+                    )}
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* 3. Apply to Build Action Button */}
@@ -105,16 +123,27 @@ export function Navbar() {
         {mobileMenuOpen && (
           <div className="sm:hidden bg-white border-b border-[#E6E8EB] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-xl">
             <div className="flex flex-col space-y-1 pt-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-3 py-2.5 rounded-lg text-sm font-medium text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const active = isLinkActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "px-3 py-2.5 rounded-lg text-sm transition-all flex items-center justify-between",
+                      active
+                        ? "bg-[#F0F0FF] text-[#635BFF] font-semibold border-l-2 border-[#635BFF]"
+                        : "text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] font-medium"
+                    )}
+                  >
+                    <span>{link.label}</span>
+                    {active && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#635BFF]" />
+                    )}
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="pt-2 border-t border-[#E6E8EB]">
