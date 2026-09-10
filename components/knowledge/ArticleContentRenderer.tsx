@@ -214,29 +214,29 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
           return (
             <div
               key={idx}
-              className="my-6 rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0A0F1D] text-[#E2E8F0] shadow-xl"
+              className="my-6 rounded-2xl overflow-hidden border border-[#E6E8EB] bg-[#F8FAFC] text-[#0A2540] shadow-xs"
             >
-              <div className="bg-[#111827] px-4 py-3 border-b border-[#1E293B] flex items-center justify-between">
+              <div className="bg-[#F1F4F8] px-4 py-3 border-b border-[#E6E8EB] flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-[#EF4444]/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-[#F59E0B]/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-[#10B981]/80 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#CBD5E1] inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#CBD5E1] inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#CBD5E1] inline-block" />
                   </div>
-                  <span className="text-xs font-mono font-semibold text-[#94A3B8] ml-2 flex items-center gap-1.5">
+                  <span className="text-xs font-mono font-semibold text-[#627D98] ml-2 flex items-center gap-1.5">
                     <Terminal className="h-3.5 w-3.5 text-[#635BFF]" />
                     Execution Protocol
                   </span>
                 </div>
                 <button
                   onClick={() => handleCopy(codeLines, currentCodeIdx)}
-                  className="inline-flex items-center gap-1 text-xs font-mono text-[#94A3B8] hover:text-white bg-[#1F2937] hover:bg-[#374151] px-2.5 py-1 rounded-md transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-mono text-[#627D98] hover:text-[#0A2540] bg-white hover:bg-[#F1F4F8] border border-[#E6E8EB] px-2.5 py-1 rounded-md transition-colors"
                   title="Copy diagram"
                 >
                   {isCopied ? (
                     <>
-                      <Check className="h-3.5 w-3.5 text-[#10B981]" />
-                      <span className="text-[#10B981]">Copied</span>
+                      <Check className="h-3.5 w-3.5 text-[#059669]" />
+                      <span className="text-[#059669]">Copied</span>
                     </>
                   ) : (
                     <>
@@ -247,7 +247,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                 </button>
               </div>
 
-              <div className="p-5 sm:p-6 overflow-x-auto font-mono text-xs sm:text-sm leading-relaxed text-[#CBD5E1] bg-[#0A0F1D]/90">
+              <div className="p-5 sm:p-6 overflow-x-auto font-mono text-xs sm:text-sm leading-relaxed text-[#425466] bg-white">
                 <pre className="whitespace-pre font-mono">{codeLines}</pre>
               </div>
             </div>
@@ -271,7 +271,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
               <div key={idx} className="my-8 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="text-xs uppercase tracking-wider text-[#635BFF] font-bold flex items-center gap-1.5">
-                    <Sparkles className="h-4 w-4" />
+                    <Sparkles className="h-4 w-4 text-[#635BFF]" />
                     <span>Comparative Strategic Analysis</span>
                   </div>
                   <span className="text-[11px] font-mono text-[#627D98]">
@@ -279,7 +279,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                   </span>
                 </div>
 
-                <div className="overflow-x-auto rounded-2xl border border-[#E6E8EB] shadow-sm bg-white">
+                <div className="overflow-x-auto rounded-2xl border border-[#E6E8EB] shadow-xs bg-white">
                   <table className="w-full text-left text-xs sm:text-sm border-collapse">
                     <thead>
                       <tr className="bg-[#0A2540] text-white">
@@ -296,7 +296,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                           >
                             <div className="flex items-center gap-1.5">
                               {hIdx === 2 && (
-                                <Zap className="h-3.5 w-3.5 text-[#818CF8]" />
+                                <Zap className="h-3.5 w-3.5 text-[#635BFF]" />
                               )}
                               <span>{h}</span>
                             </div>
@@ -309,7 +309,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                         <tr
                           key={rIdx}
                           className={`transition-colors hover:bg-[#F8FAFC] ${
-                            rIdx % 2 === 0 ? "bg-white" : "bg-[#FDFDFE]"
+                            rIdx % 2 === 0 ? "bg-white" : "bg-[#FAFAFC]"
                           }`}
                         >
                           {row.map((cell, cIdx) => (
@@ -317,18 +317,18 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                               key={cIdx}
                               className={`py-3.5 px-4 sm:px-6 align-top ${
                                 cIdx === 0
-                                  ? "font-semibold text-[#0A2540] bg-[#F8FAFC]/50"
+                                  ? "font-semibold text-[#0A2540] bg-[#F8FAFC]/60"
                                   : cIdx === 1
-                                  ? "text-[#64748B]"
-                                  : "text-[#0A2540] font-medium bg-[#F5F3FF]/40"
+                                  ? "text-[#627D98]"
+                                  : "text-[#0A2540] font-medium bg-[#F0F0FF]/30"
                               }`}
                             >
                               <div className="flex items-start gap-2">
                                 {cIdx === 1 && (
-                                  <XCircle className="h-4 w-4 text-[#EF4444] shrink-0 mt-0.5" />
+                                  <XCircle className="h-4 w-4 text-[#FF7043] shrink-0 mt-0.5" />
                                 )}
                                 {cIdx === 2 && (
-                                  <CheckCircle2 className="h-4 w-4 text-[#10B981] shrink-0 mt-0.5" />
+                                  <CheckCircle2 className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
                                 )}
                                 <span>{renderInline(cell)}</span>
                               </div>

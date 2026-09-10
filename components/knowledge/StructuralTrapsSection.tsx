@@ -18,8 +18,9 @@ export function StructuralTrapsSection() {
       number: "01",
       title: "The 'Agency & Consultant' Retainer Sinkhole",
       badge: "Cash Drain Trap",
-      badgeColor: "text-[#EF4444] bg-[#FEF2F2] border-[#FCA5A5]",
-      icon: <Megaphone className="h-5 w-5 text-[#EF4444]" />,
+      badgeColor: "text-[#C2410C] bg-[#FFF4ED] border-[#FFD8C2]",
+      iconBg: "bg-[#FFF4ED] border-[#FFD8C2] text-[#FF7043]",
+      icon: <Megaphone className="h-5 w-5 text-[#FF7043]" />,
       summary:
         "When founders lack technical or growth capabilities, they default to third-party retainers who carry zero financial downside if the venture fails.",
       points: [
@@ -39,8 +40,9 @@ export function StructuralTrapsSection() {
       number: "02",
       title: "The 50/50 Handshake and the Broken Cap Table",
       badge: "Governance Trap",
-      badgeColor: "text-[#F59E0B] bg-[#FFFBEB] border-[#FDE68A]",
-      icon: <Users2 className="h-5 w-5 text-[#F59E0B]" />,
+      badgeColor: "text-[#635BFF] bg-[#F0F0FF] border-[#E0E0FF]",
+      iconBg: "bg-[#F0F0FF] border-[#E0E0FF] text-[#635BFF]",
+      icon: <Users2 className="h-5 w-5 text-[#635BFF]" />,
       summary:
         "Informal 50/50 equity splits agreed over coffee without milestone vesting create unresolvable dead equity when a founder burns out.",
       points: [
@@ -54,14 +56,15 @@ export function StructuralTrapsSection() {
         },
       ],
       coreFlaw:
-        "Never incorporate without 4-year reverse vesting with a 1-year cliff and explicit IP assignment.",
+        "Never incorporate without 4-year reverse vesting with a 1-year cliff and explicit corporate IP assignment.",
     },
     {
       number: "03",
       title: "Operational Chaos: Running by WhatsApp and Spreadsheets",
       badge: "Operations Trap",
-      badgeColor: "text-[#635BFF] bg-[#F5F3FF] border-[#C7D2FE]",
-      icon: <FileSpreadsheet className="h-5 w-5 text-[#635BFF]" />,
+      badgeColor: "text-[#007A66] bg-[#E6FFFA] border-[#B2F5EA]",
+      iconBg: "bg-[#E6FFFA] border-[#B2F5EA] text-[#00D4B2]",
+      icon: <FileSpreadsheet className="h-5 w-5 text-[#007A66]" />,
       summary:
         "When order volumes and customer queries begin arriving, manual unintegrated workflows trigger catastrophic operational blindness.",
       points: [
@@ -92,7 +95,7 @@ export function StructuralTrapsSection() {
                 <span className={`text-[11px] font-mono font-bold px-2.5 py-0.5 rounded border ${trap.badgeColor}`}>
                   TRAP {trap.number}
                 </span>
-                <div className="p-1.5 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0]">
+                <div className={`p-1.5 rounded-lg border ${trap.iconBg}`}>
                   {trap.icon}
                 </div>
               </div>
@@ -107,7 +110,7 @@ export function StructuralTrapsSection() {
 
               <div className="space-y-2 pt-2">
                 {trap.points.map((pt, pIdx) => (
-                  <div key={pIdx} className="text-xs text-[#425466] bg-[#F8FAFC] p-2.5 rounded-lg border border-[#E2E8F0]/60">
+                  <div key={pIdx} className="text-xs text-[#425466] bg-[#F8FAFC] p-2.5 rounded-lg border border-[#E6E8EB]">
                     <strong className="text-[#0A2540] block mb-0.5">{pt.label}:</strong>
                     <span>{pt.text}</span>
                   </div>
@@ -115,8 +118,8 @@ export function StructuralTrapsSection() {
               </div>
             </div>
 
-            <div className="pt-2 border-t border-[#F1F5F9] text-[11px] font-mono text-[#EF4444] flex items-start gap-1.5">
-              <AlertTriangle className="h-3.5 w-3.5 shrink-0 mt-0.5" />
+            <div className="pt-2.5 border-t border-[#F1F5F9] text-[11px] font-mono text-[#C2410C] flex items-start gap-1.5 bg-[#FFF4ED]/40 p-2 rounded-lg border border-[#FFD8C2]/40">
+              <AlertTriangle className="h-3.5 w-3.5 shrink-0 mt-0.5 text-[#FF7043]" />
               <span>{trap.coreFlaw}</span>
             </div>
           </div>
