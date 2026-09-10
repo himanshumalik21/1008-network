@@ -23,9 +23,12 @@ export function PersonaMatrix() {
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
       title: "Manufacturing Plants & Assembly Lines",
-      description:
-        "Passionate about setting up a production facility but intimidated by industrial zoning, machinery vendors, or plant licensing? We handle strategic land acquisition, OEM equipment procurement, factory civil works, pollution clearances, and floor staffing.",
-      thesisExample: "Auto-components, precision fabrication, packaging lines, chemical processing & electronics assembly.",
+      bullets: [
+        "Strategic industrial land acquisition & zoning clearances",
+        "OEM machinery sourcing, customs clearance & trial runs",
+        "Plant labor staffing & standard operating quality controls",
+      ],
+      thesisExample: "Auto-components, precision tooling, packaging plants, chemicals & electronics fabrication.",
     },
     {
       icon: TrendingUp,
@@ -33,49 +36,64 @@ export function PersonaMatrix() {
       badgeVariant: "emerald" as const,
       iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
       title: "Hospitals, Clinics & Educational Hubs",
-      description:
-        "Building a multi-specialty clinic, diagnostic chain, school, or skill academy? We take care of commercial real estate scouting, medical/lab equipment leasing, regulatory health/education compliance, management tech, and medical/academic staffing.",
-      thesisExample: "Specialty day-care surgery, diagnostic networks, K-12 private institutions & vocational academies.",
+      bullets: [
+        "Commercial medical real estate scouting & health permits",
+        "Diagnostic & clinical equipment procurement and leasing",
+        "Doctors, clinical technicians & institutional staff hiring",
+      ],
+      thesisExample: "Specialty day-care clinics, diagnostic chains, private K-12 schools & vocational academies.",
     },
     {
       icon: Sparkles,
       badge: "Hospitality & Commercial Spaces",
       badgeVariant: "cyan" as const,
       iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
-      title: "Hotels, Resorts & Food & Beverage Networks",
-      description:
-        "Envisioning a boutique resort, hotel property, or specialty restaurant chain? We execute site location diligence, interior and kitchen commissioning, municipal and liquor licensing, property management tech, and hospitality staff onboarding.",
-      thesisExample: "Boutique heritage retreats, cloud kitchen clusters, lifestyle cafes & experiential hospitality.",
+      title: "Hotels, Resorts & Restaurant Chains",
+      bullets: [
+        "High-footfall property due diligence & commercial leases",
+        "Commercial kitchen fit-out, interior commissioning & liquor permits",
+        "Hospitality crew recruitment, property tech & OTA booking launch",
+      ],
+      thesisExample: "Boutique heritage resorts, cloud kitchen networks, lifestyle cafes & experiential venues.",
     },
     {
       icon: Sparkles,
       badge: "Consumer Brands & D2C",
       badgeVariant: "amber" as const,
       iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
-      title: "Apparel Lines, Consumer Electronics & D2C",
-      description:
-        "Launching an apparel collection, consumer gadget, or packaged food brand? We manage contract manufacturing negotiations, packaging design, warehouse fulfillment, digital commerce architecture, and performance GTM to drive early sales.",
-      thesisExample: "Specialty apparel labels, smart consumer hardware, functional nutrition & packaged consumer goods.",
+      title: "Apparel Lines, Consumer Tech & D2C",
+      bullets: [
+        "Contract batch manufacturing & custom packaging design",
+        "Warehousing, 3PL fulfillment & conversion-optimized commerce stack",
+        "Brand launch campaigns, retail distribution & customer acquisition",
+      ],
+      thesisExample: "Apparel labels, consumer electronics, specialized packaged goods & functional foods.",
     },
     {
       icon: Briefcase,
-      badge: "Wholesale & Trade Infrastructure",
+      badge: "Trade & Distribution",
       badgeVariant: "slate" as const,
       iconBg: "bg-[#F6F9FC] text-[#0A2540] border-[#E6E8EB]",
       title: "Distribution Networks & Import-Export",
-      description:
-        "Establishing an interstate distribution network or import-export house? We structure verified supplier contracts, warehousing hubs, customs clearances, and B2B dealer sales channels for consistent cash flows.",
-      thesisExample: "Industrial raw material supply, FMCG distribution corridors, cross-border trading & wholesale logistics.",
+      bullets: [
+        "Verified supplier contracts & wholesale logistics corridors",
+        "Warehousing hubs, customs clearance & GST tax compliance",
+        "B2B dealer sales pipelines & trade credit financing",
+      ],
+      thesisExample: "Commodity distribution, industrial raw materials, cross-border trade & wholesale supply.",
     },
     {
       icon: RefreshCw,
-      badge: "Turnaround & Stalled Ventures",
+      badge: "Turnaround & Reboots",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
       title: "Struggling Businesses & Venture Reboots",
-      description:
-        "Is your business bleeding cash, suffering from operational chaos, or stalled by broken technology? We step in as active co-builders to audit unit economics, restructure operations, repair workflows, and re-ignite commercial growth.",
-      thesisExample: "Distressed SME turnaround, tech-stack re-architecture, distribution restructuring & cash-flow stabilization.",
+      bullets: [
+        "Comprehensive root-cause financial & margin leak audit",
+        "Restructuring broken supply chains, workflows & bloated tech",
+        "Re-igniting sales pipelines & stabilizing monthly cash flows",
+      ],
+      thesisExample: "Distressed SME turnaround, tech modernization, supplier re-negotiation & margin recovery.",
     },
   ];
 
@@ -90,10 +108,10 @@ export function PersonaMatrix() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">Sector Specializations & Use Cases</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for any business. From heavy industry to consumer brands.
+            Built for any industry. From heavy manufacturing to consumer brands.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Whether starting from a blank sheet of paper or reviving a struggling enterprise, 1008 Network provides the operational muscle to build a durable business.
+            Whether starting from zero or revitalizing a struggling enterprise, 1008 Network executes the ground operations to build lasting enterprise value.
           </p>
         </div>
 
@@ -103,7 +121,7 @@ export function PersonaMatrix() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 flex flex-col justify-between hover:border-[#CBD5E1] transition-all duration-300 relative group shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]"
+                className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-7 flex flex-col justify-between hover:border-[#CBD5E1] transition-all duration-300 relative group shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]"
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4">
@@ -115,26 +133,33 @@ export function PersonaMatrix() {
                     </Badge>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#0A2540] mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-[#425466] leading-relaxed mb-4">
-                    {item.description}
-                  </p>
 
-                  <div className="p-3.5 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-xs text-[#0A2540] mb-6 flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0A2540]">Venture Opportunity:</strong> {item.thesisExample}</span>
+                  {/* Scannable Bullet Points */}
+                  <div className="space-y-2 mb-5 text-xs text-[#425466]">
+                    {item.bullets.map((b, bIdx) => (
+                      <div key={bIdx} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0 mt-0.5" />
+                        <span className="leading-snug">{b}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-[11px] text-[#425466] mb-5">
+                    <strong className="text-[#0A2540] block mb-0.5">Use Cases:</strong>
+                    <span>{item.thesisExample}</span>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[#E6E8EB]">
+                <div className="pt-3 border-t border-[#E6E8EB]">
                   <Button
                     onClick={() => setModalOpen(true)}
                     variant="secondary"
                     size="sm"
                     className="w-full justify-between font-semibold text-xs"
-                    rightIcon={<ArrowRight className="h-4 w-4" />}
+                    rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
                   >
                     Build in This Sector
                   </Button>

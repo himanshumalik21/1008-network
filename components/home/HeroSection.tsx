@@ -23,6 +23,60 @@ import {
 
 export function HeroSection() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeSector, setActiveSector] = useState<"manufacturing" | "healthcare" | "hospitality" | "d2c" | "turnaround">("manufacturing");
+
+  const sectorPreviews = {
+    manufacturing: {
+      label: "🏭 Manufacturing & Plants",
+      headline: "Turnkey Industrial Plant & Assembly Commissioning",
+      phases: [
+        { phase: "PHASE 01", days: "Days 1–45", title: "Site Scouting & Feasibility", desc: "Zoning approvals, industrial corridor land scouting & capital budgeting.", gate: "Foundation Gate" },
+        { phase: "PHASE 02", days: "Days 46–90", title: "Machinery & Plant Civil", desc: "OEM machinery sourcing, custom tooling, factory civil works & trial runs.", gate: "Commissioning Gate" },
+        { phase: "PHASE 03", days: "Days 91–135", title: "Staffing & Quality SOPs", desc: "Recruiting plant supervisors, machine operators & vendor supply contracts.", gate: "Operations Gate" },
+        { phase: "PHASE 04", days: "Days 136–180", title: "B2B Sales & Handover", desc: "Securing dealer purchase orders, full asset transfer & founder autonomy.", gate: "Autonomy Gate" },
+      ]
+    },
+    healthcare: {
+      label: "🏥 Healthcare & Clinics",
+      headline: "Multi-Specialty Clinic, Diagnostic & Hospital Setup",
+      phases: [
+        { phase: "PHASE 01", days: "Days 1–45", title: "Facility & Health Licensing", desc: "Commercial medical real estate scouting & state healthcare regulatory approvals.", gate: "Permit Gate" },
+        { phase: "PHASE 02", days: "Days 46–90", title: "Medical Equipment Leasing", desc: "Diagnostic lab machinery, sterile room build-out & hospital management software.", gate: "Setup Gate" },
+        { phase: "PHASE 03", days: "Days 91–135", title: "Clinical & Staff Hiring", desc: "Recruiting doctors, nursing officers, technicians & patient care protocols.", gate: "Staffing Gate" },
+        { phase: "PHASE 04", days: "Days 136–180", title: "Launch & Patient Flow", desc: "Hyper-local marketing, corporate tie-ups & 100% operational transition.", gate: "Handover Gate" },
+      ]
+    },
+    hospitality: {
+      label: "🏨 Hospitality & Hotels",
+      headline: "Boutique Hotels, Resorts & Food & Beverage Networks",
+      phases: [
+        { phase: "PHASE 01", days: "Days 1–45", title: "Location & Property Due Diligence", desc: "Site acquisition, tourism zoning clearance & architect design lock.", gate: "Feasibility Gate" },
+        { phase: "PHASE 02", days: "Days 46–90", title: "Interior & Kitchen Commissioning", desc: "Commercial kitchen equipment, interior fit-out, municipal & liquor permits.", gate: "Fit-out Gate" },
+        { phase: "PHASE 03", days: "Days 91–135", title: "Hospitality Crew & PMS Tech", desc: "Staff recruitment, property management software & culinary SOPs.", gate: "Readiness Gate" },
+        { phase: "PHASE 04", days: "Days 136–180", title: "Booking Launch & Occupancy", desc: "OTA channel distribution, inaugural guest marketing & operational handover.", gate: "Launch Gate" },
+      ]
+    },
+    d2c: {
+      label: "🛍️ Consumer Brands & D2C",
+      headline: "Apparel Lines, Consumer Electronics & Packaged Goods",
+      phases: [
+        { phase: "PHASE 01", days: "Days 1–45", title: "Formulation & Contract Mfg", desc: "OEM batch manufacturing contracts, packaging prototyping & lab testing.", gate: "Product Gate" },
+        { phase: "PHASE 02", days: "Days 46–90", title: "Supply Chain & Commerce Stack", desc: "Warehousing, 3PL logistics, custom digital storefront & payment rails.", gate: "Supply Gate" },
+        { phase: "PHASE 03", days: "Days 91–135", title: "GTM Launch & Paid Acquisition", desc: "Brand launch campaigns, influencer seeding & initial customer order volume.", gate: "Traction Gate" },
+        { phase: "PHASE 04", days: "Days 136–180", title: "Retail Channels & Unit Economics", desc: "Retail distributor placement, positive contribution margin & handover.", gate: "Scale Gate" },
+      ]
+    },
+    turnaround: {
+      label: "🔄 Business Turnaround & Reboot",
+      headline: "Operational Restructuring & Cash-Flow Stabilization",
+      phases: [
+        { phase: "PHASE 01", days: "Days 1–45", title: "Root-Cause Financial Audit", desc: "Stopping capital leaks, analyzing margin bleeds & restructuring supplier terms.", gate: "Diagnostic Gate" },
+        { phase: "PHASE 02", days: "Days 46–90", title: "Operational & Tech Overhaul", desc: "Streamlining bloated workflows, fixing broken software & optimizing inventory.", gate: "Repair Gate" },
+        { phase: "PHASE 03", days: "Days 91–135", title: "Commercial Sales Reignited", desc: "Re-activating dormant accounts, upgrading sales team & establishing positive cash flow.", gate: "Momentum Gate" },
+        { phase: "PHASE 04", days: "Days 136–180", title: "Self-Sustaining Autonomy", desc: "Institutionalized governance, profitable run-rate & sustainable growth.", gate: "Stability Gate" },
+      ]
+    },
+  };
 
   const handleOpenModal = () => {
     trackStudioModalOpen("hero_primary_cta");
@@ -30,7 +84,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden bg-white">
+    <section className="relative pt-32 pb-20 sm:pt-38 sm:pb-24 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
 
@@ -51,11 +105,8 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Network // Turnkey Venture & Operations Partner
+              1008 Network // Turnkey Operations & Syndicate Partner
             </Badge>
-            <span className="text-xs font-semibold text-[#627D98] hidden sm:inline-block">
-              Manufacturing • Healthcare • Hospitality • Retail • Tech • Turnarounds
-            </span>
           </div>
 
           {/* Primary Razor-Sharp Hook Headline */}
@@ -63,23 +114,23 @@ export function HeroSection() {
             Transform your ambition into a running enterprise.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We execute the operations. We connect you with capital.
+              We execute operations on the ground & connect you to capital.
             </span>
           </h1>
 
-          {/* Core Subtitle Positioning */}
-          <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Building a business shouldn&apos;t mean fighting the operational battle alone. Whether you are an aspiring founder setting up your first manufacturing plant, an operator launching a healthcare or hospitality facility, a creator building a consumer brand, or an owner rebooting a stalled business—<strong>1008 Network turns your vision into a living, revenue-generating reality</strong>. We manage site acquisition, facility setup, machinery procurement, regulatory clearances, hiring, tech systems, and launch marketing—while championing your venture to our syndicate of active investors.
+          {/* Core Subtitle - Concise & Impactful */}
+          <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
+            Stop fighting operational chaos alone. Whether commissioning an industrial plant, opening a healthcare clinic, launching a D2C brand, or rebooting a stalled company—<strong>1008 Network builds your business on the ground and secures growth capital</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
-          <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Button
               size="lg"
               variant="primary"
               onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto text-base px-8 font-semibold"
+              className="w-full sm:w-auto text-base px-8 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
               Pitch Your Business Vision
             </Button>
@@ -93,128 +144,88 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Core Proposition Proof Points */}
-          <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-4xl mx-auto text-left">
-            <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#00A389] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Briefcase className="h-3.5 w-3.5" /> Turnkey Ground Execution
-              </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Industrial land scouting, plant commissioning, equipment sourcing & statutory clearances.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#635BFF] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Shield className="h-3.5 w-3.5" /> Investor Syndicate Access
-              </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">We present your de-risked venture to our curated pool of angel networks and family offices.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#059669] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Code2 className="h-3.5 w-3.5" /> Pragmatic Digital Engine
-              </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Feasibility prototypes, core operational ERPs, and budget-aligned engineering talent.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#F4511E] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Sparkles className="h-3.5 w-3.5" /> Commercial Momentum
-              </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Key operational hiring, distribution channel development, and inaugural customer revenue.</p>
-            </div>
+          {/* High-Impact Credibility Hook Pills */}
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-[#425466]">
+            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" /> ₹0 Consulting Retainers
+            </span>
+            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF]" /> 180-Day Handover
+            </span>
+            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389]" /> 100% IP & Asset Ownership
+            </span>
+            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#F4511E]" /> Active Investor Syndicate
+            </span>
           </div>
         </div>
 
-        {/* Live Interactive Venture Studio Sprint Preview Box */}
-        <div className="mt-14 max-w-5xl mx-auto rounded-2xl bg-white border border-[#E6E8EB] p-2 shadow-[0_20px_40px_-15px_rgba(10,37,64,0.1)] relative">
-          <div className="relative rounded-xl bg-[#F6F9FC] p-5 sm:p-7 overflow-hidden border border-[#E6E8EB]/60">
-            {/* Header */}
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E6E8EB] pb-4 mb-5 text-xs">
+        {/* Live Interactive Sector Blueprint Feasibility Box (High Engagement Hook) */}
+        <div className="mt-12 max-w-5xl mx-auto rounded-2xl bg-white border border-[#E6E8EB] p-2 shadow-[0_20px_40px_-15px_rgba(10,37,64,0.08)] relative">
+          <div className="relative rounded-xl bg-[#F6F9FC] p-4 sm:p-6 overflow-hidden border border-[#E6E8EB]/60">
+            {/* Interactive Sector Switcher Pills */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E6E8EB] pb-4 mb-5">
               <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-red-400" />
-                <span className="h-3 w-3 rounded-full bg-amber-400" />
-                <span className="h-3 w-3 rounded-full bg-emerald-400" />
-                <span className="ml-2 text-[#0A2540] font-bold font-sans">1008 Network Turnkey Execution Engine</span>
+                <span className="text-xs font-bold text-[#0A2540] uppercase tracking-wider">Select Industry:</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Badge variant="indigo" size="sm" pulse>Tailored Engagements</Badge>
-                <span className="text-[#627D98] text-[11px] font-medium hidden sm:inline">180-Day Build & Handover</span>
+              <div className="flex flex-wrap gap-1.5">
+                {(Object.keys(sectorPreviews) as Array<keyof typeof sectorPreviews>).map((secKey) => (
+                  <button
+                    key={secKey}
+                    type="button"
+                    onClick={() => setActiveSector(secKey)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                      activeSector === secKey
+                        ? "bg-[#635BFF] text-white shadow-xs"
+                        : "bg-white text-[#425466] border border-[#E6E8EB] hover:border-[#CBD5E1]"
+                    }`}
+                  >
+                    {sectorPreviews[secKey].label}
+                  </button>
+                ))}
               </div>
+            </div>
+
+            {/* Active Sector Scope Title */}
+            <div className="mb-4 text-left">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#635BFF] block">
+                180-Day Turnkey Scope
+              </span>
+              <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
+                {sectorPreviews[activeSector].headline}
+              </h3>
             </div>
 
             {/* 4 Interactive Sprint Phases Matrix */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-left font-sans text-xs">
-              {/* Phase 1 */}
-              <div className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-2 shadow-xs">
-                <div className="flex items-center justify-between text-[#627D98] text-[11px]">
-                  <span className="text-[#635BFF] font-bold">PHASE 01</span>
-                  <span className="font-semibold">DAYS 1–45</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left font-sans text-xs">
+              {sectorPreviews[activeSector].phases.map((p, idx) => (
+                <div key={idx} className="p-3.5 rounded-xl bg-white border border-[#E6E8EB] space-y-1.5 shadow-xs flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between text-[#627D98] text-[10px] font-semibold mb-1">
+                      <span className="text-[#635BFF] font-bold">{p.phase}</span>
+                      <span>{p.days}</span>
+                    </div>
+                    <div className="text-[#0A2540] font-bold text-xs mb-1">{p.title}</div>
+                    <p className="text-[#425466] text-[11px] leading-relaxed">{p.desc}</p>
+                  </div>
+                  <div className="pt-2 text-[10px] text-[#059669] font-semibold flex items-center gap-1">
+                    <CheckCircle2 className="h-3 w-3" /> {p.gate}
+                  </div>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">Vision & Feasibility Blueprint</div>
-                <p className="text-[#425466] text-xs leading-relaxed">
-                  Founder vision alignment, financial modeling, real estate/facility scouting, and regulatory licensing roadmap under NDA.
-                </p>
-                <div className="text-[11px] text-[#059669] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Feasibility Gate
-                </div>
-              </div>
-
-              {/* Phase 2 */}
-              <div className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-2 shadow-xs">
-                <div className="flex items-center justify-between text-[#627D98] text-[11px]">
-                  <span className="text-[#00A389] font-bold">PHASE 02</span>
-                  <span className="font-semibold">DAYS 46–90</span>
-                </div>
-                <div className="text-[#0A2540] font-bold text-sm">Infrastructure & Procurement</div>
-                <p className="text-[#425466] text-xs leading-relaxed">
-                  Plant/facility setup, machinery procurement, registration paperwork, vendor contracts, tech stack & digital presence.
-                </p>
-                <div className="text-[11px] text-[#00A389] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Setup Gate
-                </div>
-              </div>
-
-              {/* Phase 3 */}
-              <div className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-2 shadow-xs">
-                <div className="flex items-center justify-between text-[#627D98] text-[11px]">
-                  <span className="text-[#F4511E] font-bold">PHASE 03</span>
-                  <span className="font-semibold">DAYS 91–135</span>
-                </div>
-                <div className="text-[#0A2540] font-bold text-sm">Staffing & First Customers</div>
-                <p className="text-[#425466] text-xs leading-relaxed">
-                  Manpower & team recruitment, operational training, launch marketing campaigns, and securing initial commercial clients.
-                </p>
-                <div className="text-[11px] text-[#F4511E] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Traction Gate
-                </div>
-              </div>
-
-              {/* Phase 4 */}
-              <div className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-2 shadow-xs">
-                <div className="flex items-center justify-between text-[#627D98] text-[11px]">
-                  <span className="text-[#059669] font-bold">PHASE 04</span>
-                  <span className="font-semibold">DAYS 136–180</span>
-                </div>
-                <div className="text-[#0A2540] font-bold text-sm">Handover & Autonomous Growth</div>
-                <p className="text-[#425466] text-xs leading-relaxed">
-                  Operating SOPs institutionalized, permanent management onboarded, 100% asset & IP handover, and full founder autonomy.
-                </p>
-                <div className="text-[11px] text-[#059669] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Handover Gate
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Bottom Callout */}
-            <div className="mt-5 pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div className="mt-4 pt-3.5 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
               <span className="text-[#627D98]">
-                <strong className="text-[#0A2540]">Result:</strong> Tailored specifically to your business model, customer base, and market dynamics.
+                <strong className="text-[#0A2540]">Execution Assurance:</strong> All assets, machinery, licenses, and IP 100% owned by your corporate entity.
               </span>
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={handleOpenModal}
                 className="text-[#635BFF] hover:underline font-semibold flex items-center gap-1 shrink-0"
               >
-                Apply to Build With Us <ChevronRight className="h-3.5 w-3.5" />
+                Pitch This Venture <ChevronRight className="h-3.5 w-3.5" />
               </button>
             </div>
           </div>
