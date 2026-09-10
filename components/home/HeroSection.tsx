@@ -111,7 +111,7 @@ export function HeroSection() {
       <div className="absolute right-8 top-1/3 w-44 h-44 bg-dots-matrix opacity-30 mask-radial-fade pointer-events-none hidden xl:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-4xl mx-auto space-y-6">
+        <div className="text-center max-w-5xl mx-auto space-y-6">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
@@ -120,10 +120,9 @@ export function HeroSection() {
           </div>
 
           {/* Primary Razor-Sharp Hook Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            You bring the industry vision.{" "}
-            <br className="hidden sm:inline" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[68px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
+            <span className="block">You bring the industry expertise & vision.</span>
+            <span className="block mt-1 sm:mt-2 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
               We build the operating company on the ground with you.
             </span>
           </h1>
