@@ -17,6 +17,15 @@ export const initialKnowledgeResources: KnowledgeResource[] = [
     authorOrSource: "1008 Network Editorial & Venture Architecture",
     featured: true,
     publishedAt: "2026-09-10",
+    primaryKeyword: "how to start a business in India without wasting money",
+    secondaryKeywords: [
+      "how to fix a struggling startup India",
+      "startup survival guide India",
+      "venture builder vs startup consultant",
+      "zero retainer startup blueprint",
+      "co-founding partner India"
+    ],
+    targetAudience: "First-Time Founders, Struggling Business Owners, Corporate CXOs Transitioning to Startups",
     summary: "82% of early-stage Indian businesses fail not because of flawed concepts, but because founders bleed limited runway on monthly agency retainers and disconnected consultants before finding product-market fit. Learn the 4-phase turnaround framework to achieve self-sustaining operations.",
     keyTakeaways: [
       "The Retainer Sinkhole: Why paying ₹50k–₹2L/month to third-party agencies with zero financial skin in the game silently destroys early-stage runway.",

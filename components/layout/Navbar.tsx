@@ -25,13 +25,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Execution Blueprint", href: "/#blueprint" },
-    { label: "Find a Partner", href: "/network" },
-    { label: "Invest Capital", href: "/capital" },
-    { label: "Who It's For", href: "/#personas" },
-    { label: "Why 1008 Network", href: "/#comparison" },
+    { label: "Venture Studio", href: "/#blueprint" },
+    { label: "Partner Network", href: "/network" },
+    { label: "Capital", href: "/capital" },
     { label: "Playbooks", href: "/knowledge" },
-    { label: "Manifesto", href: "/manifesto" },
   ];
 
   const handleOpenModal = () => {

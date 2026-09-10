@@ -77,6 +77,9 @@ export interface KnowledgeResource {
   contentMarkdown: string;
   actionableChecklist?: string[];
   publishedAt: string;
+  primaryKeyword?: string;
+  secondaryKeywords?: string[];
+  targetAudience?: string;
 }
 
 export interface DealCard {
