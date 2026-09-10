@@ -72,8 +72,11 @@ export function ComparisonSection() {
             <thead className="border-b border-[#E6E8EB] bg-[#F6F9FC] text-[#627D98] uppercase text-[11px] font-semibold tracking-wider">
               <tr>
                 <th className="p-4 sm:p-5">Dimension</th>
-                <th className="p-4 sm:p-5 text-[#635BFF] bg-[#F0F0FF] border-x border-[#E0E0FF] font-bold">
-                  1008 Network
+                <th className="p-4 sm:p-5 text-[#635BFF] bg-[#F0F0FF] border-x-2 border-t-2 border-[#635BFF]/30 font-bold relative">
+                  <div className="flex items-center justify-between">
+                    <span>1008 Network</span>
+                    <span className="text-[9px] bg-[#635BFF] text-white px-1.5 py-0.5 rounded font-extrabold normal-case">Venture Partner</span>
+                  </div>
                 </th>
                 <th className="p-4 sm:p-5">Consulting Agencies</th>
                 <th className="p-4 sm:p-5">Standard Incubators</th>
@@ -86,7 +89,7 @@ export function ComparisonSection() {
                   <td className="p-4 sm:p-5 font-bold text-[#0A2540]">
                     {row.dimension}
                   </td>
-                  <td className="p-4 sm:p-5 bg-[#F0F0FF]/40 border-x border-[#E0E0FF] text-[#0A2540] font-medium">
+                  <td className="p-4 sm:p-5 bg-[#F0F0FF]/60 border-x-2 border-[#635BFF]/30 text-[#0A2540] font-semibold">
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
                       <span>{row.studio1008}</span>

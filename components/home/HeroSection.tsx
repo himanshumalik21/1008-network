@@ -121,16 +121,16 @@ export function HeroSection() {
 
           {/* Primary Razor-Sharp Hook Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            Transform your ambition into a running enterprise.{" "}
+            You bring the industry vision.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We execute operations on the ground & connect you to capital.
+              We build the operating company on the ground with you.
             </span>
           </h1>
 
           {/* Core Subtitle - Concise & Impactful */}
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
-            Stop fighting operational friction alone. Whether setting up a manufacturing unit, launching a new product or consumer brand, or revitalizing an existing business—<strong>1008 Network handles turnkey operations on the ground and connects you to growth capital</strong>.
+            1008 Network is India&apos;s turnkey venture execution partner. We manage plant setup, manufacturing, machinery sourcing, technical systems, and seed capital syndication for shared equity—with <strong>zero consulting retainers</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
@@ -142,7 +142,7 @@ export function HeroSection() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
-              Pitch Your Business Vision
+              Apply to Build With Us
             </Button>
             <Button
               href="/capital"
@@ -150,7 +150,7 @@ export function HeroSection() {
               variant="secondary"
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Explore Capital & Syndicates
+              Explore Investor Syndicates
             </Button>
           </div>
 
