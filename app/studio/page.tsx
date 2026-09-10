@@ -23,11 +23,11 @@ export default function StudioPage() {
       solo: "100% out-of-pocket personal savings burn",
     },
     {
-      dimension: "Software Engineering & Architecture",
-      studio1008: "Production-grade Next.js/React full-stack team included",
-      agency: "Outsourced developers without product intuition",
-      accelerator: "Zero build support; founder must recruit CTO",
-      solo: "Struggles with freelancer churn or low-quality code",
+      dimension: "Operations, Feasibility & Tech Sourcing",
+      studio1008: "0-to-1 operational systems, feasibility MVPs + vetted tech hiring based on budget",
+      agency: "Outsourced developers without product or operational intuition",
+      accelerator: "Zero operational or build support; founder must recruit alone",
+      solo: "Struggles with freelancer churn, disorganized ops & high cash burn",
     },
     {
       dimension: "Duration & Handover",

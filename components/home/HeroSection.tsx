@@ -69,8 +69,8 @@ export function HeroSection() {
 
           {/* Core Subtitle Positioning */}
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            1008 is the hands-on venture studio for new startups, early-stage founders, and businesses looking to reboot.
-            We provide full-stack software engineering, modern product design, and 0-to-1 go-to-market systems for <span className="text-[#0A2540] font-semibold">shared equity upside—zero expensive agency retainers</span>.
+            1008 is the hands-on operations and venture execution partner for new startups, early-stage founders, and businesses looking to reboot.
+            We build feasibility prototypes, design scalable operational systems, and source vetted engineering talent for <span className="text-[#0A2540] font-semibold">shared equity upside—zero expensive agency retainers</span>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
@@ -119,9 +119,9 @@ export function HeroSection() {
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#0A2540] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Code2 className="h-3.5 w-3.5 text-[#635BFF]" /> Full Tech Team
+                <Code2 className="h-3.5 w-3.5 text-[#635BFF]" /> Feasibility & Tech Sourcing
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Production Next.js code, UI/UX design, cloud infra & GTM included.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Rapid prototype testing + vetted engineering team hiring based on your budget.</p>
             </div>
           </div>
         </div>
@@ -151,9 +151,9 @@ export function HeroSection() {
                   <span className="text-[#635BFF] font-bold">PHASE 01</span>
                   <span className="font-semibold">DAYS 1–45</span>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">Validation & Architecture</div>
+                <div className="text-[#0A2540] font-bold text-sm">Validation & Feasibility</div>
                 <p className="text-[#425466] text-xs leading-relaxed">
-                  25+ customer discovery calls under NDA, financial bleed quantification, and system architecture.
+                  25+ customer discovery calls under NDA, financial bleed quantification, and solution brainstorming.
                 </p>
                 <div className="text-[11px] text-[#059669] font-semibold flex items-center gap-1">
                   <CheckCircle2 className="h-3.5 w-3.5" /> Validation Gate
@@ -166,9 +166,9 @@ export function HeroSection() {
                   <span className="text-[#00A389] font-bold">PHASE 02</span>
                   <span className="font-semibold">DAYS 46–90</span>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">MVP & Operational Stack</div>
+                <div className="text-[#0A2540] font-bold text-sm">Feasibility MVP & SOPs</div>
                 <p className="text-[#425466] text-xs leading-relaxed">
-                  Full-stack Next.js deployment, world-class design system, security auth, and DB migrations.
+                  Rapid prototype testing, core operating SOPs, commercial workflows, and vetted tech talent allocation.
                 </p>
                 <div className="text-[11px] text-[#00A389] font-semibold flex items-center gap-1">
                   <CheckCircle2 className="h-3.5 w-3.5" /> Build Gate

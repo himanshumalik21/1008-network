@@ -14,11 +14,11 @@ export function ComparisonSection() {
       solo: "100% personal cash burn with high opportunity cost.",
     },
     {
-      dimension: "Software Engineering & Architecture",
-      studio1008: "Senior in-house full-stack engineers building production Next.js/React.",
-      agency: "Junior outsourced coders; low quality, brittle, unmaintainable.",
-      accelerator: "None. Founder must find and recruit a technical CTO alone.",
-      solo: "Managing disconnected freelancers on Upwork with high churn.",
+      dimension: "Operations, Feasibility & Tech Sourcing",
+      studio1008: "0-to-1 operational systems, feasibility MVPs + vetted tech team hiring based on budget.",
+      agency: "Junior outsourced coders; low quality, brittle, zero operational understanding.",
+      accelerator: "None. Founder must figure out operations, feasibility, and hiring alone.",
+      solo: "Managing disconnected freelancers on Upwork with high churn and cash burn.",
     },
     {
       dimension: "Relationship Duration",

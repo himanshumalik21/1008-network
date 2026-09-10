@@ -31,16 +31,16 @@ export function PillarsBento() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">The Venture Studio Model</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Everything you need to turn domain insight into an enterprise.
+            Everything you need to build & turn around a business.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            We don&apos;t advise from the sidelines. We write production code, design the product, build standard operating procedures, and set up your initial revenue pipeline.
+            We don&apos;t give generic advice. We build 0-to-1 operational systems, test market feasibility with rapid prototypes, and source vetted technical teams based on your budget.
           </p>
         </div>
 
         {/* Studio Pillars Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-          {/* Card 1: In-House Tech Team (7 cols) */}
+          {/* Card 1: Operational Systems & Feasibility (7 cols) */}
           <div className="lg:col-span-7 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
             <div>
               <div className="flex items-center justify-between gap-4 mb-5">
@@ -49,41 +49,41 @@ export function PillarsBento() {
                     <Code2 className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#635BFF] tracking-wide font-bold uppercase">
-                    FULL-STACK EXECUTION
+                    OPERATIONS & FEASIBILITY
                   </span>
                 </div>
-                <Badge variant="indigo" size="sm">Production-Grade</Badge>
+                <Badge variant="indigo" size="sm">Hands-On Muscle</Badge>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-[#0A2540] mb-3">
-                Full-Stack Tech & Product Architecture
+                0-to-1 Operational Architecture & Feasibility
               </h3>
               <p className="text-[#425466] text-sm sm:text-base leading-relaxed mb-6">
-                Never waste months searching for a technical co-founder or overpaying low-quality dev agencies. 1008 provides a battle-tested engineering and design team from Day 1.
+                Brainstorm, de-risk, and test business viability before burning cash. We build rapid prototypes to validate demand, and when a full build is needed, we source and manage vetted engineers tailored to your budget.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6 text-xs text-[#425466] font-sans">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">Next.js 15 & React 19:</strong> Blazing fast web apps & APIs.</span>
+                  <span><strong className="text-[#0A2540]">Feasibility MVPs:</strong> Rapid prototypes to test demand & brainstorm.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">Linear-Grade UI/UX:</strong> World-class design systems.</span>
+                  <span><strong className="text-[#0A2540]">Operating SOPs:</strong> Day-1 commercial workflows & customer onboarding.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">Enterprise Security:</strong> Role-based auth, DB backups & SOC2 ready.</span>
+                  <span><strong className="text-[#0A2540]">Vetted Tech Sourcing:</strong> Finding & vetting developers within your budget.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">100% IP Ownership:</strong> Transferred entirely to your entity.</span>
+                  <span><strong className="text-[#0A2540]">100% IP Ownership:</strong> Transferred entirely to your entity from Day 1.</span>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Zero freelance headache</span>
+              <span className="text-xs font-semibold text-[#627D98]">Operations-first execution</span>
               <button
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#635BFF] hover:underline flex items-center gap-1"
