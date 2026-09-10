@@ -220,15 +220,15 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-3">
                 <Button
                   href="/studio"
                   variant="primary"
                   size="md"
-                  className="w-full font-semibold flex items-center justify-center gap-2 shadow-sm"
+                  rightIcon={<ArrowRight className="h-4 w-4" />}
+                  className="w-full font-semibold whitespace-nowrap shadow-sm"
                 >
-                  <span>Apply to Build with 1008</span>
-                  <ArrowRight className="h-4 w-4" />
+                  Apply to Build with 1008
                 </Button>
               </div>
             </div>
@@ -252,15 +252,15 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-3">
                 <Button
                   href="/network"
                   variant="secondary"
                   size="md"
-                  className="w-full font-semibold flex items-center justify-center gap-2"
+                  rightIcon={<Users className="h-4 w-4 text-[#627D98]" />}
+                  className="w-full font-semibold whitespace-nowrap"
                 >
-                  <span>Join Co-Founder Network</span>
-                  <Users className="h-4 w-4" />
+                  Join Co-Founder Network
                 </Button>
               </div>
             </div>
