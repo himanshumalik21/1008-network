@@ -171,7 +171,7 @@ export function HeroSection() {
         </div>
 
         {/* Revamped High-Impact Venture & Co-Investment Architecture Previewer */}
-        <div className="mt-14 max-w-6xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-3 sm:p-5 shadow-[0_20px_50px_-12px_rgba(10,37,64,0.08)] relative">
+        <div id="blueprint" className="mt-14 max-w-6xl mx-auto rounded-3xl bg-white border border-[#E6E8EB] p-3 sm:p-5 shadow-[0_20px_50px_-12px_rgba(10,37,64,0.08)] relative scroll-mt-28">
           {/* Header & Archetype Category Tabs */}
           <div className="space-y-4 pb-6 border-b border-[#E6E8EB]">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 text-left px-2 sm:px-3 pt-2">

@@ -2,7 +2,6 @@ import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
-import { StudioSprintTimeline } from "@/components/home/StudioSprintTimeline";
 import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { KnowledgeTeaser } from "@/components/home/KnowledgeTeaser";
 import { FAQSection } from "@/components/home/FAQSection";
@@ -21,7 +20,7 @@ export function generateMetadata() {
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* 1. Hero Section with Razor-Sharp Hook */}
+      {/* 1. Hero Section with Razor-Sharp Hook & Interactive Blueprint */}
       <HeroSection />
 
       {/* 2. The Venture Studio Advantage Bento Grid */}
@@ -30,10 +29,7 @@ export default function HomePage() {
       {/* 3. Direct Comparison (Why Agencies and Incubators Fail Domain Leaders) */}
       <ComparisonSection />
 
-      {/* 4. The 180-Day Build & Handover Blueprint */}
-      <StudioSprintTimeline />
-
-      {/* 5. Target Domain Archetypes */}
+      {/* 4. Target Domain Archetypes */}
       <PersonaMatrix />
 
       {/* 6. Tactical Operational Playbooks */}
