@@ -121,10 +121,11 @@ export function PersonaMatrix() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-7 flex flex-col justify-between hover:border-[#CBD5E1] transition-all duration-300 relative group shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]"
+                className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-7 flex flex-col justify-between hover:border-[#CBD5E1] hover:shadow-md transition-all duration-300 relative group shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)] h-full"
               >
-                <div>
-                  <div className="flex items-center justify-between gap-4 mb-4">
+                {/* Top Section: Header, Title & Scannable Bullets */}
+                <div className="space-y-4 flex-1">
+                  <div className="flex items-center justify-between gap-4">
                     <div className={`p-2.5 rounded-xl border ${item.iconBg}`}>
                       <Icon className="h-5 w-5" />
                     </div>
@@ -133,12 +134,12 @@ export function PersonaMatrix() {
                     </Badge>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0A2540] mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#0A2540]">
                     {item.title}
                   </h3>
 
                   {/* Scannable Bullet Points */}
-                  <div className="space-y-2 mb-5 text-xs text-[#425466]">
+                  <div className="space-y-2 text-xs text-[#425466]">
                     {item.bullets.map((b, bIdx) => (
                       <div key={bIdx} className="flex items-start gap-2">
                         <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0 mt-0.5" />
@@ -146,23 +147,26 @@ export function PersonaMatrix() {
                       </div>
                     ))}
                   </div>
-
-                  <div className="p-3 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-[11px] text-[#425466] mb-5">
-                    <strong className="text-[#0A2540] block mb-0.5">Use Cases:</strong>
-                    <span>{item.thesisExample}</span>
-                  </div>
                 </div>
 
-                <div className="pt-3 border-t border-[#E6E8EB]">
-                  <Button
-                    onClick={() => setModalOpen(true)}
-                    variant="secondary"
-                    size="sm"
-                    className="w-full justify-between font-semibold text-xs"
-                    rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
-                  >
-                    Build in This Sector
-                  </Button>
+                {/* Bottom Section: Always Aligned Use Cases Box & Action Button */}
+                <div className="mt-6 pt-2 space-y-4">
+                  <div className="p-3.5 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-[11px] text-[#425466] min-h-[72px] flex flex-col justify-center">
+                    <strong className="text-[#0A2540] block mb-0.5 font-bold">Use Cases:</strong>
+                    <span className="leading-relaxed">{item.thesisExample}</span>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#E6E8EB]">
+                    <Button
+                      onClick={() => setModalOpen(true)}
+                      variant="secondary"
+                      size="sm"
+                      className="w-full justify-between font-semibold text-xs h-9 shadow-xs"
+                      rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
+                    >
+                      Build in This Sector
+                    </Button>
+                  </div>
                 </div>
               </div>
             );
