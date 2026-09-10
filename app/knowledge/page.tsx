@@ -105,54 +105,68 @@ export default function KnowledgePage() {
         </div>
 
         {/* Resources Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredResources.map((item) => (
-            <Link
-              key={item.slug}
-              href={`/knowledge/${item.slug}`}
-              className="rounded-2xl bg-surface-50 border border-border p-6 flex flex-col justify-between hover:border-amber-500/50 hover:bg-surface-100 transition-all duration-300 group shadow-xs"
-            >
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <Badge variant="slate" size="sm">
-                    {item.category.replace("_", " ").toUpperCase()}
-                  </Badge>
-                  <span className="text-[11px] font-mono text-muted-foreground flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> {item.readOrWatchTime}
+        {filteredResources.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredResources.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/knowledge/${item.slug}`}
+                className="rounded-2xl bg-white border border-[#E6E8EB] p-6 flex flex-col justify-between hover:border-[#635BFF] hover:shadow-md transition-all duration-300 group shadow-xs"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <Badge variant="slate" size="sm">
+                      {item.category.replace("_", " ").toUpperCase()}
+                    </Badge>
+                    <span className="text-[11px] text-[#627D98] flex items-center gap-1 font-medium">
+                      <Clock className="h-3 w-3" /> {item.readOrWatchTime}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-[#0A2540] mb-2 group-hover:text-[#635BFF] transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-xs text-[#425466] leading-relaxed line-clamp-3 mb-4">
+                    {item.summary}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {item.sectorTags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="text-[10px] px-2 py-0.5 rounded bg-[#F6F9FC] text-[#627D98] border border-[#E6E8EB] font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#627D98]">
+                  <span className="text-[11px] truncate max-w-[180px] font-medium">
+                    {item.authorOrSource}
+                  </span>
+                  <span className="text-[#0A2540] group-hover:text-[#635BFF] group-hover:translate-x-1 transition-transform flex items-center gap-1 font-semibold">
+                    Read <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>
-
-                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-amber-500 transition-colors leading-snug">
-                  {item.title}
-                </h3>
-
-                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3 mb-4">
-                  {item.summary}
-                </p>
-
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {item.sectorTags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-[10px] font-mono px-2 py-0.5 rounded bg-surface-100 text-muted-foreground border border-border"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-border flex items-center justify-between text-xs text-muted-foreground">
-                <span className="font-mono text-[11px] truncate max-w-[180px]">
-                  {item.authorOrSource}
-                </span>
-                <span className="text-foreground group-hover:translate-x-1 transition-transform flex items-center gap-1 font-semibold">
-                  Read <ArrowRight className="h-3 w-3" />
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="py-20 text-center rounded-2xl bg-white border border-[#E6E8EB] p-8 shadow-xs max-w-2xl mx-auto space-y-3">
+            <div className="w-12 h-12 rounded-xl bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF] flex items-center justify-center mx-auto mb-2">
+              <BookOpen className="h-6 w-6" />
+            </div>
+            <h3 className="text-lg font-bold text-[#0A2540]">
+              Fresh Playbooks Coming Soon
+            </h3>
+            <p className="text-xs sm:text-sm text-[#425466] max-w-md mx-auto leading-relaxed">
+              Our venture architecture team is releasing new operational briefs, financial templates, and execution case studies. Check back shortly.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
