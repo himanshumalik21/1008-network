@@ -23,6 +23,9 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { FounderCashDrainGraphic } from "@/components/knowledge/FounderCashDrainGraphic";
+import { TurnaroundPlaybookPhases } from "@/components/knowledge/TurnaroundPlaybookPhases";
+import { StructuralTrapsSection } from "@/components/knowledge/StructuralTrapsSection";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -41,12 +44,10 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
   const renderInline = (text: string): React.ReactNode => {
     if (!text) return null;
 
-    // Replace bold **text** and code `code`
     const parts: React.ReactNode[] = [];
     let current = text;
     let key = 0;
 
-    // Regex to find **bold**, `code`, and [link](url)
     const regex = /(\*\*([^*]+)\*\*|`([^`]+)`|\[([^\]]+)\]\(([^)]+)\))/g;
     let lastIndex = 0;
     let match: RegExpExecArray | null;
@@ -121,6 +122,43 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
         // Check for Heading 2 (## Heading)
         if (trimmed.startsWith("## ")) {
           const headingText = trimmed.replace("## ", "").trim();
+
+          // If heading is "The Three Structural Traps That Break Early Businesses", render heading + dedicated visual traps grid
+          if (headingText.includes("The Three Structural Traps")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  When a business stalls, founders often believe they need a bigger marketing budget or a fresh round of angel investment. In reality, the breakdown is almost always structural:
+                </p>
+                <StructuralTrapsSection />
+              </div>
+            );
+          }
+
+          // If heading is "The 1008 Zero-Retainer Playbook: How to Build with Venture Discipline"
+          if (headingText.includes("The 1008 Zero-Retainer Playbook")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  Whether you are launching your first company or restructuring a business under pressure, you must transition from <em>passive spending</em> to <em>active co-building</em>.
+                </p>
+                <TurnaroundPlaybookPhases />
+              </div>
+            );
+          }
+
           return (
             <div key={idx} className="pt-6 pb-2 border-b border-[#E6E8EB]">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
@@ -133,6 +171,15 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
 
         // Check for Heading 3 (### Heading)
         if (trimmed.startsWith("### ")) {
+          // If we already rendered the structural traps via StructuralTrapsSection, skip individual subheadings 1., 2., 3.
+          if (
+            trimmed.includes("The \"Agency & Consultant\" Retainer Sinkhole") ||
+            trimmed.includes("The 50/50 Handshake") ||
+            trimmed.includes("Operational Blindness: The \"Spreadsheet & WhatsApp\"")
+          ) {
+            return null; // already rendered cleanly in StructuralTrapsSection
+          }
+
           const subheadingText = trimmed.replace("### ", "").trim();
           return (
             <div key={idx} className="pt-4">
@@ -147,19 +194,28 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
         // Check for Code Block (``` ... ```)
         if (trimmed.startsWith("```") && trimmed.endsWith("```")) {
           const codeLines = trimmed.replace(/^```[a-z]*\n?/, "").replace(/\n?```$/, "");
+
+          // Check if this is the Early Founder Cash Drain Diagram -> Render bespoke graphic!
+          if (codeLines.includes("THE EARLY FOUNDER CASH DRAIN")) {
+            return <FounderCashDrainGraphic key={idx} />;
+          }
+
+          // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by TurnaroundPlaybookPhases
+          if (
+            (codeLines.includes("PHASE 1") && codeLines.includes("PHASE 2")) ||
+            codeLines.includes("Phase 1: Immediate Cash Triage")
+          ) {
+            return null; // already rendered via TurnaroundPlaybookPhases
+          }
+
           const currentCodeIdx = codeBlockCount++;
           const isCopied = copiedCodeIndex === currentCodeIdx;
-
-          // Check if this is the Early Founder Cash Drain Diagram
-          const isCashDrain = codeLines.includes("THE EARLY FOUNDER CASH DRAIN");
-          const isPhasesBox = codeLines.includes("PHASE 1") && codeLines.includes("PHASE 2");
 
           return (
             <div
               key={idx}
               className="my-6 rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0A0F1D] text-[#E2E8F0] shadow-xl"
             >
-              {/* Terminal Title Bar */}
               <div className="bg-[#111827] px-4 py-3 border-b border-[#1E293B] flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5">
@@ -169,11 +225,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                   </div>
                   <span className="text-xs font-mono font-semibold text-[#94A3B8] ml-2 flex items-center gap-1.5">
                     <Terminal className="h-3.5 w-3.5 text-[#635BFF]" />
-                    {isCashDrain
-                      ? "Architecture: Founder Runway Burn Model"
-                      : isPhasesBox
-                      ? "Operational Roadmap: 4-Phase Turnaround Sequence"
-                      : "Execution Protocol / Flow Diagram"}
+                    Execution Protocol
                   </span>
                 </div>
                 <button
@@ -195,20 +247,9 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                 </button>
               </div>
 
-              {/* Code/Diagram Content */}
               <div className="p-5 sm:p-6 overflow-x-auto font-mono text-xs sm:text-sm leading-relaxed text-[#CBD5E1] bg-[#0A0F1D]/90">
                 <pre className="whitespace-pre font-mono">{codeLines}</pre>
               </div>
-
-              {/* Footer insight */}
-              {isCashDrain && (
-                <div className="bg-[#111827]/80 px-4 py-2.5 border-t border-[#1E293B] text-[11px] text-[#F87171] font-mono flex items-center gap-2">
-                  <TrendingDown className="h-3.5 w-3.5 shrink-0" />
-                  <span>
-                    Core Insight: 82% of early-stage capital goes to zero-risk third parties instead of product distribution.
-                  </span>
-                </div>
-              )}
             </div>
           );
         }
@@ -301,6 +342,18 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
               </div>
             );
           }
+        }
+
+        // If block is already captured inside the traps section text, skip duplicate rendering
+        if (
+          trimmed.startsWith("When first-time founders lack specific technical") ||
+          trimmed.startsWith("Two colleagues or friends decide to start up") ||
+          trimmed.startsWith("Eight months later, when the initial excitement fades") ||
+          trimmed.startsWith("The active founder is left doing 100%") ||
+          trimmed.startsWith("When customer orders, vendor deliveries") ||
+          trimmed.startsWith("Without an integrated digital source of truth")
+        ) {
+          return null;
         }
 
         // Check for Bullet List (* or -)
