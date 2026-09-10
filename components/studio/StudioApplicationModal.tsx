@@ -102,8 +102,8 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           setStep(1);
         }
       }}
-      title="Apply to Build With 1008 Network"
-      subtitle="The 180-Day Venture Studio & Execution Partnership"
+      title="Pitch Your Venture Vision"
+      subtitle="1008 Network Turnkey Operations & Syndicate Partnership"
       maxWidth="xl"
     >
       {status === "success" ? (
@@ -111,14 +111,14 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           <div className="mx-auto w-12 h-12 rounded-full bg-[#ECFDF5] text-[#059669] flex items-center justify-center border border-[#A7F3D0]">
             <CheckCircle2 className="h-6 w-6" />
           </div>
-          <h4 className="text-xl font-bold text-[#0A2540]">Application Received</h4>
+          <h4 className="text-xl font-bold text-[#0A2540]">Venture Pitch Received</h4>
           <p className="text-sm text-[#425466] max-w-md mx-auto leading-relaxed">
             {message}
           </p>
           <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-xs text-[#425466] max-w-md mx-auto text-left font-sans space-y-1">
             <div className="text-[#0A2540] font-semibold mb-1">What Happens Next:</div>
-            <div>1. Confidential review by 1008 Network Venture Partners under NDA.</div>
-            <div>2. 30-min Problem Diagnostic Call scheduled via email within 48 hours.</div>
+            <div>1. Confidential review by 1008 Network Venture Partners under mutual NDA.</div>
+            <div>2. 30-min Operational Diagnostic Call scheduled within 48 business hours.</div>
           </div>
           <div className="pt-4">
             <Button
@@ -138,15 +138,15 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           {/* Step Progress Pills */}
           <div className="flex items-center justify-between gap-2 pb-2 border-b border-[#E6E8EB] text-xs font-semibold">
             <span className={step >= 1 ? "text-[#635BFF]" : "text-[#8898AA]"}>
-              1. Profile & Domain
+              1. Founder & Sector
             </span>
             <span className="text-[#CBD5E1]">→</span>
             <span className={step >= 2 ? "text-[#635BFF]" : "text-[#8898AA]"}>
-              2. Problem Thesis
+              2. Business Thesis
             </span>
             <span className="text-[#CBD5E1]">→</span>
             <span className={step === 3 ? "text-[#635BFF]" : "text-[#8898AA]"}>
-              3. Execution Readiness
+              3. Operational Readiness
             </span>
           </div>
 
@@ -162,7 +162,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 />
                 <Input
-                  label="Corporate / Work Email"
+                  label="Contact / Work Email"
                   required
                   type="email"
                   placeholder="vikram@domain.com"
@@ -180,7 +180,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
                 <Input
-                  label="LinkedIn Profile URL"
+                  label="LinkedIn Profile or Company Website"
                   required
                   placeholder="linkedin.com/in/vikramsharma"
                   value={formData.linkedinUrl}
@@ -190,24 +190,24 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Input
-                  label="Current / Recent Role"
+                  label="Current Background / Role"
                   required
-                  placeholder="e.g. VP Supply Chain"
+                  placeholder="e.g. Founder, Ops Head, Plant Mgr"
                   value={formData.currentRole}
                   onChange={(e) => setFormData({ ...formData, currentRole: e.target.value })}
                 />
                 <Input
-                  label="Company"
+                  label="Current Venture / Company"
                   required
-                  placeholder="e.g. Fortis / Marico"
+                  placeholder="e.g. New Venture / Existing Firm"
                   value={formData.currentCompany}
                   onChange={(e) => setFormData({ ...formData, currentCompany: e.target.value })}
                 />
                 <Input
-                  label="Years of Experience"
+                  label="Years in Industry"
                   required
                   type="number"
-                  min={3}
+                  min={1}
                   max={40}
                   value={formData.yearsOfExperience}
                   onChange={(e) => setFormData({ ...formData, yearsOfExperience: parseInt(e.target.value) || 0 })}
@@ -217,7 +217,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5 text-left">
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Primary Domain / Sector <span className="text-[#F4511E]">*</span>
+                    Primary Sector <span className="text-[#F4511E]">*</span>
                   </label>
                   <select
                     className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none shadow-xs"
@@ -234,7 +234,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
 
                 <div className="space-y-1.5 text-left">
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Primary City / Hub <span className="text-[#F4511E]">*</span>
+                    Primary Target Location / City <span className="text-[#F4511E]">*</span>
                   </label>
                   <select
                     className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none shadow-xs"
@@ -256,25 +256,25 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           {step === 2 && (
             <div className="space-y-4 animate-in fade-in duration-150">
               <Textarea
-                label="The Problem Thesis (What structural inefficiency have you lived through?)"
+                label="The Business Vision & Problem Thesis (What are you building or rebooting?)"
                 required
-                placeholder="Describe the exact financial loss or operational bottleneck your target customer experiences today..."
+                placeholder="Describe your business idea, the exact customer pain point, or the operational bottlenecks you need solved..."
                 value={formData.problemThesis}
                 onChange={(e) => setFormData({ ...formData, problemThesis: e.target.value })}
-                hint="Be specific. For example: Tier-2 auto suppliers lose ₹15L/month on broken precision jigs."
+                hint="Be candid. E.g.: Setting up a 10,000 sq ft precision auto plant in Pune; or rebooting an apparel brand struggling with supply chain."
               />
 
               <Input
-                label="Target Customer Profile"
+                label="Target Customers / Market Demographic"
                 required
-                placeholder="e.g. 100+ Bed Hospitals, Tier-2 Auto Machine Shops, D2C Brands with ₹5Cr GMV"
+                placeholder="e.g. Tier-2 OEMs, Regional Hospitals, B2B Wholesalers, Urban Direct-to-Consumer"
                 value={formData.targetCustomer}
                 onChange={(e) => setFormData({ ...formData, targetCustomer: e.target.value })}
               />
 
               <Textarea
-                label="Your Unfair Domain Advantage"
-                placeholder="e.g. Access to 40 plant heads, 15 years running biopharma procurement, proprietary distribution agreements..."
+                label="Your Strategic Advantage or Current Groundwork"
+                placeholder="e.g. Signed supplier intent, 15 years domain expertise, existing customer relationships, available land/capital..."
                 value={formData.unfairAdvantage}
                 onChange={(e) => setFormData({ ...formData, unfairAdvantage: e.target.value })}
               />
@@ -286,7 +286,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
             <div className="space-y-4 animate-in fade-in duration-150">
               <div className="space-y-1.5 text-left">
                 <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                  Current Transition & Time Commitment
+                  Venture Stage & Focus
                 </label>
                 <select
                   className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none shadow-xs"
@@ -294,13 +294,13 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                   onChange={(e) => setFormData({ ...formData, timeCommitment: e.target.value as any })}
                 >
                   <option value="Exploring High Conviction">
-                    Confidential Exploration (Planning transition over 3–6 months)
+                    Budding Entrepreneur (New venture setup / pre-launch)
                   </option>
                   <option value="Transitioning over 3-6 Months">
-                    In Notice Period / Active Career Transition
+                    Struggling / Stalled Business (Seeking operational turnaround & reboot)
                   </option>
                   <option value="Full-Time Immediate">
-                    Full-Time Ready from Day 1
+                    Active Operating Founder (Seeking turnkey operational scaling & syndicate capital)
                   </option>
                 </select>
               </div>
@@ -308,10 +308,10 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
               <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 text-xs">
                 <div className="flex items-center gap-1.5 text-[#059669] font-bold">
                   <ShieldCheck className="h-4 w-4" />
-                  <span>Strict NDA & Zero Consulting Invoices Guarantee</span>
+                  <span>Strict NDA & Zero Consulting Retainer Guarantee</span>
                 </div>
                 <p className="text-[#425466] leading-relaxed font-sans">
-                  All discussions and problem theses submitted to 1008 Network are kept strictly confidential under mutual non-disclosure. 1008 Network invests execution muscle for equity upside.
+                  All discussions and business theses submitted to 1008 Network are protected under a mutual Non-Disclosure Agreement. We invest ground execution muscle and syndicate capital for shared equity upside.
                 </p>
               </div>
 
@@ -356,7 +356,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                 isLoading={status === "submitting"}
                 rightIcon={<Sparkles className="h-4 w-4" />}
               >
-                Submit Studio Application
+                Submit Venture Pitch
               </Button>
             )}
           </div>

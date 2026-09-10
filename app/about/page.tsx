@@ -52,7 +52,7 @@ export default function AboutPage() {
             The 1008 Network Operational Philosophy
           </h2>
           <p className="text-sm text-[#425466] leading-relaxed">
-            We talk with the founder, understand their vision, and put that vision to work. The founder handles the financial capital, and 1008 Network manages turnkey operations (real estate, facility setup, machinery, licensing, manpower, tech, and launch marketing). We only tie up with businesses where we share strong mutual conviction for long-term growth and shared equity upside.
+            We partner with budding entrepreneurs and business owners whose ventures hold exceptional conviction. The founder brings the industry vision and core ambition, and 1008 Network drives the complete turnkey operational engine (site scouting, facility commissioning, OEM machinery, permits, team recruitment, pragmatic tech, and commercial sales). We connect vetted ventures with our active investor syndicate and align 100% of our incentives through shared equity and long-term milestone upside.
           </p>
         </div>
 

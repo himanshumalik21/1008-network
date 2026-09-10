@@ -51,25 +51,25 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Network // End-to-End Business Operations & Venture Studio
+              1008 Network // Turnkey Venture & Operations Partner
             </Badge>
             <span className="text-xs font-semibold text-[#627D98] hidden sm:inline-block">
-              Manufacturing • Healthcare • Hotels • Schools • E-Commerce • Tech
+              Manufacturing • Healthcare • Hospitality • Retail • Tech • Turnarounds
             </span>
           </div>
 
           {/* Primary Razor-Sharp Hook Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            Pitch your business idea.{" "}
+            Transform your ambition into a running enterprise.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We execute operations & connect you with investors.
+              We execute the operations. We connect you with capital.
             </span>
           </h1>
 
           {/* Core Subtitle Positioning */}
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Like <em>Shark Tank</em> with full-stack execution: You bring the idea. <strong>1008 Network runs end-to-end turnkey operations</strong>—from real estate scouting, plant setup, machinery procurement, and registrations to tech, staffing, and initial sales—and <strong>persuades our investor pool to fund your venture</strong>.
+            Building a business shouldn&apos;t mean fighting the operational battle alone. Whether you are an aspiring founder setting up your first manufacturing plant, an operator launching a healthcare or hospitality facility, a creator building a consumer brand, or an owner rebooting a stalled business—<strong>1008 Network turns your vision into a living, revenue-generating reality</strong>. We manage site acquisition, facility setup, machinery procurement, regulatory clearances, hiring, tech systems, and launch marketing—while championing your venture to our syndicate of active investors.
           </p>
 
           {/* Dual High-Conversion CTAs */}
@@ -81,7 +81,7 @@ export function HeroSection() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold"
             >
-              Pitch Your Business Idea
+              Pitch Your Business Vision
             </Button>
             <Button
               href="/capital"
@@ -89,7 +89,7 @@ export function HeroSection() {
               variant="secondary"
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Invest Capital With Us
+              Explore Capital & Syndicates
             </Button>
           </div>
 
@@ -97,30 +97,30 @@ export function HeroSection() {
           <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-4xl mx-auto text-left">
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#00A389] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Briefcase className="h-3.5 w-3.5" /> Turnkey Setup
+                <Briefcase className="h-3.5 w-3.5" /> Turnkey Ground Execution
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Real estate scouting, plant setup, machinery, licensing & legal paperwork.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Industrial land scouting, plant commissioning, equipment sourcing & statutory clearances.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#635BFF] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Shield className="h-3.5 w-3.5" /> Investor Pool & Capital
+                <Shield className="h-3.5 w-3.5" /> Investor Syndicate Access
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">We connect and pitch your validated venture to our active pool of investors.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">We present your de-risked venture to our curated pool of angel networks and family offices.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#059669] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Code2 className="h-3.5 w-3.5" /> Tech & Online Stack
+                <Code2 className="h-3.5 w-3.5" /> Pragmatic Digital Engine
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Feasibility prototypes, internal systems, and vetted tech talent tailored to budget.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Feasibility prototypes, core operational ERPs, and budget-aligned engineering talent.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#F4511E] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Sparkles className="h-3.5 w-3.5" /> GTM & First Customers
+                <Sparkles className="h-3.5 w-3.5" /> Commercial Momentum
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Brand positioning, launch campaigns, distributor outreach, and initial sales revenue.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Key operational hiring, distribution channel development, and inaugural customer revenue.</p>
             </div>
           </div>
         </div>

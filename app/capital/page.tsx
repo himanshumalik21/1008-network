@@ -469,12 +469,12 @@ export default function CapitalPage() {
           {/* Bottom Founder Cross-Link Banner */}
           <div className="mt-16 p-8 sm:p-10 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] flex flex-col lg:flex-row items-center justify-between gap-6 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
             <div className="space-y-2 text-center lg:text-left">
-              <Badge variant="indigo" size="sm">For Entrepreneurs & Business Owners</Badge>
+              <Badge variant="indigo" size="sm">For Aspiring Founders & Business Owners</Badge>
               <h3 className="text-2xl font-bold text-[#0A2540] font-sans">
-                Have a Business Idea? Pitch to 1008 Network Like Shark Tank
+                Have a High-Conviction Business Vision to Pitch?
               </h3>
               <p className="text-sm text-[#425466] max-w-2xl">
-                Pitch your concept. If selected, 1008 Network provides complete turnkey execution (real estate, plant setup, machinery, tech & marketing) and presents your venture to our syndicate pool of investors for capital.
+                Present your thesis to 1008 Network. When we partner, we deploy our full-stack operational engine—managing physical commissioning, permits, machinery, hiring, and lean tech—while syndicating investment from our curated pool of angel and institutional allocators.
               </p>
             </div>
             <Button
@@ -484,7 +484,7 @@ export default function CapitalPage() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="shrink-0 font-semibold px-6"
             >
-              Pitch Your Business Idea
+              Pitch Your Venture Thesis
             </Button>
           </div>
         </div>

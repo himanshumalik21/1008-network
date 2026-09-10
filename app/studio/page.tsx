@@ -64,20 +64,20 @@ export default function StudioPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Network // End-to-End Business Operations
+              1008 Network // Turnkey Operations & Venture Studio
             </Badge>
-            <span className="text-xs font-semibold text-[#627D98]">180-Day Turnkey Execution Engine</span>
+            <span className="text-xs font-semibold text-[#627D98]">180-Day Venture Execution Engine</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            You bring the vision & capital.{" "}
+            You bring the vision & industry drive.{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We handle end-to-end operations to make it happen.
+              We build the operational machine to make it thrive.
             </span>
           </h1>
 
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Whether starting a manufacturing plant, hospital, school, hotel, e-commerce brand, or tech startup—1008 Network puts your vision to work. We scout real estate, set up facilities & machinery, clear paperwork, hire manpower, build tech, and land your first customers for <strong className="text-[#0A2540]">shared equity upside</strong>.
+            Whether establishing a manufacturing line, founding a hospital or clinic, setting up a boutique resort, launching a consumer product, or engineering a turnaround for a troubled enterprise—1008 Network stands shoulder-to-shoulder with you. We execute physical commissioning, machinery procurement, statutory clearances, hiring, digital architecture, and commercial GTM for <strong className="text-[#0A2540]">shared equity upside</strong>.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
@@ -88,15 +88,15 @@ export default function StudioPage() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto font-semibold px-8"
             >
-              Partner With 1008 Network
+              Pitch Your Venture Vision
             </Button>
             <Button
-              href="/contact"
+              href="/capital"
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto font-semibold"
             >
-              Contact Operations Team
+              Explore Investor Syndicates
             </Button>
           </div>
         </div>

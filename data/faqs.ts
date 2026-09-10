@@ -2,43 +2,43 @@ import { FAQItem } from "@/lib/types";
 
 export const faqs: FAQItem[] = [
   {
-    question: "What types of businesses does 1008 Network partner with?",
-    answer: "1008 Network supports virtually all business sectors across India: Manufacturing plants & industrial units, Healthcare (hospitals, clinics & diagnostic chains), Education (schools, colleges & skill academies), Hospitality (hotels, resorts & restaurant chains), Retail & D2C (clothing lines, electronics & consumer brands), Trading & wholesale distribution, as well as Tech ventures and stalled businesses looking to reboot.",
+    question: "What kinds of businesses can partner with 1008 Network?",
+    answer: "1008 Network partners across virtually all tangible and digital business sectors in India. This includes Industrial & Manufacturing units, Healthcare (multi-specialty clinics, hospitals, diagnostic labs), Educational Institutions (schools, academies, skill centers), Hospitality (boutique hotels, resorts, premium F&B chains), Consumer Brands & D2C (apparel, electronics, packaged goods), Wholesale Distribution, as well as Tech ventures and stalled companies seeking an operational turnaround.",
     category: "general",
   },
   {
-    question: "How does the founder-investor vs. operations partnership work?",
-    answer: "We talk with the founder to understand their vision and put that vision to work. All financial capital and investment is handled by the founder, while 1008 Network drives the entire end-to-end operations (real estate scouting, plant setup, machinery procurement, registration paperwork, manpower hiring, tech stack, and launch marketing). We only tie up with businesses where we see strong mutual potential for shared equity and long-term upside.",
+    question: "How does the founder partnership and investor syndicate model work?",
+    answer: "You pitch your business vision to 1008 Network. If there is mutual conviction, we step in as your full-stack operational co-builder: we manage on-the-ground setup (site scouting, plant setup, machinery, statutory permits, staffing, and tech) and introduce your vetted venture to our active pool of angel investors and family offices for co-investment capital. We align our incentives through shared equity and milestone upside—never through billable consulting retainers.",
     category: "studio",
   },
   {
-    question: "What does 1008 Network handle for a manufacturing or physical facility setup?",
-    answer: "For manufacturing and physical facilities, we handle turnkey execution: scouting and acquiring suitable industrial land or commercial real estate, managing civil and structural build-out, procuring and installing machinery, clearing all governmental registrations (GST, pollution control, municipal & factory licenses), hiring skilled shop-floor/medical/hospitality staff, implementing operational SOPs, and running go-to-market marketing to land your first customers.",
+    question: "What does 1008 Network execute for physical plants and commercial facilities?",
+    answer: "We handle complete turnkey commissioning: identifying and negotiating strategic commercial land or industrial property, supervising civil works and facility build-outs, procuring OEM machinery at transparent market prices, clearing all statutory registrations (state pollution clearances, municipal licenses, factory permits, GST), hiring qualified shop-floor/clinical/hospitality personnel, and executing go-to-market campaigns to land opening customer revenue.",
     category: "studio",
   },
   {
-    question: "How does 1008 Network handle technology and software for our business?",
-    answer: "We are operations-first. We build rapid digital prototypes to test business feasibility and brainstorm concepts. For custom tech requirements (ERPs, inventory systems, booking engines, or customer portals), we design the system architecture and source/vet qualified engineering teams tailored specifically to your budget.",
+    question: "How do you handle software, ERPs, and digital infrastructure?",
+    answer: "We focus on pragmatic, high-ROI engineering rather than bloated agency development. We build rapid feasibility MVPs to test economic hypotheses, deploy lightweight internal ERPs and inventory/booking systems, and build conversion-focused digital storefronts. When full-time engineers are required, we source and vet technical talent matched strictly to your budget.",
     category: "studio",
   },
   {
-    question: "How does 1008 Network take equity, and do I have to pay any upfront consulting fees?",
-    answer: "For ventures accepted into the 1008 Network partnership, we partner primarily on a shared equity and milestone upside basis. We do not operate on an expensive hourly fee-for-service consulting model. Our incentives are 100% aligned with the long-term commercial success and enterprise valuation of the business.",
+    question: "How does 1008 Network structure equity, and are there any upfront consulting fees?",
+    answer: "For ventures accepted into the 1008 Network studio, we operate primarily on a shared equity and milestone-based upside model. We do not charge expensive monthly agency retainers or hourly consulting bills. Our team only wins when your enterprise achieves sustained operational profitability and long-term enterprise value.",
     category: "equity",
   },
   {
-    question: "Who owns the Intellectual Property (IP), land, machinery, and assets?",
-    answer: "100% of all real estate leases, physical plant machinery, intellectual property, software code, customer databases, trademarks, and corporate assets belong exclusively to the business entity owned by the founder. 1008 Network signs full assignment and non-disclosure agreements from Day 1.",
+    question: "Who owns the intellectual property, real estate leases, and plant machinery?",
+    answer: "100% of all real estate leases, factory machinery, digital codebases, brand trademarks, customer data, and operational assets belong exclusively to the founder's corporate entity. 1008 Network executes full IP assignment and non-disclosure documentation on Day 1.",
     category: "equity",
   },
   {
-    question: "What is the 180-day 'Build With You. Not Forever For You' philosophy?",
-    answer: "We believe an execution partner should make businesses independent and self-sustaining, not permanently dependent. Over a structured 180-day cycle, 1008 Network sets up the physical infrastructure, recruits permanent operational management and staff, establishes audited SOPs, launches marketing, and hands over complete operational autonomy to the founder.",
+    question: "What is the 180-day 'Build With You. Not Forever For You' principle?",
+    answer: "A true partner builds for your long-term independence, not for perpetual vendor dependency. Over a rigorous 180-day cycle, 1008 Network builds the physical and digital infrastructure, institutes standard operating procedures (SOPs), recruits permanent on-site managers, activates initial commercial revenue, and hands over complete operational sovereignty to the founder.",
     category: "studio",
   },
   {
-    question: "Can I discuss an idea or business reboot confidentially under NDA?",
-    answer: "Yes. Every initial discussion, business thesis, and financial model is covered under a strict mutual Non-Disclosure Agreement (NDA). We evaluate operational feasibility confidentially before any public or commercial commitments are made.",
+    question: "Can I discuss an early concept or a confidential business turnaround under NDA?",
+    answer: "Absolutely. Every preliminary discussion, business model, and operational diagnostic is protected by a mutual Non-Disclosure Agreement (NDA). We evaluate operational viability with strict confidentiality before any public announcements or formal partnerships are signed.",
     category: "general",
   }
 ];

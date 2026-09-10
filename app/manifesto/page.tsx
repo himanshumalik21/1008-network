@@ -25,34 +25,34 @@ export default function ManifestoPage() {
         <div className="rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] p-6 sm:p-10 space-y-8 text-sm sm:text-base text-[#425466] leading-relaxed font-sans shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
           <div className="space-y-4">
             <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-              1. The Myth of the Unprepared Founder
+              1. The Solitary Burden of the Indian Entrepreneur
             </h2>
             <p>
-              For the last decade, venture capital in India celebrated speed over substance: consumer apps burning capital on customer acquisition, buzzwords without unit economics, and shallow solutions attempting to digitize supply chains without real operational grounding.
+              Starting or running a business in India is an act of immense courage. Yet, too often, ambitious builders find themselves trapped in isolation: navigating bureaucratic licensing mazes, negotiating with unscrupulous contractors, burning through personal life savings on billable agency retainers, or watching operational bottlenecks strangle a promising venture.
             </p>
             <p>
-              Real businesses are not built on hype. They are built on understanding the unwritten rules of enterprise procurement, the nuances of GST tax reconciliation, the realities of shop-floor labor, and the distribution dynamics of local supply chains.
+              Durable enterprises are not built on pitch deck slogans or vanity metrics. They are forged through ground-level operational mastery: understanding factory shop-floor ergonomics, supply chain credit cycles, statutory zoning clearances, talent retention, and customer unit economics.
             </p>
           </div>
 
           <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
             <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-              2. The Execution Bottleneck
+              2. The Failure of Traditional Intermediaries
             </h2>
             <p>
-              Whether starting a new business or turning around a stalled venture, founders face the same friction: overpaying external agencies with zero skin in the game, hiring too fast without validated workflows, and building fragile software before verifying operational demand.
+              When founders seek support, they are met with broken models: consulting firms that sell expensive slide decks without setting foot on the ground; agencies that profit from endless hourly invoices regardless of outcomes; and incubators that trade equity for lecture sessions without providing physical build or operational muscle.
             </p>
           </div>
 
           <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
             <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-              3. The 1008 Network Thesis: Skin in the Game
+              3. The 1008 Network Covenant: Shared Risk, Turnkey Execution
             </h2>
             <p>
-              1008 Network was built to bridge this precise chasm. We do not charge hourly consulting fees. We do not sell slide decks.
+              1008 Network was created to stand shoulder-to-shoulder with ambitious builders. We are not external advisors; we are full-stack operational co-builders with true skin in the game.
             </p>
             <p>
-              We bring 0-to-1 operational architecture, rapid feasibility prototypes, vetted talent sourcing, and commercial systems for shared equity upside. We build with you through a structured 180-day framework, stabilize the business, and transition full operational autonomy back to you.
+              Whether commissioning an industrial factory, setting up a specialized hospital, scaling a retail brand, or turning around a distressed company—we manage physical setup, machinery procurement, statutory compliance, core hiring, lean tech, and go-to-market execution. We present vetted ventures to our syndicate pool of active investors, and work across 180 disciplined days to graduate each business to complete, profitable autonomy.
             </p>
           </div>
 

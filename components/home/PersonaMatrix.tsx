@@ -19,63 +19,63 @@ export function PersonaMatrix() {
   const domains = [
     {
       icon: Briefcase,
-      badge: "Manufacturing & Industrial",
+      badge: "Industrial & Manufacturing",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Manufacturing Plants & Industrial Units",
+      title: "Manufacturing Plants & Assembly Lines",
       description:
-        "Looking to set up a new production or assembly line? We scout industrial land, manage plant civil setup, procure machinery, clear regulatory registrations, hire plant manpower, and set up the supply chain.",
-      thesisExample: "Auto-ancillaries, precision tooling, packaging plants, chemicals, food processing & electronics fabrication.",
+        "Passionate about setting up a production facility but intimidated by industrial zoning, machinery vendors, or plant licensing? We handle strategic land acquisition, OEM equipment procurement, factory civil works, pollution clearances, and floor staffing.",
+      thesisExample: "Auto-components, precision fabrication, packaging lines, chemical processing & electronics assembly.",
     },
     {
       icon: TrendingUp,
       badge: "Healthcare & Institutions",
       badgeVariant: "emerald" as const,
       iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
-      title: "Hospitals, Clinics, Schools & Academies",
+      title: "Hospitals, Clinics & Educational Hubs",
       description:
-        "Building a hospital, specialized diagnostic center, private school, or skill institute? We handle facility scouting, medical/lab equipment sourcing, licensing & compliance, management tech, and staff hiring.",
-      thesisExample: "Multi-specialty clinics, diagnostic chains, K-12 schools, vocational academies & healthcare hubs.",
+        "Building a multi-specialty clinic, diagnostic chain, school, or skill academy? We take care of commercial real estate scouting, medical/lab equipment leasing, regulatory health/education compliance, management tech, and medical/academic staffing.",
+      thesisExample: "Specialty day-care surgery, diagnostic networks, K-12 private institutions & vocational academies.",
     },
     {
       icon: Sparkles,
-      badge: "Hospitality & Retail",
+      badge: "Hospitality & Commercial Spaces",
       badgeVariant: "cyan" as const,
       iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
-      title: "Hotels, Resorts, Restaurants & Commercial Real Estate",
+      title: "Hotels, Resorts & Food & Beverage Networks",
       description:
-        "Launching a boutique hotel, restaurant chain, or commercial venue? We manage site acquisition, interior & kitchen build-out, booking software, hospitality staff recruitment, and opening marketing.",
-      thesisExample: "Boutique hotels, cloud kitchen networks, wellness resorts, and premium F&B retail formats.",
+        "Envisioning a boutique resort, hotel property, or specialty restaurant chain? We execute site location diligence, interior and kitchen commissioning, municipal and liquor licensing, property management tech, and hospitality staff onboarding.",
+      thesisExample: "Boutique heritage retreats, cloud kitchen clusters, lifestyle cafes & experiential hospitality.",
     },
     {
       icon: Sparkles,
-      badge: "E-Commerce & D2C",
+      badge: "Consumer Brands & D2C",
       badgeVariant: "amber" as const,
       iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
-      title: "Clothing Lines, Electronics & Consumer Brands",
+      title: "Apparel Lines, Consumer Electronics & D2C",
       description:
-        "Launching an apparel brand, consumer electronics product, or lifestyle brand? We coordinate contract manufacturing, packaging, warehouse fulfillment, digital storefronts, and performance marketing to get first orders.",
-      thesisExample: "Apparel & fashion lines, consumer electronics, specialized packaged goods & D2C brands.",
+        "Launching an apparel collection, consumer gadget, or packaged food brand? We manage contract manufacturing negotiations, packaging design, warehouse fulfillment, digital commerce architecture, and performance GTM to drive early sales.",
+      thesisExample: "Specialty apparel labels, smart consumer hardware, functional nutrition & packaged consumer goods.",
     },
     {
       icon: Briefcase,
-      badge: "Trading & Distribution",
+      badge: "Wholesale & Trade Infrastructure",
       badgeVariant: "slate" as const,
       iconBg: "bg-[#F6F9FC] text-[#0A2540] border-[#E6E8EB]",
-      title: "Trading, Wholesale & Import-Export",
+      title: "Distribution Networks & Import-Export",
       description:
-        "Setting up a distribution network or trading company? We establish supplier contracts, warehouse operations, customs/GST compliance, and B2B dealer sales pipelines.",
-      thesisExample: "Commodity distribution, industrial raw materials, cross-border import/export & wholesale channels.",
+        "Establishing an interstate distribution network or import-export house? We structure verified supplier contracts, warehousing hubs, customs clearances, and B2B dealer sales channels for consistent cash flows.",
+      thesisExample: "Industrial raw material supply, FMCG distribution corridors, cross-border trading & wholesale logistics.",
     },
     {
       icon: RefreshCw,
-      badge: "Tech & Turnaround",
+      badge: "Turnaround & Stalled Ventures",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Tech Ventures & Stalled Business Turnarounds",
+      title: "Struggling Businesses & Venture Reboots",
       description:
-        "Starting a tech venture or rebooting a struggling business? We build rapid feasibility prototypes, design scalable operational systems, fix broken workflows, and vet tech teams tailored to your budget.",
-      thesisExample: "B2B SaaS, internal enterprise software, marketplace platforms, and operational reboot of stalled companies.",
+        "Is your business bleeding cash, suffering from operational chaos, or stalled by broken technology? We step in as active co-builders to audit unit economics, restructure operations, repair workflows, and re-ignite commercial growth.",
+      thesisExample: "Distressed SME turnaround, tech-stack re-architecture, distribution restructuring & cash-flow stabilization.",
     },
   ];
 
@@ -88,12 +88,12 @@ export function PersonaMatrix() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Industries & Business Use Cases</Badge>
+          <Badge variant="indigo" size="sm">Sector Specializations & Use Cases</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for any business. From manufacturing to tech.
+            Built for any business. From heavy industry to consumer brands.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Whether starting a manufacturing plant, hospital, school, hotel, e-commerce brand, or tech startup—1008 Network puts your vision to work.
+            Whether starting from a blank sheet of paper or reviving a struggling enterprise, 1008 Network provides the operational muscle to build a durable business.
           </p>
         </div>
 
