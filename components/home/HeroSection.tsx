@@ -51,26 +51,25 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Venture Studio // Now Accepting Applications
+              1008 Network // End-to-End Business Operations & Venture Studio
             </Badge>
             <span className="text-xs font-semibold text-[#627D98] hidden sm:inline-block">
-              For New Ventures, Stalled Businesses & Ambitious Builders
+              Manufacturing • Healthcare • Hotels • Schools • E-Commerce • Tech
             </span>
           </div>
 
           {/* Primary Razor-Sharp Hook Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            Have a business idea or a venture that&apos;s stalled?{" "}
+            You bring the vision & capital.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We build the tech & execution muscle to scale it.
+              We handle end-to-end operations to build & scale it.
             </span>
           </h1>
 
           {/* Core Subtitle Positioning */}
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            1008 is the hands-on operations and venture execution partner for new startups, early-stage founders, and businesses looking to reboot.
-            We build feasibility prototypes, design scalable operational systems, and source vetted engineering talent for <span className="text-[#0A2540] font-semibold">shared equity upside—zero expensive agency retainers</span>.
+            Whether starting a manufacturing plant, setting up a hospital, school, or hotel, launching a D2C/e-commerce brand, or building a tech venture—<strong>1008 Network puts your vision to work</strong>. We execute real estate scouting, plant & facility setup, machinery procurement, registration paperwork, manpower hiring, tech stack, and marketing to acquire your initial customers.
           </p>
 
           {/* Dual High-Conversion CTAs */}
@@ -82,7 +81,7 @@ export function HeroSection() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold"
             >
-              Apply to Build With Us
+              Partner With 1008 Network
             </Button>
             <Button
               href="/#blueprint"
@@ -90,7 +89,7 @@ export function HeroSection() {
               variant="secondary"
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Explore 180-Day Blueprint
+              Explore 180-Day Execution Engine
             </Button>
           </div>
 
@@ -98,30 +97,30 @@ export function HeroSection() {
           <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-4xl mx-auto text-left">
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#635BFF] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Shield className="h-3.5 w-3.5" /> Skin In The Game
+                <Shield className="h-3.5 w-3.5" /> True Partnership
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Zero hourly consulting fees. Equity & upside aligned from Day 1.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">You fund the business, we run the operations for shared equity upside. No consulting fees.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#00A389] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Clock className="h-3.5 w-3.5" /> 180-Day Handover
+                <Briefcase className="h-3.5 w-3.5" /> Full Turnkey Setup
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Engineered for complete founder independence, not agency lock-in.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Real estate, plant setup, machinery, licensing, legal paperwork & staffing.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
               <div className="text-xs text-[#059669] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Lock className="h-3.5 w-3.5" /> 100% Confidential NDA
+                <Code2 className="h-3.5 w-3.5" /> Tech & Online Stack
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Protect your ideas and proprietary domain workflows under mutual NDA.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Feasibility MVPs, digital systems, and vetted tech teams hired within your budget.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#E6E8EB] shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#CBD5E1] transition-colors">
-              <div className="text-xs text-[#0A2540] font-bold mb-1 flex items-center gap-1.5 font-sans">
-                <Code2 className="h-3.5 w-3.5 text-[#635BFF]" /> Feasibility & Tech Sourcing
+              <div className="text-xs text-[#F4511E] font-bold mb-1 flex items-center gap-1.5 font-sans">
+                <Sparkles className="h-3.5 w-3.5" /> GTM & First Customers
               </div>
-              <p className="text-xs text-[#627D98] leading-relaxed">Rapid prototype testing + vetted engineering team hiring based on your budget.</p>
+              <p className="text-xs text-[#627D98] leading-relaxed">Brand positioning, launch campaigns, distributor outreach, and initial sales revenue.</p>
             </div>
           </div>
         </div>
@@ -135,7 +134,7 @@ export function HeroSection() {
                 <span className="h-3 w-3 rounded-full bg-red-400" />
                 <span className="h-3 w-3 rounded-full bg-amber-400" />
                 <span className="h-3 w-3 rounded-full bg-emerald-400" />
-                <span className="ml-2 text-[#0A2540] font-bold font-sans">1008 Studio Execution Engine</span>
+                <span className="ml-2 text-[#0A2540] font-bold font-sans">1008 Network Turnkey Execution Engine</span>
               </div>
               <div className="flex items-center gap-3">
                 <Badge variant="indigo" size="sm" pulse>Tailored Engagements</Badge>
@@ -151,12 +150,12 @@ export function HeroSection() {
                   <span className="text-[#635BFF] font-bold">PHASE 01</span>
                   <span className="font-semibold">DAYS 1–45</span>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">Validation & Feasibility</div>
+                <div className="text-[#0A2540] font-bold text-sm">Vision & Feasibility Blueprint</div>
                 <p className="text-[#425466] text-xs leading-relaxed">
-                  25+ customer discovery calls under NDA, financial bleed quantification, and solution brainstorming.
+                  Founder vision alignment, financial modeling, real estate/facility scouting, and regulatory licensing roadmap under NDA.
                 </p>
                 <div className="text-[11px] text-[#059669] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Validation Gate
+                  <CheckCircle2 className="h-3.5 w-3.5" /> Feasibility Gate
                 </div>
               </div>
 
@@ -166,12 +165,12 @@ export function HeroSection() {
                   <span className="text-[#00A389] font-bold">PHASE 02</span>
                   <span className="font-semibold">DAYS 46–90</span>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">Feasibility MVP & SOPs</div>
+                <div className="text-[#0A2540] font-bold text-sm">Infrastructure & Procurement</div>
                 <p className="text-[#425466] text-xs leading-relaxed">
-                  Rapid prototype testing, core operating SOPs, commercial workflows, and vetted tech talent allocation.
+                  Plant/facility setup, machinery procurement, registration paperwork, vendor contracts, tech stack & digital presence.
                 </p>
                 <div className="text-[11px] text-[#00A389] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Build Gate
+                  <CheckCircle2 className="h-3.5 w-3.5" /> Setup Gate
                 </div>
               </div>
 
@@ -181,12 +180,12 @@ export function HeroSection() {
                   <span className="text-[#F4511E] font-bold">PHASE 03</span>
                   <span className="font-semibold">DAYS 91–135</span>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">3 Paid Pilots & GTM Proof</div>
+                <div className="text-[#0A2540] font-bold text-sm">Staffing & First Customers</div>
                 <p className="text-[#425466] text-xs leading-relaxed">
-                  Securing 3 paid enterprise pilots or binding LOIs, unit economics modeling, and initial hiring.
+                  Manpower & team recruitment, operational training, launch marketing campaigns, and securing initial commercial clients.
                 </p>
                 <div className="text-[11px] text-[#F4511E] font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Revenue Gate
+                  <CheckCircle2 className="h-3.5 w-3.5" /> Traction Gate
                 </div>
               </div>
 
@@ -196,9 +195,9 @@ export function HeroSection() {
                   <span className="text-[#059669] font-bold">PHASE 04</span>
                   <span className="font-semibold">DAYS 136–180</span>
                 </div>
-                <div className="text-[#0A2540] font-bold text-sm">Handover & Independence</div>
+                <div className="text-[#0A2540] font-bold text-sm">Handover & Autonomous Growth</div>
                 <p className="text-[#425466] text-xs leading-relaxed">
-                  100% source code and IP assignment, 10%-12% ESOP trust, cap table structuring, and full autonomy.
+                  Operating SOPs institutionalized, permanent management onboarded, 100% asset & IP handover, and full founder autonomy.
                 </p>
                 <div className="text-[11px] text-[#059669] font-semibold flex items-center gap-1">
                   <CheckCircle2 className="h-3.5 w-3.5" /> Handover Gate

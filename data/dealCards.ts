@@ -13,7 +13,7 @@ export const initialDealCards: DealCard[] = [
     valuationCapINR: 1200, // ₹12 Cr
     syndicateAllocationINR: 40, // ₹40 Lakhs
     committedPercentage: 78,
-    studioBatch: "1008 Studio Cohort Q2",
+    studioBatch: "1008 Network Studio",
     tractionHighlights: [
       { metric: "Active Trial Sites", value: "14 Tertiary Hospitals", growth: "+4 this month" },
       { metric: "Monthly ARR Run-rate", value: "₹28 Lakhs", growth: "3.2x QoQ" },
@@ -39,7 +39,7 @@ export const initialDealCards: DealCard[] = [
     valuationCapINR: 2000, // ₹20 Cr
     syndicateAllocationINR: 60, // ₹60 Lakhs
     committedPercentage: 92,
-    studioBatch: "1008 Studio Cohort Q1",
+    studioBatch: "1008 Network Studio",
     tractionHighlights: [
       { metric: "Monthly GMV", value: "₹1.15 Cr", growth: "+42% MoM" },
       { metric: "Tooling Delivery SLA", value: "48 Hours", growth: "vs 14 days baseline" },
@@ -65,7 +65,7 @@ export const initialDealCards: DealCard[] = [
     valuationCapINR: 1500, // ₹15 Cr
     syndicateAllocationINR: 50, // ₹50 Lakhs
     committedPercentage: 65,
-    studioBatch: "1008 Studio Cohort Q2",
+    studioBatch: "1008 Network Studio",
     tractionHighlights: [
       { metric: "Invoices Underwritten", value: "₹14.2 Cr GMV", growth: "0.0% NPA to date" },
       { metric: "Distributor Partners", value: "38 Active Networks", growth: "Western India" },

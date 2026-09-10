@@ -14,6 +14,7 @@ import {
   Sparkles,
   Lock,
   ArrowRight,
+  Briefcase,
 } from "lucide-react";
 
 export function PillarsBento() {
@@ -29,66 +30,66 @@ export function PillarsBento() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">The Venture Studio Model</Badge>
+          <Badge variant="indigo" size="sm">End-to-End Operational Execution</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Everything you need to build & turn around a business.
+            Everything needed to build, launch & operate a running business.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            We don&apos;t give generic advice. We build 0-to-1 operational systems, test market feasibility with rapid prototypes, and source vetted technical teams based on your budget.
+            We don&apos;t just consult from slides. We roll up our sleeves to execute real estate scouting, plant setup, machinery procurement, registrations, staffing, tech systems, and launch marketing.
           </p>
         </div>
 
         {/* Studio Pillars Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-          {/* Card 1: Operational Systems & Feasibility (7 cols) */}
+          {/* Card 1: Turnkey Plant, Real Estate & Infrastructure Setup (7 cols) */}
           <div className="lg:col-span-7 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
             <div>
               <div className="flex items-center justify-between gap-4 mb-5">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2.5 rounded-xl bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">
-                    <Code2 className="h-5 w-5" />
+                    <Briefcase className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#635BFF] tracking-wide font-bold uppercase">
-                    OPERATIONS & FEASIBILITY
+                    PHYSICAL SETUP & INFRASTRUCTURE
                   </span>
                 </div>
-                <Badge variant="indigo" size="sm">Hands-On Muscle</Badge>
+                <Badge variant="indigo" size="sm">Turnkey Execution</Badge>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-[#0A2540] mb-3">
-                0-to-1 Operational Architecture & Feasibility
+                Real Estate, Plant Setup, Machinery & Licensing
               </h3>
               <p className="text-[#425466] text-sm sm:text-base leading-relaxed mb-6">
-                Brainstorm, de-risk, and test business viability before burning cash. We build rapid prototypes to validate demand, and when a full build is needed, we source and manage vetted engineers tailored to your budget.
+                Starting a manufacturing unit, hospital, school, hotel, or retail warehouse? We scout suitable commercial real estate, coordinate plant & civil build-out, procure industrial machinery, and clear all governmental registration paperwork.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6 text-xs text-[#425466] font-sans">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">Feasibility MVPs:</strong> Rapid prototypes to test demand & brainstorm.</span>
+                  <span><strong className="text-[#0A2540]">Real Estate & Zoning:</strong> Site scouting, lease negotiation & industrial park approvals.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">Operating SOPs:</strong> Day-1 commercial workflows & customer onboarding.</span>
+                  <span><strong className="text-[#0A2540]">Machinery & Procurement:</strong> Vendor sourcing, customs, installation & testing.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">Vetted Tech Sourcing:</strong> Finding & vetting developers within your budget.</span>
+                  <span><strong className="text-[#0A2540]">Registrations & Permits:</strong> GST, pollution control, municipal licenses & compliance.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span><strong className="text-[#0A2540]">100% IP Ownership:</strong> Transferred entirely to your entity from Day 1.</span>
+                  <span><strong className="text-[#0A2540]">Supply Chain & Vendors:</strong> Raw material sourcing, logistics & vendor contracts.</span>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Operations-first execution</span>
+              <span className="text-xs font-semibold text-[#627D98]">Turnkey industrial & operational setup</span>
               <button
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#635BFF] hover:underline flex items-center gap-1"
               >
-                Explore Tech Stack <ArrowRight className="h-3.5 w-3.5" />
+                Discuss Facility Needs <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
           </div>
@@ -105,23 +106,23 @@ export function PillarsBento() {
                     SKIN IN THE GAME
                   </span>
                 </div>
-                <Badge variant="emerald" size="sm">Equity Aligned</Badge>
+                <Badge variant="emerald" size="sm">True Partnership</Badge>
               </div>
 
               <h3 className="text-2xl font-bold text-[#0A2540] mb-3">
-                No Consulting Invoices. True Equity Partnership.
+                You Fund the Capital. We Handle the Operations.
               </h3>
               <p className="text-[#425466] text-sm leading-relaxed mb-6">
-                Consultants get paid whether your business succeeds or fails. 1008 partners for shared equity and long-term valuation upside. Our incentives are 100% aligned with yours.
+                All financial capital and investment is handled by the founder. 1008 Network drives the entire operational machinery for shared equity & growth upside. Zero vendor markups, 100% aligned.
               </p>
 
               <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 mb-6 text-xs">
                 <div className="flex items-center justify-between text-[#627D98] text-[11px] font-semibold">
-                  <span>FINANCIAL MODEL</span>
-                  <span className="text-[#059669] font-bold">ZERO RETAINER FEES</span>
+                  <span>COLLABORATION MODEL</span>
+                  <span className="text-[#059669] font-bold">MUTUAL CONVICTION ONLY</span>
                 </div>
                 <p className="text-[#425466] font-sans">
-                  We invest development, design, and venture architecture for equity upside (8%–18%).
+                  We talk with the founder, understand the vision, and only tie up with businesses where we see exceptional mutual growth potential.
                 </p>
               </div>
             </div>
@@ -132,72 +133,99 @@ export function PillarsBento() {
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#059669] hover:underline flex items-center gap-1"
               >
-                Review Equity Terms <ArrowRight className="h-3.5 w-3.5" />
+                Explore Partnership Terms <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
           </div>
 
-          {/* Card 3: 180-Day Handover (5 cols) */}
+          {/* Card 3: Tech Stack, Feasibility & Digital Presence (5 cols) */}
           <div className="lg:col-span-5 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
             <div>
               <div className="flex items-center justify-between gap-4 mb-5">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2.5 rounded-xl bg-[#E6FFFA] text-[#00A389] border border-[#B2F5EA]">
-                    <Clock className="h-5 w-5" />
+                    <Code2 className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#00A389] tracking-wide font-bold uppercase">
-                    FOUNDER AUTONOMY
+                    TECH & ONLINE PRESENCE
                   </span>
                 </div>
-                <Badge variant="cyan" size="sm">180d Standard</Badge>
+                <Badge variant="cyan" size="sm">Custom Built</Badge>
               </div>
 
               <h3 className="text-2xl font-bold text-[#0A2540] mb-3">
-                Build With You. Not Forever For You.
+                Tech Stack, Online Presence & Feasibility MVPs
               </h3>
               <p className="text-[#425466] text-sm leading-relaxed mb-6">
-                A great venture studio makes founders self-sustaining, not dependent. Over 180 days, we stabilize the business, recruit your permanent core hires, and transition complete autonomy back to you.
+                From custom internal ERPs, inventory software, and booking engines to rapid prototypes and e-commerce storefronts. When dedicated developers are required, we source and vet engineering talent tailored to your budget.
               </p>
+
+              <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 mb-6 text-xs">
+                <div className="flex items-center justify-between text-[#627D98] text-[11px] font-semibold">
+                  <span>SYSTEM ARCHITECTURE</span>
+                  <span className="text-[#00A389] font-bold">ZERO OVER-ENGINEERING</span>
+                </div>
+                <p className="text-[#425466] font-sans">
+                  Built to check feasibility, brainstorm product features, and scale smoothly as customer transaction volume expands.
+                </p>
+              </div>
             </div>
 
             <div className="pt-4 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">No agency lock-in</span>
-              <Link href="/#blueprint" className="text-xs font-semibold text-[#00A389] hover:underline flex items-center gap-1">
-                View Sprint Stages <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              <span className="text-xs font-semibold text-[#627D98]">100% IP ownership assigned to you</span>
+              <button
+                onClick={() => setModalOpen(true)}
+                className="text-xs font-semibold text-[#00A389] hover:underline flex items-center gap-1"
+              >
+                Discuss Tech Requirements <ArrowRight className="h-3.5 w-3.5" />
+              </button>
             </div>
           </div>
 
-          {/* Card 4: Confidential Corporate Transition (7 cols) */}
+          {/* Card 4: Manpower, Marketing & First Customers (7 cols) */}
           <div className="lg:col-span-7 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#CBD5E1] transition-all duration-300 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.02)]">
             <div>
               <div className="flex items-center justify-between gap-4 mb-5">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2.5 rounded-xl bg-[#FFF4ED] text-[#F4511E] border border-[#FFE0D2]">
-                    <Lock className="h-5 w-5" />
+                    <Sparkles className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#F4511E] tracking-wide font-bold uppercase">
-                    CONFIDENTIALITY & NDA
+                    MANPOWER, GTM & REVENUE
                   </span>
                 </div>
-                <Badge variant="amber" size="sm">Mutual NDA</Badge>
+                <Badge variant="amber" size="sm">Customer Revenue</Badge>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-[#0A2540] mb-3">
-                Validate Before You Resign
+                Manpower Recruitment, Marketing & Landing First Customers
               </h3>
               <p className="text-[#425466] text-sm sm:text-base leading-relaxed mb-6">
-                Leaving a VP or Director salary without validation is unnecessarily risky. We sign a strict mutual NDA on Day 1, helping you quantify customer willingness-to-pay before you make any public career transition.
+                A business is only complete when operations run smoothly and paying customers walk in. We hire qualified plant operators, hospital/hotel staff, and sales teams, and design the go-to-market engine to acquire your opening customer base.
               </p>
 
-              <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-xs text-[#425466] leading-relaxed font-sans mb-6">
-                <strong className="text-[#0A2540] block mb-1">De-Risked Career Transition:</strong>
-                Complete 25+ discovery interviews and architectural blueprints quietly. When customer pull is proven with 3 advance LOIs, execute your full-time transition with absolute conviction.
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6 text-xs text-[#425466] font-sans">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
+                  <span><strong className="text-[#0A2540]">Manpower Sourcing:</strong> Plant managers, technical staff, operators & corporate talent.</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
+                  <span><strong className="text-[#0A2540]">Launch Marketing:</strong> Brand identity, digital presence, PR & hyper-local campaigns.</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
+                  <span><strong className="text-[#0A2540]">B2B & Distribution:</strong> Wholesale dealer networks, institutional contracts & partnerships.</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#F4511E] shrink-0 mt-0.5" />
+                  <span><strong className="text-[#0A2540]">Initial Sales:</strong> Closing early orders and establishing positive contribution margin.</span>
+                </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Strict confidentiality guaranteed</span>
+              <span className="text-xs font-semibold text-[#627D98]">Full commercial activation</span>
               <Button
                 onClick={() => setModalOpen(true)}
                 variant="primary"
@@ -205,7 +233,7 @@ export function PillarsBento() {
                 className="font-semibold"
                 rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
               >
-                Confidential Intake Call
+                Start Operational Diagnostic
               </Button>
             </div>
           </div>

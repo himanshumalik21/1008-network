@@ -8,38 +8,38 @@ export function ComparisonSection() {
   const comparison = [
     {
       dimension: "Business Model & Alignment",
-      studio1008: "Shared Equity & Upside. Zero hourly consulting retainers.",
+      studio1008: "Shared Equity & Upside. You fund capital, we run operations. Zero consulting fees.",
       agency: "High hourly fees & monthly retainers. Zero skin in the game.",
-      accelerator: "Takes 7% equity for generic talks; zero code or product build.",
-      solo: "100% personal cash burn with high opportunity cost.",
+      accelerator: "Takes 7% equity for generic talks; zero physical or operational build.",
+      solo: "100% personal cash burn with high trial-and-error friction.",
     },
     {
-      dimension: "Operations, Feasibility & Tech Sourcing",
+      dimension: "Physical Setup & Infrastructure",
+      studio1008: "Turnkey: Real estate scouting, plant setup, machinery procurement & regulatory paperwork.",
+      agency: "None. Strictly limited to slide decks or basic marketing.",
+      accelerator: "None. Founder must navigate industrial zoning & machinery procurement alone.",
+      solo: "High risk of vendor fraud, delays, and exorbitant middleman markups.",
+    },
+    {
+      dimension: "Tech, Systems & Feasibility",
       studio1008: "0-to-1 operational systems, feasibility MVPs + vetted tech team hiring based on budget.",
       agency: "Junior outsourced coders; low quality, brittle, zero operational understanding.",
-      accelerator: "None. Founder must figure out operations, feasibility, and hiring alone.",
-      solo: "Managing disconnected freelancers on Upwork with high churn and cash burn.",
+      accelerator: "None. Founder must figure out tech stack and developer hiring alone.",
+      solo: "Managing disconnected freelancers with high churn and cash burn.",
     },
     {
-      dimension: "Relationship Duration",
-      studio1008: "180-Day Exit & Handover. Engineered for founder autonomy.",
-      agency: "Incentivized to prolong development to bill more monthly retainers.",
-      accelerator: "12-week batch ending in a Demo Day pitch.",
-      solo: "Indefinite timeline leading to execution fatigue.",
+      dimension: "Manpower, GTM & First Customers",
+      studio1008: "Hiring plant/hospital/hotel/tech staff + launch marketing to land initial paying customers.",
+      agency: "Generic social media posts without sales pipelines or distribution deals.",
+      accelerator: "Demo Day pitch with no direct customer acquisition execution.",
+      solo: "Struggles to recruit talent and close early commercial accounts simultaneously.",
     },
     {
-      dimension: "Intellectual Property Ownership",
-      studio1008: "100% IP & code assigned to your new corporate entity from Day 1.",
-      agency: "Often held hostage until dispute-ridden final invoices are settled.",
-      accelerator: "Owned by entity, but cap table is crowded early.",
-      solo: "Disorganized IP contracts across multiple independent contractors.",
-    },
-    {
-      dimension: "Target Founder Fit",
-      studio1008: "New venture founders, struggling business turnarounds, and domain builders.",
-      agency: "Anyone with a credit card or bank transfer.",
-      accelerator: "Broad cohorts with generic slide-deck mentorship.",
-      solo: "Solo operators risking burnout without full-stack leverage.",
+      dimension: "Target Partner Fit",
+      studio1008: "Manufacturing, healthcare, hotels, schools, e-commerce, trading, tech & business turnarounds.",
+      agency: "Anyone who pays monthly invoices.",
+      accelerator: "Early tech pitches matching narrow venture capital trends.",
+      solo: "Solo operators risking burnout across dozens of operational silos.",
     },
   ];
 
@@ -53,10 +53,10 @@ export function ComparisonSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">The Direct Comparison</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Why traditional paths fail new ventures.
+            Why traditional paths fail ambitious businesses.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Great businesses don&apos;t fail from lack of ambition. They fail from brittle outsourced code, misaligned agency incentives, and missing technical execution.
+            Great businesses don&apos;t fail from lack of vision. They fail from execution fatigue, contractor markups, and disconnected operational silos.
           </p>
         </div>
 
@@ -66,11 +66,11 @@ export function ComparisonSection() {
               <tr>
                 <th className="p-4 sm:p-5">Dimension</th>
                 <th className="p-4 sm:p-5 text-[#635BFF] bg-[#F0F0FF] border-x border-[#E0E0FF] font-bold">
-                  1008 Venture Studio
+                  1008 Network
                 </th>
-                <th className="p-4 sm:p-5">IT & Dev Agencies</th>
+                <th className="p-4 sm:p-5">Consulting Agencies</th>
                 <th className="p-4 sm:p-5">Standard Incubators</th>
-                <th className="p-4 sm:p-5">Solo Freelancing</th>
+                <th className="p-4 sm:p-5">Solo Bootstrapping</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E6E8EB]">

@@ -141,7 +141,7 @@ export function NetworkFilters({
                 : "bg-surface-100 border-border text-muted-foreground hover:text-foreground"
             )}
           >
-            <span>1008 Studio Backed Only</span>
+            <span>1008 Network Studio Backed Only</span>
           </button>
         </div>
       </div>

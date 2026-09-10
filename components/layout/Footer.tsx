@@ -78,7 +78,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/studio" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
-                  <span>Build With 1008</span>
+                  <span>Build With 1008 Network</span>
                   <span className="text-[10px] font-bold text-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity">180d</span>
                 </Link>
               </li>
@@ -89,7 +89,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/#comparison" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Why 1008 vs. Agencies
+                  Why 1008 Network vs. Agencies
                 </Link>
               </li>
               <li>
@@ -118,12 +118,12 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/manifesto" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  The 1008 Manifesto
+                  The 1008 Network Manifesto
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  About the Studio
+                  About 1008 Network
                 </Link>
               </li>
               <li>
@@ -183,7 +183,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#627D98]">
           <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} 1008 (1008.network). All rights reserved.</span>
+            <span>© {new Date().getFullYear()} 1008 Network (1008.network). All rights reserved.</span>
           </div>
 
           <div className="flex items-center gap-6 text-xs">

@@ -19,13 +19,13 @@ export default function AboutPage() {
         {/* Header */}
         <div className="space-y-4 text-center">
           <Badge variant="indigo" size="md">
-            About 1008 (1008.network)
+            About 1008 Network
           </Badge>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            The Venture-Building Partner for India&apos;s Business Builders
+            The End-to-End Operational Execution Partner for Any Business
           </h1>
           <p className="text-base sm:text-lg text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Headquartered in Delhi NCR with an active pan-India footprint, 1008 exists to convert deep industrial and corporate domain expertise into high-conviction startups.
+            Headquartered in Delhi NCR with a pan-India execution footprint, 1008 Network partners with founders to turn business visions into operational reality—from manufacturing plants and healthcare facilities to retail brands, schools, and tech platforms.
           </p>
         </div>
 
@@ -49,10 +49,10 @@ export default function AboutPage() {
         {/* The 1008 Standard */}
         <div className="rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] p-6 sm:p-8 space-y-4 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
           <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-            The 1008 Curation Standard
+            The 1008 Network Operational Philosophy
           </h2>
           <p className="text-sm text-[#425466] leading-relaxed">
-            We hold an uncompromising quality bar across all venture sprint tracks. Whether it is our 180-day studio sprints or our curated venture playbooks, we prioritize high signal and authentic execution above vanity metrics.
+            We talk with the founder, understand their vision, and put that vision to work. The founder handles the financial capital, and 1008 Network manages turnkey operations (real estate, facility setup, machinery, licensing, manpower, tech, and launch marketing). We only tie up with businesses where we share strong mutual conviction for long-term growth and shared equity upside.
           </p>
         </div>
 

@@ -11,13 +11,13 @@ export default function ManifestoPage() {
         {/* Header Capsule */}
         <div className="space-y-4 mb-12 text-center">
           <Badge variant="indigo" size="md">
-            The 1008 Philosophy
+            The 1008 Network Philosophy
           </Badge>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-tight">
-            The Decacorns of Bharat Will Be Built by Domain Veterans.
+            Great Ventures Are Built on Real Operations, Not Vanity Hype.
           </h1>
           <p className="text-base sm:text-lg text-[#425466]">
-            Why the next wave of multi-billion dollar Indian enterprises belongs to 40-year-old industry leaders, not 20-year-old college dropouts.
+            Why sustainable Indian enterprises are forged through rigorous 0-to-1 operational systems, clear unit economics, and shared skin in the game.
           </p>
         </div>
 
@@ -28,34 +28,31 @@ export default function ManifestoPage() {
               1. The Myth of the Unprepared Founder
             </h2>
             <p>
-              For the last decade, venture capital in India celebrated speed over substance: consumer apps burning capital on customer acquisition, buzzwords without unit economics, and 22-year-olds attempting to digitize supply chains they had never walked through.
+              For the last decade, venture capital in India celebrated speed over substance: consumer apps burning capital on customer acquisition, buzzwords without unit economics, and shallow solutions attempting to digitize supply chains without real operational grounding.
             </p>
             <p>
-              Real businesses are not built on hype. They are built on understanding the unwritten rules of hospital procurement, the nuances of GST tax reconciliation, the realities of shop-floor labor in Pune, and the distribution dynamics of Tier-2 FMCG distributors.
-            </p>
-          </div>
-
-          <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
-            <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-              2. The Domain Dilemma
-            </h2>
-            <p>
-              India’s most capable talent sits inside corporate boardrooms. These are Senior Directors, Vice Presidents, and GMs who have lived through structural sector inefficiencies for 15+ years. They know exactly where the money bleeds.
-            </p>
-            <p>
-              Yet, they are trapped: leaving corporate life to hire freelance agencies usually leads to broken code, burned cash, and lost momentum.
+              Real businesses are not built on hype. They are built on understanding the unwritten rules of enterprise procurement, the nuances of GST tax reconciliation, the realities of shop-floor labor, and the distribution dynamics of local supply chains.
             </p>
           </div>
 
           <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
             <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-              3. The 1008 Thesis: Skin in the Game
+              2. The Execution Bottleneck
             </h2>
             <p>
-              1008 was built to bridge this precise chasm. We do not charge hourly consulting fees. We do not sell slide decks.
+              Whether starting a new business or turning around a stalled venture, founders face the same friction: overpaying external agencies with zero skin in the game, hiring too fast without validated workflows, and building fragile software before verifying operational demand.
+            </p>
+          </div>
+
+          <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
+            <h2 className="text-xl font-bold text-[#0A2540] font-sans">
+              3. The 1008 Network Thesis: Skin in the Game
+            </h2>
+            <p>
+              1008 Network was built to bridge this precise chasm. We do not charge hourly consulting fees. We do not sell slide decks.
             </p>
             <p>
-              We bring full-stack software architecture, world-class product design, talent recruiting, and operational governance for shared equity upside. We build with you through a structured 180-day framework, stabilize the company, and transition full independence back to you.
+              We bring 0-to-1 operational architecture, rapid feasibility prototypes, vetted talent sourcing, and commercial systems for shared equity upside. We build with you through a structured 180-day framework, stabilize the business, and transition full operational autonomy back to you.
             </p>
           </div>
 
@@ -83,7 +80,7 @@ export default function ManifestoPage() {
         {/* Action CTA */}
         <div className="pt-10 text-center space-y-4">
           <Button href="/studio" size="lg" variant="primary" rightIcon={<ArrowRight className="h-4 w-4" />}>
-            Apply to Build With 1008
+            Apply to Build With 1008 Network
           </Button>
         </div>
       </div>

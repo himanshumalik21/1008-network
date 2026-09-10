@@ -42,7 +42,7 @@ export default async function OpportunityDetailPage({ params }: PageProps) {
             href="/network"
             className="inline-flex items-center gap-1.5 text-xs font-mono text-muted hover:text-white transition-colors"
           >
-            <ArrowLeft className="h-3.5 w-3.5" /> Back to 1008 Partner Network
+            <ArrowLeft className="h-3.5 w-3.5" /> Back to 1008 Network
           </Link>
         </div>
 
@@ -55,7 +55,7 @@ export default async function OpportunityDetailPage({ params }: PageProps) {
               </Badge>
               {opp.studioBacked && (
                 <Badge variant="amber" size="sm">
-                  1008 Studio Cohort
+                  1008 Network Studio
                 </Badge>
               )}
             </div>

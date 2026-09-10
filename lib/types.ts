@@ -9,12 +9,20 @@ export type RoleCategory =
   | "Growth & Marketing Architect";
 
 export type SectorCategory =
-  | "Healthcare & HealthTech"
-  | "Logistics & Supply Chain"
-  | "D2C & Consumer Brands"
-  | "B2B SaaS & Enterprise"
-  | "FinTech & Financial Infrastructure"
+  | "Manufacturing & Industrial Plants"
   | "Industrial & Manufacturing"
+  | "Healthcare, Hospitals & Clinics"
+  | "Healthcare & HealthTech"
+  | "Schools & Education Institutions"
+  | "Hotels, Hospitality & F&B"
+  | "Retail, E-Commerce & D2C Brands"
+  | "D2C & Consumer Brands"
+  | "Trading, Wholesale & Distribution"
+  | "Tech & Software Ventures"
+  | "B2B SaaS & Enterprise"
+  | "Business Turnaround & Reboot"
+  | "Logistics & Supply Chain"
+  | "FinTech & Financial Infrastructure"
   | "PropTech & Real Estate"
   | "CleanTech & Energy";
 

@@ -20,53 +20,53 @@ export function StudioSprintTimeline() {
   const phases = [
     {
       id: 1,
-      name: "Phase 1: Validation & Feasibility",
+      name: "Phase 1: Vision, Real Estate & Feasibility",
       days: "Days 1–45",
-      headline: "Problem discovery, customer pain validation & solution brainstorming.",
+      headline: "Founder vision alignment, financial budgeting, site/land scouting, and regulatory licensing roadmap.",
       deliverables: [
-        "25+ customer discovery interviews under strict mutual NDA",
-        "Problem quantification & business feasibility model",
-        "Rapid wireframing, clickable prototypes & concept brainstorming",
-        "Founder alignment agreement & clean IP structure",
+        "In-depth vision & operational scope mapping with the founder",
+        "Commercial real estate & industrial land scouting and site feasibility",
+        "Comprehensive capital allocation & unit economics modeling",
+        "Government registration, GST, and industry licensing roadmap under NDA",
       ],
-      tag: "Validation Gate",
+      tag: "Feasibility Gate",
     },
     {
       id: 2,
-      name: "Phase 2: Feasibility MVP & Operations",
+      name: "Phase 2: Plant/Facility Setup, Machinery & Tech",
       days: "Days 46–90",
-      headline: "Prototyping, operational SOPs, commercial workflows & tech team vetting.",
+      headline: "Physical infrastructure build-out, machinery procurement, supply chain, and tech stack setup.",
       deliverables: [
-        "Rapid prototype build to test core user experience & feasibility",
-        "Day-1 operational SOPs & customer onboarding pipelines",
-        "Sourcing, vetting & hiring engineering talent based on budget",
-        "Tooling setup, payment gateways & compliance structure",
+        "Turnkey plant, facility, or commercial venue build-out & civil coordination",
+        "Machinery & equipment procurement, vendor negotiation, and installation",
+        "Registration paperwork clearance (zoning, pollution, municipal permits)",
+        "Tech stack, ERP/inventory systems, and online digital storefront setup",
       ],
-      tag: "Build Gate",
+      tag: "Setup Gate",
     },
     {
       id: 3,
-      name: "Phase 3: Commercial Pilot & Traction",
+      name: "Phase 3: Manpower, Marketing & First Customers",
       days: "Days 91–135",
-      headline: "Go-to-market execution, pilot contracts & early revenue proof.",
+      headline: "Team recruitment, operational training, launch marketing, and landing initial revenue.",
       deliverables: [
-        "Securing 3 paid pilots or signed enterprise Letters of Intent (LOIs)",
-        "Customer feedback iteration sprints & unit economic modeling",
-        "Pricing validation & commercial contract frameworks",
-        "Operational scaling & initial core team onboarding",
+        "Recruiting qualified plant operators, medical/hospitality staff, or engineers",
+        "Standard operating procedure (SOP) training & quality control protocols",
+        "Launch marketing campaigns, branding, and PR activation",
+        "Landing first paying customers, distributor tie-ups, and commercial sales",
       ],
-      tag: "Revenue Gate",
+      tag: "Traction Gate",
     },
     {
       id: 4,
-      name: "Phase 4: Scaling & Independence",
+      name: "Phase 4: Operational Handover & Independence",
       days: "Days 136–180",
-      headline: "Full systems handover, operational autonomy & scaling roadmap.",
+      headline: "Full systems handover, institutional governance, and complete founder operational autonomy.",
       deliverables: [
-        "100% intellectual property (IP) assignment to founder entity",
-        "Clean capitalization table structuring & financial modeling",
-        "Investor / growth data room & institutional governance pack",
-        "Complete transition to founder operational autonomy",
+        "100% ownership of plant assets, machinery, code, and IP assigned to your entity",
+        "Stable operational run-rate with permanent on-site management team",
+        "Audited operational SOPs, vendor contracts, and compliance ledgers",
+        "Complete transition to founder operational autonomy with zero vendor lock-in",
       ],
       tag: "Handover Gate",
     },
@@ -161,10 +161,10 @@ export function StudioSprintTimeline() {
             <div className="lg:col-span-5 p-6 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-4">
               <div className="text-xs font-bold text-[#059669] uppercase tracking-wider flex items-center gap-2">
                 <Shield className="h-4 w-4" />
-                <span>The 1008 Studio Commitment</span>
+                <span>The 1008 Network Commitment</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed font-sans">
-                By Day 180, 1008 transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, production code, and zero vendor lock-in.
+                By Day 180, 1008 Network transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, scalable workflows, and zero vendor lock-in.
               </p>
               <div className="pt-2">
                 <Button
@@ -173,7 +173,7 @@ export function StudioSprintTimeline() {
                   size="md"
                   className="w-full justify-center font-semibold"
                 >
-                  Apply for Next Studio Cohort
+                  Apply to Build With Us
                 </Button>
               </div>
             </div>

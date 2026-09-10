@@ -55,7 +55,7 @@ export default function ContactPage() {
         <div className="space-y-3 text-center mb-12">
           <Badge variant="indigo" size="sm">Get in Touch</Badge>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Connect with 1008
+            Connect with 1008 Network
           </h1>
           <p className="text-sm sm:text-base text-[#425466] max-w-xl mx-auto leading-relaxed">
             Whether you want to explore the Venture Studio, discuss venture theses, or book confidential office hours with our partners in Delhi NCR.
@@ -158,8 +158,8 @@ export default function ContactPage() {
                       onChange={(e) => setFormData({ ...formData, type: e.target.value })}
                       className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
                     >
-                      <option value="Studio Inquiry">Build With 1008 (Venture Studio)</option>
-                      <option value="Partner Network">1008 Partner Inquiry</option>
+                      <option value="Studio Inquiry">Build With 1008 Network (Venture Studio)</option>
+                      <option value="Partner Network">1008 Network Partner Inquiry</option>
                       <option value="Investor / Syndicate">Venture Capital / Co-Investment</option>
                       <option value="Media / General">Media & General Partnerships</option>
                     </select>

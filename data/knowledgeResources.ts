@@ -8,7 +8,7 @@ export const initialKnowledgeResources: KnowledgeResource[] = [
     category: "playbook",
     sectorTags: ["Venture Building", "Leadership", "0-to-1"],
     readOrWatchTime: "14 min read",
-    authorOrSource: "1008 Studio Research & Venture Architecture",
+    authorOrSource: "1008 Network Research & Venture Architecture",
     featured: true,
     summary: "Senior corporate executives possess immense domain depth, supplier networks, and customer trust, yet 80% fail when transitioning to startups due to speed mismatch, bloated initial hires, and lack of hands-on prototyping. This playbook details the exact 4-phase transition matrix to de-risk leaving employment.",
     keyTakeaways: [
@@ -50,7 +50,7 @@ During this stage, your objective is not to build a full enterprise ERP. It is t
 
 - Use modular, production-ready full-stack boilerplates (Next.js, Tailwind, Server Actions, PostgreSQL).
 - Avoid 6-month outsourced agency contracts that cost ₹15L–₹30L and result in bloated, unmaintainable code.
-- Bring on a Technical Co-Founder or partner with a venture studio like 1008 that has shared equity upside.
+- Bring on a Technical Co-Founder or partner with a venture studio like 1008 Network that has shared equity upside.
 
 ---
 
@@ -78,7 +78,7 @@ The final stage establishes your corporate entity, cap table, initial hiring pip
     category: "playbook",
     sectorTags: ["Cap Table", "Legal & Structuring", "Governance"],
     readOrWatchTime: "11 min read",
-    authorOrSource: "1008 Legal & Financial Architecture",
+    authorOrSource: "1008 Network Legal & Financial Architecture",
     featured: true,
     summary: "Bad equity splits and ambiguous co-founder vesting destroy more early-stage Indian startups than market failure. Learn how to draft bulletproof SHA terms, implement reverse vesting, manage dead equity, and design high-conviction ESOP pools for early engineers.",
     keyTakeaways: [
@@ -130,7 +130,7 @@ Under Indian law, ESOP schemes require:
     category: "book_summary",
     sectorTags: ["Operations", "Management", "Execution"],
     readOrWatchTime: "9 min read",
-    authorOrSource: "Andy Grove (Summarized by 1008)",
+    authorOrSource: "Andy Grove (Summarized by 1008 Network)",
     featured: false,
     summary: "Andy Grove, former CEO of Intel, defines management with mathematical clarity: a manager's output is the output of the organization. Learn how to apply manufacturing process control to knowledge work, engineering teams, and high-growth venture operations.",
     keyTakeaways: [
@@ -173,7 +173,7 @@ All other tasks must be planned and scheduled backwards around this limiting ste
     category: "playbook",
     sectorTags: ["Enterprise Sales", "B2B", "Revenue"],
     readOrWatchTime: "12 min read",
-    authorOrSource: "1008 Commercial Strategy Team",
+    authorOrSource: "1008 Network Commercial Strategy Team",
     featured: true,
     summary: "Selling software or operational services to traditional Indian family conglomerates, hospital chains, logistics networks, and industrial manufacturing plants requires a vastly different playbook than selling to US SaaS startups. Master champion mapping, procurement gatekeepers, and GST-linked pricing.",
     keyTakeaways: [
@@ -212,7 +212,7 @@ Never quote an open-ended hourly or user-seat rate to traditional Indian busines
     category: "masterclass",
     sectorTags: ["Finance", "Unit Economics", "Financial Modeling"],
     readOrWatchTime: "45 min watch",
-    authorOrSource: "1008 Venture Finance Masterclass",
+    authorOrSource: "1008 Network Venture Finance Masterclass",
     featured: false,
     summary: "A deep-dive video masterclass and downloadable financial model template showing how to build rigorous, investor-ready unit economics for B2B marketplaces, SaaS, and D2C brands in India.",
     keyTakeaways: [
@@ -223,7 +223,7 @@ Never quote an open-ended hourly or user-seat rate to traditional Indian busines
     contentMarkdown: `
 # Unit Economics & Contribution Margin Modeling Masterclass
 
-In this 45-minute session, we walk through the exact financial spreadsheet model used by 1008 Studio ventures to analyze contribution margins at every stage of customer acquisition.
+In this 45-minute session, we walk through the exact financial spreadsheet model used by 1008 Network Studio ventures to analyze contribution margins at every stage of customer acquisition.
 
 Download the accompanying Google Sheets financial model template to test your venture's viability.
     `,

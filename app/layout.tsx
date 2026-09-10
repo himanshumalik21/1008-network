@@ -19,38 +19,40 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "1008 — Hands-On Venture Studio for New Ventures & Stalled Businesses",
-    template: "%s | 1008",
+    default: "1008 Network — End-to-End Business Operations & Turnkey Execution Partner",
+    template: "%s | 1008 Network",
   },
   description:
-    "1008 partners with founders, entrepreneurs, and businesses to build, launch, and scale high-growth tech ventures in 180 days — zero agency retainers, shared skin in the game.",
+    "1008 Network is the hands-on operations partner for businesses in India. You bring the vision & capital—we handle real estate, plant setup, machinery, licensing, manpower, tech, and marketing to build & scale it.",
   keywords: [
+    "Business Setup India",
+    "Turnkey Operations Partner",
+    "Manufacturing Plant Setup India",
+    "Hospital Setup Partner",
+    "Hotel & Hospitality Setup",
+    "School Infrastructure Setup",
+    "E-Commerce & D2C Operations",
     "Venture Studio India",
-    "Startup Studio",
-    "Technical Co-founder Studio",
-    "Turnaround Venture Studio",
-    "Build With 1008",
-    "1008 Studio",
-    "Software Engineering Partner",
-    "Seed Stage Syndicate India",
+    "Business Turnaround India",
+    "1008 Network",
   ],
-  authors: [{ name: "1008 Studio Team", url: "https://1008.network" }],
-  creator: "1008",
+  authors: [{ name: "1008 Network Team", url: "https://1008.network" }],
+  creator: "1008 Network",
   publisher: "1008.network",
   metadataBase: new URL("https://1008.network"),
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://1008.network",
-    title: "1008 — Hands-On Venture Studio for New Ventures & Stalled Businesses",
+    title: "1008 Network — End-to-End Business Operations & Turnkey Execution Partner",
     description:
-      "Have a business idea or a venture that's stalled? We build the tech & execution muscle to scale it.",
+      "You bring the vision & capital. We handle end-to-end operations to build, launch & scale your business.",
     siteName: "1008.network",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 — Hands-On Venture Studio",
-    description: "Have a business idea or a venture that's stalled? We build the tech & execution muscle to scale it.",
+    title: "1008 Network — End-to-End Business Operations",
+    description: "You bring the vision & capital. We handle end-to-end operations to build, launch & scale your business.",
   },
   robots: {
     index: true,
@@ -66,11 +68,11 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "1008",
+    name: "1008 Network",
     url: "https://1008.network",
     logo: "https://1008.network/logo.png",
     description:
-      "High-conviction venture studio for Indian corporate leaders and domain experts.",
+      "High-conviction venture studio for founders, entrepreneurs, and businesses.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Delhi NCR",

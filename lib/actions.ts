@@ -39,7 +39,7 @@ export async function submitStudioApplication(formData: StudioApplicationData): 
 
     return {
       success: true,
-      message: "Your application to Build With 1008 has been received. Our venture partners review every submission and respond within 48 business hours under NDA.",
+      message: "Your application to Build With 1008 Network has been received. Our venture partners review every submission and respond within 48 business hours under NDA.",
       data: { id: newRecord.id },
     };
   } catch (err) {
@@ -71,7 +71,7 @@ export async function submitNetworkOpportunity(formData: NetworkPostData): Promi
 
     return {
       success: true,
-      message: "Opportunity submitted successfully for 1008 editorial review. Upon 60-day listing approval, it will be published to the live Network board.",
+      message: "Opportunity submitted successfully for 1008 Network editorial review. Upon 60-day listing approval, it will be published to the live Network board.",
       data: { id: newPost.id },
     };
   } catch (err) {
@@ -144,7 +144,7 @@ export async function submitDealEOI(payload: {
 
     return {
       success: true,
-      message: `Expression of Interest recorded for ₹${payload.ticketSizeINR} Lakhs allocation. The 1008 Capital syndicate team will share the complete data room and term sheet overview.`,
+      message: `Expression of Interest recorded for ₹${payload.ticketSizeINR} Lakhs allocation. The 1008 Network syndicate team will share the complete data room and term sheet overview.`,
     };
   } catch (err) {
     return {
@@ -178,7 +178,7 @@ export async function submitContactInquiry(payload: {
 
     return {
       success: true,
-      message: "Thank you for reaching out to 1008. Our team in Delhi NCR will review and get in touch within 24 hours.",
+      message: "Thank you for reaching out to 1008 Network. Our team in Delhi NCR will review and get in touch within 24 hours.",
     };
   } catch (err) {
     return {
@@ -204,7 +204,7 @@ export async function subscribeNewsletter(email: string): Promise<ActionResult> 
 
     return {
       success: true,
-      message: "You are subscribed to 1008 Venture Dispatch. High-signal memos only.",
+      message: "You are subscribed to 1008 Network Venture Dispatch. High-signal memos only.",
     };
   } catch (err) {
     return {

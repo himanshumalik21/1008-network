@@ -45,11 +45,11 @@ export function Logo({
   const content = (
     <div
       className={cn(
-        "inline-flex items-baseline select-none group font-sans tracking-[-0.05em]",
+        "inline-flex items-baseline select-none group font-sans tracking-[-0.04em]",
         className
       )}
     >
-      {/* Pure Iconic 1008 Wordmark */}
+      {/* Pure Iconic 1008 Network Wordmark */}
       <span
         className={cn(
           "font-black leading-none transition-colors duration-150 font-sans",
@@ -61,19 +61,17 @@ export function Logo({
       >
         1008
       </span>
-      {showDomain && (
-        <span
-          className={cn(
-            "font-semibold tracking-normal ml-0.5 transition-colors duration-150 font-sans",
-            monochrome
-              ? "opacity-75"
-              : "text-[#627D98] group-hover:text-[#425466]",
-            currentSize.domain
-          )}
-        >
-          .network
-        </span>
-      )}
+      <span
+        className={cn(
+          "font-bold leading-none ml-1.5 transition-colors duration-150 font-sans",
+          monochrome
+            ? "text-current opacity-90"
+            : "text-[#0A2540] group-hover:text-[#635BFF]",
+          currentSize.text
+        )}
+      >
+        Network
+      </span>
     </div>
   );
 
@@ -81,7 +79,7 @@ export function Logo({
     return (
       <Link
         href="/"
-        aria-label="1008 Homepage"
+        aria-label="1008 Network Homepage"
         className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#635BFF]/50 rounded-lg inline-flex items-baseline"
       >
         {content}

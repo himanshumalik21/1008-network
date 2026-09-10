@@ -31,7 +31,7 @@ export function OpportunityCard({ opportunity, onConnect }: OpportunityCardProps
             </Badge>
             {opportunity.studioBacked && (
               <Badge variant="amber" size="sm">
-                1008 Studio Venture
+                1008 Network Studio Venture
               </Badge>
             )}
           </div>

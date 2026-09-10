@@ -27,7 +27,7 @@ const quizQuestions: Question[] = [
     id: 1,
     category: "Domain Depth",
     question: "How many years of direct operating experience do you have in your target sector?",
-    context: "1008 focuses on domain-led ventures where founders possess deep structural insights.",
+    context: "1008 Network focuses on domain-led ventures where founders possess deep structural insights.",
     options: [
       { text: "12+ Years (VP, Director, CXO, or Senior Practice Lead)", points: 25, explanation: "Exceptional domain authority and supplier/customer network." },
       { text: "6–11 Years (Senior Manager, Lead Operator)", points: 20, explanation: "Strong operational execution and industry familiarity." },
@@ -65,10 +65,10 @@ const quizQuestions: Question[] = [
     question: "What is your current technical architecture and software development capacity?",
     context: "Zero-to-one startups fail when non-technical founders hire low-quality outsourced agencies.",
     options: [
-      { text: "Partnering with 1008 Studio for 180-day full-stack architecture & code", points: 25, explanation: "Optimal path for domain founders needing production-grade software." },
+      { text: "Partnering with 1008 Network for 180-day operational systems & feasibility MVP", points: 25, explanation: "Optimal path for domain founders needing execution excellence." },
       { text: "I have a dedicated technical co-founder (Staff Engineer / CTO)", points: 25, explanation: "Strong internal engineering capability." },
       { text: "Evaluating freelance developers or traditional IT service agencies", points: 10, explanation: "High risk of delayed delivery, bloated code, and zero venture alignment." },
-      { text: "No technical capability or plan yet", points: 5, explanation: "Utilize 1008 Partner Network to find a CTO." },
+      { text: "No technical capability or plan yet", points: 5, explanation: "Utilize 1008 Network to source and vet engineering talent." },
     ],
   },
   {
@@ -167,9 +167,9 @@ export function ReadinessQuiz() {
     action: string;
     href: string;
   } = {
-    title: "1008 Studio Cohort Candidate",
+    title: "1008 Network Studio Candidate",
     badgeVariant: "indigo",
-    summary: "Your domain depth, problem clarity, and venture mindset place you in the top 10% of candidates. You are prime for the 180-Day Build With 1008 Studio cohort.",
+    summary: "Your domain depth, problem clarity, and venture mindset place you in the top 10% of candidates. You are prime for the 180-Day Build With 1008 Network partnership.",
     action: "Schedule 30-min Studio Intake Diagnostic",
     href: "/studio",
   };

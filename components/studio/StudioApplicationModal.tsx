@@ -29,24 +29,26 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
     currentRole: "",
     currentCompany: "",
     yearsOfExperience: 10,
-    primaryDomain: "Healthcare & HealthTech",
+    primaryDomain: "Manufacturing & Industrial Plants",
     city: "Delhi NCR",
     problemThesis: "",
     targetCustomer: "",
     unfairAdvantage: "",
     timeCommitment: "Exploring High Conviction",
-    teamNeeds: ["Technical Co-Founder (CTO)"],
+    teamNeeds: ["Operations & Supply Chain Lead"],
   });
 
   const sectors: SectorCategory[] = [
-    "Healthcare & HealthTech",
+    "Manufacturing & Industrial Plants",
+    "Healthcare, Hospitals & Clinics",
+    "Schools & Education Institutions",
+    "Hotels, Hospitality & F&B",
+    "Retail, E-Commerce & D2C Brands",
+    "Trading, Wholesale & Distribution",
+    "Tech & Software Ventures",
+    "Business Turnaround & Reboot",
     "Logistics & Supply Chain",
-    "D2C & Consumer Brands",
-    "B2B SaaS & Enterprise",
     "FinTech & Financial Infrastructure",
-    "Industrial & Manufacturing",
-    "PropTech & Real Estate",
-    "CleanTech & Energy",
   ];
 
   const cities: LocationType[] = [
@@ -100,7 +102,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           setStep(1);
         }
       }}
-      title="Apply to Build With 1008"
+      title="Apply to Build With 1008 Network"
       subtitle="The 180-Day Venture Studio & Execution Partnership"
       maxWidth="xl"
     >
@@ -115,7 +117,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           </p>
           <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] text-xs text-[#425466] max-w-md mx-auto text-left font-sans space-y-1">
             <div className="text-[#0A2540] font-semibold mb-1">What Happens Next:</div>
-            <div>1. Confidential review by 1008 Venture Partners under NDA.</div>
+            <div>1. Confidential review by 1008 Network Venture Partners under NDA.</div>
             <div>2. 30-min Problem Diagnostic Call scheduled via email within 48 hours.</div>
           </div>
           <div className="pt-4">
@@ -309,7 +311,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
                   <span>Strict NDA & Zero Consulting Invoices Guarantee</span>
                 </div>
                 <p className="text-[#425466] leading-relaxed font-sans">
-                  All discussions and problem theses submitted to 1008 are kept strictly confidential under mutual non-disclosure. 1008 invests execution muscle for equity upside.
+                  All discussions and problem theses submitted to 1008 Network are kept strictly confidential under mutual non-disclosure. 1008 Network invests execution muscle for equity upside.
                 </p>
               </div>
 

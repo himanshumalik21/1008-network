@@ -13,8 +13,8 @@ import { Sparkles, ArrowRight, Lock } from "lucide-react";
 
 export function generateMetadata() {
   return {
-    title: "1008 — High-Conviction Venture Studio for Senior Domain Leaders",
-    description: "You know where the industry bleeds money. We build the tech to capture it.",
+    title: "1008 Network — End-to-End Business Operations & Turnkey Execution",
+    description: "You bring the vision & capital. We handle end-to-end operations to build, launch & scale your business.",
   };
 }
 
@@ -53,15 +53,15 @@ export default function HomePage() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <Badge variant="indigo" size="md" pulse>
-            Tailored Venture Partnerships Open
+            Operational Partnerships Open
           </Badge>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Ready to build a defensible venture in India?
+            Ready to turn your business vision into reality?
           </h2>
 
           <p className="text-base sm:text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Stop waiting for the perfect moment or overpaying freelance agencies. Partner with 1008 for true execution muscle and shared equity upside.
+            Stop worrying about operational friction or contractor markups. Partner with 1008 Network for turnkey real estate, setup, machinery, staffing, tech, and marketing.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">

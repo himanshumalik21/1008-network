@@ -64,20 +64,20 @@ export default function StudioPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              Build With 1008 // Studio Intake
+              1008 Network // End-to-End Business Operations
             </Badge>
-            <span className="text-xs font-semibold text-[#627D98]">180-Day Execution Engine</span>
+            <span className="text-xs font-semibold text-[#627D98]">180-Day Turnkey Execution Engine</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            We partner with ambitious founders to build{" "}
+            You bring the vision & capital.{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              high-growth, defensible businesses.
+              We handle end-to-end operations to make it happen.
             </span>
           </h1>
 
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Whether launching a new venture from an idea or turning around a stalled product, 1008 provides the full-stack engineering, product design, commercial systems, and seed readiness for <strong className="text-[#0A2540]">shared equity upside</strong>.
+            Whether starting a manufacturing plant, hospital, school, hotel, e-commerce brand, or tech startup—1008 Network puts your vision to work. We scout real estate, set up facilities & machinery, clear paperwork, hire manpower, build tech, and land your first customers for <strong className="text-[#0A2540]">shared equity upside</strong>.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
@@ -88,7 +88,7 @@ export default function StudioPage() {
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto font-semibold px-8"
             >
-              Apply to Build With Us
+              Partner With 1008 Network
             </Button>
             <Button
               href="/contact"
@@ -96,7 +96,7 @@ export default function StudioPage() {
               variant="secondary"
               className="w-full sm:w-auto font-semibold"
             >
-              Contact Studio Team
+              Contact Operations Team
             </Button>
           </div>
         </div>
@@ -111,10 +111,10 @@ export default function StudioPage() {
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <Badge variant="cyan" size="sm">Alignment & Incentives</Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0A2540] font-sans">
-              Why 1008 is radically different
+              Why 1008 Network is radically different
             </h2>
             <p className="text-[#425466] text-base">
-              Comparing the 1008 Studio model against traditional consulting agencies, standard incubators, and solo bootstrapping.
+              Comparing the 1008 Network Studio model against traditional consulting agencies, standard incubators, and solo bootstrapping.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export default function StudioPage() {
                 <tr>
                   <th className="p-4 sm:p-5">Dimension</th>
                   <th className="p-4 sm:p-5 text-[#635BFF] bg-[#F0F0FF] border-x border-[#E0E0FF] font-bold">
-                    1008 Venture Studio
+                    1008 Network
                   </th>
                   <th className="p-4 sm:p-5">Consulting Agency</th>
                   <th className="p-4 sm:p-5">Traditional Accelerator</th>
@@ -162,7 +162,7 @@ export default function StudioPage() {
           <div className="mt-16 p-8 sm:p-10 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
             <div className="space-y-2 text-center sm:text-left">
               <h3 className="text-2xl font-bold text-[#0A2540] font-sans">
-                Ready to evaluate your business idea with 1008?
+                Ready to evaluate your business idea with 1008 Network?
               </h3>
               <p className="text-sm text-[#425466]">
                 We take on a limited number of bespoke venture partnerships to maintain execution excellence. All applications reviewed under mutual NDA.

@@ -18,44 +18,64 @@ export function PersonaMatrix() {
 
   const domains = [
     {
-      icon: Sparkles,
-      badge: "Idea to Launch",
+      icon: Briefcase,
+      badge: "Manufacturing & Industrial",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Aspiring Founders with a Strong Concept",
+      title: "Manufacturing Plants & Industrial Units",
       description:
-        "You have identified a real market opportunity and want to build a business, but lack a dedicated technical co-founder or engineering team to build a scalable product.",
-      thesisExample: "e.g. B2B marketplaces, workflow automation tools, niche SaaS, and AI-powered service platforms.",
-    },
-    {
-      icon: RefreshCw,
-      badge: "Turnaround & Reboot",
-      badgeVariant: "amber" as const,
-      iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
-      title: "Struggling or Stalled Ventures",
-      description:
-        "You launched an MVP or early version, but got stuck with buggy outsourced code, poor user retention, or lack of traction. 1008 steps in as your turnaround partner to rebuild and relaunch.",
-      thesisExample: "e.g. Re-architecting brittle MVPs into production-grade Next.js platforms with streamlined onboarding.",
-    },
-    {
-      icon: Briefcase,
-      badge: "Domain Operators",
-      badgeVariant: "emerald" as const,
-      iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
-      title: "Professionals & Operators Starting a Business",
-      description:
-        "You know your industry inside out (Healthcare, Logistics, Retail, Manufacturing, Finance) and want to turn that deep insight into a high-margin tech company.",
-      thesisExample: "e.g. Specialized hospital procurement engines, auto-ancillary tracking tools, or supply chain portals.",
+        "Looking to set up a new production or assembly line? We scout industrial land, manage plant civil setup, procure machinery, clear regulatory registrations, hire plant manpower, and set up the supply chain.",
+      thesisExample: "Auto-ancillaries, precision tooling, packaging plants, chemicals, food processing & electronics fabrication.",
     },
     {
       icon: TrendingUp,
-      badge: "Offline to Tech",
+      badge: "Healthcare & Institutions",
+      badgeVariant: "emerald" as const,
+      iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
+      title: "Hospitals, Clinics, Schools & Academies",
+      description:
+        "Building a hospital, specialized diagnostic center, private school, or skill institute? We handle facility scouting, medical/lab equipment sourcing, licensing & compliance, management tech, and staff hiring.",
+      thesisExample: "Multi-specialty clinics, diagnostic chains, K-12 schools, vocational academies & healthcare hubs.",
+    },
+    {
+      icon: Sparkles,
+      badge: "Hospitality & Retail",
       badgeVariant: "cyan" as const,
       iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
-      title: "Established Businesses Modernizing",
+      title: "Hotels, Resorts, Restaurants & Commercial Real Estate",
       description:
-        "You run an existing profitable business or distribution network and want to build a software arm, digital marketplace, or tech-enabled spin-out.",
-      thesisExample: "e.g. Digitizing dealer distributor networks, automating customer workflows, or building proprietary SaaS.",
+        "Launching a boutique hotel, restaurant chain, or commercial venue? We manage site acquisition, interior & kitchen build-out, booking software, hospitality staff recruitment, and opening marketing.",
+      thesisExample: "Boutique hotels, cloud kitchen networks, wellness resorts, and premium F&B retail formats.",
+    },
+    {
+      icon: Sparkles,
+      badge: "E-Commerce & D2C",
+      badgeVariant: "amber" as const,
+      iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
+      title: "Clothing Lines, Electronics & Consumer Brands",
+      description:
+        "Launching an apparel brand, consumer electronics product, or lifestyle brand? We coordinate contract manufacturing, packaging, warehouse fulfillment, digital storefronts, and performance marketing to get first orders.",
+      thesisExample: "Apparel & fashion lines, consumer electronics, specialized packaged goods & D2C brands.",
+    },
+    {
+      icon: Briefcase,
+      badge: "Trading & Distribution",
+      badgeVariant: "slate" as const,
+      iconBg: "bg-[#F6F9FC] text-[#0A2540] border-[#E6E8EB]",
+      title: "Trading, Wholesale & Import-Export",
+      description:
+        "Setting up a distribution network or trading company? We establish supplier contracts, warehouse operations, customs/GST compliance, and B2B dealer sales pipelines.",
+      thesisExample: "Commodity distribution, industrial raw materials, cross-border import/export & wholesale channels.",
+    },
+    {
+      icon: RefreshCw,
+      badge: "Tech & Turnaround",
+      badgeVariant: "indigo" as const,
+      iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
+      title: "Tech Ventures & Stalled Business Turnarounds",
+      description:
+        "Starting a tech venture or rebooting a struggling business? We build rapid feasibility prototypes, design scalable operational systems, fix broken workflows, and vet tech teams tailored to your budget.",
+      thesisExample: "B2B SaaS, internal enterprise software, marketplace platforms, and operational reboot of stalled companies.",
     },
   ];
 
@@ -68,16 +88,16 @@ export function PersonaMatrix() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Who We Build With</Badge>
+          <Badge variant="indigo" size="sm">Industries & Business Use Cases</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for founders, operators & businesses ready to scale.
+            Built for any business. From manufacturing to tech.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Whether you are starting from scratch with a fresh idea or fixing a stalled business, 1008 provides the technical execution to make it happen.
+            Whether starting a manufacturing plant, hospital, school, hotel, e-commerce brand, or tech startup—1008 Network puts your vision to work.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {domains.map((item, idx) => {
             const Icon = item.icon;
             return (

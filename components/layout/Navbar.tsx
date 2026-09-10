@@ -27,7 +27,7 @@ export function Navbar() {
   const navLinks = [
     { label: "180-Day Blueprint", href: "/#blueprint" },
     { label: "Who It's For", href: "/#personas" },
-    { label: "Why 1008", href: "/#comparison" },
+    { label: "Why 1008 Network", href: "/#comparison" },
     { label: "Playbooks", href: "/knowledge" },
     { label: "Manifesto", href: "/manifesto" },
   ];

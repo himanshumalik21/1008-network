@@ -2,10 +2,11 @@
   "name": "1008-network",
   "version": "1.0.0",
   "private": true,
-  "description": "1008 (1008.network) — Venture Studio, Partner Network & Knowledge Hub for India's Business Builders",
+  "description": "1008 Network (1008.network) — Venture Studio, Partner Network & Knowledge Hub for India's Business Builders",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
+    "build:full": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
