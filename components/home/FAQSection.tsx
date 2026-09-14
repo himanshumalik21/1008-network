@@ -8,7 +8,13 @@ import { ChevronDown } from "lucide-react";
 
 export function FAQSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
-  const [category, setCategory] = useState<"all" | "studio" | "network" | "equity">("all");
+  const [category, setCategory] = useState<"all" | "studio" | "equity">("all");
+
+  const categoryTabs = [
+    { label: "All Questions", value: "all" as const },
+    { label: "Venture Studio", value: "studio" as const },
+    { label: "Equity & Ownership", value: "equity" as const },
+  ];
 
   const filteredFaqs = category === "all" ? faqs : faqs.filter((f) => f.category === category);
 
@@ -21,23 +27,26 @@ export function FAQSection() {
             Frequently Answered Questions
           </h2>
           <p className="text-[#425466] text-base">
-            Everything you need to know about partnering with 1008, our equity model, and operational governance.
+            Everything you need to know about partnering with 1008, our shared-equity model, and operational governance.
           </p>
 
           {/* Category Tabs */}
           <div className="pt-4 flex flex-wrap justify-center gap-2">
-            {(["all", "studio", "equity", "network"] as const).map((cat) => (
+            {categoryTabs.map((cat) => (
               <button
-                key={cat}
-                onClick={() => setCategory(cat)}
+                key={cat.value}
+                onClick={() => {
+                  setCategory(cat.value);
+                  setOpenIdx(null);
+                }}
                 className={cn(
-                  "px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider transition-all",
-                  category === cat
+                  "px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all",
+                  category === cat.value
                     ? "bg-[#0A2540] text-white shadow-xs"
                     : "bg-[#F6F9FC] text-[#425466] hover:text-[#0A2540] border border-[#E6E8EB]"
                 )}
               >
-                {cat}
+                {cat.label}
               </button>
             ))}
           </div>

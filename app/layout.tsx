@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | 1008 Network",
   },
   description:
-    "1008 Network is the hands-on operations partner for businesses in India. You bring the vision & capital—we handle real estate, plant setup, machinery, licensing, manpower, tech, and marketing to build & scale it.",
+    "1008 Network is the operational co-builder for founders and domain leaders in India. We deploy production software, structure supply chains, source vetted talent, and unlock institutional credit for shared equity.",
   keywords: [
     "Business Setup India",
     "Turnkey Operations Partner",
