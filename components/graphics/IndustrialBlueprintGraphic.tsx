@@ -11,37 +11,37 @@ export function IndustrialBlueprintGraphic() {
       id: 0,
       x: "22%",
       y: "32%",
-      label: "Site & Land Corridor",
-      status: "Zoning Approved",
+      label: "OEM & Batch Mfg",
+      status: "Supplier Verified",
       color: "#059669",
-      detail: "1.5 Acre Plot in Dedicated State Industrial Corridor",
+      detail: "Batch production contracts, tooling & formulation at verified market rates",
     },
     {
       id: 1,
       x: "52%",
       y: "44%",
-      label: "OEM Machinery Bay",
-      status: "Die Calibrated",
+      label: "Cloud ERP & APIs",
+      status: "Live Sync",
       color: "#635BFF",
-      detail: "3x Custom CNC Milling & Extrusion Line Procured",
+      detail: "Automated inventory tracking, order pipelines & real-time GST e-Invoicing",
     },
     {
       id: 2,
       x: "78%",
       y: "28%",
-      label: "Clearances & Permits",
-      status: "SPCB & Fire Cleared",
+      label: "Statutory & IP Lock",
+      status: "100% Compliant",
       color: "#00D4B2",
-      detail: "State Pollution, Factory Inspector & GST Compliance",
+      detail: "Corporate governance, trademark protections & full founder IP assignment",
     },
     {
       id: 3,
       x: "82%",
       y: "72%",
-      label: "Dispatch & Freight Bay",
-      status: "3PL Integrated",
+      label: "Warehousing & 3PL",
+      status: "Dispatch Ready",
       color: "#FF7043",
-      detail: "National Logistics Hub Integration & Loading Dock",
+      detail: "Multi-city 3PL fulfillment, automated vendor SLAs & freight logistics",
     },
   ];
 
@@ -55,7 +55,7 @@ export function IndustrialBlueprintGraphic() {
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-[#059669] animate-pulse" />
           <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#0A2540]">
-            Plant Commissioning CAD // Telemetry
+            Operational Systems Blueprint // Live Telemetry
           </span>
         </div>
         <span className="text-[10px] font-mono text-[#635BFF] bg-[#F0F0FF] px-2 py-0.5 rounded border border-[#E0E0FF] font-bold">

@@ -34,18 +34,18 @@ export function PillarsBento() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Turnkey Operational Infrastructure</Badge>
+          <Badge variant="indigo" size="sm">Turnkey Venture Infrastructure</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            The complete operational engine to build, fund & run your enterprise.
+            The complete operational engine to build, fund & scale your venture.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            We don&apos;t advise from the sidelines. We stand in the trenches with you—navigating land, plant setup, machinery, statutory permits, staffing, lean tech, and customer acquisition.
+            We don&apos;t advise from the sidelines. We build alongside you—handling software architecture, supply chains, vetted hiring, growth GTM, and institutional capital.
           </p>
         </div>
 
         {/* Studio Pillars Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-          {/* Card 1: Physical Commissioning (7 cols) */}
+          {/* Card 1: Operations & Supply Chain (7 cols) */}
           <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#635BFF]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
@@ -54,22 +54,22 @@ export function PillarsBento() {
                     <Briefcase className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#635BFF] tracking-wide font-bold uppercase">
-                    PHYSICAL ASSETS & COMMISSIONING
+                    OPERATIONS & SUPPLY CHAIN
                   </span>
                 </div>
-                <Badge variant="indigo" size="sm">Turnkey Ground Execution</Badge>
+                <Badge variant="indigo" size="sm">Turnkey Execution</Badge>
               </div>
 
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                  Site Scouting, Plant Setup, Machinery & Permits
+                  End-to-End Operations, Supply Chain & Systems
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We handle the heavy lifting on the ground: securing industrial land, overseeing plant civil build-out, OEM machinery procurement at verified rates, and state statutory clearances.
+                  From batch contract manufacturing and 3PL logistics to statutory compliance, Cloud ERPs, and unit-economic optimization—we build your complete operational engine.
                 </p>
               </div>
 
-              {/* Embedded Interactive CAD Blueprint Graphic */}
+              {/* Embedded Interactive Systems Blueprint Graphic */}
               <div className="pt-2">
                 <IndustrialBlueprintGraphic />
               </div>
@@ -81,7 +81,7 @@ export function PillarsBento() {
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#635BFF] hover:underline flex items-center gap-1"
               >
-                Discuss Facility Scope <ArrowRight className="h-3.5 w-3.5" />
+                Discuss Operational Scope <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
           </div>
@@ -95,7 +95,7 @@ export function PillarsBento() {
                     <ShieldCheck className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#059669] tracking-wide font-bold uppercase">
-                    CAPITAL SYNDICATION
+                    CAPITAL & SYNDICATES
                   </span>
                 </div>
                 <Badge variant="emerald" size="sm">Syndicate Backed</Badge>
@@ -106,7 +106,7 @@ export function PillarsBento() {
                   Curated Investor Pool & Co-Investment
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We present your de-risked business to our active syndicate of angel investors and family offices across ₹2L to ₹5Cr+ ticket sizes.
+                  We present your de-risked venture to our active syndicate of angel investors, family offices, and collateral-free credit lines across ₹2L to ₹5Cr+ ticket sizes.
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export function PillarsBento() {
                     <Code2 className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-sans text-[#00A389] tracking-wide font-bold uppercase">
-                    DIGITAL & SYSTEMS
+                    SOFTWARE & DIGITAL CORE
                   </span>
                 </div>
                 <Badge variant="cyan" size="sm">Lean & Scalable</Badge>
@@ -144,10 +144,10 @@ export function PillarsBento() {
 
               <div>
                 <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Pragmatic ERPs, MVPs & Systems
+                  Production Software, Cloud ERPs & MVPs
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We build rapid feasibility prototypes, lean internal inventory/booking ERPs, and hire budget-aligned technical talent.
+                  We build rapid feasibility prototypes, deploy automated internal Cloud ERPs (ERPNext/Frappe), and integrate conversion storefronts—with 100% IP assigned to you on Day 1.
                 </p>
               </div>
 
