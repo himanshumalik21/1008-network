@@ -147,7 +147,7 @@ export function PillarsBento() {
                   Production Software, Cloud ERPs & MVPs
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We build rapid feasibility prototypes, deploy automated internal Cloud ERPs (ERPNext/Frappe), and integrate conversion storefronts—with 100% IP assigned to you on Day 1.
+                  We architect production-ready software, deploy automated Cloud ERPs, and build conversion-optimized digital engines—with 100% IP ownership assigned on Day 1.
                 </p>
               </div>
 
@@ -184,11 +184,11 @@ export function PillarsBento() {
               </div>
 
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
+                <h3 className="text-xl font-bold text-[#0A2540] mb-2">
                   Key Hiring, Brand Launch & First Revenue
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We recruit your essential operational managers and floor staff, institute quality SOPs, and execute go-to-market campaigns to secure inaugural customer orders.
+                  We recruit vetted founding operators, establish robust commercial SOPs, and execute multi-channel GTM campaigns to secure inaugural customer contracts and cash flow.
                 </p>
               </div>
 
