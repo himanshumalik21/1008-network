@@ -28,6 +28,7 @@ import { TurnaroundPlaybookPhases } from "@/components/knowledge/TurnaroundPlayb
 import { StructuralTrapsSection } from "@/components/knowledge/StructuralTrapsSection";
 import { ULICreditArchitectureGraphic } from "@/components/knowledge/ULICreditArchitectureGraphic";
 import { CreditPlaybookPhases } from "@/components/knowledge/CreditPlaybookPhases";
+import { LenderRejectionTrapsSection } from "@/components/knowledge/LenderRejectionTrapsSection";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -143,6 +144,24 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
+          // If heading is "Why Early Businesses Get Rejected by Institutional Lenders", render heading + dedicated visual traps grid
+          if (headingText.includes("Why Early Businesses Get Rejected")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  Under modern digital lending algorithms, loan rejections rarely stem from a lack of business ambition. They stem from data mismatches across three core touchpoints:
+                </p>
+                <LenderRejectionTrapsSection />
+              </div>
+            );
+          }
+
           // If heading is "The 1008 Zero-Retainer Playbook: How to Build with Venture Discipline"
           if (headingText.includes("The 1008 Zero-Retainer Playbook")) {
             return (
@@ -191,13 +210,16 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
 
         // Check for Heading 3 (### Heading)
         if (trimmed.startsWith("### ")) {
-          // If we already rendered the structural traps via StructuralTrapsSection, skip individual subheadings 1., 2., 3.
+          // If we already rendered the structural traps via visual sections, skip individual subheadings
           if (
             trimmed.includes("The \"Agency & Consultant\" Retainer Sinkhole") ||
             trimmed.includes("The 50/50 Handshake") ||
-            trimmed.includes("Operational Blindness: The \"Spreadsheet & WhatsApp\"")
+            trimmed.includes("Operational Blindness: The \"Spreadsheet & WhatsApp\"") ||
+            trimmed.includes("The GST Reconciliation Gap") ||
+            trimmed.includes("Fragmented Offline Accounting") ||
+            trimmed.includes("Un-Factored Receivables and Late Debtor Cycles")
           ) {
-            return null; // already rendered cleanly in StructuralTrapsSection
+            return null; // already rendered cleanly in visual card sections
           }
 
           const subheadingText = trimmed.replace("### ", "").trim();
@@ -382,7 +404,12 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
           trimmed.startsWith("The active founder is left doing 100%") ||
           trimmed.startsWith("When customer orders, vendor deliveries") ||
           trimmed.startsWith("Without an integrated digital source of truth") ||
-          trimmed.startsWith("Whether you are launching your first company")
+          trimmed.startsWith("Whether you are launching your first company") ||
+          trimmed.startsWith("Differences between monthly sales reported in GSTR-1") ||
+          trimmed.startsWith("Running a business on standalone offline Tally") ||
+          trimmed.startsWith("Allowing corporate accounts to linger beyond 90 days") ||
+          trimmed.startsWith("* **Mismatch Between Filings") ||
+          trimmed.startsWith("To unlock low-cost, collateral-free credit")
         ) {
           return null;
         }
