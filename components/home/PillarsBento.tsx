@@ -5,55 +5,59 @@ import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { IndustrialBlueprintGraphic } from "@/components/graphics/IndustrialBlueprintGraphic";
-import { SyndicateAllocationGraphic } from "@/components/graphics/SyndicateAllocationGraphic";
-import { DigitalSystemsGraphic } from "@/components/graphics/DigitalSystemsGraphic";
-import { CommercialGTMGraphic } from "@/components/graphics/CommercialGTMGraphic";
+import { OperationsVelocityGraphic } from "@/components/graphics/OperationsVelocityGraphic";
+import { CapitalSyndicateGraphic } from "@/components/graphics/CapitalSyndicateGraphic";
+import { TechArchitectureGraphic } from "@/components/graphics/TechArchitectureGraphic";
+import { CommercialRevenueGraphic } from "@/components/graphics/CommercialRevenueGraphic";
 import {
   Code2,
   ShieldCheck,
   Zap,
-  CheckCircle2,
-  Clock,
   Sparkles,
-  Lock,
   ArrowRight,
   Briefcase,
+  Boxes,
+  TrendingUp,
 } from "lucide-react";
 
 export function PillarsBento() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section className="py-24 bg-[#F6F9FC] border-y border-[#E6E8EB] relative overflow-hidden">
+    <section className="py-24 bg-[#F8FAFC] border-y border-[#E2E8F0] relative overflow-hidden">
       {/* Background Architectural Box Grid & Ambient Mesh */}
-      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-50 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[500px] bg-gradient-to-r from-[#635BFF]/06 via-[#00D4B2]/05 to-transparent blur-[140px] pointer-events-none animate-float-slow" />
-      <div className="absolute -bottom-20 right-10 w-[450px] h-[350px] bg-gradient-to-l from-[#FF7043]/05 to-transparent blur-[120px] pointer-events-none animate-float-reverse" />
+      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 -translate-y-1/2 w-[600px] h-[500px] bg-gradient-to-r from-[#635BFF]/08 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-10 right-10 w-[500px] h-[400px] bg-gradient-to-l from-[#FF7043]/06 to-transparent blur-[130px] pointer-events-none animate-float-reverse" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Turnkey Venture Infrastructure</Badge>
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <Badge variant="indigo" size="sm">
+            Turnkey Venture Studio Infrastructure
+          </Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            The complete operational engine to build, fund & scale your venture.
+            We Build the Engine. <br className="hidden sm:inline" />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#0A2540]">
+              You Own the Enterprise.
+            </span>
           </h2>
-          <p className="text-[#425466] text-base sm:text-lg">
-            We don&apos;t advise from the sidelines. We build alongside you—handling software architecture, supply chains, vetted hiring, growth GTM, and institutional capital.
+          <p className="text-[#425466] text-base sm:text-lg leading-relaxed">
+            Stop losing quarters to fragmented agencies, contractor delays, and operational friction. 1008 Network deploys the supply chain, software, talent, and capital to scale your business.
           </p>
         </div>
 
         {/* Studio Pillars Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
           {/* Card 1: Operations & Supply Chain (7 cols) */}
-          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#635BFF]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#635BFF]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">
                     <Briefcase className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-sans text-[#635BFF] tracking-wide font-bold uppercase">
+                  <span className="text-xs font-sans text-[#635BFF] tracking-wider font-bold uppercase">
                     OPERATIONS & SUPPLY CHAIN
                   </span>
                 </div>
@@ -62,39 +66,39 @@ export function PillarsBento() {
 
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                  End-to-End Operations, Supply Chain & Systems
+                  Batch Manufacturing, 3PL Fulfillment & Unit Economics
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  From batch contract manufacturing and 3PL logistics to statutory compliance, Cloud ERPs, and unit-economic optimization—we build your complete operational engine.
+                  We negotiate verified contract manufacturing, stand up multi-city 3PL fulfillment, automate Cloud ERP pipelines, and lock regulatory compliance with zero operational headache.
                 </p>
               </div>
 
-              {/* Embedded Interactive Systems Blueprint Graphic */}
+              {/* Embedded Modern Operations Graphic */}
               <div className="pt-2">
-                <IndustrialBlueprintGraphic />
+                <OperationsVelocityGraphic />
               </div>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">100% Turnkey Execution</span>
+            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
+              <span className="text-xs font-semibold text-[#627D98]">30-Day Setup • Zero Capex Waste</span>
               <button
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#635BFF] hover:underline flex items-center gap-1"
               >
-                Discuss Operational Scope <ArrowRight className="h-3.5 w-3.5" />
+                Discuss Operations Scope <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
           </div>
 
-          {/* Card 2: Investor Pool & Syndicate Funding (5 cols) */}
-          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#059669]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+          {/* Card 2: Capital & Syndicates (5 cols) */}
+          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#059669]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0]">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-sans text-[#059669] tracking-wide font-bold uppercase">
+                  <span className="text-xs font-sans text-[#059669] tracking-wider font-bold uppercase">
                     CAPITAL & SYNDICATES
                   </span>
                 </div>
@@ -103,21 +107,21 @@ export function PillarsBento() {
 
               <div>
                 <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Curated Investor Pool & Co-Investment
+                  ₹2.5Cr+ Syndicate Co-Investment & Credit Rails
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We present your de-risked venture to our active syndicate of angel investors, family offices, and collateral-free credit lines across ₹2L to ₹5Cr+ ticket sizes.
+                  Co-investment from our curated network of 250+ angel syndicates, family offices, and RBI ULI non-dilutive credit lines—preserving founder equity and governance control.
                 </p>
               </div>
 
-              {/* Embedded Interactive Syndicate Allocation Graphic */}
+              {/* Embedded Modern Capital Graphic */}
               <div className="pt-2">
-                <SyndicateAllocationGraphic />
+                <CapitalSyndicateGraphic />
               </div>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Aligned Capital</span>
+            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
+              <span className="text-xs font-semibold text-[#627D98]">Founder Control Preserved</span>
               <Link
                 href="/capital"
                 className="text-xs font-semibold text-[#059669] hover:underline flex items-center gap-1"
@@ -127,37 +131,37 @@ export function PillarsBento() {
             </div>
           </div>
 
-          {/* Card 3: Digital & Systems Architecture (5 cols) */}
-          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#00D4B2]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+          {/* Card 3: Software & Digital Core (5 cols) */}
+          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#00D4B2]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#E6FFFA] text-[#00A389] border border-[#B2F5EA]">
                     <Code2 className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-sans text-[#00A389] tracking-wide font-bold uppercase">
+                  <span className="text-xs font-sans text-[#00A389] tracking-wider font-bold uppercase">
                     SOFTWARE & DIGITAL CORE
                   </span>
                 </div>
-                <Badge variant="cyan" size="sm">Lean & Scalable</Badge>
+                <Badge variant="cyan" size="sm">Production Grade</Badge>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Production Software, Cloud ERPs & MVPs
+                  Enterprise Web & Mobile Software, ERPs & APIs
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We architect production-ready software, deploy automated Cloud ERPs, and build conversion-optimized digital engines—with 100% IP ownership assigned on Day 1.
+                  We architect rapid MVPs, deploy automated internal Cloud ERPs (ERPNext/Frappe), and build conversion storefronts—with 100% IP ownership handed to you on Day 1.
                 </p>
               </div>
 
-              {/* Embedded Interactive Digital Systems Terminal */}
+              {/* Embedded Modern Tech Architecture Graphic */}
               <div className="pt-2">
-                <DigitalSystemsGraphic />
+                <TechArchitectureGraphic />
               </div>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
+            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
               <span className="text-xs font-semibold text-[#627D98]">100% IP Assigned to You</span>
               <button
                 onClick={() => setModalOpen(true)}
@@ -169,14 +173,14 @@ export function PillarsBento() {
           </div>
 
           {/* Card 4: Talent, GTM & Revenue (7 cols) */}
-          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 relative group hover:border-[#FF7043]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between shadow-xs">
+          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#FF7043]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 rounded-xl bg-[#FFF4ED] text-[#F4511E] border border-[#FFE0D2]">
                     <Sparkles className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-sans text-[#F4511E] tracking-wide font-bold uppercase">
+                  <span className="text-xs font-sans text-[#F4511E] tracking-wider font-bold uppercase">
                     TALENT & COMMERCIAL GTM
                   </span>
                 </div>
@@ -184,21 +188,21 @@ export function PillarsBento() {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Key Hiring, Brand Launch & First Revenue
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
+                  High-Velocity GTM, Omnichannel Scale & First Revenue
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We recruit vetted founding operators, establish robust commercial SOPs, and execute multi-channel GTM campaigns to secure inaugural customer contracts and cash flow.
+                  We recruit high-impact founding operators, establish commercial SOPs, and execute targeted B2B outbound & D2C campaigns to drive inaugural cash flows and signed customer contracts.
                 </p>
               </div>
 
-              {/* Embedded Interactive Commercial GTM Board */}
+              {/* Embedded Modern Commercial GTM Graphic */}
               <div className="pt-2">
-                <CommercialGTMGraphic />
+                <CommercialRevenueGraphic />
               </div>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-[#E6E8EB] flex items-center justify-between">
+            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
               <span className="text-xs font-semibold text-[#627D98]">Full Commercial Activation</span>
               <Button
                 onClick={() => setModalOpen(true)}
@@ -221,3 +225,4 @@ export function PillarsBento() {
     </section>
   );
 }
+
