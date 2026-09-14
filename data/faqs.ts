@@ -8,22 +8,22 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "How does the founder partnership and investor syndicate model work?",
-    answer: "You pitch your business vision to 1008 Network. If there is mutual conviction, we step in as your full-stack operational co-builder: we deploy production digital systems, structure supply chain operations, recruit vetted co-founders, and connect you with our angel investor syndicates for growth capital—aligned strictly on shared equity with ₹0 consulting retainers.",
+    answer: "You pitch your business vision to 1008 Network. If there is mutual conviction, we step in as your venture facilitator: we architect your operational systems, source and hire vetted specialized talent directly for your business, configure modern tools (Cloud ERPs, billing APIs), negotiate vendor contracts, and structure syndicate co-investment—aligned strictly on shared venture equity.",
     category: "studio",
   },
   {
-    question: "What does 1008 Network execute across operations and systems?",
-    answer: "We handle turnkey 0-to-1 operational execution: from production software architecture, automated Cloud ERPs, and conversion storefronts to batch manufacturing contracts, 3PL supply chain logistics, statutory clearances, and high-impact GTM customer acquisition.",
+    question: "What does 1008 Network facilitate across operations and systems?",
+    answer: "We orchestrate the complete operational foundation: from sourcing and auditing OEM batch manufacturers and 3PL warehousing partners to configuring Cloud ERP systems, hiring key engineering/sales operators into your company, and securing statutory registrations.",
     category: "studio",
   },
   {
     question: "How do you handle software, ERPs, and digital infrastructure?",
-    answer: "We focus on pragmatic, high-ROI engineering rather than bloated agency development. We build rapid feasibility MVPs to test economic hypotheses, deploy lightweight internal Cloud ERPs (ERPNext/Frappe) and inventory systems, and integrate automated GST billing APIs.",
+    answer: "We design the technical architecture, configure modern open-source ERP tools (ERPNext/Frappe) and payment pipelines, and hire vetted engineers directly for your business—ensuring zero technical debt and 100% IP ownership.",
     category: "studio",
   },
   {
-    question: "How does 1008 Network structure equity, and are there any upfront consulting fees?",
-    answer: "For ventures accepted into the 1008 Network studio, we operate primarily on a shared equity and milestone-based upside model. We do not charge expensive monthly agency retainers or hourly consulting bills. Our team only wins when your enterprise achieves sustained operational profitability and long-term enterprise value.",
+    question: "How does 1008 Network structure equity, and what costs does the business cover?",
+    answer: "1008 Network operates as a venture facilitator on a shared equity and milestone-based upside model, without charging expensive monthly consulting retainers. The venture directly covers its operational tooling, hired team salaries, and manufacturing capex—often funded through the syndicate capital and non-dilutive credit lines we facilitate.",
     category: "equity",
   },
   {

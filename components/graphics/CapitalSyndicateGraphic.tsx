@@ -26,13 +26,13 @@ export function CapitalSyndicateGraphic() {
       tag: "ULI Credit Rails",
     },
     {
-      title: "Studio Sweat Co-Build",
-      amount: "Skin in the Game",
-      desc: "We invest end-to-end operational execution alongside founder equity.",
-      tickets: "Turnkey Operations",
+      title: "Venture Orchestration & Advisory",
+      amount: "Aligned Equity Stake",
+      desc: "We facilitate end-to-end tooling, talent sourcing, vendor selection & venture strategy.",
+      tickets: "Turnkey Orchestration",
       status: "Aligned Incentives",
       color: "#00D4B2",
-      tag: "Zero Retainer",
+      tag: "Venture Facilitation",
     },
   ];
 

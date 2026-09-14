@@ -34,16 +34,16 @@ export function PillarsBento() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <Badge variant="indigo" size="sm">
-            Turnkey Venture Studio Infrastructure
+            Turnkey Venture Facilitation & Infrastructure
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            We Build the Engine. <br className="hidden sm:inline" />
+            We Orchestrate the Foundation. <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#0A2540]">
-              You Own the Enterprise.
+              You Run the Enterprise.
             </span>
           </h2>
           <p className="text-[#425466] text-base sm:text-lg leading-relaxed">
-            Stop losing quarters to fragmented agencies, contractor delays, and operational friction. 1008 Network deploys the supply chain, software, talent, and capital to scale your business.
+            Stop losing quarters to trial-and-error, fragmented agencies, and hiring bottlenecks. 1008 Network acts as your venture facilitator—sourcing the specialized talent, configuring the software tools, securing vendor terms, and structuring growth capital.
           </p>
         </div>
 
@@ -61,15 +61,15 @@ export function PillarsBento() {
                     OPERATIONS & SUPPLY CHAIN
                   </span>
                 </div>
-                <Badge variant="indigo" size="sm">Turnkey Execution</Badge>
+                <Badge variant="indigo" size="sm">Turnkey Facilitation</Badge>
               </div>
 
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                  Batch Manufacturing, 3PL Fulfillment & Unit Economics
+                  Facilitated Manufacturing, 3PL Fulfillment & Supply Chain
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We negotiate verified contract manufacturing, stand up multi-city 3PL fulfillment, automate Cloud ERP pipelines, and lock regulatory compliance with zero operational headache.
+                  We audit and negotiate verified OEM manufacturing contracts, onboard 3PL logistics partners, configure Cloud ERP pipelines, and facilitate statutory compliance—equipping your company with an enterprise-grade operating engine.
                 </p>
               </div>
 
@@ -80,7 +80,7 @@ export function PillarsBento() {
             </div>
 
             <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">30-Day Setup • Zero Capex Waste</span>
+              <span className="text-xs font-semibold text-[#627D98]">Vetted Vendor Selection • Direct Contract Terms</span>
               <button
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#635BFF] hover:underline flex items-center gap-1"
@@ -102,15 +102,15 @@ export function PillarsBento() {
                     CAPITAL & SYNDICATES
                   </span>
                 </div>
-                <Badge variant="emerald" size="sm">Syndicate Backed</Badge>
+                <Badge variant="emerald" size="sm">Syndicate Facilitation</Badge>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  ₹2.5Cr+ Syndicate Co-Investment & Credit Rails
+                  Syndicate Co-Investment & Working Capital Rails
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  Co-investment from our curated network of 250+ angel syndicates, family offices, and RBI ULI non-dilutive credit lines—preserving founder equity and governance control.
+                  We structure and facilitate growth capital from our network of 250+ angel syndicates, family offices, and RBI ULI non-dilutive credit lines—funding your venture&apos;s hiring, tooling, and capex needs.
                 </p>
               </div>
 
@@ -143,15 +143,15 @@ export function PillarsBento() {
                     SOFTWARE & DIGITAL CORE
                   </span>
                 </div>
-                <Badge variant="cyan" size="sm">Production Grade</Badge>
+                <Badge variant="cyan" size="sm">Sourced Talent & Tools</Badge>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Enterprise Web & Mobile Software, ERPs & APIs
+                  Curated Tech Stacks, Cloud ERPs & Sourced Devs
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We architect rapid MVPs, deploy automated internal Cloud ERPs (ERPNext/Frappe), and build conversion storefronts—with 100% IP ownership handed to you on Day 1.
+                  We design your systems architecture, configure modern enterprise tools (ERPNext/Frappe), and hire vetted engineering talent directly for your business—with 100% IP owned by your company.
                 </p>
               </div>
 
@@ -162,7 +162,7 @@ export function PillarsBento() {
             </div>
 
             <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">100% IP Assigned to You</span>
+              <span className="text-xs font-semibold text-[#627D98]">100% IP Owned by Your Entity</span>
               <button
                 onClick={() => setModalOpen(true)}
                 className="text-xs font-semibold text-[#00A389] hover:underline flex items-center gap-1"
@@ -184,15 +184,15 @@ export function PillarsBento() {
                     TALENT & COMMERCIAL GTM
                   </span>
                 </div>
-                <Badge variant="amber" size="sm">Opening Cash Flows</Badge>
+                <Badge variant="amber" size="sm">Talent & GTM Sourcing</Badge>
               </div>
 
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                  High-Velocity GTM, Omnichannel Scale & First Revenue
+                  Key Operator Recruitment, Tooling & GTM Launch
                 </h3>
                 <p className="text-[#425466] text-sm leading-relaxed">
-                  We recruit high-impact founding operators, establish commercial SOPs, and execute targeted B2B outbound & D2C campaigns to drive inaugural cash flows and signed customer contracts.
+                  We source and hire vetted commercial operators, configure high-impact sales tools (outbound SDR engines, ad platforms), and orchestrate commercial launch campaigns to drive customer acquisition and cash flows.
                 </p>
               </div>
 
@@ -203,7 +203,7 @@ export function PillarsBento() {
             </div>
 
             <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Full Commercial Activation</span>
+              <span className="text-xs font-semibold text-[#627D98]">Vetted Talent Sourcing & GTM Tooling</span>
               <Button
                 onClick={() => setModalOpen(true)}
                 variant="primary"

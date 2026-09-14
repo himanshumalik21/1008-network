@@ -126,7 +126,7 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Network // Turnkey Operations & Syndicate Partner
+              1008 Network // Turnkey Venture Facilitation & Syndicate Partner
             </Badge>
           </div>
 
@@ -134,13 +134,13 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] leading-[1.15] font-sans">
             <span className="block">You bring the domain vision.</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We build the operating company.
+              We orchestrate the operating company.
             </span>
           </h1>
 
           {/* Core Subtitle - Concise & Impactful */}
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
-            We engineer turnkey ground operations, deploy enterprise digital systems, and syndicate seed capital alongside ambitious founders—built entirely for shared equity with <strong>zero consulting retainers</strong>.
+            We architect turnkey operational infrastructure, source specialized talent, configure modern software tools, and facilitate syndicate capital alongside ambitious founders—aligned on long-term venture equity.
           </p>
 
           {/* Dual High-Conversion CTAs */}
