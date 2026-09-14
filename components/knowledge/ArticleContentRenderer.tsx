@@ -26,6 +26,8 @@ import { Button } from "@/components/ui/Button";
 import { FounderCashDrainGraphic } from "@/components/knowledge/FounderCashDrainGraphic";
 import { TurnaroundPlaybookPhases } from "@/components/knowledge/TurnaroundPlaybookPhases";
 import { StructuralTrapsSection } from "@/components/knowledge/StructuralTrapsSection";
+import { ULICreditArchitectureGraphic } from "@/components/knowledge/ULICreditArchitectureGraphic";
+import { CreditPlaybookPhases } from "@/components/knowledge/CreditPlaybookPhases";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -159,6 +161,24 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
+          // If heading is "The 1008 Digital Credit Playbook: From Cash Starved to Bankable"
+          if (headingText.includes("The 1008 Digital Credit Playbook")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  To unlock low-cost, collateral-free credit (8%–10.5% interest) and bridge your cash flow gaps, execute this 4-phase financial restructuring roadmap:
+                </p>
+                <CreditPlaybookPhases />
+              </div>
+            );
+          }
+
           return (
             <div key={idx} className="pt-6 pb-2 border-b border-[#E6E8EB]">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
@@ -200,12 +220,22 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             return <FounderCashDrainGraphic key={idx} />;
           }
 
-          // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by TurnaroundPlaybookPhases
+          // Check if this is the ULI / Working Capital diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("THE WORKING CAPITAL CHASM") ||
+            codeLines.includes("WORKING CAPITAL CREDIT ARCHITECTURE") ||
+            codeLines.includes("RBI ULI DIGITAL RAILS")
+          ) {
+            return <ULICreditArchitectureGraphic key={idx} />;
+          }
+
+          // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by TurnaroundPlaybookPhases or CreditPlaybookPhases
           if (
             (codeLines.includes("PHASE 1") && codeLines.includes("PHASE 2")) ||
-            codeLines.includes("Phase 1: Immediate Cash Triage")
+            codeLines.includes("Phase 1: Immediate Cash Triage") ||
+            codeLines.includes("Phase 1: GST & Bank Data Integrity Audit")
           ) {
-            return null; // already rendered via TurnaroundPlaybookPhases
+            return null; // already rendered via phase components
           }
 
           const currentCodeIdx = codeBlockCount++;

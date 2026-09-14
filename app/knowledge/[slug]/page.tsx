@@ -95,7 +95,9 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
           <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-[#829AB1]">
             <span>Series: Founder Playbooks</span>
             <span>•</span>
-            <span className="text-[#635BFF] font-semibold">Day 1 Edition</span>
+            <span className="text-[#635BFF] font-semibold">
+              {resource.slug.includes("uli") || resource.slug.includes("credit") ? "Day 2 Edition" : "Day 1 Edition"}
+            </span>
           </div>
         </div>
 
@@ -103,7 +105,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
         <div className="space-y-4 mb-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-2.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider rounded-md bg-[#635BFF]/10 text-[#635BFF] border border-[#635BFF]/20">
-              1008 FOUNDER PLAYBOOK (DAY 1)
+              {resource.slug.includes("uli") || resource.slug.includes("credit") ? "1008 FOUNDER PLAYBOOK (DAY 2)" : "1008 FOUNDER PLAYBOOK (DAY 1)"}
             </span>
             <Badge variant="indigo" size="sm">
               {resource.category.replace("_", " ").toUpperCase()}
