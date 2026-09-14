@@ -41,6 +41,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
 
   const sectors: SectorCategory[] = [
     "Manufacturing & Industrial Plants",
+    "India Market Entry & Manufacturing JVs",
     "Healthcare, Hospitals & Clinics",
     "Schools & Education Institutions",
     "Hotels, Hospitality & F&B",

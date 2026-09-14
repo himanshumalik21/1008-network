@@ -11,6 +11,8 @@ import {
   TrendingUp,
   ArrowRight,
   CheckCircle2,
+  Globe,
+  Factory,
 } from "lucide-react";
 
 export function PersonaMatrix() {
@@ -57,7 +59,7 @@ export function PersonaMatrix() {
       thesisExample: "Consumer electronics, smart appliances, industrial gear & lifestyle hardware.",
     },
     {
-      icon: Briefcase,
+      icon: Factory,
       badge: "Manufacturing & Industrial",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
@@ -70,17 +72,17 @@ export function PersonaMatrix() {
       thesisExample: "Precision engineering, auto-components, packaging plants, chemicals & fabrication.",
     },
     {
-      icon: Sparkles,
-      badge: "Global Co-Investment",
+      icon: Globe,
+      badge: "Global Entry & JVs",
       badgeVariant: "cyan" as const,
       iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       title: "India Market Entry & Manufacturing JVs",
       bullets: [
-        "PLI policy navigation, state subsidy lock & corporate structuring",
-        "Industrial corridor scouting, cleanroom & factory setup",
-        "Local supplier joint-ventures & syndication with Indian co-investors",
+        "Turnkey factory setup, cleanroom assembly & state industrial land lock",
+        "PLI / SPECS subsidies, BIS compliance & Press Note 3 compliant structuring",
+        "Tier-1 vendor sourcing, domestic GTM & Indian co-investment syndicates",
       ],
-      thesisExample: "Semiconductor assembly & test (OSAT), EV battery & powertrain units, renewable tech.",
+      thesisExample: "Semiconductor OSAT/ATMP, EV battery & powertrain, MedTech & global OEMs expanding into India.",
     },
     {
       icon: RefreshCw,
@@ -108,10 +110,10 @@ export function PersonaMatrix() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">Turnkey Capabilities & Use Cases</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for any business. From manufacturing to consumer brands.
+            Built for any business. From manufacturing to global expansion.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Whether launching a new venture from scratch or revitalizing an existing business, 1008 Network executes the ground operations to build lasting enterprise value.
+            Whether launching a venture from scratch, entering India as a foreign corporation, or revitalizing an existing business, 1008 Network executes the ground operations to build lasting enterprise value.
           </p>
         </div>
 

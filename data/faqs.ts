@@ -37,6 +37,11 @@ export const faqs: FAQItem[] = [
     category: "studio",
   },
   {
+    question: "Can foreign corporations, global startups, and overseas OEMs partner with 1008 for India market entry?",
+    answer: "Yes. 1008 Network acts as the turnkey India Operating Partner and JV Co-Builder for global corporations, hardware manufacturers, and tech enterprises entering the Indian market. We handle industrial land lock, PLI / SPECS policy subsidies, cleanroom/factory setups (e.g. Semiconductor OSAT, EV battery assembly, Consumer Tech), Press Note 3 compliant corporate structuring, Tier-1 supply chain localization, statutory approvals (BIS/CDSCO/EPR), and domestic B2B distribution.",
+    category: "studio",
+  },
+  {
     question: "Can I discuss an early concept or a confidential business turnaround under NDA?",
     answer: "Absolutely. Every preliminary discussion, business model, and operational diagnostic is protected by a mutual Non-Disclosure Agreement (NDA). We evaluate operational viability with strict confidentiality before any public announcements or formal partnerships are signed.",
     category: "equity",

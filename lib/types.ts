@@ -11,6 +11,8 @@ export type RoleCategory =
 export type SectorCategory =
   | "Manufacturing & Industrial Plants"
   | "Industrial & Manufacturing"
+  | "India Market Entry & Manufacturing JVs"
+  | "Global Co-Investment & JVs"
   | "Healthcare, Hospitals & Clinics"
   | "Healthcare & HealthTech"
   | "Schools & Education Institutions"
