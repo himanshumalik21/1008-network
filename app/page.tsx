@@ -41,7 +41,7 @@ export default function HomePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-gradient-to-r from-[#635BFF]/12 via-[#00D4B2]/08 to-[#FF7043]/06 blur-[130px] pointer-events-none animate-pulse-subtle" />
         
         {/* Interactive 3D Point-Cloud Globe Artwork on Right */}
-        <InteractiveNetworkGlobe className="absolute -right-24 top-1/2 -translate-y-1/2 w-[540px] h-[540px] opacity-65 pointer-events-none hidden xl:block" />
+        <InteractiveNetworkGlobe className="absolute -right-20 lg:-right-32 xl:-right-40 top-1/2 -translate-y-1/2 w-[650px] h-[650px] lg:w-[800px] lg:h-[800px] xl:w-[940px] xl:h-[940px] opacity-85 pointer-events-none hidden lg:block" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <Badge variant="indigo" size="md" pulse>

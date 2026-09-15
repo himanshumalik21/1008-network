@@ -42,28 +42,23 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
     );
     observer.observe(canvas);
 
-    // Generate 3D point cloud on sphere
-    const pointCount = 700;
+    // Generate 3D point cloud on unit sphere
+    const pointCount = 850;
     const points: Array<{
-      x: number;
-      y: number;
-      z: number;
-      baseX: number;
-      baseY: number;
-      baseZ: number;
+      nx: number;
+      ny: number;
+      nz: number;
     }> = [];
-
-    const radius = 180;
 
     for (let i = 0; i < pointCount; i++) {
       const phi = Math.acos(-1 + (2 * i) / pointCount);
       const theta = Math.sqrt(pointCount * Math.PI) * phi;
 
-      const x = radius * Math.cos(theta) * Math.sin(phi);
-      const y = radius * Math.sin(theta) * Math.sin(phi);
-      const z = radius * Math.cos(phi);
+      const nx = Math.cos(theta) * Math.sin(phi);
+      const ny = Math.sin(theta) * Math.sin(phi);
+      const nz = Math.cos(phi);
 
-      points.push({ x, y, z, baseX: x, baseY: y, baseZ: z });
+      points.push({ nx, ny, nz });
     }
 
     // Key Hotspot Hubs (e.g. Delhi NCR, Bengaluru, Mumbai, Pune, Hyderabad, London, SF)
@@ -107,13 +102,14 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
         return;
       }
 
-      rotationY += 0.004;
+      rotationY += 0.0035;
 
       ctx.clearRect(0, 0, width, height);
 
       const cx = width / 2;
       const cy = height / 2;
-      const fov = 400;
+      const radius = (Math.min(width, height) / 2) * 0.85;
+      const fov = radius * 2.2;
 
       // Transform and project sphere points
       const cosY = Math.cos(rotationY);
@@ -122,36 +118,40 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
       const sinX = Math.sin(rotationX);
 
       // Render faint sphere halo
-      const halo = ctx.createRadialGradient(cx, cy, radius * 0.4, cx, cy, radius * 1.2);
-      halo.addColorStop(0, "rgba(99, 91, 255, 0.06)");
-      halo.addColorStop(0.7, "rgba(0, 212, 178, 0.04)");
+      const halo = ctx.createRadialGradient(cx, cy, radius * 0.3, cx, cy, radius * 1.25);
+      halo.addColorStop(0, "rgba(99, 91, 255, 0.08)");
+      halo.addColorStop(0.6, "rgba(0, 212, 178, 0.05)");
       halo.addColorStop(1, "rgba(255, 255, 255, 0)");
       ctx.fillStyle = halo;
       ctx.beginPath();
-      ctx.arc(cx, cy, radius * 1.2, 0, Math.PI * 2);
+      ctx.arc(cx, cy, radius * 1.25, 0, Math.PI * 2);
       ctx.fill();
 
       // Render point cloud
       points.forEach((p) => {
+        const baseX = p.nx * radius;
+        const baseY = p.ny * radius;
+        const baseZ = p.nz * radius;
+
         // Rotate Y
-        let x1 = p.baseX * cosY - p.baseZ * sinY;
-        let z1 = p.baseZ * cosY + p.baseX * sinY;
+        let x1 = baseX * cosY - baseZ * sinY;
+        let z1 = baseZ * cosY + baseX * sinY;
 
         // Rotate X
-        let y1 = p.baseY * cosX - z1 * sinX;
-        let z2 = z1 * cosX + p.baseY * sinX;
+        let y1 = baseY * cosX - z1 * sinX;
+        let z2 = z1 * cosX + baseY * sinX;
 
         // Only draw visible hemisphere & soft back points
         const scale = fov / (fov + z2);
         const projX = cx + x1 * scale;
         const projY = cy + y1 * scale;
 
-        const alpha = Math.max(0.1, (z2 + radius) / (radius * 2));
-        const size = Math.max(0.8, 1.6 * scale);
+        const alpha = Math.max(0.12, (z2 + radius) / (radius * 2));
+        const size = Math.max(0.9, 2.0 * scale);
 
         ctx.beginPath();
         ctx.arc(projX, projY, size, 0, Math.PI * 2);
-        ctx.fillStyle = z2 > 0 ? `rgba(99, 91, 255, ${alpha * 0.7})` : `rgba(148, 163, 184, ${alpha * 0.25})`;
+        ctx.fillStyle = z2 > 0 ? `rgba(99, 91, 255, ${alpha * 0.8})` : `rgba(148, 163, 184, ${alpha * 0.3})`;
         ctx.fill();
       });
 
@@ -185,11 +185,11 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
           ctx.moveTo(h1.x, h1.y);
 
           const midX = (h1.x + h2.x) / 2;
-          const midY = (h1.y + h2.y) / 2 - 40; // curve upward
+          const midY = (h1.y + h2.y) / 2 - radius * 0.22; // proportional upward curve
 
           ctx.quadraticCurveTo(midX, midY, h2.x, h2.y);
-          ctx.strokeStyle = `rgba(99, 91, 255, 0.35)`;
-          ctx.lineWidth = 1.2;
+          ctx.strokeStyle = `rgba(99, 91, 255, 0.4)`;
+          ctx.lineWidth = 1.5;
           ctx.stroke();
 
           // Animated particle moving along the arc
@@ -198,10 +198,10 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
           const py = (1 - t) * (1 - t) * h1.y + 2 * (1 - t) * t * midY + t * t * h2.y;
 
           ctx.beginPath();
-          ctx.arc(px, py, 3, 0, Math.PI * 2);
+          ctx.arc(px, py, 4, 0, Math.PI * 2);
           ctx.fillStyle = arc.color;
           ctx.shadowColor = arc.color;
-          ctx.shadowBlur = 8;
+          ctx.shadowBlur = 10;
           ctx.fill();
           ctx.shadowBlur = 0;
         }
@@ -211,15 +211,15 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
       projectedHubs.forEach((h) => {
         if (h.visible) {
           ctx.beginPath();
-          ctx.arc(h.x, h.y, 4, 0, Math.PI * 2);
+          ctx.arc(h.x, h.y, 5, 0, Math.PI * 2);
           ctx.fillStyle = h.color;
           ctx.fill();
 
           // Outer pulse ring
           ctx.beginPath();
-          ctx.arc(h.x, h.y, 7, 0, Math.PI * 2);
+          ctx.arc(h.x, h.y, 9, 0, Math.PI * 2);
           ctx.strokeStyle = h.color;
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 1.2;
           ctx.stroke();
         }
       });
