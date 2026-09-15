@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     canonical: "https://1008.network",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-1008network",
+    google: "zRGxo0D-z82H3UqxPjmXVcoPIB3yuli6-NgUQFvZ3I4",
   },
   openGraph: {
     type: "website",
@@ -135,6 +135,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <meta
+          name="google-site-verification"
+          content="zRGxo0D-z82H3UqxPjmXVcoPIB3yuli6-NgUQFvZ3I4"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
