@@ -13,7 +13,9 @@ import {
   CheckCircle2,
   MapPin,
   Sparkles,
+  ArrowUpRight,
 } from "lucide-react";
+import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -64,9 +66,23 @@ export function Footer() {
               </Badge>
             </div>
 
-            <div className="pt-4 flex items-center gap-2 text-xs text-[#627D98] font-medium">
-              <MapPin className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>Headquartered in Delhi NCR • Operating Pan-India</span>
+            <div className="pt-2 flex flex-col gap-2 text-xs text-[#627D98] font-medium">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-3.5 w-3.5 text-[#635BFF]" />
+                <span>Headquartered in Delhi NCR • Operating Pan-India</span>
+              </div>
+              <div className="pt-1">
+                <a
+                  href="https://www.linkedin.com/company/1008-network/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-all text-xs font-semibold border border-[#0A66C2]/20 shadow-2xs group"
+                >
+                  <LinkedInIcon className="h-3.5 w-3.5" />
+                  <span>Follow 1008 Network on LinkedIn</span>
+                  <ArrowUpRight className="h-3 w-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -132,6 +148,17 @@ export function Footer() {
                   Contact & Office Hours
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/1008-network/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#425466] hover:text-[#0A66C2] transition-colors flex items-center gap-1.5"
+                >
+                  <LinkedInIcon className="h-3.5 w-3.5 text-[#0A66C2]" />
+                  <span>LinkedIn Page</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -174,9 +201,22 @@ export function Footer() {
               )}
             </form>
 
-            <div className="pt-2 text-[11px] text-[#627D98] flex items-center gap-1.5 font-medium">
-              <Mail className="h-3 w-3 text-[#635BFF]" />
-              <span>Direct: join@1008.network</span>
+            <div className="pt-2 space-y-1 text-[11px] text-[#627D98] font-medium">
+              <div className="flex items-center gap-1.5">
+                <Mail className="h-3 w-3 text-[#635BFF]" />
+                <span>Direct: join@1008.network</span>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/company/1008-network/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 hover:text-[#0A66C2] transition-colors"
+                >
+                  <LinkedInIcon className="h-3 w-3 text-[#0A66C2]" />
+                  <span>LinkedIn: 1008-network</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -188,6 +228,15 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-xs">
+            <a
+              href="https://www.linkedin.com/company/1008-network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#0A66C2] transition-colors flex items-center gap-1 font-medium"
+            >
+              <LinkedInIcon className="h-3.5 w-3.5 text-[#0A66C2]" />
+              <span>LinkedIn</span>
+            </a>
             <Link href="/terms" className="hover:text-[#0A2540] transition-colors">
               Terms & NDA Notice
             </Link>

@@ -73,6 +73,9 @@ export default function RootLayout({
     logo: "https://1008.network/logo.png",
     description:
       "High-conviction venture studio for founders, entrepreneurs, and businesses.",
+    sameAs: [
+      "https://www.linkedin.com/company/1008-network/"
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Delhi NCR",

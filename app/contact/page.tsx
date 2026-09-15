@@ -15,7 +15,9 @@ import {
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
+  ArrowUpRight,
 } from "lucide-react";
+import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -109,6 +111,22 @@ export default function ContactPage() {
                   <div>
                     <span className="text-[#0A2540] block font-semibold">Response SLA</span>
                     <span>Within 24 business hours</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2.5 pt-1 border-t border-[#E6E8EB]/80">
+                  <LinkedInIcon className="h-4 w-4 text-[#0A66C2] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[#0A2540] block font-semibold">LinkedIn</span>
+                    <a
+                      href="https://www.linkedin.com/company/1008-network/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0A66C2] hover:underline inline-flex items-center gap-1 font-medium"
+                    >
+                      <span>linkedin.com/company/1008-network</span>
+                      <ArrowUpRight className="h-3 w-3" />
+                    </a>
                   </div>
                 </div>
               </div>

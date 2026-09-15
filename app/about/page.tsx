@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { MapPin, ArrowRight } from "lucide-react";
+import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export default function AboutPage() {
   const hubs = [
@@ -60,11 +61,22 @@ export default function AboutPage() {
         <div className="p-8 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
           <div className="space-y-1 text-center sm:text-left">
             <div className="text-lg font-bold text-[#0A2540]">Have a domain thesis to discuss?</div>
-            <p className="text-xs text-[#627D98]">Reach out directly to our venture partners in Delhi NCR.</p>
+            <p className="text-xs text-[#627D98]">Reach out directly to our venture partners in Delhi NCR or follow our updates.</p>
           </div>
-          <Button href="/contact" variant="primary" size="md" rightIcon={<ArrowRight className="h-4 w-4" />}>
-            Contact & Office Hours
-          </Button>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://www.linkedin.com/company/1008-network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white border border-[#E6E8EB] text-xs font-semibold text-[#0A2540] hover:text-[#0A66C2] hover:border-[#0A66C2]/30 transition-all shadow-xs"
+            >
+              <LinkedInIcon className="h-3.5 w-3.5 text-[#0A66C2]" />
+              <span>Follow on LinkedIn</span>
+            </a>
+            <Button href="/contact" variant="primary" size="md" rightIcon={<ArrowRight className="h-4 w-4" />}>
+              Contact & Office Hours
+            </Button>
+          </div>
         </div>
       </div>
     </div>
