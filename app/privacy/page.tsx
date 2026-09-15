@@ -233,7 +233,7 @@ export default function PrivacyPage() {
               To maintain the highest standards of pipeline freshness and respect your right to data minimization:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Automated Expiry:</strong> All public startup requirements on the Partner Network follow an active curation lifecycle with automated archiving. Retired postings are removed from active directory boards to prevent stale data.</li>
+              <li><strong>Automated Archiving & Curation:</strong> All public startup requirements on the Partner Network follow an active curation lifecycle with automated archiving. Retired postings are removed from active directory boards to prevent stale data.</li>
               <li><strong>Archival & Deletion:</strong> Inactive applicant records and studio intake notes that do not proceed to an active engagement are permanently purged or anonymized within 12 months.</li>
             </ul>
           </section>

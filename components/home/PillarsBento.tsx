@@ -182,7 +182,7 @@ export function PillarsBento() {
             <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-medium">
                 <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" />
-                <span>Target-based rounds (No expiry)</span>
+                <span>Target-based capital rounds</span>
               </div>
               <Button
                 href="/capital"

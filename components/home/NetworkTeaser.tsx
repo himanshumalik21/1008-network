@@ -67,8 +67,8 @@ export function NetworkTeaser() {
                   <Badge variant="indigo" size="sm">
                     {opp.sector}
                   </Badge>
-                  <span className="text-[11px] font-mono text-[#635BFF] font-semibold flex items-center gap-1 bg-[#F0F0FF] px-2 py-0.5 rounded border border-[#E0E0FF]">
-                    <Clock className="h-3 w-3" /> {opp.expiresInDays}d active
+                  <span className="text-[11px] font-mono text-[#007A66] font-semibold flex items-center gap-1 bg-[#E6FFFA] px-2 py-0.5 rounded border border-[#B2F5EA]">
+                    <CheckCircle2 className="h-3 w-3" /> Active Role
                   </span>
                 </div>
 

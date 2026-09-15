@@ -105,7 +105,7 @@ export default function CapitalPage() {
             <span>•</span>
             <div className="flex items-center gap-1.5">
               <Target className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>Target-Based Rounds (No Expiry)</span>
+              <span>Target-Based Capital Rounds</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
@@ -227,11 +227,11 @@ export default function CapitalPage() {
                 Startup Launches Round & Defines Use of Funds
               </h3>
               <p className="text-xs text-[#425466] leading-relaxed">
-                The company initiates a round with an exact funding target (e.g., ₹50 Lakhs or $1M) and clearly states what the money will be used for: setting up manufacturing lines, procuring inventory, or hiring core teams. <strong>Rounds have no time expiry and stay open until the target is fulfilled.</strong>
+                The company initiates a round with an exact funding target (e.g., ₹50 Lakhs to ₹5 Cr+) and clearly states what the money will be used for: setting up manufacturing lines, procuring inventory, or hiring core teams. <strong>Rounds stay open until the declared capital target is fulfilled.</strong>
               </p>
             </div>
             <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <FileText className="h-3.5 w-3.5 text-[#635BFF]" /> Goal-based raise (No expiry)
+              <FileText className="h-3.5 w-3.5 text-[#635BFF]" /> Goal-based capital raise
             </div>
           </div>
 
@@ -419,7 +419,7 @@ export default function CapitalPage() {
             <div className="p-4 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
                 <Target className="h-4 w-4 text-[#635BFF]" />
-                <span>Target-Based (No Expiry)</span>
+                <span>Target-Based Allocation</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed">
                 Capital campaigns stay open until the startup reaches its declared funding target, with clear operational milestones and transparency.

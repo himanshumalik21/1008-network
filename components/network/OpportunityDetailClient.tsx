@@ -79,8 +79,8 @@ export function OpportunityDetailClient({
                 </span>
               )}
             </div>
-            <span className="text-xs font-mono text-[#635BFF] font-semibold flex items-center gap-1 bg-[#F0F0FF] px-2.5 py-1 rounded-md border border-[#E0E0FF]">
-              <Clock className="h-3.5 w-3.5" /> Active for next {opp.expiresInDays} days
+            <span className="text-xs font-mono text-[#007A66] font-semibold flex items-center gap-1 bg-[#E6FFFA] px-2.5 py-1 rounded-md border border-[#B2F5EA]">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Active Requirement
             </span>
           </div>
 

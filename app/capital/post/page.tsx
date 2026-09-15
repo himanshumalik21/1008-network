@@ -112,7 +112,7 @@ export default function PostCapitalRequirementPage() {
         <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs font-mono text-[#065F46] mb-8">
           <DollarSign className="h-4 w-4 text-[#059669] shrink-0" />
           <span>
-            <strong>Target-Based Campaign:</strong> Capital rounds have no fixed time expiry. Your requirement remains active and open to syndicate allocations until your target funding goal is achieved.
+            <strong>Target-Based Campaign:</strong> Your capital requirement remains active and open to syndicate allocations until your target funding goal is achieved.
           </span>
         </div>
 
