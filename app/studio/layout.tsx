@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     title: "Venture Studio & Operational Co-Builder | 1008 Network",
     description:
       "You bring the vision & capital. We handle ground operations, software, and talent for shared equity.",
-    url: "https://1008.network/studio",
+    url: "https://www.1008.network/studio",
   },
   alternates: {
-    canonical: "https://1008.network/studio",
+    canonical: "https://www.1008.network/studio",
   },
 };
 
@@ -38,7 +38,7 @@ export default function StudioLayout({
     provider: {
       "@type": "Organization",
       name: "1008 Network",
-      url: "https://1008.network",
+      url: "https://www.1008.network",
     },
     areaServed: {
       "@type": "Country",

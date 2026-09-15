@@ -73,8 +73,8 @@ export default async function OpportunityDetailPage({ params }: PageProps) {
     hiringOrganization: {
       "@type": "Organization",
       name: `1008 Network / ${opp.title}`,
-      sameAs: "https://1008.network",
-      logo: "https://1008.network/logo.png",
+      sameAs: "https://www.1008.network",
+      logo: "https://www.1008.network/logo.png",
     },
     jobLocation: {
       "@type": "Place",
@@ -113,19 +113,19 @@ export default async function OpportunityDetailPage({ params }: PageProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://1008.network",
+        item: "https://www.1008.network",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Partner Network",
-        item: "https://1008.network/network",
+        item: "https://www.1008.network/network",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: opp.title,
-        item: `https://1008.network/network/${opp.id}`,
+        item: `https://www.1008.network/network/${opp.id}`,
       },
     ],
   };

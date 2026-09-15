@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     "Business Turnaround India",
     "1008 Network",
   ],
-  authors: [{ name: "1008 Network Team", url: "https://1008.network" }],
+  authors: [{ name: "1008 Network Team", url: "https://www.1008.network" }],
   creator: "1008 Network",
   publisher: "1008.network",
-  metadataBase: new URL("https://1008.network"),
+  metadataBase: new URL("https://www.1008.network"),
   alternates: {
-    canonical: "https://1008.network",
+    canonical: "https://www.1008.network",
   },
   verification: {
     google: "zRGxo0D-z82H3UqxPjmXVcoPIB3yuli6-NgUQFvZ3I4",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://1008.network",
+    url: "https://www.1008.network",
     title: "1008 Network — Co-Founder Matching, Shared Equity Roles & Venture Operations",
     description:
       "Find co-founders, join startups for shared equity, and build scalable enterprises across India with zero upfront agency retainers.",
@@ -87,10 +87,10 @@ export default function RootLayout({
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://1008.network/#organization",
+    "@id": "https://www.1008.network/#organization",
     name: "1008 Network",
-    url: "https://1008.network",
-    logo: "https://1008.network/logo.png",
+    url: "https://www.1008.network",
+    logo: "https://www.1008.network/logo.png",
     description:
       "Operational venture studio and co-founder talent network in India curating high-conviction partnerships and turnkey business execution for shared equity.",
     sameAs: [
@@ -114,19 +114,19 @@ export default function RootLayout({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://1008.network/#website",
-    url: "https://1008.network",
+    "@id": "https://www.1008.network/#website",
+    url: "https://www.1008.network",
     name: "1008 Network",
     description: "Co-Founder Matching, Shared Equity Opportunities & Venture Co-Building in India",
     publisher: {
-      "@id": "https://1008.network/#organization",
+      "@id": "https://www.1008.network/#organization",
     },
     inLanguage: "en-IN",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://1008.network/network?q={search_term_string}",
+        urlTemplate: "https://www.1008.network/network?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

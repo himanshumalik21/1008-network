@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://1008.network/sitemap.xml",
-    host: "https://1008.network",
+    sitemap: "https://www.1008.network/sitemap.xml",
+    host: "https://www.1008.network",
   };
 }

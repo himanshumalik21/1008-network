@@ -3,7 +3,7 @@ import { initialKnowledgeResources } from "@/data/knowledgeResources";
 import { initialOpportunities } from "@/data/opportunities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://1008.network";
+  const baseUrl = "https://www.1008.network";
   const now = new Date().toISOString();
 
   // Tier 1: Core Landing & Primary Value Engines (Priority 1.0 & 0.9)

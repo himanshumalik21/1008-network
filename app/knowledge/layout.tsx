@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     title: "Knowledge Hub & Founder Playbooks | 1008 Network",
     description:
       "Deep-dive playbooks and execution guides for building profitable enterprises in India without burning cash.",
-    url: "https://1008.network/knowledge",
+    url: "https://www.1008.network/knowledge",
   },
   alternates: {
-    canonical: "https://1008.network/knowledge",
+    canonical: "https://www.1008.network/knowledge",
   },
 };
 
