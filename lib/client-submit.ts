@@ -1,3 +1,5 @@
+import { sanitizeInput, isBotHoneypot } from "./validation";
+
 export const WEB3FORMS_ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "30146901-b156-4ddd-8202-737acea8b811";
 
@@ -6,26 +8,36 @@ interface Web3SubmitOptions {
   name?: string;
   email?: string;
   replyTo?: string;
+  botcheck?: string;
   data: Record<string, unknown>;
 }
 
 export async function submitToWeb3Forms(options: Web3SubmitOptions): Promise<{ success: boolean; message?: string }> {
   try {
+    // 1. Bot Honeypot detection: If spam bot filled out hidden trap field, silently pretend success
+    if (isBotHoneypot(options.botcheck)) {
+      console.warn("[Anti-Spam Shield]: Honeypot triggered, submission silently discarded.");
+      return { success: true, message: "Submission received successfully." };
+    }
+
     const formData = new FormData();
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", options.subject);
-    formData.append("from_name", "1008 Network Alert");
+    formData.append("subject", sanitizeInput(options.subject));
+    formData.append("from_name", "1008 Partner Network");
+
+    // Hidden native botcheck field for Web3Forms' built-in spam filter
+    formData.append("botcheck", "");
 
     if (options.name) {
-      formData.append("Applicant / Sender", options.name);
+      formData.append("Applicant / Sender", sanitizeInput(options.name));
     }
     if (options.email || options.replyTo) {
-      const email = options.email || options.replyTo || "";
+      const email = sanitizeInput(options.email || options.replyTo || "");
       formData.append("email", email);
-      formData.append("replyto", options.replyTo || email);
+      formData.append("replyto", sanitizeInput(options.replyTo || email));
     }
 
-    // Format all submitted fields into human-readable labels
+    // Format all submitted fields with sanitization
     for (const [key, value] of Object.entries(options.data)) {
       if (value !== undefined && value !== null && value !== "") {
         // Convert camelCase to Title Case
@@ -34,11 +46,14 @@ export async function submitToWeb3Forms(options: Web3SubmitOptions): Promise<{ s
           .replace(/^./, (s) => s.toUpperCase())
           .trim();
 
-        const formattedVal = Array.isArray(value)
-          ? value.join(", ")
-          : typeof value === "object"
-          ? JSON.stringify(value)
-          : String(value);
+        let formattedVal = "";
+        if (Array.isArray(value)) {
+          formattedVal = value.map((v) => sanitizeInput(v)).join(", ");
+        } else if (typeof value === "object") {
+          formattedVal = JSON.stringify(value);
+        } else {
+          formattedVal = sanitizeInput(String(value));
+        }
 
         formData.append(label, formattedVal);
       }
