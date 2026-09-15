@@ -240,7 +240,7 @@ export interface StartupCapitalCard {
     domainYears: number;
   };
   ventureThesis: string;
-  expiresInDays: number;
+  fundingStatus: "Open for Allocation" | "Allocating" | "Target Reached";
   studioBacked?: boolean;
 }
 

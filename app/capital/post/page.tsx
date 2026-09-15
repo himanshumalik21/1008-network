@@ -108,11 +108,11 @@ export default function PostCapitalRequirementPage() {
           </p>
         </div>
 
-        {/* 60-Day Policy Note */}
+        {/* Target-Based Raise Policy Note */}
         <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs font-mono text-[#065F46] mb-8">
-          <Clock className="h-4 w-4 text-[#059669] shrink-0" />
+          <DollarSign className="h-4 w-4 text-[#059669] shrink-0" />
           <span>
-            <strong>60-Day Active Window:</strong> All capital listings remain active for 60 days to ensure responsive investor dealflow.
+            <strong>Target-Based Campaign:</strong> Capital rounds have no fixed time expiry. Your requirement remains active and open to syndicate allocations until your target funding goal is achieved.
           </span>
         </div>
 

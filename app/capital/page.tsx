@@ -325,13 +325,13 @@ export default function CapitalPage() {
         {/* StartEngine/AngelList Data Gathering Notice Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-3 rounded-2xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs font-mono text-[#065F46] shadow-2xs">
           <div className="flex items-center gap-2">
-            <Clock className="h-4 w-4 text-[#059669] shrink-0" />
+            <DollarSign className="h-4 w-4 text-[#059669] shrink-0" />
             <span>
-              <strong>Pre-Launch Aggregation:</strong> We are currently gathering verified capital commitments and vetting startup applications. Deal allocations will open sequentially once cohort allocation thresholds are met.
+              <strong>Target-Based Allocation:</strong> Unlike talent roles, Capital Network campaigns have no fixed time expiry. Campaigns remain open based on the company&apos;s target funding goal and close once the allocation is fulfilled.
             </span>
           </div>
           <span className="text-[11px] font-sans font-bold text-[#059669] bg-white px-2.5 py-1 rounded-md border border-[#A7F3D0] shrink-0 self-start sm:self-auto">
-            Zero Stale Deals
+            Goal-Driven Raise
           </span>
         </div>
 
@@ -485,8 +485,8 @@ export default function CapitalPage() {
                               <Sparkles className="h-2.5 w-2.5" /> Studio Backed
                             </span>
                           )}
-                          <span className="text-[10px] font-mono text-[#635BFF] font-bold flex items-center gap-1 bg-[#F0F0FF] px-2 py-0.5 rounded-md border border-[#E0E0FF]">
-                            <Clock className="h-2.5 w-2.5" /> {startup.expiresInDays}d left
+                          <span className="text-[10px] font-mono text-[#059669] font-bold flex items-center gap-1 bg-[#ECFDF5] px-2 py-0.5 rounded-md border border-[#A7F3D0]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" /> {startup.fundingStatus || "Open for Allocation"}
                           </span>
                         </div>
                       </div>

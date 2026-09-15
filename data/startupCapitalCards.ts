@@ -16,7 +16,7 @@ export const initialStartupCapitalCards: StartupCapitalCard[] = [
       domainYears: 18,
     },
     ventureThesis: "Solving sample contamination and regulatory non-compliance in multi-center Indian clinical trials with tamper-proof temperature telemetry and direct hospital integrations.",
-    expiresInDays: 45,
+    fundingStatus: "Open for Allocation",
     studioBacked: true,
   },
   {
@@ -34,7 +34,7 @@ export const initialStartupCapitalCards: StartupCapitalCard[] = [
       domainYears: 16,
     },
     ventureThesis: "Eliminating ₹18L/hour factory downtime for Tier-2 auto suppliers with guaranteed 48-hour tooling dispatch and automated CAD bidding.",
-    expiresInDays: 38,
+    fundingStatus: "Open for Allocation",
     studioBacked: true,
   },
   {
@@ -52,7 +52,7 @@ export const initialStartupCapitalCards: StartupCapitalCard[] = [
       domainYears: 12,
     },
     ventureThesis: "Clean-label Ayurvedic formulations with 68% gross margins and proven repeat purchase cohorts across 12,000 monthly orders.",
-    expiresInDays: 52,
+    fundingStatus: "Open for Allocation",
     studioBacked: true,
   },
   {
@@ -70,7 +70,8 @@ export const initialStartupCapitalCards: StartupCapitalCard[] = [
       domainYears: 15,
     },
     ventureThesis: "Building localized, thermally robust battery packs with 2,500+ lifecycle guarantees engineered specifically for Indian high-ambient-temperature last-mile logistics.",
-    expiresInDays: 60,
+    fundingStatus: "Open for Allocation",
     studioBacked: true,
   },
 ];
+

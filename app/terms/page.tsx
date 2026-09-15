@@ -221,17 +221,18 @@ export default function TermsPage() {
                 4
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Partner Network Rules & 60-Day Expiry Window
+                Network Rules & Campaign Lifecycles
               </h2>
             </div>
             <p>
-              To maintain high operational conviction and avoid stale listings on the Partner Network:
+              To maintain high operational conviction and clean pipeline visibility across 1008 Network:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Zero Placement / Listing Fees:</strong> Listing a requirement and registering a talent profile is 100% free of agency retainers.</li>
-              <li><strong>60-Day Active Window:</strong> All startup leadership listings remain live for exactly 60 days. Stale or unresponsive postings are automatically archived.</li>
-              <li><strong>Authentic Representations:</strong> Users represent that all submitted experience, founder pedigree, equity ranges, and project descriptions are truthful and accurate.</li>
-              <li><strong>Community Conduct:</strong> Unsolicited sales pitches, automated bot scraping, recruitment agency poaching, or harassment will result in immediate permanent expulsion.</li>
+              <li><strong>Zero Placement / Syndicate Fees:</strong> Posting leadership requirements, registering investor profiles, or pitching startup capital needs carries zero upfront brokerage retainers.</li>
+              <li><strong>Partner Network 60-Day Active Window:</strong> Co-founder and operator leadership listings remain live for exactly 60 days to keep talent matching pipelines responsive and eliminate stale listings.</li>
+              <li><strong>Capital Network Target-Based Lifecycles:</strong> Capital campaigns and investment tranches have no fixed time expiry; they remain open and active based on the venture&apos;s target funding goal and close once syndicate allocation targets are met.</li>
+              <li><strong>Authentic Representations:</strong> Users represent that all submitted track records, founder pedigrees, equity ranges, and financials are truthful and accurate.</li>
+              <li><strong>Community Conduct:</strong> Unsolicited sales pitches, automated bot scraping, recruitment poaching, or harassment will result in immediate permanent expulsion.</li>
             </ul>
           </section>
 
