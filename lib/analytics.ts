@@ -59,3 +59,10 @@ export const trackCtaClick = (buttonText: string, destination: string) => {
     destination: destination,
   });
 };
+
+export const trackNetworkApply = (opportunityId: string, role: string) => {
+  trackEvent("network_apply", {
+    event_category: "Network",
+    event_label: `${role} - ${opportunityId}`,
+  });
+};

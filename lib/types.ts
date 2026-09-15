@@ -6,7 +6,28 @@ export type RoleCategory =
   | "Operations & Supply Chain Lead"
   | "Product & Design Partner"
   | "Finance & Legal Strategist"
-  | "Growth & Marketing Architect";
+  | "Growth & Marketing Architect"
+  | "Manufacturing & Plant Setup Head"
+  | "AI / ML & DeepTech Lead";
+
+export type RoleType =
+  | "Co-Founder"
+  | "Founding Lead"
+  | "Head of Department"
+  | "Fractional CXO"
+  | "Specialist & Operator";
+
+export type CommitmentType =
+  | "Full-time (Co-Founder)"
+  | "Full-time (Core Lead)"
+  | "Fractional / Part-time"
+  | "Advisory / Milestone";
+
+export type VentureStage =
+  | "Idea / Pre-Seed"
+  | "Feasibility & MVP"
+  | "Early Revenue (₹25L - ₹1Cr)"
+  | "Scaling & Growth (₹1Cr - ₹10Cr)";
 
 export type SectorCategory =
   | "Manufacturing & Industrial Plants"
@@ -26,7 +47,8 @@ export type SectorCategory =
   | "Logistics & Supply Chain"
   | "FinTech & Financial Infrastructure"
   | "PropTech & Real Estate"
-  | "CleanTech & Energy";
+  | "CleanTech & Energy"
+  | "AgriTech & Rural Commerce";
 
 export type LocationType =
   | "Delhi NCR"
@@ -35,16 +57,22 @@ export type LocationType =
   | "Pune"
   | "Hyderabad"
   | "Chennai"
+  | "Ahmedabad"
   | "Pan-India / Remote";
 
 export interface Opportunity {
   id: string;
   title: string;
   role: RoleCategory;
+  roleType?: RoleType;
+  commitment?: CommitmentType;
   sector: SectorCategory;
   location: LocationType;
   equityRange: string;
   stipendOrSalary?: string;
+  stage?: VentureStage;
+  skills?: string[];
+  fundingStatus?: string;
   founderBackground: {
     name: string;
     headline: string;
@@ -61,6 +89,25 @@ export interface Opportunity {
   expiresInDays: number;
   applicantsCount: number;
   featured?: boolean;
+}
+
+export interface TalentProfile {
+  id: string;
+  name: string;
+  title: string;
+  roleFamily: RoleCategory;
+  roleType: RoleType;
+  yearsOfExperience: number;
+  location: LocationType;
+  bio: string;
+  skills: string[];
+  targetRole: string;
+  targetCommitment: CommitmentType;
+  targetEquity: string;
+  targetCash: string;
+  exCompanies: string[];
+  badge?: string;
+  availableImmediately: boolean;
 }
 
 export type ResourceCategory = "playbook" | "book_summary" | "masterclass" | "podcast";
