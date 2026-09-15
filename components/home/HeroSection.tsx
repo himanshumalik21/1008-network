@@ -128,40 +128,40 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Redesigned Four Pillars Glass Grid Dock */}
-        <div className="w-full max-w-5xl mx-auto pt-10 sm:pt-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {/* Four Pillars 2x2 Grid */}
+        <div className="w-full max-w-3xl mx-auto pt-8 sm:pt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
             {pillars.map((pillar) => (
               <Link
                 key={pillar.num}
                 href={pillar.href}
-                className={`p-4 sm:p-5 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
+                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex items-center justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
               >
-                {/* Subtle Top Indicator Accent Line on Hover */}
+                {/* Subtle Left Accent Line on Hover */}
                 <div
-                  className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-0 left-0 bottom-0 w-[3px] opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ backgroundColor: pillar.accent }}
                 />
 
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
                     {pillar.icon}
                   </div>
-                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${pillar.badgeBg}`}>
-                    Pillar {pillar.num}
-                  </span>
-                </div>
-
-                <div className="space-y-0.5">
-                  <div className="flex items-center justify-between">
+                  <div className="space-y-0.5 text-left">
                     <h3 className="text-xs sm:text-sm font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors flex items-center gap-1">
                       {pillar.title}
                     </h3>
-                    <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    <p className="text-[11px] text-[#627D98] font-normal leading-snug">
+                      {pillar.tagline}
+                    </p>
                   </div>
-                  <p className="text-[11px] text-[#627D98] font-normal leading-snug">
-                    {pillar.tagline}
-                  </p>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${pillar.badgeBg}`}>
+                    Pillar {pillar.num}
+                  </span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all hidden sm:block" />
                 </div>
               </Link>
             ))}
