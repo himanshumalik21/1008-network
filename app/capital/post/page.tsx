@@ -298,6 +298,17 @@ export default function PostCapitalRequirementPage() {
             </form>
           )}
         </div>
+
+        {/* Facilitator Notice Footer */}
+        <div className="mt-8 p-4 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] text-xs text-[#627D98] space-y-1.5">
+          <div className="flex items-center gap-2 text-[#0A2540] font-semibold">
+            <ShieldCheck className="h-4 w-4 text-[#635BFF]" />
+            <span>How Deal Execution Works:</span>
+          </div>
+          <p className="text-[11px] leading-relaxed text-[#425466]">
+            1008 Network operates strictly as a discovery and networking facilitator. When your target round allocation is soft-committed, we coordinate a combined founder-investor deal conference. All definitive legal contracts, terms, and funds are executed directly between the founders and investors following mutual due diligence.
+          </p>
+        </div>
       </div>
     </div>
   );

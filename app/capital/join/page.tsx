@@ -358,6 +358,17 @@ export default function RegisterInvestorPage() {
             </form>
           )}
         </div>
+
+        {/* Facilitator & Due Diligence Notice */}
+        <div className="mt-8 p-4 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] text-xs text-[#92400E] space-y-1.5">
+          <div className="flex items-center gap-2 font-semibold font-sans">
+            <ShieldCheck className="h-4 w-4 text-[#D97706]" />
+            <span>Facilitator & Independent Due Diligence Standard:</span>
+          </div>
+          <p className="text-[11px] leading-relaxed text-[#A16207]">
+            1008 Network operates strictly as a discovery and networking facilitator. We do not manage pooled investment funds, hold investor capital, or offer investment guarantees. All investment allocations and signed agreements are executed directly between you and the company following your independent due diligence and at your own discretion.
+          </p>
+        </div>
       </div>
     </div>
   );

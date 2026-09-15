@@ -42,6 +42,11 @@ import {
   Award,
   Globe,
   Coins,
+  Users,
+  FileCheck2,
+  AlertTriangle,
+  FileText,
+  Handshake,
 } from "lucide-react";
 
 export default function CapitalPage() {
@@ -263,7 +268,135 @@ export default function CapitalPage() {
         </div>
       </section>
 
-      {/* 3. Main Marketplace Container */}
+      {/* 3. How Capital Rounds Work (4-Step Workflow) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
+          <Badge variant="cyan" size="sm">Syndicate Workflow</Badge>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
+            How Startup Capital Rounds Work
+          </h2>
+          <p className="text-xs sm:text-sm text-[#425466]">
+            From open allocation to founder-investor deal completion — transparent, structured, and goal-driven.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Step 1 */}
+          <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-3 group hover:border-[#635BFF]/40 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="w-8 h-8 rounded-xl bg-[#F0F0FF] text-[#635BFF] font-mono font-bold text-xs flex items-center justify-center border border-[#E0E0FF]">
+                  01
+                </span>
+                <span className="text-[10px] font-mono text-[#059669] bg-[#ECFDF5] px-2 py-0.5 rounded-full border border-[#A7F3D0]">
+                  Target Raise
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-[#0A2540]">
+                Startup Launches Round & Defines Use of Funds
+              </h3>
+              <p className="text-xs text-[#425466] leading-relaxed">
+                Founders post their target raise (e.g. ₹50L or $1M) with an exact breakdown of capital deployment: equipment, facility lease, pilot rollout, or inventory. Rounds stay open until target is met.
+              </p>
+            </div>
+            <div className="text-[11px] font-mono text-[#627D98] pt-2 border-t border-[#F1F4F8] flex items-center gap-1">
+              <FileText className="h-3 w-3 text-[#635BFF]" /> Goal-based allocation
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-3 group hover:border-[#00A389]/40 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="w-8 h-8 rounded-xl bg-[#E6FFFA] text-[#00A389] font-mono font-bold text-xs flex items-center justify-center border border-[#B2F5EA]">
+                  02
+                </span>
+                <span className="text-[10px] font-mono text-[#635BFF] bg-[#F0F0FF] px-2 py-0.5 rounded-full border border-[#E0E0FF]">
+                  Soft Commits
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-[#0A2540]">
+                Investors & Angels Express Soft-Commitment
+              </h3>
+              <p className="text-xs text-[#425466] leading-relaxed">
+                Individuals, operators, and syndicate leads specify how much capital they want to commit (from ₹50K to ₹50L+) along with their strategic value add and risk criteria.
+              </p>
+            </div>
+            <div className="text-[11px] font-mono text-[#627D98] pt-2 border-t border-[#F1F4F8] flex items-center gap-1">
+              <Coins className="h-3 w-3 text-[#00A389]" /> Accessible check sizes
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-3 group hover:border-[#FF7043]/40 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="w-8 h-8 rounded-xl bg-[#FFF3EE] text-[#FF7043] font-mono font-bold text-xs flex items-center justify-center border border-[#FFE2D6]">
+                  03
+                </span>
+                <span className="text-[10px] font-mono text-[#FF7043] bg-[#FFF3EE] px-2 py-0.5 rounded-full border border-[#FFE2D6]">
+                  Deal Room
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-[#0A2540]">
+                Target Reached & Combined Deal Meeting
+              </h3>
+              <p className="text-xs text-[#425466] leading-relaxed">
+                When the full round is allocated, 1008 Network facilitates a joint meeting where founders and prospective investors align on valuations, instruments (CCPS/equity), and execution milestones.
+              </p>
+            </div>
+            <div className="text-[11px] font-mono text-[#627D98] pt-2 border-t border-[#F1F4F8] flex items-center gap-1">
+              <Users className="h-3 w-3 text-[#FF7043]" /> Combined founder call
+            </div>
+          </div>
+
+          {/* Step 4 */}
+          <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-3 group hover:border-[#0A2540]/40 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="w-8 h-8 rounded-xl bg-[#F8FAFC] text-[#0A2540] font-mono font-bold text-xs flex items-center justify-center border border-[#CBD5E1]">
+                  04
+                </span>
+                <span className="text-[10px] font-mono text-[#425466] bg-[#F1F5F9] px-2 py-0.5 rounded-full border border-[#E2E8F0]">
+                  Direct Signing
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-[#0A2540]">
+                Self Due Diligence & Direct Execution
+              </h3>
+              <p className="text-xs text-[#425466] leading-relaxed">
+                Investors perform their own independent due diligence and sign definitive agreements directly with the startup. 1008 Network acts strictly as a discovery and meeting facilitator.
+              </p>
+            </div>
+            <div className="text-[11px] font-mono text-[#627D98] pt-2 border-t border-[#F1F4F8] flex items-center gap-1">
+              <FileCheck2 className="h-3 w-3 text-[#0A2540]" /> Direct party contract
+            </div>
+          </div>
+        </div>
+
+        {/* 4. Facilitator & Self-Due Diligence Disclaimer Banner */}
+        <div className="mt-6 p-4 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#92400E]">
+          <div className="flex items-start gap-2.5">
+            <AlertTriangle className="h-4 w-4 text-[#D97706] shrink-0 mt-0.5" />
+            <div className="space-y-0.5">
+              <span className="font-bold font-sans">
+                Platform Facilitator & Self Due Diligence Notice:
+              </span>
+              <p className="text-[11px] text-[#A16207] leading-relaxed">
+                1008 Network is a pure technology & discovery facilitator connecting founders and capital providers. We do not pool investor capital, manage custodial funds, or offer investment advice. Startup investments carry substantial risk; all investors must conduct their own independent due diligence and invest at their own risk.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/terms"
+            className="text-[11px] font-mono font-bold text-[#D97706] hover:underline whitespace-nowrap shrink-0 self-start sm:self-auto"
+          >
+            Review Terms & Disclaimers →
+          </Link>
+        </div>
+      </section>
+
+      {/* 5. Main Marketplace Container */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
         
         {/* Marketplace View Toggle: Startups Seeking Capital vs Investors Directory */}
