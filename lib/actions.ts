@@ -6,6 +6,7 @@ import {
   sendNetworkPostAlert,
   sendContactAlert,
   sendInvestorProfileAlert,
+  sendStartupCapitalAlert,
 } from "./email";
 
 export interface ActionResult<T = unknown> {
@@ -223,6 +224,51 @@ export async function submitInvestorProfile(payload: {
     return {
       success: false,
       message: "Unable to submit your investor profile. Please email us directly at join@1008.network.",
+      error: (err as Error).message,
+    };
+  }
+}
+
+export async function submitStartupCapitalRequest(payload: {
+  startupName: string;
+  founderName: string;
+  email: string;
+  phone: string;
+  sector: string;
+  currentStage: string;
+  targetCapital: string;
+  capitalUse: string;
+  pitchDeckUrl?: string;
+  thesis: string;
+}): Promise<ActionResult> {
+  try {
+    if (!payload.startupName || !payload.founderName || !payload.email || !payload.phone || !payload.targetCapital) {
+      return {
+        success: false,
+        message: "Please fill out all required startup and founder fields.",
+      };
+    }
+
+    const record = {
+      id: `scap-${Date.now()}`,
+      ...payload,
+      submittedAt: new Date().toISOString(),
+    };
+
+    // Dispatch automated email notification to join@1008.network
+    await sendStartupCapitalAlert(payload).catch((err) => {
+      console.error("[Non-blocking Email Error]:", err);
+    });
+
+    return {
+      success: true,
+      message: "Your startup capital and co-building application has been received under Mutual NDA. Our partners will evaluate your thesis and reach out within 48 business hours.",
+      data: { id: record.id },
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: "Unable to submit your capital request. Please email us directly at join@1008.network.",
       error: (err as Error).message,
     };
   }

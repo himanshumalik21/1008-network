@@ -383,3 +383,69 @@ export async function sendInvestorProfileAlert(data: {
     replyTo: data.email,
   });
 }
+
+/**
+ * Startup Capital Raising Intake Alert
+ */
+export async function sendStartupCapitalAlert(data: {
+  startupName: string;
+  founderName: string;
+  email: string;
+  phone: string;
+  sector: string;
+  currentStage: string;
+  targetCapital: string;
+  capitalUse: string;
+  pitchDeckUrl?: string;
+  thesis: string;
+}) {
+  const subject = `🚀 [STARTUP SEEKING CAPITAL]: ${data.startupName} (${data.targetCapital}) - ${data.sector}`;
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #F6F9FC; color: #0A2540; padding: 24px; }
+    .card { background-color: #FFFFFF; max-width: 600px; margin: 0 auto; border-radius: 16px; border: 1px solid #E6E8EB; overflow: hidden; }
+    .header { background: #0A2540; color: #FFFFFF; padding: 24px; }
+    .content { padding: 28px; }
+    .field { margin-bottom: 10px; font-size: 13px; }
+    .label { color: #627D98; font-weight: bold; }
+    .box { background-color: #F8FAFC; border: 1px solid #E6E8EB; border-radius: 10px; padding: 14px; margin: 16px 0; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h3 style="margin:0; color:#FFFFFF;">New Startup Seeking Capital</h3>
+      <p style="margin:4px 0 0 0; color:#635BFF; font-size:13px; font-weight:bold;">${data.startupName} • Target: ${data.targetCapital}</p>
+    </div>
+    <div class="content">
+      <div class="field"><span class="label">Founder:</span> ${data.founderName} (<a href="mailto:${data.email}">${data.email}</a>)</div>
+      <div class="field"><span class="label">Phone:</span> <a href="tel:${data.phone}">${data.phone}</a></div>
+      <div class="field"><span class="label">Sector:</span> ${data.sector}</div>
+      <div class="field"><span class="label">Current Stage:</span> <strong>${data.currentStage}</strong></div>
+      <div class="field"><span class="label">Capital Target:</span> <strong>${data.targetCapital}</strong></div>
+      <div class="field"><span class="label">Deployment Purpose:</span> ${data.capitalUse}</div>
+      ${data.pitchDeckUrl ? `<div class="field"><span class="label">Pitch Deck / Link:</span> <a href="${data.pitchDeckUrl.startsWith("http") ? data.pitchDeckUrl : `https://${data.pitchDeckUrl}`}" target="_blank">View Materials →</a></div>` : ""}
+
+      <div class="box">
+        <strong>Venture Thesis & Traction:</strong><br/>
+        ${data.thesis}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+  return sendEmail({
+    to: ALERT_RECIPIENT,
+    subject,
+    html,
+    replyTo: data.email,
+  });
+}
+
