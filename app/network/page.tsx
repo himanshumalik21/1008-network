@@ -49,7 +49,6 @@ export default function NetworkPage() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   const [isTalentModalOpen, setIsTalentModalOpen] = useState(false);
 
-  // Filter Categories
   const roleFilters = [
     { label: "All Roles", value: "all" },
     { label: "Technical & CTO", value: "Technical Co-Founder (CTO)" },
@@ -60,6 +59,7 @@ export default function NetworkPage() {
     { label: "AI & DeepTech", value: "AI / ML & DeepTech Lead" },
     { label: "Finance & Fractional CXO", value: "Finance & Legal Strategist" },
     { label: "Growth & Marketing", value: "Growth & Marketing Architect" },
+    { label: "Others", value: "Other Domain / Specialist Role" },
   ];
 
   const locations: LocationType[] = [
@@ -71,6 +71,7 @@ export default function NetworkPage() {
     "Chennai",
     "Ahmedabad",
     "Pan-India / Remote",
+    "Other Location",
   ];
 
   // Filtered Opportunities
@@ -330,6 +331,8 @@ export default function NetworkPage() {
                 <option value="Founding Lead">Founding Core Lead</option>
                 <option value="Head of Department">Head of Department</option>
                 <option value="Fractional CXO">Fractional CXO / Advisor</option>
+                <option value="Specialist & Operator">Specialist & Operator</option>
+                <option value="Other">Other</option>
               </select>
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#829AB1] pointer-events-none" />
             </div>

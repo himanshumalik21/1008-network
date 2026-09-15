@@ -197,6 +197,7 @@ export default function ContactPage() {
                       <option value="Partner Network">1008 Network Partner Inquiry</option>
                       <option value="Investor / Syndicate">Venture Capital / Co-Investment</option>
                       <option value="Media / General">Media & General Partnerships</option>
+                      <option value="Other">Other / General Inquiry</option>
                     </select>
                   </div>
                 </div>

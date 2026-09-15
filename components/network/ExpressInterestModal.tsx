@@ -228,6 +228,7 @@ export function ExpressInterestModal({
                   <option value="Full-Time Core Lead">Full-Time Core Team Lead</option>
                   <option value="Fractional / Part-Time (15-20 hrs/wk)">Fractional / Part-Time (15-20 hrs/week)</option>
                   <option value="Advisory / Specialist">Advisory / Milestone Specialist</option>
+                  <option value="Other / Flexible">Other / Flexible Arrangement</option>
                 </select>
               </div>
 

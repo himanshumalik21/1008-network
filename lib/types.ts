@@ -8,26 +8,30 @@ export type RoleCategory =
   | "Finance & Legal Strategist"
   | "Growth & Marketing Architect"
   | "Manufacturing & Plant Setup Head"
-  | "AI / ML & DeepTech Lead";
+  | "AI / ML & DeepTech Lead"
+  | "Other Domain / Specialist Role";
 
 export type RoleType =
   | "Co-Founder"
   | "Founding Lead"
   | "Head of Department"
   | "Fractional CXO"
-  | "Specialist & Operator";
+  | "Specialist & Operator"
+  | "Other";
 
 export type CommitmentType =
   | "Full-time (Co-Founder)"
   | "Full-time (Core Lead)"
   | "Fractional / Part-time"
-  | "Advisory / Milestone";
+  | "Advisory / Milestone"
+  | "Other / Flexible";
 
 export type VentureStage =
   | "Idea / Pre-Seed"
   | "Feasibility & MVP"
   | "Early Revenue (₹25L - ₹1Cr)"
-  | "Scaling & Growth (₹1Cr - ₹10Cr)";
+  | "Scaling & Growth (₹1Cr - ₹10Cr)"
+  | "Other Stage";
 
 export type SectorCategory =
   | "Manufacturing & Industrial Plants"
@@ -48,7 +52,8 @@ export type SectorCategory =
   | "FinTech & Financial Infrastructure"
   | "PropTech & Real Estate"
   | "CleanTech & Energy"
-  | "AgriTech & Rural Commerce";
+  | "AgriTech & Rural Commerce"
+  | "Other Sector / Cross-Industry";
 
 export type LocationType =
   | "Delhi NCR"
@@ -58,7 +63,8 @@ export type LocationType =
   | "Hyderabad"
   | "Chennai"
   | "Ahmedabad"
-  | "Pan-India / Remote";
+  | "Pan-India / Remote"
+  | "Other Location";
 
 export interface Opportunity {
   id: string;

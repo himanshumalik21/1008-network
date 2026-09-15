@@ -54,6 +54,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
     "Growth & Marketing Architect",
     "Manufacturing & Plant Setup Head",
     "AI / ML & DeepTech Lead",
+    "Other Domain / Specialist Role",
   ];
 
   const locations: LocationType[] = [
@@ -65,6 +66,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
     "Chennai",
     "Ahmedabad",
     "Pan-India / Remote",
+    "Other Location",
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -266,6 +268,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
                     <option value="Full-time (Core Lead)">Full-Time Core Team Lead</option>
                     <option value="Fractional / Part-time">Fractional / Part-Time (15-20 hrs/week)</option>
                     <option value="Advisory / Milestone">Advisory / Specialist</option>
+                    <option value="Other / Flexible">Other / Flexible Arrangement</option>
                   </select>
                 </div>
 

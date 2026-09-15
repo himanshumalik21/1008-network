@@ -51,6 +51,7 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
     "Business Turnaround & Reboot",
     "Logistics & Supply Chain",
     "FinTech & Financial Infrastructure",
+    "Other Sector / Cross-Industry",
   ];
 
   const cities: LocationType[] = [
@@ -60,7 +61,9 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
     "Pune",
     "Hyderabad",
     "Chennai",
+    "Ahmedabad",
     "Pan-India / Remote",
+    "Other Location",
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -52,6 +52,7 @@ export default function PostOpportunityPage() {
     "AI / ML & DeepTech Lead",
     "Finance & Legal Strategist",
     "Growth & Marketing Architect",
+    "Other Domain / Specialist Role",
   ];
 
   const sectors: SectorCategory[] = [
@@ -66,6 +67,7 @@ export default function PostOpportunityPage() {
     "PropTech & Real Estate",
     "Logistics & Supply Chain",
     "Hotels, Hospitality & F&B",
+    "Other Sector / Cross-Industry",
   ];
 
   const cities: LocationType[] = [
@@ -77,6 +79,7 @@ export default function PostOpportunityPage() {
     "Chennai",
     "Ahmedabad",
     "Pan-India / Remote",
+    "Other Location",
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -287,6 +290,7 @@ export default function PostOpportunityPage() {
                     <option value="Head of Department">Head of Department</option>
                     <option value="Fractional CXO">Fractional CXO</option>
                     <option value="Specialist & Operator">Specialist & Operator</option>
+                    <option value="Other">Other Level</option>
                   </select>
                 </div>
 
@@ -303,6 +307,7 @@ export default function PostOpportunityPage() {
                     <option value="Full-time (Core Lead)">Full-time (Core Lead)</option>
                     <option value="Fractional / Part-time">Fractional / Part-time</option>
                     <option value="Advisory / Milestone">Advisory / Milestone</option>
+                    <option value="Other / Flexible">Other / Flexible</option>
                   </select>
                 </div>
               </div>
@@ -355,6 +360,7 @@ export default function PostOpportunityPage() {
                     <option value="Feasibility & MVP">Feasibility & MVP</option>
                     <option value="Early Revenue (₹25L - ₹1Cr)">Early Revenue (₹25L - ₹1Cr)</option>
                     <option value="Scaling & Growth (₹1Cr - ₹10Cr)">Scaling & Growth (₹1Cr - ₹10Cr)</option>
+                    <option value="Other Stage">Other Stage</option>
                   </select>
                 </div>
               </div>
