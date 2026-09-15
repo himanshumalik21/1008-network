@@ -17,6 +17,17 @@ export interface ActionResult<T = unknown> {
   error?: string;
 }
 
+function isValidEmail(email: string): boolean {
+  if (!email || typeof email !== "string" || email.length > 254) return false;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email.trim());
+}
+
+function cleanString(val: unknown, maxLen = 5000): string {
+  if (!val || typeof val !== "string") return "";
+  return val.trim().slice(0, maxLen);
+}
+
 // In-memory persistent queue for runtime submissions (when running without live DB connection)
 const localSubmissions = {
   studioApplications: [] as Array<StudioApplicationData & { id: string; submittedAt: string }>,
@@ -41,7 +52,11 @@ const localSubmissions = {
 
 export async function submitStudioApplication(formData: StudioApplicationData): Promise<ActionResult> {
   try {
-    if (!formData.fullName || !formData.email || !formData.problemThesis) {
+    const fullName = cleanString(formData.fullName, 120);
+    const email = cleanString(formData.email, 254);
+    const problemThesis = cleanString(formData.problemThesis, 5000);
+
+    if (!fullName || !email || !problemThesis) {
       return {
         success: false,
         message: "Please provide your full name, email, and problem thesis.",
@@ -49,8 +64,32 @@ export async function submitStudioApplication(formData: StudioApplicationData): 
       };
     }
 
-    const newRecord = {
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid work or personal email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
+    const sanitizedData: StudioApplicationData = {
       ...formData,
+      fullName,
+      email,
+      phone: cleanString(formData.phone, 30),
+      city: (formData.city || "Delhi NCR") as StudioApplicationData["city"],
+      currentRole: cleanString(formData.currentRole, 100),
+      currentCompany: cleanString(formData.currentCompany, 100),
+      primaryDomain: (formData.primaryDomain || "Tech & Software Ventures") as StudioApplicationData["primaryDomain"],
+      linkedinUrl: cleanString(formData.linkedinUrl, 250),
+      problemThesis,
+      targetCustomer: cleanString(formData.targetCustomer, 2000),
+      unfairAdvantage: cleanString(formData.unfairAdvantage, 2000),
+      timeCommitment: (formData.timeCommitment || "Full-Time Immediate") as StudioApplicationData["timeCommitment"],
+    };
+
+    const newRecord = {
+      ...sanitizedData,
       id: `app-studio-${Date.now()}`,
       submittedAt: new Date().toISOString(),
     };
@@ -58,7 +97,7 @@ export async function submitStudioApplication(formData: StudioApplicationData): 
     localSubmissions.studioApplications.push(newRecord);
 
     // Dispatch automated email notification to join@1008.network
-    await sendStudioPitchAlert(formData).catch((err) => {
+    await sendStudioPitchAlert(sanitizedData).catch((err) => {
       console.error("[Non-blocking Email Error]:", err);
     });
 
@@ -78,7 +117,12 @@ export async function submitStudioApplication(formData: StudioApplicationData): 
 
 export async function submitNetworkOpportunity(formData: NetworkPostData): Promise<ActionResult> {
   try {
-    if (!formData.founderName || !formData.founderEmail || !formData.opportunityTitle || !formData.roleNeeded) {
+    const founderName = cleanString(formData.founderName, 120);
+    const founderEmail = cleanString(formData.founderEmail, 254);
+    const opportunityTitle = cleanString(formData.opportunityTitle, 200);
+    const roleNeeded = formData.roleNeeded;
+
+    if (!founderName || !founderEmail || !opportunityTitle || !roleNeeded) {
       return {
         success: false,
         message: "Missing required fields for publishing opportunity.",
@@ -86,8 +130,31 @@ export async function submitNetworkOpportunity(formData: NetworkPostData): Promi
       };
     }
 
-    const newPost = {
+    if (!isValidEmail(founderEmail)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
+    const sanitizedData: NetworkPostData = {
       ...formData,
+      founderName,
+      founderEmail,
+      opportunityTitle,
+      roleNeeded: formData.roleNeeded,
+      sector: formData.sector,
+      location: formData.location,
+      equityOffered: cleanString(formData.equityOffered, 50),
+      stipendOffered: cleanString(formData.stipendOffered, 100),
+      founderPriorExperience: cleanString(formData.founderPriorExperience, 300),
+      ventureThesis: cleanString(formData.ventureThesis, 5000),
+      idealCandidateProfile: cleanString(formData.idealCandidateProfile, 5000),
+    };
+
+    const newPost = {
+      ...sanitizedData,
       id: `opp-${Date.now()}`,
       submittedAt: new Date().toISOString(),
     };
@@ -95,7 +162,7 @@ export async function submitNetworkOpportunity(formData: NetworkPostData): Promi
     localSubmissions.networkPosts.push(newPost);
 
     // Dispatch automated email notification to join@1008.network
-    await sendNetworkPostAlert(formData).catch((err) => {
+    await sendNetworkPostAlert(sanitizedData).catch((err) => {
       console.error("[Non-blocking Email Error]:", err);
     });
 
@@ -118,17 +185,34 @@ export async function applyToOpportunity(
   payload: { name: string; email: string; phone: string; linkedin: string; yearsOfExp: number; pitch: string }
 ): Promise<ActionResult> {
   try {
-    if (!payload.name || !payload.email || !payload.pitch) {
+    const name = cleanString(payload.name, 120);
+    const email = cleanString(payload.email, 254);
+    const pitch = cleanString(payload.pitch, 3000);
+
+    if (!name || !email || !pitch) {
       return {
         success: false,
         message: "Please complete your name, email, and introductory pitch.",
       };
     }
 
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
     const record = {
       id: `app-net-${Date.now()}`,
-      oppId,
-      ...payload,
+      oppId: cleanString(oppId, 100),
+      name,
+      email,
+      phone: cleanString(payload.phone, 30),
+      linkedin: cleanString(payload.linkedin, 250),
+      yearsOfExp: Number(payload.yearsOfExp) || 0,
+      pitch,
       submittedAt: new Date().toISOString(),
     };
 
@@ -157,16 +241,34 @@ export async function submitDealEOI(payload: {
   notes?: string;
 }): Promise<ActionResult> {
   try {
-    if (!payload.name || !payload.email || !payload.ticketSizeINR) {
+    const name = cleanString(payload.name, 120);
+    const email = cleanString(payload.email, 254);
+    const ticketSizeINR = Number(payload.ticketSizeINR) || 0;
+
+    if (!name || !email || !ticketSizeINR) {
       return {
         success: false,
         message: "Please provide your name, accredited email, and target allocation amount.",
       };
     }
 
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
     const record = {
       id: `eoi-${Date.now()}`,
-      ...payload,
+      dealId: cleanString(payload.dealId, 100),
+      name,
+      email,
+      phone: cleanString(payload.phone, 30),
+      investorType: cleanString(payload.investorType, 100),
+      ticketSizeINR,
+      notes: cleanString(payload.notes, 2000),
       submittedAt: new Date().toISOString(),
     };
 
@@ -174,7 +276,7 @@ export async function submitDealEOI(payload: {
 
     return {
       success: true,
-      message: `Expression of Interest recorded for ₹${payload.ticketSizeINR} Lakhs allocation. The 1008 Network syndicate team will share the complete data room and term sheet overview.`,
+      message: `Expression of Interest recorded for ₹${ticketSizeINR} Lakhs allocation. The 1008 Network syndicate team will share the complete data room and term sheet overview.`,
     };
   } catch (err) {
     return {
@@ -196,23 +298,47 @@ export async function submitInvestorProfile(payload: {
   notes?: string;
 }): Promise<ActionResult> {
   try {
-    if (!payload.name || !payload.email || !payload.phone || !payload.capitalAmount) {
+    const name = cleanString(payload.name, 120);
+    const email = cleanString(payload.email, 254);
+    const phone = cleanString(payload.phone, 30);
+    const capitalAmount = cleanString(payload.capitalAmount, 100);
+
+    if (!name || !email || !phone || !capitalAmount) {
       return {
         success: false,
         message: "Please fill out your name, email, phone number, and capital allocation.",
       };
     }
 
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
+    const sanitizedData = {
+      name,
+      email,
+      phone,
+      investorType: cleanString(payload.investorType, 100),
+      capitalAmount,
+      riskAppetite: cleanString(payload.riskAppetite, 100),
+      preferredIndustries: (payload.preferredIndustries || []).map((ind) => cleanString(ind, 100)),
+      notes: cleanString(payload.notes, 2000),
+    };
+
     const record = {
       id: `inv-${Date.now()}`,
-      ...payload,
+      ...sanitizedData,
       submittedAt: new Date().toISOString(),
     };
 
     localSubmissions.investorProfiles.push(record);
 
     // Dispatch automated email notification to join@1008.network
-    await sendInvestorProfileAlert(payload).catch((err) => {
+    await sendInvestorProfileAlert(sanitizedData).catch((err) => {
       console.error("[Non-blocking Email Error]:", err);
     });
 
@@ -243,21 +369,48 @@ export async function submitStartupCapitalRequest(payload: {
   thesis: string;
 }): Promise<ActionResult> {
   try {
-    if (!payload.startupName || !payload.founderName || !payload.email || !payload.phone || !payload.targetCapital) {
+    const startupName = cleanString(payload.startupName, 150);
+    const founderName = cleanString(payload.founderName, 120);
+    const email = cleanString(payload.email, 254);
+    const phone = cleanString(payload.phone, 30);
+    const targetCapital = cleanString(payload.targetCapital, 100);
+
+    if (!startupName || !founderName || !email || !phone || !targetCapital) {
       return {
         success: false,
         message: "Please fill out all required startup and founder fields.",
       };
     }
 
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
+    const sanitizedData = {
+      startupName,
+      founderName,
+      email,
+      phone,
+      sector: cleanString(payload.sector, 100),
+      currentStage: cleanString(payload.currentStage, 100),
+      targetCapital,
+      capitalUse: cleanString(payload.capitalUse, 2000),
+      pitchDeckUrl: cleanString(payload.pitchDeckUrl, 300),
+      thesis: cleanString(payload.thesis, 5000),
+    };
+
     const record = {
       id: `scap-${Date.now()}`,
-      ...payload,
+      ...sanitizedData,
       submittedAt: new Date().toISOString(),
     };
 
     // Dispatch automated email notification to join@1008.network
-    await sendStartupCapitalAlert(payload).catch((err) => {
+    await sendStartupCapitalAlert(sanitizedData).catch((err) => {
       console.error("[Non-blocking Email Error]:", err);
     });
 
@@ -284,21 +437,43 @@ export async function submitStudioInvestmentRequest(payload: {
   notes?: string;
 }): Promise<ActionResult> {
   try {
-    if (!payload.fullName || !payload.email || !payload.phone || !payload.intendedTicket) {
+    const fullName = cleanString(payload.fullName, 120);
+    const email = cleanString(payload.email, 254);
+    const phone = cleanString(payload.phone, 30);
+    const intendedTicket = cleanString(payload.intendedTicket, 100);
+
+    if (!fullName || !email || !phone || !intendedTicket) {
       return {
         success: false,
         message: "Please provide your full name, email, phone number, and intended allocation.",
       };
     }
 
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
+    const sanitizedData = {
+      fullName,
+      email,
+      phone,
+      intendedTicket,
+      investorType: cleanString(payload.investorType, 100),
+      notes: cleanString(payload.notes, 2000),
+    };
+
     const record = {
       id: `inv-1008-${Date.now()}`,
-      ...payload,
+      ...sanitizedData,
       submittedAt: new Date().toISOString(),
     };
 
     // Dispatch automated email notification to join@1008.network
-    await sendStudioInvestmentAlert(payload).catch((err) => {
+    await sendStudioInvestmentAlert(sanitizedData).catch((err) => {
       console.error("[Non-blocking Email Error]:", err);
     });
 
@@ -324,21 +499,41 @@ export async function submitContactInquiry(payload: {
   message: string;
 }): Promise<ActionResult> {
   try {
-    if (!payload.name || !payload.email || !payload.message) {
+    const name = cleanString(payload.name, 120);
+    const email = cleanString(payload.email, 254);
+    const message = cleanString(payload.message, 5000);
+
+    if (!name || !email || !message) {
       return {
         success: false,
         message: "Please fill out all required contact fields.",
       };
     }
 
+    if (!isValidEmail(email)) {
+      return {
+        success: false,
+        message: "Please enter a valid email address.",
+        error: "INVALID_EMAIL",
+      };
+    }
+
+    const sanitizedData = {
+      name,
+      email,
+      company: cleanString(payload.company, 150),
+      type: cleanString(payload.type, 100),
+      message,
+    };
+
     localSubmissions.contactInquiries.push({
       id: `inq-${Date.now()}`,
-      ...payload,
+      ...sanitizedData,
       submittedAt: new Date().toISOString(),
     });
 
     // Dispatch automated email notification to join@1008.network
-    await sendContactAlert(payload).catch((err) => {
+    await sendContactAlert(sanitizedData).catch((err) => {
       console.error("[Non-blocking Email Error]:", err);
     });
 
@@ -356,7 +551,8 @@ export async function submitContactInquiry(payload: {
 
 export async function subscribeNewsletter(email: string): Promise<ActionResult> {
   try {
-    if (!email || !email.includes("@")) {
+    const cleanMail = cleanString(email, 254);
+    if (!isValidEmail(cleanMail)) {
       return {
         success: false,
         message: "Please provide a valid email address.",
@@ -364,7 +560,7 @@ export async function subscribeNewsletter(email: string): Promise<ActionResult> 
     }
 
     localSubmissions.newsletterSubscribers.push({
-      email,
+      email: cleanMail,
       subscribedAt: new Date().toISOString(),
     });
 

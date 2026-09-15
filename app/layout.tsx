@@ -19,30 +19,30 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "1008 Network — Co-Founder Matching, Shared Equity Roles & Turnkey Venture Operations",
+    default: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
     template: "%s | 1008 Network",
   },
   description:
-    "1008 Network is the premier co-founder matching and operational venture studio in India. Find technical CTOs, GTM leaders, join high-conviction startups for shared equity, or build turnkey enterprises with zero consulting retainers.",
+    "1008 Network is India's premier venture ecosystem across 4 pillars: Venture Studio turnkey execution for equity, Partner Network co-founder & talent matching, Capital syndicate matchmaking (₹50K to ₹5Cr+), and tactical Playbooks.",
   keywords: [
-    "Co Founder Matching India",
-    "Find CTO Equity India",
-    "Jobs for Equity India",
-    "Startup Co Founder Platform",
-    "Technical Co Founder India",
-    "Fractional CXO India",
-    "Venture Studio India",
-    "Business Setup India",
-    "Turnkey Operations Partner",
-    "Manufacturing Plant Setup India",
-    "Hospital Setup Partner",
-    "Hotel & Hospitality Setup",
-    "School Infrastructure Setup",
-    "E-Commerce & D2C Operations",
-    "Business Turnaround India",
     "1008 Network",
+    "Venture Studio India",
+    "Co Founder Matching India",
+    "Startup Capital India",
+    "Invest in Startups India",
+    "Angel Investing India",
+    "Jobs for Equity India",
+    "Find CTO for Equity India",
+    "Technical Co Founder Platform",
+    "Fractional CXO Network",
+    "Turnkey Business Setup India",
+    "Startup Syndicate Allocation",
+    "Startup Playbook & Blueprints",
+    "Venture Builder India",
+    "Operations as a Service India",
+    "Delhi NCR Venture Studio",
   ],
-  authors: [{ name: "1008 Network Team", url: "https://www.1008.network" }],
+  authors: [{ name: "1008 Network", url: "https://www.1008.network" }],
   creator: "1008 Network",
   publisher: "1008.network",
   metadataBase: new URL("https://www.1008.network"),
@@ -56,15 +56,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://www.1008.network",
-    title: "1008 Network — Co-Founder Matching, Shared Equity Roles & Venture Operations",
+    title: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
     description:
-      "Find co-founders, join startups for shared equity, and build scalable enterprises across India with zero upfront agency retainers.",
+      "Turnkey venture studio operations, co-founder talent matching, startup syndicate capital, and actionable operational playbooks across India.",
     siteName: "1008.network",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 Network — Co-Founder Matching & Venture Studio",
-    description: "Find co-founders, join startups for equity, or deploy turnkey operations across India.",
+    title: "1008 Network — Venture Studio, Talent & Capital Ecosystem",
+    description:
+      "Venture Studio operations, co-founder talent matching, startup syndicate capital, and tactical playbooks in India.",
   },
   robots: {
     index: true,
@@ -92,10 +93,10 @@ export default function RootLayout({
     url: "https://www.1008.network",
     logo: "https://www.1008.network/logo.png",
     description:
-      "Operational venture studio and co-founder talent network in India curating high-conviction partnerships and turnkey business execution for shared equity.",
+      "1008 Network is an integrated venture ecosystem in India delivering Venture Studio operational infrastructure for equity, Partner Network co-founder matching, Capital syndicate allocation, and Playbook intelligence.",
     sameAs: [
       "https://www.linkedin.com/company/1008-network/",
-      "https://x.com/1008network"
+      "https://x.com/1008network",
     ],
     address: {
       "@type": "PostalAddress",
@@ -105,9 +106,51 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       email: "join@1008.network",
-      contactType: "Partnership & Co-Founder Inquiries",
+      contactType: "Venture Inquiries & Partnerships",
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"],
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "1008 Network Four Pillars",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Venture Studio",
+            description: "Turnkey operational infrastructure, specialized talent, modern software, and syndicate capital for long-term venture equity.",
+            url: "https://www.1008.network/studio",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Partner Network",
+            description: "Curated co-founder matching and executive talent exchange for shared venture equity.",
+            url: "https://www.1008.network/network",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Capital Network",
+            description: "Syndicate capital matchmaking connecting high-conviction startups with accredited investors from ₹50K to ₹5Cr+.",
+            url: "https://www.1008.network/capital",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Venture Playbook",
+            description: "Tactical operational blueprints, regulatory frameworks, and market playbooks for Indian founders.",
+            url: "https://www.1008.network/knowledge",
+          },
+        },
+      ],
     },
   };
 
@@ -117,7 +160,7 @@ export default function RootLayout({
     "@id": "https://www.1008.network/#website",
     url: "https://www.1008.network",
     name: "1008 Network",
-    description: "Co-Founder Matching, Shared Equity Opportunities & Venture Co-Building in India",
+    description: "Venture Studio, Co-Founder Matching, Startup Capital & Tactical Playbooks in India",
     publisher: {
       "@id": "https://www.1008.network/#organization",
     },
@@ -126,7 +169,7 @@ export default function RootLayout({
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://www.1008.network/network?q={search_term_string}",
+        urlTemplate: "https://www.1008.network/knowledge?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

@@ -15,6 +15,19 @@ const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY;
 // Initialize Resend if API key is provided
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
+/**
+ * Escapes HTML characters in user input to prevent HTML injection in email templates
+ */
+function escapeHtml(unsafe: string | undefined | null): string {
+  if (!unsafe) return "";
+  return String(unsafe)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 // Initialize Nodemailer SMTP if configured
 const smtpTransport =
   process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS
@@ -114,7 +127,13 @@ export async function sendEmail({
  * Venture Studio Pitch Email Alert Formatter
  */
 export async function sendStudioPitchAlert(data: StudioApplicationData) {
-  const subject = `⚡ [NEW VENTURE PITCH]: ${data.fullName} (${data.primaryDomain}) - ${data.city}`;
+  const subject = `⚡ [NEW VENTURE PITCH]: ${escapeHtml(data.fullName)} (${escapeHtml(data.primaryDomain)}) - ${escapeHtml(data.city)}`;
+
+  const cleanEmail = encodeURI(data.email || "");
+  const cleanPhone = encodeURI(data.phone || "");
+  const cleanLinkedIn = data.linkedinUrl
+    ? (data.linkedinUrl.startsWith("http") ? data.linkedinUrl : `https://${data.linkedinUrl}`)
+    : "#";
 
   const html = `
 <!DOCTYPE html>
@@ -141,50 +160,50 @@ export async function sendStudioPitchAlert(data: StudioApplicationData) {
   <div class="card">
     <div class="header">
       <span class="badge">1008 Studio // New Venture Pitch</span>
-      <h2 style="margin: 12px 0 4px 0; font-size: 22px; font-weight: 800; color: #FFFFFF;">${data.fullName}</h2>
-      <div style="font-size: 13px; color: #CBD5E1;">${data.currentRole} at ${data.currentCompany || "Independent"} • ${data.yearsOfExperience}+ Years Depth</div>
+      <h2 style="margin: 12px 0 4px 0; font-size: 22px; font-weight: 800; color: #FFFFFF;">${escapeHtml(data.fullName)}</h2>
+      <div style="font-size: 13px; color: #CBD5E1;">${escapeHtml(data.currentRole)} at ${escapeHtml(data.currentCompany || "Independent")} • ${escapeHtml(String(data.yearsOfExperience))}+ Years Depth</div>
     </div>
 
     <div class="content">
       <div class="field-row">
         <span class="label">Domain Sector:</span>
-        <span class="value" style="color: #635BFF;">${data.primaryDomain}</span>
+        <span class="value" style="color: #635BFF;">${escapeHtml(data.primaryDomain)}</span>
       </div>
       <div class="field-row">
         <span class="label">Location:</span>
-        <span class="value">${data.city}</span>
+        <span class="value">${escapeHtml(data.city)}</span>
       </div>
       <div class="field-row">
         <span class="label">Email:</span>
-        <span class="value"><a href="mailto:${data.email}" style="color: #635BFF; text-decoration: none;">${data.email}</a></span>
+        <span class="value"><a href="mailto:${cleanEmail}" style="color: #635BFF; text-decoration: none;">${escapeHtml(data.email)}</a></span>
       </div>
       <div class="field-row">
         <span class="label">Phone:</span>
-        <span class="value"><a href="tel:${data.phone}" style="color: #0A2540; text-decoration: none;">${data.phone || "Not provided"}</a></span>
+        <span class="value"><a href="tel:${cleanPhone}" style="color: #0A2540; text-decoration: none;">${escapeHtml(data.phone || "Not provided")}</a></span>
       </div>
       <div class="field-row">
         <span class="label">LinkedIn Profile:</span>
-        <span class="value"><a href="${data.linkedinUrl.startsWith("http") ? data.linkedinUrl : `https://${data.linkedinUrl}`}" target="_blank" style="color: #635BFF; text-decoration: none;">View LinkedIn →</a></span>
+        <span class="value"><a href="${encodeURI(cleanLinkedIn)}" target="_blank" rel="noopener noreferrer" style="color: #635BFF; text-decoration: none;">View LinkedIn →</a></span>
       </div>
       <div class="field-row">
         <span class="label">Time Commitment:</span>
-        <span class="value">${data.timeCommitment}</span>
+        <span class="value">${escapeHtml(data.timeCommitment)}</span>
       </div>
       <div class="field-row">
         <span class="label">Co-Founders / Talent Needed:</span>
-        <span class="value" style="font-size: 12px;">${(data.teamNeeds || []).join(", ") || "None specified"}</span>
+        <span class="value" style="font-size: 12px;">${escapeHtml((data.teamNeeds || []).join(", ") || "None specified")}</span>
       </div>
 
       <!-- Problem Thesis -->
       <div class="box">
         <div class="box-title">Venture Thesis & Market Bottleneck</div>
-        <div class="box-text">${data.problemThesis}</div>
+        <div class="box-text">${escapeHtml(data.problemThesis)}</div>
       </div>
 
       <!-- Target Customer -->
       <div class="box">
         <div class="box-title">Target Customer & Revenue Model</div>
-        <div class="box-text">${data.targetCustomer}</div>
+        <div class="box-text">${escapeHtml(data.targetCustomer)}</div>
       </div>
 
       <!-- Unfair Advantage -->
@@ -193,13 +212,13 @@ export async function sendStudioPitchAlert(data: StudioApplicationData) {
           ? `
       <div class="box">
         <div class="box-title">Domain Unfair Advantage & Defensibility</div>
-        <div class="box-text">${data.unfairAdvantage}</div>
+        <div class="box-text">${escapeHtml(data.unfairAdvantage)}</div>
       </div>`
           : ""
       }
 
       <div style="text-align: center; margin-top: 24px;">
-        <a href="mailto:${data.email}?subject=1008%20Network%20//%20Venture%20Diagnostic%20Call%20Schedule&body=Hi%20${encodeURIComponent(data.fullName)},%0A%0AThank%20you%20for%20sharing%20your%20venture%20thesis%20with%201008%20Network.%20Our%20partners%20have%20reviewed%20your%20submission%20and%20would%20like%20to%20schedule%20a%2030-minute%20Operational%20Diagnostic%20Call." class="button">
+        <a href="mailto:${cleanEmail}?subject=1008%20Network%20//%20Venture%20Diagnostic%20Call%20Schedule&body=Hi%20${encodeURIComponent(data.fullName)},%0A%0AThank%20you%20for%20sharing%20your%20venture%20thesis%20with%201008%20Network.%20Our%20partners%20have%20reviewed%20your%20submission%20and%20would%20like%20to%20schedule%20a%2030-minute%20Operational%20Diagnostic%20Call." class="button">
           Reply & Schedule Diagnostic Call →
         </a>
       </div>
@@ -225,7 +244,8 @@ export async function sendStudioPitchAlert(data: StudioApplicationData) {
  * Co-Founder Opportunity Posting Alert
  */
 export async function sendNetworkPostAlert(data: NetworkPostData) {
-  const subject = `🤝 [NEW NETWORK POSTING]: ${data.roleNeeded} in ${data.sector} - ${data.founderName}`;
+  const subject = `🤝 [NEW NETWORK POSTING]: ${escapeHtml(data.roleNeeded)} in ${escapeHtml(data.sector)} - ${escapeHtml(data.founderName)}`;
+  const cleanEmail = encodeURI(data.founderEmail || "");
 
   const html = `
 <!DOCTYPE html>
@@ -246,23 +266,23 @@ export async function sendNetworkPostAlert(data: NetworkPostData) {
   <div class="card">
     <div class="header">
       <h3 style="margin:0; color:#FFFFFF;">New Co-Founder Listing Submitted</h3>
-      <p style="margin:4px 0 0 0; color:#CBD5E1; font-size:13px;">${data.opportunityTitle}</p>
+      <p style="margin:4px 0 0 0; color:#CBD5E1; font-size:13px;">${escapeHtml(data.opportunityTitle)}</p>
     </div>
     <div class="content">
-      <div class="field"><span class="label">Founder:</span> ${data.founderName} (<a href="mailto:${data.founderEmail}">${data.founderEmail}</a>)</div>
-      <div class="field"><span class="label">Role Needed:</span> <strong>${data.roleNeeded}</strong></div>
-      <div class="field"><span class="label">Sector:</span> ${data.sector} • ${data.location}</div>
-      <div class="field"><span class="label">Equity Offered:</span> <strong>${data.equityOffered}</strong> (${data.stipendOffered || "Equity only"})</div>
-      <div class="field"><span class="label">Experience:</span> ${data.domainYears} years (${data.founderPriorExperience})</div>
+      <div class="field"><span class="label">Founder:</span> ${escapeHtml(data.founderName)} (<a href="mailto:${cleanEmail}">${escapeHtml(data.founderEmail)}</a>)</div>
+      <div class="field"><span class="label">Role Needed:</span> <strong>${escapeHtml(data.roleNeeded)}</strong></div>
+      <div class="field"><span class="label">Sector:</span> ${escapeHtml(data.sector)} • ${escapeHtml(data.location)}</div>
+      <div class="field"><span class="label">Equity Offered:</span> <strong>${escapeHtml(data.equityOffered)}</strong> (${escapeHtml(data.stipendOffered || "Equity only")})</div>
+      <div class="field"><span class="label">Experience:</span> ${escapeHtml(String(data.domainYears))} years (${escapeHtml(data.founderPriorExperience)})</div>
 
       <div class="box">
         <strong>Venture Thesis:</strong><br/>
-        ${data.ventureThesis}
+        ${escapeHtml(data.ventureThesis)}
       </div>
 
       <div class="box">
         <strong>Ideal Candidate:</strong><br/>
-        ${data.idealCandidateProfile}
+        ${escapeHtml(data.idealCandidateProfile)}
       </div>
     </div>
   </div>
@@ -282,7 +302,8 @@ export async function sendNetworkPostAlert(data: NetworkPostData) {
  * Contact Inquiry Alert
  */
 export async function sendContactAlert(data: { name: string; email: string; company?: string; type: string; message: string }) {
-  const subject = `💬 [CONTACT INQUIRY]: ${data.name} (${data.type})`;
+  const subject = `💬 [CONTACT INQUIRY]: ${escapeHtml(data.name)} (${escapeHtml(data.type)})`;
+  const cleanEmail = encodeURI(data.email || "");
 
   const html = `
 <!DOCTYPE html>
@@ -305,14 +326,14 @@ export async function sendContactAlert(data: { name: string; email: string; comp
       <h3 style="margin:0; color:#FFFFFF;">New Contact Message</h3>
     </div>
     <div class="content">
-      <div class="field"><span class="label">Name:</span> ${data.name}</div>
-      <div class="field"><span class="label">Email:</span> <a href="mailto:${data.email}">${data.email}</a></div>
-      <div class="field"><span class="label">Company:</span> ${data.company || "Not provided"}</div>
-      <div class="field"><span class="label">Inquiry Type:</span> <strong>${data.type}</strong></div>
+      <div class="field"><span class="label">Name:</span> ${escapeHtml(data.name)}</div>
+      <div class="field"><span class="label">Email:</span> <a href="mailto:${cleanEmail}">${escapeHtml(data.email)}</a></div>
+      <div class="field"><span class="label">Company:</span> ${escapeHtml(data.company || "Not provided")}</div>
+      <div class="field"><span class="label">Inquiry Type:</span> <strong>${escapeHtml(data.type)}</strong></div>
 
       <div class="box">
         <strong>Message:</strong><br/>
-        ${data.message}
+        ${escapeHtml(data.message)}
       </div>
     </div>
   </div>
@@ -341,7 +362,9 @@ export async function sendInvestorProfileAlert(data: {
   preferredIndustries: string[];
   notes?: string;
 }) {
-  const subject = `💰 [INVESTOR ONBOARDING]: ${data.name} (${data.capitalAmount}) - ${data.investorType}`;
+  const subject = `💰 [INVESTOR ONBOARDING]: ${escapeHtml(data.name)} (${escapeHtml(data.capitalAmount)}) - ${escapeHtml(data.investorType)}`;
+  const cleanEmail = encodeURI(data.email || "");
+  const cleanPhone = encodeURI(data.phone || "");
 
   const html = `
 <!DOCTYPE html>
@@ -361,15 +384,15 @@ export async function sendInvestorProfileAlert(data: {
   <div class="card">
     <div class="header">
       <h3 style="margin:0; color:#FFFFFF;">New Investor Registration</h3>
-      <p style="margin:4px 0 0 0; color:#00D4B2; font-size:13px; font-weight:bold;">${data.capitalAmount} • ${data.investorType}</p>
+      <p style="margin:4px 0 0 0; color:#00D4B2; font-size:13px; font-weight:bold;">${escapeHtml(data.capitalAmount)} • ${escapeHtml(data.investorType)}</p>
     </div>
     <div class="content">
-      <div class="field"><span class="label">Investor Name:</span> ${data.name}</div>
-      <div class="field"><span class="label">Email:</span> <a href="mailto:${data.email}">${data.email}</a></div>
-      <div class="field"><span class="label">Phone:</span> <a href="tel:${data.phone}">${data.phone}</a></div>
-      <div class="field"><span class="label">Risk Profile:</span> ${data.riskAppetite}</div>
-      <div class="field"><span class="label">Preferred Industries:</span> ${(data.preferredIndustries || []).join(", ")}</div>
-      ${data.notes ? `<div class="field"><span class="label">Mandate Notes:</span> ${data.notes}</div>` : ""}
+      <div class="field"><span class="label">Investor Name:</span> ${escapeHtml(data.name)}</div>
+      <div class="field"><span class="label">Email:</span> <a href="mailto:${cleanEmail}">${escapeHtml(data.email)}</a></div>
+      <div class="field"><span class="label">Phone:</span> <a href="tel:${cleanPhone}">${escapeHtml(data.phone)}</a></div>
+      <div class="field"><span class="label">Risk Profile:</span> ${escapeHtml(data.riskAppetite)}</div>
+      <div class="field"><span class="label">Preferred Industries:</span> ${escapeHtml((data.preferredIndustries || []).join(", "))}</div>
+      ${data.notes ? `<div class="field"><span class="label">Mandate Notes:</span> ${escapeHtml(data.notes)}</div>` : ""}
     </div>
   </div>
 </body>
@@ -399,7 +422,12 @@ export async function sendStartupCapitalAlert(data: {
   pitchDeckUrl?: string;
   thesis: string;
 }) {
-  const subject = `🚀 [STARTUP SEEKING CAPITAL]: ${data.startupName} (${data.targetCapital}) - ${data.sector}`;
+  const subject = `🚀 [STARTUP SEEKING CAPITAL]: ${escapeHtml(data.startupName)} (${escapeHtml(data.targetCapital)}) - ${escapeHtml(data.sector)}`;
+  const cleanEmail = encodeURI(data.email || "");
+  const cleanPhone = encodeURI(data.phone || "");
+  const cleanDeck = data.pitchDeckUrl
+    ? (data.pitchDeckUrl.startsWith("http") ? data.pitchDeckUrl : `https://${data.pitchDeckUrl}`)
+    : "";
 
   const html = `
 <!DOCTYPE html>
@@ -420,20 +448,20 @@ export async function sendStartupCapitalAlert(data: {
   <div class="card">
     <div class="header">
       <h3 style="margin:0; color:#FFFFFF;">New Startup Seeking Capital</h3>
-      <p style="margin:4px 0 0 0; color:#635BFF; font-size:13px; font-weight:bold;">${data.startupName} • Target: ${data.targetCapital}</p>
+      <p style="margin:4px 0 0 0; color:#635BFF; font-size:13px; font-weight:bold;">${escapeHtml(data.startupName)} • Target: ${escapeHtml(data.targetCapital)}</p>
     </div>
     <div class="content">
-      <div class="field"><span class="label">Founder:</span> ${data.founderName} (<a href="mailto:${data.email}">${data.email}</a>)</div>
-      <div class="field"><span class="label">Phone:</span> <a href="tel:${data.phone}">${data.phone}</a></div>
-      <div class="field"><span class="label">Sector:</span> ${data.sector}</div>
-      <div class="field"><span class="label">Current Stage:</span> <strong>${data.currentStage}</strong></div>
-      <div class="field"><span class="label">Capital Target:</span> <strong>${data.targetCapital}</strong></div>
-      <div class="field"><span class="label">Deployment Purpose:</span> ${data.capitalUse}</div>
-      ${data.pitchDeckUrl ? `<div class="field"><span class="label">Pitch Deck / Link:</span> <a href="${data.pitchDeckUrl.startsWith("http") ? data.pitchDeckUrl : `https://${data.pitchDeckUrl}`}" target="_blank">View Materials →</a></div>` : ""}
+      <div class="field"><span class="label">Founder:</span> ${escapeHtml(data.founderName)} (<a href="mailto:${cleanEmail}">${escapeHtml(data.email)}</a>)</div>
+      <div class="field"><span class="label">Phone:</span> <a href="tel:${cleanPhone}">${escapeHtml(data.phone)}</a></div>
+      <div class="field"><span class="label">Sector:</span> ${escapeHtml(data.sector)}</div>
+      <div class="field"><span class="label">Current Stage:</span> <strong>${escapeHtml(data.currentStage)}</strong></div>
+      <div class="field"><span class="label">Capital Target:</span> <strong>${escapeHtml(data.targetCapital)}</strong></div>
+      <div class="field"><span class="label">Deployment Purpose:</span> ${escapeHtml(data.capitalUse)}</div>
+      ${cleanDeck ? `<div class="field"><span class="label">Pitch Deck / Link:</span> <a href="${encodeURI(cleanDeck)}" target="_blank" rel="noopener noreferrer">View Materials →</a></div>` : ""}
 
       <div class="box">
         <strong>Venture Thesis & Traction:</strong><br/>
-        ${data.thesis}
+        ${escapeHtml(data.thesis)}
       </div>
     </div>
   </div>
@@ -460,7 +488,9 @@ export async function sendStudioInvestmentAlert(data: {
   investorType: string;
   notes?: string;
 }) {
-  const subject = `💎 [INVEST IN 1008 NETWORK]: ${data.fullName} (${data.intendedTicket}) - ${data.investorType}`;
+  const subject = `💎 [INVEST IN 1008 NETWORK]: ${escapeHtml(data.fullName)} (${escapeHtml(data.intendedTicket)}) - ${escapeHtml(data.investorType)}`;
+  const cleanEmail = encodeURI(data.email || "");
+  const cleanPhone = encodeURI(data.phone || "");
 
   const html = `
 <!DOCTYPE html>
@@ -481,15 +511,15 @@ export async function sendStudioInvestmentAlert(data: {
     <div class="header">
       <span style="display:inline-block; background:rgba(99,91,255,0.3); color:#00D4B2; font-family:monospace; font-size:10px; padding:3px 8px; border-radius:4px; font-weight:bold;">1008 NETWORK STUDIO EQUITY ROUND</span>
       <h3 style="margin:8px 0 0 0; color:#FFFFFF;">New 1008 Network Investor Lead</h3>
-      <p style="margin:4px 0 0 0; color:#00D4B2; font-size:13px; font-weight:bold;">${data.intendedTicket} • ${data.investorType}</p>
+      <p style="margin:4px 0 0 0; color:#00D4B2; font-size:13px; font-weight:bold;">${escapeHtml(data.intendedTicket)} • ${escapeHtml(data.investorType)}</p>
     </div>
     <div class="content">
-      <div class="field"><span class="label">Investor Name:</span> ${data.fullName}</div>
-      <div class="field"><span class="label">Email:</span> <a href="mailto:${data.email}">${data.email}</a></div>
-      <div class="field"><span class="label">Phone:</span> <a href="tel:${data.phone}">${data.phone}</a></div>
-      <div class="field"><span class="label">Intended Allocation:</span> <strong>${data.intendedTicket}</strong></div>
-      <div class="field"><span class="label">Investor Category:</span> ${data.investorType}</div>
-      ${data.notes ? `<div class="field"><span class="label">Strategic Value & Notes:</span> ${data.notes}</div>` : ""}
+      <div class="field"><span class="label">Investor Name:</span> ${escapeHtml(data.fullName)}</div>
+      <div class="field"><span class="label">Email:</span> <a href="mailto:${cleanEmail}">${escapeHtml(data.email)}</a></div>
+      <div class="field"><span class="label">Phone:</span> <a href="tel:${cleanPhone}">${escapeHtml(data.phone)}</a></div>
+      <div class="field"><span class="label">Intended Allocation:</span> <strong>${escapeHtml(data.intendedTicket)}</strong></div>
+      <div class="field"><span class="label">Investor Category:</span> ${escapeHtml(data.investorType)}</div>
+      ${data.notes ? `<div class="field"><span class="label">Strategic Value & Notes:</span> ${escapeHtml(data.notes)}</div>` : ""}
     </div>
   </div>
 </body>
