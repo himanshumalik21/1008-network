@@ -14,14 +14,15 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     const selectId = id || label?.toLowerCase().replace(/\s+/g, "-");
 
     return (
-      <div className="w-full space-y-1.5 text-left">
+      <div className="w-full space-y-1.5 text-left flex flex-col justify-end">
         {label && (
           <label
             htmlFor={selectId}
-            className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]"
+            className="text-xs font-semibold uppercase tracking-wider text-[#627D98] flex items-center min-h-[20px] leading-tight"
+            title={label}
           >
-            {label}
-            {props.required && <span className="text-[#F4511E] ml-1">*</span>}
+            <span className="truncate">{label}</span>
+            {props.required && <span className="text-[#F4511E] ml-1 shrink-0">*</span>}
           </label>
         )}
         <div className="relative flex items-center">

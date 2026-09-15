@@ -311,7 +311,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div className="space-y-1">
                   <Input
-                    label="Current / Most Recent Role & Company"
+                    label="Current Role & Company"
                     required
                     placeholder="e.g. VP Engineering @ Perfios / Ex-Swiggy"
                     value={formData.currentCompanyAndRole}
@@ -327,7 +327,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
 
                 <div className="space-y-1">
                   <Input
-                    label="Total Years of Experience"
+                    label="Years of Experience"
                     required
                     type="number"
                     min={1}
@@ -346,7 +346,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <Select
-                  label="Primary Functional Expertise"
+                  label="Functional Expertise"
                   required
                   value={formData.primaryFunction}
                   onChange={(e) => setFormData({ ...formData, primaryFunction: e.target.value as RoleCategory })}
@@ -359,7 +359,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
                 </Select>
 
                 <Select
-                  label="Preferred Location Base"
+                  label="Location Base"
                   required
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
@@ -374,7 +374,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <Select
-                  label="Target Commitment Mode"
+                  label="Target Commitment"
                   required
                   value={formData.preferredCommitment}
                   onChange={(e) => setFormData({ ...formData, preferredCommitment: e.target.value as CommitmentType })}
@@ -388,7 +388,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
 
                 <div className="space-y-1">
                   <Input
-                    label="Target Equity & Compensation Expectation"
+                    label="Target Equity Range"
                     required
                     placeholder="e.g. 15%-25% Equity + Seed living stipend"
                     value={formData.targetEquityRange}
@@ -405,7 +405,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
 
               <div className="space-y-1">
                 <Input
-                  label="Core Skills / Tech Stack / Domain Moats"
+                  label="Core Skills & Domain Moats"
                   required
                   placeholder="e.g. Distributed Systems, Kafka, Go, Account Aggregator, RBI Compliance"
                   value={formData.keySkills}
@@ -419,7 +419,7 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
 
               <div className="space-y-1">
                 <Textarea
-                  label="Executive Summary & Venture Preferences"
+                  label="Executive Bio & Venture Preferences"
                   required
                   rows={3}
                   placeholder="Summarize your career highlights, what kind of problems you want to solve, and what stage of startup you prefer (Idea vs Early Revenue)."

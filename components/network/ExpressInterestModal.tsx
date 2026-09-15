@@ -300,7 +300,7 @@ export function ExpressInterestModal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div className="space-y-1">
                   <Input
-                    label="Years of Relevant Experience"
+                    label="Years of Experience"
                     required
                     type="number"
                     min={1}
@@ -317,7 +317,7 @@ export function ExpressInterestModal({
 
                 <div className="space-y-1">
                   <Input
-                    label="Current / Most Recent Company & Role"
+                    label="Current Role & Company"
                     required
                     placeholder="e.g. Staff Engineer @ Swiggy"
                     value={formData.currentCompanyOrRole}
@@ -331,7 +331,7 @@ export function ExpressInterestModal({
               </div>
 
               <Select
-                label="Target Commitment Mode"
+                label="Target Commitment"
                 required
                 value={formData.commitment}
                 onChange={(e) => setFormData({ ...formData, commitment: e.target.value })}

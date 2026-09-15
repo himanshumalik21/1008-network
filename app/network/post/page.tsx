@@ -335,7 +335,7 @@ export default function PostOpportunityPage() {
 
                 <div className="space-y-1">
                   <Input
-                    label="Years of Domain Experience"
+                    label="Years in Industry"
                     required
                     type="number"
                     min={1}
@@ -352,7 +352,7 @@ export default function PostOpportunityPage() {
 
               <div className="space-y-1">
                 <Textarea
-                  label="Your Operating Background & Domain Depth"
+                  label="Domain & Operating Background"
                   required
                   rows={3}
                   placeholder="e.g. 18 years running biopharma and hospital supply chains across India & APAC; former Director of Supply Chain at Fortis Healthcare..."
@@ -378,7 +378,7 @@ export default function PostOpportunityPage() {
 
               <div className="space-y-1">
                 <Input
-                  label="Opportunity Headline / Title"
+                  label="Opportunity Headline"
                   required
                   placeholder="e.g. Technical Co-Founder (CTO) for AI-Driven Clinical Trial Logistics"
                   value={formData.opportunityTitle}
@@ -462,7 +462,7 @@ export default function PostOpportunityPage() {
                 </Select>
 
                 <Select
-                  label="Current Venture Stage"
+                  label="Venture Stage"
                   required
                   value={formData.stage}
                   onChange={(e) => setFormData({ ...formData, stage: e.target.value as VentureStage })}
@@ -478,7 +478,7 @@ export default function PostOpportunityPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <Input
-                    label="Equity Range Offered"
+                    label="Equity Offered"
                     required
                     placeholder="e.g. 15% - 25%"
                     value={formData.equityOffered}
@@ -491,7 +491,7 @@ export default function PostOpportunityPage() {
                 </div>
 
                 <Input
-                  label="Salary / Living Stipend (Post-Seed)"
+                  label="Salary / Stipend (Post-Seed)"
                   placeholder="e.g. ₹1.5L - ₹2.5L/mo post-seed (Optional)"
                   value={formData.stipendOffered}
                   onChange={(e) => setFormData({ ...formData, stipendOffered: e.target.value })}
@@ -499,7 +499,7 @@ export default function PostOpportunityPage() {
               </div>
 
               <Input
-                label="Target Skills / Tech Stack (Comma separated)"
+                label="Target Skills & Tech Stack"
                 placeholder="e.g. Python, FastAPI, IoT Telemetry, PostgreSQL, GAMP5"
                 value={formData.skillsRequired}
                 onChange={(e) => setFormData({ ...formData, skillsRequired: e.target.value })}
@@ -507,7 +507,7 @@ export default function PostOpportunityPage() {
 
               <div className="space-y-1">
                 <Textarea
-                  label="Venture Thesis & Ground Problem Statement"
+                  label="Venture Thesis & Ground Reality"
                   required
                   rows={3}
                   placeholder="Describe what product or facility you are building, the specific bottleneck you are solving, and early validation..."
@@ -522,7 +522,7 @@ export default function PostOpportunityPage() {
 
               <div className="space-y-1">
                 <Textarea
-                  label="Ideal Candidate Profile & Key Criteria"
+                  label="Ideal Candidate Profile"
                   required
                   rows={3}
                   placeholder="e.g. 8+ years distributed systems, experience with IoT telemetry, based in Gurgaon or willing to relocate, experience leading small sprint teams..."
