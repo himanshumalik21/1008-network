@@ -60,7 +60,7 @@ export function Modal({
       {/* Dialog Card */}
       <div
         className={cn(
-          "relative w-full z-10 my-8 rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-8 text-[#0A2540] shadow-[0_20px_60px_-15px_rgba(10,37,64,0.15)] transition-all duration-300 animate-in zoom-in-95",
+          "relative w-full z-10 my-auto sm:my-8 rounded-2xl bg-white border border-[#E6E8EB] p-5 sm:p-8 text-[#0A2540] shadow-[0_20px_60px_-15px_rgba(10,37,64,0.15)] transition-all duration-300 animate-in zoom-in-95 max-h-[90vh] overflow-y-auto",
           widthMap[maxWidth]
         )}
       >

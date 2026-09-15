@@ -94,8 +94,8 @@ export function Navbar() {
               })}
             </nav>
 
-            {/* 3. Apply to Build Action Button */}
-            <div className="hidden sm:flex items-center shrink-0">
+            {/* 3. Apply to Build Action Button (Desktop) */}
+            <div className="hidden md:flex items-center shrink-0">
               <Button
                 variant="primary"
                 size="md"
@@ -107,8 +107,8 @@ export function Navbar() {
               </Button>
             </div>
 
-            {/* Mobile Actions & Hamburger */}
-            <div className="flex sm:hidden items-center gap-2">
+            {/* Mobile / Tablet Actions & Hamburger */}
+            <div className="flex md:hidden items-center gap-2">
               <Button
                 variant="primary"
                 size="sm"
@@ -128,9 +128,9 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile / Tablet Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="sm:hidden bg-white border-b border-[#E6E8EB] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-xl">
+          <div className="md:hidden bg-white border-b border-[#E6E8EB] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-xl">
             <div className="flex flex-col space-y-1 pt-1">
               {navLinks.map((link) => {
                 const active = isLinkActive(link.href);

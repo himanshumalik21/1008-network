@@ -107,21 +107,21 @@ export function StudioSprintTimeline() {
                 key={phase.id}
                 onClick={() => setActivePhase(idx)}
                 className={cn(
-                  "p-4 rounded-xl text-left border transition-all duration-200 flex flex-col justify-between shadow-xs",
+                  "p-3 sm:p-4 rounded-xl text-left border transition-all duration-200 flex flex-col justify-between shadow-xs",
                   isSelected
                     ? "bg-white border-[#635BFF] shadow-md ring-1 ring-[#635BFF]/30"
                     : "bg-white/80 border-[#E6E8EB] hover:border-[#CBD5E1] text-[#627D98]"
                 )}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className={cn("text-xs font-semibold", isSelected ? "text-[#635BFF]" : "text-[#627D98]")}>
+                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                  <span className={cn("text-[10px] sm:text-xs font-semibold", isSelected ? "text-[#635BFF]" : "text-[#627D98]")}>
                     {phase.phaseLabel}
                   </span>
                   <Badge variant={isSelected ? "indigo" : "slate"} size="sm">
                     {phase.tag}
                   </Badge>
                 </div>
-                <div className={cn("text-sm font-semibold", isSelected ? "text-[#0A2540]" : "text-[#425466]")}>
+                <div className={cn("text-xs sm:text-sm font-semibold leading-snug", isSelected ? "text-[#0A2540]" : "text-[#425466]")}>
                   {phase.name.split(":")[1]}
                 </div>
               </button>

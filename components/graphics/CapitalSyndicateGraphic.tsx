@@ -78,7 +78,7 @@ export function CapitalSyndicateGraphic() {
         </div>
 
         {/* Interactive Capital Selector Cards */}
-        <div className="grid grid-cols-3 gap-2 pt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
           {pools.map((p, idx) => {
             const isSelected = activeTier === idx;
             return (
