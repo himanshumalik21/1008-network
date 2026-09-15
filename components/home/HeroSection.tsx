@@ -47,41 +47,41 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Network // Turnkey Venture Studio, Talent & Capital Platform
+              1008 Network // Venture Studio • Partner Network • Capital • Playbook
             </Badge>
           </div>
 
-          {/* Primary Razor-Sharp Hook Headline */}
+          {/* Primary Platform Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] leading-[1.15] font-sans">
-            <span className="block">You bring the domain vision.</span>
-            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              We orchestrate the operating company.
+            <span className="block">Build, partner, and invest in</span>
+            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#059669]">
+              high-conviction Indian ventures.
             </span>
           </h1>
 
-          {/* Core Subtitle */}
+          {/* Platform Subtitle */}
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
-            We architect turnkey operational infrastructure, source specialized talent, configure modern software tools, and facilitate syndicate capital alongside ambitious founders—aligned on long-term venture equity.
+            The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Button
+              href="#pillars"
               size="lg"
               variant="primary"
-              onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
-              Apply to Build With Us
+              Explore Four Pillars ↓
             </Button>
             <Button
-              href="#pillars"
               size="lg"
               variant="secondary"
+              onClick={handleOpenModal}
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Explore Four Pillars ↓
+              Apply to Build With Us
             </Button>
           </div>
 
@@ -117,7 +117,7 @@ export function HeroSection() {
             >
               <span className="w-2 h-2 rounded-full bg-[#FF7043]" />
               <span>4. Playbook</span>
-              <span className="text-[10px] text-[#FF7043] font-mono font-bold bg-[#FFF3EE] px-1.5 py-0.5 rounded">Blueprints</span>
+              <span className="text-[10px] text-[#FF7043] font-mono font-bold bg-[#FFF3EE] px-1.5 py-0.5 rounded">Playbooks</span>
             </Link>
           </div>
         </div>
