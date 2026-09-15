@@ -209,3 +209,38 @@ export interface ReadinessAnswer {
   selectedOptionIndex: number;
   score: number;
 }
+
+export interface InvestorCard {
+  id: string;
+  name: string;
+  title: string;
+  category: "Angel Investor / CXO" | "Family Office" | "Industrialist / Plant Owner" | "Working Professional" | "NRI Allocator";
+  ticketSizeRange: string;
+  preferredRisk: "Asset-Backed & De-Risked" | "Operating Cashflow & Yield" | "High-Growth Tech Equity";
+  targetSectors: string[];
+  location: LocationType;
+  bio: string;
+  strategicValue: string;
+  badge: string;
+  availableCapital: boolean;
+}
+
+export interface StartupCapitalCard {
+  id: string;
+  title: string;
+  startupName: string;
+  sector: SectorCategory;
+  location: LocationType;
+  stage: "Idea & Validation" | "Prototype / MVP" | "Early Revenue" | "Scaling Growth";
+  targetRaise: string;
+  equityOffered: string;
+  deploymentScope: string;
+  founderBackground: {
+    headline: string;
+    domainYears: number;
+  };
+  ventureThesis: string;
+  expiresInDays: number;
+  studioBacked?: boolean;
+}
+
