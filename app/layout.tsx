@@ -19,12 +19,19 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "1008 Network — End-to-End Business Operations & Turnkey Execution Partner",
+    default: "1008 Network — Co-Founder Matching, Shared Equity Roles & Turnkey Venture Operations",
     template: "%s | 1008 Network",
   },
   description:
-    "1008 Network is the operational co-builder for founders and domain leaders in India. We deploy production software, structure supply chains, source vetted talent, and unlock institutional credit for shared equity.",
+    "1008 Network is the premier co-founder matching and operational venture studio in India. Find technical CTOs, GTM leaders, join high-conviction startups for shared equity, or build turnkey enterprises with zero consulting retainers.",
   keywords: [
+    "Co Founder Matching India",
+    "Find CTO Equity India",
+    "Jobs for Equity India",
+    "Startup Co Founder Platform",
+    "Technical Co Founder India",
+    "Fractional CXO India",
+    "Venture Studio India",
     "Business Setup India",
     "Turnkey Operations Partner",
     "Manufacturing Plant Setup India",
@@ -32,7 +39,6 @@ export const metadata: Metadata = {
     "Hotel & Hospitality Setup",
     "School Infrastructure Setup",
     "E-Commerce & D2C Operations",
-    "Venture Studio India",
     "Business Turnaround India",
     "1008 Network",
   ],
@@ -40,23 +46,36 @@ export const metadata: Metadata = {
   creator: "1008 Network",
   publisher: "1008.network",
   metadataBase: new URL("https://1008.network"),
+  alternates: {
+    canonical: "https://1008.network",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-1008network",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://1008.network",
-    title: "1008 Network — End-to-End Business Operations & Turnkey Execution Partner",
+    title: "1008 Network — Co-Founder Matching, Shared Equity Roles & Venture Operations",
     description:
-      "You bring the vision & capital. We handle end-to-end operations to build, launch & scale your business.",
+      "Find co-founders, join startups for shared equity, and build scalable enterprises across India with zero upfront agency retainers.",
     siteName: "1008.network",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 Network — End-to-End Business Operations",
-    description: "You bring the vision & capital. We handle end-to-end operations to build, launch & scale your business.",
+    title: "1008 Network — Co-Founder Matching & Venture Studio",
+    description: "Find co-founders, join startups for equity, or deploy turnkey operations across India.",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -65,16 +84,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://1008.network/#organization",
     name: "1008 Network",
     url: "https://1008.network",
     logo: "https://1008.network/logo.png",
     description:
-      "High-conviction venture studio for founders, entrepreneurs, and businesses.",
+      "Operational venture studio and co-founder talent network in India curating high-conviction partnerships and turnkey business execution for shared equity.",
     sameAs: [
-      "https://www.linkedin.com/company/1008-network/"
+      "https://www.linkedin.com/company/1008-network/",
+      "https://x.com/1008network"
     ],
     address: {
       "@type": "PostalAddress",
@@ -84,7 +105,30 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       email: "join@1008.network",
-      contactType: "customer support",
+      contactType: "Partnership & Co-Founder Inquiries",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://1008.network/#website",
+    url: "https://1008.network",
+    name: "1008 Network",
+    description: "Co-Founder Matching, Shared Equity Opportunities & Venture Co-Building in India",
+    publisher: {
+      "@id": "https://1008.network/#organization",
+    },
+    inLanguage: "en-IN",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://1008.network/network?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
     },
   };
 
@@ -93,7 +137,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body

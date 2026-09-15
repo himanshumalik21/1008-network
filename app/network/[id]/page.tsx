@@ -45,10 +45,105 @@ export default async function OpportunityDetailPage({ params }: PageProps) {
 
   const relatedOpportunities = initialOpportunities.filter((o) => o.id !== opp.id);
 
+  // Calculate validThrough date (60 days from creation or expiry)
+  const postDate = new Date(opp.createdAt || "2025-01-01");
+  const validThroughDate = new Date(postDate.getTime() + (opp.expiresInDays || 60) * 24 * 60 * 60 * 1000);
+
+  const jobPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: `${opp.role} — ${opp.title}`,
+    description: `
+      <h3>Venture Thesis</h3>
+      <p>${opp.ventureThesis}</p>
+      <h3>Role & Scope</h3>
+      <p>${opp.role} (${opp.roleType})</p>
+      <h3>Equity & Compensation</h3>
+      <p>Equity Offer: ${opp.equityRange} | Compensation: ${opp.stipendOrSalary || "Equity Only"}</p>
+      <h3>Founder Pedigree</h3>
+      <p>${opp.founderBackground.headline} (${opp.founderBackground.domainYears}+ years domain experience)</p>
+      <h3>Required Expertise</h3>
+      <p>${opp.skills?.join(", ") || "Domain Execution"}</p>
+      <h3>About 1008 Network</h3>
+      <p>1008 Network curates high-conviction partnerships for shared equity and turnkey venture co-building across India.</p>
+    `.trim(),
+    datePosted: postDate.toISOString(),
+    validThrough: validThroughDate.toISOString(),
+    employmentType: ["FULL_TIME", "OTHER"],
+    hiringOrganization: {
+      "@type": "Organization",
+      name: `1008 Network / ${opp.title}`,
+      sameAs: "https://1008.network",
+      logo: "https://1008.network/logo.png",
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: opp.location,
+        addressCountry: "IN",
+      },
+    },
+    ...(opp.location.toLowerCase().includes("remote")
+      ? { jobLocationType: "TELECOMMUTE" }
+      : {}),
+    applicantLocationRequirements: {
+      "@type": "Country",
+      name: "India",
+    },
+    baseSalary: {
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: {
+        "@type": "QuantitativeValue",
+        value: 0,
+        unitText: `${opp.equityRange} Shared Equity`,
+      },
+    },
+    skills: opp.skills?.join(", "),
+    industry: opp.sector,
+    directApply: true,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://1008.network",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Partner Network",
+        item: "https://1008.network/network",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: opp.title,
+        item: `https://1008.network/network/${opp.id}`,
+      },
+    ],
+  };
+
   return (
-    <OpportunityDetailClient
-      opp={opp}
-      relatedOpportunities={relatedOpportunities}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <OpportunityDetailClient
+        opp={opp}
+        relatedOpportunities={relatedOpportunities}
+      />
+    </>
   );
 }

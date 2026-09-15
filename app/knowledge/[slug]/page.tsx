@@ -95,9 +95,77 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
       ? "1008 FOUNDER PLAYBOOK (DAY 2)"
       : "1008 FOUNDER PLAYBOOK (DAY 1)";
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: resource.title,
+    description: resource.subtitle || resource.summary,
+    image: "https://1008.network/logo.png",
+    datePublished: resource.publishedAt,
+    dateModified: resource.publishedAt,
+    author: {
+      "@type": "Organization",
+      name: resource.authorOrSource || "1008 Network Research & Operations",
+      url: "https://1008.network",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "1008 Network",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://1008.network/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://1008.network/knowledge/${resource.slug}`,
+    },
+    keywords: [
+      resource.primaryKeyword || "how to start a business in India",
+      ...(resource.secondaryKeywords || []),
+      ...(resource.sectorTags || []),
+    ].join(", "),
+    articleSection: resource.category,
+    inLanguage: "en-IN",
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://1008.network",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Knowledge Hub",
+        item: "https://1008.network/knowledge",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: resource.title,
+        item: `https://1008.network/knowledge/${resource.slug}`,
+      },
+    ],
+  };
+
   return (
-    <div className="pt-28 pb-20 bg-[#FDFDFE]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <div className="pt-28 pb-20 bg-[#FDFDFE]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
         <div className="mb-6 flex items-center justify-between">
           <Link
@@ -320,5 +388,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
         </div>
       </div>
     </div>
+    </>
   );
 }
+
