@@ -29,6 +29,7 @@ export function HeroSection() {
       num: "01",
       title: "Venture Studio",
       tagline: "Turnkey Build & Equity",
+      desc: "We architect operational infrastructure, source talent, configure ERPs & build alongside founders for shared equity.",
       href: "/studio",
       accent: "#635BFF",
       bgHover: "hover:border-[#635BFF]/60 hover:shadow-[0_8px_20px_-6px_rgba(99,91,255,0.15)]",
@@ -39,6 +40,7 @@ export function HeroSection() {
       num: "02",
       title: "Partner Network",
       tagline: "Co-Founders & Talent",
+      desc: "Have the business vision? Connect with vetted technical CTOs, GTM leaders & domain operators under mutual NDA.",
       href: "/network",
       accent: "#00A389",
       bgHover: "hover:border-[#00D4B2]/60 hover:shadow-[0_8px_20px_-6px_rgba(0,212,178,0.15)]",
@@ -49,6 +51,7 @@ export function HeroSection() {
       num: "03",
       title: "Capital Network",
       tagline: "Startup & Investor Match",
+      desc: "Connect startups raising capital with angels & family offices (₹50K to ₹5Cr+) with transparent use of funds.",
       href: "/capital",
       accent: "#059669",
       bgHover: "hover:border-[#059669]/60 hover:shadow-[0_8px_20px_-6px_rgba(5,150,105,0.15)]",
@@ -59,6 +62,7 @@ export function HeroSection() {
       num: "04",
       title: "1008 Playbook",
       tagline: "Operational Intelligence",
+      desc: "Field-tested blueprints on zero-retainer survival, working capital credit & building profitable cash-flow enterprises.",
       href: "/knowledge",
       accent: "#FF7043",
       bgHover: "hover:border-[#FF7043]/60 hover:shadow-[0_8px_20px_-6px_rgba(255,112,67,0.15)]",
@@ -128,40 +132,44 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Four Pillars 2x2 Grid */}
-        <div className="w-full max-w-3xl mx-auto pt-8 sm:pt-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
+        {/* Four Pillars 2x2 Explanatory Grid */}
+        <div className="w-full max-w-4xl mx-auto pt-8 sm:pt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             {pillars.map((pillar) => (
               <Link
                 key={pillar.num}
                 href={pillar.href}
-                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex items-center justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
+                className={`p-4 sm:p-5 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
               >
-                {/* Subtle Left Accent Line on Hover */}
+                {/* Subtle Top Indicator Line on Hover */}
                 <div
-                  className="absolute top-0 left-0 bottom-0 w-[3px] opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ backgroundColor: pillar.accent }}
                 />
 
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
-                    {pillar.icon}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
+                        {pillar.icon}
+                      </div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors">
+                        {pillar.title}
+                      </h3>
+                    </div>
+                    <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${pillar.badgeBg}`}>
+                      Pillar {pillar.num}
+                    </span>
                   </div>
-                  <div className="space-y-0.5 text-left">
-                    <h3 className="text-xs sm:text-sm font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors flex items-center gap-1">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-[11px] text-[#627D98] font-normal leading-snug">
-                      {pillar.tagline}
-                    </p>
-                  </div>
+
+                  <p className="text-xs text-[#425466] leading-relaxed text-left">
+                    {pillar.desc}
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-2 shrink-0">
-                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${pillar.badgeBg}`}>
-                    Pillar {pillar.num}
-                  </span>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all hidden sm:block" />
+                <div className="pt-3 mt-3 border-t border-[#F1F4F8] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+                  <span>{pillar.tagline}</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] group-hover:text-[#635BFF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
               </Link>
             ))}
