@@ -32,6 +32,7 @@ import {
   Send,
   SlidersHorizontal,
   RotateCcw,
+  ChevronDown,
 } from "lucide-react";
 
 export default function NetworkPage() {
@@ -265,70 +266,88 @@ export default function NetworkPage() {
           </div>
         </div>
 
+        {/* 60-Day Auto-Expiry Policy Banner */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-3 rounded-2xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs font-mono text-[#065F46] shadow-2xs">
+          <div className="flex items-center gap-2">
+            <Clock className="h-4 w-4 text-[#059669] shrink-0" />
+            <span>
+              <strong>60-Day Active Window:</strong> All startup listings automatically expire & get deleted after 60 days to keep founder pipelines 100% active and responsive.
+            </span>
+          </div>
+          <span className="text-[11px] font-sans font-bold text-[#059669] bg-white px-2.5 py-1 rounded-md border border-[#A7F3D0] shrink-0 self-start sm:self-auto">
+            Zero Stale Postings
+          </span>
+        </div>
+
         {/* Search & Multi-Facet Filters */}
         <div className="space-y-4 bg-white p-5 rounded-2xl border border-[#E6E8EB] shadow-xs">
-          {/* Row 1: Search and Secondary Dropdowns */}
+          {/* Row 1: Search and Custom Dropdowns */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
             {/* Search Input */}
-            <div className="md:col-span-5 relative">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#829AB1]" />
+            <div className="md:col-span-4 relative flex items-center">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#829AB1] pointer-events-none" />
               <input
                 type="text"
                 placeholder={
                   activeTab === "opportunities"
-                    ? "Search roles, sectors, tech stack (e.g. Python, GSTN, Cold-Chain)..."
-                    : "Search talent by skill, company, title (e.g. Razorpay, Swiggy, Kafka)..."
+                    ? "Search roles, tech skills, keywords..."
+                    : "Search talent, skills, ex-companies..."
                 }
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-[#CBD5E1] rounded-xl text-[#0A2540] placeholder-[#829AB1] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/10 transition-all"
+                className="w-full pl-10 pr-3.5 h-11 text-xs sm:text-sm bg-white border border-[#CBD5E1] rounded-xl text-[#0A2540] placeholder-[#829AB1] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/15 transition-all shadow-xs"
               />
             </div>
 
-            {/* Location Filter */}
-            <div className="md:col-span-3">
+            {/* Custom Location Dropdown */}
+            <div className="md:col-span-3 relative flex items-center">
+              <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#635BFF] pointer-events-none" />
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full rounded-xl bg-white border border-[#CBD5E1] px-3.5 py-2.5 text-xs sm:text-sm text-[#0A2540] focus:outline-none focus:border-[#635BFF]"
+                className="w-full appearance-none pl-10 pr-8 h-11 rounded-xl bg-white border border-[#CBD5E1] text-xs sm:text-sm font-medium text-[#0A2540] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/15 transition-all shadow-xs cursor-pointer"
               >
-                <option value="all">📍 All Locations</option>
+                <option value="all">All Locations (Pan-India)</option>
                 {locations.map((loc) => (
                   <option key={loc} value={loc}>
                     {loc}
                   </option>
                 ))}
               </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#829AB1] pointer-events-none" />
             </div>
 
-            {/* Role Type Filter */}
-            <div className="md:col-span-2">
+            {/* Custom Role Level Dropdown */}
+            <div className="md:col-span-3 relative flex items-center">
+              <Briefcase className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#00A389] pointer-events-none" />
               <select
                 value={selectedRoleType}
                 onChange={(e) => setSelectedRoleType(e.target.value)}
-                className="w-full rounded-xl bg-white border border-[#CBD5E1] px-3.5 py-2.5 text-xs sm:text-sm text-[#0A2540] focus:outline-none focus:border-[#635BFF]"
+                className="w-full appearance-none pl-10 pr-8 h-11 rounded-xl bg-white border border-[#CBD5E1] text-xs sm:text-sm font-medium text-[#0A2540] focus:outline-none focus:border-[#635BFF] focus:ring-2 focus:ring-[#635BFF]/15 transition-all shadow-xs cursor-pointer"
               >
-                <option value="all">💼 All Levels</option>
-                <option value="Co-Founder">Co-Founder</option>
+                <option value="all">All Role Levels</option>
+                <option value="Co-Founder">Co-Founder (Shared Equity)</option>
                 <option value="Founding Lead">Founding Core Lead</option>
-                <option value="Head of Department">Head of Dept</option>
-                <option value="Fractional CXO">Fractional CXO</option>
+                <option value="Head of Department">Head of Department</option>
+                <option value="Fractional CXO">Fractional CXO / Advisor</option>
               </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#829AB1] pointer-events-none" />
             </div>
 
             {/* Studio Backed Toggle / Reset */}
-            <div className="md:col-span-2 flex items-center justify-between gap-2">
+            <div className="md:col-span-2 flex items-center gap-2">
               {activeTab === "opportunities" ? (
                 <button
                   onClick={() => setStudioOnly(!studioOnly)}
                   className={cn(
-                    "w-full px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-center truncate",
+                    "flex-1 h-11 px-3.5 rounded-xl text-xs font-semibold border transition-all inline-flex items-center justify-center gap-1.5 shadow-xs",
                     studioOnly
                       ? "bg-[#635BFF] text-white border-[#635BFF]"
-                      : "bg-[#F8FAFC] text-[#425466] border-[#E6E8EB] hover:bg-white"
+                      : "bg-[#F8FAFC] text-[#425466] border-[#CBD5E1] hover:bg-white hover:text-[#0A2540]"
                   )}
                 >
-                  ⚡ Studio Only
+                  <Sparkles className={cn("h-3.5 w-3.5", studioOnly ? "text-white" : "text-[#635BFF]")} />
+                  <span className="truncate">Studio Only</span>
                 </button>
               ) : null}
 
@@ -339,7 +358,7 @@ export default function NetworkPage() {
                 searchQuery) && (
                 <button
                   onClick={resetFilters}
-                  className="p-2.5 rounded-xl text-[#627D98] hover:text-[#0A2540] hover:bg-[#F1F5F9] border border-[#E2E8F0] transition-colors shrink-0"
+                  className="h-11 px-3 rounded-xl text-[#627D98] hover:text-[#0A2540] hover:bg-[#F1F5F9] border border-[#CBD5E1] transition-colors shrink-0 shadow-xs flex items-center justify-center"
                   title="Reset Filters"
                 >
                   <RotateCcw className="h-4 w-4" />
@@ -357,7 +376,7 @@ export default function NetworkPage() {
                   key={rf.value}
                   onClick={() => setSelectedRole(rf.value)}
                   className={cn(
-                    "px-3 py-1.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap border shrink-0",
+                    "px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap border shrink-0",
                     isSelected
                       ? "bg-[#0A2540] text-white border-[#0A2540] shadow-2xs"
                       : "bg-[#F8FAFC] text-[#425466] border-[#E6E8EB] hover:text-[#0A2540] hover:bg-white hover:border-[#CBD5E1]"
@@ -409,11 +428,16 @@ export default function NetworkPage() {
                             {opp.sector}
                           </span>
                         </div>
-                        {opp.studioBacked && (
-                          <span className="px-2 py-0.5 rounded-full bg-[#00D4B2]/15 text-[#007A66] text-[10px] font-mono font-bold flex items-center gap-1">
-                            <Sparkles className="h-2.5 w-2.5" /> Studio Backed
+                        <div className="flex items-center gap-1.5">
+                          {opp.studioBacked && (
+                            <span className="px-2 py-0.5 rounded-full bg-[#00D4B2]/15 text-[#007A66] text-[10px] font-mono font-bold flex items-center gap-1">
+                              <Sparkles className="h-2.5 w-2.5" /> Studio Backed
+                            </span>
+                          )}
+                          <span className="text-[10px] font-mono text-[#635BFF] font-bold flex items-center gap-1 bg-[#F0F0FF] px-2 py-0.5 rounded-md border border-[#E0E0FF]" title="Auto-deletes after 60 days">
+                            <Clock className="h-2.5 w-2.5" /> {opp.expiresInDays}d left
                           </span>
-                        )}
+                        </div>
                       </div>
 
                       {/* Title & Role */}
