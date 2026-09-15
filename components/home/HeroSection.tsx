@@ -9,12 +9,11 @@ import { FlowingMeshCanvas } from "@/components/canvas/FlowingMeshCanvas";
 import { trackStudioModalOpen } from "@/lib/analytics";
 import {
   ArrowRight,
-  Shield,
   Layers,
-  Sparkles,
-  Zap,
-  CheckCircle2,
-  Lock,
+  Users,
+  Coins,
+  BookOpen,
+  ArrowUpRight,
 } from "lucide-react";
 
 export function HeroSection() {
@@ -25,8 +24,51 @@ export function HeroSection() {
     setModalOpen(true);
   };
 
+  const pillars = [
+    {
+      num: "01",
+      title: "Venture Studio",
+      tagline: "Turnkey Build & Equity",
+      href: "/studio",
+      accent: "#635BFF",
+      bgHover: "hover:border-[#635BFF]/60 hover:shadow-[0_8px_20px_-6px_rgba(99,91,255,0.15)]",
+      badgeBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
+      icon: <Layers className="h-4 w-4 text-[#635BFF]" />,
+    },
+    {
+      num: "02",
+      title: "Partner Network",
+      tagline: "Co-Founders & Talent",
+      href: "/network",
+      accent: "#00A389",
+      bgHover: "hover:border-[#00D4B2]/60 hover:shadow-[0_8px_20px_-6px_rgba(0,212,178,0.15)]",
+      badgeBg: "bg-[#E6FFFA] text-[#007A66] border-[#B2F5EA]",
+      icon: <Users className="h-4 w-4 text-[#00A389]" />,
+    },
+    {
+      num: "03",
+      title: "Capital Network",
+      tagline: "Startup & Investor Match",
+      href: "/capital",
+      accent: "#059669",
+      bgHover: "hover:border-[#059669]/60 hover:shadow-[0_8px_20px_-6px_rgba(5,150,105,0.15)]",
+      badgeBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
+      icon: <Coins className="h-4 w-4 text-[#059669]" />,
+    },
+    {
+      num: "04",
+      title: "1008 Playbook",
+      tagline: "Operational Intelligence",
+      href: "/knowledge",
+      accent: "#FF7043",
+      bgHover: "hover:border-[#FF7043]/60 hover:shadow-[0_8px_20px_-6px_rgba(255,112,67,0.15)]",
+      badgeBg: "bg-[#FFF3EE] text-[#D94814] border-[#FFD8C9]",
+      icon: <BookOpen className="h-4 w-4 text-[#FF7043]" />,
+    },
+  ];
+
   return (
-    <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 overflow-hidden bg-white">
+    <section className="relative min-h-[calc(100vh-4.5rem)] sm:min-h-screen flex flex-col justify-center items-center pt-24 pb-12 sm:pt-28 sm:pb-16 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
 
@@ -42,7 +84,7 @@ export function HeroSection() {
       <div className="absolute left-8 top-1/4 w-44 h-44 bg-dots-matrix opacity-30 mask-radial-fade pointer-events-none hidden xl:block" />
       <div className="absolute right-8 top-1/3 w-44 h-44 bg-dots-matrix opacity-30 mask-radial-fade pointer-events-none hidden xl:block" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center">
         <div className="text-center max-w-4xl mx-auto space-y-6">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
@@ -84,41 +126,45 @@ export function HeroSection() {
               Apply to Build With Us
             </Button>
           </div>
+        </div>
 
-          {/* Four Pillars Quick Interactive Bar */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-2.5 text-xs font-semibold">
-            <Link
-              href="/studio"
-              className="px-4 py-2 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#635BFF] hover:bg-[#F0F0FF] text-[#0A2540] hover:text-[#635BFF] transition-all flex items-center gap-2 shadow-2xs group"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#635BFF]" />
-              <span>1. Venture Studio</span>
-              <span className="text-[10px] text-[#635BFF] font-mono font-bold bg-[#F0F0FF] px-1.5 py-0.5 rounded">Turnkey</span>
-            </Link>
-            <Link
-              href="/network"
-              className="px-4 py-2 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#00D4B2] hover:bg-[#E6FFFA] text-[#0A2540] hover:text-[#007A66] transition-all flex items-center gap-2 shadow-2xs group"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#00D4B2]" />
-              <span>2. Partner Network</span>
-              <span className="text-[10px] text-[#00A389] font-mono font-bold bg-[#E6FFFA] px-1.5 py-0.5 rounded">Co-Founders</span>
-            </Link>
-            <Link
-              href="/capital"
-              className="px-4 py-2 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#059669] hover:bg-[#ECFDF5] text-[#0A2540] hover:text-[#059669] transition-all flex items-center gap-2 shadow-2xs group"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#059669]" />
-              <span>3. Capital Network</span>
-              <span className="text-[10px] text-[#059669] font-mono font-bold bg-[#ECFDF5] px-1.5 py-0.5 rounded">Syndicate</span>
-            </Link>
-            <Link
-              href="/knowledge"
-              className="px-4 py-2 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#FF7043] hover:bg-[#FFF3EE] text-[#0A2540] hover:text-[#FF7043] transition-all flex items-center gap-2 shadow-2xs group"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#FF7043]" />
-              <span>4. Playbook</span>
-              <span className="text-[10px] text-[#FF7043] font-mono font-bold bg-[#FFF3EE] px-1.5 py-0.5 rounded">Playbooks</span>
-            </Link>
+        {/* Redesigned Four Pillars Glass Grid Dock */}
+        <div className="w-full max-w-5xl mx-auto pt-10 sm:pt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            {pillars.map((pillar) => (
+              <Link
+                key={pillar.num}
+                href={pillar.href}
+                className={`p-4 sm:p-5 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
+              >
+                {/* Subtle Top Indicator Accent Line on Hover */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ backgroundColor: pillar.accent }}
+                />
+
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <div className="w-8 h-8 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs">
+                    {pillar.icon}
+                  </div>
+                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${pillar.badgeBg}`}>
+                    Pillar {pillar.num}
+                  </span>
+                </div>
+
+                <div className="space-y-0.5">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xs sm:text-sm font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors flex items-center gap-1">
+                      {pillar.title}
+                    </h3>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  </div>
+                  <p className="text-[11px] text-[#627D98] font-normal leading-snug">
+                    {pillar.tagline}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
