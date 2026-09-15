@@ -81,6 +81,20 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const editionLabel =
+    resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
+      ? "Day 3 Edition"
+      : resource.slug.includes("uli") || resource.slug.includes("credit")
+      ? "Day 2 Edition"
+      : "Day 1 Edition";
+
+  const playbookTag =
+    resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
+      ? "1008 FOUNDER PLAYBOOK (DAY 3)"
+      : resource.slug.includes("uli") || resource.slug.includes("credit")
+      ? "1008 FOUNDER PLAYBOOK (DAY 2)"
+      : "1008 FOUNDER PLAYBOOK (DAY 1)";
+
   return (
     <div className="pt-28 pb-20 bg-[#FDFDFE]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +110,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
             <span>Series: Founder Playbooks</span>
             <span>•</span>
             <span className="text-[#635BFF] font-semibold">
-              {resource.slug.includes("uli") || resource.slug.includes("credit") ? "Day 2 Edition" : "Day 1 Edition"}
+              {editionLabel}
             </span>
           </div>
         </div>
@@ -105,7 +119,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
         <div className="space-y-4 mb-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-2.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider rounded-md bg-[#635BFF]/10 text-[#635BFF] border border-[#635BFF]/20">
-              {resource.slug.includes("uli") || resource.slug.includes("credit") ? "1008 FOUNDER PLAYBOOK (DAY 2)" : "1008 FOUNDER PLAYBOOK (DAY 1)"}
+              {playbookTag}
             </span>
             <Badge variant="indigo" size="sm">
               {resource.category.replace("_", " ").toUpperCase()}

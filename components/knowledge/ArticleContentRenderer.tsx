@@ -29,6 +29,9 @@ import { StructuralTrapsSection } from "@/components/knowledge/StructuralTrapsSe
 import { ULICreditArchitectureGraphic } from "@/components/knowledge/ULICreditArchitectureGraphic";
 import { CreditPlaybookPhases } from "@/components/knowledge/CreditPlaybookPhases";
 import { LenderRejectionTrapsSection } from "@/components/knowledge/LenderRejectionTrapsSection";
+import { CashFlowVersusHypeGraphic } from "@/components/knowledge/CashFlowVersusHypeGraphic";
+import { EssentialBusinessTrapsSection } from "@/components/knowledge/EssentialBusinessTrapsSection";
+import { RealBusinessPlaybookPhases } from "@/components/knowledge/RealBusinessPlaybookPhases";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -126,7 +129,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
         if (trimmed.startsWith("## ")) {
           const headingText = trimmed.replace("## ", "").trim();
 
-          // If heading is "The Three Structural Traps That Break Early Businesses", render heading + dedicated visual traps grid
+          // If heading is "The Three Structural Traps That Break Early Businesses" (Day 1)
           if (headingText.includes("The Three Structural Traps")) {
             return (
               <div key={idx} className="pt-6 pb-2 space-y-4">
@@ -144,7 +147,25 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
-          // If heading is "Why Early Businesses Get Rejected by Institutional Lenders", render heading + dedicated visual traps grid
+          // If heading is "The Three Deadly Pitfalls Struggling Founders Must Avoid" (Day 3)
+          if (headingText.includes("The Three Deadly Pitfalls")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  When early-stage businesses stall, the failure is rarely bad luck. It is rooted in three common structural blunders:
+                </p>
+                <EssentialBusinessTrapsSection />
+              </div>
+            );
+          }
+
+          // If heading is "Why Early Businesses Get Rejected by Institutional Lenders" (Day 2)
           if (headingText.includes("Why Early Businesses Get Rejected")) {
             return (
               <div key={idx} className="pt-6 pb-2 space-y-4">
@@ -162,7 +183,7 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
-          // If heading is "The 1008 Zero-Retainer Playbook: How to Build with Venture Discipline"
+          // If heading is "The 1008 Zero-Retainer Playbook: How to Build with Venture Discipline" (Day 1)
           if (headingText.includes("The 1008 Zero-Retainer Playbook")) {
             return (
               <div key={idx} className="pt-6 pb-2 space-y-4">
@@ -180,7 +201,25 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
-          // If heading is "The 1008 Digital Credit Playbook: From Cash Starved to Bankable"
+          // If heading is "The 1008 Playbook: Building an Unglamorous, Highly Profitable Enterprise" (Day 3)
+          if (headingText.includes("The 1008 Playbook: Building an Unglamorous")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  To transition from a struggling concept to a cash-generative, scalable enterprise, execute this 4-phase ground-level playbook:
+                </p>
+                <RealBusinessPlaybookPhases />
+              </div>
+            );
+          }
+
+          // If heading is "The 1008 Digital Credit Playbook: From Cash Starved to Bankable" (Day 2)
           if (headingText.includes("The 1008 Digital Credit Playbook")) {
             return (
               <div key={idx} className="pt-6 pb-2 space-y-4">
@@ -210,25 +249,40 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
 
         // Check for Heading 3 (### Heading)
         if (trimmed.startsWith("### ")) {
-          // If we already rendered the structural traps via visual sections, skip individual subheadings
+          // If we already rendered via visual sections, skip individual subheadings
           if (
             trimmed.includes("The \"Agency & Consultant\" Retainer Sinkhole") ||
             trimmed.includes("The 50/50 Handshake") ||
             trimmed.includes("Operational Blindness: The \"Spreadsheet & WhatsApp\"") ||
             trimmed.includes("The GST Reconciliation Gap") ||
             trimmed.includes("Fragmented Offline Accounting") ||
-            trimmed.includes("Un-Factored Receivables and Late Debtor Cycles")
+            trimmed.includes("Un-Factored Receivables and Late Debtor Cycles") ||
+            trimmed.includes("Chasing Discretionary Wants Instead of Non-Negotiable Needs") ||
+            trimmed.includes("The 'Online-Only' Illusion") ||
+            trimmed.includes("The 'Branding Agency' Cash Drain") ||
+            trimmed.includes("Phase 1: High-Utility Need") ||
+            trimmed.includes("Phase 2: Dedicated Tooling") ||
+            trimmed.includes("Phase 3: General Trade Beat") ||
+            trimmed.includes("Phase 4: Shared-Equity Scaling")
           ) {
             return null; // already rendered cleanly in visual card sections
           }
 
-          const subheadingText = trimmed.replace("### ", "").trim();
+          const lines = trimmed.split("\n");
+          const headingText = lines[0].replace("### ", "").trim();
+          const remainingContent = lines.slice(1).join("\n").trim();
+
           return (
-            <div key={idx} className="pt-4">
+            <div key={idx} className="pt-4 space-y-3">
               <h3 className="text-lg sm:text-xl font-bold text-[#0A2540] tracking-tight flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#635BFF]" />
-                {subheadingText}
+                {headingText}
               </h3>
+              {remainingContent && (
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed font-normal">
+                  {renderInline(remainingContent)}
+                </p>
+              )}
             </div>
           );
         }
@@ -242,6 +296,14 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             return <FounderCashDrainGraphic key={idx} />;
           }
 
+          // Check if this is the Lifestyle Hype vs. Essential Reality Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("THE LIFESTYLE HYPE VS. ESSENTIAL REALITY") ||
+            codeLines.includes("THE LIFESTYLE HYPE")
+          ) {
+            return <CashFlowVersusHypeGraphic key={idx} />;
+          }
+
           // Check if this is the ULI / Working Capital diagram -> Render bespoke graphic!
           if (
             codeLines.includes("THE WORKING CAPITAL CHASM") ||
@@ -251,11 +313,12 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             return <ULICreditArchitectureGraphic key={idx} />;
           }
 
-          // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by TurnaroundPlaybookPhases or CreditPlaybookPhases
+          // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
           if (
             (codeLines.includes("PHASE 1") && codeLines.includes("PHASE 2")) ||
             codeLines.includes("Phase 1: Immediate Cash Triage") ||
-            codeLines.includes("Phase 1: GST & Bank Data Integrity Audit")
+            codeLines.includes("Phase 1: GST & Bank Data Integrity Audit") ||
+            codeLines.includes("Phase 1: High-Utility Need")
           ) {
             return null; // already rendered via phase components
           }
