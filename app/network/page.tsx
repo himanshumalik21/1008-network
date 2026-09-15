@@ -8,7 +8,6 @@ import { Opportunity, TalentProfile, RoleCategory, RoleType, LocationType } from
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { ExpressInterestModal } from "@/components/network/ExpressInterestModal";
-import { JoinTalentModal } from "@/components/network/JoinTalentModal";
 import { cn } from "@/lib/utils";
 import {
   Users,
@@ -47,7 +46,6 @@ export default function NetworkPage() {
   // Modals
   const [selectedOppForApply, setSelectedOppForApply] = useState<Opportunity | null>(null);
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-  const [isTalentModalOpen, setIsTalentModalOpen] = useState(false);
 
   const roleFilters = [
     { label: "All Roles", value: "all" },
@@ -171,7 +169,7 @@ export default function NetworkPage() {
               Post a Requirement (Free)
             </Button>
             <Button
-              onClick={() => setIsTalentModalOpen(true)}
+              href="/network/join"
               size="md"
               variant="secondary"
               rightIcon={<UserCheck className="h-4 w-4 text-[#635BFF]" />}
@@ -257,7 +255,7 @@ export default function NetworkPage() {
               Post Requirement
             </Button>
             <Button
-              onClick={() => setIsTalentModalOpen(true)}
+              href="/network/join"
               size="sm"
               variant="primary"
               className="text-xs font-semibold"
@@ -630,7 +628,7 @@ export default function NetworkPage() {
                       </div>
 
                       <Button
-                        onClick={() => setIsTalentModalOpen(true)}
+                        href="/network/join"
                         variant="primary"
                         size="sm"
                         className="w-full text-xs font-semibold justify-center shadow-xs bg-[#00A389] hover:bg-[#008770] border-[#00A389]"
@@ -680,7 +678,7 @@ export default function NetworkPage() {
               </p>
             </div>
             <div className="pt-2">
-              <Button onClick={() => setIsTalentModalOpen(true)} variant="secondary" size="md" rightIcon={<UserCheck className="h-4 w-4" />}>
+              <Button href="/network/join" variant="secondary" size="md" rightIcon={<UserCheck className="h-4 w-4" />}>
                 Register in Talent Pool
               </Button>
             </div>
@@ -688,16 +686,11 @@ export default function NetworkPage() {
         </div>
       </section>
 
-      {/* Global Modals */}
+      {/* Express Interest Modal */}
       <ExpressInterestModal
         opportunity={selectedOppForApply}
         isOpen={isApplyModalOpen}
         onClose={() => setIsApplyModalOpen(false)}
-      />
-
-      <JoinTalentModal
-        isOpen={isTalentModalOpen}
-        onClose={() => setIsTalentModalOpen(false)}
       />
     </div>
   );
