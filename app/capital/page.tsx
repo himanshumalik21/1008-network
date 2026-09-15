@@ -8,6 +8,7 @@ import { StartupCapitalCard, InvestorCard, LocationType } from "@/lib/types";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { CapitalInterestModal } from "@/components/capital/CapitalInterestModal";
+import { InvestIn1008Modal } from "@/components/capital/InvestIn1008Modal";
 import { cn } from "@/lib/utils";
 import {
   TrendingUp,
@@ -38,19 +39,22 @@ import {
   PlusCircle,
   ArrowUpRight,
   Send,
+  Award,
+  Globe,
+  Coins,
 } from "lucide-react";
 
 export default function CapitalPage() {
   const [activeTab, setActiveTab] = useState<"startups" | "investors">("startups");
   const [selectedSector, setSelectedSector] = useState<string>("all");
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
-  const [selectedTicketSize, setSelectedTicketSize] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   // Modals
   const [selectedStartupForInquiry, setSelectedStartupForInquiry] = useState<StartupCapitalCard | null>(null);
   const [selectedInvestorForInquiry, setSelectedInvestorForInquiry] = useState<InvestorCard | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isStudioInvestModalOpen, setIsStudioInvestModalOpen] = useState(false);
 
   const sectorFilters = [
     { label: "All Sectors", value: "all" },
@@ -117,7 +121,6 @@ export default function CapitalPage() {
   const resetFilters = () => {
     setSelectedSector("all");
     setSelectedLocation("all");
-    setSelectedTicketSize("all");
     setSearchQuery("");
   };
 
@@ -135,28 +138,32 @@ export default function CapitalPage() {
 
   return (
     <div className="pt-28 pb-20 bg-[#FDFDFE] min-h-screen">
-      {/* 1. Header Section */}
+      
+      {/* 1. Hero Header Section */}
       <section className="relative py-14 sm:py-20 overflow-hidden border-b border-[#E6E8EB] bg-[#F6F9FC]">
         <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-80 bg-gradient-to-r from-[#635BFF]/12 via-[#00D4B2]/08 to-[#FF7043]/06 blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
-          <div className="inline-flex items-center gap-2">
+          <div className="inline-flex items-center gap-2 flex-wrap justify-center">
             <Badge variant="indigo" size="md" pulse>
               1008 Capital & Syndicate Network
             </Badge>
+            <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
+              Pre-Launch Data Aggregation Phase
+            </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Anyone can invest in startups.{" "}
+            Democratic startup investing.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              Startups find the right capital & operators.
+              De-risked by turnkey operations.
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Great enterprises need capital aligned with execution. Whether you want to deploy capital (from ₹2L to ₹5Cr+) into vetted Indian businesses or you are a startup raising seed funding—1008 curates high-conviction partnerships with turnkey operational governance.
+            Inspired by platforms like StartEngine and AngelList, 1008 Network connects anyone who wants to invest in high-conviction Indian startups (from ₹50K to ₹5Cr+) with founders raising capital. <strong>We manage ground-level operations and governance so capital is de-risked</strong>.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -167,7 +174,7 @@ export default function CapitalPage() {
               rightIcon={<PlusCircle className="h-4 w-4" />}
               className="w-full sm:w-auto font-semibold px-6 shadow-sm"
             >
-              Post Capital Requirement (Free)
+              Post Capital Requirement (For Startups)
             </Button>
             <Button
               href="/capital/join"
@@ -176,15 +183,15 @@ export default function CapitalPage() {
               rightIcon={<TrendingUp className="h-4 w-4 text-[#00A389]" />}
               className="w-full sm:w-auto font-semibold"
             >
-              Register as Investor / Allocator
+              Join Investor Pool (For Investors)
             </Button>
             <Button
-              href="/studio"
+              onClick={() => setIsStudioInvestModalOpen(true)}
               size="md"
               variant="ghost"
-              className="w-full sm:w-auto text-xs text-[#627D98] hover:text-[#0A2540]"
+              className="w-full sm:w-auto text-xs text-[#635BFF] font-semibold hover:bg-[#635BFF]/10"
             >
-              Learn about Venture Studio →
+              Invest in 1008 Network Studio →
             </Button>
           </div>
 
@@ -192,7 +199,7 @@ export default function CapitalPage() {
           <div className="pt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono text-[#627D98]">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-              <span>Next Cohort Allocation: <strong>Q4 2026</strong></span>
+              <span>Syndicate Mode: <strong>Data Collection & Pre-Allocation</strong></span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
@@ -202,14 +209,63 @@ export default function CapitalPage() {
             <span>•</span>
             <div className="flex items-center gap-1.5">
               <Sparkles className="h-3.5 w-3.5 text-[#FF7043]" />
-              <span>Zero Intermediary / Broker Fees</span>
+              <span>Zero Intermediary / Placement Fees</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Main Marketplace Container */}
+      {/* 2. Featured Banner: Invest in 1008 Network Parent Studio */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="rounded-3xl bg-gradient-to-r from-[#0A2540] via-[#1A365D] to-[#0A2540] p-6 sm:p-10 text-white relative overflow-hidden shadow-lg border border-[#2D3748]">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#635BFF]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="flex items-center gap-2">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#00D4B2]/20 text-[#00D4B2] text-[10px] font-mono font-bold uppercase tracking-wider border border-[#00D4B2]/30">
+                  Featured Opportunity
+                </span>
+                <span className="text-xs text-[#CBD5E1] font-mono">Portfolio Holding Equity</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                Invest Directly in 1008 Network Parent Studio
+              </h2>
+              <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
+                Back the venture studio building India&apos;s real economy enterprises. Owning equity in 1008 Network provides diversified portfolio upside across every manufacturing unit, healthcare clinic, retail brand, and tech software venture we co-build for shared equity.
+              </p>
+              <div className="pt-2 flex flex-wrap gap-4 text-xs font-mono text-[#00D4B2]">
+                <span>✓ Diversified across 10+ operational ventures</span>
+                <span>✓ Direct equity participation</span>
+                <span>✓ Zero management fees</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0 w-full lg:w-auto">
+              <Button
+                onClick={() => setIsStudioInvestModalOpen(true)}
+                variant="primary"
+                size="md"
+                rightIcon={<ArrowRight className="h-4 w-4" />}
+                className="font-semibold shadow-md whitespace-nowrap bg-[#635BFF] hover:bg-[#5851EA] border-none"
+              >
+                Invest in 1008 Network
+              </Button>
+              <Button
+                href="/studio"
+                variant="ghost"
+                size="sm"
+                className="text-xs text-[#CBD5E1] hover:text-white hover:bg-white/10"
+              >
+                Explore Studio Model →
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Main Marketplace Container */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        
         {/* Marketplace View Toggle: Startups Seeking Capital vs Investors Directory */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-[#E6E8EB]">
           <div className="inline-flex p-1 bg-[#F1F5F9] rounded-2xl border border-[#E2E8F0] shadow-2xs">
@@ -266,16 +322,16 @@ export default function CapitalPage() {
           </div>
         </div>
 
-        {/* 60-Day Auto-Expiry & Allocation Status Banner */}
+        {/* StartEngine/AngelList Data Gathering Notice Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-4 py-3 rounded-2xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs font-mono text-[#065F46] shadow-2xs">
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4 text-[#059669] shrink-0" />
             <span>
-              <strong>Active Pipeline & 60-Day Expiry:</strong> All startup capital requirements expire in 60 days to keep investor dealflow 100% responsive. Current allocations are in due diligence and open with each cohort.
+              <strong>Pre-Launch Aggregation:</strong> We are currently gathering verified capital commitments and vetting startup applications. Deal allocations will open sequentially once cohort allocation thresholds are met.
             </span>
           </div>
           <span className="text-[11px] font-sans font-bold text-[#059669] bg-white px-2.5 py-1 rounded-md border border-[#A7F3D0] shrink-0 self-start sm:self-auto">
-            Zero Stale Listings
+            Zero Stale Deals
           </span>
         </div>
 
@@ -644,7 +700,7 @@ export default function CapitalPage() {
               <Badge variant="cyan" size="sm">For Individuals & Allocators</Badge>
               <h3 className="text-2xl font-extrabold text-[#0A2540]">Join the 1008 Investor Syndicate</h3>
               <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                Whether you want to invest ₹2 Lakhs or ₹5 Crores+, co-invest in vetted Indian businesses de-risked by 1008 Network&apos;s operational management and ground execution.
+                Whether you want to invest ₹50,000 or ₹5 Crores+, co-invest in vetted Indian businesses de-risked by 1008 Network&apos;s operational management and ground execution.
               </p>
             </div>
             <div className="pt-2">
@@ -666,6 +722,12 @@ export default function CapitalPage() {
           setSelectedStartupForInquiry(null);
           setSelectedInvestorForInquiry(null);
         }}
+      />
+
+      {/* Invest in 1008 Network Modal */}
+      <InvestIn1008Modal
+        isOpen={isStudioInvestModalOpen}
+        onClose={() => setIsStudioInvestModalOpen(false)}
       />
     </div>
   );

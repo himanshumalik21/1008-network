@@ -449,3 +449,59 @@ export async function sendStartupCapitalAlert(data: {
   });
 }
 
+/**
+ * Invest in 1008 Network Parent Studio Alert
+ */
+export async function sendStudioInvestmentAlert(data: {
+  fullName: string;
+  email: string;
+  phone: string;
+  intendedTicket: string;
+  investorType: string;
+  notes?: string;
+}) {
+  const subject = `💎 [INVEST IN 1008 NETWORK]: ${data.fullName} (${data.intendedTicket}) - ${data.investorType}`;
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #F6F9FC; color: #0A2540; padding: 24px; }
+    .card { background-color: #FFFFFF; max-width: 600px; margin: 0 auto; border-radius: 16px; border: 1px solid #E6E8EB; overflow: hidden; }
+    .header { background: linear-gradient(135deg, #0A2540 0%, #1A365D 100%); color: #FFFFFF; padding: 24px; }
+    .content { padding: 28px; }
+    .field { margin-bottom: 10px; font-size: 13px; }
+    .label { color: #627D98; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <span style="display:inline-block; background:rgba(99,91,255,0.3); color:#00D4B2; font-family:monospace; font-size:10px; padding:3px 8px; border-radius:4px; font-weight:bold;">1008 NETWORK STUDIO EQUITY ROUND</span>
+      <h3 style="margin:8px 0 0 0; color:#FFFFFF;">New 1008 Network Investor Lead</h3>
+      <p style="margin:4px 0 0 0; color:#00D4B2; font-size:13px; font-weight:bold;">${data.intendedTicket} • ${data.investorType}</p>
+    </div>
+    <div class="content">
+      <div class="field"><span class="label">Investor Name:</span> ${data.fullName}</div>
+      <div class="field"><span class="label">Email:</span> <a href="mailto:${data.email}">${data.email}</a></div>
+      <div class="field"><span class="label">Phone:</span> <a href="tel:${data.phone}">${data.phone}</a></div>
+      <div class="field"><span class="label">Intended Allocation:</span> <strong>${data.intendedTicket}</strong></div>
+      <div class="field"><span class="label">Investor Category:</span> ${data.investorType}</div>
+      ${data.notes ? `<div class="field"><span class="label">Strategic Value & Notes:</span> ${data.notes}</div>` : ""}
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+  return sendEmail({
+    to: ALERT_RECIPIENT,
+    subject,
+    html,
+    replyTo: data.email,
+  });
+}
+
+

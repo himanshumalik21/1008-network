@@ -7,6 +7,7 @@ import {
   sendContactAlert,
   sendInvestorProfileAlert,
   sendStartupCapitalAlert,
+  sendStudioInvestmentAlert,
 } from "./email";
 
 export interface ActionResult<T = unknown> {
@@ -269,6 +270,47 @@ export async function submitStartupCapitalRequest(payload: {
     return {
       success: false,
       message: "Unable to submit your capital request. Please email us directly at join@1008.network.",
+      error: (err as Error).message,
+    };
+  }
+}
+
+export async function submitStudioInvestmentRequest(payload: {
+  fullName: string;
+  email: string;
+  phone: string;
+  intendedTicket: string;
+  investorType: string;
+  notes?: string;
+}): Promise<ActionResult> {
+  try {
+    if (!payload.fullName || !payload.email || !payload.phone || !payload.intendedTicket) {
+      return {
+        success: false,
+        message: "Please provide your full name, email, phone number, and intended allocation.",
+      };
+    }
+
+    const record = {
+      id: `inv-1008-${Date.now()}`,
+      ...payload,
+      submittedAt: new Date().toISOString(),
+    };
+
+    // Dispatch automated email notification to join@1008.network
+    await sendStudioInvestmentAlert(payload).catch((err) => {
+      console.error("[Non-blocking Email Error]:", err);
+    });
+
+    return {
+      success: true,
+      message: "Thank you for your interest in investing in 1008 Network parent studio. Our founders will review your profile and share the investor deck & confidential data room within 24 business hours.",
+      data: { id: record.id },
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: "Unable to submit investment expression. Please email us directly at join@1008.network.",
       error: (err as Error).message,
     };
   }
