@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { submitContactInquiry } from "@/lib/actions";
 import { submitToWeb3Forms } from "@/lib/client-submit";
@@ -184,22 +185,18 @@ export default function ContactPage() {
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   />
 
-                  <div className="space-y-1.5 text-left">
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                      Inquiry Type <span className="text-[#F4511E]">*</span>
-                    </label>
-                    <select
-                      value={formData.type}
-                      onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                      className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                    >
-                      <option value="Studio Inquiry">Build With 1008 Network (Venture Studio)</option>
-                      <option value="Partner Network">1008 Network Partner Inquiry</option>
-                      <option value="Investor / Syndicate">Venture Capital / Co-Investment</option>
-                      <option value="Media / General">Media & General Partnerships</option>
-                      <option value="Other">Other / General Inquiry</option>
-                    </select>
-                  </div>
+                  <Select
+                    label="Inquiry Type"
+                    required
+                    value={formData.type}
+                    onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                  >
+                    <option value="Studio Inquiry">Build With 1008 Network (Venture Studio)</option>
+                    <option value="Partner Network">1008 Network Partner Inquiry</option>
+                    <option value="Investor / Syndicate">Venture Capital / Co-Investment</option>
+                    <option value="Media / General">Media & General Partnerships</option>
+                    <option value="Other">Other / General Inquiry</option>
+                  </Select>
                 </div>
 
                 <Textarea

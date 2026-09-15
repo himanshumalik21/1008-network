@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Modal } from "@/components/ui/Modal";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/brand/Badge";
@@ -245,39 +246,31 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Primary Sector <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none shadow-xs"
-                    value={formData.primaryDomain}
-                    onChange={(e) => setFormData({ ...formData, primaryDomain: e.target.value as SectorCategory })}
-                  >
-                    {sectors.map((s) => (
-                      <option key={s} value={s}>
-                        {s}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Primary Sector"
+                  required
+                  value={formData.primaryDomain}
+                  onChange={(e) => setFormData({ ...formData, primaryDomain: e.target.value as SectorCategory })}
+                >
+                  {sectors.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </Select>
 
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Primary Target Location / City <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none shadow-xs"
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value as LocationType })}
-                  >
-                    {cities.map((c) => (
-                      <option key={c} value={c}>
-                        {c}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Primary Target Location / City"
+                  required
+                  value={formData.city}
+                  onChange={(e) => setFormData({ ...formData, city: e.target.value as LocationType })}
+                >
+                  {cities.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </Select>
               </div>
             </div>
           )}
@@ -314,26 +307,21 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           {/* STEP 3: Execution Readiness */}
           {step === 3 && (
             <div className="space-y-4 animate-in fade-in duration-150">
-              <div className="space-y-1.5 text-left">
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                  Venture Stage & Focus
-                </label>
-                <select
-                  className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none shadow-xs"
-                  value={formData.timeCommitment}
-                  onChange={(e) => setFormData({ ...formData, timeCommitment: e.target.value as any })}
-                >
-                  <option value="Exploring High Conviction">
-                    Budding Entrepreneur (New venture setup / pre-launch)
-                  </option>
-                  <option value="Transitioning over 3-6 Months">
-                    Struggling / Stalled Business (Seeking operational turnaround & reboot)
-                  </option>
-                  <option value="Full-Time Immediate">
-                    Active Operating Founder (Seeking turnkey operational scaling & syndicate capital)
-                  </option>
-                </select>
-              </div>
+              <Select
+                label="Venture Stage & Focus"
+                value={formData.timeCommitment}
+                onChange={(e) => setFormData({ ...formData, timeCommitment: e.target.value as any })}
+              >
+                <option value="Exploring High Conviction">
+                  Budding Entrepreneur (New venture setup / pre-launch)
+                </option>
+                <option value="Transitioning over 3-6 Months">
+                  Struggling / Stalled Business (Seeking operational turnaround & reboot)
+                </option>
+                <option value="Full-Time Immediate">
+                  Active Operating Founder (Seeking turnkey operational scaling & syndicate capital)
+                </option>
+              </Select>
 
               <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-2 text-xs">
                 <div className="flex items-center gap-1.5 text-[#059669] font-bold">

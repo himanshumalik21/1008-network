@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { DealCard } from "@/components/capital/DealCard";
 import { EOIModal } from "@/components/capital/EOIModal";
@@ -391,22 +392,18 @@ export default function CapitalPage() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                     />
-                    <div className="space-y-1.5 text-left">
-                      <label className="block text-xs font-semibold text-[#0A2540]">
-                        Investor Background <span className="text-[#635BFF]">*</span>
-                      </label>
-                      <select
-                        value={investorType}
-                        onChange={(e) => setInvestorType(e.target.value)}
-                        className="w-full rounded-xl bg-white border border-[#E6E8EB] px-3.5 py-2.5 text-sm text-[#0A2540] focus:border-[#635BFF] focus:outline-none"
-                      >
-                        <option value="Angel Investor / CXO">Angel Investor / Corporate CXO</option>
-                        <option value="Family Office Principal">Family Office Principal</option>
-                        <option value="Business Owner / Industrialist">Business Owner / Industrialist</option>
-                        <option value="NRI / Global High-Net-Worth">NRI / Global High-Net-Worth</option>
-                        <option value="First-Time Business Investor">First-Time Business Investor</option>
-                      </select>
-                    </div>
+                    <Select
+                      label="Investor Background"
+                      required
+                      value={investorType}
+                      onChange={(e) => setInvestorType(e.target.value)}
+                    >
+                      <option value="Angel Investor / CXO">Angel Investor / Corporate CXO</option>
+                      <option value="Family Office Principal">Family Office Principal</option>
+                      <option value="Business Owner / Industrialist">Business Owner / Industrialist</option>
+                      <option value="NRI / Global High-Net-Worth">NRI / Global High-Net-Worth</option>
+                      <option value="First-Time Business Investor">First-Time Business Investor</option>
+                    </Select>
                   </div>
 
                   <Textarea

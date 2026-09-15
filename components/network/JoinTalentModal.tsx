@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Badge } from "@/components/brand/Badge";
 import { submitToWeb3Forms } from "@/lib/client-submit";
@@ -344,58 +345,46 @@ export function JoinTalentModal({ isOpen, onClose }: JoinTalentModalProps) {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Primary Functional Expertise <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.primaryFunction}
-                    onChange={(e) => setFormData({ ...formData, primaryFunction: e.target.value as RoleCategory })}
-                    className="w-full rounded-xl bg-white border border-[#CBD5E1] px-3.5 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    {roleCategories.map((r) => (
-                      <option key={r} value={r}>
-                        {r}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Primary Functional Expertise"
+                  required
+                  value={formData.primaryFunction}
+                  onChange={(e) => setFormData({ ...formData, primaryFunction: e.target.value as RoleCategory })}
+                >
+                  {roleCategories.map((r) => (
+                    <option key={r} value={r}>
+                      {r}
+                    </option>
+                  ))}
+                </Select>
 
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Preferred Location Base <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.location}
-                    onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
-                    className="w-full rounded-xl bg-white border border-[#CBD5E1] px-3.5 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    {locations.map((loc) => (
-                      <option key={loc} value={loc}>
-                        {loc}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Preferred Location Base"
+                  required
+                  value={formData.location}
+                  onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
+                >
+                  {locations.map((loc) => (
+                    <option key={loc} value={loc}>
+                      {loc}
+                    </option>
+                  ))}
+                </Select>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Target Commitment Mode <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.preferredCommitment}
-                    onChange={(e) => setFormData({ ...formData, preferredCommitment: e.target.value as CommitmentType })}
-                    className="w-full rounded-xl bg-white border border-[#CBD5E1] px-3.5 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    <option value="Full-time (Co-Founder)">Full-Time Co-Founder (Shared Equity)</option>
-                    <option value="Full-time (Core Lead)">Full-Time Core Team Lead</option>
-                    <option value="Fractional / Part-time">Fractional / Part-Time (15-20 hrs/week)</option>
-                    <option value="Advisory / Milestone">Advisory / Specialist</option>
-                    <option value="Other / Flexible">Other / Flexible Arrangement</option>
-                  </select>
-                </div>
+                <Select
+                  label="Target Commitment Mode"
+                  required
+                  value={formData.preferredCommitment}
+                  onChange={(e) => setFormData({ ...formData, preferredCommitment: e.target.value as CommitmentType })}
+                >
+                  <option value="Full-time (Co-Founder)">Full-Time Co-Founder (Shared Equity)</option>
+                  <option value="Full-time (Core Lead)">Full-Time Core Team Lead</option>
+                  <option value="Fractional / Part-time">Fractional / Part-Time (15-20 hrs/week)</option>
+                  <option value="Advisory / Milestone">Advisory / Specialist</option>
+                  <option value="Other / Flexible">Other / Flexible Arrangement</option>
+                </Select>
 
                 <div className="space-y-1">
                   <Input

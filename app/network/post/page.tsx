@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { submitNetworkOpportunity } from "@/lib/actions";
 import { submitToWeb3Forms } from "@/lib/client-submit";
@@ -392,110 +393,86 @@ export default function PostOpportunityPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Role Needed <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.roleNeeded}
-                    onChange={(e) => setFormData({ ...formData, roleNeeded: e.target.value as RoleCategory })}
-                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    {roles.map((r) => (
-                      <option key={r} value={r}>
-                        {r}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Role Needed"
+                  required
+                  value={formData.roleNeeded}
+                  onChange={(e) => setFormData({ ...formData, roleNeeded: e.target.value as RoleCategory })}
+                >
+                  {roles.map((r) => (
+                    <option key={r} value={r}>
+                      {r}
+                    </option>
+                  ))}
+                </Select>
 
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Role Level <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.roleType}
-                    onChange={(e) => setFormData({ ...formData, roleType: e.target.value as RoleType })}
-                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    <option value="Co-Founder">Co-Founder (Shared Equity)</option>
-                    <option value="Founding Lead">Founding Core Lead</option>
-                    <option value="Head of Department">Head of Department</option>
-                    <option value="Fractional CXO">Fractional CXO</option>
-                    <option value="Specialist & Operator">Specialist & Operator</option>
-                    <option value="Other">Other Level</option>
-                  </select>
-                </div>
+                <Select
+                  label="Role Level"
+                  required
+                  value={formData.roleType}
+                  onChange={(e) => setFormData({ ...formData, roleType: e.target.value as RoleType })}
+                >
+                  <option value="Co-Founder">Co-Founder (Shared Equity)</option>
+                  <option value="Founding Lead">Founding Core Lead</option>
+                  <option value="Head of Department">Head of Department</option>
+                  <option value="Fractional CXO">Fractional CXO</option>
+                  <option value="Specialist & Operator">Specialist & Operator</option>
+                  <option value="Other">Other Level</option>
+                </Select>
 
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Commitment Mode <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.commitment}
-                    onChange={(e) => setFormData({ ...formData, commitment: e.target.value as CommitmentType })}
-                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    <option value="Full-time (Co-Founder)">Full-time (Co-Founder)</option>
-                    <option value="Full-time (Core Lead)">Full-time (Core Lead)</option>
-                    <option value="Fractional / Part-time">Fractional / Part-time</option>
-                    <option value="Advisory / Milestone">Advisory / Milestone</option>
-                    <option value="Other / Flexible">Other / Flexible</option>
-                  </select>
-                </div>
+                <Select
+                  label="Commitment Mode"
+                  required
+                  value={formData.commitment}
+                  onChange={(e) => setFormData({ ...formData, commitment: e.target.value as CommitmentType })}
+                >
+                  <option value="Full-time (Co-Founder)">Full-time (Co-Founder)</option>
+                  <option value="Full-time (Core Lead)">Full-time (Core Lead)</option>
+                  <option value="Fractional / Part-time">Fractional / Part-time</option>
+                  <option value="Advisory / Milestone">Advisory / Milestone</option>
+                  <option value="Other / Flexible">Other / Flexible</option>
+                </Select>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Sector <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.sector}
-                    onChange={(e) => setFormData({ ...formData, sector: e.target.value as SectorCategory })}
-                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    {sectors.map((s) => (
-                      <option key={s} value={s}>
-                        {s}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Sector"
+                  required
+                  value={formData.sector}
+                  onChange={(e) => setFormData({ ...formData, sector: e.target.value as SectorCategory })}
+                >
+                  {sectors.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </Select>
 
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Location <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.location}
-                    onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
-                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    {cities.map((c) => (
-                      <option key={c} value={c}>
-                        {c}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <Select
+                  label="Location"
+                  required
+                  value={formData.location}
+                  onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
+                >
+                  {cities.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </Select>
 
-                <div className="space-y-1.5 text-left">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                    Current Venture Stage <span className="text-[#F4511E]">*</span>
-                  </label>
-                  <select
-                    value={formData.stage}
-                    onChange={(e) => setFormData({ ...formData, stage: e.target.value as VentureStage })}
-                    className="w-full bg-white border border-[#CBD5E1] rounded-xl px-3 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                  >
-                    <option value="Idea / Pre-Seed">Idea / Pre-Seed</option>
-                    <option value="Feasibility & MVP">Feasibility & MVP</option>
-                    <option value="Early Revenue (₹25L - ₹1Cr)">Early Revenue (₹25L - ₹1Cr)</option>
-                    <option value="Scaling & Growth (₹1Cr - ₹10Cr)">Scaling & Growth (₹1Cr - ₹10Cr)</option>
-                    <option value="Other Stage">Other Stage</option>
-                  </select>
-                </div>
+                <Select
+                  label="Current Venture Stage"
+                  required
+                  value={formData.stage}
+                  onChange={(e) => setFormData({ ...formData, stage: e.target.value as VentureStage })}
+                >
+                  <option value="Idea / Pre-Seed">Idea / Pre-Seed</option>
+                  <option value="Feasibility & MVP">Feasibility & MVP</option>
+                  <option value="Early Revenue (₹25L - ₹1Cr)">Early Revenue (₹25L - ₹1Cr)</option>
+                  <option value="Scaling & Growth (₹1Cr - ₹10Cr)">Scaling & Growth (₹1Cr - ₹10Cr)</option>
+                  <option value="Other Stage">Other Stage</option>
+                </Select>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

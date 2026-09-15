@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Opportunity } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Badge } from "@/components/brand/Badge";
 import { submitToWeb3Forms } from "@/lib/client-submit";
@@ -329,22 +330,18 @@ export function ExpressInterestModal({
                 </div>
               </div>
 
-              <div className="space-y-1.5 text-left">
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#627D98]">
-                  Target Commitment Mode <span className="text-[#F4511E]">*</span>
-                </label>
-                <select
-                  value={formData.commitment}
-                  onChange={(e) => setFormData({ ...formData, commitment: e.target.value })}
-                  className="w-full rounded-xl bg-white border border-[#CBD5E1] px-3.5 py-2.5 text-xs text-[#0A2540] focus:outline-none focus:border-[#635BFF] shadow-xs"
-                >
-                  <option value="Full-Time Co-Founder">Full-Time Co-Founder (Immediate / 30 Days)</option>
-                  <option value="Full-Time Core Lead">Full-Time Core Team Lead</option>
-                  <option value="Fractional / Part-Time (15-20 hrs/wk)">Fractional / Part-Time (15-20 hrs/week)</option>
-                  <option value="Advisory / Specialist">Advisory / Milestone Specialist</option>
-                  <option value="Other / Flexible">Other / Flexible Arrangement</option>
-                </select>
-              </div>
+              <Select
+                label="Target Commitment Mode"
+                required
+                value={formData.commitment}
+                onChange={(e) => setFormData({ ...formData, commitment: e.target.value })}
+              >
+                <option value="Full-Time Co-Founder">Full-Time Co-Founder (Immediate / 30 Days)</option>
+                <option value="Full-Time Core Lead">Full-Time Core Team Lead</option>
+                <option value="Fractional / Part-Time (15-20 hrs/wk)">Fractional / Part-Time (15-20 hrs/week)</option>
+                <option value="Advisory / Specialist">Advisory / Milestone Specialist</option>
+                <option value="Other / Flexible">Other / Flexible Arrangement</option>
+              </Select>
 
               <div className="space-y-1">
                 <Textarea
