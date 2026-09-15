@@ -7,8 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import { OperationsVelocityGraphic } from "@/components/graphics/OperationsVelocityGraphic";
 import { CapitalSyndicateGraphic } from "@/components/graphics/CapitalSyndicateGraphic";
-import { TechArchitectureGraphic } from "@/components/graphics/TechArchitectureGraphic";
-import { CommercialRevenueGraphic } from "@/components/graphics/CommercialRevenueGraphic";
+import { NetworkRadarGraphic } from "@/components/graphics/NetworkRadarGraphic";
 import {
   Code2,
   ShieldCheck,
@@ -18,13 +17,19 @@ import {
   Briefcase,
   Boxes,
   TrendingUp,
+  Users,
+  BookOpen,
+  DollarSign,
+  Layers,
+  ArrowUpRight,
+  CheckCircle2,
 } from "lucide-react";
 
 export function PillarsBento() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section className="py-24 bg-[#F8FAFC] border-y border-[#E2E8F0] relative overflow-hidden">
+    <section className="py-24 bg-[#F8FAFC] border-y border-[#E2E8F0] relative overflow-hidden" id="pillars">
       {/* Background Architectural Box Grid & Ambient Mesh */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
       <div className="absolute top-1/3 left-1/4 -translate-y-1/2 w-[600px] h-[500px] bg-gradient-to-r from-[#635BFF]/08 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none animate-float-slow" />
@@ -34,184 +39,230 @@ export function PillarsBento() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <Badge variant="indigo" size="sm">
-            Turnkey Venture Facilitation & Infrastructure
+            The 1008 Network Ecosystem
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            We Orchestrate the Foundation. <br className="hidden sm:inline" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#0A2540]">
-              You Run the Enterprise.
+            Built on Four Pillars. <br className="hidden sm:inline" />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
+              Engineered for Venture Scale.
             </span>
           </h2>
           <p className="text-[#425466] text-base sm:text-lg leading-relaxed">
-            Stop losing quarters to trial-and-error, fragmented agencies, and hiring bottlenecks. 1008 Network acts as your venture facilitator—sourcing the specialized talent, configuring the software tools, securing vendor terms, and structuring growth capital.
+            Everything you need to launch, scale, and fund an Indian enterprise—from turnkey operations and talent matching to syndicate capital and tactical playbooks.
           </p>
         </div>
 
-        {/* Studio Pillars Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
-          {/* Card 1: Operations & Supply Chain (7 cols) */}
-          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#635BFF]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+        {/* The Four Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          {/* PILLAR 1: VENTURE STUDIO */}
+          <div className="rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#635BFF]/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-xl bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">
+                  <div className="p-2.5 rounded-xl bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">
                     <Briefcase className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-sans text-[#635BFF] tracking-wider font-bold uppercase">
-                    OPERATIONS & SUPPLY CHAIN
-                  </span>
+                  <div>
+                    <span className="text-[10px] font-mono text-[#635BFF] tracking-wider font-bold uppercase block">
+                      PILLAR 01
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540]">
+                      Venture Studio
+                    </h3>
+                  </div>
                 </div>
-                <Badge variant="indigo" size="sm">Turnkey Facilitation</Badge>
+                <Badge variant="indigo" size="sm">Turnkey Operations</Badge>
               </div>
 
-              <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                  Facilitated Manufacturing, 3PL Fulfillment & Supply Chain
-                </h3>
-                <p className="text-[#425466] text-sm leading-relaxed">
-                  We audit and negotiate verified OEM manufacturing contracts, onboard 3PL logistics partners, configure Cloud ERP pipelines, and facilitate statutory compliance—equipping your company with an enterprise-grade operating engine.
-                </p>
-              </div>
+              <p className="text-[#425466] text-sm leading-relaxed">
+                We architect turnkey operational infrastructure, source specialized talent, configure modern software tools, and facilitate syndicate capital alongside ambitious founders—<strong>aligned on long-term venture equity</strong>.
+              </p>
 
-              {/* Embedded Modern Operations Graphic */}
+              {/* Embedded Operations Velocity Graphic */}
               <div className="pt-2">
                 <OperationsVelocityGraphic />
               </div>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Vetted Vendor Selection • Direct Contract Terms</span>
-              <button
-                onClick={() => setModalOpen(true)}
-                className="text-xs font-semibold text-[#635BFF] hover:underline flex items-center gap-1"
+            <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-medium">
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" />
+                <span>Zero retainers • Phased handover</span>
+              </div>
+              <Button
+                href="/studio"
+                variant="primary"
+                size="sm"
+                className="font-semibold shadow-xs"
+                rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
               >
-                Discuss Operations Scope <ArrowRight className="h-3.5 w-3.5" />
-              </button>
+                Explore Studio Model
+              </Button>
             </div>
           </div>
 
-          {/* Card 2: Capital & Syndicates (5 cols) */}
-          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#059669]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+          {/* PILLAR 2: PARTNER NETWORK */}
+          <div className="rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#00D4B2]/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-xl bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0]">
-                    <ShieldCheck className="h-5 w-5" />
+                  <div className="p-2.5 rounded-xl bg-[#E6FFFA] text-[#00A389] border border-[#B2F5EA]">
+                    <Users className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-sans text-[#059669] tracking-wider font-bold uppercase">
-                    CAPITAL & SYNDICATES
-                  </span>
+                  <div>
+                    <span className="text-[10px] font-mono text-[#00A389] tracking-wider font-bold uppercase block">
+                      PILLAR 02
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540]">
+                      Partner Network
+                    </h3>
+                  </div>
                 </div>
-                <Badge variant="emerald" size="sm">Syndicate Facilitation</Badge>
+                <Badge variant="cyan" size="sm">Talent & Co-Founders</Badge>
               </div>
 
-              <div>
-                <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Syndicate Co-Investment & Working Capital Rails
-                </h3>
-                <p className="text-[#425466] text-sm leading-relaxed">
-                  We structure and facilitate growth capital from our network of 250+ angel syndicates, family offices, and RBI ULI non-dilutive credit lines—funding your venture&apos;s hiring, tooling, and capex needs.
-                </p>
+              <p className="text-[#425466] text-sm leading-relaxed">
+                <strong>Have the business vision? Find the right co-founder & talent.</strong> Connect domain experts with technical CTOs, GTM strategists, and operations heads on 60-day active listings under mutual NDA.
+              </p>
+
+              {/* Embedded Network Matchmaking Radar Graphic */}
+              <div className="pt-2">
+                <NetworkRadarGraphic />
+              </div>
+            </div>
+
+            <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-medium">
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389]" />
+                <span>60-day refreshed opportunities</span>
+              </div>
+              <Button
+                href="/network"
+                variant="secondary"
+                size="sm"
+                className="font-semibold shadow-xs"
+                rightIcon={<ArrowRight className="h-3.5 w-3.5 text-[#00A389]" />}
+              >
+                Find Co-Founders & Talent
+              </Button>
+            </div>
+          </div>
+
+          {/* PILLAR 3: CAPITAL */}
+          <div className="rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#059669]/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2.5 rounded-xl bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0]">
+                    <DollarSign className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-[#059669] tracking-wider font-bold uppercase block">
+                      PILLAR 03
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540]">
+                      Capital Network
+                    </h3>
+                  </div>
+                </div>
+                <Badge variant="emerald" size="sm">Startup & Investor Matching</Badge>
               </div>
 
-              {/* Embedded Modern Capital Graphic */}
+              <p className="text-[#425466] text-sm leading-relaxed">
+                <strong>Connect anyone looking to invest in high-conviction Indian startups (from ₹50K to ₹5Cr+) with founders raising capital.</strong> Target-based rounds with explicit use of funds, combined deal meetings, and self due diligence.
+              </p>
+
+              {/* Embedded Capital Syndicate Graphic */}
               <div className="pt-2">
                 <CapitalSyndicateGraphic />
               </div>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Founder Control Preserved</span>
-              <Link
-                href="/capital"
-                className="text-xs font-semibold text-[#059669] hover:underline flex items-center gap-1"
-              >
-                Explore Investor Portal <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Card 3: Software & Digital Core (5 cols) */}
-          <div className="lg:col-span-5 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#00D4B2]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-xl bg-[#E6FFFA] text-[#00A389] border border-[#B2F5EA]">
-                    <Code2 className="h-5 w-5" />
-                  </div>
-                  <span className="text-xs font-sans text-[#00A389] tracking-wider font-bold uppercase">
-                    SOFTWARE & DIGITAL CORE
-                  </span>
-                </div>
-                <Badge variant="cyan" size="sm">Sourced Talent & Tools</Badge>
+            <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-medium">
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" />
+                <span>Target-based rounds (No expiry)</span>
               </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-[#0A2540] mb-2">
-                  Curated Tech Stacks, Cloud ERPs & Sourced Devs
-                </h3>
-                <p className="text-[#425466] text-sm leading-relaxed">
-                  We design your systems architecture, configure modern enterprise tools (ERPNext/Frappe), and hire vetted engineering talent directly for your business—with 100% IP owned by your company.
-                </p>
-              </div>
-
-              {/* Embedded Modern Tech Architecture Graphic */}
-              <div className="pt-2">
-                <TechArchitectureGraphic />
-              </div>
-            </div>
-
-            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">100% IP Owned by Your Entity</span>
-              <button
-                onClick={() => setModalOpen(true)}
-                className="text-xs font-semibold text-[#00A389] hover:underline flex items-center gap-1"
-              >
-                Discuss Systems Stack <ArrowRight className="h-3.5 w-3.5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Card 4: Talent, GTM & Revenue (7 cols) */}
-          <div className="lg:col-span-7 rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#FF7043]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-xl bg-[#FFF4ED] text-[#F4511E] border border-[#FFE0D2]">
-                    <Sparkles className="h-5 w-5" />
-                  </div>
-                  <span className="text-xs font-sans text-[#F4511E] tracking-wider font-bold uppercase">
-                    TALENT & COMMERCIAL GTM
-                  </span>
-                </div>
-                <Badge variant="amber" size="sm">Talent & GTM Sourcing</Badge>
-              </div>
-
-              <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0A2540] mb-2">
-                  Key Operator Recruitment, Tooling & GTM Launch
-                </h3>
-                <p className="text-[#425466] text-sm leading-relaxed">
-                  We source and hire vetted commercial operators, configure high-impact sales tools (outbound SDR engines, ad platforms), and orchestrate commercial launch campaigns to drive customer acquisition and cash flows.
-                </p>
-              </div>
-
-              {/* Embedded Modern Commercial GTM Graphic */}
-              <div className="pt-2">
-                <CommercialRevenueGraphic />
-              </div>
-            </div>
-
-            <div className="pt-4 mt-6 border-t border-[#E2E8F0] flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#627D98]">Vetted Talent Sourcing & GTM Tooling</span>
               <Button
-                onClick={() => setModalOpen(true)}
+                href="/capital"
                 variant="primary"
                 size="sm"
-                className="font-semibold"
+                className="font-semibold shadow-xs bg-[#059669] hover:bg-[#047857] border-[#059669]"
                 rightIcon={<ArrowRight className="h-3.5 w-3.5" />}
               >
-                Initiate Operational Diagnostic
+                Access Capital Network
+              </Button>
+            </div>
+          </div>
+
+          {/* PILLAR 4: PLAYBOOK */}
+          <div className="rounded-3xl bg-white border border-[#E2E8F0] p-6 sm:p-8 relative group hover:border-[#FF7043]/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2.5 rounded-xl bg-[#FFF3EE] text-[#FF7043] border border-[#FFE2D6]">
+                    <BookOpen className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-[#FF7043] tracking-wider font-bold uppercase block">
+                      PILLAR 04
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540]">
+                      Playbook
+                    </h3>
+                  </div>
+                </div>
+                <Badge variant="amber" size="sm">Operational Intelligence</Badge>
+              </div>
+
+              <p className="text-[#425466] text-sm leading-relaxed">
+                <strong>Field-tested informational blueprints and execution frameworks.</strong> Learn zero-retainer survival, RBI Unified Lending Interface (ULI) credit rails, and real cash-flow business models for India.
+              </p>
+
+              {/* Playbook Quick Guides Preview */}
+              <div className="p-4 rounded-2xl bg-[#FAFBFD] border border-[#E6E8EB] space-y-2.5 text-xs">
+                <Link
+                  href="/knowledge/zero-retainer-startup-survival-playbook-india"
+                  className="p-2.5 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#FF7043] transition-all flex items-center justify-between group/link"
+                >
+                  <div className="space-y-0.5">
+                    <span className="font-bold text-[#0A2540] group-hover/link:text-[#FF7043] transition-colors block">
+                      Zero-Retainer Startup Survival Playbook
+                    </span>
+                    <span className="text-[10px] text-[#829AB1]">How to avoid agency drain and build on equity</span>
+                  </div>
+                  <ArrowUpRight className="h-4 w-4 text-[#829AB1] group-hover/link:text-[#FF7043] transition-colors" />
+                </Link>
+
+                <Link
+                  href="/knowledge/collateral-free-credit-uli-startup-playbook-india"
+                  className="p-2.5 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#059669] transition-all flex items-center justify-between group/link"
+                >
+                  <div className="space-y-0.5">
+                    <span className="font-bold text-[#0A2540] group-hover/link:text-[#059669] transition-colors block">
+                      RBI ULI Collateral-Free Credit Playbook
+                    </span>
+                    <span className="text-[10px] text-[#829AB1]">Non-dilutive working capital for real economy startups</span>
+                  </div>
+                  <ArrowUpRight className="h-4 w-4 text-[#829AB1] group-hover/link:text-[#059669] transition-colors" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-medium">
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#FF7043]" />
+                <span>Open-access frameworks & guides</span>
+              </div>
+              <Button
+                href="/knowledge"
+                variant="secondary"
+                size="sm"
+                className="font-semibold shadow-xs"
+                rightIcon={<ArrowRight className="h-3.5 w-3.5 text-[#FF7043]" />}
+              >
+                Read All Playbooks
               </Button>
             </div>
           </div>

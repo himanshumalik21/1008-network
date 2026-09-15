@@ -77,7 +77,7 @@ export default function StudioPage() {
           </h1>
 
           <p className="text-base sm:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Whether launching a high-growth tech platform, scaling a D2C consumer brand, setting up batch manufacturing, or turning around an existing business—1008 Network acts as your venture facilitator. We architect digital systems, configure open-source ERPs, recruit vetted operators, and structure syndicate credit for <strong className="text-[#0A2540]">shared equity upside</strong>.
+            We architect turnkey operational infrastructure, source specialized talent, configure modern software tools, and facilitate syndicate capital alongside ambitious founders—<strong className="text-[#0A2540]">aligned on long-term venture equity</strong>.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">

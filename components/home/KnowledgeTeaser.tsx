@@ -15,17 +15,17 @@ export function KnowledgeTeaser() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-3">
-            <Badge variant="indigo" size="sm">Knowledge Hub & Media</Badge>
+            <Badge variant="amber" size="sm">Pillar 04 // 1008 Playbook</Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0A2540] font-sans">
               Operational Playbooks. Zero Theory.
             </h2>
             <p className="text-[#425466] text-base max-w-2xl">
-              Battle-tested frameworks on cap table structuring, enterprise B2B sales cycles, ESOP rules under Indian law, and unit economic modeling.
+              Actionable operational blueprints on zero-retainer survival, RBI ULI credit rails, and real economy cash-flow business models in India.
             </p>
           </div>
 
           <Button href="/knowledge" variant="outline" size="sm" rightIcon={<ArrowRight className="h-4 w-4" />}>
-            Explore All Resources
+            Explore All Playbooks
           </Button>
         </div>
 

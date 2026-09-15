@@ -28,7 +28,7 @@ export function Navbar() {
     { label: "Venture Studio", href: "/studio" },
     { label: "Partner Network", href: "/network" },
     { label: "Capital", href: "/capital" },
-    { label: "Playbooks", href: "/knowledge" },
+    { label: "Playbook", href: "/knowledge" },
   ];
 
   const isLinkActive = (href: string) => {

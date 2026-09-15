@@ -49,17 +49,17 @@ export default function KnowledgePage() {
           <div className="max-w-3xl space-y-3">
             <div className="inline-flex items-center gap-2">
               <Badge variant="amber" size="md">
-                1008 Network Knowledge Hub
+                1008 Playbook
               </Badge>
-              <span className="text-xs font-mono text-muted-foreground">Venture Architecture & Media</span>
+              <span className="text-xs font-mono text-[#627D98]">Field-Tested Operational Intelligence</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground font-sans">
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
               Operational Playbooks. Zero Theory.
             </h1>
 
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Tactical guides on cap table mathematics, enterprise sales cycles in Bharat, ESOP structuring under Indian law, and unit economics modeling.
+            <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+              Tactical guides on cash-flow survival, avoiding agency drain, collateral-free credit architectures (RBI ULI), and scaling real economy businesses in India.
             </p>
           </div>
         </div>

@@ -29,14 +29,14 @@ export function NetworkTeaser() {
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-3">
-            <Badge variant="indigo" size="sm" pulse>
-              1008 Partner & Talent Network
+            <Badge variant="cyan" size="sm" pulse>
+              Pillar 02 // Partner Network
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight font-sans">
-              Have the business vision. Missing the right partner?
+              Have the business vision. Find the right co-founder & talent.
             </h2>
             <p className="text-[#425466] text-base max-w-2xl leading-relaxed">
-              Great enterprises are rarely built alone. Whether you need a Technical Co-Founder (CTO), Operations Lead, or Sales Partner, 1008 Network curates high-conviction matches for shared equity.
+              Great enterprises are rarely built alone. Connect with technical CTOs, operations heads, or commercial sales partners on 60-day active listings under mutual NDA.
             </p>
           </div>
 

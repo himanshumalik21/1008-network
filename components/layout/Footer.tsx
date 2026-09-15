@@ -86,56 +86,63 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 3: Studio & Execution */}
+          {/* Col 3: Four Pillars */}
           <div className="space-y-3">
             <h4 className="text-xs uppercase tracking-wider text-[#0A2540] font-bold">
-              Execution & Capital
+              The Four Pillars
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/capital" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group font-semibold text-[#635BFF]">
-                  <span>Invest Capital</span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#F0F0FF] text-[#635BFF] border border-[#E0E0FF]">Syndicate</span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/studio" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
-                  <span>Build With 1008 Network</span>
-                  <span className="text-[10px] font-bold text-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity">Phased</span>
+                  <span>1. Venture Studio</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#F0F0FF] text-[#635BFF]">Turnkey</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#blueprint" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  The Execution Blueprint
+                <Link href="/network" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
+                  <span>2. Partner Network</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#E6FFFA] text-[#007A66]">Talent</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#comparison" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Why 1008 Network vs. Agencies
+                <Link href="/capital" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
+                  <span>3. Capital Network</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#ECFDF5] text-[#059669]">Invest</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#personas" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Domain Archetypes
+                <Link href="/knowledge" className="text-[#425466] hover:text-[#635BFF] transition-colors flex items-center justify-between group">
+                  <span>4. Playbook</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#FFF3EE] text-[#FF7043]">Intel</span>
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Knowledge & Thesis */}
+          {/* Col 4: Portals & Company */}
           <div className="space-y-3">
             <h4 className="text-xs uppercase tracking-wider text-[#0A2540] font-bold">
-              Knowledge & Insights
+              Portals & Company
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/knowledge" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  Operational Playbooks
+                <Link href="/capital/post" className="text-[#425466] hover:text-[#635BFF] transition-colors">
+                  Raise Capital (Startups)
+                </Link>
+              </li>
+              <li>
+                <Link href="/capital/join" className="text-[#425466] hover:text-[#635BFF] transition-colors">
+                  Join Investor Pool
+                </Link>
+              </li>
+              <li>
+                <Link href="/network/post" className="text-[#425466] hover:text-[#635BFF] transition-colors">
+                  Post Talent Requirement
                 </Link>
               </li>
               <li>
                 <Link href="/manifesto" className="text-[#425466] hover:text-[#635BFF] transition-colors">
-                  The 1008 Network Manifesto
+                  1008 Manifesto
                 </Link>
               </li>
               <li>
@@ -147,17 +154,6 @@ export function Footer() {
                 <Link href="/contact" className="text-[#425466] hover:text-[#635BFF] transition-colors">
                   Contact & Office Hours
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/1008-network/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#425466] hover:text-[#0A66C2] transition-colors flex items-center gap-1.5"
-                >
-                  <LinkedInIcon className="h-3.5 w-3.5 text-[#0A66C2]" />
-                  <span>LinkedIn Page</span>
-                </a>
               </li>
             </ul>
           </div>

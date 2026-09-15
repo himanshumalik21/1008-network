@@ -155,29 +155,45 @@ export function HeroSection() {
               Apply to Build With Us
             </Button>
             <Button
-              href="/capital"
+              href="/#pillars"
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Explore Investor Syndicates
+              Explore Four Pillars →
             </Button>
           </div>
 
-          {/* High-Impact Credibility Hook Pills */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-[#425466]">
-            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" /> ₹0 Consulting Retainers
-            </span>
-            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF]" /> Phased Handover to Autonomy
-            </span>
-            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389]" /> 100% IP & Asset Ownership
-            </span>
-            <span className="px-3 py-1 rounded-full bg-[#F6F9FC] border border-[#E6E8EB] flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-[#F4511E]" /> Active Investor Syndicate
-            </span>
+          {/* Four Pillars Quick Interactive Bar */}
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold">
+            <Link
+              href="/studio"
+              className="px-3.5 py-1.5 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#635BFF] hover:bg-[#F0F0FF] text-[#0A2540] hover:text-[#635BFF] transition-all flex items-center gap-1.5 shadow-2xs"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#635BFF]" />
+              <span>1. Venture Studio</span>
+            </Link>
+            <Link
+              href="/network"
+              className="px-3.5 py-1.5 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#00D4B2] hover:bg-[#E6FFFA] text-[#0A2540] hover:text-[#007A66] transition-all flex items-center gap-1.5 shadow-2xs"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2]" />
+              <span>2. Partner Network</span>
+            </Link>
+            <Link
+              href="/capital"
+              className="px-3.5 py-1.5 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#059669] hover:bg-[#ECFDF5] text-[#0A2540] hover:text-[#059669] transition-all flex items-center gap-1.5 shadow-2xs"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#059669]" />
+              <span>3. Capital Network</span>
+            </Link>
+            <Link
+              href="/knowledge"
+              className="px-3.5 py-1.5 rounded-xl bg-white border border-[#E6E8EB] hover:border-[#FF7043] hover:bg-[#FFF3EE] text-[#0A2540] hover:text-[#FF7043] transition-all flex items-center gap-1.5 shadow-2xs"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF7043]" />
+              <span>4. Playbook</span>
+            </Link>
           </div>
         </div>
 
