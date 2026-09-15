@@ -99,7 +99,7 @@ export default function NetworkPage() {
             <span>•</span>
             <div className="flex items-center gap-1.5">
               <Clock className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>60-Day Refreshed Listings</span>
+              <span>Curated Active Listings</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
@@ -173,11 +173,11 @@ export default function NetworkPage() {
                 Founder Posts Role & Business Vision
               </h3>
               <p className="text-xs text-[#425466] leading-relaxed">
-                Founders define the missing leadership capability (Technical CTO, Operations Lead, GTM Sales Head), business thesis, and equity pool (5% – 25%+). <strong>Listings stay active for 60 days to keep opportunities fresh.</strong>
+                Founders define the missing leadership capability (Technical CTO, Operations Lead, GTM Sales Head), business thesis, and equity pool (5% – 25%+). <strong>Listings are actively curated to ensure opportunities remain responsive.</strong>
               </p>
             </div>
             <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Clock className="h-3.5 w-3.5 text-[#635BFF]" /> 60-day fresh lifecycle
+              <Clock className="h-3.5 w-3.5 text-[#635BFF]" /> Curated fresh lifecycle
             </div>
           </div>
 
@@ -286,7 +286,7 @@ export default function NetworkPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0" />
-                  <span>60-day auto-refreshing active listing lifecycle</span>
+                  <span>Active talent matching & co-founder introductions</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0" />
@@ -365,10 +365,10 @@ export default function NetworkPage() {
             <div className="p-4 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
                 <Clock className="h-4 w-4 text-[#635BFF]" />
-                <span>60-Day Active Roles</span>
+                <span>Active & Curated Roles</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed">
-                Openings expire automatically after 60 days unless explicitly renewed by founders. You will never waste time applying to stale or inactive roles.
+                Openings are actively monitored and curated by 1008 Network partners so you never waste time applying to stale or inactive roles.
               </p>
             </div>
 

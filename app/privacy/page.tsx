@@ -44,7 +44,7 @@ export default function PrivacyPage() {
     },
     {
       icon: <Clock className="h-4 w-4 text-[#00A389]" />,
-      title: "60-Day Active Lifecycle",
+      title: "Active Listing Lifecycle",
       desc: "Partner network listings and inactive profile data are automatically archived or purged to prevent stale data retention.",
     },
     {
@@ -226,14 +226,14 @@ export default function PrivacyPage() {
                 5
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                60-Day Active Window & Data Retention Policy
+                Active Listing Lifecycle & Data Retention Policy
               </h2>
             </div>
             <p>
               To maintain the highest standards of pipeline freshness and respect your right to data minimization:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Automated Expiry:</strong> All public startup requirements on the Partner Network are assigned an active duration of 60 days. After 60 days, postings are automatically retired and archived.</li>
+              <li><strong>Automated Expiry:</strong> All public startup requirements on the Partner Network follow an active curation lifecycle with automated archiving. Retired postings are removed from active directory boards to prevent stale data.</li>
               <li><strong>Archival & Deletion:</strong> Inactive applicant records and studio intake notes that do not proceed to an active engagement are permanently purged or anonymized within 12 months.</li>
             </ul>
           </section>

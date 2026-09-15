@@ -422,7 +422,7 @@ export default function CapitalPage() {
                 <span>Target-Based (No Expiry)</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed">
-                Unlike operator hiring roles that have fixed 60-day lifecycles, capital campaigns stay open until the startup reaches its declared funding target.
+                Capital campaigns stay open until the startup reaches its declared funding target, with clear operational milestones and transparency.
               </p>
             </div>
 

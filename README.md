@@ -15,9 +15,9 @@ Headquartered in **Delhi NCR** with an active footprint across **Bengaluru, Mumb
    - Hands-on temporary venture-building partner providing full-stack engineering, product design, legal/ESOP structuring, and seed readiness.
    - **Skin in the Game:** Partnering for shared equity upside, not hourly consulting retainers.
 
-2. **1008 NETWORK (The 60-Day Matchmaking Hub):**
+2. **1008 NETWORK (Partner & Talent Matchmaking):**
    - Curated co-founder matching for domain founders with missing CTOs, GTM leads, and operational heads.
-   - **60-Day Active Lifecycle:** All listings auto-expire in 60 days to prevent stale or unresponsive ads.
+   - **Active Curated Lifecycle:** All listings undergo active curation and periodic archiving to prevent stale or unresponsive listings.
 
 3. **1008 KNOWLEDGE HUB (Tactical Resources):**
    - Actionable operational playbooks (cap tables, ESOPs under Indian law, B2B sales cycles in Bharat, unit economics), book summaries, and masterclasses.
@@ -67,7 +67,7 @@ npm run build
 │   ├── page.tsx                  # High-converting Homepage with 4-pillar showcase & interactive previews
 │   ├── studio/page.tsx           # 180-Day Studio model, comparison matrix & intake modal
 │   ├── build/page.tsx            # Fast alias redirect to /studio
-│   ├── network/                  # 60-Day Partner Network Board
+│   ├── network/                  # Partner Network Board
 │   │   ├── page.tsx              # Interactive search & multi-facet filters (Role, Sector, City)
 │   │   ├── [id]/page.tsx         # Opportunity details & direct connect flow
 │   │   └── post/page.tsx         # Multi-step "Post an Opportunity" form

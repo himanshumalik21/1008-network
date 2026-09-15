@@ -50,8 +50,8 @@ export default function TermsPage() {
     },
     {
       icon: <Clock className="h-4 w-4 text-[#FF7043]" />,
-      title: "60-Day Active Pipeline",
-      desc: "All network postings are actively curated and expire in 60 days to prevent stale listings and protect founder response rates.",
+      title: "Active Curated Pipeline",
+      desc: "All network postings are actively curated to prevent stale listings and protect founder response rates.",
     },
   ];
 
@@ -229,7 +229,7 @@ export default function TermsPage() {
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
               <li><strong>Zero Placement / Syndicate Fees:</strong> Posting leadership requirements, registering investor profiles, or pitching startup capital needs carries zero upfront brokerage retainers.</li>
-              <li><strong>Partner Network 60-Day Active Window:</strong> Co-founder and operator leadership listings remain live for exactly 60 days to keep talent matching pipelines responsive and eliminate stale listings.</li>
+              <li><strong>Partner Network Active Curation:</strong> Co-founder and operator leadership listings are actively monitored and curated to keep talent matching pipelines responsive and eliminate stale listings.</li>
               <li><strong>Capital Network Target-Based Lifecycles:</strong> Capital campaigns and investment tranches have no fixed time expiry; they remain open and active based on the venture&apos;s target funding goal and close once syndicate allocation targets are met.</li>
               <li><strong>Authentic Representations:</strong> Users represent that all submitted track records, founder pedigrees, equity ranges, and financials are truthful and accurate.</li>
               <li><strong>Community Conduct:</strong> Unsolicited sales pitches, automated bot scraping, recruitment poaching, or harassment will result in immediate permanent expulsion.</li>

@@ -123,7 +123,7 @@ export function PillarsBento() {
               </div>
 
               <p className="text-[#425466] text-sm leading-relaxed">
-                <strong>Have the business vision? Find the right co-founder & talent.</strong> Connect domain experts with technical CTOs, GTM strategists, and operations heads on 60-day active listings under mutual NDA.
+                <strong>Have the business vision? Find the right co-founder & talent.</strong> Connect domain experts with technical CTOs, GTM strategists, and operations heads for shared venture equity under mutual NDA.
               </p>
 
               {/* Embedded Network Matchmaking Radar Graphic */}
@@ -135,7 +135,7 @@ export function PillarsBento() {
             <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-medium">
                 <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389]" />
-                <span>60-day refreshed opportunities</span>
+                <span>Curated high-conviction partnerships</span>
               </div>
               <Button
                 href="/network"
