@@ -148,7 +148,7 @@ export default function TermsPage() {
                   <FileText className="h-3.5 w-3.5 text-[#FF7043]" />
                   <span>Knowledge Hub</span>
                 </div>
-                <p className="text-[11px] text-[#627D98]">Actionable, open-access founder playbooks on zero-retainer building, working capital (RBI ULI), and cashflow models.</p>
+                <p className="text-[11px] text-[#627D98]">Actionable, open-access founder playbooks on zero-retainer building, working capital architectures, and cashflow models.</p>
               </div>
             </div>
           </section>

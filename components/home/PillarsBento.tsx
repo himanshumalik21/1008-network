@@ -217,7 +217,7 @@ export function PillarsBento() {
               </div>
 
               <p className="text-[#425466] text-sm leading-relaxed">
-                <strong>Field-tested informational blueprints and execution frameworks.</strong> Learn zero-retainer survival, RBI Unified Lending Interface (ULI) credit rails, and real cash-flow business models for India.
+                <strong>Field-tested informational blueprints and execution frameworks.</strong> Learn zero-retainer survival, collateral-free working capital frameworks, and real cash-flow business models for India.
               </p>
 
               {/* Playbook Quick Guides Preview */}
@@ -241,7 +241,7 @@ export function PillarsBento() {
                 >
                   <div className="space-y-0.5">
                     <span className="font-bold text-[#0A2540] group-hover/link:text-[#059669] transition-colors block">
-                      RBI ULI Collateral-Free Credit Playbook
+                      Collateral-Free Credit Playbook
                     </span>
                     <span className="text-[10px] text-[#829AB1]">Non-dilutive working capital for real economy startups</span>
                   </div>

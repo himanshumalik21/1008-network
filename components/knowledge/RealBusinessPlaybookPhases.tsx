@@ -74,9 +74,9 @@ export function RealBusinessPlaybookPhases() {
       themeColor: "text-[#059669] bg-[#ECFDF5] border-[#A7F3D0]",
       icon: <ShieldCheck className="h-5 w-5 text-[#059669]" />,
       summary:
-        "Scale operations with working capital credit lines (RBI ULI / CGTMSE) and partner with venture facilitators for aligned shared equity.",
+        "Scale operations with working capital credit lines (CGTMSE / cash-flow facilities) and partner with venture facilitators for aligned shared equity.",
       tasks: [
-        "Tap non-dilutive credit lines: Leverage GST cash-flow history to unlock collateral-free working capital via ULI rails.",
+        "Tap non-dilutive credit lines: Leverage GST cash-flow history to unlock collateral-free working capital and invoice discounting.",
         "Eliminate retainer advisors: Partner with operational co-builders who align through venture equity rather than cash drains.",
         "Institutionalize governance: Transition to phased management autonomy with auditable financial P&L reporting.",
       ],

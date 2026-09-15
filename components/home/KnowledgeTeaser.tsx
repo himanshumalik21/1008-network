@@ -20,7 +20,7 @@ export function KnowledgeTeaser() {
               Operational Playbooks. Zero Theory.
             </h2>
             <p className="text-[#425466] text-base max-w-2xl">
-              Actionable operational blueprints on zero-retainer survival, RBI ULI credit rails, and real economy cash-flow business models in India.
+              Actionable operational blueprints on zero-retainer survival, collateral-free working capital, and real economy cash-flow business models in India.
             </p>
           </div>
 

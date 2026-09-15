@@ -17,13 +17,13 @@ export function CapitalSyndicateGraphic() {
       tag: "SAFE / CCD",
     },
     {
-      title: "Non-Dilutive Credit Lines",
+      title: "Working Capital & Debt Lines",
       amount: "₹1.00 Cr Facility",
-      desc: "Working capital via RBI ULI & GST-backed collateral-free credit lines.",
+      desc: "Structured cash-flow lines and non-dilutive facilities for inventory and growth.",
       tickets: "Working Capital",
       status: "Zero Equity Dilution",
       color: "#059669",
-      tag: "ULI Credit Rails",
+      tag: "Working Capital",
     },
     {
       title: "Venture Orchestration & Advisory",

@@ -59,7 +59,7 @@ export default function KnowledgePage() {
             </h1>
 
             <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-              Tactical guides on cash-flow survival, avoiding agency drain, collateral-free credit architectures (RBI ULI), and scaling real economy businesses in India.
+              Tactical guides on cash-flow survival, avoiding agency drain, collateral-free credit architectures, and scaling real economy businesses in India.
             </p>
           </div>
         </div>
