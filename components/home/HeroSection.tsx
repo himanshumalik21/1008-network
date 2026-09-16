@@ -88,12 +88,12 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-full lg:h-[calc(100dvh-4rem-2.5rem)] flex flex-col justify-center items-center py-6 sm:py-8 lg:py-0 overflow-hidden bg-white">
+    <section className="relative w-full h-full lg:h-[calc(100dvh-4rem)] lg:pb-10 flex flex-col justify-center items-center py-6 sm:py-8 lg:py-0 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
 
       {/* 2. Stripe-Caliber Clean Dynamic Silk Wave Artwork Canvas - Spans all the way down to Footer */}
-      <FlowingMeshCanvas className="absolute inset-0 w-full h-full opacity-90 pointer-events-none z-0" />
+      <FlowingMeshCanvas className="absolute inset-0 w-full h-full opacity-95 pointer-events-none z-0" />
 
       {/* 3. Floating Ambient Motion Gradient Meshes */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[760px] h-[520px] bg-gradient-to-tr from-[#635BFF]/10 via-[#00D4B2]/07 to-transparent blur-[130px] pointer-events-none animate-float-slow" />
