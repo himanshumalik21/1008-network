@@ -85,9 +85,9 @@ export function StudioSprintTimeline() {
   ];
 
   return (
-    <section id="blueprint" className="py-24 bg-[#F6F9FC] border-t border-[#E6E8EB] relative overflow-hidden">
+    <section id="blueprint" className="pt-10 sm:pt-14 pb-20 bg-[#F6F9FC] relative overflow-hidden">
       {/* Background Architectural Box Grid & Ambient Motion */}
-      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-45 pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-50 pointer-events-none" />
 
       {/* Network Fiber Constellation Radiating Background */}
       <NetworkFiberBurst className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[420px] opacity-65 pointer-events-none z-0" />
@@ -96,14 +96,43 @@ export function StudioSprintTimeline() {
       <div className="absolute -bottom-20 -left-20 w-[500px] h-[400px] bg-gradient-to-tr from-[#635BFF]/06 to-transparent blur-[130px] pointer-events-none animate-float-slow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">The Execution Blueprint</Badge>
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Build with you. Not forever for you.
-          </h2>
-          <p className="text-[#425466] text-base sm:text-lg">
-            A temporary, high-intensity venture-building partnership split into clear operational phases engineered to make you completely self-sustaining.
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 space-y-3.5">
+          <div className="inline-flex items-center gap-2">
+            <Badge variant="indigo" size="md" pulse>
+              1008 Venture Studio // Turnkey Build & Equity
+            </Badge>
+          </div>
+          
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-[1.12]">
+            Build with you.{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
+              Not forever for you.
+            </span>
+          </h1>
+
+          <p className="text-[#425466] text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl mx-auto font-normal">
+            A high-intensity operational partnership split into 4 milestone gates—engineered to architect your systems, recruit core operators, achieve cash-flow velocity, and transition to <strong>100% founder autonomy</strong>.
           </p>
+
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button
+              size="md"
+              variant="primary"
+              onClick={() => setModalOpen(true)}
+              rightIcon={<ArrowRight className="h-4 w-4" />}
+              className="w-full sm:w-auto font-semibold px-6 shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
+            >
+              Apply to Build With Us
+            </Button>
+            <Button
+              href="#personas"
+              size="md"
+              variant="secondary"
+              className="w-full sm:w-auto font-semibold"
+            >
+              Explore Domain Blueprints
+            </Button>
+          </div>
         </div>
 
         {/* Interactive Sprint Phase Selector */}
