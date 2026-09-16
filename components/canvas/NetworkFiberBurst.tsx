@@ -16,7 +16,7 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId: number;
+    let animationFrameId: number = 0;
     let isVisible = true;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     let width = (canvas.width = canvas.offsetWidth * dpr);

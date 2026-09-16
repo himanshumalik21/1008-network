@@ -16,6 +16,7 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    let animationFrameId: number = 0;
     let isVisible = true;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     let width = (canvas.width = canvas.offsetWidth * dpr);
@@ -93,8 +94,6 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
         z: r * Math.sin(phi) * Math.sin(theta),
       };
     };
-
-    let animationFrameId: number;
 
     const render = () => {
       if (!isVisible) {
