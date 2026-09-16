@@ -347,7 +347,7 @@ The era of building vanity businesses for pitch decks is over. The entrepreneurs
     slug: "how-to-validate-business-idea-india-masterclass",
     title: "The ₹0 Idea Validation Masterclass: How to Test a Business in India Before Spending a Single Rupee",
     subtitle: "A tactical pre-launch customer discovery guide for first-time founders, corporate leaders, and entrepreneurs to eliminate guesswork, avoid the polite-feedback trap, and secure signed LOIs before committing capital.",
-    category: "playbook",
+    category: "masterclass",
     sectorTags: [
       "Idea Validation",
       "Pre-Launch",

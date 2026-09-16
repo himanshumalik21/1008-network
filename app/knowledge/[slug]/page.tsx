@@ -82,14 +82,18 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
   }
 
   const editionLabel =
-    resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
+    resource.slug.includes("validate") || resource.slug.includes("masterclass")
+      ? "Day 4 Edition"
+      : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
       ? "Day 3 Edition"
       : resource.slug.includes("uli") || resource.slug.includes("credit")
       ? "Day 2 Edition"
       : "Day 1 Edition";
 
   const playbookTag =
-    resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
+    resource.slug.includes("validate") || resource.slug.includes("masterclass")
+      ? "1008 FOUNDER MASTERCLASS (DAY 4)"
+      : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
       ? "1008 FOUNDER PLAYBOOK (DAY 3)"
       : resource.slug.includes("uli") || resource.slug.includes("credit")
       ? "1008 FOUNDER PLAYBOOK (DAY 2)"
@@ -189,7 +193,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
             <span className="px-2.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider rounded-md bg-[#635BFF]/10 text-[#635BFF] border border-[#635BFF]/20">
               {playbookTag}
             </span>
-            <Badge variant="indigo" size="sm">
+            <Badge variant={resource.category === "masterclass" ? "amber" : "indigo"} size="sm">
               {resource.category.replace("_", " ").toUpperCase()}
             </Badge>
             <span className="text-xs text-[#627D98] flex items-center gap-1 font-medium">
