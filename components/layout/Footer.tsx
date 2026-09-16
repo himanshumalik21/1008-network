@@ -48,14 +48,14 @@ export function Footer() {
 
   if (pathname === "/") {
     return (
-      <footer className="w-full bg-white/95 backdrop-blur-md border-t border-[#E6E8EB] h-10 py-2 text-xs text-[#627D98] relative lg:fixed lg:bottom-0 lg:left-0 lg:right-0 z-30 shrink-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 h-full">
-          <div className="flex items-center gap-2">
+      <footer className="w-full bg-white/95 backdrop-blur-md border-t border-[#E6E8EB] py-3 sm:py-2 lg:h-10 text-xs text-[#627D98] relative lg:fixed lg:bottom-0 lg:left-0 lg:right-0 z-30 shrink-0 pb-safe">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+          <div className="flex items-center gap-2 text-center sm:text-left flex-wrap justify-center sm:justify-start">
             <span>© {new Date().getFullYear()} 1008 Network (1008.network)</span>
             <span className="hidden sm:inline">•</span>
             <span className="hidden sm:inline">Operating Pan-India</span>
           </div>
-          <div className="flex items-center gap-5 text-xs">
+          <div className="flex items-center gap-4 sm:gap-5 text-xs flex-wrap justify-center">
             <a
               href="https://www.linkedin.com/company/1008-network/"
               target="_blank"

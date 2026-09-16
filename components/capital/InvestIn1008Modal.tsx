@@ -93,7 +93,7 @@ export const InvestIn1008Modal: React.FC<InvestIn1008ModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0A2540]/65 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="relative w-full max-w-xl bg-white rounded-3xl border border-[#E6E8EB] shadow-2xl p-6 sm:p-8 space-y-6 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-white rounded-3xl border border-[#E6E8EB] shadow-2xl p-6 sm:p-8 space-y-6 max-h-[90vh] max-h-[90dvh] overflow-y-auto overflow-touch">
         
         {/* Close Button */}
         <button

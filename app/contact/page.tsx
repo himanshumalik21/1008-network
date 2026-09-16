@@ -126,8 +126,8 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-[#0A66C2] hover:underline inline-flex items-center gap-1 font-medium"
                     >
-                      <span>linkedin.com/company/1008-network</span>
-                      <ArrowUpRight className="h-3 w-3" />
+                      <span className="break-all">linkedin.com/company/1008-network</span>
+                      <ArrowUpRight className="h-3 w-3 shrink-0" />
                     </a>
                   </div>
                 </div>

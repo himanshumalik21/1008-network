@@ -204,6 +204,16 @@ input, textarea, select, button {
   will-change: opacity, transform;
 }
 
+/* Touch and device responsiveness enhancements */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Momentum scrolling for iOS and smooth overflow handling */
+.overflow-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Safe area insets for mobile Safari notched devices */
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -211,6 +221,23 @@ input, textarea, select, button {
 
 .pt-safe {
   padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pl-safe {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+.pr-safe {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Fluid typography & balanced text wrapping */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* Reduced motion accessibility standard across all browsers */

@@ -190,7 +190,7 @@ export function ExpressInterestModal({
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 max-h-[75vh] overflow-y-auto">
+        <div className="p-6 sm:p-8 max-h-[75vh] max-h-[75dvh] overflow-y-auto overflow-touch">
           {status === "success" ? (
             <div className="text-center py-8 space-y-5">
               <div className="w-14 h-14 rounded-full bg-[#ECFDF5] text-[#059669] flex items-center justify-center mx-auto border border-[#A7F3D0]">

@@ -197,14 +197,14 @@ export function ReadinessQuiz() {
       {!isCompleted ? (
         <div className="rounded-2xl bg-white border border-[#E6E8EB] p-6 sm:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.03)] relative">
           {/* Progress Header */}
-          <div className="flex items-center justify-between gap-4 border-b border-[#E6E8EB] pb-4 mb-6 text-xs">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2.5 sm:gap-4 border-b border-[#E6E8EB] pb-4 mb-6 text-xs">
+            <div className="flex items-center gap-2 flex-wrap">
               <Badge variant="indigo" size="sm">
                 Question {currentIdx + 1} of {quizQuestions.length}
               </Badge>
               <span className="text-[#627D98] font-medium">• {currentQ.category}</span>
             </div>
-            <span className="text-[#635BFF] font-bold">
+            <span className="text-[#635BFF] font-bold shrink-0">
               {Math.round(((currentIdx + 1) / quizQuestions.length) * 100)}% Completed
             </span>
           </div>

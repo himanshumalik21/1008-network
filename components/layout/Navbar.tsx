@@ -63,7 +63,7 @@ export function Navbar() {
             : "bg-white/80 backdrop-blur-sm border-b border-[#E6E8EB]/60 py-4"
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* 1. Brand Logo */}
             <div className="flex items-center gap-3 shrink-0">
@@ -113,13 +113,13 @@ export function Navbar() {
                 variant="primary"
                 size="sm"
                 onClick={handleOpenModal}
-                className="text-xs px-3.5 h-8 font-semibold"
+                className="text-xs px-3 sm:px-3.5 h-8 font-semibold shrink-0"
               >
                 Apply to Build
               </Button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-lg text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB] transition-colors focus:outline-none"
+                className="p-1.5 sm:p-2 rounded-lg text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB] transition-colors focus:outline-none shrink-0"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -130,7 +130,7 @@ export function Navbar() {
 
         {/* Mobile / Tablet Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-b border-[#E6E8EB] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-xl">
+          <div className="md:hidden bg-white border-b border-[#E6E8EB] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overflow-touch pb-safe">
             <div className="flex flex-col space-y-1 pt-1">
               {navLinks.map((link) => {
                 const active = isLinkActive(link.href);

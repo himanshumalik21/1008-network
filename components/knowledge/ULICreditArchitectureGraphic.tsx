@@ -207,12 +207,12 @@ export function ULICreditArchitectureGraphic() {
               </div>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-white border border-[#E6E8EB] flex items-center justify-between text-xs text-[#627D98]">
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-[#635BFF]" />
-                <span className="font-medium">No real estate mortgages. No commission brokers. 100% digital cash-flow underwriting.</span>
+            <div className="p-3.5 rounded-xl bg-white border border-[#E6E8EB] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-[#627D98]">
+              <div className="flex items-start sm:items-center gap-2">
+                <Sparkles className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5 sm:mt-0" />
+                <span className="font-medium leading-relaxed">No real estate mortgages. No commission brokers. 100% digital cash-flow underwriting.</span>
               </div>
-              <span className="font-mono text-[10px] text-[#635BFF] font-bold">1008 VENTURE ARCHITECTURE</span>
+              <span className="font-mono text-[10px] text-[#635BFF] font-bold shrink-0 self-start sm:self-auto">1008 VENTURE ARCHITECTURE</span>
             </div>
           </div>
         )}

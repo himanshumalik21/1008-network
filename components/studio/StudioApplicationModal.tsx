@@ -167,17 +167,20 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
       ) : (
         <form onSubmit={step === 3 ? handleSubmit : handleNext} className="space-y-5">
           {/* Step Progress Pills */}
-          <div className="flex items-center justify-between gap-2 pb-2 border-b border-[#E6E8EB] text-xs font-semibold">
+          <div className="flex items-center justify-between gap-1.5 pb-2 border-b border-[#E6E8EB] text-xs font-semibold">
             <span className={step >= 1 ? "text-[#635BFF]" : "text-[#8898AA]"}>
-              1. Founder & Sector
+              <span className="hidden sm:inline">1. Founder & Sector</span>
+              <span className="sm:hidden">1. Founder</span>
             </span>
             <span className="text-[#CBD5E1]">→</span>
             <span className={step >= 2 ? "text-[#635BFF]" : "text-[#8898AA]"}>
-              2. Business Thesis
+              <span className="hidden sm:inline">2. Business Thesis</span>
+              <span className="sm:hidden">2. Thesis</span>
             </span>
             <span className="text-[#CBD5E1]">→</span>
             <span className={step === 3 ? "text-[#635BFF]" : "text-[#8898AA]"}>
-              3. Operational Readiness
+              <span className="hidden sm:inline">3. Operational Readiness</span>
+              <span className="sm:hidden">3. Readiness</span>
             </span>
           </div>
 
