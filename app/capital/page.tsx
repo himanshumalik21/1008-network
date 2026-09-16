@@ -118,55 +118,7 @@ export default function CapitalPage() {
         </div>
       </section>
 
-      {/* 3. Featured Opportunity: Invest in 1008 Network Parent Studio */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[#0A2540] via-[#1A365D] to-[#0A2540] p-6 sm:p-10 text-white relative overflow-hidden shadow-lg border border-[#2D3748]">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#635BFF]/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <div className="space-y-2 max-w-2xl">
-              <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full bg-[#00D4B2]/20 text-[#00D4B2] text-[10px] font-mono font-bold uppercase tracking-wider border border-[#00D4B2]/30">
-                  Featured Opportunity
-                </span>
-                <span className="text-xs text-[#CBD5E1] font-mono">Portfolio Holding Equity</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                Invest Directly in 1008 Network Parent Studio
-              </h2>
-              <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
-                Back the venture studio building India&apos;s real economy enterprises. Owning equity in 1008 Network provides diversified portfolio upside across every manufacturing unit, healthcare clinic, retail brand, and tech software venture we co-build for shared equity.
-              </p>
-              <div className="pt-2 flex flex-wrap gap-4 text-xs font-mono text-[#00D4B2]">
-                <span>✓ Diversified across 10+ operational ventures</span>
-                <span>✓ Direct equity participation</span>
-                <span>✓ Zero management fees</span>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0 w-full lg:w-auto">
-              <Button
-                onClick={() => setIsStudioInvestModalOpen(true)}
-                variant="primary"
-                size="md"
-                rightIcon={<ArrowRight className="h-4 w-4" />}
-                className="font-semibold shadow-md whitespace-nowrap bg-[#635BFF] hover:bg-[#5851EA] border-none"
-              >
-                Invest in 1008 Network
-              </Button>
-              <Button
-                href="/studio"
-                variant="ghost"
-                size="sm"
-                className="text-xs text-[#CBD5E1] hover:text-white hover:bg-white/10"
-              >
-                Explore Studio Model →
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. How Capital Rounds Work (4-Step Workflow) */}
+      {/* 2. How Capital Rounds Work (4-Step Workflow) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-6">
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
           <Badge variant="cyan" size="sm">The 1008 Capital Model</Badge>
@@ -411,6 +363,103 @@ export default function CapitalPage() {
               <p className="text-xs text-[#425466] leading-relaxed">
                 When the round target is reached, all interested investors and founders meet in a single structured session to align on final valuations and terms.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Featured Syndicate Opportunity: Invest Directly in 1008 Network Parent Studio */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="rounded-3xl bg-[#0A2540] p-8 sm:p-12 text-white relative overflow-hidden shadow-[0_20px_50px_rgba(10,37,64,0.25)] border border-[#1E293B]">
+          {/* Architectural Box Grid Pattern with Radial Fade */}
+          <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-15 pointer-events-none" />
+          
+          {/* Ambient Radial Mesh Glows */}
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#635BFF]/30 rounded-full blur-[110px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#00D4B2]/20 rounded-full blur-[110px] pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: Core Value Proposition & Metrics */}
+            <div className="lg:col-span-8 space-y-6">
+              <div className="inline-flex items-center gap-2 flex-wrap">
+                <span className="px-3 py-1 rounded-full bg-[#00D4B2]/15 text-[#00D4B2] text-xs font-mono font-bold uppercase tracking-wider border border-[#00D4B2]/30 flex items-center gap-1.5 shadow-2xs">
+                  <Sparkles className="h-3.5 w-3.5" />
+                  Featured Syndicate Opportunity
+                </span>
+                <span className="text-xs text-[#94A3B8] font-mono">
+                  Parent Holding Equity
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-extrabold tracking-tight text-white font-sans leading-[1.15]">
+                  Invest Directly in{" "}
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#38BDF8]">
+                    1008 Network Parent Studio
+                  </span>
+                </h2>
+                <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed max-w-2xl font-normal">
+                  Back the venture studio building India&apos;s real economy enterprises. Owning equity in 1008 Network provides diversified portfolio upside across every manufacturing unit, healthcare clinic, retail brand, and tech software venture we co-build for shared equity.
+                </p>
+              </div>
+
+              {/* 3 Pillar Value Chips */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-xs flex flex-col justify-between">
+                  <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
+                    <CheckCircle2 className="h-4 w-4 shrink-0" />
+                    <span>10+ Ventures</span>
+                  </div>
+                  <span className="text-[11px] text-[#94A3B8] mt-1">Diversified portfolio upside</span>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-xs flex flex-col justify-between">
+                  <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
+                    <CheckCircle2 className="h-4 w-4 shrink-0" />
+                    <span>Direct Equity</span>
+                  </div>
+                  <span className="text-[11px] text-[#94A3B8] mt-1">Cap-table shareholding</span>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-xs flex flex-col justify-between">
+                  <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
+                    <CheckCircle2 className="h-4 w-4 shrink-0" />
+                    <span>0% Fees</span>
+                  </div>
+                  <span className="text-[11px] text-[#94A3B8] mt-1">Zero management deductions</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: High-Impact Glass Action Card */}
+            <div className="lg:col-span-4 p-6 sm:p-7 rounded-2xl bg-white/[0.06] border border-white/15 backdrop-blur-md space-y-5 flex flex-col justify-between shadow-xl">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8]">
+                  <span>Round Type</span>
+                  <span className="text-white font-bold">Syndicate Equity</span>
+                </div>
+                <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8]">
+                  <span>Structure</span>
+                  <span className="text-[#00D4B2] font-semibold">Direct Holding Corp</span>
+                </div>
+                <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8] pt-2 border-t border-white/10">
+                  <span>Minimum Allocation</span>
+                  <span className="text-white font-bold">₹1,00,000+</span>
+                </div>
+              </div>
+
+              <div className="space-y-2 pt-2">
+                <Button
+                  onClick={() => setIsStudioInvestModalOpen(true)}
+                  variant="primary"
+                  size="lg"
+                  rightIcon={<ArrowRight className="h-4 w-4" />}
+                  className="w-full justify-center font-semibold text-sm shadow-[0_4px_16px_rgba(99,91,255,0.4)] bg-[#635BFF] hover:bg-[#5851EA] border-none py-3"
+                >
+                  Invest in 1008 Network
+                </Button>
+                <div className="text-[11px] text-center font-mono text-[#64748B] pt-1">
+                  Private round allocation • Direct partner review
+                </div>
+              </div>
             </div>
           </div>
         </div>
