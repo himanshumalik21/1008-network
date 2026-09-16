@@ -1,12 +1,14 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 
-export function generateMetadata() {
-  return {
-    title: "1008 Network — End-to-End Business Operations & Turnkey Execution",
-    description: "You bring the vision & capital. We handle end-to-end operations to build, launch & scale your business.",
-  };
-}
+export const metadata = {
+  title: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
+  description:
+    "1008 Network is India's premier venture ecosystem across 4 pillars: Venture Studio turnkey execution for equity, Partner Network co-founder & talent matching, Capital syndicate matchmaking (₹50K to ₹5Cr+), and tactical Playbooks.",
+  alternates: {
+    canonical: "https://www.1008.network",
+  },
+};
 
 export default function HomePage() {
   return (

@@ -60,12 +60,21 @@ export const metadata: Metadata = {
     description:
       "Turnkey venture studio operations, co-founder talent matching, startup syndicate capital, and actionable operational playbooks across India.",
     siteName: "1008.network",
+    images: [
+      {
+        url: "https://www.1008.network/1008-network-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "1008 Network — Venture Studio, Talent & Capital Ecosystem",
     description:
       "Venture Studio operations, co-founder talent matching, startup syndicate capital, and tactical playbooks in India.",
+    images: ["https://www.1008.network/1008-network-logo.png"],
   },
   robots: {
     index: true,
