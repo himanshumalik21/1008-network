@@ -32,6 +32,8 @@ import { LenderRejectionTrapsSection } from "@/components/knowledge/LenderReject
 import { CashFlowVersusHypeGraphic } from "@/components/knowledge/CashFlowVersusHypeGraphic";
 import { EssentialBusinessTrapsSection } from "@/components/knowledge/EssentialBusinessTrapsSection";
 import { RealBusinessPlaybookPhases } from "@/components/knowledge/RealBusinessPlaybookPhases";
+import { IdeaValidationGraphic } from "@/components/knowledge/IdeaValidationGraphic";
+import { ValidationPlaybookPhases } from "@/components/knowledge/ValidationPlaybookPhases";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -219,6 +221,24 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
+          // If heading is "The 1008 30-Day Pre-Launch Validation Playbook" (Day 4)
+          if (headingText.includes("30-Day Pre-Launch Validation Playbook") || headingText.includes("Pre-Launch Validation Playbook")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  Follow this structured, low-risk roadmap to validate genuine market pull before committing capital:
+                </p>
+                <ValidationPlaybookPhases />
+              </div>
+            );
+          }
+
           // If heading is "The 1008 Digital Credit Playbook: From Cash Starved to Bankable" (Day 2)
           if (headingText.includes("The 1008 Digital Credit Playbook")) {
             return (
@@ -311,6 +331,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("RBI ULI DIGITAL RAILS")
           ) {
             return <ULICreditArchitectureGraphic key={idx} />;
+          }
+
+          // Check if this is the Idea Validation / Polite Feedback Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("THE POLITE FEEDBACK DEATH SPIRAL") ||
+            codeLines.includes("POLITE FEEDBACK") ||
+            codeLines.includes("MARKET TRUTH ARCHITECTURE") ||
+            codeLines.includes("THE POLITE HEAD-NODDING TRAP") ||
+            codeLines.includes("POLITE TRAP")
+          ) {
+            return <IdeaValidationGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
