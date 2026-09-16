@@ -19,29 +19,16 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     let animationFrameId: number = 0;
     let isVisible = true;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    let width = (canvas.width = canvas.offsetWidth * dpr);
-    let height = (canvas.height = canvas.offsetHeight * dpr);
+    let width = (canvas.width = Math.max(canvas.offsetWidth * dpr, 1));
+    let height = (canvas.height = Math.max(canvas.offsetHeight * dpr, 1));
 
     const handleResize = () => {
       if (!canvas) return;
-      width = canvas.width = canvas.offsetWidth * dpr;
-      height = canvas.height = canvas.offsetHeight * dpr;
+      width = canvas.width = Math.max(canvas.offsetWidth * dpr, 1);
+      height = canvas.height = Math.max(canvas.offsetHeight * dpr, 1);
     };
 
     window.addEventListener("resize", handleResize, { passive: true });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          isVisible = entry.isIntersecting;
-          if (isVisible && !animationFrameId) {
-            render();
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    observer.observe(canvas);
 
     let mouseX = 0.5;
     let mouseY = 0.5;
@@ -49,10 +36,14 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     let targetMouseY = 0.5;
 
     const handleMouseMove = (e: MouseEvent) => {
-      if (!isVisible) return;
+      if (!isVisible || !canvas) return;
       const rect = canvas.getBoundingClientRect();
-      targetMouseX = (e.clientX - rect.left) / rect.width;
-      targetMouseY = (e.clientY - rect.top) / rect.height;
+      if (rect.width > 0 && rect.height > 0) {
+        const mx = (e.clientX - rect.left) / rect.width;
+        const my = (e.clientY - rect.top) / rect.height;
+        targetMouseX = Math.max(0, Math.min(1, mx));
+        targetMouseY = Math.max(0, Math.min(1, my));
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
@@ -154,8 +145,8 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
       { bandIdx: 1, progress: 0.85, speed: 0.009, color: "#00D4B2", size: 2.8 },
     ];
 
-    const render = () => {
-      if (!isVisible) {
+    function render() {
+      if (!ctx || !isVisible || width <= 1 || height <= 1) {
         animationFrameId = 0;
         return;
       }
@@ -225,14 +216,15 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
         ctx.closePath();
 
         // Gradient blend
-        const grad = ctx.createLinearGradient(startX, startY, endX, endY);
-        grad.addColorStop(0, band.color1);
-        grad.addColorStop(0.35, band.color2);
-        grad.addColorStop(0.7, band.color1);
-        grad.addColorStop(1, band.color2);
-
-        ctx.fillStyle = grad;
-        ctx.fill();
+        if (Number.isFinite(startX) && Number.isFinite(endX)) {
+          const grad = ctx.createLinearGradient(startX, startY, endX, endY);
+          grad.addColorStop(0, band.color1);
+          grad.addColorStop(0.35, band.color2);
+          grad.addColorStop(0.7, band.color1);
+          grad.addColorStop(1, band.color2);
+          ctx.fillStyle = grad;
+          ctx.fill();
+        }
 
         // Subtle glowing crest line
         ctx.beginPath();
@@ -264,22 +256,24 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
             3 * (1 - t) * Math.pow(t, 2) * curve.cp2y +
             Math.pow(t, 3) * curve.endY;
 
-          ctx.save();
-          ctx.beginPath();
-          ctx.arc(cx, cy, ph.size, 0, Math.PI * 2);
-          ctx.fillStyle = ph.color;
-          ctx.shadowColor = ph.color;
-          ctx.shadowBlur = 10;
-          ctx.fill();
+          if (Number.isFinite(cx) && Number.isFinite(cy)) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(cx, cy, ph.size, 0, Math.PI * 2);
+            ctx.fillStyle = ph.color;
+            ctx.shadowColor = ph.color;
+            ctx.shadowBlur = 10;
+            ctx.fill();
 
-          // Faint outer pulse ring
-          ctx.beginPath();
-          ctx.arc(cx, cy, ph.size * 2.2, 0, Math.PI * 2);
-          ctx.strokeStyle = ph.color;
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
+            // Faint outer pulse ring
+            ctx.beginPath();
+            ctx.arc(cx, cy, ph.size * 2.2, 0, Math.PI * 2);
+            ctx.strokeStyle = ph.color;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
 
-          ctx.restore();
+            ctx.restore();
+          }
         }
       });
 
@@ -316,19 +310,35 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
         }
 
         // Draw node
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(px, py, p.radius * pulse, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur = 6;
-        ctx.fill();
-        ctx.restore();
+        if (Number.isFinite(px) && Number.isFinite(py)) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(px, py, Math.max(0.5, p.radius * pulse), 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.shadowColor = p.color;
+          ctx.shadowBlur = 6;
+          ctx.fill();
+          ctx.restore();
+        }
       });
 
       animationFrameId = requestAnimationFrame(render);
-    };
+    }
 
+    // Initialize IntersectionObserver AFTER render function is defined
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && !animationFrameId) {
+            render();
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(canvas);
     render();
 
     return () => {

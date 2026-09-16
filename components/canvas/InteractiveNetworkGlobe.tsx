@@ -30,18 +30,7 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
 
     window.addEventListener("resize", handleResize, { passive: true });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          isVisible = entry.isIntersecting;
-          if (isVisible && !animationFrameId) {
-            render();
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    observer.observe(canvas);
+
 
     // Generate 3D point cloud on unit sphere
     const pointCount = 850;
@@ -224,8 +213,21 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
       });
 
       animationFrameId = requestAnimationFrame(render);
-    };
+    }
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && !animationFrameId) {
+            render();
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(canvas);
     render();
 
     return () => {

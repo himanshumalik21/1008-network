@@ -30,18 +30,7 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
 
     window.addEventListener("resize", handleResize, { passive: true });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          isVisible = entry.isIntersecting;
-          if (isVisible && !animationFrameId) {
-            render();
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    observer.observe(canvas);
+
 
     const lineCount = 120;
     const lines: Array<{
@@ -134,8 +123,21 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
       });
 
       animationFrameId = requestAnimationFrame(render);
-    };
+    }
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && !animationFrameId) {
+            render();
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(canvas);
     render();
 
     return () => {
