@@ -5,6 +5,7 @@ import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import { StudioSprintTimeline } from "@/components/home/StudioSprintTimeline";
+import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
 import {
   CheckCircle2,
@@ -67,6 +68,9 @@ export default function StudioPage() {
 
       {/* The 180-Day Sprint Breakdown */}
       <StudioSprintTimeline />
+
+      {/* Turnkey Capabilities & Use Cases */}
+      <PersonaMatrix />
 
       {/* Comparison Section (1008 Venture Studio vs Alternatives) */}
       <ComparisonSection />

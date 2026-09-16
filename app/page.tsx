@@ -1,7 +1,6 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
-import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { FAQSection } from "@/components/home/FAQSection";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
@@ -24,10 +23,7 @@ export default function HomePage() {
       {/* 2. The Four Pillars Bento Grid */}
       <PillarsBento />
 
-      {/* 3. Target Domain Archetypes */}
-      <PersonaMatrix />
-
-      {/* 4. Frequently Answered Questions Accordion */}
+      {/* 3. Frequently Answered Questions Accordion */}
       <FAQSection />
 
       {/* 8. Global Conversion Banner */}
