@@ -10,7 +10,7 @@ export function generateMetadata() {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col w-full bg-white lg:h-[calc(100dvh-4rem)] lg:overflow-hidden">
       {/* Hero Section with Razor-Sharp Hook & Four Pillars 2x2 Interactive Blueprint */}
       <HeroSection />
     </div>

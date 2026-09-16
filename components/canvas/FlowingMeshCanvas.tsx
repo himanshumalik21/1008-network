@@ -50,100 +50,68 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
 
     let time = 0;
 
-    // 4 Distinct Pillar Wave Bands matching the 4 Pillars of 1008 Network
-    // 01 Studio (Indigo), 02 Network (Cyan), 03 Capital (Emerald), 04 Playbook (Coral)
-    const pillarBands = [
+    // 2 Clean, elegant silk wave ribbons combining the 4 Pillar hues
+    // Wave 1: Studio (Indigo #635BFF) & Network (Cyan #00D4B2)
+    // Wave 2: Capital (Emerald #10B981) & Playbook (Coral #FF7043)
+    const waves = [
       {
-        name: "Pillar 01 - Studio",
-        color1: "rgba(99, 91, 255, 0.42)",    // Stripe Indigo
-        color2: "rgba(124, 58, 237, 0.30)",   // Deep Violet
-        highlight: "rgba(99, 91, 255, 0.8)",
-        speed: 0.007,
+        colorStops: [
+          { pos: 0, color: "rgba(99, 91, 255, 0.18)" },
+          { pos: 0.5, color: "rgba(0, 212, 178, 0.14)" },
+          { pos: 1, color: "rgba(124, 58, 237, 0.08)" },
+        ],
+        edgeColor: "rgba(99, 91, 255, 0.45)",
+        speed: 0.0035,
         offset: 0,
-        amplitude: 0.22,
-        thickness: 0.36,
-        startXRatio: 0.70,
-        endXRatio: 0.88,
+        startX: 0.72,
+        endX: 0.88,
+        thickness: 0.35,
+        amp: 0.16,
       },
       {
-        name: "Pillar 02 - Network",
-        color1: "rgba(0, 212, 178, 0.38)",    // Bright Cyan / Teal
-        color2: "rgba(99, 91, 255, 0.28)",    // Cyan-Indigo Blend
-        highlight: "rgba(0, 212, 178, 0.85)",
-        speed: 0.011,
-        offset: 1.4,
-        amplitude: 0.19,
-        thickness: 0.32,
-        startXRatio: 0.62,
-        endXRatio: 0.82,
-      },
-      {
-        name: "Pillar 03 - Capital",
-        color1: "rgba(16, 185, 129, 0.35)",   // Emerald Green
-        color2: "rgba(0, 212, 178, 0.25)",    // Emerald-Cyan Blend
-        highlight: "rgba(16, 185, 129, 0.8)",
-        speed: 0.009,
-        offset: 3.1,
-        amplitude: 0.25,
-        thickness: 0.40,
-        startXRatio: 0.76,
-        endXRatio: 0.94,
-      },
-      {
-        name: "Pillar 04 - Playbook",
-        color1: "rgba(255, 112, 67, 0.32)",   // Coral / Sunset Amber
-        color2: "rgba(99, 91, 255, 0.22)",    // Coral-Indigo Harmony
-        highlight: "rgba(255, 112, 67, 0.75)",
-        speed: 0.005,
-        offset: 4.6,
-        amplitude: 0.17,
-        thickness: 0.30,
-        startXRatio: 0.58,
-        endXRatio: 0.78,
+        colorStops: [
+          { pos: 0, color: "rgba(0, 212, 178, 0.14)" },
+          { pos: 0.55, color: "rgba(16, 185, 129, 0.12)" },
+          { pos: 1, color: "rgba(255, 112, 67, 0.10)" },
+        ],
+        edgeColor: "rgba(0, 212, 178, 0.40)",
+        speed: 0.0045,
+        offset: 2.5,
+        startX: 0.60,
+        endX: 0.80,
+        thickness: 0.28,
+        amp: 0.14,
       },
     ];
 
-    // Synaptic Network Particles & Floating Nodes
-    const particleCount = 38;
-    const particles: Array<{
+    // Minimal, neat constellation nodes (12 sparse nodes)
+    const nodeCount = 12;
+    const nodes: Array<{
       x: number;
       y: number;
       vx: number;
       vy: number;
       radius: number;
       color: string;
-      pulseOffset: number;
-      pulseSpeed: number;
     }> = [];
 
     const nodeColors = [
-      "#635BFF", // Studio
-      "#00D4B2", // Network
-      "#10B981", // Capital
-      "#FF7043", // Playbook
+      "rgba(99, 91, 255, 0.6)",  // Indigo
+      "rgba(0, 212, 178, 0.6)",  // Cyan
+      "rgba(16, 185, 129, 0.55)", // Emerald
+      "rgba(255, 112, 67, 0.55)", // Coral
     ];
 
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: 0.45 + Math.random() * 0.55,
-        y: Math.random(),
-        vx: (Math.random() - 0.5) * 0.0006,
-        vy: (Math.random() - 0.5) * 0.0008,
-        radius: 1.2 + Math.random() * 2.2,
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: 0.50 + Math.random() * 0.48,
+        y: 0.1 + Math.random() * 0.8,
+        vx: (Math.random() - 0.5) * 0.0003,
+        vy: (Math.random() - 0.5) * 0.0004,
+        radius: 1.5 + Math.random() * 1.5,
         color: nodeColors[i % nodeColors.length],
-        pulseOffset: Math.random() * Math.PI * 2,
-        pulseSpeed: 0.02 + Math.random() * 0.03,
       });
     }
-
-    // High-speed photons traveling along the bezier vectors
-    const photons = [
-      { bandIdx: 0, progress: 0.1, speed: 0.006, color: "#635BFF", size: 3.5 },
-      { bandIdx: 1, progress: 0.4, speed: 0.008, color: "#00D4B2", size: 3.2 },
-      { bandIdx: 2, progress: 0.7, speed: 0.007, color: "#10B981", size: 3.0 },
-      { bandIdx: 3, progress: 0.2, speed: 0.005, color: "#FF7043", size: 3.2 },
-      { bandIdx: 1, progress: 0.85, speed: 0.009, color: "#00D4B2", size: 2.8 },
-    ];
 
     function render() {
       if (!ctx || !isVisible || width <= 1 || height <= 1) {
@@ -153,171 +121,106 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
 
       try {
         time += 1;
-        mouseX += (targetMouseX - mouseX) * 0.04;
-        mouseY += (targetMouseY - mouseY) * 0.04;
+        mouseX += (targetMouseX - mouseX) * 0.03;
+        mouseY += (targetMouseY - mouseY) * 0.03;
 
         ctx.clearRect(0, 0, width, height);
 
-        // Store calculated bezier curves for photon tracing
-        const calculatedCurves: Array<{
-          startX: number;
-          startY: number;
-          cp1x: number;
-          cp1y: number;
-          cp2x: number;
-          cp2y: number;
-          endX: number;
-          endY: number;
-        }> = [];
+        const mouseModX = (mouseX - 0.5) * 0.12;
+        const mouseModY = (mouseY - 0.5) * 0.08;
 
-        // 1. Render Flowing Wave Ribbons for the 4 Pillars
-        pillarBands.forEach((band) => {
-          const t = time * band.speed + band.offset;
-          const mouseMod = (mouseX - 0.5) * 0.25;
-          const mouseVertMod = (mouseY - 0.5) * 0.15;
+        // 1. Render Clean Silk Waves
+        waves.forEach((w) => {
+          const t = time * w.speed + w.offset;
+
+          const startX = width * (w.startX + Math.sin(t * 0.8) * 0.04 + mouseModX);
+          const startY = 0;
+
+          const cp1x = width * (0.90 + Math.sin(t * 1.0) * w.amp + mouseModX * 0.4);
+          const cp1y = height * (0.28 + Math.cos(t * 0.7) * 0.05 + mouseModY);
+
+          const cp2x = width * (0.52 + Math.cos(t * 1.1) * w.amp - mouseModX * 0.3);
+          const cp2y = height * (0.68 + Math.sin(t * 0.9) * 0.06);
+
+          const endX = width * (w.endX + Math.sin(t * 0.75) * 0.06 + mouseModX * 0.2);
+          const endY = height * 1.05;
 
           ctx.save();
           ctx.beginPath();
-
-          // Starting point at top
-          const startX = width * (band.startXRatio + Math.sin(t * 0.75) * 0.06 + mouseMod);
-          const startY = 0;
           ctx.moveTo(startX, startY);
-
-          // Control points
-          const cp1x = width * (0.92 + Math.sin(t * 1.1) * band.amplitude + mouseMod * 0.5);
-          const cp1y = height * (0.24 + Math.cos(t * 0.85) * 0.07 + mouseVertMod);
-
-          const cp2x = width * (0.48 + Math.cos(t * 1.25) * band.amplitude - mouseMod * 0.4);
-          const cp2y = height * (0.64 + Math.sin(t * 1.15) * 0.09);
-
-          const endX = width * (band.endXRatio + Math.sin(t * 0.9) * 0.1 + mouseMod * 0.3);
-          const endY = height * 1.05;
-
           ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, endX, endY);
 
-          // Save curve for particle transit
-          calculatedCurves.push({ startX, startY, cp1x, cp1y, cp2x, cp2y, endX, endY });
-
-          // Return path for ribbon volume
-          const returnEndX = endX - width * band.thickness * 0.75;
+          const returnEndX = endX - width * w.thickness;
           const returnEndY = endY;
           ctx.lineTo(returnEndX, returnEndY);
 
-          const rcp2x = cp2x - width * band.thickness * 0.95;
-          const rcp2y = cp2y - height * 0.04;
+          const rcp2x = cp2x - width * w.thickness * 0.95;
+          const rcp2y = cp2y - height * 0.02;
 
-          const rcp1x = cp1x - width * band.thickness * 0.88;
-          const rcp1y = cp1y - height * 0.03;
+          const rcp1x = cp1x - width * w.thickness * 0.90;
+          const rcp1y = cp1y - height * 0.02;
 
-          const returnStartX = startX - width * band.thickness * 0.55;
+          const returnStartX = startX - width * w.thickness * 0.75;
           const returnStartY = startY;
 
           ctx.bezierCurveTo(rcp2x, rcp2y, rcp1x, rcp1y, returnStartX, returnStartY);
           ctx.closePath();
 
-          // Gradient blend
           if (Number.isFinite(startX) && Number.isFinite(endX)) {
             const grad = ctx.createLinearGradient(startX, startY, endX, endY);
-            grad.addColorStop(0, band.color1);
-            grad.addColorStop(0.35, band.color2);
-            grad.addColorStop(0.7, band.color1);
-            grad.addColorStop(1, band.color2);
+            w.colorStops.forEach((cs) => {
+              grad.addColorStop(cs.pos, cs.color);
+            });
             ctx.fillStyle = grad;
             ctx.fill();
           }
 
-          // Subtle glowing crest line
+          // Subtle clean crest edge line
           ctx.beginPath();
           ctx.moveTo(startX, startY);
           ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, endX, endY);
-          ctx.strokeStyle = band.highlight;
-          ctx.lineWidth = 1.2;
+          ctx.strokeStyle = w.edgeColor;
+          ctx.lineWidth = 1;
           ctx.stroke();
 
           ctx.restore();
         });
 
-        // 2. Render Photons traveling along the Pillar vectors
-        photons.forEach((ph) => {
-          ph.progress = (ph.progress + ph.speed) % 1;
-          const curve = calculatedCurves[ph.bandIdx];
-          if (curve) {
-            const t = ph.progress;
-            // Cubic Bezier interpolation
-            const cx =
-              Math.pow(1 - t, 3) * curve.startX +
-              3 * Math.pow(1 - t, 2) * t * curve.cp1x +
-              3 * (1 - t) * Math.pow(t, 2) * curve.cp2x +
-              Math.pow(t, 3) * curve.endX;
+        // 2. Render Sparse Constellation Nodes & Connecting Fibers
+        nodes.forEach((n, idx) => {
+          n.x += n.vx;
+          n.y += n.vy;
 
-            const cy =
-              Math.pow(1 - t, 3) * curve.startY +
-              3 * Math.pow(1 - t, 2) * t * curve.cp1y +
-              3 * (1 - t) * Math.pow(t, 2) * curve.cp2y +
-              Math.pow(t, 3) * curve.endY;
+          if (n.x < 0.45 || n.x > 0.96) n.vx *= -1;
+          if (n.y < 0.08 || n.y > 0.92) n.vy *= -1;
 
-            if (Number.isFinite(cx) && Number.isFinite(cy)) {
-              ctx.save();
+          const nx = n.x * width;
+          const ny = n.y * height;
+
+          // Connect nearby nodes with faint hairline lines
+          for (let j = idx + 1; j < nodes.length; j++) {
+            const n2 = nodes[j];
+            const n2x = n2.x * width;
+            const n2y = n2.y * height;
+            const dist = Math.hypot(nx - n2x, ny - n2y);
+
+            if (dist < 140 * dpr) {
+              const alpha = Math.max(0, 1 - dist / (140 * dpr)) * 0.15;
               ctx.beginPath();
-              ctx.arc(cx, cy, ph.size, 0, Math.PI * 2);
-              ctx.fillStyle = ph.color;
-              ctx.shadowColor = ph.color;
-              ctx.shadowBlur = 10;
-              ctx.fill();
-
-              // Faint outer pulse ring
-              ctx.beginPath();
-              ctx.arc(cx, cy, ph.size * 2.2, 0, Math.PI * 2);
-              ctx.strokeStyle = ph.color;
-              ctx.lineWidth = 0.8;
-              ctx.stroke();
-
-              ctx.restore();
-            }
-          }
-        });
-
-        // 3. Render Synaptic Floating Nodes & Interconnecting Lines
-        particles.forEach((p, idx) => {
-          p.x += p.vx;
-          p.y += p.vy;
-
-          if (p.x < 0.40) p.vx *= -1;
-          if (p.x > 0.98) p.vx *= -1;
-          if (p.y < 0.05) p.vy *= -1;
-          if (p.y > 0.95) p.vy *= -1;
-
-          const px = p.x * width;
-          const py = p.y * height;
-          const pulse = 1 + Math.sin(time * p.pulseSpeed + p.pulseOffset) * 0.35;
-
-          // Draw connections to nearby nodes
-          for (let j = idx + 1; j < particles.length; j++) {
-            const p2 = particles[j];
-            const p2x = p2.x * width;
-            const p2y = p2.y * height;
-            const dist = Math.hypot(px - p2x, py - p2y);
-
-            if (dist < 110 * dpr) {
-              const alpha = Math.max(0, 1 - dist / (110 * dpr)) * 0.22;
-              ctx.beginPath();
-              ctx.moveTo(px, py);
-              ctx.lineTo(p2x, p2y);
+              ctx.moveTo(nx, ny);
+              ctx.lineTo(n2x, n2y);
               ctx.strokeStyle = `rgba(99, 91, 255, ${alpha})`;
-              ctx.lineWidth = 0.75;
+              ctx.lineWidth = 0.6;
               ctx.stroke();
             }
           }
 
-          // Draw node
-          if (Number.isFinite(px) && Number.isFinite(py)) {
+          // Draw node point
+          if (Number.isFinite(nx) && Number.isFinite(ny)) {
             ctx.save();
             ctx.beginPath();
-            ctx.arc(px, py, Math.max(0.5, p.radius * pulse), 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
-            ctx.shadowColor = p.color;
-            ctx.shadowBlur = 6;
+            ctx.arc(nx, ny, n.radius, 0, Math.PI * 2);
+            ctx.fillStyle = n.color;
             ctx.fill();
             ctx.restore();
           }
@@ -329,7 +232,6 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
       }
     }
 
-    // Initialize IntersectionObserver AFTER render function is defined
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
