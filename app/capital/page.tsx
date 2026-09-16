@@ -53,7 +53,7 @@ export default function CapitalPage() {
               1008 Capital Network
             </Badge>
             <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
-              Data Intake & Allocation Aggregation Phase
+              Syndicate Capital & Verified Rounds
             </span>
           </div>
 
@@ -102,7 +102,7 @@ export default function CapitalPage() {
           <div className="pt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono text-[#627D98]">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-              <span>Current Status: <strong>Data Collection Active</strong></span>
+              <span>Syndicate Status: <strong>Active Capital Allocations</strong></span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
@@ -114,41 +114,6 @@ export default function CapitalPage() {
               <ShieldCheck className="h-3.5 w-3.5 text-[#059669]" />
               <span>Zero Intermediary Fees</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Pre-Launch Data Gathering Status Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="p-6 rounded-2xl bg-[#F0FDF4] border border-[#BBF7D0] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-2xs">
-          <div className="space-y-1.5">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#16A34A] animate-pulse" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#15803D]">
-                Platform Status: Information & Data Gathering Phase
-              </span>
-            </div>
-            <p className="text-xs sm:text-sm text-[#166534] leading-relaxed max-w-3xl">
-              Currently, there are no public active investments listed. We are gathering data from individuals seeking to invest and startups looking for capital. Once allocations and requirements are collected, live venture rounds and investor directories will be published directly here.
-            </p>
-          </div>
-          <div className="flex items-center gap-2 shrink-0 self-start md:self-auto">
-            <Button
-              href="/capital/post"
-              variant="primary"
-              size="sm"
-              className="text-xs font-semibold bg-[#16A34A] hover:bg-[#15803D] border-[#16A34A]"
-            >
-              Submit Startup
-            </Button>
-            <Button
-              href="/capital/join"
-              variant="secondary"
-              size="sm"
-              className="text-xs font-semibold"
-            >
-              Submit Investor Profile
-            </Button>
           </div>
         </div>
       </section>

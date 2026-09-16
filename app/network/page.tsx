@@ -47,7 +47,7 @@ export default function NetworkPage() {
               1008 Partner Network
             </Badge>
             <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
-              Data Intake & Talent Matching Phase
+              Co-Founders & Leadership Talent
             </span>
           </div>
 
