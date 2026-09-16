@@ -119,7 +119,8 @@ export function HeroSection() {
         </div>
 
         {/* Four Pillars 2x2 Explanatory Grid - Sits right below the header at the bottom */}
-        <div className="w-full max-w-4xl mx-auto pb-1 sm:pb-2">
+        <section aria-label="The 4 Pillars of 1008 Network" className="w-full max-w-4xl mx-auto pb-1 sm:pb-2">
+          <h2 className="sr-only">The 4 Pillars of 1008 Network</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
             {pillars.map((pillar) => (
               <Link
@@ -163,7 +164,19 @@ export function HeroSection() {
               </Link>
             ))}
           </div>
-        </div>
+
+          {/* Semantic SEO Landmarks for Search Console & Crawlers */}
+          <div className="sr-only">
+            <h2>Turnkey Execution for Indian Enterprises</h2>
+            <p>
+              1008 Network Venture Studio and Partner Network provide turnkey ground operations, manufacturing setup, open-source ERP deployment, and co-founder matching for shared equity.
+            </p>
+            <h2>Operational Playbooks & Guides</h2>
+            <p>
+              Field-tested tactical playbooks, ULI credit guides, working capital frameworks, and cash-flow blueprints for Indian entrepreneurs and business builders.
+            </p>
+          </div>
+        </section>
       </div>
     </section>
   );
