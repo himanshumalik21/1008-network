@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/brand/Badge";
-import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import dynamic from "next/dynamic";
-import { trackStudioModalOpen } from "@/lib/analytics";
 
 const FlowingMeshCanvas = dynamic(
   () =>
@@ -16,7 +13,6 @@ const FlowingMeshCanvas = dynamic(
   { ssr: false }
 );
 import {
-  ArrowRight,
   Layers,
   Users,
   Coins,
@@ -25,12 +21,6 @@ import {
 } from "lucide-react";
 
 export function HeroSection() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    trackStudioModalOpen("hero_primary_cta");
-    setModalOpen(true);
-  };
 
   const pillars = [
     {
@@ -126,27 +116,6 @@ export function HeroSection() {
           <p className="text-xs sm:text-sm lg:text-[14.5px] text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal pt-0.5">
             The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
-
-          {/* Dual High-Conversion CTAs */}
-          <div className="pt-1.5 sm:pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <Button
-              size="md"
-              variant="primary"
-              onClick={handleOpenModal}
-              rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto text-xs sm:text-sm px-6 py-2.5 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
-            >
-              Apply to Build With Us
-            </Button>
-            <Button
-              href="/studio"
-              size="md"
-              variant="secondary"
-              className="w-full sm:w-auto text-xs sm:text-sm px-5 py-2.5 font-semibold"
-            >
-              Explore Studio Model
-            </Button>
-          </div>
         </div>
 
         {/* Four Pillars 2x2 Explanatory Grid - Sits right below the header at the bottom */}
@@ -196,11 +165,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      <StudioApplicationModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
     </section>
   );
 }
