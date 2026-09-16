@@ -9,7 +9,15 @@ import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { studioFaqs } from "@/data/faqs";
-import { InteractiveNetworkGlobe } from "@/components/canvas/InteractiveNetworkGlobe";
+import dynamic from "next/dynamic";
+
+const InteractiveNetworkGlobe = dynamic(
+  () =>
+    import("@/components/canvas/InteractiveNetworkGlobe").then(
+      (mod) => mod.InteractiveNetworkGlobe
+    ),
+  { ssr: false }
+);
 import {
   CheckCircle2,
   ArrowRight,

@@ -5,8 +5,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/brand/Badge";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { FlowingMeshCanvas } from "@/components/canvas/FlowingMeshCanvas";
+import dynamic from "next/dynamic";
 import { trackStudioModalOpen } from "@/lib/analytics";
+
+const FlowingMeshCanvas = dynamic(
+  () =>
+    import("@/components/canvas/FlowingMeshCanvas").then(
+      (mod) => mod.FlowingMeshCanvas
+    ),
+  { ssr: false }
+);
 import {
   ArrowRight,
   Layers,

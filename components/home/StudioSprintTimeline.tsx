@@ -4,8 +4,16 @@ import React, { useState } from "react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { NetworkFiberBurst } from "@/components/canvas/NetworkFiberBurst";
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
+
+const NetworkFiberBurst = dynamic(
+  () =>
+    import("@/components/canvas/NetworkFiberBurst").then(
+      (mod) => mod.NetworkFiberBurst
+    ),
+  { ssr: false }
+);
 import {
   CheckCircle2,
   ArrowRight,
