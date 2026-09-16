@@ -19,13 +19,13 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
     let animationFrameId: number = 0;
     let isVisible = true;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    let width = (canvas.width = canvas.offsetWidth * dpr);
-    let height = (canvas.height = canvas.offsetHeight * dpr);
+    let width = (canvas.width = Math.max(canvas.offsetWidth * dpr, 1));
+    let height = (canvas.height = Math.max(canvas.offsetHeight * dpr, 1));
 
     const handleResize = () => {
       if (!canvas) return;
-      width = canvas.width = canvas.offsetWidth * dpr;
-      height = canvas.height = canvas.offsetHeight * dpr;
+      width = canvas.width = Math.max(canvas.offsetWidth * dpr, 1);
+      height = canvas.height = Math.max(canvas.offsetHeight * dpr, 1);
     };
 
     window.addEventListener("resize", handleResize, { passive: true });
