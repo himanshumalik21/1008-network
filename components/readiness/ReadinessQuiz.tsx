@@ -326,13 +326,21 @@ export function ReadinessQuiz() {
               {recommendationTier.action}
             </Button>
             <Button
+              href="/network"
               variant="secondary"
+              size="lg"
+              className="w-full sm:w-auto font-semibold"
+            >
+              Find a Co-Founder
+            </Button>
+            <Button
+              variant="ghost"
               size="lg"
               onClick={handleReset}
               leftIcon={<RotateCcw className="h-4 w-4" />}
-              className="w-full sm:w-auto font-semibold"
+              className="w-full sm:w-auto font-medium text-[#627D98] hover:text-[#0A2540]"
             >
-              Retake Evaluation
+              Retake
             </Button>
           </div>
         </div>

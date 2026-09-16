@@ -2,7 +2,17 @@ import React from "react";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
-import { MapPin, ArrowRight } from "lucide-react";
+import {
+  MapPin,
+  ArrowRight,
+  ShieldCheck,
+  Sparkles,
+  Building2,
+  Users,
+  PieChart,
+  BookOpen,
+  CheckCircle2,
+} from "lucide-react";
 import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export default function AboutPage() {
@@ -14,6 +24,29 @@ export default function AboutPage() {
     { city: "Hyderabad & Chennai", role: "BioPharma, CleanTech & Deep Enterprise" },
   ];
 
+  const founderPromises = [
+    {
+      icon: <Sparkles className="h-5 w-5 text-[#635BFF]" />,
+      title: "Zero Upfront Consulting Retainers",
+      desc: "We reject the predatory monthly agency fees that drain early runway. We align 100% of our incentives through shared equity and milestone upside.",
+    },
+    {
+      icon: <Building2 className="h-5 w-5 text-[#00A389]" />,
+      title: "Ground-Level Turnkey Execution",
+      desc: "We don't just give advice from spreadsheets. We audit factories, commission OEM machinery, write production software, and hire core team members.",
+    },
+    {
+      icon: <Users className="h-5 w-5 text-[#059669]" />,
+      title: "Curated Co-Founder Matching",
+      desc: "We connect domain originators with vetted technical CTOs, GTM leaders, and supply chain operators through our private Partner Network.",
+    },
+    {
+      icon: <ShieldCheck className="h-5 w-5 text-[#FF7043]" />,
+      title: "100% IP Assignment & Handover",
+      desc: "We build founder independence, not permanent vendor lock-in. All bespoke source code, licenses, and contracts are formally assigned to your venture.",
+    },
+  ];
+
   return (
     <div className="pt-28 pb-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -23,10 +56,10 @@ export default function AboutPage() {
             About 1008 Network
           </Badge>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            The End-to-End Operational Execution Partner for Any Business
+            The Turnkey Operational Co-Building Partner for Indian Founders
           </h1>
           <p className="text-base sm:text-lg text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Headquartered in Delhi NCR with a pan-India execution footprint, 1008 Network partners with founders to turn business visions into operational reality—from manufacturing plants and healthcare facilities to retail brands, schools, and tech platforms.
+            Headquartered in Delhi NCR with a pan-India execution footprint, 1008 Network partners with founders to turn high-conviction domain insight into enduring, cashflow-positive enterprises.
           </p>
         </div>
 
@@ -42,6 +75,39 @@ export default function AboutPage() {
               <div key={idx} className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-1 shadow-xs">
                 <div className="text-[#0A2540] font-bold text-sm">{hub.city}</div>
                 <div className="text-xs text-[#627D98]">{hub.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* The 1008 Founder Covenant */}
+        <div className="space-y-6">
+          <div className="text-center max-w-xl mx-auto space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-sans">
+              The 1008 Network Founder Covenant
+            </h2>
+            <p className="text-xs sm:text-sm text-[#627D98]">
+              Four pillars engineered to protect founder runway, accelerate velocity, and scale lasting value.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {founderPromises.map((p, idx) => (
+              <div
+                key={idx}
+                className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-2.5 shadow-2xs hover:border-[#CBD5E1] transition-all"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 rounded-xl bg-white border border-[#E2E8F0] shadow-2xs">
+                    {p.icon}
+                  </div>
+                  <h3 className="font-bold text-sm text-[#0A2540] font-sans">
+                    {p.title}
+                  </h3>
+                </div>
+                <p className="text-xs text-[#425466] leading-relaxed pl-1">
+                  {p.desc}
+                </p>
               </div>
             ))}
           </div>
