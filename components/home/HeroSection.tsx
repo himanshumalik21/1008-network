@@ -106,7 +106,7 @@ export function HeroSection() {
 
           {/* Primary Platform Headline - Big, Bold, Crisp & Commanding */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[52px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
-            <span className="block">Build, partner, and invest in</span>
+            <span className="block">Build, partner, and invest in{" "}</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
               high-conviction Indian ventures.
             </span>
