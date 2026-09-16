@@ -92,8 +92,8 @@ export function HeroSection() {
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
 
-      {/* 2. Stripe-Caliber Clean Dynamic Silk Wave Artwork Canvas */}
-      <FlowingMeshCanvas className="absolute top-0 right-0 w-full md:w-[52%] lg:w-[48%] xl:w-[44%] h-full max-h-[960px] opacity-90 pointer-events-none z-0" />
+      {/* 2. Stripe-Caliber Clean Dynamic Silk Wave Artwork Canvas - Spans all the way down to Footer */}
+      <FlowingMeshCanvas className="absolute inset-0 w-full h-full opacity-90 pointer-events-none z-0" />
 
       {/* 3. Floating Ambient Motion Gradient Meshes */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[760px] h-[520px] bg-gradient-to-tr from-[#635BFF]/10 via-[#00D4B2]/07 to-transparent blur-[130px] pointer-events-none animate-float-slow" />
@@ -104,9 +104,9 @@ export function HeroSection() {
       <div className="absolute left-6 top-1/4 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
       <div className="absolute right-6 top-1/3 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-evenly h-full max-h-[740px]">
-        {/* Top Header & Value Proposition Block */}
-        <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-2.5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-evenly h-full max-h-[750px]">
+        {/* Top Header & Value Proposition Block - Relaxed Spacing & Comfortable Hierarchy */}
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-3.5">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="sm" pulse>
@@ -115,26 +115,26 @@ export function HeroSection() {
           </div>
 
           {/* Primary Platform Headline */}
-          <h1 className="text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] font-extrabold tracking-tight text-[#0A2540] leading-[1.15] font-sans">
+          <h1 className="text-2xl sm:text-3xl lg:text-[35px] xl:text-[39px] font-extrabold tracking-tight text-[#0A2540] leading-[1.2] font-sans">
             <span className="block">Build, partner, and invest in</span>
-            <span className="block mt-0.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
+            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
               high-conviction Indian ventures.
             </span>
           </h1>
 
           {/* Platform Subtitle */}
-          <p className="text-xs sm:text-sm text-[#425466] leading-relaxed max-w-xl mx-auto font-normal">
+          <p className="text-xs sm:text-sm lg:text-[14.5px] text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal pt-0.5">
             The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
-          <div className="pt-0.5 flex flex-col sm:flex-row items-center justify-center gap-2.5">
+          <div className="pt-2 sm:pt-2.5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Button
               size="md"
               variant="primary"
               onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto text-xs sm:text-sm px-6 py-2 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
+              className="w-full sm:w-auto text-xs sm:text-sm px-6 py-2.5 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
               Apply to Build With Us
             </Button>
@@ -142,7 +142,7 @@ export function HeroSection() {
               href="/studio"
               size="md"
               variant="secondary"
-              className="w-full sm:w-auto text-xs sm:text-sm px-5 py-2 font-semibold"
+              className="w-full sm:w-auto text-xs sm:text-sm px-5 py-2.5 font-semibold"
             >
               Explore Studio Model
             </Button>
