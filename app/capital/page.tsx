@@ -441,8 +441,8 @@ export default function CapitalPage() {
                   <span className="text-[#00D4B2] font-semibold">Direct Holding Corp</span>
                 </div>
                 <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8] pt-2 border-t border-white/10">
-                  <span>Minimum Allocation</span>
-                  <span className="text-white font-bold">₹1,00,000+</span>
+                  <span>Allocation</span>
+                  <span className="text-white font-bold">By Invitation & Review</span>
                 </div>
               </div>
 
