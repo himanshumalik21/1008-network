@@ -9,7 +9,7 @@ export const pageview = (url: string) => {
   }
 };
 
-// Generic event tracker
+// Generic event tracker conforming to GA4
 export const trackEvent = (
   action: string,
   params: Record<string, any> = {}
@@ -19,7 +19,9 @@ export const trackEvent = (
   }
 };
 
-// Specific Conversion Events
+// ==========================================
+// 1. Studio & Turnkey Operations Funnel
+// ==========================================
 export const trackStudioModalOpen = (source: string) => {
   trackEvent("studio_modal_open", {
     event_category: "Conversion",
@@ -35,9 +37,64 @@ export const trackStudioApplicationSubmit = (
     event_category: "Studio Application",
     event_label: primaryDomain,
     value: yearsOfExperience,
+    lead_type: "venture_studio_founder",
   });
 };
 
+// ==========================================
+// 2. Partner Network & Talent Funnel
+// ==========================================
+export const trackNetworkApply = (opportunityId: string, role: string) => {
+  trackEvent("network_apply", {
+    event_category: "Network",
+    event_label: `${role} - ${opportunityId}`,
+    opportunity_id: opportunityId,
+    role_name: role,
+  });
+};
+
+export const trackPostRoleSubmit = (roleTitle: string, sector: string) => {
+  trackEvent("post_role_submit", {
+    event_category: "Network",
+    event_label: `${roleTitle} (${sector})`,
+    role_title: roleTitle,
+    sector: sector,
+  });
+};
+
+export const trackTalentProfileJoin = (roleCategory: string, experienceYears: number) => {
+  trackEvent("join_talent_network", {
+    event_category: "Network",
+    event_label: roleCategory,
+    experience_years: experienceYears,
+  });
+};
+
+// ==========================================
+// 3. Capital Network & Investor Funnel
+// ==========================================
+export const trackInvestorJoin = (investorType: string, checkSizeMin: string) => {
+  trackEvent("generate_lead", {
+    event_category: "Capital Network",
+    event_label: `Investor: ${investorType} (${checkSizeMin})`,
+    investor_type: investorType,
+    lead_type: "syndicate_investor",
+  });
+};
+
+export const trackStartupCapitalPost = (sector: string, targetAmount: string) => {
+  trackEvent("generate_lead", {
+    event_category: "Capital Network",
+    event_label: `Startup Raise: ${sector} (${targetAmount})`,
+    sector: sector,
+    target_amount: targetAmount,
+    lead_type: "startup_capital_raise",
+  });
+};
+
+// ==========================================
+// 4. Engagement, Blueprints & Navigation
+// ==========================================
 export const trackNewsletterSignup = (source: string = "footer") => {
   trackEvent("newsletter_signup", {
     event_category: "Engagement",
@@ -52,6 +109,14 @@ export const trackContactSubmit = (subject: string) => {
   });
 };
 
+export const trackReadinessQuizComplete = (score: number, tier: string) => {
+  trackEvent("readiness_quiz_complete", {
+    event_category: "Engagement",
+    score: score,
+    readiness_tier: tier,
+  });
+};
+
 export const trackCtaClick = (buttonText: string, destination: string) => {
   trackEvent("cta_click", {
     event_category: "Navigation",
@@ -60,9 +125,3 @@ export const trackCtaClick = (buttonText: string, destination: string) => {
   });
 };
 
-export const trackNetworkApply = (opportunityId: string, role: string) => {
-  trackEvent("network_apply", {
-    event_category: "Network",
-    event_label: `${role} - ${opportunityId}`,
-  });
-};
