@@ -118,162 +118,184 @@ export default function CapitalPage() {
         </div>
       </section>
 
-      {/* 2. How Capital Rounds Work (4-Step Workflow) */}
+      {/* 2. How Capital Rounds Work (4-Step Workflow) - Elevated Modern Blueprint */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-6">
-        <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2.5">
           <Badge variant="cyan" size="sm">The 1008 Capital Model</Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight font-sans">
             How Capital Rounds Work
           </h2>
-          <p className="text-xs sm:text-base text-[#425466]">
+          <p className="text-xs sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
             From open allocation to founder-investor deal completion — transparent, structured, and goal-driven.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {/* Step 1 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#635BFF]/40 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#F0F0FF] text-[#635BFF] font-mono font-bold text-sm flex items-center justify-center border border-[#E0E0FF]">
+          <div className="p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xs hover:shadow-xl hover:border-[#635BFF]/60 hover:-translate-y-1 transition-all duration-300 relative flex flex-col justify-between group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between gap-2">
+                <span className="w-8 h-8 rounded-lg bg-[#F0F0FF] text-[#635BFF] font-mono font-bold text-xs flex items-center justify-center border border-[#E0E0FF] group-hover:scale-105 transition-transform shadow-2xs">
                   01
                 </span>
-                <span className="text-[10px] font-mono text-[#059669] bg-[#ECFDF5] px-2.5 py-0.5 rounded-full border border-[#A7F3D0]">
+                <span className="text-[10px] font-mono font-bold text-[#059669] bg-[#ECFDF5] px-2.5 py-1 rounded-full border border-[#A7F3D0]">
                   Target Raise
                 </span>
               </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
+              <h3 className="text-base font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors leading-snug">
                 Startup Launches Round & Defines Use of Funds
               </h3>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                The company initiates a round with an exact funding target (e.g., ₹50 Lakhs to ₹5 Cr+) and clearly states what the money will be used for: setting up manufacturing lines, procuring inventory, or hiring core teams. <strong>Rounds stay open until the declared capital target is fulfilled.</strong>
+              <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed">
+                The company initiates a round with an exact funding target (e.g., ₹50L to ₹5Cr+) and clearly declares capital deployment milestones: setting up production lines, inventory, or hiring core CXOs.
               </p>
             </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <FileText className="h-3.5 w-3.5 text-[#635BFF]" /> Goal-based capital raise
+            <div className="mt-4 pt-3 border-t border-[#F1F5F9] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+              <span className="flex items-center gap-1.5 text-[#635BFF]">
+                <FileText className="h-3.5 w-3.5" /> Goal-Based Raise
+              </span>
+              <span className="text-[#94A3B8]">Stage 1</span>
             </div>
           </div>
 
           {/* Step 2 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#00A389]/40 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#E6FFFA] text-[#00A389] font-mono font-bold text-sm flex items-center justify-center border border-[#B2F5EA]">
+          <div className="p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xs hover:shadow-xl hover:border-[#00D4B2]/60 hover:-translate-y-1 transition-all duration-300 relative flex flex-col justify-between group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00D4B2] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between gap-2">
+                <span className="w-8 h-8 rounded-lg bg-[#E6FFFA] text-[#00A389] font-mono font-bold text-xs flex items-center justify-center border border-[#B2F5EA] group-hover:scale-105 transition-transform shadow-2xs">
                   02
                 </span>
-                <span className="text-[10px] font-mono text-[#635BFF] bg-[#F0F0FF] px-2.5 py-0.5 rounded-full border border-[#E0E0FF]">
+                <span className="text-[10px] font-mono font-bold text-[#635BFF] bg-[#F0F0FF] px-2.5 py-1 rounded-full border border-[#E0E0FF]">
                   Soft Commits
                 </span>
               </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
+              <h3 className="text-base font-bold text-[#0A2540] group-hover:text-[#00A389] transition-colors leading-snug">
                 Investors Show Interest & Indicate Check Size
               </h3>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                Anyone can show interest and specify how much capital they are willing to invest (from ₹50,000 to ₹50 Lakhs+). Allocators indicate their preferred sectors and strategic assistance.
+              <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed">
+                Allocators specify their investment appetite, sector preferences, and strategic value-add without upfront lock-ins. Rounds remain open until the target is fulfilled.
               </p>
             </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Coins className="h-3.5 w-3.5 text-[#00A389]" /> Flexible check sizes
+            <div className="mt-4 pt-3 border-t border-[#F1F5F9] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+              <span className="flex items-center gap-1.5 text-[#00A389]">
+                <Coins className="h-3.5 w-3.5" /> Flexible Allocation
+              </span>
+              <span className="text-[#94A3B8]">Stage 2</span>
             </div>
           </div>
 
           {/* Step 3 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#FF7043]/40 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#FFF3EE] text-[#FF7043] font-mono font-bold text-sm flex items-center justify-center border border-[#FFE2D6]">
+          <div className="p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xs hover:shadow-xl hover:border-[#FF7043]/60 hover:-translate-y-1 transition-all duration-300 relative flex flex-col justify-between group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#FF7043] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between gap-2">
+                <span className="w-8 h-8 rounded-lg bg-[#FFF3EE] text-[#FF7043] font-mono font-bold text-xs flex items-center justify-center border border-[#FFE2D6] group-hover:scale-105 transition-transform shadow-2xs">
                   03
                 </span>
-                <span className="text-[10px] font-mono text-[#FF7043] bg-[#FFF3EE] px-2.5 py-0.5 rounded-full border border-[#FFE2D6]">
+                <span className="text-[10px] font-mono font-bold text-[#D94814] bg-[#FFF3EE] px-2.5 py-1 rounded-full border border-[#FFD8C9]">
                   Deal Meeting
                 </span>
               </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
-                Target Reached & Combined Deal Meeting
+              <h3 className="text-base font-bold text-[#0A2540] group-hover:text-[#FF7043] transition-colors leading-snug">
+                Target Reached & Combined Deal Session
               </h3>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                Once the target raise is met, 1008 Network coordinates a combined meeting where the founder and all interested investors meet to review business projections, deal terms, and governance.
+              <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed">
+                Once the target raise is fulfilled, 1008 Network coordinates a structured combined meeting where the founder and all interested investors align on unit metrics, terms, and governance.
               </p>
             </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Users className="h-3.5 w-3.5 text-[#FF7043]" /> Combined founder-investor call
+            <div className="mt-4 pt-3 border-t border-[#F1F5F9] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+              <span className="flex items-center gap-1.5 text-[#FF7043]">
+                <Users className="h-3.5 w-3.5" /> Combined Pitch Call
+              </span>
+              <span className="text-[#94A3B8]">Stage 3</span>
             </div>
           </div>
 
           {/* Step 4 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#0A2540]/40 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#F8FAFC] text-[#0A2540] font-mono font-bold text-sm flex items-center justify-center border border-[#CBD5E1]">
+          <div className="p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xs hover:shadow-xl hover:border-[#0A2540]/60 hover:-translate-y-1 transition-all duration-300 relative flex flex-col justify-between group overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#0A2540] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between gap-2">
+                <span className="w-8 h-8 rounded-lg bg-[#F8FAFC] text-[#0A2540] font-mono font-bold text-xs flex items-center justify-center border border-[#CBD5E1] group-hover:scale-105 transition-transform shadow-2xs">
                   04
                 </span>
-                <span className="text-[10px] font-mono text-[#425466] bg-[#F1F5F9] px-2.5 py-0.5 rounded-full border border-[#E2E8F0]">
-                  Direct Execution
+                <span className="text-[10px] font-mono font-bold text-[#425466] bg-[#F1F5F9] px-2.5 py-1 rounded-full border border-[#E2E8F0]">
+                  Direct Contract
                 </span>
               </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
+              <h3 className="text-base font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors leading-snug">
                 Independent Due Diligence & Direct Signing
               </h3>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                Investors perform their own independent due diligence and sign investment agreements directly with the company. 1008 Network acts solely as a discovery and meeting facilitator holding no responsibility.
+              <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed">
+                Investors perform their independent due diligence and sign investment agreements directly with the company entity with 100% clarity and zero intermediary markups.
               </p>
             </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <FileCheck2 className="h-3.5 w-3.5 text-[#0A2540]" /> Self due diligence & direct contracts
+            <div className="mt-4 pt-3 border-t border-[#F1F5F9] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+              <span className="flex items-center gap-1.5 text-[#0A2540]">
+                <FileCheck2 className="h-3.5 w-3.5" /> Direct Entity Execution
+              </span>
+              <span className="text-[#94A3B8]">Stage 4</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Dual Data Intake Portals (Forms) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
-          <Badge variant="indigo" size="sm">Submit Data</Badge>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
+      {/* 5. Dual Data Intake Portals - Redesigned Enterprise Cards */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
+          <Badge variant="indigo" size="sm">Syndicate Portals</Badge>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A2540] tracking-tight font-sans">
             Participate in 1008 Capital Network
           </h2>
-          <p className="text-xs sm:text-sm text-[#425466]">
-            Whether you are raising capital or looking to deploy funds, submit your details to be notified of matching opportunities.
+          <p className="text-xs sm:text-sm text-[#475569] max-w-xl mx-auto">
+            Whether you are raising capital for your venture or looking to deploy capital alongside aligned syndicate partners.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Card 1: For Startups Seeking Capital */}
-          <div className="p-8 rounded-3xl bg-white border border-[#E6E8EB] space-y-6 relative overflow-hidden shadow-xs flex flex-col justify-between hover:border-[#635BFF]/50 transition-all">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F0F0FF] text-[#635BFF] flex items-center justify-center border border-[#E0E0FF]">
-                <Rocket className="h-6 w-6" />
-              </div>
-              <div className="space-y-2">
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E2E8F0] space-y-6 relative overflow-hidden shadow-xs hover:shadow-xl hover:border-[#635BFF]/50 transition-all duration-300 flex flex-col justify-between group">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="space-y-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#F0F0FF] text-[#635BFF] flex items-center justify-center border border-[#E0E0FF] group-hover:scale-105 transition-transform shadow-2xs">
+                  <Rocket className="h-6 w-6" />
+                </div>
                 <Badge variant="indigo" size="sm">For Startups & Founders</Badge>
-                <h3 className="text-2xl font-extrabold text-[#0A2540]">Looking to Raise Capital?</h3>
-                <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Submit your startup requirement, target raise amount, and exact use of capital. Once verified, your requirement will be opened for allocation to aligned investors.
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-2xl font-extrabold text-[#0A2540] font-sans group-hover:text-[#635BFF] transition-colors">
+                  Looking to Raise Capital?
+                </h3>
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
+                  Submit your startup requirement, target funding goal, and itemized use of capital. Once vetted, your round will be opened for allocation to aligned investors.
                 </p>
               </div>
 
-              <div className="space-y-2.5 pt-2 text-xs text-[#425466]">
-                <div className="flex items-center gap-2">
+              <div className="space-y-2.5 pt-2 text-xs sm:text-[13px] text-[#0A2540]">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0" />
-                  <span>Specify target raise (₹10L to ₹5Cr+) and deployment milestones</span>
+                  <span>Define target raise and explicit deployment milestones</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0" />
-                  <span>Zero upfront retainer or placement listing fees</span>
+                  <span>Zero upfront retainer or broker listing fees</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0" />
-                  <span>Confidential pitch deck review under Mutual NDA standard</span>
+                  <span>Direct founder interaction with verified investors</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#F1F4F8]">
+            <div className="pt-6 border-t border-[#F1F4F8]">
               <Button
                 href="/capital/post"
                 variant="primary"
                 size="md"
-                className="w-full justify-center font-semibold shadow-xs"
+                className="w-full justify-center font-semibold shadow-xs py-3 text-sm"
                 rightIcon={<ArrowRight className="h-4 w-4" />}
               >
                 Post Capital Requirement (Fill Form)
@@ -282,41 +304,47 @@ export default function CapitalPage() {
           </div>
 
           {/* Card 2: For Individuals & Investors */}
-          <div className="p-8 rounded-3xl bg-white border border-[#E6E8EB] space-y-6 relative overflow-hidden shadow-xs flex flex-col justify-between hover:border-[#00A389]/50 transition-all">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#E6FFFA] text-[#00A389] flex items-center justify-center border border-[#B2F5EA]">
-                <TrendingUp className="h-6 w-6" />
-              </div>
-              <div className="space-y-2">
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E2E8F0] space-y-6 relative overflow-hidden shadow-xs hover:shadow-xl hover:border-[#00D4B2]/50 transition-all duration-300 flex flex-col justify-between group">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00D4B2] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="space-y-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#E6FFFA] text-[#00A389] flex items-center justify-center border border-[#B2F5EA] group-hover:scale-105 transition-transform shadow-2xs">
+                  <TrendingUp className="h-6 w-6" />
+                </div>
                 <Badge variant="cyan" size="sm">For Individuals & Allocators</Badge>
-                <h3 className="text-2xl font-extrabold text-[#0A2540]">Looking to Invest Capital?</h3>
-                <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Join our investor network. Whether you are an angel investor, working professional, or family office, specify your check size appetite and target sectors to participate in upcoming rounds.
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-2xl font-extrabold text-[#0A2540] font-sans group-hover:text-[#00A389] transition-colors">
+                  Looking to Invest Capital?
+                </h3>
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
+                  Join our investor network. Whether you are an angel investor, working professional, or family office, specify your sector preferences to participate in upcoming rounds.
                 </p>
               </div>
 
-              <div className="space-y-2.5 pt-2 text-xs text-[#425466]">
-                <div className="flex items-center gap-2">
+              <div className="space-y-2.5 pt-2 text-xs sm:text-[13px] text-[#0A2540]">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
-                  <span>Participate in small-scale to large rounds (₹50K to ₹5Cr+)</span>
+                  <span>Participate in small-scale to large growth rounds</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
-                  <span>Full visibility on itemized use of funds before deal meetings</span>
+                  <span>Full visibility on itemized use of funds before deal calls</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
-                  <span>Direct founder interaction & direct contract signing</span>
+                  <span>Direct founder engagement & direct contract signing</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#F1F4F8]">
+            <div className="pt-6 border-t border-[#F1F4F8]">
               <Button
                 href="/capital/join"
                 variant="secondary"
                 size="md"
-                className="w-full justify-center font-semibold shadow-xs"
+                className="w-full justify-center font-semibold shadow-xs py-3 text-sm"
                 rightIcon={<UserCheck className="h-4 w-4 text-[#00A389]" />}
               >
                 Join Investor Network (Fill Form)
@@ -326,41 +354,45 @@ export default function CapitalPage() {
         </div>
       </section>
 
-      {/* 6. Key Platform Characteristics */}
+      {/* 6. Key Principles of Capital Network */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="p-8 rounded-3xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-6">
+        <div className="p-8 sm:p-10 rounded-3xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-6">
           <div className="max-w-2xl space-y-1">
-            <h3 className="text-xl font-extrabold text-[#0A2540]">Key Principles of 1008 Capital Network</h3>
-            <p className="text-xs text-[#627D98]">How we differ from traditional intermediary brokers</p>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] font-sans">
+              Key Principles of 1008 Capital Network
+            </h3>
+            <p className="text-xs sm:text-sm text-[#627D98]">
+              How our structured syndicate model differs from traditional broker networks
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-4 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] space-y-2.5 shadow-xs hover:border-[#635BFF]/40 transition-all">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
                 <Target className="h-4 w-4 text-[#635BFF]" />
                 <span>Target-Based Allocation</span>
               </div>
-              <p className="text-xs text-[#425466] leading-relaxed">
+              <p className="text-xs text-[#475569] leading-relaxed">
                 Capital campaigns stay open until the startup reaches its declared funding target, with clear operational milestones and transparency.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
+            <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] space-y-2.5 shadow-xs hover:border-[#00A389]/40 transition-all">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
                 <DollarSign className="h-4 w-4 text-[#059669]" />
                 <span>Explicit Use of Funds</span>
               </div>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                Companies must clearly define how every rupee is allocated (machinery, working capital, inventory) prior to holding combined investor deal meetings.
+              <p className="text-xs text-[#475569] leading-relaxed">
+                Companies must clearly define how capital is allocated (machinery, working capital, inventory) prior to holding combined investor deal meetings.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
+            <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] space-y-2.5 shadow-xs hover:border-[#FF7043]/40 transition-all">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
                 <Handshake className="h-4 w-4 text-[#FF7043]" />
                 <span>Combined Deal Meetings</span>
               </div>
-              <p className="text-xs text-[#425466] leading-relaxed">
+              <p className="text-xs text-[#475569] leading-relaxed">
                 When the round target is reached, all interested investors and founders meet in a single structured session to align on final valuations and terms.
               </p>
             </div>
