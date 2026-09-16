@@ -60,7 +60,7 @@ export default function NetworkPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Great enterprises are rarely built alone. 1008 Partner Network connects domain founders who have the business vision with vetted technical CTOs, operations leads, and commercial sales partners for shared equity under Mutual NDA.
+            Great enterprises are rarely built alone. 1008 Partner Network connects domain founders who have the business vision with vetted technical CTOs, operations leads, and commercial sales partners for shared equity.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -82,21 +82,13 @@ export default function NetworkPage() {
             >
               Join Talent Pool (For Operators)
             </Button>
-            <Button
-              href="/studio"
-              size="md"
-              variant="ghost"
-              className="w-full sm:w-auto text-xs text-[#627D98] hover:text-[#0A2540]"
-            >
-              Explore Studio Model →
-            </Button>
           </div>
 
           {/* Quick Informational Highlights */}
           <div className="pt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono text-[#627D98]">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-              <span>Matching Status: <strong>Data Collection Active</strong></span>
+              <span>Matching Status: <strong>Direct Introductions</strong></span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
@@ -105,44 +97,9 @@ export default function NetworkPage() {
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="h-3.5 w-3.5 text-[#059669]" />
-              <span>Mutual NDA Protected</span>
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" />
+              <span>Zero Placement Fees</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Pre-Launch Data Gathering Status Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="p-6 rounded-2xl bg-[#F0FDF4] border border-[#BBF7D0] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-2xs">
-          <div className="space-y-1.5">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#16A34A] animate-pulse" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#15803D]">
-                Platform Status: Information & Matching Data Intake Phase
-              </span>
-            </div>
-            <p className="text-xs sm:text-sm text-[#166534] leading-relaxed max-w-3xl">
-              Currently, there are no public listings displayed. We are gathering requirements from founders looking for co-founders/talent and profiles from experienced operators looking to join startups. Once initial batches are curated, live openings and operator profiles will be published directly here.
-            </p>
-          </div>
-          <div className="flex items-center gap-2 shrink-0 self-start md:self-auto">
-            <Button
-              href="/network/post"
-              variant="primary"
-              size="sm"
-              className="text-xs font-semibold bg-[#16A34A] hover:bg-[#15803D] border-[#16A34A]"
-            >
-              Post Role Need
-            </Button>
-            <Button
-              href="/network/join"
-              variant="secondary"
-              size="sm"
-              className="text-xs font-semibold"
-            >
-              Register Profile
-            </Button>
           </div>
         </div>
       </section>
@@ -218,14 +175,14 @@ export default function NetworkPage() {
                 </span>
               </div>
               <h3 className="text-base font-bold text-[#0A2540]">
-                Curated Match & Mutual NDA Intro
+                Curated Match & Private Intro
               </h3>
               <p className="text-xs text-[#425466] leading-relaxed">
-                1008 Network curates high-alignment matches and coordinates a private introduction meeting under mutual confidentiality to evaluate chemistry, work styles, and role scoping.
+                1008 Network curates high-alignment matches and coordinates a private introduction meeting to evaluate chemistry, work styles, and role scoping.
               </p>
             </div>
             <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <ShieldCheck className="h-3.5 w-3.5 text-[#FF7043]" /> Mutual NDA protected
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#FF7043]" /> Direct party introductions
             </div>
           </div>
 
@@ -331,7 +288,7 @@ export default function NetworkPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
-                  <span>Direct founder introductions under strict Mutual NDA</span>
+                  <span>Direct founder introductions with high-alignment ventures</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
@@ -386,11 +343,11 @@ export default function NetworkPage() {
 
             <div className="p-4 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
-                <ShieldCheck className="h-4 w-4 text-[#059669]" />
-                <span>Mutual NDA Standard</span>
+                <CheckCircle2 className="h-4 w-4 text-[#059669]" />
+                <span>Direct Agreements</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed">
-                Both founder business models and applicant professional records are protected under 1008 Network&apos;s standard Mutual Confidentiality agreement.
+                Both founder requirements and applicant profiles are facilitated directly between parties with full clarity and transparency.
               </p>
             </div>
           </div>

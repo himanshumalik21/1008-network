@@ -36,7 +36,7 @@ export function NetworkTeaser() {
               Have the business vision. Find the right co-founder & talent.
             </h2>
             <p className="text-[#425466] text-base max-w-2xl leading-relaxed">
-              Great enterprises are rarely built alone. Connect with technical CTOs, operations heads, or commercial sales partners for shared venture equity under mutual NDA.
+              Great enterprises are rarely built alone. Connect with technical CTOs, operations heads, or commercial sales partners for shared venture equity.
             </p>
           </div>
 

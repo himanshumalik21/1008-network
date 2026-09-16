@@ -41,7 +41,7 @@ export const studioFaqs: FAQItem[] = [
 export const networkFaqs: FAQItem[] = [
   {
     question: "How does co-founder and talent matching work on 1008 Partner Network?",
-    answer: "Founders submit specific talent requirements (Technical CTO, Head of Operations, GTM Sales Lead) and their venture thesis. Experienced operators submit their verified execution track record. 1008 Network curates high-alignment matches and coordinates private introduction meetings under mutual NDA.",
+    answer: "Founders submit specific talent requirements (Technical CTO, Head of Operations, GTM Sales Lead) and their venture thesis. Experienced operators submit their verified execution track record. 1008 Network curates high-alignment matches and coordinates direct introduction meetings.",
     category: "network",
   },
   {
@@ -60,8 +60,8 @@ export const networkFaqs: FAQItem[] = [
     category: "equity",
   },
   {
-    question: "Is my venture thesis and candidate profile protected under NDA?",
-    answer: "Yes. All submissions, business models, and applicant profiles are protected under 1008 Network's standard Mutual Non-Disclosure Agreement (Mutual NDA) prior to introductions.",
+    question: "How are introductions made between founders and candidates?",
+    answer: "1008 Network curates high-alignment matches and facilitates direct introductions so founders and operators can evaluate chemistry, technical alignment, and co-building terms directly.",
     category: "network",
   },
   {

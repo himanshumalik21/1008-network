@@ -123,7 +123,7 @@ export function OpportunityDetailClient({
             </Button>
             <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-mono">
               <ShieldCheck className="h-4 w-4 text-[#059669]" />
-              <span>Direct introduction to founder under mutual NDA</span>
+              <span>Direct introduction to founder for verified opportunities</span>
             </div>
           </div>
         </div>
@@ -227,7 +227,7 @@ export function OpportunityDetailClient({
                 Ready to co-build with {opp.founderBackground.name}?
               </div>
               <p className="text-xs text-[#627D98] max-w-md">
-                Submissions are reviewed by our venture partner team within 24 hours. Intros are made with strict mutual NDA protections.
+                Submissions are reviewed by our venture partner team within 24 hours. Intros are coordinated directly with the founding team.
               </p>
             </div>
             <Button

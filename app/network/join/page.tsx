@@ -156,7 +156,7 @@ export default function RegisterProfilePage() {
 
       setStatus("success");
       setMessage(
-        "Your profile has been confidentially registered with the 1008 Partner & Talent Network. Our team manually reviews every profile and coordinates high-conviction introductions under mutual NDA."
+        "Your profile has been registered with the 1008 Partner & Talent Network. Our team reviews every profile and coordinates high-conviction introductions directly with founders."
       );
     } catch {
       setStatus("error");

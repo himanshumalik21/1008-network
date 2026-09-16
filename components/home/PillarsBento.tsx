@@ -123,7 +123,7 @@ export function PillarsBento() {
               </div>
 
               <p className="text-[#425466] text-sm leading-relaxed">
-                <strong>Have the business vision? Find the right co-founder & talent.</strong> Connect domain experts with technical CTOs, GTM strategists, and operations heads for shared venture equity under mutual NDA.
+                <strong>Have the business vision? Find the right co-founder & talent.</strong> Connect domain experts with technical CTOs, GTM strategists, and operations heads for shared venture equity.
               </p>
 
               {/* Embedded Network Matchmaking Radar Graphic */}
