@@ -9,6 +9,7 @@ import {
   sendStartupCapitalAlert,
   sendStudioInvestmentAlert,
 } from "./email";
+import { sanitizeInput, isValidEmail, isValidPhone, isValidUrl, isBotHoneypot } from "./validation";
 
 export interface ActionResult<T = unknown> {
   success: boolean;
@@ -17,15 +18,29 @@ export interface ActionResult<T = unknown> {
   error?: string;
 }
 
-function isValidEmail(email: string): boolean {
-  if (!email || typeof email !== "string" || email.length > 254) return false;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email.trim());
+// Server-side sliding-window rate limiter (prevents API flooding / spam bot abuse)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+
+function checkServerRateLimit(identifier: string, maxRequests = 5, windowMs = 60000): boolean {
+  const now = Date.now();
+  const userRate = rateLimitMap.get(identifier);
+
+  if (!userRate || now > userRate.resetTime) {
+    rateLimitMap.set(identifier, { count: 1, resetTime: now + windowMs });
+    return true;
+  }
+
+  if (userRate.count >= maxRequests) {
+    return false;
+  }
+
+  userRate.count += 1;
+  return true;
 }
 
 function cleanString(val: unknown, maxLen = 5000): string {
   if (!val || typeof val !== "string") return "";
-  return val.trim().slice(0, maxLen);
+  return sanitizeInput(val).slice(0, maxLen);
 }
 
 // In-memory persistent queue for runtime submissions (when running without live DB connection)
