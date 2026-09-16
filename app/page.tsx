@@ -1,7 +1,6 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
-import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { FAQSection } from "@/components/home/FAQSection";
 import { Badge } from "@/components/brand/Badge";
@@ -25,13 +24,10 @@ export default function HomePage() {
       {/* 2. The Four Pillars Bento Grid */}
       <PillarsBento />
 
-      {/* 3. Direct Comparison (Why Agencies and Incubators Fail Domain Leaders) */}
-      <ComparisonSection />
-
-      {/* 4. Target Domain Archetypes */}
+      {/* 3. Target Domain Archetypes */}
       <PersonaMatrix />
 
-      {/* 5. Frequently Answered Questions Accordion */}
+      {/* 4. Frequently Answered Questions Accordion */}
       <FAQSection />
 
       {/* 8. Global Conversion Banner */}

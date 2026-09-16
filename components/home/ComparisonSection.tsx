@@ -113,7 +113,7 @@ export function ComparisonSection() {
         {/* Interactive Alternative Model Selector */}
         <div className="flex flex-col items-center justify-center space-y-3 mb-8">
           <div className="text-xs font-mono font-semibold uppercase tracking-wider text-[#627D98]">
-            Select an alternative to compare vs 1008 Network:
+            Select an alternative to compare vs 1008 Venture Studio:
           </div>
           <div className="inline-flex p-1.5 bg-[#F1F4F9] rounded-2xl border border-[#E2E8F0] gap-1.5 flex-wrap justify-center shadow-2xs">
             {(Object.keys(alternatives) as AlternativeKey[]).map((key) => {
@@ -143,12 +143,12 @@ export function ComparisonSection() {
         <div className="space-y-4">
           {/* Column Header Titles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans">
-            {/* 1008 Network Header Card */}
+            {/* 1008 Venture Studio Header Card */}
             <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#F0F0FF] to-[#F8F9FE] border-2 border-[#635BFF]/30 flex items-center justify-between shadow-2xs">
               <div className="flex items-center gap-2.5">
                 <span className="w-3 h-3 rounded-full bg-[#635BFF] animate-pulse" />
                 <div>
-                  <h3 className="font-extrabold text-[#0A2540] text-base sm:text-lg">1008 Network</h3>
+                  <h3 className="font-extrabold text-[#0A2540] text-base sm:text-lg">1008 Venture Studio</h3>
                   <p className="text-xs text-[#635BFF] font-medium">Turnkey Venture Partner • Shared Equity</p>
                 </div>
               </div>
