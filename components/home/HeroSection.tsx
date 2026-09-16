@@ -88,7 +88,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-full lg:h-[calc(100dvh-4rem)] lg:pb-10 flex flex-col justify-center items-center py-6 sm:py-8 lg:py-0 overflow-hidden bg-white">
+    <section className="relative w-full h-full lg:h-[calc(100dvh-4rem)] lg:pb-10 flex flex-col justify-between items-center py-6 sm:py-8 lg:py-0 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
 
@@ -104,9 +104,9 @@ export function HeroSection() {
       <div className="absolute left-6 top-1/4 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
       <div className="absolute right-6 top-1/3 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-evenly h-full max-h-[750px]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-between h-full pt-4 sm:pt-6 lg:pt-8 pb-2 sm:pb-3">
         {/* Top Header & Value Proposition Block - Relaxed Spacing & High-Contrast Typography */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-3.5">
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-3.5 my-auto lg:my-0 lg:pt-2">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="sm" pulse>
@@ -149,8 +149,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Four Pillars 2x2 Explanatory Grid - Elevated & Visually Impressive */}
-        <div className="w-full max-w-4xl mx-auto pt-2 sm:pt-3">
+        {/* Four Pillars 2x2 Explanatory Grid - Aligned firmly to the bottom */}
+        <div className="w-full max-w-4xl mx-auto mt-auto pb-1 sm:pb-2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
             {pillars.map((pillar) => (
               <Link
