@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
 import { Badge } from "@/components/brand/Badge";
 import { subscribeNewsletter } from "@/lib/actions";
@@ -18,6 +19,7 @@ import {
 import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export function Footer() {
+  const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -43,6 +45,41 @@ export function Footer() {
       setMessage("Failed to subscribe. Please try again.");
     }
   };
+
+  if (pathname === "/") {
+    return (
+      <footer className="w-full bg-white/95 backdrop-blur-xs border-t border-[#E6E8EB] py-3 text-xs text-[#627D98] relative z-20 shrink-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+          <div className="flex items-center gap-2">
+            <span>© {new Date().getFullYear()} 1008 Network (1008.network)</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Operating Pan-India</span>
+          </div>
+          <div className="flex items-center gap-5 text-xs">
+            <a
+              href="https://www.linkedin.com/company/1008-network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#0A66C2] transition-colors flex items-center gap-1 font-medium"
+            >
+              <LinkedInIcon className="h-3.5 w-3.5 text-[#0A66C2]" />
+              <span>LinkedIn</span>
+            </a>
+            <Link href="/terms" className="hover:text-[#0A2540] transition-colors">
+              Terms & NDA
+            </Link>
+            <Link href="/privacy" className="hover:text-[#0A2540] transition-colors">
+              Privacy Policy
+            </Link>
+            <div className="hidden md:flex items-center gap-1 text-[#059669] font-medium">
+              <ShieldCheck className="h-3.5 w-3.5" />
+              <span>Mutual NDA Standard</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="bg-[#F6F9FC] border-t border-[#E6E8EB] text-[#0A2540] pt-16 pb-12 overflow-hidden relative">

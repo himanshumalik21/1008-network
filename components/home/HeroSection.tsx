@@ -72,7 +72,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[calc(100vh-4.5rem)] sm:min-h-screen flex flex-col justify-center items-center pt-24 pb-12 sm:pt-28 sm:pb-16 overflow-hidden bg-white">
+    <section className="relative min-h-[calc(100vh-4rem-3rem)] sm:min-h-[calc(100dvh-4rem-3.25rem)] lg:h-[calc(100dvh-4rem-3.25rem)] flex flex-col justify-center items-center pt-20 pb-6 sm:pt-20 sm:pb-6 lg:py-0 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
 
@@ -89,16 +89,16 @@ export function HeroSection() {
       <div className="absolute right-8 top-1/3 w-44 h-44 bg-dots-matrix opacity-30 mask-radial-fade pointer-events-none hidden xl:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center">
-        <div className="text-center max-w-4xl mx-auto space-y-6">
+        <div className="text-center max-w-4xl mx-auto space-y-4">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
-            <Badge variant="indigo" size="md" pulse>
+            <Badge variant="indigo" size="sm" pulse>
               1008 Network // Venture Studio • Partner Network • Capital • Playbook
             </Badge>
           </div>
 
           {/* Primary Platform Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] leading-[1.15] font-sans">
+          <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-5xl font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
             <span className="block">Build, partner, and invest in</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#059669]">
               high-conviction Indian ventures.
@@ -106,26 +106,26 @@ export function HeroSection() {
           </h1>
 
           {/* Platform Subtitle */}
-          <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
+          <p className="text-sm sm:text-base text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
             The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button
-              size="lg"
+              size="md"
               variant="primary"
               onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto text-base px-8 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
+              className="w-full sm:w-auto text-sm px-7 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
               Apply to Build With Us
             </Button>
             <Button
               href="/studio"
-              size="lg"
+              size="md"
               variant="secondary"
-              className="w-full sm:w-auto text-base font-semibold"
+              className="w-full sm:w-auto text-sm font-semibold"
             >
               Explore Studio Model
             </Button>
@@ -133,13 +133,13 @@ export function HeroSection() {
         </div>
 
         {/* Four Pillars 2x2 Explanatory Grid */}
-        <div className="w-full max-w-4xl mx-auto pt-8 sm:pt-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+        <div className="w-full max-w-4xl mx-auto pt-6 sm:pt-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
             {pillars.map((pillar) => (
               <Link
                 key={pillar.num}
                 href={pillar.href}
-                className={`p-4 sm:p-5 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
+                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
               >
                 {/* Subtle Top Indicator Line on Hover */}
                 <div
@@ -147,13 +147,13 @@ export function HeroSection() {
                   style={{ backgroundColor: pillar.accent }}
                 />
 
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
                         {pillar.icon}
                       </div>
-                      <h3 className="text-sm sm:text-base font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors">
+                      <h3 className="text-sm font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors">
                         {pillar.title}
                       </h3>
                     </div>
@@ -167,7 +167,7 @@ export function HeroSection() {
                   </p>
                 </div>
 
-                <div className="pt-3 mt-3 border-t border-[#F1F4F8] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+                <div className="pt-2.5 mt-2.5 border-t border-[#F1F4F8] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
                   <span>{pillar.tagline}</span>
                   <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] group-hover:text-[#635BFF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
