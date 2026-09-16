@@ -113,21 +113,21 @@ export function HeroSection() {
           {/* Dual High-Conversion CTAs */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Button
-              href="#pillars"
               size="lg"
               variant="primary"
+              onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
               className="w-full sm:w-auto text-base px-8 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
-              Explore Four Pillars ↓
+              Apply to Build With Us
             </Button>
             <Button
+              href="/studio"
               size="lg"
               variant="secondary"
-              onClick={handleOpenModal}
               className="w-full sm:w-auto text-base font-semibold"
             >
-              Apply to Build With Us
+              Explore Studio Model
             </Button>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
-import { PillarsBento } from "@/components/home/PillarsBento";
 
 export function generateMetadata() {
   return {
@@ -12,11 +11,8 @@ export function generateMetadata() {
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* 1. Hero Section with Razor-Sharp Hook & Interactive Blueprint */}
+      {/* Hero Section with Razor-Sharp Hook & Four Pillars 2x2 Interactive Blueprint */}
       <HeroSection />
-
-      {/* 2. The Four Pillars Bento Grid */}
-      <PillarsBento />
     </div>
   );
 }
