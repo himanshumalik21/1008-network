@@ -1,10 +1,6 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
-import { Badge } from "@/components/brand/Badge";
-import { Button } from "@/components/ui/Button";
-import { InteractiveNetworkGlobe } from "@/components/canvas/InteractiveNetworkGlobe";
-import { Sparkles, ArrowRight, Lock } from "lucide-react";
 
 export function generateMetadata() {
   return {
@@ -21,60 +17,6 @@ export default function HomePage() {
 
       {/* 2. The Four Pillars Bento Grid */}
       <PillarsBento />
-
-      {/* 8. Global Conversion Banner */}
-      <section className="py-24 bg-[#F6F9FC] border-t border-[#E6E8EB] relative overflow-hidden">
-        {/* Background Architectural Box Grid & Ambient Motion */}
-        <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-60 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-gradient-to-r from-[#635BFF]/12 via-[#00D4B2]/08 to-[#FF7043]/06 blur-[130px] pointer-events-none animate-pulse-subtle" />
-        
-        {/* Interactive 3D Point-Cloud Globe Artwork on Right */}
-        <InteractiveNetworkGlobe className="absolute -right-20 lg:-right-32 xl:-right-40 top-1/2 -translate-y-1/2 w-[650px] h-[650px] lg:w-[800px] lg:h-[800px] xl:w-[940px] xl:h-[940px] opacity-85 pointer-events-none hidden lg:block" />
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <Badge variant="indigo" size="md" pulse>
-            Operational Partnerships Open
-          </Badge>
-
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Ready to turn your industry insight into a running enterprise?
-          </h2>
-
-          <p className="text-base sm:text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Stop fighting operational friction, contractor markups, or hiring delays alone. Partner with 1008 Network for turnkey execution on the ground.
-          </p>
-
-          <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <Button
-              href="/studio"
-              size="lg"
-              variant="primary"
-              rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto font-semibold text-base px-8"
-            >
-              Apply to Build With Us
-            </Button>
-            <Button
-              href="/network"
-              size="lg"
-              variant="secondary"
-              className="w-full sm:w-auto text-base font-semibold"
-            >
-              Find a Co-Founder / Join Network
-            </Button>
-          </div>
-
-          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-[#627D98] font-semibold">
-            <span className="flex items-center gap-1.5">
-              <Lock className="h-3.5 w-3.5 text-[#059669]" /> Mutual NDA from Day 1
-            </span>
-            <span>•</span>
-            <span>Zero Upfront Consulting Fees</span>
-            <span>•</span>
-            <span>Phased Handover Standard</span>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
