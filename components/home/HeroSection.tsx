@@ -94,26 +94,26 @@ export function HeroSection() {
       <div className="absolute left-6 top-1/4 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
       <div className="absolute right-6 top-1/3 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-end h-full pb-2 sm:pb-3 space-y-4 sm:space-y-5 lg:space-y-5">
-        {/* Top Header & Value Proposition Block - Positioned directly above the boxes */}
-        <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-end h-full pb-3 sm:pb-4 space-y-4 sm:space-y-6 lg:space-y-6">
+        {/* Top Header & Value Proposition Block - Positioned directly above the boxes with enlarged typography */}
+        <div className="text-center max-w-4xl mx-auto space-y-3 sm:space-y-4">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
-            <Badge variant="indigo" size="sm" pulse>
+            <Badge variant="indigo" size="md" pulse className="text-xs sm:text-[13px] px-3.5 py-1 font-medium">
               1008 Network // Venture Studio • Partner Network • Capital • Playbook
             </Badge>
           </div>
 
-          {/* Primary Platform Headline - Crisp, High-Contrast & Commanding */}
-          <h1 className="text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] font-extrabold tracking-tight text-[#0A2540] leading-[1.2] font-sans">
+          {/* Primary Platform Headline - Big, Bold, Crisp & Commanding */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[52px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
             <span className="block">Build, partner, and invest in</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
               high-conviction Indian ventures.
             </span>
           </h1>
 
-          {/* Platform Subtitle */}
-          <p className="text-xs sm:text-sm lg:text-[14.5px] text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal pt-0.5">
+          {/* Platform Subtitle - Enlarged & Highly Legible */}
+          <p className="text-sm sm:text-base md:text-lg lg:text-[18.5px] text-[#334155] leading-relaxed max-w-3xl mx-auto font-normal pt-0.5">
             The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
         </div>
