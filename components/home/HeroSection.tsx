@@ -105,7 +105,7 @@ export function HeroSection() {
       <div className="absolute right-6 top-1/3 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-evenly h-full max-h-[750px]">
-        {/* Top Header & Value Proposition Block - Relaxed Spacing & Comfortable Hierarchy */}
+        {/* Top Header & Value Proposition Block - Relaxed Spacing & High-Contrast Typography */}
         <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-3.5">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
@@ -114,16 +114,16 @@ export function HeroSection() {
             </Badge>
           </div>
 
-          {/* Primary Platform Headline */}
-          <h1 className="text-2xl sm:text-3xl lg:text-[35px] xl:text-[39px] font-extrabold tracking-tight text-[#0A2540] leading-[1.2] font-sans">
+          {/* Primary Platform Headline - Crisp, High-Contrast & Commanding */}
+          <h1 className="text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] font-extrabold tracking-tight text-[#0A2540] leading-[1.2] font-sans">
             <span className="block">Build, partner, and invest in</span>
-            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
+            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
               high-conviction Indian ventures.
             </span>
           </h1>
 
           {/* Platform Subtitle */}
-          <p className="text-xs sm:text-sm lg:text-[14.5px] text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal pt-0.5">
+          <p className="text-xs sm:text-sm lg:text-[14.5px] text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal pt-0.5">
             The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
 
@@ -149,14 +149,14 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Four Pillars 2x2 Explanatory Grid */}
+        {/* Four Pillars 2x2 Explanatory Grid - Elevated & Visually Impressive */}
         <div className="w-full max-w-4xl mx-auto pt-2 sm:pt-3">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
             {pillars.map((pillar) => (
               <Link
                 key={pillar.num}
                 href={pillar.href}
-                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
+                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-xs ${pillar.bgHover}`}
               >
                 {/* Subtle Top Indicator Line on Hover */}
                 <div
@@ -179,7 +179,7 @@ export function HeroSection() {
                     </span>
                   </div>
 
-                  <p className="text-xs text-[#425466] leading-relaxed text-left font-normal">
+                  <p className="text-xs text-[#475569] leading-relaxed text-left font-normal">
                     {pillar.desc}
                   </p>
                 </div>
