@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { InvestIn1008Modal } from "@/components/capital/InvestIn1008Modal";
+import { PillarFAQ } from "@/components/ui/PillarFAQ";
+import { capitalFaqs } from "@/data/faqs";
 import {
   TrendingUp,
   ShieldCheck,
@@ -449,7 +451,16 @@ export default function CapitalPage() {
         </div>
       </section>
 
-      {/* 7. Facilitator & Self-Due Diligence Disclaimer Banner */}
+      {/* 7. Capital Network Frequently Answered Questions */}
+      <PillarFAQ
+        items={capitalFaqs}
+        badge="Direct Investment & Syndicates"
+        badgeVariant="cyan"
+        title="Capital Network Frequently Answered Questions"
+        description="Everything you need to know about target-based rounds, check sizes, combined deal meetings, and independent due diligence."
+      />
+
+      {/* 8. Facilitator & Self-Due Diligence Disclaimer Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="p-6 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#92400E]">
           <div className="flex items-start gap-3">

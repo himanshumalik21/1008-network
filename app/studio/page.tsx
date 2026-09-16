@@ -7,6 +7,8 @@ import { StudioApplicationModal } from "@/components/studio/StudioApplicationMod
 import { StudioSprintTimeline } from "@/components/home/StudioSprintTimeline";
 import { PersonaMatrix } from "@/components/home/PersonaMatrix";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
+import { PillarFAQ } from "@/components/ui/PillarFAQ";
+import { studioFaqs } from "@/data/faqs";
 import {
   CheckCircle2,
   ArrowRight,
@@ -74,6 +76,15 @@ export default function StudioPage() {
 
       {/* Comparison Section (1008 Venture Studio vs Alternatives) */}
       <ComparisonSection />
+
+      {/* Venture Studio Frequently Answered Questions */}
+      <PillarFAQ
+        items={studioFaqs}
+        badge="Studio Execution & Equity"
+        badgeVariant="indigo"
+        title="Venture Studio Frequently Answered Questions"
+        description="Everything you need to know about our 180-day operational build sprint, Day-1 IP assignment, and shared-equity model."
+      />
 
       {/* CTA Box */}
       <section className="pb-24 bg-white">

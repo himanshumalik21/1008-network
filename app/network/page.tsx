@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { PillarFAQ } from "@/components/ui/PillarFAQ";
+import { networkFaqs } from "@/data/faqs";
 import {
   Users,
   MapPin,
@@ -395,7 +397,16 @@ export default function NetworkPage() {
         </div>
       </section>
 
-      {/* 6. Facilitator Notice Banner */}
+      {/* 6. Partner Network Frequently Answered Questions */}
+      <PillarFAQ
+        items={networkFaqs}
+        badge="Co-Founders & Talent"
+        badgeVariant="cyan"
+        title="Partner Network Frequently Answered Questions"
+        description="Everything you need to know about finding co-founders, posting leadership requirements, vetting standards, and equity terms."
+      />
+
+      {/* 7. Facilitator Notice Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="p-6 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#92400E]">
           <div className="flex items-start gap-3">

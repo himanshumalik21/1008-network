@@ -1,7 +1,6 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PillarsBento } from "@/components/home/PillarsBento";
-import { FAQSection } from "@/components/home/FAQSection";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { InteractiveNetworkGlobe } from "@/components/canvas/InteractiveNetworkGlobe";
@@ -22,9 +21,6 @@ export default function HomePage() {
 
       {/* 2. The Four Pillars Bento Grid */}
       <PillarsBento />
-
-      {/* 3. Frequently Answered Questions Accordion */}
-      <FAQSection />
 
       {/* 8. Global Conversion Banner */}
       <section className="py-24 bg-[#F6F9FC] border-t border-[#E6E8EB] relative overflow-hidden">
