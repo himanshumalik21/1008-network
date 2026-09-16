@@ -104,14 +104,14 @@ export function StudioSprintTimeline() {
           </div>
           
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-[1.12]">
-            Build with you.{" "}
+            We build the operational core.{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
-              Not forever for you.
+              You scale the enterprise.
             </span>
           </h1>
 
           <p className="text-[#425466] text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl mx-auto font-normal">
-            A high-intensity operational partnership split into 4 milestone gates—engineered to architect your systems, recruit core operators, achieve cash-flow velocity, and transition to <strong>100% founder autonomy</strong>.
+            A dedicated operational co-building partnership structured across 4 milestone gates—engineered to architect your systems, recruit core CXO talent, scale cash-flow velocity, and build a lasting, high-value enterprise.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -207,7 +207,7 @@ export function StudioSprintTimeline() {
                 <span>The 1008 Network Commitment</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed font-sans">
-                Upon phase completion, 1008 Network transitions out of daily operations. You walk away with full equity ownership, an operational business, customer revenue, scalable workflows, and zero vendor lock-in.
+                We co-build alongside you with shared equity and skin in the game. You walk away with full IP ownership, an operational business, customer revenue, scalable workflows, and ongoing strategic board advisory.
               </p>
               <div className="pt-2">
                 <Button
