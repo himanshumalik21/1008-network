@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
-  const lastUpdated = "September 15, 2026";
+  const lastUpdated = "September 16, 2026";
 
   const keyGuarantees = [
     {
@@ -46,12 +46,12 @@ export default function TermsPage() {
     {
       icon: <Scale className="h-4 w-4 text-[#00A389]" />,
       title: "Non-Broker Platform",
-      desc: "1008 Network is an operational builder and talent network—not a SEBI registered broker-dealer, portfolio manager, or stock exchange.",
+      desc: "1008 Network is an operational builder and talent network—not a SEBI registered broker-dealer, investment adviser, AIF, or stock exchange.",
     },
     {
       icon: <Clock className="h-4 w-4 text-[#FF7043]" />,
       title: "Active Curated Pipeline",
-      desc: "All network postings are actively curated to prevent stale listings and protect founder response rates.",
+      desc: "All network postings are actively curated to prevent stale listings, protect founder response rates, and safeguard intellectual property.",
     },
   ];
 
@@ -72,7 +72,7 @@ export default function TermsPage() {
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-2">
             <Badge variant="indigo" size="sm">
-              Legal & Compliance
+              Legal & Compliance Framework
             </Badge>
             <span className="text-xs font-mono text-[#627D98] flex items-center gap-1">
               <Calendar className="h-3 w-3 text-[#635BFF]" /> Effective: {lastUpdated}
@@ -84,7 +84,7 @@ export default function TermsPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed font-normal">
-            Welcome to 1008 Network. By accessing <strong>https://www.1008.network</strong>, applying to our Venture Studio, posting leadership requirements, or registering as an operator in our Partner Network, you agree to these Terms of Service and Mutual Non-Disclosure Agreement.
+            Welcome to 1008 Network. By accessing <strong>https://www.1008.network</strong>, applying to our Venture Studio, posting leadership requirements, registering as an operator in our Partner Network, or participating in the Capital Network syndicate pool, you agree to be bound by these Terms of Service and Mutual Non-Disclosure Agreement under the laws of the Republic of India.
           </p>
         </div>
 
@@ -120,33 +120,41 @@ export default function TermsPage() {
                 1
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Nature of Platform & Operations
+                Nature of Platform & Service Pillars
               </h2>
             </div>
             <p>
-              1008 Network operates as a premier **turnkey venture studio, co-founder talent network, and operational execution partner** across India. Our core service pillars comprise:
+              1008 Network operates as a premier <strong>turnkey venture studio, co-founder talent network, capital discovery facilitator, and operational execution partner</strong> across India. Our core service pillars comprise:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-[#0A2540]">
                   <Building2 className="h-3.5 w-3.5 text-[#635BFF]" />
-                  <span>Venture Studio</span>
+                  <span>1. Venture Studio</span>
                 </div>
-                <p className="text-[11px] text-[#627D98]">0-to-1 operational systems, software engineering, plant commissioning, and supply chain execution for shared equity.</p>
+                <p className="text-[11px] text-[#627D98]">0-to-1 operational systems, software engineering, manufacturing plant commissioning, and supply chain execution for shared equity.</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-[#0A2540]">
                   <Users className="h-3.5 w-3.5 text-[#00A389]" />
-                  <span>Partner Network</span>
+                  <span>2. Partner Network</span>
                 </div>
                 <p className="text-[11px] text-[#627D98]">Curated matching connecting founders with CTOs, GTM leaders, supply chain heads, and operators for shared equity upside.</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-[#0A2540]">
+                  <Sparkles className="h-3.5 w-3.5 text-[#059669]" />
+                  <span>3. Capital Network</span>
+                </div>
+                <p className="text-[11px] text-[#627D98]">Direct capital discovery connecting high-conviction startups with angels, family offices, and operators for target-based syndicate rounds.</p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-[#0A2540]">
                   <FileText className="h-3.5 w-3.5 text-[#FF7043]" />
-                  <span>Knowledge Hub</span>
+                  <span>4. Playbook & Knowledge</span>
                 </div>
                 <p className="text-[11px] text-[#627D98]">Actionable, open-access founder playbooks on zero-retainer building, working capital architectures, and cashflow models.</p>
               </div>
@@ -166,13 +174,16 @@ export default function TermsPage() {
             <div className="p-4 rounded-xl bg-[#FFFBEB] border border-[#FDE68A] text-[#92400E] space-y-2 text-xs">
               <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-[11px]">
                 <AlertTriangle className="h-4 w-4 text-[#D97706]" />
-                <span>Important Regulatory Disclosure (India)</span>
+                <span>Statutory Regulatory Disclosure (Republic of India)</span>
               </div>
               <p>
-                1008 Network is <strong>not</strong> a registered Stock Broker, Investment Adviser, Research Analyst, or Merchant Banker under the Securities and Exchange Board of India (SEBI) Regulations. Nothing contained on <code>1008.network</code> or in our playbooks constitutes financial, investment, legal, or tax advice, nor does it constitute an offer, invitation, or public solicitation to purchase or subscribe to any securities, shares, or debentures.
+                1008 Network is <strong>not</strong> a registered Stock Broker, Investment Adviser (under SEBI (Investment Advisers) Regulations, 2013), Research Analyst (under SEBI (Research Analysts) Regulations, 2014), Portfolio Manager, Alternative Investment Fund (AIF under SEBI (AIF) Regulations, 2012), or Merchant Banker under the Securities and Exchange Board of India (SEBI) Act, 1992.
               </p>
               <p>
-                Any co-founding, equity vesting, or partnership arrangements facilitated through the platform are strictly private commercial agreements negotiated independently between the respective founders, operators, and legal entities.
+                Nothing contained on <code>1008.network</code>, in our playbooks, or in any platform communications constitutes financial, investment, legal, tax, or securities advice, nor does it constitute an offer, public solicitation, or invitation to subscribe to or purchase securities, debentures, or financial instruments.
+              </p>
+              <p>
+                1008 Network does not manage pooled investment funds, hold custodial capital, execute financial transactions on behalf of users, or offer any guaranteed investment returns. Any angel co-investment, equity vesting, or partnership arrangements are private commercial contracts negotiated and executed directly between the respective founders, investors, and incorporated legal entities following independent due diligence.
               </p>
             </div>
           </section>
@@ -188,27 +199,34 @@ export default function TermsPage() {
               </h2>
             </div>
             <p>
-              Trust and commercial confidentiality are the bedrock of 1008 Network. By submitting information through any intake portal, all parties agree to the following Mutual NDA provisions:
+              Commercial confidentiality and trust are foundational to 1008 Network. By accessing the platform, submitting requirements, or enrolling in our networks, all parties agree to the following legally binding Mutual Non-Disclosure terms:
             </p>
             <div className="space-y-3 pt-2">
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5">
                 <strong className="text-[#0A2540] text-xs font-mono block">A. Definition of Confidential Information</strong>
                 <p className="text-xs text-[#425466]">
-                  Includes all business models, technical codebases, product roadmaps, founder backgrounds, commercial contracts, financial projections, candidate compensation expectations, and proprietary workflows shared between 1008 Network, applying founders, and registered operators.
+                  &quot;Confidential Information&quot; includes all business plans, financial projections, customer discovery logs, software architectures, source code, candidate resumes, compensation expectations, syndicate allocations, and proprietary domain methodologies shared between 1008 Network, founders, investors, and operators.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5">
-                <strong className="text-[#0A2540] text-xs font-mono block">B. Duty of Care & Restricted Use</strong>
+                <strong className="text-[#0A2540] text-xs font-mono block">B. Standard of Care & Restricted Use</strong>
                 <p className="text-xs text-[#425466]">
-                  Each receiving party agrees to hold all Confidential Information in strict confidence and shall not disclose, duplicate, reverse engineer, or utilize such information for any purpose other than evaluating a bona fide co-building, partnership, or co-founder engagement.
+                  The Receiving Party agrees to protect Confidential Information using the same degree of care it uses for its own confidential assets (and not less than reasonable care). Confidential Information shall be used exclusively for evaluating bona fide co-building, talent partnership, or direct angel investment opportunities.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5">
-                <strong className="text-[#0A2540] text-xs font-mono block">C. Non-Circumvention & Talent Protection</strong>
+                <strong className="text-[#0A2540] text-xs font-mono block">C. Non-Circumvention (12-Month Covenant)</strong>
                 <p className="text-xs text-[#425466]">
-                  Founders and companies introduced to talent through the 1008 Network agree not to circumvent the curated matchmaking framework to solicit or engage candidates outside agreed commercial parameters.
+                  Founders, companies, and investors introduced through 1008 Network agree not to circumvent the platform to directly or indirectly solicit, negotiate, or engage introduced talent or deal allocations outside the facilitated framework for a period of 12 months following formal introduction.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5">
+                <strong className="text-[#0A2540] text-xs font-mono block">D. Exclusions</strong>
+                <p className="text-xs text-[#425466]">
+                  Confidential Information does not include information that: (i) is or becomes publicly known through no breach by Receiving Party; (ii) was already known prior to disclosure without restriction; or (iii) is required to be disclosed by applicable Indian law or court subpoena with prompt advance notice.
                 </p>
               </div>
             </div>
@@ -221,18 +239,17 @@ export default function TermsPage() {
                 4
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Network Rules & Campaign Lifecycles
+                Venture Studio Intellectual Property (IP) Framework
               </h2>
             </div>
             <p>
-              To maintain high operational conviction and clean pipeline visibility across 1008 Network:
+              For ventures selected for co-building inside the 1008 Venture Studio:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Zero Placement / Syndicate Fees:</strong> Posting leadership requirements, registering investor profiles, or pitching startup capital needs carries zero upfront brokerage retainers.</li>
-              <li><strong>Partner Network Active Curation:</strong> Co-founder and operator leadership listings are actively monitored and curated to keep talent matching pipelines responsive and eliminate stale listings.</li>
-              <li><strong>Capital Network Target-Based Lifecycles:</strong> Capital campaigns and investment tranches remain active based on the venture&apos;s target funding goal and close once syndicate allocation targets are met.</li>
-              <li><strong>Authentic Representations:</strong> Users represent that all submitted track records, founder pedigrees, equity ranges, and financials are truthful and accurate.</li>
-              <li><strong>Community Conduct:</strong> Unsolicited sales pitches, automated bot scraping, recruitment poaching, or harassment will result in immediate permanent expulsion.</li>
+              <li><strong>Zero Retainer Alignment:</strong> Studio co-building is governed by individualized Milestone & Equity Vesting Agreements (₹0 cash retainers).</li>
+              <li><strong>Complete Venture IP Assignment:</strong> All bespoke source code, UI/UX designs, operational playbooks, factory blueprints, and trade secrets developed exclusively for the venture are formally assigned and transferred to the venture entity upon agreed milestone gates.</li>
+              <li><strong>Studio Background IP:</strong> 1008 Network retains ownership of its pre-existing foundational developer tooling, scaffolding libraries, readiness diagnostic algorithms, and shared operational templates, granting the venture a perpetual, non-exclusive license to use such embedded components.</li>
+              <li><strong>Operational Handover:</strong> Sprints are structured to transition full operational independence, system controls, and IP repositories to the founding team.</li>
             </ul>
           </section>
 
@@ -243,16 +260,17 @@ export default function TermsPage() {
                 5
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Venture Studio Model & Intellectual Property (IP)
+                User Representations & Platform Rules
               </h2>
             </div>
             <p>
-              For ventures selected for co-building inside the 1008 Venture Studio:
+              By utilizing 1008 Network, you warrant and agree that:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Shared Equity Alignment:</strong> Studio co-building is governed by individualized Milestone & Equity Vesting Agreements (₹0 cash retainers).</li>
-              <li><strong>IP Assignment:</strong> All custom source code, operational playbooks, physical infrastructure blueprints, and software architectures created exclusively for the venture are formally assigned to the venture entity upon agreed milestone handover.</li>
-              <li><strong>Phased Handover:</strong> Engagements are designed with clear execution sprints ensuring the founding team reaches full operational autonomy.</li>
+              <li><strong>Truthful Information:</strong> All submitted track records, professional experience, cap-table structures, and financial metrics are authentic, accurate, and not misleading.</li>
+              <li><strong>Authority:</strong> You possess the legal capacity and authority under Indian law (or your jurisdiction of incorporation) to enter into these binding terms.</li>
+              <li><strong>Prohibited Conduct:</strong> You shall not: (a) employ automated scrapers, bots, or data harvesting scripts; (b) submit malicious payloads, spam, or false opportunity postings; (c) poach, harass, or solicit platform users for unauthorized commercial marketing; or (d) violate applicable intellectual property rights.</li>
+              <li><strong>Sanctions:</strong> Any violation of these terms will result in immediate termination of platform access, removal of active listings, and legal recourse where appropriate.</li>
             </ul>
           </section>
 
@@ -263,11 +281,11 @@ export default function TermsPage() {
                 6
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Intellectual Property & Platform Rights
+                Intellectual Property Rights & Trademarks
               </h2>
             </div>
             <p>
-              The 1008 Network name, logos, website design, UI layout, knowledge articles, and proprietary readiness evaluation frameworks are the exclusive intellectual property of 1008 Network and protected under Indian and international copyright and trademark laws. You may not scrape, clone, reproduce, or republish platform assets without written consent.
+              The 1008 Network brand, logos, typography, website layout, readiness evaluation matrices, diagnostic logic, and knowledge articles are the exclusive intellectual property of 1008 Network, protected under the Trade Marks Act, 1999 and the Copyright Act, 1957 of India. No portion of the platform may be cloned, scraped, reverse-engineered, or republished without prior written authorization.
             </p>
           </section>
 
@@ -278,11 +296,14 @@ export default function TermsPage() {
                 7
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Limitation of Liability & Disclaimers
+                Limitation of Liability & Intermediary Safe Harbor
               </h2>
             </div>
             <p>
-              The platform and knowledge resources are provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. 1008 Network disclaims all warranties, express or implied, including fitness for a particular commercial purpose. In no event shall 1008 Network be liable for indirect, incidental, consequential, or punitive damages arising from the commercial failure of any venture, recruitment decision, or partnership formed through the platform.
+              The platform and all playbooks are provided strictly on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis without warranties of any kind. 
+            </p>
+            <p>
+              To the maximum extent permitted under Section 79 of the Information Technology Act, 2000 and applicable Indian law: (i) 1008 Network shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages; (ii) 1008 Network does not warrant commercial success, revenue generation, candidate suitability, or investor fulfillment; and (iii) all users are solely responsible for conducting independent background checks, legal audits, and technical verification before signing definitive agreements.
             </p>
           </section>
 
@@ -293,11 +314,14 @@ export default function TermsPage() {
                 8
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Governing Law & Dispute Resolution
+                Governing Law & Dispute Resolution (Arbitration)
               </h2>
             </div>
             <p>
-              These Terms and any dispute or claim arising out of or in connection with them shall be governed by and construed in accordance with the <strong>laws of the Republic of India</strong>. The courts located in <strong>Delhi / Delhi NCR, India</strong> shall have exclusive jurisdiction to settle any disputes.
+              These Terms, the Mutual NDA, and any dispute arising out of or related to platform usage shall be governed by and construed in accordance with the <strong>substantive laws of the Republic of India</strong>.
+            </p>
+            <p>
+              Any dispute, controversy, or claim arising out of or relating to these Terms shall be referred to and finally resolved by <strong>binding arbitration in accordance with the Arbitration and Conciliation Act, 1996</strong>. The arbitration shall be conducted by a sole arbitrator mutually appointed by the parties. The seat and venue of arbitration shall be <strong>New Delhi, India</strong>, and the proceedings shall be conducted in English. Subject to arbitration, the courts of competent jurisdiction in <strong>Delhi / Delhi NCR, India</strong> shall have exclusive jurisdiction.
             </p>
           </section>
 
@@ -308,16 +332,31 @@ export default function TermsPage() {
                 9
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Contact & Inquiries
+                Electronic Contracting, Severability & Entire Agreement
               </h2>
             </div>
             <p>
-              For legal inquiries, NDA execution, or partnership compliance questions, contact our legal desk:
+              In terms of the Information Technology Act, 2000, this document is an electronic record generated by a computer system and does not require physical or digital signatures. If any provision of these Terms is deemed unlawful, void, or unenforceable, that provision shall be deemed severable and shall not affect the validity and enforceability of remaining provisions. These Terms constitute the entire agreement between the user and 1008 Network concerning platform access.
+            </p>
+          </section>
+
+          {/* Section 10 */}
+          <section className="space-y-3 border-t border-[#F1F4F8] pt-8">
+            <div className="flex items-center gap-2">
+              <span className="w-6 h-6 rounded-lg bg-[#635BFF]/10 text-[#635BFF] flex items-center justify-center font-mono font-bold text-xs">
+                10
+              </span>
+              <h2 className="text-lg font-bold text-[#0A2540]">
+                Legal & Compliance Desk
+              </h2>
+            </div>
+            <p>
+              For legal inquiries, NDA clarifications, intellectual property questions, or compliance notices, contact our legal desk:
             </p>
             <div className="p-4 rounded-xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-1 text-xs">
-              <p><strong>1008 Network Legal & Partnerships Desk</strong></p>
+              <p><strong>1008 Network Legal, Compliance & Partnerships Desk</strong></p>
               <p>Email: <a href="mailto:join@1008.network" className="text-[#635BFF] font-semibold hover:underline">join@1008.network</a></p>
-              <p>Headquarters: Delhi NCR, India</p>
+              <p>Headquarters: Delhi NCR, India (Pan-India Operations)</p>
             </div>
           </section>
 
@@ -329,7 +368,7 @@ export default function TermsPage() {
             href="/privacy"
             className="text-[#635BFF] hover:underline font-semibold"
           >
-            ← Review Privacy Policy & Data Governance
+            ← Review Privacy Policy & DPDP Data Governance
           </Link>
           <Link
             href="/"

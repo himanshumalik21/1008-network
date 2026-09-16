@@ -274,6 +274,24 @@ export default function PostCapitalRequirementPage() {
                 />
               </div>
 
+              {/* Legal Consent & Terms Acknowledgment */}
+              <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs text-[#627D98]">
+                <div className="flex items-start gap-2">
+                  <ShieldCheck className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
+                  <p className="text-[11px] leading-relaxed">
+                    By submitting this capital requirement, you agree to our{" "}
+                    <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
+                      Terms of Service & Mutual NDA
+                    </Link>
+                    , acknowledge that 1008 Network operates as a non-broker discovery facilitator, and consent to processing under our{" "}
+                    <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
+                      Privacy Policy (DPDP Act 2023)
+                    </Link>
+                    .
+                  </p>
+                </div>
+              </div>
+
               {formStatus === "error" && (
                 <p className="text-xs text-red-500 font-semibold">{formMessage}</p>
               )}

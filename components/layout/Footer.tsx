@@ -250,8 +250,15 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Statutory Regulatory & Non-Broker Notice */}
+        <div className="pt-8 pb-4 text-[11px] text-[#829AB1] leading-relaxed border-b border-[#E6E8EB]/80 space-y-1">
+          <p>
+            <strong>Regulatory Disclaimer (Republic of India):</strong> 1008 Network (1008.network) operates as a turnkey venture studio, co-founder talent matching network, and discovery facilitator. 1008 Network is not a registered Stock Broker, Investment Adviser, Research Analyst, Alternative Investment Fund (AIF), or Merchant Banker under SEBI regulations. We do not manage pooled investment funds, hold investor capital, execute financial trades, or guarantee financial returns. All partnership arrangements, equity vesting, and angel syndicate allocations are private commercial contracts executed directly between founders, operators, and investors following independent due diligence.
+          </p>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#627D98]">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#627D98]">
           <div className="flex items-center gap-2">
             <span>© {new Date().getFullYear()} 1008 Network (1008.network). All rights reserved.</span>
           </div>
@@ -270,7 +277,7 @@ export function Footer() {
               Terms & NDA Notice
             </Link>
             <Link href="/privacy" className="hover:text-[#0A2540] transition-colors">
-              Privacy Policy
+              Privacy Policy (DPDP Act)
             </Link>
             <div className="flex items-center gap-1.5 text-[#059669] font-medium">
               <ShieldCheck className="h-3.5 w-3.5" />

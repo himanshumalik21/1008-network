@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -206,6 +207,16 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
+
+                <div className="text-[11px] text-[#627D98] flex items-start gap-1.5 pt-1">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#059669] shrink-0 mt-0.5" />
+                  <span>
+                    Communications are protected under our{" "}
+                    <Link href="/terms" className="text-[#635BFF] hover:underline font-medium">Mutual NDA</Link>{" "}
+                    and processed in accordance with our{" "}
+                    <Link href="/privacy" className="text-[#635BFF] hover:underline font-medium">DPDP Privacy Policy</Link>.
+                  </span>
+                </div>
 
                 {status === "error" && <p className="text-xs text-red-500">{msg}</p>}
 

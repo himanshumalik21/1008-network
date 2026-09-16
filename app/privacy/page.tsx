@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  const lastUpdated = "September 15, 2026";
+  const lastUpdated = "September 16, 2026";
 
   const keyHighlights = [
     {
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-2">
             <Badge variant="indigo" size="sm">
-              Data Privacy & Governance
+              Data Privacy & Governance Notice
             </Badge>
             <span className="text-xs font-mono text-[#627D98] flex items-center gap-1">
               <Calendar className="h-3 w-3 text-[#635BFF]" /> Effective: {lastUpdated}
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed font-normal">
-            At 1008 Network (<strong>&quot;1008 Network&quot;</strong>, <strong>&quot;we&quot;</strong>, <strong>&quot;us&quot;</strong>, or <strong>&quot;our&quot;</strong>), we engineer high-conviction partnerships, turnkey operations, and co-founder matchmaking for shared equity. Protecting the intellectual property, commercial secrets, and personal information of founders and operators is foundational to everything we do.
+            At 1008 Network (<strong>&quot;1008 Network&quot;</strong>, <strong>&quot;we&quot;</strong>, <strong>&quot;us&quot;</strong>, or <strong>&quot;our&quot;</strong>), we operate as a Data Fiduciary under the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act, India)</strong>. Protecting the commercial secrets, trade ideas, candidate profiles, and personal data of founders, operators, and investors is core to our operational integrity.
           </p>
         </div>
 
@@ -119,12 +119,17 @@ export default function PrivacyPage() {
                 1
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Scope & Regulatory Compliance
+                Scope & Statutory Governance
               </h2>
             </div>
             <p>
-              This Privacy Policy applies to all services, forms, interactive portals, and communications provided through <strong>https://www.1008.network</strong> (the &quot;Platform&quot;). We adhere strictly to the <strong>Digital Personal Data Protection Act, 2023 (India)</strong>, the Information Technology Act, 2000, the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, and international data protection best practices including the General Data Protection Regulation (GDPR) for international cross-border founders.
+              This Privacy Policy applies to digital personal data collected and processed through <strong>https://www.1008.network</strong> (the &quot;Platform&quot;). We comply with:
             </p>
+            <ul className="space-y-1.5 pl-4 list-disc text-xs text-[#425466]">
+              <li>The <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong> of the Republic of India;</li>
+              <li>The <strong>Information Technology Act, 2000</strong> and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011;</li>
+              <li>Global data protection best practices including the General Data Protection Regulation (GDPR) for international and cross-border users.</li>
+            </ul>
           </section>
 
           {/* Section 2 */}
@@ -134,33 +139,33 @@ export default function PrivacyPage() {
                 2
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Information We Collect
+                Categories of Digital Personal Data Collected
               </h2>
             </div>
             <p>
-              We collect information solely to provide venture co-building, partner matching, and operational support. We collect data across two categories:
+              We collect data strictly necessary to fulfill venture co-building, talent matchmaking, and capital discovery services:
             </p>
 
             <div className="space-y-4 pt-2">
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-2">
                 <h3 className="font-bold text-[#0A2540] text-xs uppercase tracking-wider font-mono flex items-center gap-1.5">
-                  <Database className="h-3.5 w-3.5 text-[#635BFF]" /> A. Information You Voluntarily Provide
+                  <Database className="h-3.5 w-3.5 text-[#635BFF]" /> A. Data Provided Voluntarily by You
                 </h3>
                 <ul className="space-y-1.5 pl-4 list-disc text-xs text-[#425466]">
-                  <li><strong>Founder & Studio Applications:</strong> Name, contact email, phone number, enterprise description, sector, operational bottleneck, capital status, and current entity stage.</li>
-                  <li><strong>Partner Network Requirements:</strong> Title, required co-founder/operator role (CTO, GTM Lead, Supply Chain Lead), location, equity offering percentage, founder pedigree, and project thesis.</li>
-                  <li><strong>Talent & Operator Profiles:</strong> Full name, verified contact info, years of domain experience, past companies/track record, LinkedIn profile URL, core technical skills, and target equity expectation.</li>
-                  <li><strong>General Communications & Inquiries:</strong> Messages, feedback, expressions of interest (EOI), and direct correspondence sent to <code>join@1008.network</code>.</li>
+                  <li><strong>Founder & Venture Studio Intake:</strong> Full name, verified work email, phone number, entity stage, sector, operational bottlenecks, revenue run-rate, and deck URLs.</li>
+                  <li><strong>Partner Network & Talent Pool:</strong> Full name, email, phone, LinkedIn profile URL, current company & role, years of domain experience, primary functional capability, target equity expectations, and executive bio.</li>
+                  <li><strong>Capital Network Investor Profiles:</strong> Full name, accredited email, phone, investor category (Angel, Family Office, Corporate CXO), target deployment tier (₹2L–₹5Cr+), risk appetite, and sector mandates.</li>
+                  <li><strong>General Inquiries:</strong> Name, work email, organization, inquiry category, and message payload sent via contact or diagnostic forms.</li>
                 </ul>
               </div>
 
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-2">
                 <h3 className="font-bold text-[#0A2540] text-xs uppercase tracking-wider font-mono flex items-center gap-1.5">
-                  <Server className="h-3.5 w-3.5 text-[#00A389]" /> B. Automatically Collected Technical Metadata
+                  <Server className="h-3.5 w-3.5 text-[#00A389]" /> B. Technical Metadata & Analytics
                 </h3>
                 <ul className="space-y-1.5 pl-4 list-disc text-xs text-[#425466]">
-                  <li><strong>Device & Network Identifiers:</strong> IP addresses (anonymized/hashed), browser type, device operating system, referring URL, and session timestamps.</li>
-                  <li><strong>Aggregated Analytics:</strong> We use Google Analytics (GA4) with IP anonymization enabled to inspect aggregate page interaction metrics, preventing individual visitor identification.</li>
+                  <li><strong>Device & Telemetry Data:</strong> Browser type, operating system, anonymized IP addresses, session duration, and page view sequences.</li>
+                  <li><strong>Privacy-Conscious Analytics:</strong> We use Google Analytics 4 (GA4) with IP anonymization to evaluate aggregate platform usage patterns without profiling or tracking individual visitors across the web.</li>
                 </ul>
               </div>
             </div>
@@ -173,28 +178,28 @@ export default function PrivacyPage() {
                 3
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Purpose & Legal Basis of Processing
+                Legal Grounds for Processing (Sections 4 & 7 of DPDP Act)
               </h2>
             </div>
             <p>
-              Under Indian DPDP Act provisions, your data is processed exclusively for explicit, legitimate, and consented commercial purposes:
+              We process personal data solely on lawful grounds under Indian data protection law:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="flex items-start gap-2 p-3 rounded-xl bg-white border border-[#E6E8EB]">
                 <CheckCircle2 className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
-                <span className="text-xs">Curating mutual, high-alignment introductions between founders and vetted co-founders.</span>
+                <span className="text-xs"><strong>Specified Consent:</strong> Explicit, affirmative consent given during form submission to evaluate co-building or matching opportunities.</span>
               </div>
               <div className="flex items-start gap-2 p-3 rounded-xl bg-white border border-[#E6E8EB]">
                 <CheckCircle2 className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
-                <span className="text-xs">Evaluating venture readiness, tech architecture, and operational feasibility for the 1008 Studio.</span>
+                <span className="text-xs"><strong>Legitimate Uses:</strong> Responding to voluntary inquiries and taking steps requested by the data principal prior to entering a contract.</span>
               </div>
               <div className="flex items-start gap-2 p-3 rounded-xl bg-white border border-[#E6E8EB]">
                 <CheckCircle2 className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
-                <span className="text-xs">Protecting our platform against bots, abuse, spam submissions, and unauthorized automated scraping.</span>
+                <span className="text-xs"><strong>Security & Integrity:</strong> Enforcing rate limiting, neutralizing spam bots, and protecting against distributed attacks.</span>
               </div>
               <div className="flex items-start gap-2 p-3 rounded-xl bg-white border border-[#E6E8EB]">
                 <CheckCircle2 className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
-                <span className="text-xs">Providing customer support and responding directly to inquiries sent to <code>join@1008.network</code>.</span>
+                <span className="text-xs"><strong>Legal Compliance:</strong> Meeting statutory requirements under Indian law or court orders.</span>
               </div>
             </div>
           </section>
@@ -206,16 +211,17 @@ export default function PrivacyPage() {
                 4
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Form Security, Transmission & Anti-Spam Architecture
+                Reasonable Security Safeguards (Section 8(5) DPDP Act)
               </h2>
             </div>
             <p>
-              When you submit an application, post a requirement, or register in our talent pool:
+              In accordance with Section 8(5) of the DPDP Act 2023, 1008 Network implements technical and organizational measures to prevent personal data breaches:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>End-to-End Encryption:</strong> All form data is encrypted in transit using Transport Layer Security (TLS 1.3 / SSL).</li>
-              <li><strong>Secure Email Dispatch:</strong> Form submissions are processed securely via verified enterprise endpoints and dispatched directly to <code>join@1008.network</code> for private internal review.</li>
-              <li><strong>Automated Threat & Spam Defense:</strong> Our forms employ client-side rate limiting, client-side input sanitization, and hidden honeypot spam traps to neutralize malicious injection attacks without collecting intrusive third-party biometric tracking data.</li>
+              <li><strong>Transport Layer Encryption:</strong> All data transmitted between your browser and our servers is encrypted using modern TLS 1.3 cryptographic protocols.</li>
+              <li><strong>Strict Access Control:</strong> Access to confidential venture proposals and talent records is restricted to authorized partners bound by non-disclosure agreements.</li>
+              <li><strong>Content Security Policy (CSP):</strong> Next.js security headers with strict script, frame, and connect constraints to prevent cross-site scripting (XSS) and clickjacking.</li>
+              <li><strong>Anti-Abuse Architecture:</strong> Sliding-window rate limiting, client input sanitization, and hidden honeypot spam traps neutralize automated attacks.</li>
             </ul>
           </section>
 
@@ -226,15 +232,16 @@ export default function PrivacyPage() {
                 5
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Active Listing Lifecycle & Data Retention Policy
+                Data Retention & Automated Archiving
               </h2>
             </div>
             <p>
-              To maintain the highest standards of pipeline freshness and respect your right to data minimization:
+              We enforce strict data minimization principles under Indian law:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Automated Archiving & Curation:</strong> All public startup requirements on the Partner Network follow an active curation lifecycle with automated archiving. Retired postings are removed from active directory boards to prevent stale data.</li>
-              <li><strong>Archival & Deletion:</strong> Inactive applicant records and studio intake notes that do not proceed to an active engagement are permanently purged or anonymized within 12 months.</li>
+              <li><strong>Active Partner Postings:</strong> Public opportunity listings are curated with active lifecycles to eliminate stale listings.</li>
+              <li><strong>Archival Schedule:</strong> Talent and investor registration profiles that remain inactive without active matchmaking engagements are archived and permanently purged within 12 months.</li>
+              <li><strong>Right to Immediate Erasure:</strong> Any user may request immediate erasure of their submitted profile at any time by emailing <code>join@1008.network</code>.</li>
             </ul>
           </section>
 
@@ -249,12 +256,12 @@ export default function PrivacyPage() {
               </h2>
             </div>
             <p>
-              We do not sell, barter, monetize, or disclose your personal information to third parties for advertising or unsolicited commercial marketing. Information is disclosed strictly in the following circumstances:
+              We do not sell, barter, lease, or monetize personal data with commercial brokers or third-party advertisers. Data is shared exclusively under the following strict conditions:
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-[#425466]">
-              <li><strong>Consented Partner Introductions:</strong> Contact information is shared with prospective co-founders, advisors, or venture partners only after mutual confirmation and consent under our Mutual NDA framework.</li>
-              <li><strong>Essential Infrastructure Providers:</strong> Trusted technical service providers (e.g., Vercel hosting, Google Cloud Infrastructure, Web3Forms) under strict non-disclosure obligations.</li>
-              <li><strong>Legal Compliance:</strong> When strictly mandated by applicable law, court subpoena, or authorized statutory body in India.</li>
+              <li><strong>Consensual Introductions:</strong> Contact information is shared with prospective co-founders, advisors, or venture partners only after mutual consent under our Mutual NDA framework.</li>
+              <li><strong>Infrastructure Processors:</strong> Secure cloud infrastructure providers (Vercel, Google Cloud, Web3Forms) operating under contractual confidentiality and data processing agreements.</li>
+              <li><strong>Statutory Mandate:</strong> Where required by valid court order, regulatory subpoena, or competent statutory authority in India.</li>
             </ul>
           </section>
 
@@ -265,32 +272,32 @@ export default function PrivacyPage() {
                 7
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Your Rights as a Data Principal (DPDP & GDPR)
+                Rights of Data Principals (Sections 11–14 DPDP Act 2023)
               </h2>
             </div>
             <p>
-              You maintain full ownership of your personal and commercial data. You have the right to:
+              As a Data Principal under Indian law, you possess the following statutory rights:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
-                <strong className="text-[#0A2540] text-xs font-mono block">Right to Access & Summary</strong>
-                <span className="text-[11px] text-[#425466]">Request a copy of all personal information held about you.</span>
+                <strong className="text-[#0A2540] text-xs font-mono block">1. Right to Access & Summary</strong>
+                <span className="text-[11px] text-[#425466]">Request a summary of personal data being processed and the identities of any data fiduciaries with whom it has been shared.</span>
               </div>
               <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
-                <strong className="text-[#0A2540] text-xs font-mono block">Right to Correction & Update</strong>
-                <span className="text-[11px] text-[#425466]">Request corrections to any inaccurate or outdated information.</span>
+                <strong className="text-[#0A2540] text-xs font-mono block">2. Right to Correction & Erasure</strong>
+                <span className="text-[11px] text-[#425466]">Request correction of inaccurate data, completion of incomplete records, or permanent erasure of personal data.</span>
               </div>
               <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
-                <strong className="text-[#0A2540] text-xs font-mono block">Right to Erasure (Forget Me)</strong>
-                <span className="text-[11px] text-[#425466]">Request immediate removal of your talent profile or requirements.</span>
+                <strong className="text-[#0A2540] text-xs font-mono block">3. Right of Grievance Redressal</strong>
+                <span className="text-[11px] text-[#425466]">Access readily available grievance redressal mechanisms to resolve questions or complaints regarding data processing.</span>
               </div>
               <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1">
-                <strong className="text-[#0A2540] text-xs font-mono block">Right to Withdraw Consent</strong>
-                <span className="text-[11px] text-[#425466]">Revoke processing consent at any time without retroactive penalty.</span>
+                <strong className="text-[#0A2540] text-xs font-mono block">4. Right to Nominate</strong>
+                <span className="text-[11px] text-[#425466]">Nominate an individual who shall exercise your rights as a Data Principal in the event of death or incapacity.</span>
               </div>
             </div>
             <p className="pt-2 text-xs text-[#627D98]">
-              To exercise any of these rights, email our team at <strong>join@1008.network</strong>. All requests are processed within 72 hours.
+              To exercise any of these statutory rights, submit a written request to our Grievance Desk at <strong>join@1008.network</strong>. All requests are acknowledged within 24 hours and completed within 72 hours.
             </p>
           </section>
 
@@ -301,23 +308,24 @@ export default function PrivacyPage() {
                 8
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                Data Grievance Redressal & Contact Coordinates
+                Data Protection Officer & Grievance Redressal Mechanism
               </h2>
             </div>
             <p>
-              In accordance with the Information Technology Act 2000 and the DPDP Act 2023, the details of our Data Grievance Redressal mechanism are set out below:
+              In compliance with Section 10 and Section 13 of the DPDP Act 2023 and the Information Technology Act 2000, our designated Grievance Redressal Officer coordinates all privacy inquiries and complaints:
             </p>
 
             <div className="p-5 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-3 mt-3">
               <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
                 <Globe className="h-4 w-4 text-[#635BFF]" />
-                <span>1008 Network Governance & Grievance Cell</span>
+                <span>1008 Network Grievance Redressal Cell</span>
               </div>
               <div className="text-xs space-y-1 text-[#425466]">
-                <p><strong>Entity:</strong> 1008 Network</p>
-                <p><strong>Primary Operations Hub:</strong> Delhi NCR, India (Pan-India Operational Footprint)</p>
-                <p><strong>Designated Grievance Email:</strong> <a href="mailto:join@1008.network" className="text-[#635BFF] font-semibold hover:underline">join@1008.network</a></p>
-                <p><strong>Response Timeline:</strong> Within 24–48 business hours</p>
+                <p><strong>Designation:</strong> Data Protection & Grievance Officer</p>
+                <p><strong>Entity:</strong> 1008 Network (1008.network)</p>
+                <p><strong>Headquarters:</strong> Delhi NCR, India (Operating Pan-India)</p>
+                <p><strong>Direct Grievance Email:</strong> <a href="mailto:join@1008.network" className="text-[#635BFF] font-semibold hover:underline">join@1008.network</a></p>
+                <p><strong>Statutory SLA:</strong> Acknowledgment within 24–48 business hours; complete resolution within 30 days.</p>
               </div>
             </div>
           </section>

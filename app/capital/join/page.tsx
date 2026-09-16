@@ -334,6 +334,24 @@ export default function RegisterInvestorPage() {
                 />
               </div>
 
+              {/* Legal Consent & Terms Acknowledgment */}
+              <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs text-[#627D98]">
+                <div className="flex items-start gap-2">
+                  <ShieldCheck className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
+                  <p className="text-[11px] leading-relaxed">
+                    By submitting this profile, you acknowledge that 1008 Network is a discovery facilitator (not a SEBI-registered broker or AIF), agree to our{" "}
+                    <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
+                      Terms of Service & Mutual NDA
+                    </Link>
+                    , and consent to processing under our{" "}
+                    <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
+                      DPDP Privacy Policy
+                    </Link>
+                    .
+                  </p>
+                </div>
+              </div>
+
               {formStatus === "error" && (
                 <p className="text-xs text-red-500 font-semibold">{formMessage}</p>
               )}
@@ -342,7 +360,7 @@ export default function RegisterInvestorPage() {
               <div className="pt-6 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-xs text-[#627D98] flex items-center gap-1.5">
                   <Lock className="h-3.5 w-3.5 text-[#059669]" />
-                  <span>Confidential & private under Mutual NDA. No unsolicited spam.</span>
+                  <span>Confidential & private under Mutual NDA. Zero placement retainers.</span>
                 </div>
                 <Button
                   type="submit"
