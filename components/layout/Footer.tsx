@@ -48,8 +48,8 @@ export function Footer() {
 
   if (pathname === "/") {
     return (
-      <footer className="w-full bg-white/95 backdrop-blur-xs border-t border-[#E6E8EB] py-3 text-xs text-[#627D98] relative z-20 shrink-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+      <footer className="w-full bg-white/95 backdrop-blur-xs border-t border-[#E6E8EB] py-2.5 text-xs text-[#627D98] relative z-20 shrink-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span>© {new Date().getFullYear()} 1008 Network (1008.network)</span>
             <span className="hidden sm:inline">•</span>
@@ -71,10 +71,6 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-[#0A2540] transition-colors">
               Privacy Policy
             </Link>
-            <div className="hidden md:flex items-center gap-1 text-[#059669] font-medium">
-              <ShieldCheck className="h-3.5 w-3.5" />
-              <span>Mutual NDA Standard</span>
-            </div>
           </div>
         </div>
       </footer>

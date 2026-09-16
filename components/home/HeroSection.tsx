@@ -72,24 +72,25 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[calc(100vh-4rem-3rem)] sm:min-h-[calc(100dvh-4rem-3.25rem)] lg:h-[calc(100dvh-4rem-3.25rem)] flex flex-col justify-center items-center pt-20 pb-6 sm:pt-20 sm:pb-6 lg:py-0 overflow-hidden bg-white">
+    <section className="relative min-h-[calc(100vh-6.5rem)] sm:min-h-[calc(100dvh-6.5rem)] lg:h-[calc(100dvh-6.5rem)] flex flex-col justify-center items-center pt-16 pb-3 sm:pt-16 sm:pb-3 lg:py-0 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
-      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-50 pointer-events-none" />
 
-      {/* 2. Stripe-Caliber Flowing Mesh Wave Artwork Canvas */}
-      <FlowingMeshCanvas className="absolute top-0 right-0 w-full md:w-[50%] lg:w-[46%] xl:w-[42%] h-[100vh] max-h-[960px] opacity-75 pointer-events-none z-0" />
+      {/* 2. Stripe-Caliber Multi-Pillar Dynamic Flowing Mesh Artwork Canvas */}
+      <FlowingMeshCanvas className="absolute top-0 right-0 w-full md:w-[54%] lg:w-[50%] xl:w-[46%] h-full max-h-[960px] opacity-80 pointer-events-none z-0" />
 
       {/* 3. Floating Ambient Motion Gradient Meshes */}
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[760px] h-[520px] bg-gradient-to-tr from-[#635BFF]/12 via-[#00D4B2]/08 to-transparent blur-[130px] pointer-events-none animate-float-slow" />
-      <div className="absolute top-1/4 -right-16 w-[480px] h-[500px] bg-gradient-to-bl from-[#FF7043]/08 via-[#635BFF]/07 to-transparent blur-[120px] pointer-events-none animate-float-reverse" />
-      <div className="absolute top-1/3 -left-28 w-[460px] h-[380px] bg-gradient-to-br from-[#00D4B2]/08 via-[#635BFF]/06 to-transparent blur-[120px] pointer-events-none animate-pulse-subtle" />
+      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[760px] h-[520px] bg-gradient-to-tr from-[#635BFF]/10 via-[#00D4B2]/07 to-transparent blur-[130px] pointer-events-none animate-float-slow" />
+      <div className="absolute top-1/4 -right-16 w-[480px] h-[500px] bg-gradient-to-bl from-[#FF7043]/07 via-[#635BFF]/06 to-transparent blur-[120px] pointer-events-none animate-float-reverse" />
+      <div className="absolute top-1/3 -left-28 w-[460px] h-[380px] bg-gradient-to-br from-[#00D4B2]/07 via-[#635BFF]/05 to-transparent blur-[120px] pointer-events-none animate-pulse-subtle" />
 
       {/* 4. Subtle Technical Dot Matrix Accent Corners */}
-      <div className="absolute left-8 top-1/4 w-44 h-44 bg-dots-matrix opacity-30 mask-radial-fade pointer-events-none hidden xl:block" />
-      <div className="absolute right-8 top-1/3 w-44 h-44 bg-dots-matrix opacity-30 mask-radial-fade pointer-events-none hidden xl:block" />
+      <div className="absolute left-6 top-1/4 w-36 h-36 bg-dots-matrix opacity-25 mask-radial-fade pointer-events-none hidden xl:block" />
+      <div className="absolute right-6 top-1/3 w-36 h-36 bg-dots-matrix opacity-25 mask-radial-fade pointer-events-none hidden xl:block" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center">
-        <div className="text-center max-w-4xl mx-auto space-y-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-evenly h-full max-h-[760px]">
+        {/* Top Header & Value Proposition Block */}
+        <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="sm" pulse>
@@ -98,26 +99,26 @@ export function HeroSection() {
           </div>
 
           {/* Primary Platform Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-5xl font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
+          <h1 className="text-2xl sm:text-3xl lg:text-[36px] xl:text-[42px] font-extrabold tracking-tight text-[#0A2540] leading-[1.14] font-sans">
             <span className="block">Build, partner, and invest in</span>
-            <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#059669]">
+            <span className="block mt-0.5 sm:mt-1 bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#059669]">
               high-conviction Indian ventures.
             </span>
           </h1>
 
           {/* Platform Subtitle */}
-          <p className="text-sm sm:text-base text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
+          <p className="text-xs sm:text-sm text-[#425466] leading-relaxed max-w-xl mx-auto font-normal">
             The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
           </p>
 
           {/* Dual High-Conversion CTAs */}
-          <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="pt-0.5 flex flex-col sm:flex-row items-center justify-center gap-2.5">
             <Button
               size="md"
               variant="primary"
               onClick={handleOpenModal}
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="w-full sm:w-auto text-sm px-7 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
+              className="w-full sm:w-auto text-xs sm:text-sm px-6 py-2 font-semibold shadow-[0_4px_14px_rgba(99,91,255,0.25)]"
             >
               Apply to Build With Us
             </Button>
@@ -125,7 +126,7 @@ export function HeroSection() {
               href="/studio"
               size="md"
               variant="secondary"
-              className="w-full sm:w-auto text-sm font-semibold"
+              className="w-full sm:w-auto text-xs sm:text-sm px-5 py-2 font-semibold"
             >
               Explore Studio Model
             </Button>
@@ -133,13 +134,13 @@ export function HeroSection() {
         </div>
 
         {/* Four Pillars 2x2 Explanatory Grid */}
-        <div className="w-full max-w-4xl mx-auto pt-6 sm:pt-7">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
+        <div className="w-full max-w-4xl mx-auto pt-3 sm:pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
             {pillars.map((pillar) => (
               <Link
                 key={pillar.num}
                 href={pillar.href}
-                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
+                className={`p-3 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#E6E8EB] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-2xs ${pillar.bgHover}`}
               >
                 {/* Subtle Top Indicator Line on Hover */}
                 <div
@@ -147,17 +148,17 @@ export function HeroSection() {
                   style={{ backgroundColor: pillar.accent }}
                 />
 
-                <div className="space-y-1.5">
+                <div className="space-y-1">
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
+                      <div className="w-6 h-6 rounded-lg bg-[#F6F9FC] border border-[#E6E8EB] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs shrink-0">
                         {pillar.icon}
                       </div>
                       <h3 className="text-sm font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors">
                         {pillar.title}
                       </h3>
                     </div>
-                    <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${pillar.badgeBg}`}>
+                    <span className={`text-[10px] font-mono font-bold px-2 py-0.2 rounded-full border ${pillar.badgeBg}`}>
                       Pillar {pillar.num}
                     </span>
                   </div>
@@ -167,7 +168,7 @@ export function HeroSection() {
                   </p>
                 </div>
 
-                <div className="pt-2.5 mt-2.5 border-t border-[#F1F4F8] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
+                <div className="pt-2 mt-2 border-t border-[#F1F4F8] flex items-center justify-between text-[11px] font-mono font-medium text-[#627D98]">
                   <span>{pillar.tagline}</span>
                   <ArrowUpRight className="h-3.5 w-3.5 text-[#829AB1] group-hover:text-[#635BFF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
