@@ -30,7 +30,7 @@ export default function StudioPage() {
 
   return (
     <div className="pt-16 pb-12 bg-white">
-      {/* The 180-Day Sprint Breakdown & Execution Blueprint */}
+      {/* Phased Milestone Breakdown & Execution Blueprint */}
       <StudioSprintTimeline />
 
       {/* Turnkey Capabilities & Use Cases */}
@@ -45,7 +45,7 @@ export default function StudioPage() {
         badge="Studio Execution & Equity"
         badgeVariant="indigo"
         title="Venture Studio Frequently Answered Questions"
-        description="Everything you need to know about our 180-day operational build sprint, Day-1 IP assignment, and shared-equity model."
+        description="Everything you need to know about our milestone-based operational build partnership, Day-1 IP assignment, and shared-equity model."
       />
 
       {/* Global Conversion Banner */}

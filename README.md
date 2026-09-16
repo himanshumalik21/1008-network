@@ -11,8 +11,8 @@ Headquartered in **Delhi NCR** with an active footprint across **Bengaluru, Mumb
 ## 🏛️ The 4 Core Pillars
 
 1. **BUILD WITH 1008 (Venture Studio / Execution Partner):**
-   - 180-Day Build & Handover Framework.
-   - Hands-on temporary venture-building partner providing full-stack engineering, product design, legal/ESOP structuring, and seed readiness.
+   - Phased Milestone Build & Autonomous Handover Framework.
+   - Hands-on venture-building partner providing full-stack engineering, product design, supply chain sourcing, team hiring, and seed readiness.
    - **Skin in the Game:** Partnering for shared equity upside, not hourly consulting retainers.
 
 2. **1008 NETWORK (Partner & Talent Matchmaking):**
@@ -65,7 +65,7 @@ npm run build
 ├── app/
 │   ├── layout.tsx                # Global layout, Schema.org JSON-LD, Fonts, Nav & Footer
 │   ├── page.tsx                  # High-converting Homepage with 4-pillar showcase & interactive previews
-│   ├── studio/page.tsx           # 180-Day Studio model, comparison matrix & intake modal
+│   ├── studio/page.tsx           # Venture Studio model, comparison matrix & intake modal
 │   ├── build/page.tsx            # Fast alias redirect to /studio
 │   ├── network/                  # Partner Network Board
 │   │   ├── page.tsx              # Interactive search & multi-facet filters (Role, Sector, City)

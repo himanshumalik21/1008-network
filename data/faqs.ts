@@ -7,8 +7,8 @@ export const studioFaqs: FAQItem[] = [
     category: "studio",
   },
   {
-    question: "How does the 180-day turnkey build sprint and phased handover work?",
-    answer: "Our execution follows 4 milestone phase gates: Validation & Architecture (Days 1–30), System Build & Sourcing (Days 31–90), Revenue & Operations Pilot (Days 91–150), and Phased Handover (Days 151–180). We stay actively embedded until your business achieves unit-level profitability and has permanent operational staff in place.",
+    question: "How does the turnkey build partnership and phased handover work?",
+    answer: "Our execution is tailored across 4 milestone phase gates: Validation & Architecture, System Build & Sourcing, Revenue & Operations Pilot, and Phased Handover. Because every business is unique—ranging from digital platforms to precision manufacturing plants—we adapt the build timeline to operational realities and stay actively embedded until your business achieves unit-level profitability, positive cash flow, and has permanent operational staff in place.",
     category: "studio",
   },
   {
