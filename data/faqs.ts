@@ -98,6 +98,11 @@ export const capitalFaqs: FAQItem[] = [
     category: "equity",
   },
   {
+    question: "What legal shareholding instruments are used for equity allocations?",
+    answer: "Investments are structured as standard Compulsorily Convertible Preference Shares (CCPS) or Equity Shares directly in the startup's cap table under the Indian Companies Act, 2013, with standard shareholder rights, anti-dilution, and information rights.",
+    category: "equity",
+  },
+  {
     question: "What due diligence should investors perform?",
     answer: "Startup investing carries inherent risks. Investors are expected and required to conduct their own independent legal, financial, and technical due diligence before executing any binding investment agreement.",
     category: "general",

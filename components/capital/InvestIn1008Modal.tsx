@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
@@ -239,6 +240,20 @@ export const InvestIn1008Modal: React.FC<InvestIn1008ModalProps> = ({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
             />
+
+            <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] text-[11px] text-[#627D98] flex items-start gap-2">
+              <ShieldCheck className="h-3.5 w-3.5 text-[#059669] shrink-0 mt-0.5" />
+              <span>
+                By submitting, you agree to our{" "}
+                <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
+                  Terms & Mutual NDA
+                </Link>{" "}
+                and consent to processing under our{" "}
+                <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
+                  DPDP Privacy Policy
+                </Link>.
+              </span>
+            </div>
 
             {status === "error" && (
               <p className="text-xs text-red-500 font-semibold">{statusMsg}</p>
