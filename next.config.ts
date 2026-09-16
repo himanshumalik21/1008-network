@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
     // Speed up builds: run `npm run typecheck` separately
     ignoreBuildErrors: true,
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error", "warn"] } : false,
+  },
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
