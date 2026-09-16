@@ -27,7 +27,7 @@ export function Navbar() {
   const navLinks = [
     { label: "Venture Studio", href: "/studio" },
     { label: "Partner Network", href: "/network" },
-    { label: "Capital", href: "/capital" },
+    { label: "Capital Network", href: "/capital" },
     { label: "Playbook", href: "/knowledge" },
   ];
 
