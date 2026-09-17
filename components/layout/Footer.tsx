@@ -37,10 +37,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Build */}
+          {/* Ecosystem / Build */}
           <div className="space-y-3">
             <h4 className="text-xs uppercase tracking-wider text-[#0A2540] font-bold">
-              Build
+              Ecosystem
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -51,6 +51,16 @@ export function Footer() {
               <li>
                 <Link href="/network" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
                   Partner Network
+                </Link>
+              </li>
+              <li>
+                <Link href="/capital" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
+                  Capital Network
+                </Link>
+              </li>
+              <li>
+                <Link href="/readiness" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
+                  Readiness Diagnostic
                 </Link>
               </li>
             </ul>
