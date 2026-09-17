@@ -14,7 +14,7 @@ export const initialKnowledgeResources: KnowledgeResource[] = [
       "0-to-1"
     ],
     readOrWatchTime: "7 min read",
-    authorOrSource: "1008 Network Editorial & Venture Architecture",
+    authorOrSource: "1008 Network Research & Operations",
     featured: true,
     publishedAt: "2026-09-10",
     primaryKeyword: "how to start a business in India without wasting money",
@@ -135,7 +135,7 @@ You don’t need another consultant charging fees for advice. **You need committ
       "TReDS"
     ],
     readOrWatchTime: "7 min read",
-    authorOrSource: "1008 Network Editorial & Venture Architecture",
+    authorOrSource: "1008 Network Research & Operations",
     featured: true,
     publishedAt: "2026-09-14",
     primaryKeyword: "how to get collateral free working capital loan startup India",
@@ -238,7 +238,7 @@ The Bottom Line: If your startup or SME is struggling with cash flow, taking on 
       "Unit Economics"
     ],
     readOrWatchTime: "7 min read",
-    authorOrSource: "1008 Network Editorial & Venture Architecture",
+    authorOrSource: "1008 Network Research & Operations",
     featured: true,
     publishedAt: "2026-09-15",
     primaryKeyword: "profitable business ideas in India with low investment",

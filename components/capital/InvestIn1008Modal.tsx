@@ -117,15 +117,15 @@ export const InvestIn1008Modal: React.FC<InvestIn1008ModalProps> = ({
             Invest in 1008 Network Parent Studio
           </h3>
           <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-            Own equity in 1008 Network parent company. Gain diversified holding upside across every operational venture, manufacturing facility, and tech platform we co-build across India.
+            Own direct equity in the 1008 Network parent studio. Gain holding equity across the operational ventures, manufacturing facilities, and tech platforms we co-build across India.
           </p>
         </div>
 
         {/* Studio Highlights Capsule */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
           <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-0.5">
-            <span className="text-[#635BFF] font-bold block text-[11px] uppercase font-mono">Diversified</span>
-            <p className="text-[#425466] text-[11px]">1 check gives equity upside across all studio ventures.</p>
+            <span className="text-[#635BFF] font-bold block text-[11px] uppercase font-mono">Parent Equity</span>
+            <p className="text-[#425466] text-[11px]">Direct holding equity across studio co-built ventures.</p>
           </div>
           <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-0.5">
             <span className="text-[#059669] font-bold block text-[11px] uppercase font-mono">Zero Mgmt Fees</span>

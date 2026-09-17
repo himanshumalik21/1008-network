@@ -77,7 +77,7 @@ export function ComparisonSection() {
     },
     {
       dimension: "Capital Access & Syndicate Facilitation",
-      studio1008: "We syndicate co-investment and non-dilutive credit lines from our network of 250+ angel investors and family offices.",
+      studio1008: "We connect high-conviction founders directly with angel investors, family offices, and non-dilutive credit lines.",
       agency: "Zero investor introductions or syndication support.",
       incubator: "Broad investor demo day with low individual attention and intense competition for attention.",
       solo: "Cold email pitches to VCs that rarely understand non-software operational unit economics.",

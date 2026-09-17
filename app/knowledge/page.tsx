@@ -83,7 +83,7 @@ export default function KnowledgePage() {
               <Badge variant="amber" size="md">
                 1008 Playbook
               </Badge>
-              <span className="text-xs font-mono text-[#627D98]">Field-Tested Operational Intelligence</span>
+              <span className="text-xs font-mono text-[#627D98]">Tactical Operational Intelligence</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">

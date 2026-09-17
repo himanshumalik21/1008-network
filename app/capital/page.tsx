@@ -431,7 +431,7 @@ export default function CapitalPage() {
                   </span>
                 </h2>
                 <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed max-w-2xl font-normal">
-                  Back the venture studio building India&apos;s real economy enterprises. Owning equity in 1008 Network provides diversified portfolio upside across every manufacturing unit, healthcare clinic, retail brand, and tech software venture we co-build for shared equity.
+                  Back the venture studio building India&apos;s real economy enterprises. Owning equity in 1008 Network provides holding equity across the manufacturing units, healthcare clinics, retail brands, and tech software ventures we co-build for shared equity.
                 </p>
               </div>
 
@@ -440,9 +440,9 @@ export default function CapitalPage() {
                 <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-xs flex flex-col justify-between">
                   <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
                     <CheckCircle2 className="h-4 w-4 shrink-0" />
-                    <span>10+ Ventures</span>
+                    <span>Focused Portfolio</span>
                   </div>
-                  <span className="text-[11px] text-[#94A3B8] mt-1">Diversified portfolio upside</span>
+                  <span className="text-[11px] text-[#94A3B8] mt-1">Co-built alongside founders</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-xs flex flex-col justify-between">
                   <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">

@@ -67,7 +67,7 @@ export function HeroSection() {
       title: "1008 Playbook",
       tagline: "Operational Intelligence",
       cta: "Read Playbook",
-      desc: "Field-tested blueprints on zero-retainer survival, working capital credit & building profitable cash-flow enterprises.",
+      desc: "Tactical blueprints on zero-retainer survival, working capital credit & building profitable cash-flow enterprises.",
       href: "/knowledge",
       accent: "#FF7043",
       bgHover: "hover:border-[#FF7043]/60 hover:shadow-[0_12px_24px_-8px_rgba(255,112,67,0.16)]",
@@ -114,7 +114,7 @@ export function HeroSection() {
 
           {/* Platform Subtitle - Enlarged & Highly Legible */}
           <p className="text-sm sm:text-base md:text-lg lg:text-[18.5px] text-[#334155] leading-relaxed max-w-3xl mx-auto font-normal pt-0.5">
-            The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and field-tested <strong>Operational Playbooks</strong>.
+            The integrated ecosystem providing turnkey <strong>Venture Studio</strong> execution, curated <strong>Co-Founder & Talent Matchmaking</strong>, transparent <strong>Capital Rounds</strong>, and tactical <strong>Operational Playbooks</strong>.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export function HeroSection() {
             </p>
             <h2>Operational Playbooks & Guides</h2>
             <p>
-              Field-tested tactical playbooks, ULI credit guides, working capital frameworks, and cash-flow blueprints for Indian entrepreneurs and business builders.
+              Ground-level tactical playbooks, ULI credit guides, working capital frameworks, and cash-flow blueprints for Indian entrepreneurs and business builders.
             </p>
           </div>
         </section>
