@@ -34,6 +34,9 @@ import { EssentialBusinessTrapsSection } from "@/components/knowledge/EssentialB
 import { RealBusinessPlaybookPhases } from "@/components/knowledge/RealBusinessPlaybookPhases";
 import { IdeaValidationGraphic } from "@/components/knowledge/IdeaValidationGraphic";
 import { ValidationPlaybookPhases } from "@/components/knowledge/ValidationPlaybookPhases";
+import { CoFounderEquitySplitGraphic } from "@/components/knowledge/CoFounderEquitySplitGraphic";
+import { CoFounderCapTableTrapsSection } from "@/components/knowledge/CoFounderCapTableTrapsSection";
+import { CoFounderGovernancePhases } from "@/components/knowledge/CoFounderGovernancePhases";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -257,6 +260,42 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             );
           }
 
+          // If heading is "The 3 Fatal Cap Table Mistakes Indian Founders Make" (Day 5)
+          if (headingText.includes("The 3 Fatal Cap Table Mistakes") || headingText.includes("Fatal Cap Table Mistakes")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  If your startup is currently navigating co-founder structuring or preparing to incorporate, beware of these three common legal errors under Indian Company Law:
+                </p>
+                <CoFounderCapTableTrapsSection />
+              </div>
+            );
+          }
+
+          // If heading is "The 1008 Governance Framework: The 4-Step Co-Founder Architecture" (Day 5)
+          if (headingText.includes("The 1008 Governance Framework") || headingText.includes("4-Step Co-Founder Architecture")) {
+            return (
+              <div key={idx} className="pt-6 pb-2 space-y-4">
+                <div className="border-b border-[#E6E8EB] pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
+                    <span className="w-2 h-6 rounded-full bg-[#635BFF] inline-block" />
+                    {headingText}
+                  </h2>
+                </div>
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
+                  To build an institutional-grade company that attracts top talent and angel syndicate capital, execute this 4-step governance blueprint:
+                </p>
+                <CoFounderGovernancePhases />
+              </div>
+            );
+          }
+
           return (
             <div key={idx} className="pt-6 pb-2 border-b border-[#E6E8EB]">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight flex items-center gap-2.5">
@@ -342,6 +381,16 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("POLITE TRAP")
           ) {
             return <IdeaValidationGraphic key={idx} />;
+          }
+
+          // Check if this is the Co-Founder Equity / 50-50 Handshake Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("THE 50/50 HANDSHAKE DEATH TRAP") ||
+            codeLines.includes("THE 50/50 DEAD EQUITY TRAP") ||
+            codeLines.includes("CAP TABLE ARCHITECTURE") ||
+            codeLines.includes("THE HANDSHAKE TRAP")
+          ) {
+            return <CoFounderEquitySplitGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components

@@ -82,7 +82,9 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
   }
 
   const editionLabel =
-    resource.slug.includes("validate") || resource.slug.includes("masterclass")
+    resource.slug.includes("equity") || resource.slug.includes("co-founder") || resource.slug.includes("vesting")
+      ? "Day 5 Edition"
+      : resource.slug.includes("validate") || resource.slug.includes("masterclass")
       ? "Day 4 Edition"
       : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
       ? "Day 3 Edition"
@@ -91,7 +93,9 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
       : "Day 1 Edition";
 
   const playbookTag =
-    resource.slug.includes("validate") || resource.slug.includes("masterclass")
+    resource.slug.includes("equity") || resource.slug.includes("co-founder") || resource.slug.includes("vesting")
+      ? "1008 FOUNDER GOVERNANCE (DAY 5)"
+      : resource.slug.includes("validate") || resource.slug.includes("masterclass")
       ? "1008 FOUNDER MASTERCLASS (DAY 4)"
       : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
       ? "1008 FOUNDER PLAYBOOK (DAY 3)"
