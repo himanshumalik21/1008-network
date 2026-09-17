@@ -88,9 +88,6 @@ export default function KnowledgePage() {
     },
   ];
 
-  // Daily featured opportunity resource
-  const dailyOpportunity = initialKnowledgeResources.find((r) => r.category === "opportunity") || initialKnowledgeResources[0];
-
   // Extract all unique sector tags
   const allTags = useMemo(
     () => Array.from(new Set(initialKnowledgeResources.flatMap((r) => r.sectorTags))),
@@ -177,124 +174,8 @@ export default function KnowledgePage() {
         </div>
       </section>
 
-      {/* Premier Section: Daily Business Opportunity Spotlight */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="rounded-3xl bg-gradient-to-br from-[#0A2540] via-[#0E355C] to-[#0B1E33] border border-[#1E4268] p-6 sm:p-8 lg:p-10 text-white relative overflow-hidden shadow-xl">
-          {/* Subtle Ambient Glow */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#00D4B2]/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-[#635BFF]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute inset-0 bg-grid-boxes opacity-10 pointer-events-none" />
-
-          <div className="relative z-10 space-y-6">
-            {/* Header row */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-5">
-              <div className="flex items-center gap-2.5 flex-wrap">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00D4B2]/15 border border-[#00D4B2]/30 text-xs font-bold font-mono text-[#00D4B2]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
-                  DAILY OPPORTUNITY BRIEF
-                </span>
-                <span className="text-xs font-mono text-white/60">
-                  Published Today: {dailyOpportunity.publishedAt}
-                </span>
-              </div>
-
-              <div className="text-xs font-mono text-white/50 flex items-center gap-2">
-                <span>Inspire → Inform → Investigate → Decide</span>
-              </div>
-            </div>
-
-            {/* Opportunity Spotlight Main Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-8 space-y-4">
-                <div className="flex flex-wrap gap-2">
-                  {dailyOpportunity.sectorTags.slice(0, 4).map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-white/10 border border-white/15 text-white/80"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                  {dailyOpportunity.title}
-                </h2>
-
-                <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-3xl font-normal">
-                  {dailyOpportunity.subtitle || dailyOpportunity.summary}
-                </p>
-
-                {/* Key Metric Highlights */}
-                {dailyOpportunity.opportunityMetadata && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <span className="text-[10px] font-mono text-white/50 uppercase block">Market Projection</span>
-                      <span className="text-sm font-bold text-[#00D4B2] font-mono">
-                        {dailyOpportunity.opportunityMetadata.projectedMarket || "USD 24.7B (2033)"}
-                      </span>
-                    </div>
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <span className="text-[10px] font-mono text-white/50 uppercase block">Compounded Growth</span>
-                      <span className="text-sm font-bold text-white font-mono">
-                        {dailyOpportunity.opportunityMetadata.cagr || ">15% CAGR"}
-                      </span>
-                    </div>
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 col-span-2 sm:col-span-1">
-                      <span className="text-[10px] font-mono text-white/50 uppercase block">Capital Driver</span>
-                      <span className="text-sm font-bold text-white font-mono">
-                        {dailyOpportunity.opportunityMetadata.capitalIntensity || "Moderate Line"}
-                      </span>
-                    </div>
-                  </div>
-                )}
-
-                <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <Link
-                    href={`/knowledge/${dailyOpportunity.slug}`}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#00D4B2] hover:bg-[#00BFA0] text-[#0A2540] font-bold text-sm transition-all shadow-[0_4px_14px_rgba(0,212,178,0.3)] hover:scale-[1.01]"
-                  >
-                    <span>Investigate Opportunity Brief</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <button
-                    onClick={() => {
-                      setSelectedCategory("opportunity");
-                      const elem = document.getElementById("playbooks-grid-start");
-                      if (elem) elem.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm transition-all cursor-pointer"
-                  >
-                    <span>Explore All Opportunities</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Column: Key Takeaway Summary Card */}
-              <div className="lg:col-span-4 bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3.5 backdrop-blur-sm">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#00D4B2] flex items-center gap-1.5">
-                  <Sparkles className="h-3.5 w-3.5" /> Investigation Checklist
-                </span>
-                <div className="space-y-2.5 text-xs text-white/80">
-                  {dailyOpportunity.keyTakeaways.slice(0, 3).map((takeaway, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] shrink-0 mt-1.5" />
-                      <span className="leading-snug">{takeaway}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/50">
-                  <span>Reading time: {dailyOpportunity.readOrWatchTime}</span>
-                  <span className="text-white/70">1008 Research</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Filter & Search Area */}
-      <div id="playbooks-grid-start" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 scroll-mt-28">
+      <div id="playbooks-grid-start" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 scroll-mt-28">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-[#0A2540] tracking-tight">
