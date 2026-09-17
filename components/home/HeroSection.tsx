@@ -57,9 +57,9 @@ export function HeroSection() {
 
   const pathways = [
     {
-      badge: "Venture Studio",
-      persona: "I have a business idea",
-      intent: "I want 1008 to help me build it",
+      badge: "01 // BUILD",
+      persona: "I have an idea / expertise",
+      intent: "Build the business with 1008",
       cta: "Build With 1008",
       desc: "Turn your industry knowledge into an operating company. We handle software, systems, suppliers, compliance, and core operations for shared equity.",
       href: "/studio",
@@ -70,12 +70,12 @@ export function HeroSection() {
       icon: <Layers className="h-4 w-4 text-[#635BFF]" />,
     },
     {
-      badge: "Find Co-Founders",
-      persona: "I need a co-founder or operator",
-      intent: "I'm missing a CTO, ops lead, or sales partner",
+      badge: "02 // FIND",
+      persona: "I'm missing people",
+      intent: "Find co-founders & operators",
       cta: "Find a Partner",
-      desc: "Post your opportunity to connect with reviewed technical CTOs, commercial leaders, and domain operators who want to build with experienced people.",
-      href: "/network/post",
+      desc: "Post your opportunity or join to connect with reviewed technical CTOs, commercial leaders, and domain operators building for equity.",
+      href: "/network",
       accent: "#00A389",
       bgHover: "hover:border-[#00D4B2]/60 hover:shadow-[0_12px_24px_-8px_rgba(0,212,178,0.16)]",
       badgeBg: "bg-[#E6FFFA] text-[#007A66] border-[#B2F5EA]",
@@ -83,30 +83,30 @@ export function HeroSection() {
       icon: <UserPlus className="h-4 w-4 text-[#00A389]" />,
     },
     {
-      badge: "Join Talent Pool",
-      persona: "I have skills & want to build",
-      intent: "I want to join a venture as a co-founder",
-      cta: "Join the Network",
-      desc: "Partner with experienced domain founders building real economy enterprises and software ventures for meaningful equity.",
-      href: "/network/join",
+      badge: "03 // FUND",
+      persona: "I need capital / want to invest",
+      intent: "Find curated capital & syndicates",
+      cta: "Capital Network",
+      desc: "Connect promising businesses with a curated network of angels, family offices, and eligible capital partners. Zero broker fees.",
+      href: "/capital",
       accent: "#059669",
       bgHover: "hover:border-[#059669]/60 hover:shadow-[0_12px_24px_-8px_rgba(5,150,105,0.16)]",
       badgeBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
       iconBg: "bg-[#ECFDF5] border-[#A7F3D0] text-[#059669]",
-      icon: <Users className="h-4 w-4 text-[#059669]" />,
+      icon: <Coins className="h-4 w-4 text-[#059669]" />,
     },
     {
-      badge: "Capital Network",
-      persona: "I want to invest",
-      intent: "Angel & syndicate co-investments",
-      cta: "Join Capital Network",
-      desc: "Co-invest directly in early-stage ventures with itemized use of funds, transparent terms, and zero broker fees.",
-      href: "/capital",
+      badge: "04 // LEARN",
+      persona: "I want to understand how to build",
+      intent: "Learn operational frameworks",
+      cta: "Read Playbook",
+      desc: "Practical frameworks on cash-flow architecture, working capital credit, co-founder equity agreements, and building enduring enterprises in India.",
+      href: "/knowledge",
       accent: "#FF7043",
       bgHover: "hover:border-[#FF7043]/60 hover:shadow-[0_12px_24px_-8px_rgba(255,112,67,0.16)]",
       badgeBg: "bg-[#FFF3EE] text-[#D94814] border-[#FFD8C9]",
       iconBg: "bg-[#FFF3EE] border-[#FFD8C9] text-[#D94814]",
-      icon: <Coins className="h-4 w-4 text-[#FF7043]" />,
+      icon: <BookOpen className="h-4 w-4 text-[#FF7043]" />,
     },
   ];
 
@@ -265,14 +265,22 @@ export function HeroSection() {
         </div>
 
         {/* 4 Clear User Intent Pathways Grid */}
-        <section aria-label="Choose your pathway on 1008 Network" className="w-full max-w-4xl mx-auto space-y-3">
-          <div className="text-center space-y-1">
+        <section aria-label="Choose your pathway on 1008 Network" className="w-full max-w-4xl mx-auto space-y-4">
+          <div className="text-center space-y-2">
             <h2 className="text-lg sm:text-xl font-bold text-[#0A2540]">
-              Choose Your Pathway
+              The 1008 Ecosystem
             </h2>
-            <p className="text-xs sm:text-sm text-[#64748B]">
-              Whether you want to build a venture, find a co-founder, join as an operator, or invest.
-            </p>
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-[#64748B] bg-[#F8FAFC] px-3.5 py-1.5 rounded-full border border-[#E2E8F0]">
+              <span className="text-[#635BFF] font-bold">Idea</span>
+              <span>→</span>
+              <span className="text-[#00A389] font-bold">People</span>
+              <span>→</span>
+              <span className="text-[#059669] font-bold">Capital</span>
+              <span>→</span>
+              <span className="text-[#D94814] font-bold">Execution</span>
+              <span>→</span>
+              <span className="text-[#0A2540] font-bold">Business</span>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">

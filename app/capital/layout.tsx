@@ -3,34 +3,32 @@ import React from "react";
 import { capitalFaqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "Startup Capital & Co-Investment Syndicate | 1008 Network",
+  title: "Capital for Businesses Worth Building | 1008 Capital Network",
   description:
-    "Discover high-conviction Indian startups or raise capital for your venture. Direct syndicate allocations from ₹50K to ₹5Cr+ with transparent fund utilization, turnkey ground operations, and zero broker fees.",
+    "1008 connects founders building promising businesses with a curated network of angels, family offices and other eligible capital partners.",
   keywords: [
-    "Invest in Startups India",
-    "Angel Investment Platform India",
     "Startup Capital India",
-    "Raise Startup Funding India",
-    "Venture Syndicate India",
-    "Asset Backed Startup Investment",
-    "1008 Capital Network",
-    "Angel Investor Network India",
+    "Angel Network India",
+    "Raise Capital Startups India",
     "Family Office Co-Investment India",
+    "Curated Angel Syndicate India",
+    "1008 Capital Network",
     "Seed Stage Capital Delhi NCR Bangalore",
+    "Venture Studio Capital",
   ],
   openGraph: {
-    title: "Startup Capital & Co-Investment Syndicate | 1008 Network",
+    title: "Capital for Businesses Worth Building | 1008 Capital Network",
     description:
-      "Join curated investor syndicates (₹50K to ₹5Cr+) backing high-conviction Indian businesses with turnkey operational execution.",
+      "1008 connects founders building promising businesses with a curated network of angels, family offices and other eligible capital partners.",
     url: "https://www.1008.network/capital",
     siteName: "1008.network",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Startup Capital & Co-Investment Syndicate | 1008 Network",
+    title: "Capital for Businesses Worth Building | 1008 Capital Network",
     description:
-      "Curated startup syndicate rounds with itemized use-of-funds and combined deal meetings. Zero intermediary fees.",
+      "1008 connects founders building promising businesses with a curated network of angels, family offices and other eligible capital partners.",
   },
   alternates: {
     canonical: "https://www.1008.network/capital",

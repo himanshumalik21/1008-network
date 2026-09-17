@@ -144,13 +144,13 @@ export default function RegisterInvestorPage() {
         {/* Header Block */}
         <div className="space-y-3 mb-8">
           <Badge variant="cyan" size="sm">
-            For Individuals, Working Professionals & Angels Looking to Invest
+            03 — Capital Network // For Investors
           </Badge>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Register in the 1008 Investor & Syndicate Pool
+            Join the 1008 Capital Network
           </h1>
           <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-            Anyone can co-invest in high-conviction startups. Register your deployment preferences (from ₹2L to ₹5Cr+) to receive curated deal allocations matched to your sector and risk appetite, supported by 1008 Network&apos;s operational management.
+            1008 connects eligible angels, family offices, and allocators with founders building promising businesses. Specify your sector interests and check sizes to receive curated opportunities with transparent operational metrics.
           </p>
         </div>
 

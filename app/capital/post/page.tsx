@@ -98,13 +98,13 @@ export default function PostCapitalRequirementPage() {
         {/* Header Block */}
         <div className="space-y-3 mb-8">
           <Badge variant="indigo" size="sm">
-            For Startups & Founders Raising Capital
+            03 — Capital Network // For Founders
           </Badge>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Post Startup Capital Requirement
+            Submit Your Business for Capital
           </h1>
           <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-            Connect directly with active angel investors, family offices, and corporate operators looking to deploy capital in high-conviction Indian businesses. 1008 Network reviews business theses and introduces aligned capital with zero placement retainers.
+            1008 connects founders building promising businesses with a curated network of angels, family offices, and eligible capital partners. Outline your business model, traction, and precise use of funds for consideration.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export default function PostCapitalRequirementPage() {
         <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs font-mono text-[#065F46] mb-8">
           <DollarSign className="h-4 w-4 text-[#059669] shrink-0" />
           <span>
-            <strong>Target-Based Campaign:</strong> Your capital requirement remains active and open to syndicate allocations until your target funding goal is achieved.
+            <strong>Direct Founder Connection:</strong> Zero upfront retainers or broker placement deductions. All terms and capital are agreed directly with investors.
           </span>
         </div>
 
