@@ -117,7 +117,11 @@ export default function CapitalPage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            1008 connects founders building promising businesses with a curated network of angels, family offices, and other eligible capital partners.
+            1008 connects entrepreneurs building promising businesses with a curated network of capital partners.
+          </p>
+
+          <p className="text-xs sm:text-sm text-[#64748B] font-medium max-w-2xl mx-auto">
+            Founders bring the opportunity. Capital partners bring resources. 1008 helps create the connection.
           </p>
 
           {/* Ecosystem Flow Formula */}

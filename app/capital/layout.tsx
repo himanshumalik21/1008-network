@@ -5,7 +5,7 @@ import { capitalFaqs } from "@/data/faqs";
 export const metadata: Metadata = {
   title: "Capital for Businesses Worth Building | 1008 Capital Network",
   description:
-    "1008 connects founders building promising businesses with a curated network of angels, family offices and other eligible capital partners.",
+    "1008 connects entrepreneurs building promising businesses with a curated network of capital partners. Founders bring the opportunity. Capital partners bring resources. 1008 helps create the connection.",
   keywords: [
     "Startup Capital India",
     "Angel Network India",

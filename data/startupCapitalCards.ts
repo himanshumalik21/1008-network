@@ -33,7 +33,7 @@ export const initialStartupCapitalCards: StartupCapitalCard[] = [
       headline: "Former VP Operations @ Bharat Forge (16 yrs) & Ex-Category Lead @ Industrial Unicorn (8 yrs)",
       domainYears: 16,
     },
-    ventureThesis: "Eliminating ₹18L/hour factory downtime for Tier-2 auto suppliers with guaranteed 48-hour tooling dispatch and automated CAD bidding.",
+    ventureThesis: "Eliminating ₹18L/hour factory downtime for Tier-2 auto suppliers with rapid 48-hour tooling dispatch and automated CAD bidding.",
     fundingStatus: "Open for Allocation",
     studioBacked: true,
   },
