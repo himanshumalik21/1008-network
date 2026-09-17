@@ -81,27 +81,31 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const editionLabel =
-    resource.slug.includes("equity") || resource.slug.includes("co-founder") || resource.slug.includes("vesting")
-      ? "Day 5 Edition"
-      : resource.slug.includes("validate") || resource.slug.includes("masterclass")
-      ? "Day 4 Edition"
-      : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
-      ? "Day 3 Edition"
-      : resource.slug.includes("uli") || resource.slug.includes("credit")
-      ? "Day 2 Edition"
-      : "Day 1 Edition";
+  const isOpportunity = resource.category === "opportunity";
 
-  const playbookTag =
-    resource.slug.includes("equity") || resource.slug.includes("co-founder") || resource.slug.includes("vesting")
-      ? "1008 FOUNDER GOVERNANCE (DAY 5)"
-      : resource.slug.includes("validate") || resource.slug.includes("masterclass")
-      ? "1008 FOUNDER MASTERCLASS (DAY 4)"
-      : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
-      ? "1008 FOUNDER PLAYBOOK (DAY 3)"
-      : resource.slug.includes("uli") || resource.slug.includes("credit")
-      ? "1008 FOUNDER PLAYBOOK (DAY 2)"
-      : "1008 FOUNDER PLAYBOOK (DAY 1)";
+  const editionLabel = isOpportunity
+    ? "Opportunity Edition"
+    : resource.slug.includes("equity") || resource.slug.includes("co-founder") || resource.slug.includes("vesting")
+    ? "Day 5 Edition"
+    : resource.slug.includes("validate") || resource.slug.includes("masterclass")
+    ? "Day 4 Edition"
+    : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
+    ? "Day 3 Edition"
+    : resource.slug.includes("uli") || resource.slug.includes("credit")
+    ? "Day 2 Edition"
+    : "Day 1 Edition";
+
+  const playbookTag = isOpportunity
+    ? "1008 BUSINESS OPPORTUNITY (DAILY BRIEF)"
+    : resource.slug.includes("equity") || resource.slug.includes("co-founder") || resource.slug.includes("vesting")
+    ? "1008 FOUNDER GOVERNANCE (DAY 5)"
+    : resource.slug.includes("validate") || resource.slug.includes("masterclass")
+    ? "1008 FOUNDER MASTERCLASS (DAY 4)"
+    : resource.slug.includes("profitable") || resource.slug.includes("ideas") || resource.slug.includes("cashflow")
+    ? "1008 FOUNDER PLAYBOOK (DAY 3)"
+    : resource.slug.includes("uli") || resource.slug.includes("credit")
+    ? "1008 FOUNDER PLAYBOOK (DAY 2)"
+    : "1008 FOUNDER PLAYBOOK (DAY 1)";
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -197,8 +201,11 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
             <span className="px-2.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider rounded-md bg-[#635BFF]/10 text-[#635BFF] border border-[#635BFF]/20">
               {playbookTag}
             </span>
-            <Badge variant={resource.category === "masterclass" ? "amber" : "indigo"} size="sm">
-              {resource.category.replace("_", " ").toUpperCase()}
+            <Badge
+              variant={isOpportunity ? "cyan" : resource.category === "masterclass" ? "amber" : "indigo"}
+              size="sm"
+            >
+              {isOpportunity ? "BUSINESS OPPORTUNITY" : resource.category.replace("_", " ").toUpperCase()}
             </Badge>
             <span className="text-xs text-[#627D98] flex items-center gap-1 font-medium">
               <Clock className="h-3 w-3 text-[#635BFF]" /> {resource.readOrWatchTime}

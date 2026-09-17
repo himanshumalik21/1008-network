@@ -116,7 +116,7 @@ export interface TalentProfile {
   availableImmediately: boolean;
 }
 
-export type ResourceCategory = "playbook" | "book_summary" | "masterclass" | "podcast";
+export type ResourceCategory = "opportunity" | "playbook" | "book_summary" | "masterclass" | "podcast";
 
 export interface KnowledgeResource {
   slug: string;
@@ -135,6 +135,15 @@ export interface KnowledgeResource {
   primaryKeyword?: string;
   secondaryKeywords?: string[];
   targetAudience?: string;
+  opportunityMetadata?: {
+    marketValuation?: string;
+    projectedMarket?: string;
+    cagr?: string;
+    targetSector?: string;
+    capitalIntensity?: "Low" | "Moderate" | "Capital Intensive";
+    operatingModels?: { name: string; tag: string; description: string; pro: string; con: string }[];
+    sources?: { title: string; organization: string; url: string }[];
+  };
 }
 
 export interface DealCard {
