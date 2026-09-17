@@ -81,20 +81,20 @@ export default function KnowledgePage() {
           <div className="max-w-3xl space-y-3">
             <div className="inline-flex items-center gap-2">
               <Badge variant="amber" size="md">
-                1008 Playbook
+                The 1008 Playbook
               </Badge>
-              <span className="text-xs font-mono text-[#627D98]">Tactical Operational Intelligence</span>
+              <span className="text-xs font-mono text-[#627D98]">Practical Frameworks for Founders</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-              Operational Playbooks.{" "}
+              Practical Playbooks.{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FF7043] via-[#635BFF] to-[#00D4B2]">
-                Zero Theory.
+                Frameworks for turning ideas into operating businesses.
               </span>
             </h1>
 
             <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-              Tactical guides on cash-flow survival, avoiding agency drain, collateral-free credit architectures, pre-launch customer discovery, and scaling real economy businesses in India.
+              Practical guides on cash-flow architecture, working capital credit, co-founder equity agreements, avoiding agency drain, and building enduring enterprises in India.
             </p>
           </div>
         </div>

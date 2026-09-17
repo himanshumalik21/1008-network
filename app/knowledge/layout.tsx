@@ -3,9 +3,9 @@ import React from "react";
 import { initialKnowledgeResources } from "@/data/knowledgeResources";
 
 export const metadata: Metadata = {
-  title: "1008 Playbook — Operational Intelligence & Execution Guides | 1008 Network",
+  title: "The 1008 Playbook — Practical Frameworks for Turning Ideas into Operating Businesses | 1008 Network",
   description:
-    "Actionable, battle-tested operational playbooks, working capital frameworks, and high-cashflow business models for Indian founders.",
+    "Practical playbooks, cash-flow architectures, working capital frameworks, and founder governance guides for building businesses in India.",
   keywords: [
     "1008 Playbook",
     "Startup Playbooks India",
@@ -18,18 +18,18 @@ export const metadata: Metadata = {
     "ULI Unified Lending Interface for Startups",
   ],
   openGraph: {
-    title: "1008 Playbook — Operational Intelligence & Execution Guides | 1008 Network",
+    title: "The 1008 Playbook — Practical Frameworks for Building Businesses | 1008 Network",
     description:
-      "Deep-dive playbooks and execution guides for building profitable enterprises in India without burning cash.",
+      "Practical playbooks and execution frameworks for turning ideas into operating, cashflow-positive businesses in India.",
     url: "https://www.1008.network/knowledge",
     siteName: "1008.network",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 Playbook — Operational Intelligence & Execution Guides | 1008 Network",
+    title: "The 1008 Playbook — Practical Frameworks for Building Businesses | 1008 Network",
     description:
-      "Actionable blueprints for building profitable businesses in India without burning cash.",
+      "Practical frameworks for turning ideas into operating businesses.",
   },
   alternates: {
     canonical: "https://www.1008.network/knowledge",
@@ -54,7 +54,7 @@ export default function KnowledgeLayout({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Knowledge Hub",
+        name: "Playbooks",
         item: "https://www.1008.network/knowledge",
       },
     ],
@@ -63,10 +63,10 @@ export default function KnowledgeLayout({
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "1008 Playbook — Operational Intelligence & Founder Blueprints",
+    name: "The 1008 Playbook — Practical Frameworks for Turning Ideas into Operating Businesses",
     url: "https://www.1008.network/knowledge",
     description:
-      "Actionable, battle-tested operational playbooks, regulatory guides, and high-cashflow frameworks for founders building in India.",
+      "Practical playbooks, cash-flow architectures, and founder frameworks for building enduring businesses in India.",
     audience: {
       "@type": "Audience",
       audienceType: "Entrepreneurs, Startup Founders, Industrialists, Business Operators",
