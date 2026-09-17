@@ -29,7 +29,7 @@ export default function KnowledgePage() {
   const [selectedTag, setSelectedTag] = useState<string | "all">("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState<number | "all">(6);
+  const [itemsPerPage, setItemsPerPage] = useState<number>(6);
   const [deviceAutoCalculated, setDeviceAutoCalculated] = useState(true);
 
   // Responsive device-based itemsPerPage detection
@@ -107,19 +107,15 @@ export default function KnowledgePage() {
     setCurrentPage(1);
   }, [selectedCategory, selectedTag, searchQuery, itemsPerPage]);
 
-  const effectivePageSize = itemsPerPage === "all" ? filteredResources.length || 1 : itemsPerPage;
-  const totalPages = Math.max(1, Math.ceil(filteredResources.length / effectivePageSize));
+  const totalPages = Math.max(1, Math.ceil(filteredResources.length / itemsPerPage));
   const validPage = Math.min(Math.max(1, currentPage), totalPages);
 
-  const startIndex = (validPage - 1) * effectivePageSize;
-  const endIndex = itemsPerPage === "all"
-    ? filteredResources.length
-    : Math.min(startIndex + effectivePageSize, filteredResources.length);
+  const startIndex = (validPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, filteredResources.length);
 
   const paginatedResources = useMemo(() => {
-    if (itemsPerPage === "all") return filteredResources;
     return filteredResources.slice(startIndex, endIndex);
-  }, [filteredResources, startIndex, endIndex, itemsPerPage]);
+  }, [filteredResources, startIndex, endIndex]);
 
   const handlePageChange = (newPage: number) => {
     const targetPage = Math.max(1, Math.min(newPage, totalPages));
@@ -130,7 +126,7 @@ export default function KnowledgePage() {
     }
   };
 
-  const handleCustomPageSize = (size: number | "all") => {
+  const handleCustomPageSize = (size: number) => {
     setDeviceAutoCalculated(false);
     setItemsPerPage(size);
   };
@@ -448,7 +444,7 @@ export default function KnowledgePage() {
                     { label: "3", value: 3 },
                     { label: "4", value: 4 },
                     { label: "6", value: 6 },
-                    { label: "All", value: "all" as const },
+                    { label: "9", value: 9 },
                   ].map((option) => {
                     const isSelected = itemsPerPage === option.value;
                     return (
