@@ -8,15 +8,12 @@ import {
   ArrowDown,
   CheckCircle2,
   Sparkles,
-  CircuitBoard,
   Activity,
   ShieldCheck,
   Search,
   Flame,
   Binary,
-  ArrowRight,
 } from "lucide-react";
-import { Badge } from "@/components/brand/Badge";
 
 export function PCBHadwareCoreGraphic() {
   const [activeTab, setActiveTab] = useState<"flow" | "pipeline">("flow");
@@ -148,7 +145,7 @@ export function PCBHadwareCoreGraphic() {
               <div className="rounded-xl bg-white border border-[#E2E8F0] p-4.5 space-y-3 shadow-2xs relative">
                 <div className="flex items-center justify-between">
                   <span className="p-1.5 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] text-[#0A2540]">
-                    <Binary className="h-4 w-4 text-[#00D4B2]" />
+                    <Binary className="h-4 w-4 text-[#00A88F]" />
                   </span>
                   <span className="text-[10px] font-mono text-[#0A2540] bg-[#F1F5F9] px-2 py-0.5 rounded font-bold border border-[#E2E8F0]">
                     BILL OF MATERIALS
@@ -200,43 +197,41 @@ export function PCBHadwareCoreGraphic() {
             {/* Connecting Convergence Indicator */}
             <div className="flex items-center justify-center gap-3 py-1">
               <div className="h-[1px] bg-[#E2E8F0] flex-1" />
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E2E8F0] shadow-2xs text-[11px] font-mono text-[#635BFF] font-semibold">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] shadow-2xs text-xs font-mono text-[#635BFF] font-semibold">
                 <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
                 <span>Integrated Surface-Mount Assembly Process</span>
               </div>
               <div className="h-[1px] bg-[#E2E8F0] flex-1" />
             </div>
 
-            {/* Bottom Output Hero Card: Populated PCBA */}
-            <div className="rounded-xl bg-gradient-to-br from-[#0A2540] to-[#1E3A8A] border border-[#334155] p-5 sm:p-6 text-white shadow-md relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#00D4B2]/10 rounded-full blur-3xl pointer-events-none" />
-              
+            {/* Bottom Output Hero Card: Populated PCBA (Clean Light Theme) */}
+            <div className="rounded-xl bg-white border-2 border-[#635BFF]/25 p-5 sm:p-6 text-[#0A2540] shadow-sm relative overflow-hidden">
               <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-5">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <span className="p-1 rounded-md bg-[#00D4B2]/20 border border-[#00D4B2]/30 text-[#00D4B2]">
+                    <span className="p-1 rounded-md bg-[#00D4B2]/15 border border-[#00D4B2]/30 text-[#00A88F]">
                       <Sparkles className="h-4 w-4" />
                     </span>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#00D4B2]">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#00A88F]">
                       End Deliverable • Certified Hardware Core
                     </span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-extrabold text-white">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#0A2540]">
                     Populated PCBA (Printed Circuit Board Assembly)
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#94A3B8] max-w-2xl leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#425466] max-w-2xl leading-relaxed">
                     The functional heart and nervous system of modern electronics — ready for box-build integration into EV motor controllers, smart utility meters (RDSS), medical diagnostics, and industrial IoT nodes.
                   </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row md:flex-col gap-2 shrink-0">
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-xs text-white">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-[#00D4B2]" />
-                    <span className="font-mono text-[11px]">100% AOI & Functional QA</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F0FDF4] border border-[#BBF7D0] text-xs text-[#166534]">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-[#16A34A]" />
+                    <span className="font-mono text-[11px] font-semibold">100% AOI & Functional QA</span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-xs text-white">
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F0F5FF] border border-[#D0E2FF] text-xs text-[#1E40AF]">
                     <ShieldCheck className="h-3.5 w-3.5 text-[#635BFF]" />
-                    <span className="font-mono text-[11px]">IPC-A-610 Compliant</span>
+                    <span className="font-mono text-[11px] font-semibold">IPC-A-610 Compliant</span>
                   </div>
                 </div>
               </div>
@@ -262,7 +257,7 @@ export function PCBHadwareCoreGraphic() {
                     <h5 className="font-bold text-sm text-[#0A2540]">{step.title}</h5>
                     <p className="text-xs text-[#425466] leading-relaxed">{step.desc}</p>
                     <div className="pt-1.5 border-t border-[#F1F5F9] flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00A88F]" />
                       <span className="text-[10px] font-mono text-[#627D98] font-medium">
                         {step.detail}
                       </span>

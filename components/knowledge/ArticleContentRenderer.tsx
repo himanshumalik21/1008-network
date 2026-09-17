@@ -20,6 +20,7 @@ import {
   Database,
   Briefcase,
   HelpCircle,
+  Square,
 } from "lucide-react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
@@ -486,16 +487,16 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                 <div className="overflow-x-auto rounded-2xl border border-[#E6E8EB] shadow-xs bg-white">
                   <table className="w-full text-left text-xs sm:text-sm border-collapse">
                     <thead>
-                      <tr className="bg-[#0A2540] text-white">
+                      <tr className="bg-[#F8FAFC] border-b border-[#E6E8EB] text-[#0A2540]">
                         {headers.map((h, hIdx) => (
                           <th
                             key={hIdx}
-                            className={`py-4 px-4 sm:px-6 font-bold tracking-tight text-xs uppercase ${
+                            className={`py-3.5 px-4 sm:px-6 font-bold tracking-tight text-xs uppercase text-[#0A2540] ${
                               hIdx === 0
                                 ? "w-[28%]"
                                 : hIdx === 1
-                                ? "w-[36%] bg-[#0F2D4A]"
-                                : "w-[36%] bg-[#1E1B4B] text-[#A5B4FC]"
+                                ? "w-[36%] bg-[#F1F5F9]/60"
+                                : "w-[36%] bg-[#F0F5FF]/60 text-[#635BFF]"
                             }`}
                           >
                             <div className="flex items-center gap-1.5">
@@ -521,10 +522,10 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
                               key={cIdx}
                               className={`py-3.5 px-4 sm:px-6 align-top ${
                                 cIdx === 0
-                                  ? "font-semibold text-[#0A2540] bg-[#F8FAFC]/60"
+                                  ? "font-semibold text-[#0A2540] bg-[#F8FAFC]/40"
                                   : cIdx === 1
                                   ? "text-[#627D98]"
-                                  : "text-[#0A2540] font-medium bg-[#F0F0FF]/30"
+                                  : "text-[#0A2540] font-medium bg-[#F0F5FF]/20"
                               }`}
                             >
                               <div className="flex items-start gap-2">
@@ -566,24 +567,128 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
           return null;
         }
 
-        // Check for Bullet List (* or -)
-        if (
-          trimmed.split("\n").every((line) => line.trim().startsWith("* ") || line.trim().startsWith("- "))
-        ) {
-          const items = trimmed
-            .split("\n")
-            .map((l) => l.trim().replace(/^(\*|-)\s+/, ""));
+        const blockLines = trimmed.split("\n");
+
+        // Check for Checklist Items (- [ ] or - [x])
+        const checkListRegex = /^-\s+\[([ xX])\]\s+(.*)$/;
+        if (blockLines.some((l) => checkListRegex.test(l.trim()))) {
+          const introLines: string[] = [];
+          const items: { checked: boolean; text: string }[] = [];
+
+          for (const line of blockLines) {
+            const match = line.trim().match(checkListRegex);
+            if (match) {
+              items.push({ checked: match[1].toLowerCase() === "x", text: match[2] });
+            } else if (items.length === 0 && line.trim()) {
+              introLines.push(line.trim());
+            } else if (items.length > 0 && line.trim()) {
+              items[items.length - 1].text += " " + line.trim();
+            }
+          }
 
           return (
-            <div key={idx} className="my-4 space-y-2.5">
-              {items.map((item, itemIdx) => (
-                <div key={itemIdx} className="flex items-start gap-3 text-sm sm:text-base">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#635BFF] shrink-0 mt-2.5" />
-                  <div className="text-[#425466] leading-relaxed">
-                    {renderInline(item)}
+            <div key={idx} className="my-6 space-y-3">
+              {introLines.length > 0 && (
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed font-normal">
+                  {renderInline(introLines.join(" "))}
+                </p>
+              )}
+              <div className="rounded-2xl bg-white border border-[#E6E8EB] p-4 sm:p-5 space-y-3 shadow-2xs">
+                {items.map((item, itemIdx) => (
+                  <div key={itemIdx} className="flex items-start gap-3 text-sm sm:text-base">
+                    <div
+                      className={`w-5 h-5 rounded-md border flex items-center justify-center shrink-0 mt-0.5 ${
+                        item.checked
+                          ? "bg-[#635BFF] border-[#635BFF] text-white"
+                          : "bg-[#F8FAFC] border-[#CBD5E1] text-[#635BFF]"
+                      }`}
+                    >
+                      {item.checked ? <Check className="w-3.5 h-3.5" /> : null}
+                    </div>
+                    <div className="text-[#0A2540] leading-relaxed font-medium">
+                      {renderInline(item.text)}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+          );
+        }
+
+        // Check for Numbered / Ordered List (1. , 2. , etc.)
+        const orderedListRegex = /^(\d+)\.\s+(.*)$/;
+        if (blockLines.some((l) => orderedListRegex.test(l.trim()))) {
+          const introLines: string[] = [];
+          const items: { number: string; text: string }[] = [];
+
+          for (const line of blockLines) {
+            const match = line.trim().match(orderedListRegex);
+            if (match) {
+              items.push({ number: match[1], text: match[2] });
+            } else if (items.length === 0 && line.trim()) {
+              introLines.push(line.trim());
+            } else if (items.length > 0 && line.trim()) {
+              items[items.length - 1].text += " " + line.trim();
+            }
+          }
+
+          return (
+            <div key={idx} className="my-5 space-y-3">
+              {introLines.length > 0 && (
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed font-normal">
+                  {renderInline(introLines.join(" "))}
+                </p>
+              )}
+              <ol className="space-y-3">
+                {items.map((item, itemIdx) => (
+                  <li key={itemIdx} className="flex items-start gap-3.5 text-sm sm:text-base">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#F0F5FF] text-[#635BFF] border border-[#D0E2FF] text-xs font-mono font-bold shrink-0 mt-0.5 shadow-2xs">
+                      {item.number}
+                    </span>
+                    <div className="text-[#425466] leading-relaxed flex-1">
+                      {renderInline(item.text)}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          );
+        }
+
+        // Check for Bullet List (* or -)
+        const bulletListRegex = /^(\*|-)\s+(.*)$/;
+        if (blockLines.some((l) => bulletListRegex.test(l.trim()))) {
+          const introLines: string[] = [];
+          const items: string[] = [];
+
+          for (const line of blockLines) {
+            const match = line.trim().match(bulletListRegex);
+            if (match) {
+              items.push(match[2]);
+            } else if (items.length === 0 && line.trim()) {
+              introLines.push(line.trim());
+            } else if (items.length > 0 && line.trim()) {
+              items[items.length - 1] += " " + line.trim();
+            }
+          }
+
+          return (
+            <div key={idx} className="my-4 space-y-3">
+              {introLines.length > 0 && (
+                <p className="text-sm sm:text-base text-[#425466] leading-relaxed font-normal">
+                  {renderInline(introLines.join(" "))}
+                </p>
+              )}
+              <ul className="space-y-2.5">
+                {items.map((item, itemIdx) => (
+                  <li key={itemIdx} className="flex items-start gap-3 text-sm sm:text-base">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#635BFF] shrink-0 mt-2.5" />
+                    <div className="text-[#425466] leading-relaxed flex-1">
+                      {renderInline(item)}
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           );
         }
