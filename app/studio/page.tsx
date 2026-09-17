@@ -63,11 +63,11 @@ export default function StudioPage() {
           </Badge>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Ready to turn your industry insight into a running enterprise?
+            Ready to turn your industry experience into your own business?
           </h2>
 
           <p className="text-base sm:text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Stop fighting operational friction, contractor markups, or hiring delays alone. Partner with 1008 Network for turnkey execution on the ground.
+            Stop worrying about software development, factory setup, or hiring delays alone. Partner with 1008 Network to build your company from the ground up.
           </p>
 
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">

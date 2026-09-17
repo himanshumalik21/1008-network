@@ -29,56 +29,56 @@ export function StudioSprintTimeline() {
     {
       id: 1,
       phaseLabel: "PHASE 01",
-      name: "Phase 1: Venture Architecture & Feasibility Lock",
-      milestone: "Thesis & Feasibility Lock",
-      headline: "De-risking the foundation: Financial modeling, system architecture scoping, and statutory clearances.",
+      name: "Phase 1: Business Blueprint & Feasibility",
+      milestone: "Planning & Feasibility",
+      headline: "De-risking the foundation: Financial modeling, software and facility planning, and legal setup.",
       deliverables: [
-        "Collaborative vision mapping, operational scoping & financial feasibility audit",
-        "Unit economics, contribution margin structures, and milestone capital allocation",
-        "Technical & physical architecture scoping (Cloud software, contract mfg, or specialized facilities)",
-        "Statutory compliance roadmap: Corporate governance, GST, licensing & IP structure",
+        "Collaborative vision mapping, operational roadmap & practical financial budget",
+        "Unit economics, profit margin structures, and milestone-based capital planning",
+        "Software, factory, and supply chain planning (Custom software, contract manufacturing, or physical setup)",
+        "Company setup roadmap: Company registration, GST, licenses, and founder agreements",
       ],
-      tag: "Foundation Gate",
+      tag: "Planning Gate",
     },
     {
       id: 2,
       phaseLabel: "PHASE 02",
       name: "Phase 2: Core Engineering, Supply Chain & Systems Setup",
       milestone: "Infrastructure & Systems",
-      headline: "Rapid build & deployment: Cloud ERPs, product engineering, vendor contracting, and SOPs.",
+      headline: "Rapid build & setup: Cloud ERP, product development, supplier contracts, and standard processes.",
       deliverables: [
-        "Production-grade digital core: Automated Cloud ERP, inventory ledgers & billing APIs",
-        "Supply chain & vendor execution: OEM batch manufacturing, 3PL logistics, or cloud infra setup",
-        "Standard Operating Procedures (SOPs), quality control benchmarks & workflow automation",
-        "Data integrity audit: Structuring transparent cash-flow rails for institutional credit eligibility",
+        "Day-1 digital core: Cloud ERP, inventory ledgers, and automated billing",
+        "Supply chain & vendor setup: OEM batch manufacturing, warehousing, logistics, and server setup",
+        "Standard Operating Procedures (SOPs), quality checks, and team workflows",
+        "Clean financial ledgers: Setting up transparent accounts eligible for working capital credit",
       ],
       tag: "Execution Gate",
     },
     {
       id: 3,
       phaseLabel: "PHASE 03",
-      name: "Phase 3: Core Hiring, GTM Activation & First Revenue",
-      milestone: "Commercial Activation",
-      headline: "Commercial activation: Sourcing mission-critical operators, brand launch, and closing opening clients.",
+      name: "Phase 3: Key Hiring, Launch & First Revenue",
+      milestone: "Customer Launch & Revenue",
+      headline: "Getting to market: Sourcing key team members, brand launch, and closing opening customer orders.",
       deliverables: [
-        "Matching and recruiting aligned Co-Founders, engineering leads, or operational practice heads",
-        "Brand identity, commercial positioning, and targeted go-to-market rollout",
-        "Securing inaugural paying customer orders, enterprise B2B pilots & positive operating cash flow",
-        "Onboarding customer invoices to factoring rails (TReDS) for 48-hour working capital velocity",
+        "Matching and recruiting aligned Co-Founders, engineering leads, or operations heads",
+        "Brand identity, customer positioning, and initial sales rollout",
+        "Securing inaugural paying customer orders, enterprise B2B pilots, and steady cash flow",
+        "Connecting invoices to invoice discounting (TReDS) for 48-hour cash flow settlement",
       ],
       tag: "Traction Gate",
     },
     {
       id: 4,
       phaseLabel: "PHASE 04",
-      name: "Phase 4: Institutional Handover & Full Autonomy",
+      name: "Phase 4: Handover to Your Team & Full Independence",
       milestone: "Full Founder Independence",
-      headline: "Achieving independence: Full IP assignment, investor data room, and zero vendor lock-in.",
+      headline: "Achieving independence: Full IP ownership, investor readiness, and zero vendor lock-in.",
       deliverables: [
-        "100% legal assignment of all code, supply contracts, domains, licenses & IP to your entity",
-        "Autonomous day-to-day operations run by your permanent full-time team",
-        "Institutional investor data room preparation, cap table cleanup & syndicate capital matching",
-        "Transition from active studio co-building to ongoing long-term board advisory",
+        "100% legal assignment of all code, supplier contracts, trademarks, and IP to your company entity",
+        "Day-to-day operations run smoothly by your permanent full-time team",
+        "Clean cap table, financial reports, and introductions to active angel and syndicate investors",
+        "Transition from active studio co-building to ongoing board advisory and founder support",
       ],
       tag: "Autonomy Gate",
     },
@@ -104,14 +104,14 @@ export function StudioSprintTimeline() {
           </div>
           
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-[1.12]">
-            We build the operational core.{" "}
+            You know your industry.{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
-              You scale the enterprise.
+              We build the company around it.
             </span>
           </h1>
 
           <p className="text-[#425466] text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl mx-auto font-normal">
-            A dedicated operational co-building partnership structured across 4 milestone gates—engineered to architect your systems, recruit core CXO talent, scale cash-flow velocity, and build a lasting, high-value enterprise.
+            You know the market, the products, and the customers. We partner with you as hands-on operational co-builders to set up software, factories, compliance, core hiring, and cash flow—all for shared equity with zero retainers.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">

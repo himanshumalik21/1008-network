@@ -133,8 +133,8 @@ export function StudioApplicationModal({ isOpen, onClose }: StudioApplicationMod
           setStep(1);
         }
       }}
-      title="Pitch Your Venture Vision"
-      subtitle="1008 Network Turnkey Operations & Syndicate Partnership"
+      title="Tell Us About the Business You Want to Build"
+      subtitle="Turn your industry experience into a company with 1008 Network as your operational co-builder."
       maxWidth="xl"
     >
       {status === "success" ? (

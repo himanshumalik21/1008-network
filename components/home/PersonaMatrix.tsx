@@ -110,10 +110,10 @@ export function PersonaMatrix() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <Badge variant="indigo" size="sm">Turnkey Capabilities & Use Cases</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Built for any business. From manufacturing to global expansion.
+            You bring domain expertise. We build the operations.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            Whether launching a venture from scratch, entering India as a foreign corporation, or revitalizing an existing business, 1008 Network executes the ground operations to build lasting enterprise value.
+            You know your industry, your products, and your target buyers. We step in as your operational co-builder to handle technology, factory setup, compliance, hiring, and launch.
           </p>
         </div>
 
