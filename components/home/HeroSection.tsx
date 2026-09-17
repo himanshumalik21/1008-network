@@ -170,7 +170,7 @@ export function HeroSection() {
               <span>The 1008 Business-Building System:</span>
             </div>
 
-            <div className="flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-xl border border-[#E2E8F0] overflow-x-auto max-w-full">
+            <div className="flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-xl border border-[#E2E8F0] overflow-x-auto max-w-full no-scrollbar overflow-touch">
               {[
                 { id: "studio", label: "01. Venture Studio", icon: Layers, color: "#635BFF" },
                 { id: "network", label: "02. Partner Network", icon: Users, color: "#00A389" },

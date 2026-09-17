@@ -240,6 +240,15 @@ p {
   text-wrap: pretty;
 }
 
+/* Utility to hide scrollbars while preserving touch and mouse scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Reduced motion accessibility standard across all browsers */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

@@ -29,6 +29,7 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
     };
 
     window.addEventListener("resize", handleResize, { passive: true });
+    window.addEventListener("orientationchange", handleResize, { passive: true });
 
 
 
@@ -233,6 +234,7 @@ export function InteractiveNetworkGlobe({ className }: InteractiveNetworkGlobePr
     return () => {
       observer.disconnect();
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

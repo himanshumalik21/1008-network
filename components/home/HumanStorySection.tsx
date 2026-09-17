@@ -142,7 +142,7 @@ export function HumanStorySection() {
           <div className="lg:col-span-7 bg-white rounded-3xl border border-[#E2E8F0] p-6 sm:p-8 flex flex-col justify-between shadow-xs space-y-6">
             <div className="space-y-5">
               {/* Archetype Selector Tabs */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-1">
+              <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar overflow-touch">
                 {archetypes.map((arch, idx) => {
                   const Icon = arch.icon;
                   const isSelected = selectedArchetype === idx;

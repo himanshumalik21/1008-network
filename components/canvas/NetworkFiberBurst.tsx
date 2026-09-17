@@ -29,6 +29,7 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
     };
 
     window.addEventListener("resize", handleResize, { passive: true });
+    window.addEventListener("orientationchange", handleResize, { passive: true });
 
 
 
@@ -143,6 +144,7 @@ export function NetworkFiberBurst({ className }: NetworkFiberBurstProps) {
     return () => {
       observer.disconnect();
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

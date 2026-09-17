@@ -29,24 +29,30 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     };
 
     window.addEventListener("resize", handleResize, { passive: true });
+    window.addEventListener("orientationchange", handleResize, { passive: true });
 
     let mouseX = 0.5;
     let mouseY = 0.5;
     let targetMouseX = 0.5;
     let targetMouseY = 0.5;
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handlePointerMove = (e: MouseEvent | TouchEvent | PointerEvent) => {
       if (!isVisible || !canvas) return;
       const rect = canvas.getBoundingClientRect();
       if (rect.width > 0 && rect.height > 0) {
-        const mx = (e.clientX - rect.left) / rect.width;
-        const my = (e.clientY - rect.top) / rect.height;
-        targetMouseX = Math.max(0, Math.min(1, mx));
-        targetMouseY = Math.max(0, Math.min(1, my));
+        const clientX = "touches" in e && e.touches.length > 0 ? e.touches[0].clientX : (e as MouseEvent).clientX;
+        const clientY = "touches" in e && e.touches.length > 0 ? e.touches[0].clientY : (e as MouseEvent).clientY;
+        if (clientX !== undefined && clientY !== undefined) {
+          const mx = (clientX - rect.left) / rect.width;
+          const my = (clientY - rect.top) / rect.height;
+          targetMouseX = Math.max(0, Math.min(1, mx));
+          targetMouseY = Math.max(0, Math.min(1, my));
+        }
       }
     };
 
-    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
+    window.addEventListener("touchmove", handlePointerMove, { passive: true });
 
     let time = 0;
 
@@ -278,7 +284,9 @@ export function FlowingMeshCanvas({ className }: FlowingMeshCanvasProps) {
     return () => {
       observer.disconnect();
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("orientationchange", handleResize);
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("touchmove", handlePointerMove);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
