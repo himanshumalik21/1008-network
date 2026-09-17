@@ -26,7 +26,7 @@ export const initialKnowledgeResources: KnowledgeResource[] = [
       "co-founding partner India"
     ],
     targetAudience: "First-Time Founders, Struggling Business Owners, Corporate CXOs Transitioning to Startups",
-    summary: "82% of early-stage Indian businesses fail not because of flawed concepts, but because founders bleed limited runway on monthly agency retainers and disconnected consultants before finding product-market fit. Learn the 4-phase turnaround framework to achieve self-sustaining operations.",
+    summary: "A common failure pattern among early-stage Indian businesses is bleeding limited runway on monthly agency retainers and disconnected consultants before finding product-market fit. Learn the 4-phase turnaround framework to achieve self-sustaining operations.",
     keyTakeaways: [
       "The Retainer Sinkhole: Why paying ₹50k–₹2L/month to third-party agencies with zero financial skin in the game silently destroys early-stage runway.",
       "The 50/50 Handshake Risk: Why informal equity splits without standard 4-year reverse vesting lead to fatal co-founder dead equity.",
@@ -253,12 +253,12 @@ The Bottom Line: If your startup or SME is struggling with cash flow, taking on 
     summary: "Top Indian business leaders have repeatedly highlighted the core truth of Indian commerce: Sell what people genuinely need every day, not what looks glamorous on social media. Discover how to avoid the online CAC trap, build high-utility essentials, master offline General Trade distribution, and deploy Cloud ERPs on a shared-equity model.",
     keyTakeaways: [
       "The Podcast Revelation: Top Indian business leaders (Nikhil Kamath on 'WTF', Raj Shamani on 'Figuring Out') emphasize: Sell what people genuinely need every day, not what looks glamorous on social media.",
-      "The Fatal CAC Trap: Why burning 50%+ of revenue on Meta/Google ads for discretionary lifestyle products leads to startup failure, while unglamorous B2B and FMCG essentials thrive.",
-      "The General Trade Imperative: Over 85% of Indian retail commerce happens offline through Kirana stores and regional distributors—omnichannel distribution is non-negotiable for scale.",
-      "The 1008 Execution Model: Focus on high-utility essentials with 60%+ gross margins, deploy Day-1 Cloud ERPs (ERPNext), and partner with operational venture facilitators for shared equity."
+      "The Fatal CAC Trap: Why burning excessive capital on Meta/Google ads for discretionary lifestyle products leads to startup failure, while unglamorous B2B and FMCG essentials thrive.",
+      "The General Trade Imperative: The vast majority of Indian retail commerce happens offline through Kirana stores and regional distributors—omnichannel distribution is essential for scale.",
+      "The 1008 Execution Model: Focus on high-utility essentials with strong gross margins, deploy Day-1 Cloud ERPs (ERPNext), and partner with operational venture facilitators for shared equity."
     ],
     actionableChecklist: [
-      "Validate Essential Utility & Margin: Target daily repeat usage categories with at least 60% gross margin before distribution cuts.",
+      "Validate Essential Utility & Margin: Target daily repeat usage categories with strong gross margins before distribution cuts.",
       "Audit Offline General Trade Beats: Establish relationships with regional stockists and Kirana distributors rather than relying 100% on online quick-commerce.",
       "Deploy Day-1 Cloud ERP & Beat Tracking: Implement Frappe/ERPNext to monitor stock aging, secondary sales, and distributor receivables in real time.",
       "Invest in Dedicated Tooling & Formulations: Partner with audited contract manufacturers with custom molds or proprietary batching rather than trading white-label stock.",
@@ -274,17 +274,17 @@ As Nikhil Kamath famously summarized: **"Sell what people need, not what you lik
 ┌────────────────────────────────────────────────────────────────────────┐
 │                   THE LIFESTYLE HYPE VS. ESSENTIAL REALITY              │
 │                                                                        │
-│   [The Glamour Trap: Discretionary Wants, 50%+ CAC, Online-Only]       │
+│   [The Glamour Trap: Discretionary Wants, High CAC, Online-Only]       │
 │                                 vs.                                    │
-│   [The Cash-Flow Enterprise: Daily Needs, 60%+ Margin, General Trade]  │
+│   [The Cash-Flow Enterprise: Daily Needs, Healthy Margins, Offline GT] │
 └────────────────────────────────────────────────────────────────────────┘
 \`\`\`
 
 ### The Customer Acquisition (CAC) Reality
 Entrepreneurs launch niche artisanal coffee brands, luxury lifestyle apps, or designer athleisure lines, only to discover that:
-* **Customer Acquisition Costs (CAC)** on Meta and Google devour 50% or more of every single sale.
-* **Repeat purchases** are near zero because the product is a non-essential luxury.
-* **Digital growth hits a hard ceiling** at ₹5 Cr–₹10 Cr annual run-rate when ad fatigue sets in.
+* **Customer Acquisition Costs (CAC)** on Meta and Google devour the majority of gross margins on digital sales.
+* **Repeat purchases** are low because the product is a non-essential luxury.
+* **Digital growth hits a hard ceiling** when ad fatigue sets in.
 
 Meanwhile, the most profitable, resilient fortunes in India are built in unglamorous sectors: **industrial packaging, B2B food ingredients, specialized electrical components, contract tooling, and regional Kirana distribution**.
 
@@ -299,7 +299,7 @@ When early-stage businesses stall, the failure is rarely bad luck. It is rooted 
 * **Utility-Driven Moats:** High-margin businesses solve everyday operational friction: packaging materials for factories, water filtration consumables, regional spices, or specialized tooling.
 
 ### 2. The 'Online-Only' Illusion (Ignoring General Trade)
-Over 85% of India's retail commerce happens through offline **General Trade (Kirana stores and local distributors)**. Founders who rely 100% on Shopify and quick-commerce hit a margin wall. Without a physical distributor network across Tier-2 and Tier-3 markets, building a ₹50 Cr+ brand is mathematically impossible.
+The vast majority of India's retail commerce happens through offline **General Trade (Kirana stores and local distributors)**. Founders who rely exclusively on Shopify and quick-commerce hit a margin wall. Without a physical distributor network across Tier-2 and Tier-3 markets, building a lasting national brand is extraordinarily difficult.
 
 ### 3. The 'Branding Agency' Cash Drain
 Struggling founders often spend ₹5L–₹15L hiring branding agencies to design aesthetic packaging and slide decks. Branding does not create distribution; **distribution and product reliability create the brand**.
@@ -488,9 +488,9 @@ Starting a company should not be a blind financial gamble. By demanding real cus
       "reverse vesting agreement India"
     ],
     targetAudience: "First-Time Founders, Co-Founding Teams, Corporate Executives Starting Ventures, Struggling Startups",
-    summary: "More Indian startups fail from internal co-founder fallouts than market competition. Splitting equity 50/50 on Day 1 without dynamic vesting creates 'Dead Equity'—a toxic cap table that causes 70%+ of angel and VC seed deals to collapse during due diligence. Learn the 4-phase institutional governance blueprint to structure vesting, reverse vesting buyback, and 100% IP assignment.",
+    summary: "A common cause of early-stage venture failure is internal co-founder fallout. Splitting equity 50/50 on Day 1 without milestone vesting creates 'Dead Equity'—a compromised cap table that frequently causes angel and seed deals to collapse during due diligence. Learn the 4-phase governance blueprint to structure milestone vesting, reverse vesting buyback, and full IP assignment.",
     keyTakeaways: [
-      "The Silent Company Killer: More Indian startups die from internal co-founder fallouts than market competition. Splitting equity 50/50 on Day 1 without dynamic vesting creates 'Dead Equity'—a toxic cap table that causes 70%+ of angel and VC seed deals to collapse during due diligence.",
+      "The Silent Company Killer: A frequent failure point for early ventures is internal co-founder fallout. Splitting equity 50/50 on Day 1 without milestone vesting creates 'Dead Equity'—a compromised cap table that frequently causes early investor diligence to fail when an inactive partner leaves.",
       "The Institutional Standard: Never issue unvested upfront shares. Enforce standard 4-year vesting with a 1-year cliff, reverse vesting rights, pre-agreed fair-market buyback mechanisms, and total intellectual property (IP) assignment to the Private Limited entity.",
       "The 1008 Co-Building Path: Avoid expensive legal retainers. Deploy institutional cap table architecture, match curated operational co-founders, and build on a shared-equity venture model with ₹0 consulting fees."
     ],
@@ -528,9 +528,9 @@ The remaining active founder is now working 80 hours a week to create wealth for
 
 If your startup is currently stuck in co-founder friction or preparing to incorporate, beware of these three common legal errors under Indian Company Law:
 
-### 1. Rewarding the 'Idea' Equally with 5-Year Execution
-* **Execution Over Ideation:** An idea represents 5% of a company's terminal value; execution over the next 4 to 7 years represents 95%.
-* **The Reality Check:** Giving someone 50% equity because they "came up with the original concept" or "introduced the first client" is a fatal miscalculation. Equity must be earned through continuous full-time operational contribution.
+### 1. Rewarding the 'Idea' Equally with Multi-Year Execution
+* **Execution Over Ideation:** An idea is only the initial spark; consistent multi-year execution on the ground is where real enterprise value is created.
+* **The Reality Check:** Giving someone 50% equity simply because they "came up with the original concept" or "introduced the first client" is a common miscalculation. Equity must be earned through continuous operational contribution.
 
 ### 2. Zero Reverse Vesting & Missing Cliff Provisions
 Under the Indian Companies Act, once equity shares are allotted and stamped without reverse vesting restrictions, they cannot be forcibly repossessed by the company. Without a 1-year cliff and reverse vesting, a co-founder who leaves after 90 days walks away with permanent ownership.

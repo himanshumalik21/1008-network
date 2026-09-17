@@ -76,7 +76,7 @@ export function CoFounderEquitySplitGraphic() {
                   <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded bg-[#FFF4ED] text-[#C2410C] border border-[#FFD8C2] flex items-center gap-1">
                     <XCircle className="h-3.5 w-3.5 text-[#FF7043]" /> THE HANDSHAKE TRAP
                   </span>
-                  <span className="text-[11px] font-mono font-bold text-[#FF7043]">70%+ Deal Collapse</span>
+                  <span className="text-[11px] font-mono font-bold text-[#FF7043]">Frequent Deal Collapse</span>
                 </div>
 
                 <h4 className="text-base font-extrabold text-[#0A2540]">

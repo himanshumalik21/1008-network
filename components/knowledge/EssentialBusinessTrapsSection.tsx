@@ -42,19 +42,19 @@ export function EssentialBusinessTrapsSection() {
       iconBg: "bg-[#F0F0FF] border-[#E0E0FF] text-[#635BFF]",
       icon: <Store className="h-5 w-5 text-[#635BFF]" />,
       summary:
-        "Over 85% of India's retail commerce happens through offline General Trade (Kirana stores and local distributors), not digital apps.",
+        "The vast majority of India's retail commerce happens through offline General Trade (Kirana stores and local distributors), not digital apps.",
       points: [
         {
           label: "The Margin Wall",
-          text: "Founders relying 100% on Shopify and quick-commerce get squeezed by platform fees (20%–35%) and rising Meta ad costs.",
+          text: "Founders relying exclusively on Shopify and quick-commerce get squeezed by platform fees (20%–35%) and rising Meta ad costs.",
         },
         {
           label: "Physical Moats",
-          text: "Without a physical distributor network across Tier-2 and Tier-3 hubs, building a ₹50 Cr+ enterprise is mathematically impossible.",
+          text: "Without a physical distributor network across Tier-2 and Tier-3 hubs, building a lasting national enterprise is extraordinarily difficult.",
         },
       ],
       coreFlaw:
-        "Omnichannel architecture is mandatory: 60% offline General Trade combined with 40% digital storefronts.",
+        "Omnichannel architecture is critical: offline General Trade distribution combined with digital storefronts.",
     },
     {
       number: "03",

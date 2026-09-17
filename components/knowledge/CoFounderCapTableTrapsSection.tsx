@@ -25,8 +25,8 @@ export function CoFounderCapTableTrapsSection() {
         "Giving an equal 50% split because someone 'came up with the original concept' fatally overvalues ideation vs. multi-year execution muscle.",
       points: [
         {
-          label: "5% vs 95% Rule",
-          text: "An initial idea represents 5% of a company's terminal enterprise value; ground execution over the next 4 to 7 years represents 95%.",
+          label: "Ideation vs Multi-Year Execution",
+          text: "An initial idea is only the starting spark; consistent multi-year execution on the ground is where real enterprise value is created.",
         },
         {
           label: "Sweat Equity Dilution",

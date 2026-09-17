@@ -124,7 +124,7 @@ export function FounderCashDrainGraphic() {
               ₹0 Cash Remaining • Zero Customer Retention • Founder Exhaustion
             </div>
             <div className="text-xs text-[#627D98] font-sans pt-1 max-w-xl mx-auto">
-              <strong>The Lesson:</strong> 82% of early-stage businesses fail because capital was drained on third-party retainers before establishing product-market fit.
+              <strong>The Lesson:</strong> A classic failure pattern is exhausting early capital on third-party retainers before establishing product-market fit.
             </div>
           </div>
         </div>

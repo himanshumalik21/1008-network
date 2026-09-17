@@ -78,7 +78,7 @@ export function StructuralTrapsSection() {
         },
       ],
       coreFlaw:
-        "Without an integrated Cloud ERP backbone on Day 1, founders spend 80% of their energy firefighting administrative friction.",
+        "Without an integrated Cloud ERP backbone on Day 1, founders spend most of their early energy firefighting administrative friction.",
     },
   ];
 
