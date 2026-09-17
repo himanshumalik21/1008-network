@@ -2,9 +2,9 @@ import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 
 export const metadata = {
-  title: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
+  title: "1008 Network — Co-Building Businesses With Experienced People",
   description:
-    "1008 Network is India's premier venture ecosystem across 4 pillars: Venture Studio turnkey execution for equity, Partner Network co-founder & talent matching, Capital syndicate matchmaking (₹50K to ₹5Cr+), and tactical Playbooks.",
+    "You know the business. We'll help you build the company. 1008 helps experienced engineers, operators, and executives turn domain insights into enduring enterprises.",
   alternates: {
     canonical: "https://www.1008.network",
   },
@@ -12,8 +12,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col w-full bg-white lg:h-[calc(100dvh-4rem)] lg:overflow-hidden">
-      {/* Hero Section with Razor-Sharp Hook & Four Pillars 2x2 Interactive Blueprint */}
+    <div className="flex flex-col w-full bg-white min-h-screen">
       <HeroSection />
     </div>
   );

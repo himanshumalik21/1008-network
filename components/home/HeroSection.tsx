@@ -20,9 +20,40 @@ import {
   ArrowUpRight,
   UserPlus,
   ArrowRight,
+  Briefcase,
+  Code2,
+  TrendingUp,
+  Sparkles,
+  CheckCircle2,
 } from "lucide-react";
 
 export function HeroSection() {
+  const archetypes = [
+    {
+      title: "The Domain Specialist",
+      subtitle: "Manufacturing, Logistics, Healthcare, B2B",
+      icon: <Briefcase className="h-4 w-4 text-[#635BFF]" />,
+      iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
+      quote: "“I know the customers and industry bottlenecks inside out, but I don't have the time or team to write software, manage legal compliance, or set up ground operations.”",
+      solution: "1008 builds the software, operations, and back-office from scratch for shared equity.",
+    },
+    {
+      title: "The Technical Architect",
+      subtitle: "Senior Engineers, CTOs, System Builders",
+      icon: <Code2 className="h-4 w-4 text-[#00A389]" />,
+      iconBg: "bg-[#E6FFFA] text-[#007A66] border-[#B2F5EA]",
+      quote: "“I can build the platform in weeks, but I don't know how to run enterprise B2B sales, negotiate supply agreements, or structure regulatory licensing.”",
+      solution: "1008 pairs you with commercial operators, opens enterprise sales channels, and structures governance.",
+    },
+    {
+      title: "The Bootstrapped Operator",
+      subtitle: "Early Revenue, Rebooting Ventures",
+      icon: <TrendingUp className="h-4 w-4 text-[#FF7043]" />,
+      iconBg: "bg-[#FFF3EE] text-[#D94814] border-[#FFD8C9]",
+      quote: "“I've proven customer demand, but I'm trapped firefighting administrative chaos and need structured execution and working capital to scale.”",
+      solution: "1008 installs open-source ERP systems, eliminates agency retainers, and facilitates syndicate capital.",
+    },
+  ];
 
   const pathways = [
     {
@@ -80,7 +111,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-full lg:min-h-[calc(100dvh-4rem)] lg:pb-8 flex flex-col justify-center items-center py-8 sm:py-10 lg:py-4 overflow-hidden bg-white">
+    <section className="relative w-full flex flex-col justify-center items-center py-12 sm:py-16 lg:py-20 overflow-hidden bg-white">
       {/* 1. Architectural Box Grid Pattern with Radial Fade */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-40 pointer-events-none" />
 
@@ -92,43 +123,146 @@ export function HeroSection() {
       <div className="absolute top-1/4 -right-16 w-[480px] h-[500px] bg-gradient-to-bl from-[#FF7043]/06 via-[#635BFF]/05 to-transparent blur-[120px] pointer-events-none animate-float-reverse" />
       <div className="absolute top-1/3 -left-28 w-[460px] h-[380px] bg-gradient-to-br from-[#00D4B2]/06 via-[#635BFF]/04 to-transparent blur-[120px] pointer-events-none animate-pulse-subtle" />
 
-      {/* 4. Subtle Technical Dot Matrix Accent Corners */}
-      <div className="absolute left-6 top-1/4 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
-      <div className="absolute right-6 top-1/3 w-36 h-36 bg-dots-matrix opacity-20 mask-radial-fade pointer-events-none hidden xl:block" />
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-center space-y-4 sm:space-y-5 lg:space-y-5">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center justify-center space-y-10 sm:space-y-12">
         {/* Top Header & Value Proposition Block */}
-        <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse className="text-xs sm:text-[13px] px-3.5 py-1 font-medium">
-              1008 Network // Co-Building & Partner Network
+              1008 Network // Co-Building for Experienced People
             </Badge>
           </div>
 
-          {/* Primary Platform Headline - Owning the core sentence */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[48px] font-extrabold tracking-tight text-[#0A2540] leading-[1.14] font-sans">
-            <span className="block">1008 helps experienced people build businesses</span>
+          {/* Primary Platform Headline */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
+            <span className="block">You know the business.</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
-              by providing the execution and people they are missing.
+              We'll help you build the company.
             </span>
           </h1>
 
           {/* Platform Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal">
-            You bring the industry expertise, ambition, and market opportunity. 1008 helps build the people, systems, technology, suppliers, and operations around it.
+          <p className="text-base sm:text-lg md:text-xl text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal">
+            1008 helps experienced engineers, operators, and industry executives turn domain knowledge into operating companies by providing the execution and team they are missing.
           </p>
         </div>
 
+        {/* The Human Story Spotlight Card ("That's Me" Conversion Engine) */}
+        <div className="w-full max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-white to-[#F8FAFC] border border-[#E2E8F0] p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-72 h-72 bg-[#635BFF]/05 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="relative z-10 space-y-6">
+            <div className="flex items-center justify-between flex-wrap gap-2 pb-2 border-b border-[#E2E8F0]">
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-[#635BFF]" />
+                <span className="text-xs font-bold uppercase tracking-wider text-[#635BFF]">
+                  A Story You Might Recognize
+                </span>
+              </div>
+              <span className="text-xs font-semibold text-[#64748B] bg-white px-2.5 py-1 rounded-full border border-[#E2E8F0]">
+                Sound familiar?
+              </span>
+            </div>
+
+            <div className="space-y-4 text-[#334155] text-sm sm:text-base leading-relaxed">
+              <p className="font-semibold text-base sm:text-lg text-[#0A2540]">
+                You&apos;re a senior engineer, operations head, or domain executive.
+              </p>
+              <p>
+                You know your industry inside out. You&apos;ve spent years working on the frontlines, you&apos;ve lived through the operational bottlenecks firsthand, and you have a clear idea for a business that solves a genuine customer problem.
+              </p>
+              <div className="p-4 rounded-xl bg-[#F1F5F9]/80 border-l-4 border-[#FF7043] text-xs sm:text-sm text-[#475569] space-y-1">
+                <p className="font-bold text-[#0A2540]">The catch?</p>
+                <p>
+                  You don&apos;t know how to build the sales team, hire the CTO, set up operations, find suppliers, create the technology, or get the first customers without burning through your savings or quitting your career blindly.
+                </p>
+              </div>
+              <p className="pt-1 text-[#0A2540] font-medium">
+                <strong className="text-[#635BFF] font-bold">That&apos;s where 1008 comes in.</strong> You bring the industry expertise, customer relationships, and domain opportunity. 1008 steps in as your turnkey co-builder—building the software, running the operations, sourcing suppliers, and assembling the missing team around you for shared equity upside.
+              </p>
+            </div>
+
+            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <Link
+                href="/studio"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-[0_2px_8px_rgba(99,91,255,0.25)] transition-all"
+              >
+                <span>Build With 1008 (Venture Studio)</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/network/post"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#0A2540] border border-[#E2E8F0] font-semibold text-sm transition-all"
+              >
+                <span>Find a Co-Founder / Operator</span>
+                <ArrowUpRight className="h-4 w-4 text-[#64748B]" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Who We Build With (3 Relatable Archetypes) */}
+        <div className="w-full max-w-4xl mx-auto space-y-4">
+          <div className="text-center space-y-1">
+            <h2 className="text-lg sm:text-xl font-bold text-[#0A2540]">
+              Who We Co-Build With
+            </h2>
+            <p className="text-xs sm:text-sm text-[#64748B]">
+              Real people with deep industry knowledge, paired with our turnkey execution machinery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+            {archetypes.map((arch, idx) => (
+              <div
+                key={idx}
+                className="p-5 rounded-2xl bg-white border border-[#E2E8F0] flex flex-col justify-between space-y-3 shadow-2xs hover:border-[#CBD5E1] transition-all"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-center gap-2.5">
+                    <div className={`w-8 h-8 rounded-lg border flex items-center justify-center shrink-0 ${arch.iconBg}`}>
+                      {arch.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-bold text-[#0A2540] leading-tight">
+                        {arch.title}
+                      </h3>
+                      <p className="text-[11px] text-[#64748B] font-medium leading-tight">
+                        {arch.subtitle}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-[#475569] italic leading-relaxed">
+                    {arch.quote}
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-[#F1F5F9] flex items-start gap-1.5 text-[11px] text-[#0A2540] font-medium leading-tight">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#059669] shrink-0 mt-0.5" />
+                  <span>{arch.solution}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* 4 Clear User Intent Pathways Grid */}
-        <section aria-label="Choose your pathway on 1008 Network" className="w-full max-w-4xl mx-auto">
-          <h2 className="sr-only">Choose Your Pathway</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
+        <section aria-label="Choose your pathway on 1008 Network" className="w-full max-w-4xl mx-auto space-y-3">
+          <div className="text-center space-y-1">
+            <h2 className="text-lg sm:text-xl font-bold text-[#0A2540]">
+              Choose Your Pathway
+            </h2>
+            <p className="text-xs sm:text-sm text-[#64748B]">
+              Whether you want to build a venture, find a co-founder, join as an operator, or invest.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
             {pathways.map((item, idx) => (
               <Link
                 key={idx}
                 href={item.href}
-                className={`p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-xs ${item.bgHover}`}
+                className={`p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-xs ${item.bgHover}`}
               >
                 {/* Subtle Top Indicator Line on Hover */}
                 <div
@@ -173,10 +307,10 @@ export function HeroSection() {
           </div>
 
           {/* Secondary Playbook Navigation Strip */}
-          <div className="mt-3 text-center">
+          <div className="pt-2 text-center">
             <Link
               href="/knowledge"
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8FAFC]/90 hover:bg-[#F1F5F9] border border-[#E2E8F0] text-xs text-[#475569] hover:text-[#0A2540] transition-colors group"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F8FAFC]/90 hover:bg-[#F1F5F9] border border-[#E2E8F0] text-xs text-[#475569] hover:text-[#0A2540] transition-colors group"
             >
               <BookOpen className="h-3.5 w-3.5 text-[#FF7043]" />
               <span>Looking for operational frameworks on credit, cap tables, and unit economics?</span>
@@ -184,18 +318,6 @@ export function HeroSection() {
                 Read 1008 Playbooks <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
               </span>
             </Link>
-          </div>
-
-          {/* Semantic SEO Landmarks for Search Console & Crawlers */}
-          <div className="sr-only">
-            <h2>Turnkey Execution for Indian Enterprises</h2>
-            <p>
-              1008 Network Venture Studio and Partner Network provide turnkey ground operations, manufacturing setup, open-source ERP deployment, and co-founder matching for shared equity.
-            </p>
-            <h2>Operational Playbooks & Guides</h2>
-            <p>
-              Ground-level tactical playbooks, ULI credit guides, working capital frameworks, and cash-flow blueprints for Indian entrepreneurs and business builders.
-            </p>
           </div>
         </section>
       </div>

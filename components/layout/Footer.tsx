@@ -2,45 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
 import { Mail } from "lucide-react";
 import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export function Footer() {
-  const pathname = usePathname();
-
-  if (pathname === "/") {
-    return (
-      <footer className="w-full bg-white/95 backdrop-blur-md border-t border-[#E6E8EB] py-3 sm:py-2 lg:h-10 text-xs text-[#627D98] relative lg:fixed lg:bottom-0 lg:left-0 lg:right-0 z-30 shrink-0 pb-safe">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2.5">
-          <div className="flex items-center gap-2 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-            <span>© {new Date().getFullYear()} 1008 Network (1008.network)</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">Operating Pan-India</span>
-          </div>
-          <div className="flex items-center gap-4 sm:gap-5 text-xs flex-wrap justify-center">
-            <a
-              href="https://www.linkedin.com/company/1008-network/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#0A66C2] transition-colors flex items-center gap-1 font-medium"
-            >
-              <LinkedInIcon className="h-3.5 w-3.5 text-[#0A66C2]" />
-              <span>LinkedIn</span>
-            </a>
-            <Link href="/terms" className="hover:text-[#0A2540] transition-colors">
-              Terms & NDA
-            </Link>
-            <Link href="/privacy" className="hover:text-[#0A2540] transition-colors">
-              Privacy Policy
-            </Link>
-          </div>
-        </div>
-      </footer>
-    );
-  }
-
   return (
     <footer className="bg-[#F8FAFC] border-t border-[#E2E8F0] text-[#0A2540] pt-12 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
