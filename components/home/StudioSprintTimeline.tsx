@@ -75,7 +75,7 @@ export function StudioSprintTimeline() {
       milestone: "Full Founder Independence",
       headline: "Achieving independence: Full IP ownership, investor readiness, and zero vendor lock-in.",
       deliverables: [
-        "100% legal assignment of all code, supplier contracts, trademarks, and IP to your company entity",
+        "Clear legal assignment of all venture-specific code, supplier contracts, trademarks, and created IP directly to your company entity",
         "Day-to-day operations run smoothly by your permanent full-time team",
         "Clean cap table, financial reports, and introductions to active angel and syndicate investors",
         "Transition from active studio co-building to ongoing board advisory and founder support",
@@ -207,7 +207,7 @@ export function StudioSprintTimeline() {
                 <span>The 1008 Network Commitment</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed font-sans">
-                We co-build alongside you with shared equity and skin in the game. You walk away with full IP ownership, an operational business, customer revenue, scalable workflows, and ongoing strategic board advisory.
+                We co-build alongside you with shared equity and skin in the game. The objective is to build an operational business with clear venture IP ownership, scalable workflows, an initial customer base, and a team capable of operating independently.
               </p>
               <div className="pt-2">
                 <Button

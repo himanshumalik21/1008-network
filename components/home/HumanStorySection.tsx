@@ -44,7 +44,7 @@ export function HumanStorySection() {
         "“I can architect and deploy a robust distributed system in weeks. But I don’t have enterprise B2B sales pipelines, ground vendor contracts, or patience for government regulatory filings.”",
       bottleneck: "Lacks enterprise GTM channels, physical operational logistics, and commercial sales leadership.",
       solution:
-        "1008 connects you with vetted commercial operators, secures enterprise pilot agreements, and handles physical back-office logistics.",
+        "1008 connects you with experienced commercial operators, opens enterprise sales channels, and handles physical back-office operations.",
       metrics: "Robust tech stack + 1008 commercial enterprise distribution",
     },
     {
@@ -59,7 +59,7 @@ export function HumanStorySection() {
       bottleneck: "Trapped in administrative chaos, costly retainers, and fragmented freelance contractors.",
       solution:
         "1008 eliminates cash retainers, installs institutional ERP infrastructure, audits factory suppliers, and facilitates syndicate growth capital.",
-      metrics: "Proven product demand + 1008 institutional scaling machinery",
+      metrics: "Proven product demand + 1008 structured execution systems",
     },
   ];
 

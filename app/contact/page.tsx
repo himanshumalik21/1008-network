@@ -79,7 +79,7 @@ export default function ContactPage() {
             Connect with 1008 Network
           </h1>
           <p className="text-sm sm:text-base text-[#425466] max-w-xl mx-auto leading-relaxed">
-            Whether you want to explore the Venture Studio, discuss venture theses, or book confidential office hours with our partners in Delhi NCR.
+            Whether you want to explore the Venture Studio, discuss venture theses, or request a confidential conversation with our team.
           </p>
         </div>
 
@@ -111,8 +111,8 @@ export default function ContactPage() {
                 <div className="flex items-start gap-2.5">
                   <Clock className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[#0A2540] block font-semibold">Response SLA</span>
-                    <span>Within 24 business hours</span>
+                    <span className="text-[#0A2540] block font-semibold">Response Time</span>
+                    <span>We review every submission personally (typically 1–2 business days)</span>
                   </div>
                 </div>
 
@@ -137,10 +137,10 @@ export default function ContactPage() {
             <div className="p-6 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] text-xs text-[#425466] space-y-2 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
               <div className="flex items-center gap-1.5 text-[#059669] font-bold">
                 <ShieldCheck className="h-4 w-4" />
-                <span>Confidentiality Guarantee</span>
+                <span>Confidential Handling</span>
               </div>
               <p className="leading-relaxed">
-                We maintain strict confidentiality under mutual NDA for all incoming founder submissions and corporate career transition inquiries.
+                Your submission is handled confidentially under our Terms and applicable confidentiality provisions.
               </p>
             </div>
           </div>

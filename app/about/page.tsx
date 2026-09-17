@@ -30,12 +30,12 @@ export default function AboutPage() {
     {
       icon: <Users className="h-5 w-5 text-[#059669]" />,
       title: "Co-Founder & Talent Matchmaking",
-      desc: "We connect domain founders with reviewed technical CTOs, GTM leaders, and operations managers through our curated Partner Network.",
+      desc: "We connect domain founders with curated technical CTOs, GTM leaders, and operations managers through our Partner Network.",
     },
     {
       icon: <ShieldCheck className="h-5 w-5 text-[#FF7043]" />,
-      title: "100% IP Assignment & Handover",
-      desc: "We build founder independence, not permanent vendor lock-in. All custom software, licenses, and contracts are formally assigned to your venture.",
+      title: "Venture-Owned IP & Clear Handover",
+      desc: "We build founder independence, not permanent vendor lock-in. All venture-specific software, licenses, and contracts are formally assigned to your venture.",
     },
   ];
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
             1008 helps experienced people build businesses by providing the execution and people they are missing.
           </h1>
           <p className="text-base sm:text-lg text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Based in Delhi NCR and partnering with founders across India, 1008 Network turns deep industry expertise into operating, cashflow-positive companies.
+            Based in Delhi NCR and partnering with founders across India, 1008 Network helps turn deep industry expertise into operating businesses.
           </p>
         </div>
 
@@ -146,7 +146,7 @@ export default function AboutPage() {
             Our Operational Philosophy
           </h2>
           <p className="text-sm text-[#425466] leading-relaxed">
-            The most successful companies are often built by people with deep domain expertise—professionals who have spent years in an industry and know the customers, suppliers, and pain points inside out. But launching a company requires execution capabilities they may not have: software architecture, digital systems, supplier contracts, compliance, and initial hiring. 1008 steps in as an operational co-builder to provide that execution machinery and missing talent for shared equity.
+            The most successful companies are often built by people with deep domain expertise—professionals who have spent years in an industry and know the customers, suppliers, and pain points inside out. But launching a company requires execution capabilities they may not have: software architecture, digital systems, supplier contracts, compliance, and initial hiring. 1008 steps in as an operational co-builder to provide that execution capability and missing talent for shared equity.
           </p>
         </div>
 

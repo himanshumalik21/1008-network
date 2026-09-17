@@ -93,7 +93,7 @@ export default function NetworkPage() {
             <span>•</span>
             <div className="flex items-center gap-1.5">
               <Clock className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>Curated Active Listings</span>
+              <span>Curated Opportunities</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
@@ -234,7 +234,7 @@ export default function NetworkPage() {
                 <Badge variant="indigo" size="sm">For Founders & Builders</Badge>
                 <h3 className="text-2xl font-extrabold text-[#0A2540]">Looking for a Co-Founder / Talent?</h3>
                 <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Have the domain vision but need a technical CTO, operations head, or commercial sales partner? Post your requirement to be matched with reviewed operators.
+                  Have the domain vision but need a technical CTO, operations head, or commercial sales partner? Post your requirement to be matched with curated operators.
                 </p>
               </div>
 

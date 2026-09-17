@@ -31,7 +31,7 @@ export function HeroSection() {
   const engineFeatures = {
     studio: {
       tag: "01 // VENTURE STUDIO",
-      title: "Turnkey Co-Building Machinery",
+      title: "We build the operating company around your expertise",
       desc: "We build your software stack, negotiate supplier contracts, configure cloud ERPs, and manage operational back-offices from day zero for shared equity.",
       deliverables: [
         "Production Software & Cloud Architecture",
@@ -49,10 +49,10 @@ export function HeroSection() {
       title: "Sourced Co-Founders & Operators",
       desc: "Connect with high-caliber technical CTOs, commercial GTM heads, and domain operators ready to co-build for milestone-vested equity.",
       deliverables: [
-        "Standardized Milestone Equity Contracts",
-        "Reviewed Technical & Commercial Profiles",
-        "Structured Co-Founder Alignment Frameworks",
-        "Direct Opportunities Pan-India",
+        "Standardized Milestone Equity Frameworks",
+        "Curated Technical & Commercial Profiles",
+        "Structured Co-Founder Alignment Models",
+        "Direct Introductions Pan-India",
       ],
       link: "/network",
       linkText: "Explore Partner Network",
@@ -62,11 +62,11 @@ export function HeroSection() {
     capital: {
       tag: "03 // CAPITAL NETWORK",
       title: "Curated Capital Discovery",
-      desc: "Connect promising ventures with angels, family offices, and eligible capital partners. Zero broker fees, zero percentage cuts.",
+      desc: "Connect promising ventures with angels, family offices, and eligible capital partners. No placement or intermediary fees.",
       deliverables: [
         "Curated Angel & Family Office Syndicates",
         "16-Point Evaluated Parameter Intake",
-        "Zero Brokerage or Intermediary Fees",
+        "No Placement or Intermediary Fees",
         "Non-Entity Statutory Disclosures",
       ],
       link: "/capital",
@@ -167,7 +167,7 @@ export function HeroSection() {
           <div className="flex items-center justify-between flex-wrap gap-2 pb-6 border-b border-[#E2E8F0]">
             <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#64748B]">
               <Workflow className="h-4 w-4 text-[#635BFF]" />
-              <span>1008 Operational Machinery:</span>
+              <span>The 1008 Business-Building System:</span>
             </div>
 
             <div className="flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-xl border border-[#E2E8F0] overflow-x-auto max-w-full">

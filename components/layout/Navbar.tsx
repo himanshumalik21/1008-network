@@ -103,7 +103,7 @@ export function Navbar() {
                 rightIcon={<ArrowRight className="h-4 w-4" />}
                 className="font-semibold text-xs sm:text-sm px-5 h-10 shadow-[0_2px_4px_rgba(99,91,255,0.2)]"
               >
-                Apply to Build
+                Build With 1008
               </Button>
             </div>
 
@@ -115,7 +115,7 @@ export function Navbar() {
                 onClick={handleOpenModal}
                 className="text-xs px-3 sm:px-3.5 h-8 font-semibold shrink-0"
               >
-                Apply to Build
+                Build With 1008
               </Button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

@@ -147,7 +147,7 @@ You don’t need another consultant charging fees for advice. **You need committ
       "TReDS invoice discounting India"
     ],
     targetAudience: "Early-Stage Founders, Struggling B2B/Manufacturing Business Owners, SME Leaders",
-    summary: "The Reserve Bank of India's rollout of the Unified Lending Interface (ULI) has permanently shifted credit underwriting from property collateral to digital cash-flow velocity. Discover how to resolve GST mismatches, deploy Day-1 Cloud ERPs, tap CGTMSE lines up to ₹5 Cr, and discount invoices on TReDS.",
+    summary: "The Reserve Bank of India's Unified Lending Interface (ULI) is transforming credit underwriting by enabling digital cash-flow evaluation alongside traditional metrics. Discover how to resolve GST mismatches, deploy Day-1 Cloud ERPs, evaluate CGTMSE credit guarantee parameters, and discount invoices on TReDS.",
     keyTakeaways: [
       "The Digital Credit Revolution: How RBI's Unified Lending Interface (ULI) replaced immovable property collateral with live GST and Account Aggregator cash-flow velocity.",
       "The Data Mismatch Trap: Why early ventures fail algorithmic credit scoring due to GSTR-1 vs GSTR-3B variances and unreconciled Input Tax Credit (ITC).",
@@ -488,7 +488,7 @@ Starting a company should not be a blind financial gamble. By demanding real cus
       "reverse vesting agreement India"
     ],
     targetAudience: "First-Time Founders, Co-Founding Teams, Corporate Executives Starting Ventures, Struggling Startups",
-    summary: "A common cause of early-stage venture failure is internal co-founder fallout. Splitting equity 50/50 on Day 1 without milestone vesting creates 'Dead Equity'—a compromised cap table that frequently causes angel and seed deals to collapse during due diligence. Learn the 4-phase governance blueprint to structure milestone vesting, reverse vesting buyback, and full IP assignment.",
+    summary: "A frequent point of friction in early-stage ventures is unstructured co-founder equity. Splitting equity 50/50 on Day 1 without vesting agreements risks creating 'Dead Equity'—a compromised cap table where departing partners retain large unearned stakes. Learn the 4-phase governance blueprint to structure milestone vesting, reverse vesting buybacks, and venture IP assignment.",
     keyTakeaways: [
       "The Silent Company Killer: A frequent failure point for early ventures is internal co-founder fallout. Splitting equity 50/50 on Day 1 without milestone vesting creates 'Dead Equity'—a compromised cap table that frequently causes early investor diligence to fail when an inactive partner leaves.",
       "The Institutional Standard: Never issue unvested upfront shares. Enforce standard 4-year vesting with a 1-year cliff, reverse vesting rights, pre-agreed fair-market buyback mechanisms, and total intellectual property (IP) assignment to the Private Limited entity.",

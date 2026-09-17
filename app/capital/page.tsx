@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
-import { InvestIn1008Modal } from "@/components/capital/InvestIn1008Modal";
 import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { capitalFaqs } from "@/data/faqs";
 import {
@@ -31,8 +30,6 @@ import {
 } from "lucide-react";
 
 export default function CapitalPage() {
-  const [isStudioInvestModalOpen, setIsStudioInvestModalOpen] = useState(false);
-
   const founderChecklist = [
     "Founder & team background",
     "Business concept & industry sector",
@@ -85,7 +82,7 @@ export default function CapitalPage() {
       num: "04",
       tag: "Direct Execution",
       title: "Independent Due Diligence & Direct Signing",
-      desc: "Investors execute their independent legal due diligence and contract directly with the company entity. Zero broker cuts or hidden fees.",
+      desc: "Investors execute their independent legal due diligence and contract directly with the company entity. No placement or intermediary fees.",
       icon: <FileCheck2 className="h-4 w-4 text-[#0A2540]" />,
       iconBg: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
     },
@@ -156,14 +153,6 @@ export default function CapitalPage() {
             >
               For Investors (Join Network)
             </Button>
-            <Button
-              onClick={() => setIsStudioInvestModalOpen(true)}
-              size="md"
-              variant="ghost"
-              className="w-full sm:w-auto text-xs text-[#635BFF] font-semibold hover:bg-[#635BFF]/10"
-            >
-              Invest in 1008 Studio →
-            </Button>
           </div>
 
           {/* Quick Informational Highlights */}
@@ -180,7 +169,7 @@ export default function CapitalPage() {
             <span>•</span>
             <div className="flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5 text-[#059669]" />
-              <span>Zero Intermediary Broker Fees</span>
+              <span>No Placement or Intermediary Fees</span>
             </div>
           </div>
         </div>
@@ -306,7 +295,7 @@ export default function CapitalPage() {
                 Join the Capital Network
               </Button>
               <div className="mt-2 text-center text-[11px] text-[#64748B]">
-                Curated introductions • Zero broker management fee
+                Curated introductions • No placement or intermediary fees
               </div>
             </div>
           </div>
@@ -352,91 +341,7 @@ export default function CapitalPage() {
         </div>
       </section>
 
-      {/* 4. Featured Syndicate Opportunity: Invest in 1008 Studio Parent */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="rounded-3xl bg-[#0A2540] p-8 sm:p-12 text-white relative overflow-hidden shadow-[0_20px_50px_rgba(10,37,64,0.25)] border border-[#1E293B]">
-          <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-15 pointer-events-none" />
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#635BFF]/30 rounded-full blur-[110px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#00D4B2]/20 rounded-full blur-[110px] pointer-events-none" />
-
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-8 space-y-5">
-              <div className="inline-flex items-center gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full bg-[#00D4B2]/15 text-[#00D4B2] text-xs font-mono font-bold uppercase tracking-wider border border-[#00D4B2]/30 flex items-center gap-1.5 shadow-2xs">
-                  <Sparkles className="h-3.5 w-3.5" />
-                  Studio Holding Opportunity
-                </span>
-                <span className="text-xs text-[#94A3B8] font-mono">
-                  Parent Equity Allocation
-                </span>
-              </div>
-
-              <div className="space-y-2">
-                <h2 className="text-2xl sm:text-4xl lg:text-[36px] font-extrabold tracking-tight text-white font-sans leading-[1.15]">
-                  Invest in{" "}
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#38BDF8]">
-                    1008 Network Studio
-                  </span>
-                </h2>
-                <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed max-w-2xl font-normal">
-                  Back the venture studio co-building real economy enterprises with experienced founders. Holding equity in 1008 Network gives you direct participation across the ventures, systems, and operating equity we build.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10 flex flex-col justify-between">
-                  <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
-                    <CheckCircle2 className="h-4 w-4 shrink-0" />
-                    <span>Co-Building Engine</span>
-                  </div>
-                  <span className="text-[11px] text-[#94A3B8] mt-1">Direct venture creation</span>
-                </div>
-                <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10 flex flex-col justify-between">
-                  <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
-                    <CheckCircle2 className="h-4 w-4 shrink-0" />
-                    <span>Parent Equity</span>
-                  </div>
-                  <span className="text-[11px] text-[#94A3B8] mt-1">Holding entity stake</span>
-                </div>
-                <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10 flex flex-col justify-between">
-                  <div className="flex items-center gap-2 text-[#00D4B2] text-xs font-mono font-bold">
-                    <CheckCircle2 className="h-4 w-4 shrink-0" />
-                    <span>Zero Brokerage</span>
-                  </div>
-                  <span className="text-[11px] text-[#94A3B8] mt-1">Direct private round</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 p-6 sm:p-7 rounded-2xl bg-white/[0.06] border border-white/15 backdrop-blur-md space-y-4 shadow-xl">
-              <div className="space-y-2.5 text-xs font-mono">
-                <div className="flex items-center justify-between text-[#94A3B8]">
-                  <span>Structure</span>
-                  <span className="text-white font-bold">Parent Holding Corp</span>
-                </div>
-                <div className="flex items-center justify-between text-[#94A3B8]">
-                  <span>Access</span>
-                  <span className="text-[#00D4B2] font-semibold">Curated Review</span>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <Button
-                  onClick={() => setIsStudioInvestModalOpen(true)}
-                  variant="primary"
-                  size="lg"
-                  rightIcon={<ArrowRight className="h-4 w-4" />}
-                  className="w-full justify-center font-semibold text-sm shadow-[0_4px_16px_rgba(99,91,255,0.4)] bg-[#635BFF] hover:bg-[#5851EA] border-none py-3"
-                >
-                  Invest in 1008 Studio
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. FAQs Section */}
+      {/* 4. FAQs Section */}
       <PillarFAQ
         items={capitalFaqs}
         badge="Capital Network FAQs"
@@ -445,7 +350,7 @@ export default function CapitalPage() {
         description="Everything you need to know about submissions, investor criteria, deal calls, and independent due diligence."
       />
 
-      {/* 6. Facilitator & Disclaimer Banner */}
+      {/* 5. Facilitator & Disclaimer Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="p-6 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#92400E]">
           <div className="flex items-start gap-3">
@@ -467,12 +372,6 @@ export default function CapitalPage() {
           </Link>
         </div>
       </section>
-
-      {/* Invest in 1008 Network Modal */}
-      <InvestIn1008Modal
-        isOpen={isStudioInvestModalOpen}
-        onClose={() => setIsStudioInvestModalOpen(false)}
-      />
     </div>
   );
 }
