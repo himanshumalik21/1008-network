@@ -129,22 +129,40 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse className="text-xs sm:text-[13px] px-3.5 py-1 font-medium">
-              1008 Network // Co-Building for Experienced People
+              1008 Network // Co-Building & Partner Network
             </Badge>
           </div>
 
           {/* Primary Platform Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
-            <span className="block">You know the business.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[52px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
+            <span className="block">Build the business you know</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
-              We'll help you build the company.
+              should exist.
             </span>
           </h1>
 
           {/* Platform Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal">
-            1008 helps experienced engineers, operators, and industry executives turn domain knowledge into operating companies by providing the execution and team they are missing.
+            1008 Network helps experienced professionals and entrepreneurs turn industry expertise into operating businesses — with the people, systems, and execution needed to make them real.
           </p>
+
+          {/* Direct Hero Action CTAs */}
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              href="/studio"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-[0_2px_8px_rgba(99,91,255,0.25)] transition-all"
+            >
+              <span>Build With 1008</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/network/post"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#0A2540] border border-[#E2E8F0] font-semibold text-sm shadow-xs transition-all"
+            >
+              <span>Find a Partner</span>
+              <ArrowUpRight className="h-4 w-4 text-[#64748B]" />
+            </Link>
+          </div>
         </div>
 
         {/* The Human Story Spotlight Card ("That's Me" Conversion Engine) */}

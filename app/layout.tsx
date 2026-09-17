@@ -19,27 +19,23 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
+    default: "1008 Network — Build the Business You Know Should Exist",
     template: "%s | 1008 Network",
   },
   description:
-    "1008 Network is India's premier venture ecosystem across 4 pillars: Venture Studio turnkey execution for equity, Partner Network co-founder & talent matching, Capital syndicate matchmaking (₹50K to ₹5Cr+), and tactical Playbooks.",
+    "1008 Network helps experienced professionals and entrepreneurs turn industry expertise into operating businesses — with the people, systems, and execution needed to make them real.",
   keywords: [
     "1008 Network",
     "Venture Studio India",
     "Co Founder Matching India",
-    "Startup Capital India",
-    "Invest in Startups India",
-    "Angel Investing India",
-    "Jobs for Equity India",
+    "Turnkey Business Setup India",
+    "Find Technical Co Founder",
     "Find CTO for Equity India",
     "Technical Co Founder Platform",
     "Fractional CXO Network",
-    "Turnkey Business Setup India",
-    "Startup Syndicate Allocation",
-    "Startup Playbook & Blueprints",
-    "Venture Builder India",
     "Operations as a Service India",
+    "Venture Builder India",
+    "Startup Playbook India",
     "Delhi NCR Venture Studio",
   ],
   authors: [{ name: "1008 Network", url: "https://www.1008.network" }],
@@ -56,24 +52,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://www.1008.network",
-    title: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
+    title: "1008 Network — Build the Business You Know Should Exist",
     description:
-      "Turnkey venture studio operations, co-founder talent matching, startup syndicate capital, and actionable operational playbooks across India.",
+      "1008 Network helps experienced professionals and entrepreneurs turn industry expertise into operating businesses with turnkey technology, operations, and talent matching.",
     siteName: "1008.network",
     images: [
       {
         url: "https://www.1008.network/1008-network-logo.png",
         width: 1200,
         height: 630,
-        alt: "1008 Network — Venture Studio, Partner Network, Capital & Playbook",
+        alt: "1008 Network — Turnkey Co-Building for Experienced People",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "1008 Network — Venture Studio, Talent & Capital Ecosystem",
+    title: "1008 Network — Build the Business You Know Should Exist",
     description:
-      "Venture Studio operations, co-founder talent matching, startup syndicate capital, and tactical playbooks in India.",
+      "Turn domain expertise into an operating company with 1008 Network's turnkey execution and co-founder matching.",
     images: ["https://www.1008.network/1008-network-logo.png"],
   },
   robots: {
