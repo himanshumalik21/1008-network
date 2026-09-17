@@ -28,7 +28,7 @@ export function HeroSection() {
       title: "Venture Studio",
       tagline: "Turnkey Build & Equity",
       cta: "Explore Studio",
-      desc: "We architect operational infrastructure, source CXO talent, configure ERPs & build alongside founders for shared equity.",
+      desc: "You know the business. We help build the people, systems, tech, suppliers, sales and operations for shared equity.",
       href: "/studio",
       accent: "#635BFF",
       bgHover: "hover:border-[#635BFF]/60 hover:shadow-[0_12px_24px_-8px_rgba(99,91,255,0.16)]",

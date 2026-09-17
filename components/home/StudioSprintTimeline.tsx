@@ -104,14 +104,14 @@ export function StudioSprintTimeline() {
           </div>
           
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-[1.12]">
-            You know your industry.{" "}
+            You know the business.{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
-              We build the company around it.
+              We&apos;ll help you build the company.
             </span>
           </h1>
 
           <p className="text-[#425466] text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl mx-auto font-normal">
-            You know the market, the products, and the customers. We partner with you as hands-on operational co-builders to set up software, factories, compliance, core hiring, and cash flow—all for shared equity with zero retainers.
+            You bring the industry expertise, ambition and opportunity. 1008 helps build the people, systems, technology, suppliers, sales infrastructure and operations around it.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">

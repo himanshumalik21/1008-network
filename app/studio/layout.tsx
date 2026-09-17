@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Venture Studio & Operational Co-Builder | 1008 Network",
     description:
-      "You know the industry. We help you build the company around it—from software and factory setup to core hiring.",
+      "You bring the industry expertise, ambition and opportunity. 1008 helps build the people, systems, technology, suppliers, sales infrastructure and operations around it.",
     url: "https://www.1008.network/studio",
     siteName: "1008.network",
     type: "website",
