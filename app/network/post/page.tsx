@@ -200,7 +200,7 @@ export default function PostOpportunityPage() {
       setStatus("success");
       setMessage(
         res?.message ||
-          "Your opportunity requirement has been received and routed to join@1008.network for editorial verification. Once approved, your 60-day listing will be activated on the network board."
+          "Your opportunity requirement has been received and routed to join@1008.network for editorial review. Once approved, your 60-day listing will be activated on the network board."
       );
     } catch {
       setStatus("error");
@@ -226,7 +226,7 @@ export default function PostOpportunityPage() {
             Find Your Co-Founder or Startup Partner
           </h1>
           <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-            Submit your venture requirement confidentially. Requirements are sent to <span className="font-mono font-semibold text-[#0A2540]">join@1008.network</span> for verification. Approved listings run for 60 days across the 1008 operator network.
+            Submit your venture requirement confidentially. Requirements are sent to <span className="font-mono font-semibold text-[#0A2540]">join@1008.network</span> for review. Approved listings run for 60 days across the 1008 operator network.
           </p>
         </div>
 
@@ -284,7 +284,7 @@ export default function PostOpportunityPage() {
                 <h3 className="text-xs font-mono uppercase tracking-wider text-[#635BFF] font-bold">
                   1. Domain Originator / Founder Profile
                 </h3>
-                <span className="text-[11px] font-mono text-[#829AB1]">Confidential & Verified</span>
+                <span className="text-[11px] font-mono text-[#829AB1]">Confidential & Reviewed</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

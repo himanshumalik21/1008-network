@@ -27,7 +27,7 @@ export function PersonaMatrix() {
       title: "Tech Startups & Digital Platforms",
       bullets: [
         "Venture-grade Next.js / cloud infrastructure architecture",
-        "Rapid feasibility MVP build & vetted developer hiring",
+        "Rapid feasibility MVP build & key engineer sourcing",
         "GTM customer activation, pilot onboarding & telemetry",
       ],
       thesisExample: "B2B SaaS, enterprise workflow engines, fintech infrastructure & logistics platforms.",

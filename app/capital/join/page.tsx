@@ -150,7 +150,7 @@ export default function RegisterInvestorPage() {
             Register in the 1008 Investor & Syndicate Pool
           </h1>
           <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-            Anyone can co-invest in high-conviction startups. Register your deployment preferences (from ₹2L to ₹5Cr+) to receive vetted deal allocations curated to your sector and risk appetite, de-risked by 1008 Network&apos;s operational management.
+            Anyone can co-invest in high-conviction startups. Register your deployment preferences (from ₹2L to ₹5Cr+) to receive curated deal allocations matched to your sector and risk appetite, supported by 1008 Network&apos;s operational management.
           </p>
         </div>
 

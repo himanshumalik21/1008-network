@@ -4,7 +4,7 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Post Co-Founder & Executive Talent Requirement | 1008 Partner Network",
   description:
-    "Founders can publish verified Co-Founder, CTO, or Head of Department roles for shared equity. Zero placement fees, direct candidate vetting, and curated founder introductions.",
+    "Founders can publish curated Co-Founder, CTO, or Head of Department roles for shared equity. Zero placement fees, direct candidate review, and curated founder introductions.",
   keywords: [
     "Post Co-Founder Requirement India",
     "Find CTO for Startup",

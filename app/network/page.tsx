@@ -60,7 +60,7 @@ export default function NetworkPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Great enterprises are rarely built alone. 1008 Partner Network connects domain founders who have the business vision with vetted technical CTOs, operations leads, and commercial sales partners for shared equity.
+            Great enterprises are rarely built alone. 1008 Partner Network connects domain founders who have the business vision with curated technical CTOs, operations leads, and commercial sales partners for shared equity.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -155,11 +155,11 @@ export default function NetworkPage() {
                 Operators & Co-Founders Apply
               </h3>
               <p className="text-xs text-[#425466] leading-relaxed">
-                Vetted operators, senior software engineers, and domain specialists submit their background, verified past execution record, and desired compensation/equity preferences.
+                Experienced operators, senior software engineers, and domain specialists submit their background, detailed past execution track record, and desired compensation/equity preferences.
               </p>
             </div>
             <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Users className="h-3.5 w-3.5 text-[#00A389]" /> Verified talent pool
+              <Users className="h-3.5 w-3.5 text-[#00A389]" /> Curated talent pool
             </div>
           </div>
 
@@ -234,7 +234,7 @@ export default function NetworkPage() {
                 <Badge variant="indigo" size="sm">For Founders & Builders</Badge>
                 <h3 className="text-2xl font-extrabold text-[#0A2540]">Looking for a Co-Founder / Talent?</h3>
                 <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Have the domain vision but need a technical CTO, operations head, or commercial sales partner? Post your requirement to be matched with vetted operators.
+                  Have the domain vision but need a technical CTO, operations head, or commercial sales partner? Post your requirement to be matched with reviewed operators.
                 </p>
               </div>
 
@@ -277,7 +277,7 @@ export default function NetworkPage() {
                 <Badge variant="cyan" size="sm">For Operators & Specialists</Badge>
                 <h3 className="text-2xl font-extrabold text-[#0A2540]">Looking to Join a Startup?</h3>
                 <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Join our vetted talent & co-founder network. Connect with high-conviction founders building real economy enterprises and software ventures for meaningful equity.
+                  Join our curated talent & co-founder network. Connect with high-conviction founders building real economy enterprises and software ventures for meaningful equity.
                 </p>
               </div>
 
@@ -360,7 +360,7 @@ export default function NetworkPage() {
         badge="Co-Founders & Talent"
         badgeVariant="cyan"
         title="Partner Network Frequently Answered Questions"
-        description="Everything you need to know about finding co-founders, posting leadership requirements, vetting standards, and equity terms."
+        description="Everything you need to know about finding co-founders, posting leadership requirements, review standards, and equity terms."
       />
 
       {/* 7. Facilitator Notice Banner */}

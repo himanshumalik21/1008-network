@@ -12,7 +12,7 @@ export const initialInvestorCards: InvestorCard[] = [
     location: "Delhi NCR",
     bio: "Looking to co-invest in high-margin industrial manufacturing units, precision engineering, and cold-chain infrastructure across North India with hands-on operational management.",
     strategicValue: "Direct industrial land leasing, equipment vendor credit lines, and OEM procurement relationships.",
-    badge: "Verified Industrial Allocator",
+    badge: "Industrial Allocator",
     availableCapital: true,
   },
   {

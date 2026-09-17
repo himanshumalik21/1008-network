@@ -152,7 +152,7 @@ export default function PrivacyPage() {
                   <Database className="h-3.5 w-3.5 text-[#635BFF]" /> A. Data Provided Voluntarily by You
                 </h3>
                 <ul className="space-y-1.5 pl-4 list-disc text-xs text-[#425466]">
-                  <li><strong>Founder & Venture Studio Intake:</strong> Full name, verified work email, phone number, entity stage, sector, operational bottlenecks, revenue run-rate, and deck URLs.</li>
+                  <li><strong>Founder & Venture Studio Intake:</strong> Full name, work email, phone number, entity stage, sector, operational bottlenecks, revenue run-rate, and deck URLs.</li>
                   <li><strong>Partner Network & Talent Pool:</strong> Full name, email, phone, LinkedIn profile URL, current company & role, years of domain experience, primary functional capability, target equity expectations, and executive bio.</li>
                   <li><strong>Capital Network Investor Profiles:</strong> Full name, accredited email, phone, investor category (Angel, Family Office, Corporate CXO), target deployment tier (₹2L–₹5Cr+), risk appetite, and sector mandates.</li>
                   <li><strong>General Inquiries:</strong> Name, work email, organization, inquiry category, and message payload sent via contact or diagnostic forms.</li>

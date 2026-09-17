@@ -104,7 +104,7 @@ export default function PostCapitalRequirementPage() {
             Post Startup Capital Requirement
           </h1>
           <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-            Connect directly with verified angel investors, family offices, and corporate operators looking to deploy capital in high-conviction Indian businesses. 1008 Network conducts operational vetting and introduces aligned capital with zero placement retainers.
+            Connect directly with active angel investors, family offices, and corporate operators looking to deploy capital in high-conviction Indian businesses. 1008 Network reviews business theses and introduces aligned capital with zero placement retainers.
           </p>
         </div>
 

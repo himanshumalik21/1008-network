@@ -123,7 +123,7 @@ export function OpportunityDetailClient({
             </Button>
             <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-mono">
               <ShieldCheck className="h-4 w-4 text-[#059669]" />
-              <span>Direct introduction to founder for verified opportunities</span>
+              <span>Direct introduction to founder for active opportunities</span>
             </div>
           </div>
         </div>

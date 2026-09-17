@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Join Co-Founder & Startup Talent Network | 1008 Partner Network",
     description:
-      "Connect directly with vetted domain founders building high-growth enterprises for shared equity upside.",
+      "Connect directly with high-conviction domain founders building high-growth enterprises for shared equity upside.",
     url: "https://www.1008.network/network/join",
     siteName: "1008.network",
     type: "website",

@@ -16,7 +16,7 @@ export const initialTalentProfiles: TalentProfile[] = [
     targetEquity: "15% - 30%",
     targetCash: "Low / Post-funding living stipend",
     exCompanies: ["Razorpay", "Swiggy", "Directi"],
-    badge: "Verified Tech Leader",
+    badge: "Reviewed Tech Leader",
     availableImmediately: true,
   },
   {

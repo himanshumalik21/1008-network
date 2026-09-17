@@ -30,7 +30,7 @@ export function StructuralTrapsSection() {
         },
         {
           label: "Marketing Agencies",
-          text: "Charge ₹50k to ₹1.5L/month in fixed retainers plus ad spend for vanity clicks and unvetted traffic.",
+          text: "Charge ₹50k to ₹1.5L/month in fixed retainers plus ad spend for vanity clicks and low-intent traffic.",
         },
       ],
       coreFlaw:

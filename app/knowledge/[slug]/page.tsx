@@ -308,7 +308,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
                   Have an Idea or a Struggling Business?
                 </h4>
                 <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Whether you are a corporate leader launching your first enterprise or a founder fighting for operational traction, 1008 Network acts as your operational co-founder. We deploy enterprise digital ERPs, manage ground-level manufacturing setup, match vetted talent, and provide seed capital—<strong>for shared equity with ₹0 consulting retainers</strong>.
+                  Whether you are a corporate leader launching your first enterprise or a founder fighting for operational traction, 1008 Network acts as your operational co-founder. We deploy enterprise digital ERPs, manage ground-level manufacturing setup, match curated talent, and provide seed capital—<strong>for shared equity with ₹0 consulting retainers</strong>.
                 </p>
               </div>
 
@@ -340,7 +340,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
                   Need an Operational or Technical Co-Founder?
                 </h4>
                 <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
-                  Connect directly with seasoned, execution-driven operators, CTOs, and supply-chain leads ready to build full-time for shared equity. Stop searching unvetted job boards and partner with true builders.
+                  Connect directly with seasoned, execution-driven operators, CTOs, and supply-chain leads ready to build full-time for shared equity. Stop searching generic job boards and partner with true builders.
                 </p>
               </div>
 

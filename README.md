@@ -23,7 +23,7 @@ Headquartered in **Delhi NCR** with an active footprint across **Bengaluru, Mumb
    - Actionable operational playbooks (cap tables, ESOPs under Indian law, B2B sales cycles in Bharat, unit economics), book summaries, and masterclasses.
 
 4. **1008 CAPITAL (Seed Syndicate Deal Board):**
-   - Curated seed deal cards showcasing vetted 1008-built and network ventures for accredited angels and family offices.
+   - Curated seed deal cards showcasing 1008-built and network ventures for accredited angels and family offices.
 
 ---
 

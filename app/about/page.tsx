@@ -38,7 +38,7 @@ export default function AboutPage() {
     {
       icon: <Users className="h-5 w-5 text-[#059669]" />,
       title: "Curated Co-Founder Matching",
-      desc: "We connect domain originators with vetted technical CTOs, GTM leaders, and supply chain operators through our private Partner Network.",
+      desc: "We connect domain originators with reviewed technical CTOs, GTM leaders, and supply chain operators through our private Partner Network.",
     },
     {
       icon: <ShieldCheck className="h-5 w-5 text-[#FF7043]" />,
@@ -119,7 +119,7 @@ export default function AboutPage() {
             The 1008 Network Operational Philosophy
           </h2>
           <p className="text-sm text-[#425466] leading-relaxed">
-            We partner with budding entrepreneurs and business owners whose ventures hold exceptional conviction. The founder brings the industry vision and core ambition, and 1008 Network drives the complete turnkey operational engine (site scouting, facility commissioning, OEM machinery, permits, team recruitment, pragmatic tech, and commercial sales). We connect vetted ventures with our active investor syndicate and align 100% of our incentives through shared equity and long-term milestone upside.
+            We partner with budding entrepreneurs and business owners whose ventures hold exceptional conviction. The founder brings the industry vision and core ambition, and 1008 Network drives the complete turnkey operational engine (site scouting, facility commissioning, OEM machinery, permits, team recruitment, pragmatic tech, and commercial sales). We connect high-conviction ventures with our active investor syndicate and align 100% of our incentives through shared equity and long-term milestone upside.
           </p>
         </div>
 

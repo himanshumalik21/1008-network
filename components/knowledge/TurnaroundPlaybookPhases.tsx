@@ -83,7 +83,7 @@ export function TurnaroundPlaybookPhases() {
       iconBg: "bg-[#ECFDF5] border-[#A7F3D0] text-[#10B981]",
       icon: <Rocket className="h-5 w-5 text-[#047857]" />,
       actions: [
-        "Partner with vetted operational and technical co-founders via dedicated equity pools.",
+        "Partner with reviewed operational and technical co-founders via dedicated equity pools.",
         "Align with 1008 Network for execution muscle, manufacturing setup, and seed capital for shared equity.",
         "Scale with ₹0 consulting retainers—every partner wins only when the business achieves profitable scale.",
       ],

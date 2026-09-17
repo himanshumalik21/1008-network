@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Startup Capital & Co-Investment Syndicate | 1008 Network",
     description:
-      "Join vetted investor syndicates (₹50K to ₹5Cr+) backing high-conviction Indian businesses de-risked with turnkey operational execution.",
+      "Join curated investor syndicates (₹50K to ₹5Cr+) backing high-conviction Indian businesses with turnkey operational execution.",
     url: "https://www.1008.network/capital",
     siteName: "1008.network",
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Startup Capital & Co-Investment Syndicate | 1008 Network",
     description:
-      "Vetted startup syndicate rounds with itemized use-of-funds and combined deal meetings. Zero intermediary fees.",
+      "Curated startup syndicate rounds with itemized use-of-funds and combined deal meetings. Zero intermediary fees.",
   },
   alternates: {
     canonical: "https://www.1008.network/capital",

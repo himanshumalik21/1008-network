@@ -61,9 +61,9 @@ export function StudioSprintTimeline() {
       milestone: "Commercial Activation",
       headline: "Commercial activation: Sourcing mission-critical operators, brand launch, and closing opening clients.",
       deliverables: [
-        "Matching and recruiting vetted Co-Founders, engineering leads, or operational practice heads",
+        "Matching and recruiting aligned Co-Founders, engineering leads, or operational practice heads",
         "Brand identity, commercial positioning, and targeted go-to-market rollout",
-        "Securing inaugural paying customer orders, enterprise B2B pilots & verified cash flow",
+        "Securing inaugural paying customer orders, enterprise B2B pilots & positive operating cash flow",
         "Onboarding customer invoices to factoring rails (TReDS) for 48-hour working capital velocity",
       ],
       tag: "Traction Gate",

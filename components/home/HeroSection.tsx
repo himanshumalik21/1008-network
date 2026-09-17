@@ -41,7 +41,7 @@ export function HeroSection() {
       title: "Partner Network",
       tagline: "Co-Founders & Talent",
       cta: "Connect Network",
-      desc: "Have the business vision? Connect with vetted technical CTOs, GTM leaders & domain operators for shared equity.",
+      desc: "Have the business vision? Connect with curated technical CTOs, GTM leaders & domain operators for shared equity.",
       href: "/network",
       accent: "#00A389",
       bgHover: "hover:border-[#00D4B2]/60 hover:shadow-[0_12px_24px_-8px_rgba(0,212,178,0.16)]",

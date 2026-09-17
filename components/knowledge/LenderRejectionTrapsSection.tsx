@@ -48,15 +48,15 @@ export function LenderRejectionTrapsSection() {
       details: [
         {
           label: "Disconnected Ledgers",
-          text: "Bank transactions, inventory movements, and customer invoices exist in silos without live digital verification.",
+          text: "Bank transactions, inventory movements, and customer invoices exist in silos without live digital reconciliation.",
         },
         {
           label: "Account Aggregator Failure",
-          text: "When credit algorithms scan your Account Aggregator feed, they encounter erratic cash-flow velocity and unverified revenue.",
+          text: "When credit algorithms scan your Account Aggregator feed, they encounter erratic cash-flow velocity and unconfirmed revenue.",
         },
       ],
       impact:
-        "Banks cannot verify real-time unit margins, forcing them to demand heavy physical real estate collateral.",
+        "Banks cannot assess real-time unit margins, forcing them to demand heavy physical real estate collateral.",
     },
     {
       number: "03",

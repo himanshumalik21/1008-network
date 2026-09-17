@@ -53,7 +53,7 @@ export default function CapitalPage() {
               1008 Capital Network
             </Badge>
             <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
-              Syndicate Capital & Verified Rounds
+              Syndicate Capital & Curated Rounds
             </span>
           </div>
 
@@ -270,7 +270,7 @@ export default function CapitalPage() {
                   Looking to Raise Capital?
                 </h3>
                 <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
-                  Submit your startup requirement, target funding goal, and itemized use of capital. Once vetted, your round will be opened for allocation to aligned investors.
+                  Submit your startup requirement, target funding goal, and itemized use of capital. Following thesis review, your round will be opened for allocation to aligned investors.
                 </p>
               </div>
 
@@ -285,7 +285,7 @@ export default function CapitalPage() {
                 </div>
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8FAFC] border border-[#F1F5F9]">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0" />
-                  <span>Direct founder interaction with verified investors</span>
+                  <span>Direct founder interaction with active investors</span>
                 </div>
               </div>
             </div>

@@ -62,7 +62,7 @@ export function IdeaValidationGraphic() {
                     <span>Pre-Launch Action:</span>
                     <span className="text-[#C2410C]">Builds full app & factory inventory</span>
                   </div>
-                  <div className="text-[11px] text-[#627D98]">Spends life savings on software agencies and unverified tooling.</div>
+                  <div className="text-[11px] text-[#627D98]">Spends life savings on software agencies and untested tooling.</div>
                 </div>
 
                 <div className="p-2.5 rounded-lg bg-[#FFF8F5] border border-[#FFD8C2] text-[#425466] space-y-1">
@@ -112,7 +112,7 @@ export function IdeaValidationGraphic() {
                     <span>Customer Skin in Game:</span>
                     <span className="text-[#059669]">Signed LOI / Token Deposit</span>
                   </div>
-                  <div className="text-[11px] text-[#627D98]">Verified commercial demand locked before writing code or manufacturing.</div>
+                  <div className="text-[11px] text-[#627D98]">Validated commercial demand locked before writing code or manufacturing.</div>
                 </div>
               </div>
             </div>

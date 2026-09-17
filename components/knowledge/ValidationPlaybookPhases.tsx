@@ -73,7 +73,7 @@ export function ValidationPlaybookPhases() {
       deliverables: [
         "Audit and lock OEM contract manufacturing facilities or industrial tooling with locked terms.",
         "Deploy Day-1 Cloud ERP (ERPNext/Frappe) to track orders, procurement ledgers, and GST billing.",
-        "Source vetted technical CTOs, operations leads, or commercial sales partners for shared equity.",
+        "Source aligned technical CTOs, operations leads, or commercial sales partners for shared equity.",
         "Scale with zero expensive consulting retainers and aligned venture execution.",
       ],
       tag: "Venture Gate",

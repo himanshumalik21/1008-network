@@ -70,7 +70,7 @@ export function CreditPlaybookPhases() {
       icon: <Landmark className="h-5 w-5 text-[#059669]" />,
       actions: [
         "Apply for CGTMSE collateral-free working capital lines up to ₹5 Cr through partner public/private banks.",
-        "Onboard verified enterprise invoices onto TReDS platforms (RXIL / M1xchange) for 48-hour cash settlement.",
+        "Onboard approved enterprise invoices onto TReDS platforms (RXIL / M1xchange) for 48-hour cash settlement.",
         "Lock in competitive 8%–9.5% interest rates, eliminating 24% predatory NBFC debt.",
       ],
     },

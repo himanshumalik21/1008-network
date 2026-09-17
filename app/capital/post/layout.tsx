@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Post Startup Capital Requirement & Raise Funding | 1008 Capital Network",
     description:
-      "Submit your venture thesis and target capital raise. Connect with vetted investors with itemized fund deployment.",
+      "Submit your venture thesis and target capital raise. Connect with active investors with itemized fund deployment.",
     url: "https://www.1008.network/capital/post",
     siteName: "1008.network",
     type: "website",

@@ -63,14 +63,14 @@ export function ComparisonSection() {
     },
     {
       dimension: "Software Stacks & Developer Talent",
-      studio1008: "Curated Tech & Sourced Talent: We architect the stack, configure open-source ERPs, and recruit vetted engineers for your team.",
+      studio1008: "Curated Tech & Sourced Talent: We architect the stack, configure open-source ERPs, and recruit high-caliber engineers for your team.",
       agency: "Junior outsourced developers who over-engineer brittle systems to maximize billable development hours.",
       incubator: "None. Gives generic product advice without building production code or managing infrastructure.",
       solo: "Disorganized freelancer churn resulting in fractured codebases and massive wasted cash burn.",
     },
     {
       dimension: "Key Operator Hiring & GTM Tooling",
-      studio1008: "We recruit vetted operational leads and configure outbound sales engines to drive inaugural customer revenue.",
+      studio1008: "We recruit dedicated operational leads and configure outbound sales engines to drive inaugural customer revenue.",
       agency: "Vanity social media posts without sales pipelines, distributor tie-ups, or commercial purchase orders.",
       incubator: "Demo Day pitch with no direct assistance in closing commercial clients or B2B distributors.",
       solo: "Founder is stretched thin between hiring, managing daily fires, and trying to close sales alone.",

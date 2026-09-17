@@ -41,7 +41,7 @@ export const studioFaqs: FAQItem[] = [
 export const networkFaqs: FAQItem[] = [
   {
     question: "How does co-founder and talent matching work on 1008 Partner Network?",
-    answer: "Founders submit specific talent requirements (Technical CTO, Head of Operations, GTM Sales Lead) and their venture thesis. Experienced operators submit their verified execution track record. 1008 Network curates high-alignment matches and coordinates direct introduction meetings.",
+    answer: "Founders submit specific talent requirements (Technical CTO, Head of Operations, GTM Sales Lead) and their venture thesis. Experienced operators submit their detailed background and execution track record. 1008 Network curates high-alignment matches and coordinates direct introduction meetings.",
     category: "network",
   },
   {
@@ -50,8 +50,8 @@ export const networkFaqs: FAQItem[] = [
     category: "network",
   },
   {
-    question: "How are operator profiles and candidate track records vetted?",
-    answer: "We verify past execution experience, technical architectures built, revenue scales managed, and domain-specific credentials before presenting candidates for founder review.",
+    question: "How are operator profiles and candidate backgrounds reviewed?",
+    answer: "We review past execution experience, technical architectures built, operational scales managed, and domain-specific background before presenting candidate introductions for founder review.",
     category: "network",
   },
   {
@@ -83,7 +83,7 @@ export const capitalFaqs: FAQItem[] = [
     category: "general",
   },
   {
-    question: "How is the 'Use of Funds' declared and verified?",
+    question: "How is the 'Use of Funds' declared and tracked?",
     answer: "Startups provide itemized milestone breakdowns—such as machinery procurement, inventory purchase, software deployment, or working capital. This breakdown is shared with soft-committed investors before the deal meeting.",
     category: "general",
   },

@@ -110,7 +110,7 @@ Whether you are launching your first company or restructuring a business under p
 | **Commitment Level** | Billed for hours logged; zero financial risk if you fail | **True Co-Founding Partner**: Wins only when the business wins |
 | **Technical & ERP Stack** | Outsourced, fragile code; disconnected Excel sheets | **Production-grade Digital Core** & automated cloud ERP |
 | **Ground & Factory Ops** | Theoretical PDF reports; founder executes alone | **On-the-ground execution**: manufacturing, supply chain, licensing |
-| **Co-Founder Matching** | Cold networking with unvetted candidates | **Curated matching** with vetted Tech/Ops co-founders |
+| **Co-Founder Matching** | Cold networking with random candidates | **Curated matching** with high-alignment Tech/Ops co-founders |
 | **Seed Capital Access** | Cold pitching to angel networks with broken decks | **Direct seed capital backing** tied to milestone unit economics |
 
 ---
@@ -452,7 +452,7 @@ Once validation is proven, partner with an operational venture builder to handle
 | **Validation Metric** | Verbal promises: *"Looks great, will buy"* | **Signed LOIs, token advances, or pilot deposits** |
 | **Advisory & Agency Fees** | ₹50K–₹1.5L/mo retainers for market studies | **₹0 Retainers; shared-equity co-building alignment** |
 | **Operational Systems** | Haphazard manual notes and scattered chats | **Day-1 Cloud ERP tracking client pipeline & commitments** |
-| **Risk Profile** | High personal financial risk; potential ruin | **De-risked venture execution backed by verified demand** |
+| **Risk Profile** | High personal financial risk; potential ruin | **De-risked venture execution backed by validated customer demand** |
 
 ---
 
@@ -492,7 +492,7 @@ Starting a company should not be a blind financial gamble. By demanding real cus
     keyTakeaways: [
       "The Silent Company Killer: More Indian startups die from internal co-founder fallouts than market competition. Splitting equity 50/50 on Day 1 without dynamic vesting creates 'Dead Equity'—a toxic cap table that causes 70%+ of angel and VC seed deals to collapse during due diligence.",
       "The Institutional Standard: Never issue unvested upfront shares. Enforce standard 4-year vesting with a 1-year cliff, reverse vesting rights, pre-agreed fair-market buyback mechanisms, and total intellectual property (IP) assignment to the Private Limited entity.",
-      "The 1008 Co-Building Path: Avoid expensive legal retainers. Deploy institutional cap table architecture, match vetted operational co-founders, and build on a shared-equity venture model with ₹0 consulting fees."
+      "The 1008 Co-Building Path: Avoid expensive legal retainers. Deploy institutional cap table architecture, match curated operational co-founders, and build on a shared-equity venture model with ₹0 consulting fees."
     ],
     actionableChecklist: [
       "Draft a Dynamic Equity Weighting Sheet: Calculate initial equity mathematically based on full-time commitment (40%), cash contribution (25%), domain/tech execution (20%), and pre-existing IP (15%).",
@@ -575,6 +575,6 @@ Execute binding IP Assignment Agreements transferring 100% of source code, paten
 
 A Shareholders' Agreement is not a sign of distrust—it is an act of maturity that protects the life's work of everyone building the company. Clean cap tables build enduring enterprises.
 
-**The Bottom Line:** Stop paying expensive legal retainers for cookie-cutter agreements. Partner with operational venture co-builders who structure institutional governance, deploy enterprise digital ERPs, and match you with vetted co-founders on shared equity.`
+**The Bottom Line:** Stop paying expensive legal retainers for cookie-cutter agreements. Partner with operational venture co-builders who structure institutional governance, deploy enterprise digital ERPs, and match you with curated co-founders on shared equity.`
   }
 ]
