@@ -33,7 +33,7 @@ export default function RegisterProfilePage() {
     primaryFunction: "Technical Co-Founder (CTO)" as RoleCategory,
     location: "Bengaluru" as LocationType,
     preferredCommitment: "Full-time (Co-Founder)" as CommitmentType,
-    targetEquityRange: "15% - 25%",
+    targetEquityRange: "Negotiable / Stage-dependent",
     keySkills: "",
     sectorsOfInterest: "Healthcare, FinTech, D2C, Industrial, B2B SaaS",
     bio: "",
@@ -394,7 +394,7 @@ export default function RegisterProfilePage() {
                   <Input
                     label="Target Equity Range"
                     required
-                    placeholder="e.g. 15%-25% Equity + Seed living stipend"
+                    placeholder="e.g. Negotiable based on commitment & role"
                     value={formData.targetEquityRange}
                     onChange={(e) => {
                       setFormData({ ...formData, targetEquityRange: e.target.value });

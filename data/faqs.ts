@@ -55,8 +55,8 @@ export const networkFaqs: FAQItem[] = [
     category: "network",
   },
   {
-    question: "What is the typical equity allocation range for network co-founders?",
-    answer: "Equity typically ranges from 5% to 25%+ depending on venture stage, role criticality, and compensation structure (full sweat equity vs. hybrid cash/equity). All partnerships are structured with milestone-based vesting (typically a 1-year cliff and 4-year vesting schedule).",
+    question: "How is equity and compensation determined for network co-founders?",
+    answer: "Equity, compensation and vesting are negotiated directly between the parties based on role, contribution, commitment, business stage and other relevant factors. Partnerships typically structure milestone-based vesting to protect both the company and the incoming builder.",
     category: "equity",
   },
   {

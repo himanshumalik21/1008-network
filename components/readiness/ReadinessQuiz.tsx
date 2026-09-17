@@ -110,11 +110,11 @@ const quizQuestions: Question[] = [
   {
     id: 8,
     category: "Runway & Risk",
-    question: "Are you willing to allocate meaningful equity (15%–25%) to key co-founders and early operators?",
-    context: "Greedy Day-1 cap tables repel top-tier engineers and venture studios.",
+    question: "Are you willing to allocate meaningful equity to key co-founders and early operators?",
+    context: "Aligned cap tables with milestone vesting attract top-tier operators and co-builders.",
     options: [
-      { text: "Yes, highly aligned on generous equity for high-conviction co-builders", points: 25, explanation: "Magnet for exceptional talent and studio backing." },
-      { text: "Yes, open to standard 10%–20% equity + milestone vesting", points: 20, explanation: "Healthy venture mindset." },
+      { text: "Yes, fully open to negotiated equity with milestone vesting for high-conviction partners", points: 25, explanation: "Magnet for exceptional talent and aligned builders." },
+      { text: "Yes, open to negotiated equity based on role and stage", points: 20, explanation: "Healthy venture mindset." },
       { text: "Hesitant; want to retain 95%+ of company with minimal team equity", points: 8, explanation: "Red flag: will struggle to attract world-class CTOs." },
       { text: "Unfamiliar with standard startup cap-table conventions", points: 10, explanation: "Read our ESOP & Cap Table Structuring Playbook." },
     ],

@@ -132,7 +132,7 @@ export default function NetworkPage() {
                 Founder Posts Role & Business Vision
               </h3>
               <p className="text-xs text-[#425466] leading-relaxed">
-                Founders define the missing leadership capability (Technical CTO, Operations Lead, GTM Sales Head), business thesis, and equity pool (5% – 25%+). <strong>Listings are actively curated to ensure opportunities remain responsive.</strong>
+                Founders define the missing leadership capability (Technical CTO, Operations Lead, GTM Sales Head), business thesis, and partnership preferences. <strong>Listings are actively curated to ensure opportunities remain responsive.</strong>
               </p>
             </div>
             <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
@@ -337,7 +337,7 @@ export default function NetworkPage() {
                 <span>Equity & Upside Aligned</span>
               </div>
               <p className="text-xs text-[#425466] leading-relaxed">
-                We prioritize partners with real skin in the game. All roles feature meaningful equity stakes (5% – 25%+) with milestone-based vesting protections.
+                We prioritize partners with real skin in the game. Equity, compensation and vesting are negotiated directly between the parties based on role, contribution, commitment, business stage and other relevant factors.
               </p>
             </div>
 

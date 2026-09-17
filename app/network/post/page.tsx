@@ -36,7 +36,7 @@ export default function PostOpportunityPage() {
     stage: "Feasibility & MVP" as VentureStage,
     sector: "Healthcare & HealthTech" as SectorCategory,
     location: "Delhi NCR" as LocationType,
-    equityOffered: "15% - 25%",
+    equityOffered: "Negotiable / Role-dependent",
     stipendOffered: "Equity + Milestone stipend post-seed",
     skillsRequired: "",
     ventureThesis: "",
@@ -116,7 +116,7 @@ export default function PostOpportunityPage() {
     }
 
     if (!formData.equityOffered.trim()) {
-      errors.equityOffered = "Please specify the equity range offered (e.g. 15% - 25%).";
+      errors.equityOffered = "Please specify the equity terms offered (e.g. Negotiable / Role-dependent).";
     }
 
     if (!formData.ventureThesis.trim() || formData.ventureThesis.trim().length < 25) {
@@ -480,7 +480,7 @@ export default function PostOpportunityPage() {
                   <Input
                     label="Equity Offered"
                     required
-                    placeholder="e.g. 15% - 25%"
+                    placeholder="e.g. Negotiable based on contribution & role"
                     value={formData.equityOffered}
                     onChange={(e) => {
                       setFormData({ ...formData, equityOffered: e.target.value });
