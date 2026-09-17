@@ -68,7 +68,7 @@ const quizQuestions: Question[] = [
       { text: "Partnering with 1008 Network for phased operational systems & feasibility MVP", points: 25, explanation: "Optimal path for domain founders needing execution excellence." },
       { text: "I have a dedicated technical co-founder (Staff Engineer / CTO)", points: 25, explanation: "Strong internal engineering capability." },
       { text: "Evaluating freelance developers or traditional IT service agencies", points: 10, explanation: "High risk of delayed delivery, bloated code, and zero venture alignment." },
-      { text: "No technical capability or plan yet", points: 5, explanation: "Utilize 1008 Network to source and vet engineering talent." },
+      { text: "No technical capability or plan yet", points: 5, explanation: "Utilize 1008 Network to source and curate engineering talent." },
     ],
   },
   {

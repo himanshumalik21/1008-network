@@ -360,7 +360,7 @@ export default function RegisterInvestorPage() {
               <div className="pt-6 border-t border-[#E6E8EB] flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-xs text-[#627D98] flex items-center gap-1.5">
                   <Lock className="h-3.5 w-3.5 text-[#059669]" />
-                  <span>Confidential & private under Mutual NDA. Zero placement retainers.</span>
+                  <span>Confidential & private under Mutual NDA. No placement or intermediary fees.</span>
                 </div>
                 <Button
                   type="submit"

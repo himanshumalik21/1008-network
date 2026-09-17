@@ -142,7 +142,7 @@ export default function RootLayout({
           itemOffered: {
             "@type": "Service",
             name: "Capital Network",
-            description: "Syndicate capital matchmaking connecting high-conviction startups with accredited investors from ₹50K to ₹5Cr+.",
+            description: "Capital discovery connecting promising startups with a curated network of angels, family offices, and eligible capital partners.",
             url: "https://www.1008.network/capital",
           },
         },

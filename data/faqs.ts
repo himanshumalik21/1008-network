@@ -3,7 +3,7 @@ import { FAQItem } from "@/lib/types";
 export const studioFaqs: FAQItem[] = [
   {
     question: "Who does 1008 partner with to build businesses?",
-    answer: "We partner with experienced professionals, industry veterans, domain specialists, and technical minds who have deep market insights but need the execution machinery—software, systems, suppliers, compliance, and initial hiring—to turn their idea into an operating company.",
+    answer: "We partner with experienced professionals, industry veterans, domain specialists, and technical minds who have deep market insights but need the execution capability—software, systems, suppliers, compliance, and initial hiring—to turn their idea into an operating company.",
     category: "studio",
   },
   {
