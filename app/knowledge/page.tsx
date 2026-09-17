@@ -102,6 +102,20 @@ export default function KnowledgePage() {
 
       {/* Main Filter & Search Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#0A2540] tracking-tight">
+              All Playbooks &amp; Intelligence
+            </h2>
+            <p className="text-xs sm:text-sm text-[#627D98]">
+              Tactical execution frameworks, cash-flow models, and founder field manuals
+            </p>
+          </div>
+          <span className="text-xs font-mono font-medium text-[#635BFF] bg-[#F0F0FF] px-2.5 py-1 rounded-md border border-[#E0E0FF] self-start sm:self-auto">
+            {filteredResources.length} {filteredResources.length === 1 ? "Guide" : "Guides"} Available
+          </span>
+        </div>
+
         <div className="space-y-4 mb-8">
           {/* Top Bar: Category Tabs & Search Bar */}
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">

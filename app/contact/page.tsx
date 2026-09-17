@@ -87,9 +87,9 @@ export default function ContactPage() {
           {/* Left Column: Direct Info */}
           <div className="md:col-span-5 space-y-6">
             <div className="p-6 rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-4 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
-              <h3 className="text-xs uppercase tracking-wider text-[#0A2540] font-bold">
-                Direct Inbound
-              </h3>
+              <h2 className="text-xs uppercase tracking-wider text-[#0A2540] font-bold">
+                Connect with our Delhi NCR Studio
+              </h2>
               
               <div className="space-y-3.5 text-xs text-[#627D98]">
                 <div className="flex items-start gap-2.5">
@@ -160,6 +160,15 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-2xl bg-white border border-[#E6E8EB] space-y-4 shadow-[0_4px_12px_rgba(0,0,0,0.03)]">
+                <div className="mb-2">
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#0A2540] tracking-tight">
+                    Send Us an Inquiry
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#627D98]">
+                    Fill out the form below to start a confidential dialogue with our team.
+                  </p>
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input
                     label="Your Name"
