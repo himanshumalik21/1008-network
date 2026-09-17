@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { HumanStorySection } from "@/components/home/HumanStorySection";
 import { PillarsBentoSection } from "@/components/home/PillarsBentoSection";
 import { DomainsGridSection } from "@/components/home/DomainsGridSection";
-import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { HomeCtaBanner } from "@/components/home/HomeCtaBanner";
 
 export const metadata = {
@@ -22,7 +21,6 @@ export default function HomePage() {
       <HumanStorySection />
       <PillarsBentoSection />
       <DomainsGridSection />
-      <ComparisonSection />
       <HomeCtaBanner />
     </div>
   );
