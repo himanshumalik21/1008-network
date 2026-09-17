@@ -184,6 +184,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/about#why-1008" className="text-[#425466] hover:text-[#635BFF] transition-colors">
+                  Why 1008? (Our Story)
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-[#425466] hover:text-[#635BFF] transition-colors">
                   Contact & Office Hours
                 </Link>

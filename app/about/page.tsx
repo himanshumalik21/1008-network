@@ -88,6 +88,58 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Why 1008? The Story Behind the Name */}
+        <div id="why-1008" className="rounded-3xl bg-[#0A2540] text-white p-8 sm:p-10 space-y-6 relative overflow-hidden border border-[#1E293B] shadow-xl">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#635BFF]/20 via-[#00D4B2]/15 to-transparent blur-[90px] pointer-events-none" />
+          
+          <div className="relative z-10 space-y-4">
+            <div className="inline-flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-white/10 text-[#00D4B2] text-xs font-mono font-bold uppercase tracking-wider border border-white/15">
+                The Brand Story
+              </span>
+              <span className="text-xs text-[#94A3B8] font-mono">Why 1008?</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-sans">
+              The Meaning Behind <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#38BDF8]">1008</span>
+            </h2>
+
+            <p className="text-sm sm:text-base text-[#CBD5E1] leading-relaxed">
+              In Indian tradition and classical mathematics, <strong>108</strong>—and its elevated order <strong>1008</strong>—represents <em>completeness, rigorous discipline, and wholeness</em>. It signifies seeing a commitment through to the end, leaving nothing half-built.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div className="p-4 rounded-xl bg-white/[0.05] border border-white/10 space-y-2">
+                <div className="text-2xl font-extrabold text-[#635BFF] font-mono">1</div>
+                <div className="text-sm font-bold text-white font-sans">The Domain Originator</div>
+                <p className="text-xs text-[#94A3B8] leading-relaxed">
+                  The singular vision, deep industry knowledge, ambition, and initial spark brought by the founder.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-white/[0.05] border border-white/10 space-y-2">
+                <div className="text-2xl font-extrabold text-[#00D4B2] font-mono">00</div>
+                <div className="text-sm font-bold text-white font-sans">The Operational Core</div>
+                <p className="text-xs text-[#94A3B8] leading-relaxed">
+                  The digital software systems and physical ground operations built from scratch with zero shortcuts.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-white/[0.05] border border-white/10 space-y-2">
+                <div className="text-2xl font-extrabold text-[#FF7043] font-mono">8 (∞)</div>
+                <div className="text-sm font-bold text-white font-sans">Compounding Scale</div>
+                <p className="text-xs text-[#94A3B8] leading-relaxed">
+                  The multiplier of enduring enterprise value, positive unit cash flows, and long-term founder ownership.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-2 text-xs sm:text-sm text-[#94A3B8] border-t border-white/10 italic">
+              &ldquo;You bring the 1 (domain expertise and market opportunity). 1008 helps build the 008 (the systems, operations, and compounding scale around it).&rdquo;
+            </div>
+          </div>
+        </div>
+
         {/* The 1008 Standard */}
         <div className="rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] p-6 sm:p-8 space-y-4 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
           <h2 className="text-xl font-bold text-[#0A2540] font-sans">

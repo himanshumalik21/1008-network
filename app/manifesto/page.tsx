@@ -52,7 +52,27 @@ export default function ManifestoPage() {
               1008 Network was created to stand shoulder-to-shoulder with ambitious builders. We are not external advisors; we are full-stack operational co-builders with true skin in the game.
             </p>
             <p>
-              Whether setting up a manufacturing unit, launching a new product line, scaling a consumer brand, or turning around an existing business—we manage physical setup, machinery procurement, statutory compliance, core hiring, lean tech, and go-to-market execution. We present curated ventures to our syndicate pool of active investors, and work across disciplined, tailored phases to graduate each business to complete, profitable autonomy.
+              Whether launching a new vertical software platform, setting up a manufacturing supply chain, or building a consumer brand—we handle software, systems, suppliers, compliance, and core team hiring for shared equity. We work across disciplined phases to graduate each business to complete, profitable autonomy.
+            </p>
+          </div>
+
+          <div className="space-y-4 pt-4 border-t border-[#E6E8EB]">
+            <h2 className="text-xl font-bold text-[#0A2540] font-sans">
+              4. Why &ldquo;1008&rdquo;? The Meaning Behind the Name
+            </h2>
+            <p>
+              In Indian tradition and classical mathematics, <strong>108</strong>—and its elevated order <strong>1008</strong>—signifies <em>wholeness, completeness, and mastery</em>. It represents finishing what you start, leaving no detail half-executed.
+            </p>
+            <p>
+              In our venture-building architecture:
+            </p>
+            <ul className="space-y-2 pl-4 list-disc text-xs sm:text-sm">
+              <li><strong>The 1:</strong> The founder&apos;s singular vision, deep industry insight, and initial ambition.</li>
+              <li><strong>The 00:</strong> The twin pillars of operational execution—the digital software systems and physical operations built from scratch.</li>
+              <li><strong>The 8 (&infin;):</strong> Compounding scale, healthy cash flows, and enduring generational enterprise value.</li>
+            </ul>
+            <p className="italic text-[#635BFF] font-medium pt-1">
+              You bring the 1. We help build the 008 around it.
             </p>
           </div>
 
