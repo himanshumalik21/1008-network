@@ -94,7 +94,7 @@ export function HeroSection() {
   const currentEngine = engineFeatures[activeTab];
 
   return (
-    <section className="relative w-full flex flex-col justify-center items-center pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28 overflow-hidden bg-white">
+    <section className="relative w-full flex flex-col justify-center items-center pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden bg-white">
       {/* 1. Subtle Architectural Background Grid */}
       <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-35 pointer-events-none" />
 

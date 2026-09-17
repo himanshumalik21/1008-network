@@ -29,7 +29,7 @@ export default function StudioPage() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="pt-16 pb-12 bg-white">
+    <div className="pt-20 pb-12 bg-white">
       {/* Phased Milestone Breakdown & Execution Blueprint */}
       <StudioSprintTimeline />
 
