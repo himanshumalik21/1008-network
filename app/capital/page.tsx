@@ -448,10 +448,10 @@ export default function CapitalPage() {
             <AlertTriangle className="h-5 w-5 text-[#D97706] shrink-0 mt-0.5" />
             <div className="space-y-1">
               <span className="font-bold font-sans text-sm text-[#78350F]">
-                Facilitator Notice & Independent Due Diligence Disclaimer:
+                Statutory Notice & Explicit Regulatory Exclusions:
               </span>
               <p className="text-xs text-[#A16207] leading-relaxed max-w-4xl">
-                1008 Network operates strictly as a discovery and networking facilitator. We do not hold investor capital, manage custodial funds, provide financial advice, or guarantee returns. Startup investments carry high risk; all investors must conduct their own independent due diligence.
+                1008 Network operates strictly as a discovery and networking facilitator. 1008 is <strong>not</strong> a stock broker, investment adviser, portfolio manager, Alternative Investment Fund (AIF), mutual fund, merchant banker, custodian, depository, escrow provider, or investment fund. We do not hold investor capital, manage custodial funds, provide financial advice, or guarantee returns. All contracts and due diligence are executed directly between companies and investors.
               </p>
             </div>
           </div>

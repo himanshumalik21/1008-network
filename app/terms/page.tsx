@@ -162,28 +162,40 @@ export default function TermsPage() {
           </section>
 
           {/* Section 2 */}
-          <section className="space-y-3 border-t border-[#F1F4F8] pt-8">
+          <section className="space-y-3 border-t border-[#F1F4F8] pt-8" id="regulatory-disclaimer">
             <div className="flex items-center gap-2">
               <span className="w-6 h-6 rounded-lg bg-[#635BFF]/10 text-[#635BFF] flex items-center justify-center font-mono font-bold text-xs">
                 2
               </span>
               <h2 className="text-lg font-bold text-[#0A2540]">
-                SEBI Regulatory Disclaimer & Non-Broker Notice
+                Statutory Regulatory Disclaimers & Non-Entity Declarations
               </h2>
             </div>
-            <div className="p-4 rounded-xl bg-[#FFFBEB] border border-[#FDE68A] text-[#92400E] space-y-2 text-xs">
-              <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-[11px]">
+            <div className="p-5 rounded-xl bg-[#FFFBEB] border border-[#FDE68A] text-[#92400E] space-y-3 text-xs leading-relaxed">
+              <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-[11px] text-[#B45309]">
                 <AlertTriangle className="h-4 w-4 text-[#D97706]" />
-                <span>Statutory Regulatory Disclosure (Republic of India)</span>
+                <span>Statutory Regulatory Disclosure & Explicit Exclusions (Republic of India)</span>
               </div>
               <p>
-                1008 Network is <strong>not</strong> a registered Stock Broker, Investment Adviser (under SEBI (Investment Advisers) Regulations, 2013), Research Analyst (under SEBI (Research Analysts) Regulations, 2014), Portfolio Manager, Alternative Investment Fund (AIF under SEBI (AIF) Regulations, 2012), or Merchant Banker under the Securities and Exchange Board of India (SEBI) Act, 1992.
+                1008 Network (<code>1008.network</code>) operates strictly as a turnkey venture studio, co-founder talent matching network, and capital discovery facilitator. 1008 Network is <strong>NOT</strong> and shall <strong>NOT</strong> be construed as:
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-4 list-disc text-xs text-[#78350F] font-medium">
+                <li>A Stock Broker or Sub-Broker</li>
+                <li>An Investment Adviser (SEBI IA Regulations)</li>
+                <li>A Portfolio Manager (PMS)</li>
+                <li>An Alternative Investment Fund (AIF)</li>
+                <li>A Mutual Fund or Collective Investment Scheme</li>
+                <li>A Merchant Banker or Underwriter</li>
+                <li>A Custodian of Securities</li>
+                <li>A Depository or Depository Participant</li>
+                <li>An Escrow Agent or Escrow Provider</li>
+                <li>An Investment Fund or Asset Management Co.</li>
+              </ul>
+              <p>
+                Nothing contained on <code>1008.network</code>, in our operational playbooks, or in any platform communications constitutes financial, investment, legal, tax, or securities advice, nor does it constitute an offer, public solicitation, or invitation to subscribe to or purchase securities, debentures, or financial instruments.
               </p>
               <p>
-                Nothing contained on <code>1008.network</code>, in our playbooks, or in any platform communications constitutes financial, investment, legal, tax, or securities advice, nor does it constitute an offer, public solicitation, or invitation to subscribe to or purchase securities, debentures, or financial instruments.
-              </p>
-              <p>
-                1008 Network does not manage pooled investment funds, hold custodial capital, execute financial transactions on behalf of users, or offer any guaranteed investment returns. Any angel co-investment, equity vesting, or partnership arrangements are private commercial contracts negotiated and executed directly between the respective founders, investors, and incorporated legal entities following independent due diligence.
+                1008 Network does not manage pooled investment funds, hold custodial capital, maintain escrow accounts, execute financial trades on behalf of users, or offer any guaranteed financial returns. Any angel co-investment, equity vesting, or partnership arrangements are private commercial contracts negotiated and executed directly between the respective founders, investors, and incorporated legal entities following independent due diligence.
               </p>
             </div>
           </section>
