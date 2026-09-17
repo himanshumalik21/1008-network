@@ -1,22 +1,20 @@
 "use client";
 
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import Script from "next/script";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { GA_TRACKING_ID, pageview } from "@/lib/analytics";
 
 function AnalyticsTracker() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
-      const url = searchParams?.toString()
-        ? `${pathname}?${searchParams.toString()}`
-        : pathname;
+    if (pathname && typeof window !== "undefined") {
+      const search = window.location.search || "";
+      const url = search ? `${pathname}${search}` : pathname;
       pageview(url);
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }
@@ -45,9 +43,7 @@ export function GoogleAnalytics() {
           `,
         }}
       />
-      <Suspense fallback={null}>
-        <AnalyticsTracker />
-      </Suspense>
+      <AnalyticsTracker />
     </>
   );
 }

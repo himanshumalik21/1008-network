@@ -110,8 +110,8 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
     return parts.length > 0 ? parts : text;
   };
 
-  // Split content into blocks
-  const blocks = content.split(/\n\n+/);
+  // Split content into blocks safely
+  const blocks = content ? content.split(/\n\n+/) : [];
 
   let codeBlockCount = 0;
 
