@@ -16,34 +16,26 @@ import {
 import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 
 export default function AboutPage() {
-  const hubs = [
-    { city: "Delhi NCR", role: "Headquarters & Central Studio Operations" },
-    { city: "Bengaluru", role: "Engineering, Product Architecture & Tech Talent" },
-    { city: "Mumbai", role: "FinTech, Institutional Capital & Banking Integrations" },
-    { city: "Pune", role: "Industrial, Automotive & Precision Manufacturing Hub" },
-    { city: "Hyderabad & Chennai", role: "BioPharma, CleanTech & Deep Enterprise" },
-  ];
-
   const founderPromises = [
     {
       icon: <Sparkles className="h-5 w-5 text-[#635BFF]" />,
       title: "Zero Upfront Consulting Retainers",
-      desc: "We reject the predatory monthly agency fees that drain early runway. We align 100% of our incentives through shared equity and milestone upside.",
+      desc: "We reject the monthly agency retainers that drain early runway. We align 100% of our incentives through shared equity and milestone upside.",
     },
     {
       icon: <Building2 className="h-5 w-5 text-[#00A389]" />,
-      title: "Ground-Level Turnkey Execution",
-      desc: "We don't just give advice from spreadsheets. We audit factories, commission OEM machinery, write production software, and hire core team members.",
+      title: "Hands-On Operational Execution",
+      desc: "We don't give advice from spreadsheets. We write production software, audit suppliers, set up ERPs, and hire core team members alongside you.",
     },
     {
       icon: <Users className="h-5 w-5 text-[#059669]" />,
-      title: "Curated Co-Founder Matching",
-      desc: "We connect domain originators with reviewed technical CTOs, GTM leaders, and supply chain operators through our private Partner Network.",
+      title: "Co-Founder & Talent Matchmaking",
+      desc: "We connect domain founders with reviewed technical CTOs, GTM leaders, and operations managers through our curated Partner Network.",
     },
     {
       icon: <ShieldCheck className="h-5 w-5 text-[#FF7043]" />,
       title: "100% IP Assignment & Handover",
-      desc: "We build founder independence, not permanent vendor lock-in. All bespoke source code, licenses, and contracts are formally assigned to your venture.",
+      desc: "We build founder independence, not permanent vendor lock-in. All custom software, licenses, and contracts are formally assigned to your venture.",
     },
   ];
 
@@ -55,29 +47,12 @@ export default function AboutPage() {
           <Badge variant="indigo" size="md">
             About 1008 Network
           </Badge>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            The Turnkey Operational Co-Building Partner for Indian Founders
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-tight">
+            1008 helps experienced people build businesses by providing the execution and people they are missing.
           </h1>
           <p className="text-base sm:text-lg text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Headquartered in Delhi NCR with a pan-India execution footprint, 1008 Network partners with founders to turn high-conviction domain insight into enduring, cashflow-positive enterprises.
+            Based in Delhi NCR and partnering with founders across India, 1008 Network turns deep industry expertise into operating, cashflow-positive companies.
           </p>
-        </div>
-
-        {/* Operating Footprint */}
-        <div className="rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] p-6 sm:p-8 space-y-6 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
-          <div className="flex items-center gap-2 text-xs uppercase text-[#635BFF] font-bold">
-            <MapPin className="h-4 w-4" />
-            <span>Pan-India Operating Footprint</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {hubs.map((hub, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-white border border-[#E6E8EB] space-y-1 shadow-xs">
-                <div className="text-[#0A2540] font-bold text-sm">{hub.city}</div>
-                <div className="text-xs text-[#627D98]">{hub.role}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* The 1008 Founder Covenant */}
@@ -87,7 +62,7 @@ export default function AboutPage() {
               The 1008 Network Founder Covenant
             </h2>
             <p className="text-xs sm:text-sm text-[#627D98]">
-              Four pillars engineered to protect founder runway, accelerate velocity, and scale lasting value.
+              Four principles engineered to protect founder runway, accelerate execution, and build lasting businesses.
             </p>
           </div>
 
@@ -116,10 +91,10 @@ export default function AboutPage() {
         {/* The 1008 Standard */}
         <div className="rounded-2xl bg-[#F6F9FC] border border-[#E6E8EB] p-6 sm:p-8 space-y-4 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
           <h2 className="text-xl font-bold text-[#0A2540] font-sans">
-            The 1008 Network Operational Philosophy
+            Our Operational Philosophy
           </h2>
           <p className="text-sm text-[#425466] leading-relaxed">
-            We partner with budding entrepreneurs and business owners whose ventures hold exceptional conviction. The founder brings the industry vision and core ambition, and 1008 Network drives the complete turnkey operational engine (site scouting, facility commissioning, OEM machinery, permits, team recruitment, pragmatic tech, and commercial sales). We connect high-conviction ventures with our active investor syndicate and align 100% of our incentives through shared equity and long-term milestone upside.
+            The most successful companies are often built by people with deep domain expertise—professionals who have spent years in an industry and know the customers, suppliers, and pain points inside out. But launching a company requires execution capabilities they may not have: software architecture, digital systems, supplier contracts, compliance, and initial hiring. 1008 steps in as an operational co-builder to provide that execution machinery and missing talent for shared equity.
           </p>
         </div>
 

@@ -2,38 +2,38 @@ import { FAQItem } from "@/lib/types";
 
 export const studioFaqs: FAQItem[] = [
   {
-    question: "What kinds of businesses can partner with 1008 Venture Studio?",
-    answer: "We partner across high-conviction digital and real-world business sectors in India: B2B Software & Tech platforms, Consumer Brands & D2C, Industrial & Batch Manufacturing, Healthcare Clinics & Diagnostics, Hospitality, and legacy businesses seeking an operational turnaround.",
+    question: "Who does 1008 partner with to build businesses?",
+    answer: "We partner with experienced professionals, industry veterans, domain specialists, and technical minds who have deep market insights but need the execution machinery—software, systems, suppliers, compliance, and initial hiring—to turn their idea into an operating company.",
+    category: "studio",
+  },
+  {
+    question: "What kinds of businesses do you help build?",
+    answer: "We focus on high-conviction real-economy and digital business models in India: Industrial & B2B Supply Chains, Vertical Software & Tech Platforms, Consumer & Physical Product Brands, and Specialized Services & Healthcare Operations.",
     category: "studio",
   },
   {
     question: "How does the turnkey build partnership and phased handover work?",
-    answer: "Our execution is tailored across 4 milestone phase gates: Validation & Architecture, System Build & Sourcing, Revenue & Operations Pilot, and Phased Handover. Because every business is unique—ranging from digital platforms to precision manufacturing plants—we adapt the build timeline to operational realities and stay actively embedded until your business achieves unit-level profitability, positive cash flow, and has permanent operational staff in place.",
+    answer: "Our execution is tailored across 4 milestone phase gates: Business Blueprint & Feasibility, Core Engineering & Systems Setup, Key Hiring & First Revenue, and Handover to Your Team. We adapt the build timeline to operational realities and stay actively embedded until your business achieves positive cash flow and has permanent team members in place.",
     category: "studio",
   },
   {
     question: "How do you handle software, ERPs, and digital infrastructure?",
-    answer: "We architect and deploy modern open-source ERP systems (ERPNext/Frappe), payment gateway pipelines, warehouse management systems (WMS), and automated operational dashboards. We hire and train engineers directly into your company, ensuring zero technical debt.",
+    answer: "We architect and deploy modern cloud infrastructure, open-source ERP systems (such as ERPNext/Frappe), payment workflows, inventory management, and automated operational dashboards. We help hire and onboard permanent engineers directly into your company.",
     category: "studio",
   },
   {
     question: "Who owns the intellectual property, codebase, and supply contracts?",
-    answer: "100% of all software codebases, supplier contracts, brand trademarks, customer data, and operational assets belong exclusively to the founder's corporate entity. 1008 Network executes full IP assignment and non-disclosure documentation on Day 1.",
+    answer: "100% of all software codebases, supplier contracts, brand trademarks, customer data, and operational assets belong exclusively to the founder's corporate entity. 1008 Network executes full IP assignment from Day 1.",
     category: "equity",
   },
   {
     question: "How does 1008 Network structure sweat equity and operational costs?",
-    answer: "We operate as a venture facilitator on a shared-equity and milestone-based upside model, without charging expensive monthly consulting retainers. The venture directly covers its operational tooling, hired team salaries, and manufacturing capex—often supported by syndicate capital and non-dilutive credit lines we help structure.",
+    answer: "We operate on a shared-equity model with skin in the game, without charging expensive monthly consulting retainers. The venture directly covers its operational tooling, hired team salaries, and hard costs—which we help structure efficiently.",
     category: "equity",
   },
   {
-    question: "Can foreign corporations, global startups, and overseas OEMs partner with 1008 for India market entry?",
-    answer: "Yes. 1008 Network acts as the turnkey India Operating Partner and JV Co-Builder for global corporations and hardware manufacturers. We facilitate industrial land allocation, PLI / SPECS policy subsidies, cleanroom/factory setups (e.g. Semiconductor OSAT, EV battery assembly), Press Note 3 compliance, Tier-1 supply chain localization, and statutory approvals (BIS/CDSCO/EPR).",
-    category: "studio",
-  },
-  {
-    question: "Can I discuss an early concept or a confidential business turnaround under NDA?",
-    answer: "Every preliminary discussion, business model, and operational diagnostic is protected under our mutual Non-Disclosure Agreement (NDA). We evaluate operational viability with strict confidentiality before any formal commitments or public announcements are made.",
+    question: "Can I discuss an early concept or business idea confidentially?",
+    answer: "Yes. Every preliminary discussion and business model review is conducted under strict confidentiality. We evaluate operational viability with care before any formal partnership commitments are made.",
     category: "equity",
   },
 ];

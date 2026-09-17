@@ -20,82 +20,56 @@ export function PersonaMatrix() {
 
   const domains = [
     {
-      icon: Briefcase,
-      badge: "Tech Startups & SaaS",
+      icon: Factory,
+      badge: "Industry & Supply Chain",
       badgeVariant: "indigo" as const,
       iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Tech Startups & Digital Platforms",
+      title: "Industrial, Manufacturing & Supply Chain",
       bullets: [
-        "Venture-grade Next.js / cloud infrastructure architecture",
-        "Rapid feasibility MVP build & key engineer sourcing",
-        "GTM customer activation, pilot onboarding & telemetry",
+        "Cloud ERP, automated inventory ledgers & invoicing setup",
+        "OEM batch manufacturing, supplier auditing & vendor contracts",
+        "B2B sales workflows, key account management & credit rails",
       ],
-      thesisExample: "B2B SaaS, enterprise workflow engines, fintech infrastructure & logistics platforms.",
+      thesisExample: "Precision tooling, spare parts distribution, industrial ancillaries, and B2B supply networks.",
+    },
+    {
+      icon: Briefcase,
+      badge: "Software & Digital Platforms",
+      badgeVariant: "cyan" as const,
+      iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
+      title: "Vertical Software & Tech Platforms",
+      bullets: [
+        "Production cloud architecture, APIs & secure database design",
+        "Sourcing and hiring founding engineers & technical leads",
+        "Enterprise customer onboarding, pilot rollouts & integrations",
+      ],
+      thesisExample: "B2B vertical SaaS, logistics software, trade finance infrastructure & workflow automation.",
     },
     {
       icon: Sparkles,
-      badge: "Consumer Brands & D2C",
+      badge: "Consumer & Product Brands",
       badgeVariant: "amber" as const,
       iconBg: "bg-[#FFF4ED] text-[#F4511E] border-[#FFE0D2]",
-      title: "Consumer Brands & D2C Networks",
+      title: "Consumer Products & Physical Brands",
       bullets: [
-        "Contract batch manufacturing & custom packaging design",
-        "Warehousing, 3PL fulfillment & conversion-optimized commerce stack",
-        "Brand launch campaigns, retail distribution & customer acquisition",
+        "Contract batch manufacturing, packaging design & regulatory licenses",
+        "Warehousing, 3PL logistics & inventory working capital setup",
+        "Modern trade distribution, marketplace launches & customer acquisition",
       ],
-      thesisExample: "Apparel labels, packaged consumer goods, functional wellness & beauty brands.",
+      thesisExample: "Packaged consumer goods, wellness products, lifestyle hardware & functional nutrition.",
     },
     {
       icon: TrendingUp,
-      badge: "Product Brands & Hardware",
+      badge: "Specialized Services & Health",
       badgeVariant: "emerald" as const,
       iconBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
-      title: "Physical Product Brands & Hardware",
+      title: "Specialized Services & Healthcare",
       bullets: [
-        "Industrial 3D design, rapid CAD prototyping & material testing",
-        "Custom tooling, mold fabrication & batch manufacturing",
-        "Domestic distributor placement, warranty & supply chain rails",
+        "Clinical & service SOPs, staff workflows & billing software",
+        "Regulatory compliance, statutory licenses & site setup",
+        "Local customer acquisition, referral channels & expansion blueprints",
       ],
-      thesisExample: "Consumer electronics, smart appliances, industrial gear & lifestyle hardware.",
-    },
-    {
-      icon: Factory,
-      badge: "Manufacturing & Industrial",
-      badgeVariant: "indigo" as const,
-      iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Manufacturing Plants & Assembly Units",
-      bullets: [
-        "Strategic industrial land acquisition & state zoning clearances",
-        "OEM machinery sourcing, custom tooling & trial production runs",
-        "Plant labor staffing & standard operating quality controls",
-      ],
-      thesisExample: "Precision engineering, auto-components, packaging plants, chemicals & fabrication.",
-    },
-    {
-      icon: Globe,
-      badge: "Global Entry & JVs",
-      badgeVariant: "cyan" as const,
-      iconBg: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
-      title: "India Market Entry & Manufacturing JVs",
-      bullets: [
-        "Turnkey factory setup, cleanroom assembly & state industrial land lock",
-        "PLI / SPECS subsidies, BIS compliance & Press Note 3 compliant structuring",
-        "Tier-1 vendor sourcing, domestic GTM & Indian co-investment syndicates",
-      ],
-      thesisExample: "Semiconductor OSAT/ATMP, EV battery & powertrain, MedTech & global OEMs expanding into India.",
-    },
-    {
-      icon: RefreshCw,
-      badge: "Turnaround & Reboots",
-      badgeVariant: "indigo" as const,
-      iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      title: "Struggling Businesses & Venture Reboots",
-      bullets: [
-        "Comprehensive root-cause financial & margin leak audit",
-        "Restructuring broken supply chains, workflows & bloated tech",
-        "Re-igniting sales pipelines & stabilizing monthly cash flows",
-      ],
-      thesisExample: "Distressed SME turnaround, tech modernization, supplier re-negotiation & margin recovery.",
+      thesisExample: "Specialized diagnostic chains, clinical trial logistics, healthcare operations & domain services.",
     },
   ];
 
@@ -108,16 +82,16 @@ export function PersonaMatrix() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge variant="indigo" size="sm">Turnkey Capabilities & Use Cases</Badge>
+          <Badge variant="indigo" size="sm">Domain Archetypes</Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            You bring domain expertise. We build the operations.
+            You know your industry. We build the company around it.
           </h2>
           <p className="text-[#425466] text-base sm:text-lg">
-            You know your industry, your products, and your target buyers. We step in as your operational co-builder to handle technology, factory setup, compliance, hiring, and launch.
+            Whether your background is in industrial manufacturing, enterprise sales, healthcare, or corporate leadership, 1008 provides the software, suppliers, operational systems, and people you need.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {domains.map((item, idx) => {
             const Icon = item.icon;
             return (

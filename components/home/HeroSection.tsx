@@ -30,7 +30,7 @@ export function HeroSection() {
       persona: "I have a business idea",
       intent: "I want 1008 to help me build it",
       cta: "Build With 1008",
-      desc: "Turn domain expertise into an operating company. We handle technology, systems, suppliers, compliance, and core operations for shared equity.",
+      desc: "Turn your industry knowledge into an operating company. We handle software, systems, suppliers, compliance, and core operations for shared equity.",
       href: "/studio",
       accent: "#635BFF",
       bgHover: "hover:border-[#635BFF]/60 hover:shadow-[0_12px_24px_-8px_rgba(99,91,255,0.16)]",
@@ -40,10 +40,10 @@ export function HeroSection() {
     },
     {
       badge: "Find Co-Founders",
-      persona: "I have a business but need someone",
-      intent: "I need a CTO, co-founder, or operator",
+      persona: "I need a co-founder or operator",
+      intent: "I'm missing a CTO, ops lead, or sales partner",
       cta: "Find a Partner",
-      desc: "Post your venture opportunity to connect directly with curated technical CTOs, commercial leaders, and domain operators for shared equity.",
+      desc: "Post your opportunity to connect with reviewed technical CTOs, commercial leaders, and domain operators who want to build with experienced people.",
       href: "/network/post",
       accent: "#00A389",
       bgHover: "hover:border-[#00D4B2]/60 hover:shadow-[0_12px_24px_-8px_rgba(0,212,178,0.16)]",
@@ -54,9 +54,9 @@ export function HeroSection() {
     {
       badge: "Join Talent Pool",
       persona: "I have skills & want to build",
-      intent: "I want to join a venture",
+      intent: "I want to join a venture as a co-founder",
       cta: "Join the Network",
-      desc: "Join our curated talent pool to partner with domain founders building real economy enterprises and software ventures for meaningful equity.",
+      desc: "Partner with experienced domain founders building real economy enterprises and software ventures for meaningful equity.",
       href: "/network/join",
       accent: "#059669",
       bgHover: "hover:border-[#059669]/60 hover:shadow-[0_12px_24px_-8px_rgba(5,150,105,0.16)]",
@@ -69,7 +69,7 @@ export function HeroSection() {
       persona: "I want to invest",
       intent: "Angel & syndicate co-investments",
       cta: "Join Capital Network",
-      desc: "Co-invest in high-conviction startups (₹50K to ₹5Cr+) with itemized use of funds, combined deal meetings, and zero broker fees.",
+      desc: "Co-invest directly in early-stage ventures with itemized use of funds, transparent terms, and zero broker fees.",
       href: "/capital",
       accent: "#FF7043",
       bgHover: "hover:border-[#FF7043]/60 hover:shadow-[0_12px_24px_-8px_rgba(255,112,67,0.16)]",
@@ -102,21 +102,21 @@ export function HeroSection() {
           {/* Status Capsule */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse className="text-xs sm:text-[13px] px-3.5 py-1 font-medium">
-              1008 Network // Venture Studio • Partner Network • Capital
+              1008 Network // Co-Building & Partner Network
             </Badge>
           </div>
 
-          {/* Primary Platform Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-extrabold tracking-tight text-[#0A2540] leading-[1.12] font-sans">
-            <span className="block">You know the business.</span>
+          {/* Primary Platform Headline - Owning the core sentence */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[48px] font-extrabold tracking-tight text-[#0A2540] leading-[1.14] font-sans">
+            <span className="block">1008 helps experienced people build businesses</span>
             <span className="block mt-1 sm:mt-1.5 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
-              We&apos;ll help you build the company.
+              by providing the execution and people they are missing.
             </span>
           </h1>
 
           {/* Platform Subtitle */}
           <p className="text-sm sm:text-base md:text-lg text-[#334155] leading-relaxed max-w-2xl mx-auto font-normal">
-            You bring the industry expertise, ambition and opportunity. 1008 helps build the people, systems, technology, suppliers, sales infrastructure and operations around it.
+            You bring the industry expertise, ambition, and market opportunity. 1008 helps build the people, systems, technology, suppliers, and operations around it.
           </p>
         </div>
 
