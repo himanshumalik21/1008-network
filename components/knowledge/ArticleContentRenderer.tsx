@@ -37,6 +37,7 @@ import { ValidationPlaybookPhases } from "@/components/knowledge/ValidationPlayb
 import { CoFounderEquitySplitGraphic } from "@/components/knowledge/CoFounderEquitySplitGraphic";
 import { CoFounderCapTableTrapsSection } from "@/components/knowledge/CoFounderCapTableTrapsSection";
 import { CoFounderGovernancePhases } from "@/components/knowledge/CoFounderGovernancePhases";
+import { PCBHadwareCoreGraphic } from "@/components/knowledge/PCBHadwareCoreGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -391,6 +392,14 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("THE HANDSHAKE TRAP")
           ) {
             return <CoFounderEquitySplitGraphic key={idx} />;
+          }
+
+          // Check if this is the PCB Assembly Hardware Core Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("THE ELECTRONICS HARDWARE CORE") ||
+            codeLines.includes("ELECTRONICS HARDWARE CORE")
+          ) {
+            return <PCBHadwareCoreGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
