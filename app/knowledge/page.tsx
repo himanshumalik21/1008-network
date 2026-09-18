@@ -22,6 +22,8 @@ import {
   ChevronRight,
   SlidersHorizontal,
   LayoutGrid,
+  CheckCircle2,
+  TrendingUp,
 } from "lucide-react";
 
 export default function KnowledgePage() {
@@ -93,6 +95,22 @@ export default function KnowledgePage() {
     () => Array.from(new Set(initialKnowledgeResources.flatMap((r) => r.sectorTags))),
     []
   );
+
+  // Memoize latest opportunity spotlight
+  const spotlightOpportunity = useMemo(() => {
+    return (
+      initialKnowledgeResources.find((r) => r.category === "opportunity") ||
+      initialKnowledgeResources[0]
+    );
+  }, []);
+
+  const handleTagClick = (tag: string) => {
+    setSelectedTag(tag);
+    const gridElem = document.getElementById("playbooks-grid-start");
+    if (gridElem) {
+      gridElem.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   const filteredResources = useMemo(() => {
     return initialKnowledgeResources.filter((item) => {
@@ -173,6 +191,107 @@ export default function KnowledgePage() {
           </div>
         </div>
       </section>
+
+      {/* Spotlight Feature Section */}
+      {spotlightOpportunity && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-2">
+          <div className="relative rounded-3xl bg-white border border-[#E6E8EB] p-6 sm:p-8 lg:p-10 shadow-xs overflow-hidden hover:border-[#635BFF]/60 hover:shadow-md transition-all duration-300 group/spotlight">
+            {/* Subtle light background decoration */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#00D4B2]/08 via-[#635BFF]/05 to-transparent blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00D4B2] via-[#635BFF] to-[#FF7043]" />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Left col: Meta, Title, Summary, Key Highlights */}
+              <div className="lg:col-span-8 space-y-4">
+                <div className="flex flex-wrap items-center gap-2.5">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#E6FFFA] text-[#00897B] border border-[#B2DFDB]">
+                    <Sparkles className="h-3.5 w-3.5 text-[#00D4B2]" /> Latest Opportunity Spotlight
+                  </span>
+                  <span className="text-xs font-mono text-[#627D98] flex items-center gap-1">
+                    <Clock className="h-3 w-3" /> {spotlightOpportunity.readOrWatchTime}
+                  </span>
+                  <span className="text-xs font-medium text-[#829AB1] hidden sm:inline">•</span>
+                  <span className="text-xs font-medium text-[#627D98] hidden sm:inline">
+                    {spotlightOpportunity.authorOrSource}
+                  </span>
+                </div>
+
+                <Link href={`/knowledge/${spotlightOpportunity.slug}`} className="group block space-y-2">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] group-hover:text-[#635BFF] transition-colors leading-tight">
+                    {spotlightOpportunity.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-[#425466] leading-relaxed line-clamp-3">
+                    {spotlightOpportunity.summary}
+                  </p>
+                </Link>
+
+                {/* Key Takeaways Preview */}
+                {spotlightOpportunity.keyTakeaways && spotlightOpportunity.keyTakeaways.length > 0 && (
+                  <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {spotlightOpportunity.keyTakeaways.slice(0, 2).map((takeaway, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-2 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#334E68] leading-snug"
+                      >
+                        <CheckCircle2 className="h-4 w-4 text-[#00D4B2] shrink-0 mt-0.5" />
+                        <span>{takeaway}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Sector tags */}
+                <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                  {spotlightOpportunity.sectorTags.map((tag) => (
+                    <button
+                      key={tag}
+                      onClick={() => handleTagClick(tag)}
+                      className="text-[11px] px-2.5 py-0.5 rounded-lg bg-[#F1F4F8] text-[#486581] border border-[#D9E2EC] font-medium cursor-pointer hover:bg-[#E0E7FF] hover:text-[#635BFF] hover:border-[#635BFF] transition-colors"
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right col: Quick Stats / CTA card */}
+              <div className="lg:col-span-4 flex flex-col justify-between h-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 space-y-5">
+                <div>
+                  <span className="text-[11px] font-mono uppercase tracking-wider font-semibold text-[#829AB1]">
+                    Opportunity Intelligence
+                  </span>
+                  <div className="mt-2 space-y-2.5">
+                    <div className="flex items-center justify-between text-xs py-1.5 border-b border-[#E2E8F0]">
+                      <span className="text-[#627D98]">Sector Category</span>
+                      <span className="font-semibold text-[#0A2540]">Deep Industrial / Tech</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs py-1.5 border-b border-[#E2E8F0]">
+                      <span className="text-[#627D98]">Target Market</span>
+                      <span className="font-semibold text-[#0A2540]">India Domestic + Export</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs py-1.5">
+                      <span className="text-[#627D98]">Framework Included</span>
+                      <span className="font-semibold text-[#00897B] flex items-center gap-1">
+                        <TrendingUp className="h-3.5 w-3.5" /> Interactive Blueprint
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    href={`/knowledge/${spotlightOpportunity.slug}`}
+                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-sm transition-all shadow-xs group cursor-pointer"
+                  >
+                    <span>Read Opportunity Brief</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Main Filter & Search Area */}
       <div id="playbooks-grid-start" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 scroll-mt-28">

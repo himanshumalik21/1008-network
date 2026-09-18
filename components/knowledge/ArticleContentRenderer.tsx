@@ -39,6 +39,7 @@ import { CoFounderEquitySplitGraphic } from "@/components/knowledge/CoFounderEqu
 import { CoFounderCapTableTrapsSection } from "@/components/knowledge/CoFounderCapTableTrapsSection";
 import { CoFounderGovernancePhases } from "@/components/knowledge/CoFounderGovernancePhases";
 import { PCBHadwareCoreGraphic } from "@/components/knowledge/PCBHadwareCoreGraphic";
+import { TechnicalTextilesGraphic } from "@/components/knowledge/TechnicalTextilesGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -401,6 +402,15 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("ELECTRONICS HARDWARE CORE")
           ) {
             return <PCBHadwareCoreGraphic key={idx} />;
+          }
+
+          // Check if this is the Technical Textiles / Geotextiles Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("TECHNICAL TEXTILES MANUFACTURING CORE") ||
+            codeLines.includes("GEOTEXTILES & AGROTEXTILES ARCHITECTURE") ||
+            codeLines.includes("TECHNICAL TEXTILES")
+          ) {
+            return <TechnicalTextilesGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
