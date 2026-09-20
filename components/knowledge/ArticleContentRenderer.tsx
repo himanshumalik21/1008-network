@@ -40,6 +40,7 @@ import { CoFounderCapTableTrapsSection } from "@/components/knowledge/CoFounderC
 import { CoFounderGovernancePhases } from "@/components/knowledge/CoFounderGovernancePhases";
 import { PCBHadwareCoreGraphic } from "@/components/knowledge/PCBHadwareCoreGraphic";
 import { TechnicalTextilesGraphic } from "@/components/knowledge/TechnicalTextilesGraphic";
+import { MoldedPulpPackagingGraphic } from "@/components/knowledge/MoldedPulpPackagingGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -411,6 +412,16 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("TECHNICAL TEXTILES")
           ) {
             return <TechnicalTextilesGraphic key={idx} />;
+          }
+
+          // Check if this is the Molded Fiber / Thermoformed Pulp Packaging Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("MOLDED FIBER & PULP PACKAGING CORE") ||
+            codeLines.includes("THERMOFORMED PULP PACKAGING") ||
+            codeLines.includes("MOLDED FIBER MANUFACTURING") ||
+            codeLines.includes("MOLDED PULP")
+          ) {
+            return <MoldedPulpPackagingGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
