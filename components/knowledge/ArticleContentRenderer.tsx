@@ -41,6 +41,7 @@ import { CoFounderGovernancePhases } from "@/components/knowledge/CoFounderGover
 import { PCBHadwareCoreGraphic } from "@/components/knowledge/PCBHadwareCoreGraphic";
 import { TechnicalTextilesGraphic } from "@/components/knowledge/TechnicalTextilesGraphic";
 import { MoldedPulpPackagingGraphic } from "@/components/knowledge/MoldedPulpPackagingGraphic";
+import { TissuePaperConvertingGraphic } from "@/components/knowledge/TissuePaperConvertingGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -422,6 +423,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("MOLDED PULP")
           ) {
             return <MoldedPulpPackagingGraphic key={idx} />;
+          }
+
+          // Check if this is the Tissue Paper / Napkin Converting Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("SUB-₹10 LAKH MICRO-CONVERTING CORE") ||
+            codeLines.includes("TISSUE PAPER & NAPKIN CONVERTING") ||
+            codeLines.includes("TISSUE PAPER CONVERTING") ||
+            codeLines.includes("TISSUE PAPER & TABLE NAPKIN") ||
+            codeLines.includes("PAPER NAPKIN CONVERTING")
+          ) {
+            return <TissuePaperConvertingGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
