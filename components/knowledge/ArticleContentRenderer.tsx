@@ -42,6 +42,7 @@ import { PCBHadwareCoreGraphic } from "@/components/knowledge/PCBHadwareCoreGrap
 import { TechnicalTextilesGraphic } from "@/components/knowledge/TechnicalTextilesGraphic";
 import { MoldedPulpPackagingGraphic } from "@/components/knowledge/MoldedPulpPackagingGraphic";
 import { TissuePaperConvertingGraphic } from "@/components/knowledge/TissuePaperConvertingGraphic";
+import { EVFastChargingJVGraphic } from "@/components/knowledge/EVFastChargingJVGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -434,6 +435,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("PAPER NAPKIN CONVERTING")
           ) {
             return <TissuePaperConvertingGraphic key={idx} />;
+          }
+
+          // Check if this is the EV Fast Charging & Power Electronics JV Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("EV POWER ELECTRONICS & DC FAST CHARGING") ||
+            codeLines.includes("EV FAST CHARGING & POWER ELECTRONICS") ||
+            codeLines.includes("EV FAST CHARGING") ||
+            codeLines.includes("DC FAST CHARGING CORE") ||
+            codeLines.includes("POWER ELECTRONICS JOINT VENTURE")
+          ) {
+            return <EVFastChargingJVGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
