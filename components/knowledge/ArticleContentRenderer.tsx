@@ -43,6 +43,7 @@ import { TechnicalTextilesGraphic } from "@/components/knowledge/TechnicalTextil
 import { MoldedPulpPackagingGraphic } from "@/components/knowledge/MoldedPulpPackagingGraphic";
 import { TissuePaperConvertingGraphic } from "@/components/knowledge/TissuePaperConvertingGraphic";
 import { EVFastChargingJVGraphic } from "@/components/knowledge/EVFastChargingJVGraphic";
+import { HotelFurnitureManufacturingGraphic } from "@/components/knowledge/HotelFurnitureManufacturingGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -446,6 +447,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("POWER ELECTRONICS JOINT VENTURE")
           ) {
             return <EVFastChargingJVGraphic key={idx} />;
+          }
+
+          // Check if this is the Hotel Furniture & Hospitality FF&E Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("COMMERCIAL CONTRACT & HOTEL FF&E") ||
+            codeLines.includes("HOTEL FF&E MANUFACTURING") ||
+            codeLines.includes("HOTEL FURNITURE MANUFACTURING") ||
+            codeLines.includes("HOTEL FURNITURE") ||
+            codeLines.includes("COMMERCIAL FURNITURE & HOSPITALITY")
+          ) {
+            return <HotelFurnitureManufacturingGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
