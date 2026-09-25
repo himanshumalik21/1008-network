@@ -44,6 +44,7 @@ import { MoldedPulpPackagingGraphic } from "@/components/knowledge/MoldedPulpPac
 import { TissuePaperConvertingGraphic } from "@/components/knowledge/TissuePaperConvertingGraphic";
 import { EVFastChargingJVGraphic } from "@/components/knowledge/EVFastChargingJVGraphic";
 import { HotelFurnitureManufacturingGraphic } from "@/components/knowledge/HotelFurnitureManufacturingGraphic";
+import { PetFoodExtrusionGraphic } from "@/components/knowledge/PetFoodExtrusionGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -458,6 +459,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("COMMERCIAL FURNITURE & HOSPITALITY")
           ) {
             return <HotelFurnitureManufacturingGraphic key={idx} />;
+          }
+
+          // Check if this is the Pet Food Extrusion & Nutrition Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("DRY PET KIBBLE & NUTRITION EXTRUSION CORE") ||
+            codeLines.includes("PET FOOD EXTRUSION") ||
+            codeLines.includes("PET FOOD MANUFACTURING") ||
+            codeLines.includes("PET KIBBLE EXTRUSION") ||
+            codeLines.includes("EXTRUDED DRY KIBBLE")
+          ) {
+            return <PetFoodExtrusionGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
