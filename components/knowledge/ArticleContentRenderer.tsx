@@ -45,6 +45,7 @@ import { TissuePaperConvertingGraphic } from "@/components/knowledge/TissuePaper
 import { EVFastChargingJVGraphic } from "@/components/knowledge/EVFastChargingJVGraphic";
 import { HotelFurnitureManufacturingGraphic } from "@/components/knowledge/HotelFurnitureManufacturingGraphic";
 import { PetFoodExtrusionGraphic } from "@/components/knowledge/PetFoodExtrusionGraphic";
+import { FounderPersonaFitGraphic } from "@/components/knowledge/FounderPersonaFitGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -470,6 +471,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("EXTRUDED DRY KIBBLE")
           ) {
             return <PetFoodExtrusionGraphic key={idx} />;
+          }
+
+          // Check if this is the Founder Persona Fit / Archetypes Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("FOUNDER-OPPORTUNITY FIT") ||
+            codeLines.includes("FOUNDER PERSONA FIT") ||
+            codeLines.includes("FOUNDER ARCHETYPES") ||
+            codeLines.includes("PERSONA FIT") ||
+            codeLines.includes("OPERATING PERSONA")
+          ) {
+            return <FounderPersonaFitGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components
