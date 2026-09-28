@@ -46,6 +46,7 @@ import { EVFastChargingJVGraphic } from "@/components/knowledge/EVFastChargingJV
 import { HotelFurnitureManufacturingGraphic } from "@/components/knowledge/HotelFurnitureManufacturingGraphic";
 import { PetFoodExtrusionGraphic } from "@/components/knowledge/PetFoodExtrusionGraphic";
 import { FounderPersonaFitGraphic } from "@/components/knowledge/FounderPersonaFitGraphic";
+import { StartingBusinessGuideGraphic } from "@/components/knowledge/StartingBusinessGuideGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -482,6 +483,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("OPERATING PERSONA")
           ) {
             return <FounderPersonaFitGraphic key={idx} />;
+          }
+
+          // Check if this is the Starting a New Business / De-Risked Roadmap Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("DE-RISKED VENTURE ENGINE") ||
+            codeLines.includes("DE-RISKED ROADMAP") ||
+            codeLines.includes("STARTING A NEW BUSINESS") ||
+            codeLines.includes("DE-RISKED PLAYBOOK") ||
+            codeLines.includes("CONCEPT TO FIRST CUSTOMER")
+          ) {
+            return <StartingBusinessGuideGraphic key={idx} />;
           }
 
           // Check if this is the Phase 1..4 diagram or Phase checklist tree -> Handled by PlaybookPhases components

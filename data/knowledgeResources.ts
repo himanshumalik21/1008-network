@@ -2,6 +2,128 @@ import { KnowledgeResource } from "@/lib/types";
 
 export const initialKnowledgeResources: KnowledgeResource[] = [
   {
+    slug: "how-to-start-a-new-business-guide-india",
+    title: "The De-Risked Playbook for Starting a New Business: From Concept to First Customer in India",
+    subtitle: "A pragmatic, battle-tested 6-stage roadmap to starting a real-world business in India: synthesizing lessons from Rob Fitzpatrick, Peter Thiel, Naval Ravikant, and Indian industrial operators.",
+    category: "playbook",
+    sectorTags: [
+      "Founder Playbook",
+      "Business Guide",
+      "Customer Discovery",
+      "Lean Startup",
+      "Execution",
+      "1008 Network"
+    ],
+    readOrWatchTime: "10 min read",
+    authorOrSource: "1008 Network Research & Operations",
+    featured: true,
+    publishedAt: "2026-09-28",
+    primaryKeyword: "step by step guide to starting a business in India",
+    secondaryKeywords: [
+      "how to start a new business India",
+      "customer validation Mom Test",
+      "business setup checklist India",
+      "MSME startup guide",
+      "lean manufacturing business launch"
+    ],
+    targetAudience: "First-Time Founders, Working Professionals Transitioning to Business, MSME Operators, Co-Founder Teams",
+    summary: "A pragmatic, battle-tested 6-stage roadmap to building a de-risked, cash-flow-positive business in India without burning premature capital. Grounded in the foundational mental models of Rob Fitzpatrick (The Mom Test), Peter Thiel (Zero to One), Naval Ravikant (Specific Knowledge), and Sridhar Vembu (Zoho Operator Cash Discipline), explore how to navigate unmet customer friction, unit economics audits, concierge MVPs, MSME subsidy structuring, and sustainable sales engines.",
+    keyTakeaways: [
+      "The Premature Capital Trap: Over 70% of business failures in India stem not from product development failure, but from deploying capital into leases, machinery, and inventory before validating customer willingness to pay.",
+      "4 Non-Negotiable Mental Models: The Mom Test (focus on past user behavior and spending, never polite feedback), Zero to One (find non-obvious supply chain secrets), Naval Ravikant (leverage specific domain knowledge), and Zoho Operator Logic (prioritize gross margin and fast cash turnaround over vanity GMV).",
+      "The 6-Stage De-Risked Roadmap: 1. Unmet Friction Discovery -> 2. Unit Economics & Spread Audit -> 3. Concierge / Job-Work MVP -> 4. Priority Capital & Subsidy Structuring -> 5. Lean Plant & Compliance -> 6. Repeatable Sales Engine.",
+      "Pre-Capital Validation Rule: Never buy new machinery or sign long-term commercial leases until you have delivered at least 5 paid customer batches via third-party contract manufacturing."
+    ],
+    actionableChecklist: [
+      "Interview at least 20 potential B2B or consumer buyers using 'The Mom Test' methodology to confirm active past spending.",
+      "Produce and deliver a small trial pilot batch through contract manufacturing / job-work to test customer product acceptance.",
+      "Audit your landed unit economics (raw materials + energy + packaging + freight + scrap) to ensure gross contribution exceeds 30%–40%.",
+      "Map mandatory statutory compliance requirements (Udyam, GST, SPCB CTE/CTO, BIS, FSSAI) and their licensing lead times.",
+      "Stress-test your personal balance sheet against a worst-case 90-day institutional B2B payment delay."
+    ],
+    contentMarkdown: `## 1. The Foundational Trap: Why Premature Capital Kills Ventures
+
+In India, the default instinct of a first-time entrepreneur is often backwards: they register a Pvt Ltd company, lease a commercial shed or office, purchase expensive machinery or hire software developers, and only then start looking for paying customers.
+
+\`\`\`
+┌────────────────────────────────────────────────────────────────────────┐
+│                   THE DE-RISKED VENTURE ENGINE                         │
+│                                                                        │
+│   [Unmet Friction Discovery] + [Concierge MVP] + [Paid Pilot Batches]   │
+│                               │                                        │
+│                               ▼                                        │
+│             [Self-Sustaining Commercial Cashflow]                      │
+└────────────────────────────────────────────────────────────────────────┘
+\`\`\`
+
+### Core Philosophy
+
+* **The Lean Principle**: As Steve Blank (*The Four Steps to the Epiphany*) famously articulated: *"More startups fail from a lack of customers than from a failure of product development."*
+* **The 1008 Rule**: Never deploy capital into permanent fixed assets (machinery, long-term leases, custom tooling) until you have systematically eliminated the three existential uncertainties: **Problem Risk**, **Channel Risk**, and **Price Risk**.
+
+---
+
+## 2. Synthesizing Master Thinkers: 4 Non-Negotiable Mental Models
+
+Before building anything, ground your execution in four battle-tested frameworks from seminal operators:
+
+* **1. The Mom Test (Rob Fitzpatrick): Never Ask If They 'Like' Your Idea**: People will lie to be polite. Never ask prospective customers: *"Would you buy this?"* Instead, ask about their past behavior, current spending, and specific workarounds: *"How do you solve this today? How much did you pay last month? What broke when you tried that?"*
+* **2. Zero to One (Peter Thiel): Escape Competition via Non-Obvious Secrets**: Competition destroys margins. What is an unpopular or overlooked truth you understand about an Indian supply chain that incumbents are ignoring? (e.g., freight penalties on bulky products, unorganized contract manufacturing, regulatory QCO shifts).
+* **3. The Almanack of Naval Ravikant: Specific Knowledge & Accountability**: Build businesses where you possess specific knowledge—skills, domain insights, or operational grit that cannot be easily trained in a classroom. Pair this with personal accountability to attract partners, credit, and early clients.
+* **4. Sridhar Vembu (Zoho) & Indian Operator Logic: Cash-Flow Velocity Over Hype**: In the Indian business ecosystem, gross margin and working capital turnaround matter far more than theoretical GMV. If customer receivables exceed 90 days without advance deposits, the enterprise is bleeding operating cash.
+
+---
+
+## 3. The 6-Stage De-Risked Execution Roadmap
+
+Follow this step-by-step sequence to build a cashflow-positive business in India without unnecessary capital burning:
+
+| Execution Stage | Operational Milestones | Key Action Items |
+| :--- | :--- | :--- |
+| **Stage 1: The 'Unmet Friction' Discovery** | Uncover active pain points where customers are already spending money. | Interview 20 target buyers using **Mom Test** techniques; verify past invoices and actual workarounds. |
+| **Stage 2: Unit Economics & Spread Audit** | Validate gross contribution before touching machinery. | Model landed raw materials + power + scrap + freight vs. market selling price (**target >30%–40% gross margin buffer**). |
+| **Stage 3: The Concierge / Job-Work MVP** | Test commercial product acceptance with zero machinery capex. | Outsource initial 5–10 batches to an existing open-capacity factory; sell directly to first 5 customers. |
+| **Stage 4: Capital & Incentive Structuring** | Structure debt and government capital with customer proof. | Assemble Detailed Project Report (DPR); apply for **PMEGP (15%–35% subsidy)**, MUDRA loans, or CGTMSE credit. |
+| **Stage 5: Plant Sizing & Statutory Compliance** | Establish physical operations without overbuilding. | Secure Udyam, GST, SPCB environmental consent (CTE/CTO), BIS/FSSAI licenses; lease shed sized for 1-shift. |
+| **Stage 6: The Repeatable Sales Engine** | Transition from founder manual sales to distribution scale. | Build regional distributor and institutional sales channels with strict **7-to-15 day payment terms**. |
+
+---
+
+## 4. The 4 Fatal Mistakes First-Time Indian Founders Make
+
+1. **Mistaking Positive Feedback for Commercial Demand**: A prospect saying *"This looks amazing, send me a quote"* is meaningless. A real signal is an advance payment, a formal Purchase Order (PO), or a paid pilot batch.
+2. **Ignoring Working Capital Drag**: In India, corporate and institutional B2B buyers routinely delay payments by 60 to 90 days. If your business model requires upfront raw material cash purchases, you will run out of money while profitable on paper.
+3. **Buying Brand-New Machinery for Unproven SKUs**: Purchasing high-capacity new machinery before locking in contracts creates massive depreciation and idle capacity interest overheads. Start with refurbished lines or subcontracting.
+4. **Premature Scaling & High Fixed Overheads**: Hiring large sales teams or leasing prime real estate before establishing unit-level profitability burns cash reserves prematurely.
+
+---
+
+## 5. Pre-Launch Validation Checklist
+
+- [ ] Have you spoken to at least 20 potential buyers asking specifically about their past procurement spend and current pain points (Mom Test)?
+- [ ] Have you produced and delivered a small pilot batch through contract manufacturing to verify real-world client acceptance?
+- [ ] Have you calculated your landed unit economics including freight, electricity, packaging, and scrap loss to ensure gross margins exceed 30%?
+- [ ] Have you identified all mandatory statutory requirements (Udyam, GST, SPCB, BIS, FSSAI) and mapped their licensing lead times?
+- [ ] Do you have a working capital cash buffer to survive a 90-day payment delay from your first major client?
+
+---
+
+## 6. Sources, Recommended Reading & Operator References
+
+1. **Rob Fitzpatrick**: [*The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you*](https://momtestbook.com)
+2. **Peter Thiel**: [*Zero to One: Notes on Startups, or How to Build the Future*](https://en.wikipedia.org/wiki/Zero_to_One)
+3. **Eric Ries & Steve Blank**: [*The Lean Startup* & *The Four Steps to the Epiphany*](https://steveblank.com)
+4. **Eric Jorgenson**: [*The Almanack of Naval Ravikant: A Guide to Wealth and Happiness*](https://www.navalmanack.com)
+5. **Ministry of MSME, Govt of India**: [PMEGP, Udyam, and MUDRA Scheme Operational Guidelines](https://msme.gov.in)
+
+---
+
+## Important Educational Disclaimer
+
+> **1008 Playbooks and Founder Strategy Guides are research and educational frameworks** designed to assist entrepreneurs in structuring business execution. They do not constitute financial, legal, investment, or commercial advice. 1008 Network does not guarantee the commercial success or profitability of any venture.
+`
+  },
+  {
     slug: "assessing-founder-business-persona-fit",
     title: "The 1008 Founder-Opportunity Fit Matrix: How to Choose a Business That Matches Your Operating Persona",
     subtitle: "A structured, unsensationalized framework to evaluate which business model matches your personal risk tolerance, operating strengths, capital capacity, and daily stress profile.",
