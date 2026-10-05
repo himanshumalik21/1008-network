@@ -48,6 +48,7 @@ import { PetFoodExtrusionGraphic } from "@/components/knowledge/PetFoodExtrusion
 import { FounderPersonaFitGraphic } from "@/components/knowledge/FounderPersonaFitGraphic";
 import { StartingBusinessGuideGraphic } from "@/components/knowledge/StartingBusinessGuideGraphic";
 import { LithiumBatteryAssemblyGraphic } from "@/components/knowledge/LithiumBatteryAssemblyGraphic";
+import { StartupHiringEquityGraphic } from "@/components/knowledge/StartupHiringEquityGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -496,6 +497,17 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("Grade-A Cell Inward Inspection")
           ) {
             return <LithiumBatteryAssemblyGraphic key={idx} />;
+          }
+
+          // Check if this is the Startup Hiring & Equity / Co-Founder Matching Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("STARTUP HIRING & EQUITY ARCHITECTURE") ||
+            codeLines.includes("CO-FOUNDER EQUITY BENCHMARKS") ||
+            codeLines.includes("STARTUP TALENT & EQUITY") ||
+            codeLines.includes("CO-FOUNDER MATCHING & HIRING") ||
+            codeLines.includes("STARTUP HIRING PLAYBOOK")
+          ) {
+            return <StartupHiringEquityGraphic key={idx} />;
           }
 
           // Check if this is the Starting a New Business / De-Risked Roadmap Diagram -> Render bespoke graphic!

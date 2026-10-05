@@ -57,6 +57,7 @@ export type SectorCategory =
 
 export type LocationType =
   | "Delhi NCR"
+  | "Gurgaon"
   | "Bengaluru"
   | "Mumbai"
   | "Pune"
@@ -95,6 +96,10 @@ export interface Opportunity {
   expiresInDays: number;
   applicantsCount: number;
   featured?: boolean;
+  companyName?: string;
+  applyUrl?: string;
+  salaryRange?: string;
+  jobType?: "Full-time" | "Contract" | "Internship" | "Co-Founder";
 }
 
 export interface TalentProfile {

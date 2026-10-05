@@ -15,6 +15,7 @@ import {
   CheckCircle2,
   Workflow,
   ChevronRight,
+  Briefcase,
 } from "lucide-react";
 
 const FlowingMeshCanvas = dynamic(
@@ -143,6 +144,24 @@ export function HeroSection() {
             >
               <span>Find a Partner</span>
               <ArrowUpRight className="h-4 w-4 text-[#64748B]" />
+            </Link>
+          </div>
+
+          {/* High-Intent Dual Talent & Hiring Actions */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-2.5 text-xs">
+            <Link
+              href="/network/startup-jobs-india"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] hover:bg-[#E2E8F0] text-[#0A2540] font-semibold border border-[#E2E8F0] transition-colors shadow-2xs"
+            >
+              <Briefcase className="h-3.5 w-3.5 text-[#635BFF]" />
+              <span>Browse Startup Jobs in Gurgaon & India (17+ Roles) →</span>
+            </Link>
+            <Link
+              href="/network/find-a-co-founder-india"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F0FDF4] hover:bg-[#DCFCE7] text-[#166534] font-semibold border border-[#BBF7D0] transition-colors shadow-2xs"
+            >
+              <Users className="h-3.5 w-3.5 text-[#16A34A]" />
+              <span>Hiring a Technical Co-Founder or Lead? Post Requirement →</span>
             </Link>
           </div>
 
