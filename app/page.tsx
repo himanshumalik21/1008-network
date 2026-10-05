@@ -1,5 +1,6 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
+import { StartupJobsAndTalentSection } from "@/components/home/StartupJobsAndTalentSection";
 import { HumanStorySection } from "@/components/home/HumanStorySection";
 import { PillarsBentoSection } from "@/components/home/PillarsBentoSection";
 import { DomainsGridSection } from "@/components/home/DomainsGridSection";
@@ -18,6 +19,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full bg-white min-h-screen">
       <HeroSection />
+      <StartupJobsAndTalentSection />
       <HumanStorySection />
       <PillarsBentoSection />
       <DomainsGridSection />

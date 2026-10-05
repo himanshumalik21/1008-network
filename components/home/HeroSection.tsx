@@ -147,22 +147,17 @@ export function HeroSection() {
             </Link>
           </div>
 
-          {/* High-Intent Dual Talent & Hiring Actions */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-2.5 text-xs">
-            <Link
-              href="/network/startup-jobs-india"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] hover:bg-[#E2E8F0] text-[#0A2540] font-semibold border border-[#E2E8F0] transition-colors shadow-2xs"
+          {/* Active Openings & Co-Founder Matching Callout */}
+          <div className="pt-2 flex items-center justify-center">
+            <a
+              href="#startup-jobs-matching"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#635BFF]/10 via-[#00D4B2]/10 to-[#635BFF]/10 hover:from-[#635BFF]/20 hover:to-[#00D4B2]/20 text-[#0A2540] font-semibold text-xs border border-[#635BFF]/20 transition-all shadow-xs group"
             >
-              <Briefcase className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>Browse Startup Jobs in Gurgaon & India (17+ Roles) →</span>
-            </Link>
-            <Link
-              href="/network/find-a-co-founder-india"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F0FDF4] hover:bg-[#DCFCE7] text-[#166534] font-semibold border border-[#BBF7D0] transition-colors shadow-2xs"
-            >
-              <Users className="h-3.5 w-3.5 text-[#16A34A]" />
-              <span>Hiring a Technical Co-Founder or Lead? Post Requirement →</span>
-            </Link>
+              <span className="flex h-2 w-2 rounded-full bg-[#00D4B2] animate-pulse" />
+              <span className="font-mono text-[#635BFF] font-bold">PORTAL</span>
+              <span>Startup Founding Roles, Leadership & Co-Founder Matching (20+ Roles)</span>
+              <ChevronRight className="h-3.5 w-3.5 text-[#635BFF] group-hover:translate-x-0.5 transition-transform" />
+            </a>
           </div>
 
           {/* Quick Playbook Navigation Link */}
