@@ -27,7 +27,7 @@ export default function StartupJobsIndiaPage() {
   const [talentSubmitted, setTalentSubmitted] = useState(false);
 
   // Filter options
-  const locations = ["All", "Gurgaon", "Delhi NCR", "Bengaluru", "Pune", "Chennai"];
+  const locations = ["All", "Gurgaon", "Delhi NCR", "Bengaluru", "Mumbai", "Hyderabad", "Pune", "Chennai"];
   const roles = [
     "All",
     "AI / ML & DeepTech Lead",
@@ -81,9 +81,9 @@ export default function StartupJobsIndiaPage() {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] max-w-4xl mx-auto">
-            Startup Jobs in Gurgaon & Pan-India:{" "}
+            Startup Founding Roles,{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              Founding Roles, Leadership & Equity
+              Leadership & Equity
             </span>
           </h1>
 
