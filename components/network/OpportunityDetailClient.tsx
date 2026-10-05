@@ -20,6 +20,7 @@ import {
   Send,
   Layers,
   ArrowUpRight,
+  ExternalLink,
 } from "lucide-react";
 
 interface OpportunityDetailClientProps {
@@ -112,14 +113,25 @@ export function OpportunityDetailClient({
 
           {/* Quick Apply Action Button */}
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+            {opp.applyUrl && (
+              <a
+                href={opp.applyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl bg-[#635BFF] hover:bg-[#5249e0] text-white font-bold text-sm shadow-sm transition-all hover:scale-[1.02]"
+              >
+                <span>Visit Company & Apply</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            )}
             <Button
               onClick={() => setIsModalOpen(true)}
-              variant="primary"
+              variant={opp.applyUrl ? "outline" : "primary"}
               size="lg"
-              className="w-full sm:w-auto font-semibold px-8 shadow-sm"
+              className="w-full sm:w-auto font-semibold px-6 shadow-xs"
               rightIcon={<Send className="h-4 w-4" />}
             >
-              Express Interest / Apply (Confidential)
+              Express Interest via 1008
             </Button>
             <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-mono">
               <ShieldCheck className="h-4 w-4 text-[#059669]" />

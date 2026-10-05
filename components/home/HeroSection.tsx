@@ -155,7 +155,7 @@ export function HeroSection() {
             >
               <span className="flex h-2 w-2 rounded-full bg-[#00D4B2] animate-pulse" />
               <span className="font-mono text-[#635BFF] font-bold">PORTAL</span>
-              <span>Startup Founding Roles, Leadership & Co-Founder Matching (20+ Roles)</span>
+              <span>Startup Founding Roles, Leadership & Co-Founder Matching (10+ Roles)</span>
               <ChevronRight className="h-3.5 w-3.5 text-[#635BFF] group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>

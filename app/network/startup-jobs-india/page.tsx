@@ -315,7 +315,7 @@ export default function StartupJobsIndiaPage() {
                       rel="noopener noreferrer"
                       className="w-full py-2 px-3 rounded-xl bg-[#0A2540] hover:bg-[#635BFF] text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-2xs"
                     >
-                      <span>Apply on Partner Board</span>
+                      <span>Visit Company & Apply</span>
                       <ExternalLink className="h-3.5 w-3.5" />
                     </a>
                   ) : (
