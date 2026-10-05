@@ -47,6 +47,7 @@ import { HotelFurnitureManufacturingGraphic } from "@/components/knowledge/Hotel
 import { PetFoodExtrusionGraphic } from "@/components/knowledge/PetFoodExtrusionGraphic";
 import { FounderPersonaFitGraphic } from "@/components/knowledge/FounderPersonaFitGraphic";
 import { StartingBusinessGuideGraphic } from "@/components/knowledge/StartingBusinessGuideGraphic";
+import { LithiumBatteryAssemblyGraphic } from "@/components/knowledge/LithiumBatteryAssemblyGraphic";
 
 interface ArticleContentRendererProps {
   content: string;
@@ -483,6 +484,18 @@ export function ArticleContentRenderer({ content }: ArticleContentRendererProps)
             codeLines.includes("OPERATING PERSONA")
           ) {
             return <FounderPersonaFitGraphic key={idx} />;
+          }
+
+                    // Check if this is the Lithium-Ion Battery Pack Assembly Diagram -> Render bespoke graphic!
+          if (
+            codeLines.includes("KEY METRICS SNAPSHOT") ||
+            codeLines.includes("LITHIUM-ION BATTERY PACK") ||
+            codeLines.includes("LITHIUM BATTERY PACK") ||
+            codeLines.includes("BATTERY PACK ASSEMBLY") ||
+            codeLines.includes("BMS INTEGRATION") ||
+            codeLines.includes("Grade-A Cell Inward Inspection")
+          ) {
+            return <LithiumBatteryAssemblyGraphic key={idx} />;
           }
 
           // Check if this is the Starting a New Business / De-Risked Roadmap Diagram -> Render bespoke graphic!
