@@ -108,10 +108,26 @@ export default function PostGigPage() {
 
       // 2. Client fallback via Web3Forms
       await submitToWeb3Forms({
-        access_key: "ecc17228-fcda-4c07-b3e3-5fe2da8eefdc",
         subject: `[1008 Community] New Gig Request: ${formData.gigTitle} (${formData.businessName})`,
-        from_name: `${formData.contactName} via 1008 Gigs`,
-        ...formData,
+        name: formData.contactName,
+        email: formData.contactEmail,
+        replyTo: formData.contactEmail,
+        botcheck: formData._hp_trap,
+        data: {
+          businessName: formData.businessName,
+          contactName: formData.contactName,
+          contactEmail: formData.contactEmail,
+          contactPhone: formData.contactPhone || "Not provided",
+          gigTitle: formData.gigTitle,
+          category: formData.category,
+          budgetINR: formData.budgetINR,
+          duration: formData.duration,
+          workMode: formData.workMode,
+          location: formData.location,
+          goalSummary: formData.goalSummary,
+          deliverables: formData.deliverables,
+          skillsRequired: formData.skillsRequired || "None specified",
+        },
       }).catch((e) => console.log("Non-blocking backup submission:", e));
 
       if (res.success) {
