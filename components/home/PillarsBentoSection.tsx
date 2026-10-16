@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Boxes,
   FileCode2,
+  Briefcase,
 } from "lucide-react";
 
 export function PillarsBentoSection() {

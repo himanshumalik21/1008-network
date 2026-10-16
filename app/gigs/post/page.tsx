@@ -266,14 +266,24 @@ export default function PostGigPage() {
                   label="Gig Category"
                   value={formData.category}
                   onChange={(e) => setFormData({ ...formData, category: e.target.value as GigCategory })}
-                  options={categories.map((c) => ({ value: c, label: c }))}
-                />
+                >
+                  {categories.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </Select>
                 <Select
                   label="Estimated Duration"
                   value={formData.duration}
                   onChange={(e) => setFormData({ ...formData, duration: e.target.value as GigDuration })}
-                  options={durations.map((d) => ({ value: d, label: d }))}
-                />
+                >
+                  {durations.map((d) => (
+                    <option key={d} value={d}>
+                      {d}
+                    </option>
+                  ))}
+                </Select>
                 <Input
                   label="Budget (INR)"
                   placeholder="e.g. ₹30,000 - ₹50,000"
@@ -287,18 +297,22 @@ export default function PostGigPage() {
                   label="Location"
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value as LocationType })}
-                  options={locations.map((loc) => ({ value: loc, label: loc }))}
-                />
+                >
+                  {locations.map((loc) => (
+                    <option key={loc} value={loc}>
+                      {loc}
+                    </option>
+                  ))}
+                </Select>
                 <Select
                   label="Work Mode"
                   value={formData.workMode}
                   onChange={(e) => setFormData({ ...formData, workMode: e.target.value as "Remote" | "Hybrid" | "On-Site" })}
-                  options={[
-                    { value: "Remote", label: "Remote" },
-                    { value: "Hybrid", label: "Hybrid" },
-                    { value: "On-Site", label: "On-Site" },
-                  ]}
-                />
+                >
+                  <option value="Remote">Remote</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="On-Site">On-Site</option>
+                </Select>
               </div>
 
               <Textarea
