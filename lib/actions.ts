@@ -632,9 +632,9 @@ export async function submitGigRequest(data: Record<string, unknown>): Promise<A
     await sendContactAlert({
       name: `${contactName} (${businessName})`,
       email: contactEmail,
-      phone: String(data.contactPhone || "Not provided"),
-      intent: `Gig Request: ${gigTitle}`,
-      message: `[GIG REQUEST POSTED]\nBusiness: ${businessName}\nBudget: ${budgetINR}\nCategory: ${data.category}\nDuration: ${data.duration}\nLocation: ${data.location} (${data.workMode})\nGoal: ${goalSummary}\nDeliverables: ${deliverables}\nSkills: ${data.skillsRequired}`,
+      type: `Gig Request: ${gigTitle}`,
+      company: businessName,
+      message: `[GIG REQUEST POSTED]\nBusiness: ${businessName}\nPhone: ${String(data.contactPhone || "Not provided")}\nBudget: ${budgetINR}\nCategory: ${data.category}\nDuration: ${data.duration}\nLocation: ${data.location} (${data.workMode})\nGoal: ${goalSummary}\nDeliverables: ${deliverables}\nSkills: ${data.skillsRequired}`,
     }).catch((err) => {
       console.error("[Gig non-blocking email error]:", err);
     });
