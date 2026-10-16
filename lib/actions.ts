@@ -590,3 +590,64 @@ export async function subscribeNewsletter(email: string): Promise<ActionResult> 
     };
   }
 }
+
+export async function submitGigRequest(data: Record<string, unknown>): Promise<ActionResult> {
+  try {
+    const honeypot = String(data._hp_trap || "");
+    if (isBotHoneypot(honeypot)) {
+      return { success: true, message: "Gig request submitted successfully." };
+    }
+
+    const clientIp = String(data.clientIp || "server-action");
+    if (!checkServerRateLimit(clientIp, 4, 60000)) {
+      return {
+        success: false,
+        message: "Too many requests. Please wait a minute before submitting again.",
+      };
+    }
+
+    const businessName = cleanString(data.businessName, 200);
+    const contactName = cleanString(data.contactName, 200);
+    const contactEmail = cleanString(data.contactEmail, 254);
+    const gigTitle = cleanString(data.gigTitle, 300);
+    const budgetINR = cleanString(data.budgetINR, 100);
+    const goalSummary = cleanString(data.goalSummary, 3000);
+    const deliverables = cleanString(data.deliverables, 3000);
+
+    if (!businessName || !contactName || !contactEmail || !gigTitle || !goalSummary) {
+      return {
+        success: false,
+        message: "Please fill in all required fields (Business Name, Contact Name, Email, Gig Title, and Goal).",
+      };
+    }
+
+    if (!isValidEmail(contactEmail)) {
+      return {
+        success: false,
+        message: "Please provide a valid work email address.",
+      };
+    }
+
+    // Forward notification to 1008 operations
+    await sendContactAlert({
+      name: `${contactName} (${businessName})`,
+      email: contactEmail,
+      phone: String(data.contactPhone || "Not provided"),
+      intent: `Gig Request: ${gigTitle}`,
+      message: `[GIG REQUEST POSTED]\nBusiness: ${businessName}\nBudget: ${budgetINR}\nCategory: ${data.category}\nDuration: ${data.duration}\nLocation: ${data.location} (${data.workMode})\nGoal: ${goalSummary}\nDeliverables: ${deliverables}\nSkills: ${data.skillsRequired}`,
+    }).catch((err) => {
+      console.error("[Gig non-blocking email error]:", err);
+    });
+
+    return {
+      success: true,
+      message: "Gig request published to 1008 Community. Our ops team will review and connect you with qualified specialists within 24 hours.",
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: "Error submitting gig request. Please contact ops@1008.network directly.",
+    };
+  }
+}
+

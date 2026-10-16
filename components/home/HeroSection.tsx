@@ -27,66 +27,66 @@ const FlowingMeshCanvas = dynamic(
 );
 
 export function HeroSection() {
-  const [activeTab, setActiveTab] = useState<"studio" | "network" | "capital" | "playbook">("studio");
+  const [activeTab, setActiveTab] = useState<"network" | "capital" | "studio" | "gigs">("network");
 
   const engineFeatures = {
-    studio: {
-      tag: "01 // VENTURE STUDIO",
-      title: "We build the operating company around your expertise",
-      desc: "We build your software stack, negotiate supplier contracts, configure cloud ERPs, and manage operational back-offices from day zero for shared equity.",
-      deliverables: [
-        "Production Software & Cloud Architecture",
-        "OEM Factory Auditing & Supply Chain Sourcing",
-        "Cloud ERP, GST & Banking Rails Setup",
-        "Shared Venture Equity (Zero Cash Retainers)",
-      ],
-      link: "/studio",
-      linkText: "Explore Venture Studio",
-      color: "#635BFF",
-      accentBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-    },
     network: {
-      tag: "02 // PARTNER NETWORK",
-      title: "Sourced Co-Founders & Operators",
-      desc: "Connect with high-caliber technical CTOs, commercial GTM heads, and domain operators ready to co-build for milestone-vested equity.",
+      tag: "01 // CO-FOUNDERS & TALENT",
+      title: "Find talent or find businesses to work with",
+      desc: "Connect with high-caliber technical CTOs, commercial GTM heads, and experienced operators ready to co-build for milestone-vested equity.",
       deliverables: [
-        "Standardized Milestone Equity Frameworks",
-        "Curated Technical & Commercial Profiles",
-        "Structured Co-Founder Alignment Models",
-        "Direct Introductions Pan-India",
+        "Curated Co-Founder Matching (Technical & Commercial)",
+        "Standardized Milestone Equity & Vesting Frameworks",
+        "Join High-Growth Businesses as a Founding Lead",
+        "Direct Matchmaking & Introductions Pan-India",
       ],
       link: "/network",
-      linkText: "Explore Partner Network",
+      linkText: "Find Co-Founders & Talent",
       color: "#00A389",
       accentBg: "bg-[#E6FFFA] text-[#007A66] border-[#B2F5EA]",
     },
     capital: {
-      tag: "03 // CAPITAL NETWORK",
-      title: "Curated Capital Discovery",
-      desc: "Connect promising ventures with angels, family offices, and eligible capital partners. No placement or intermediary fees.",
+      tag: "02 // FUNDING & INVESTORS",
+      title: "Businesses find investors; investors find evaluated businesses",
+      desc: "Connect promising ventures with angels, family offices, and verified capital partners. Direct syndicate discovery with no hidden intermediary commissions.",
       deliverables: [
-        "Curated Angel & Family Office Syndicates",
-        "16-Point Evaluated Parameter Intake",
-        "No Placement or Intermediary Fees",
-        "Non-Entity Statutory Disclosures",
+        "Curated Angel & Family Office Allocator Discovery",
+        "16-Point Evaluated Business Intake & Unit Economics",
+        "Direct Founder-to-Investor Deal Room Discovery",
+        "SEBI Non-Entity Regulatory Compliance Disclosures",
       ],
       link: "/capital",
-      linkText: "Explore Capital Network",
+      linkText: "Explore Funding & Capital",
       color: "#059669",
       accentBg: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
     },
-    playbook: {
-      tag: "04 // 1008 PLAYBOOK",
-      title: "Tactical Operating Frameworks",
-      desc: "Open-access field manuals on Indian cash-flow architectures, collateral-free credit (ULI), co-founder equity splits, and unit economics.",
+    studio: {
+      tag: "03 // OUTSOURCE OPERATIONS",
+      title: "Work with 1008 Network to navigate operations challenges",
+      desc: "1008 acts as your hands-on outsourced operations & tech partner. We build your production software, negotiate supplier contracts, and configure cloud ERPs.",
       deliverables: [
-        "Cash-Flow vs Hype Financial Blueprints",
-        "Unified Lending Interface (ULI) Credit Guides",
-        "Co-Founder Dispute & Vesting Frameworks",
-        "Zero Retainer Survival Playbooks",
+        "Turnkey Software & Production Cloud Architecture",
+        "OEM Factory Auditing & Supply Chain Sourcing",
+        "Self-Hosted ERPNext, GST Automation & Banking Rails",
+        "Shared Milestone Equity (Zero Cash Agency Retainers)",
       ],
-      link: "/knowledge",
-      linkText: "Read 1008 Playbook",
+      link: "/studio",
+      linkText: "Outsource Ops to 1008",
+      color: "#635BFF",
+      accentBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
+    },
+    gigs: {
+      tag: "04 // GIGS & REQUESTS",
+      title: "Post acute gig requests or find specialized gigs",
+      desc: "Solve immediate business bottlenecks or get hired for high-impact project sprints across software, sales, factory compliance, and accounting.",
+      deliverables: [
+        "Post Business Gig Requests (ERP, Sales, Design, SOPs)",
+        "Find High-Value Milestone & Fixed-Budget Gigs",
+        "Direct Business-to-Specialist Connection",
+        "Fast 24-48 Hour Turnaround Matchmaking",
+      ],
+      link: "/gigs",
+      linkText: "Explore Gigs & Requests",
       color: "#FF7043",
       accentBg: "bg-[#FFF3EE] text-[#D94814] border-[#FFD8C9]",
     },
@@ -112,37 +112,39 @@ export function HeroSection() {
           {/* Announcement Badge */}
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse className="text-xs sm:text-[13px] px-3.5 py-1 font-medium">
-              1008 Network • Turnkey Venture Studio & Co-Building Ecosystem
+              1008 Network • The Entrepreneur & Business Community
             </Badge>
           </div>
 
-          {/* Primary Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-extrabold tracking-tight text-[#0A2540] leading-[1.08] font-sans">
-            <span className="block">Build the business you know</span>
-            <span className="block mt-1 sm:mt-2 bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
-              should exist.
+          {/* Primary Headline: Company Vision */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[60px] font-extrabold tracking-tight text-[#0A2540] leading-[1.1] font-sans">
+            <span className="block text-[#64748B] text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
+              1008 Community
+            </span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#4F46E5] via-[#635BFF] to-[#0D9488]">
+              Helping your Business get closer to your Goals.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-[#425466] leading-relaxed max-w-2xl mx-auto font-normal">
-            1008 Network helps experienced professionals and entrepreneurs turn industry expertise into operating businesses — with the people, systems, and execution needed to make them real.
+            A collaborative business community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
           </p>
 
           {/* Primary Actions Row */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Link
-              href="/studio"
+              href="/network"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-[0_4px_14px_rgba(99,91,255,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span>Build With 1008</span>
+              <span>Join the Community</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/network"
+              href="/gigs"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#0A2540] border border-[#E2E8F0] font-semibold text-sm shadow-xs transition-all hover:border-[#CBD5E1]"
             >
-              <span>Find a Partner</span>
+              <span>Explore Gigs & Requests</span>
               <ArrowUpRight className="h-4 w-4 text-[#64748B]" />
             </Link>
           </div>
@@ -181,15 +183,15 @@ export function HeroSection() {
           <div className="flex items-center justify-between flex-wrap gap-2 pb-6 border-b border-[#E2E8F0]">
             <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#64748B]">
               <Workflow className="h-4 w-4 text-[#635BFF]" />
-              <span>The 1008 Business-Building System:</span>
+              <span>How 1008 Community Helps Your Business:</span>
             </div>
 
             <div className="flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-xl border border-[#E2E8F0] overflow-x-auto max-w-full no-scrollbar overflow-touch">
               {[
-                { id: "studio", label: "01. Venture Studio", icon: Layers, color: "#635BFF" },
-                { id: "network", label: "02. Partner Network", icon: Users, color: "#00A389" },
-                { id: "capital", label: "03. Capital Network", icon: Coins, color: "#059669" },
-                { id: "playbook", label: "04. 1008 Playbook", icon: BookOpen, color: "#FF7043" },
+                { id: "network", label: "01. Talent & Co-Founders", icon: Users, color: "#00A389" },
+                { id: "capital", label: "02. Funding & Investors", icon: Coins, color: "#059669" },
+                { id: "studio", label: "03. Outsource Operations", icon: Layers, color: "#635BFF" },
+                { id: "gigs", label: "04. Gigs & Requests", icon: Briefcase, color: "#FF7043" },
               ].map((tab) => {
                 const Icon = tab.icon;
                 const isActive = activeTab === tab.id;

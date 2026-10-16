@@ -44,10 +44,10 @@ export default function NetworkPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
           <div className="inline-flex items-center gap-2 flex-wrap justify-center">
             <Badge variant="indigo" size="md" pulse>
-              1008 Partner Network
+              1008 Community • Co-Founders & Talent
             </Badge>
             <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
-              Co-Founders & Leadership Talent
+              Find Talent / Join a Business
             </span>
           </div>
 
@@ -55,12 +55,12 @@ export default function NetworkPage() {
             Have the business vision.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              Find the right co-founder & talent.
+              Find talent, co-founders, or join a business.
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Great enterprises are rarely built alone. 1008 Partner Network connects domain founders who have the business vision with curated technical CTOs, operations leads, and commercial sales partners for shared equity.
+            Great enterprises are rarely built alone. 1008 Community connects businesses seeking co-founders and key talent with operators and leaders looking to join and work with ambitious ventures.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">

@@ -25,9 +25,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Venture Studio", href: "/studio" },
-    { label: "Partner Network", href: "/network" },
-    { label: "Capital Network", href: "/capital" },
+    { label: "Co-Founders & Talent", href: "/network" },
+    { label: "Funding & Capital", href: "/capital" },
+    { label: "Outsource Operations", href: "/studio" },
+    { label: "Gigs", href: "/gigs" },
     { label: "Playbook", href: "/knowledge" },
   ];
 
@@ -40,6 +41,9 @@ export function Navbar() {
     }
     if (href === "/capital") {
       return pathname === "/capital" || pathname.startsWith("/capital");
+    }
+    if (href === "/gigs") {
+      return pathname === "/gigs" || pathname.startsWith("/gigs");
     }
     if (href === "/knowledge") {
       return pathname === "/knowledge" || pathname.startsWith("/knowledge");

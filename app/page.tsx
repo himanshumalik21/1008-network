@@ -7,9 +7,9 @@ import { DomainsGridSection } from "@/components/home/DomainsGridSection";
 import { HomeCtaBanner } from "@/components/home/HomeCtaBanner";
 
 export const metadata = {
-  title: "1008 Network — Co-Building Businesses With Experienced People",
+  title: "1008 Network — Helping your Business get closer to your Goals",
   description:
-    "Build the business you know should exist. 1008 Network helps experienced professionals and entrepreneurs turn industry expertise into operating businesses.",
+    "1008 Network is a collaborative business community. Find co-founders & talent, access funding, outsource operational bottlenecks to 1008, or post and find project gigs.",
   alternates: {
     canonical: "https://www.1008.network",
   },

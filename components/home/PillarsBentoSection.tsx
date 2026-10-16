@@ -22,42 +22,20 @@ import {
 export function PillarsBentoSection() {
   const pillars = [
     {
-      id: "studio",
-      pillarNumber: "01",
-      verb: "BUILD",
-      name: "Venture Studio",
-      tagline: "Build the business.",
-      intent: "I have an idea / deep domain expertise",
-      desc: "Turn your industry knowledge into an operating company. We handle software, systems, suppliers, compliance, and core operations for shared equity.",
-      features: [
-        "Full-stack software engineering & cloud architecture",
-        "Factory auditing, supplier terms & supply chain setup",
-        "Open-source ERPs, automated ledgers & banking rails",
-        "Zero consulting retainers — shared milestone equity",
-      ],
-      cta: "Explore Venture Studio",
-      href: "/studio",
-      accent: "#635BFF",
-      borderHover: "hover:border-[#635BFF]/50",
-      accentBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      icon: Layers,
-      colSpan: "lg:col-span-6",
-    },
-    {
       id: "network",
-      pillarNumber: "02",
-      verb: "FIND",
-      name: "Partner Network",
-      tagline: "Find the people.",
-      intent: "I'm missing people / co-founders",
-      desc: "Connect with high-caliber technical CTOs, commercial heads, and domain operators ready to co-build for milestone-vested equity.",
+      pillarNumber: "01",
+      verb: "MATCH",
+      name: "Co-Founders & Talent",
+      tagline: "Find the people / Join a business.",
+      intent: "I need a co-founder / I want to join an early business",
+      desc: "Connect with vetted technical CTOs, commercial heads, and seasoned operators ready to co-build for milestone-vested equity.",
       features: [
-        "Curated technical CTOs & commercial leaders",
+        "Curated technical CTOs & commercial business leaders",
         "Standardized milestone equity co-founder agreements",
-        "Post open opportunities or register as an operator",
-        "Direct introductions to potential partners across India",
+        "Post founder requirements or join the verified talent pool",
+        "Direct introductions to high-potential businesses across India",
       ],
-      cta: "Explore Partner Network",
+      cta: "Explore Co-Founder Matching",
       href: "/network",
       accent: "#00A389",
       borderHover: "hover:border-[#00D4B2]/50",
@@ -67,12 +45,12 @@ export function PillarsBentoSection() {
     },
     {
       id: "capital",
-      pillarNumber: "03",
+      pillarNumber: "02",
       verb: "FUND",
-      name: "Capital Network",
-      tagline: "Find the capital.",
-      intent: "I need capital / want to invest",
-      desc: "Connect promising businesses with a curated network of angels, family offices, and eligible capital partners. No placement or intermediary fees.",
+      name: "Capital & Investors",
+      tagline: "Businesses find investors; investors find businesses.",
+      intent: "I need capital / I am looking to invest",
+      desc: "Connect promising businesses with a curated network of angels, family offices, and eligible capital partners. Zero placement or intermediary cuts.",
       features: [
         "16-point evaluated venture parameter intake",
         "Angel syndicates & family office network discovery",
@@ -88,25 +66,47 @@ export function PillarsBentoSection() {
       colSpan: "lg:col-span-6",
     },
     {
-      id: "playbook",
-      pillarNumber: "04",
-      verb: "LEARN",
-      name: "1008 Playbook",
-      tagline: "Learn how to build.",
-      intent: "I want to understand how to build",
-      desc: "Practical frameworks on cash-flow architecture, working capital credit rails, co-founder equity splits, and building enduring enterprises in India.",
+      id: "studio",
+      pillarNumber: "03",
+      verb: "OUTSOURCE",
+      name: "Outsource Operations (1008)",
+      tagline: "Navigate operational hurdles with 1008.",
+      intent: "I need turnkey execution & operations solved",
+      desc: "Partner with 1008 Network as your outsourced operations & tech arm. We build production software, audit suppliers, set up ERPs, and run back-office systems for shared equity.",
       features: [
-        "Cash-flow vs hype business validation frameworks",
-        "Collateral-free credit via Unified Lending Interface (ULI)",
-        "Co-founder equity split calculations & vesting clauses",
-        "Zero-retainer operating survival manuals",
+        "Full-stack software engineering & cloud architecture",
+        "Factory auditing, supplier terms & supply chain setup",
+        "Self-hosted ERPs, automated ledgers & banking rails",
+        "Zero agency retainers — aligned shared milestone equity",
       ],
-      cta: "Read the Playbook",
-      href: "/knowledge",
+      cta: "Outsource Ops to 1008",
+      href: "/studio",
+      accent: "#635BFF",
+      borderHover: "hover:border-[#635BFF]/50",
+      accentBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
+      icon: Layers,
+      colSpan: "lg:col-span-6",
+    },
+    {
+      id: "gigs",
+      pillarNumber: "04",
+      verb: "DELIVER",
+      name: "Gigs & Project Requests",
+      tagline: "Post acute gig requests / Find specialized gigs.",
+      intent: "I have a specific problem / I want to take on a gig",
+      desc: "Post immediate business problem requests or take on specialized project sprints across software, sales engines, compliance audits, and marketing.",
+      features: [
+        "Post acute business gig requests in 2 minutes",
+        "Milestone & fixed INR budgets with direct founder communication",
+        "Vetted operators across ERP, sales, design, and factory SOPs",
+        "Fast 24-48 hour turnaround connection",
+      ],
+      cta: "Explore Gigs Marketplace",
+      href: "/gigs",
       accent: "#FF7043",
       borderHover: "hover:border-[#FF7043]/50",
       accentBg: "bg-[#FFF3EE] text-[#D94814] border-[#FFD8C9]",
-      icon: BookOpen,
+      icon: Briefcase,
       colSpan: "lg:col-span-6",
     },
   ];
@@ -117,25 +117,23 @@ export function PillarsBentoSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F1F5F9] border border-[#E2E8F0] text-xs font-mono font-semibold text-[#0A2540]">
-            <span>THE 4-PILLAR ECOSYSTEM</span>
+            <span>THE 1008 COMMUNITY ECOSYSTEM</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            One connected architecture for building businesses.
+            Helping your business get closer to your goals.
           </h2>
 
           {/* Formula Strip */}
           <div className="pt-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-[#64748B] bg-[#F8FAFC] px-4 py-2 rounded-full border border-[#E2E8F0] shadow-2xs flex-wrap justify-center">
-              <span className="text-[#635BFF] font-bold">Idea</span>
-              <span>→</span>
-              <span className="text-[#00A389] font-bold">People</span>
-              <span>→</span>
-              <span className="text-[#059669] font-bold">Capital</span>
-              <span>→</span>
-              <span className="text-[#D94814] font-bold">Execution</span>
-              <span>→</span>
-              <span className="text-[#0A2540] font-bold">Business</span>
+              <span className="text-[#00A389] font-bold">Talent & Co-Founders</span>
+              <span>•</span>
+              <span className="text-[#059669] font-bold">Capital & Investors</span>
+              <span>•</span>
+              <span className="text-[#635BFF] font-bold">1008 Operations Outsource</span>
+              <span>•</span>
+              <span className="text-[#D94814] font-bold">Gigs & Requests</span>
             </div>
           </div>
         </div>

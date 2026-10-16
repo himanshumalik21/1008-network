@@ -258,3 +258,53 @@ export interface StartupCapitalCard {
   studioBacked?: boolean;
 }
 
+export type GigCategory =
+  | "Tech & Cloud Development"
+  | "ERP, Accounts & GST Compliance"
+  | "B2B Sales & GTM Outreach"
+  | "Supply Chain & Factory Audits"
+  | "UI/UX & Product Design"
+  | "Digital Marketing & Performance"
+  | "Legal, Contracts & Cap Table"
+  | "Operations & Process Automation"
+  | "Other Specialized Gig";
+
+export type GigDuration =
+  | "1 - 2 Weeks (Quick Fix)"
+  | "2 - 4 Weeks (Sprint)"
+  | "1 - 3 Months (Project)"
+  | "Ongoing / Milestone-Based";
+
+export interface GigItem {
+  id: string;
+  title: string;
+  businessName: string;
+  category: GigCategory;
+  budgetINR: string;
+  duration: GigDuration;
+  location: LocationType;
+  workMode: "Remote" | "Hybrid" | "On-Site";
+  goalSummary: string;
+  deliverables: string[];
+  skillsRequired: string[];
+  contactEmail?: string;
+  postedAt: string;
+  featured?: boolean;
+}
+
+export interface GigPostData {
+  businessName: string;
+  contactName: string;
+  contactEmail: string;
+  contactPhone?: string;
+  gigTitle: string;
+  category: GigCategory;
+  budgetINR: string;
+  duration: GigDuration;
+  workMode: "Remote" | "Hybrid" | "On-Site";
+  location: LocationType;
+  goalSummary: string;
+  deliverables: string;
+  skillsRequired: string;
+}
+

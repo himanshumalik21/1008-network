@@ -15,31 +15,31 @@ export function HomeCtaBanner() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs text-white backdrop-blur-md">
           <Sparkles className="h-3.5 w-3.5 text-[#00D4B2]" />
-          <span>Start Co-Building Today</span>
+          <span>Join the 1008 Community</span>
         </div>
 
         <div className="space-y-4 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight font-sans">
-            Ready to build the business you know should exist?
+            Helping your business get closer to your goals.
           </h2>
           <p className="text-base sm:text-lg text-[#CBD5E1] leading-relaxed max-w-2xl mx-auto font-normal">
-            Whether you need turnkey technical execution, missing co-founders, or curated capital discovery, 1008 provides the infrastructure to build enduring enterprises.
+            Whether you need to find a co-founder, raise capital, outsource operational bottlenecks to 1008, or post a gig request — the 1008 community gives your business the exact missing pieces to execute.
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
           <Link
-            href="/studio"
+            href="/network"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-[0_4px_14px_rgba(99,91,255,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Apply to Venture Studio</span>
+            <span>Join 1008 Community</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/network"
+            href="/gigs"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm backdrop-blur-md transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Explore Partner Network</span>
+            <span>Explore Gigs & Requests</span>
             <ArrowUpRight className="h-4 w-4 text-[#94A3B8]" />
           </Link>
         </div>

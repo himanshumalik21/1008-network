@@ -45,13 +45,13 @@ export default function AboutPage() {
         {/* Header */}
         <div className="space-y-4 text-center">
           <Badge variant="indigo" size="md">
-            About 1008 Network
+            About 1008 Community
           </Badge>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-tight">
-            1008 helps experienced people build businesses by providing the execution and people they are missing.
+            Helping your Business get closer to your Goals.
           </h1>
           <p className="text-base sm:text-lg text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Based in Delhi NCR and partnering with founders across India, 1008 Network helps turn deep industry expertise into operating businesses.
+            1008 Network is a collaborative community where businesses find co-founders and talent, access capital partners, outsource operational bottlenecks to our hands-on execution arm, or post and find project gigs.
           </p>
         </div>
 

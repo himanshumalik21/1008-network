@@ -99,19 +99,19 @@ export function StudioSprintTimeline() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 space-y-3.5">
           <div className="inline-flex items-center gap-2">
             <Badge variant="indigo" size="md" pulse>
-              1008 Venture Studio // Turnkey Build & Equity
+              1008 Outsource Operations // Co-Building Arm
             </Badge>
           </div>
           
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-[1.12]">
-            You know the business.{" "}
+            Work with 1008 Network to{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00A389] to-[#059669]">
-              We&apos;ll help you build the company.
+              navigate your operations challenges.
             </span>
           </h1>
 
           <p className="text-[#425466] text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl mx-auto font-normal">
-            You bring the industry expertise, ambition and opportunity. 1008 helps build the people, systems, technology, suppliers, sales infrastructure and operations around it.
+            1008 acts as your hands-on outsourced operations partner. We take ownership of your production software, supply chain, cloud ERPs, and compliance systems for shared equity upside.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">

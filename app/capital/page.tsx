@@ -98,27 +98,27 @@ export default function CapitalPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
           <div className="inline-flex items-center gap-2 flex-wrap justify-center">
             <Badge variant="indigo" size="md">
-              03 — Capital Network
+              1008 Community • Capital & Investors
             </Badge>
             <span className="text-xs font-mono font-semibold text-[#007A66] bg-[#E6FFFA] px-3 py-1 rounded-full border border-[#B2F5EA]">
-              FUND // Find the Capital
+              Fund a Business / Find Investors
             </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Capital for businesses{" "}
+            Businesses find capital.{" "}
             <br className="hidden sm:inline" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              worth building.
+              Investors find evaluated businesses.
             </span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            1008 connects entrepreneurs building promising businesses with a curated network of capital partners.
+            Whether your business needs growth funding or you are an angel investor looking for vetted high-conviction businesses — the 1008 community connects capital directly without broker fees.
           </p>
 
           <p className="text-xs sm:text-sm text-[#64748B] font-medium max-w-2xl mx-auto">
-            Founders bring the opportunity. Capital partners bring resources. 1008 helps create the connection.
+            Businesses bring the vision & traction. Capital partners bring resources. 1008 facilitates direct discovery.
           </p>
 
           {/* Ecosystem Flow Formula */}
