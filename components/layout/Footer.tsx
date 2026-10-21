@@ -76,7 +76,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/capital" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
-                  Funding & Capital
+                  Funding & Investors
                 </Link>
               </li>
               <li>
@@ -86,7 +86,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/gigs" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
-                  Gigs & Requests
+                  Gigs & Sprints
                 </Link>
               </li>
               <li>

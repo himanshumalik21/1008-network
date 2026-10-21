@@ -39,7 +39,7 @@ export function HomeCtaBanner() {
             href="/gigs"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm backdrop-blur-md transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Explore Gigs & Requests</span>
+            <span>Explore Gigs & Sprints</span>
             <ArrowUpRight className="h-4 w-4 text-[#94A3B8]" />
           </Link>
         </div>

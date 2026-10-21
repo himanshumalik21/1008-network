@@ -26,9 +26,9 @@ export function Navbar() {
 
   const navLinks = [
     { label: "Co-Founders & Talent", href: "/network" },
-    { label: "Funding & Capital", href: "/capital" },
+    { label: "Funding & Investors", href: "/capital" },
     { label: "Outsource Operations", href: "/studio" },
-    { label: "Gigs", href: "/gigs" },
+    { label: "Gigs & Sprints", href: "/gigs" },
     { label: "Playbook", href: "/knowledge" },
   ];
 
@@ -107,7 +107,7 @@ export function Navbar() {
                 rightIcon={<ArrowRight className="h-4 w-4" />}
                 className="font-semibold text-xs sm:text-sm px-5 h-10 shadow-[0_2px_4px_rgba(99,91,255,0.2)]"
               >
-                Build With 1008
+                Work With 1008
               </Button>
             </div>
 

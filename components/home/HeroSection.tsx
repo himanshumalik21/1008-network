@@ -133,38 +133,25 @@ export function HeroSection() {
 
           {/* Primary Actions Row */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <Link
-              href="/network"
+            <a
+              href="#what-we-do"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-[0_4px_14px_rgba(99,91,255,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span>Join the Community</span>
+              <span>Explore Community Pillars</span>
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
             <Link
-              href="/gigs"
+              href="/studio"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#0A2540] border border-[#E2E8F0] font-semibold text-sm shadow-xs transition-all hover:border-[#CBD5E1]"
             >
-              <span>Explore Gigs & Requests</span>
+              <span>Work With 1008</span>
               <ArrowUpRight className="h-4 w-4 text-[#64748B]" />
             </Link>
           </div>
 
-          {/* Active Openings & Co-Founder Matching Callout */}
-          <div className="pt-2 flex items-center justify-center">
-            <a
-              href="#startup-jobs-matching"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#635BFF]/10 via-[#00D4B2]/10 to-[#635BFF]/10 hover:from-[#635BFF]/20 hover:to-[#00D4B2]/20 text-[#0A2540] font-semibold text-xs border border-[#635BFF]/20 transition-all shadow-xs group"
-            >
-              <span className="flex h-2 w-2 rounded-full bg-[#00D4B2] animate-pulse" />
-              <span className="font-mono text-[#635BFF] font-bold">PORTAL</span>
-              <span>Startup Founding Roles, Leadership & Co-Founder Matching (12+ Roles)</span>
-              <ChevronRight className="h-3.5 w-3.5 text-[#635BFF] group-hover:translate-x-0.5 transition-transform" />
-            </a>
-          </div>
-
           {/* Quick Playbook Navigation Link */}
           <div className="pt-1 flex items-center justify-center gap-2 text-xs text-[#64748B]">
-            <span>Looking for tactical frameworks?</span>
+            <span>Looking for tactical venture blueprints?</span>
             <Link
               href="/knowledge"
               className="font-semibold text-[#635BFF] hover:text-[#5851EA] inline-flex items-center gap-0.5 hover:underline"
