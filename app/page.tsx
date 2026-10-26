@@ -1,10 +1,10 @@
 import React from "react";
-import { HomeMarketplaceClient } from "@/components/home/HomeMarketplaceClient";
+import { DesignTemplateHome } from "@/components/home/DesignTemplateHome";
 
 export const metadata = {
-  title: "1008 Network — Business Services Marketplace & Community",
+  title: "1008 Network — Smarter Business Starts Here",
   description:
-    "1008 Network is a verified business services marketplace and community. Browse co-founder matching, angel funding discovery, outsourced tech development, and acute project sprints.",
+    "Helping your business get closer to your goals. 1008 Network connects you with co-founders & talent, angel funding discovery, and turnkey operational execution.",
   alternates: {
     canonical: "https://www.1008.network",
   },
@@ -12,8 +12,8 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="w-full bg-white min-h-screen">
-      <HomeMarketplaceClient />
+    <main className="w-full bg-[#8392EA] min-h-screen">
+      <DesignTemplateHome />
     </main>
   );
 }

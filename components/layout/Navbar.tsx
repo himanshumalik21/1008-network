@@ -57,21 +57,27 @@ export function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const isHome = pathname === "/";
+
   return (
     <>
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-200",
-          scrolled
+          scrolled || !isHome
             ? "bg-white/95 backdrop-blur-md border-b border-[#E6E8EB] shadow-[0_1px_3px_rgba(0,0,0,0.03)] py-3"
-            : "bg-white/80 backdrop-blur-sm border-b border-[#E6E8EB]/60 py-4"
+            : "bg-[#8392EA]/90 backdrop-blur-sm py-4 border-b border-white/10 text-white"
         )}
       >
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* 1. Brand Logo */}
             <div className="flex items-center gap-3 shrink-0">
-              <Logo size="lg" />
+              <Logo
+                size="lg"
+                monochrome={isHome && !scrolled}
+                className={isHome && !scrolled ? "text-white" : undefined}
+              />
             </div>
 
             {/* 2. Executive Desktop Navigation Links */}
@@ -84,46 +90,55 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "text-xs sm:text-sm font-medium transition-all relative py-1 flex flex-col items-center",
-                      active
+                      isHome && !scrolled
+                        ? active
+                          ? "text-white font-bold"
+                          : "text-white/85 hover:text-white"
+                        : active
                         ? "text-[#635BFF] font-semibold"
                         : "text-[#425466] hover:text-[#0A2540]"
                     )}
                   >
                     <span>{link.label}</span>
                     {active && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#635BFF] rounded-full" />
+                      <span
+                        className={cn(
+                          "absolute -bottom-1 left-0 right-0 h-[2px] rounded-full",
+                          isHome && !scrolled ? "bg-white" : "bg-[#635BFF]"
+                        )}
+                      />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* 3. Apply to Build Action Button (Desktop) */}
+            {/* 3. Action Pill Button (Matches HOME.png: GET STARTED) */}
             <div className="hidden md:flex items-center shrink-0">
-              <Button
-                variant="primary"
-                size="md"
+              <button
                 onClick={handleOpenModal}
-                rightIcon={<ArrowRight className="h-4 w-4" />}
-                className="font-semibold text-xs sm:text-sm px-5 h-10 shadow-[0_2px_4px_rgba(99,91,255,0.2)]"
+                className="px-6 py-2.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-extrabold text-xs tracking-wider uppercase shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer"
               >
-                Work With 1008
-              </Button>
+                GET STARTED
+              </button>
             </div>
 
             {/* Mobile / Tablet Actions & Hamburger */}
             <div className="flex md:hidden items-center gap-2">
-              <Button
-                variant="primary"
-                size="sm"
+              <button
                 onClick={handleOpenModal}
-                className="text-xs px-3 sm:px-3.5 h-8 font-semibold shrink-0"
+                className="px-4 py-1.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-extrabold text-[11px] tracking-wider uppercase shadow-xs shrink-0 cursor-pointer"
               >
-                Build With 1008
-              </Button>
+                GET STARTED
+              </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-1.5 sm:p-2 rounded-lg text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB] transition-colors focus:outline-none shrink-0"
+                className={cn(
+                  "p-1.5 sm:p-2 rounded-lg transition-colors focus:outline-none shrink-0",
+                  isHome && !scrolled
+                    ? "text-white hover:bg-white/20 border border-white/20"
+                    : "text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB]"
+                )}
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
