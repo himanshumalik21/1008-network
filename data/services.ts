@@ -11,11 +11,73 @@ export interface ServiceItem {
   deliveryTime: string;
   pricingModel: string;
   badge?: string;
+  imageUrl: string;
+  imageAlt: string;
+  photoSuggestion: string;
   deliverables: string[];
   actionLabel: string;
   actionHref: string;
   iconName: "users" | "coins" | "layers" | "briefcase" | "book" | "code" | "cpu" | "shield" | "trending";
 }
+
+export interface FeaturedCategory {
+  id: string;
+  title: string;
+  subtitle: string;
+  countLabel: string;
+  imageUrl: string;
+  imageAlt: string;
+  photoSuggestion: string;
+  color: string;
+  href: string;
+}
+
+export const featuredCategories: FeaturedCategory[] = [
+  {
+    id: "talent",
+    title: "Co-Founders & Key Talent",
+    subtitle: "Find Technical CTOs, GTM Heads & Operations Partners",
+    countLabel: "3 Offerings",
+    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Software engineers and startup co-founders collaborating on product architecture",
+    photoSuggestion: "Team of software engineers & founders collaborating at laptop",
+    color: "#00A389",
+    href: "/network",
+  },
+  {
+    id: "capital",
+    title: "Funding & Angel Syndicates",
+    subtitle: "Direct Introductions to Angels & Family Offices with 0% Broker Cut",
+    countLabel: "2 Offerings",
+    imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Investment presentation and business growth metrics chart",
+    photoSuggestion: "Investor presentation with growth metrics & funding charts",
+    color: "#059669",
+    href: "/capital",
+  },
+  {
+    id: "studio",
+    title: "Outsourced Tech & Operations",
+    subtitle: "1008 Builds Production Code, Deploys Cloud ERPNext & Audits Factories",
+    countLabel: "3 Offerings",
+    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "High-tech manufacturing facility and operations engineering",
+    photoSuggestion: "Modern engineering lab or clean high-tech manufacturing floor",
+    color: "#635BFF",
+    href: "/studio",
+  },
+  {
+    id: "gigs",
+    title: "Acute Project Sprints",
+    subtitle: "2–4 Week Fixed-Budget Deliverables across ERP, B2B Sales & SOPs",
+    countLabel: "3 Offerings",
+    imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Specialist agile team executing a high-impact business sprint",
+    photoSuggestion: "Agile specialist team planning sprint deliverables on whiteboard",
+    color: "#FF7043",
+    href: "/gigs",
+  },
+];
 
 export const servicesData: ServiceItem[] = [
   // 1. Co-Founders & Talent Services
@@ -32,6 +94,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "Direct Matchmaking",
     pricingModel: "Milestone Equity • 0% Fee",
     badge: "Most Requested",
+    imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Senior technical software architect programming clean code on multiple screens",
+    photoSuggestion: "Senior software engineer writing code on monitor setup",
     deliverables: [
       "Vetted Senior Staff Engineers & Tech Leads",
       "Standardized 4-Year Reverse-Vesting Contracts",
@@ -55,6 +120,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "Curated Introductions",
     pricingModel: "Equity + Performance Draw",
     badge: "Verified Vetting",
+    imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Enterprise sales executives in business conference room discussing customer deals",
+    photoSuggestion: "Business executives shaking hands or presenting sales roadmap",
     deliverables: [
       "Enterprise Sales Leaders with Proven ARR Traction",
       "B2B Pipeline Structuring & Incentive Design",
@@ -77,6 +145,9 @@ export const servicesData: ServiceItem[] = [
     reviewsCount: 42,
     deliveryTime: "Active Intake",
     pricingModel: "Founding Equity Share",
+    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Founders and operators discussing product roadmap over laptop",
+    photoSuggestion: "Founders and startup operators reviewing prototype on tablet",
     deliverables: [
       "Direct Access to Verified Early-Stage Founders",
       "Milestone-Backed Equity Schedules & SHA Oversight",
@@ -102,6 +173,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "Direct Introductions",
     pricingModel: "0% Broker / Intermediary Cut",
     badge: "Zero Commission",
+    imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Angel investor and founder reviewing venture valuation deck",
+    photoSuggestion: "Investor deal session with term sheet and financial charts",
     deliverables: [
       "Direct Intros to Active Pan-India Angel Allocators",
       "Structured Founder-Investor Deal Room Sessions",
@@ -124,6 +198,9 @@ export const servicesData: ServiceItem[] = [
     reviewsCount: 19,
     deliveryTime: "3–5 Days Turnaround",
     pricingModel: "Free with 1008 Intake",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Financial analyst auditing unit economics and business cashflow spreadsheet",
+    photoSuggestion: "Financial analyst reviewing growth graphs and revenue margins",
     deliverables: [
       "Comprehensive Unit Economics & Margin Breakdown",
       "Realistic Valuation & Capital Need Modeling",
@@ -149,6 +226,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "4–8 Week Sprints",
     pricingModel: "Milestone Equity / Shared Risk",
     badge: "1008 Studio Arm",
+    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Engineering team building responsive production web app and APIs",
+    photoSuggestion: "Developers coding modern web app interface with React/Next.js",
     deliverables: [
       "Full-Stack Web & Mobile App Architecture (Next.js, Node)",
       "Production Database, API & Serverless Setup",
@@ -172,6 +252,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "2–4 Weeks Delivery",
     pricingModel: "Milestone-Backed Delivery",
     badge: "Enterprise Grade",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Cloud ERP dashboard showing live inventory, orders, and financial analytics",
+    photoSuggestion: "Executive dashboard displaying automated inventory and supply chain data",
     deliverables: [
       "Self-Hosted Private Cloud ERP Deployment (Zero SaaS Fee)",
       "Multi-Warehouse Inventory & Bill of Materials (BOM)",
@@ -194,6 +277,9 @@ export const servicesData: ServiceItem[] = [
     reviewsCount: 17,
     deliveryTime: "3–6 Weeks Handover",
     pricingModel: "Turnkey Milestone Project",
+    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Industrial engineer conducting quality audit on automated factory floor",
+    photoSuggestion: "Industrial engineer checking machinery and manufacturing quality on assembly line",
     deliverables: [
       "On-Site Factory Auditing & Capacity Verification",
       "Raw Material Tooling & Supplier Contract Negotiation",
@@ -219,6 +305,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "2 Weeks Fixed",
     pricingModel: "Fixed Milestone Sprint",
     badge: "High Velocity",
+    imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Sales leader conducting customer product demonstration and outbound sales call",
+    photoSuggestion: "B2B sales executive conducting client discovery demo on laptop",
     deliverables: [
       "500+ Verified ICP Leads in Your Target Industry",
       "Multi-Touch Cold Outreach & Domain Warm-up",
@@ -241,6 +330,9 @@ export const servicesData: ServiceItem[] = [
     reviewsCount: 16,
     deliveryTime: "10–14 Days",
     pricingModel: "Fixed Milestone Budget",
+    imageUrl: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Data charts and executive financial reporting scripts",
+    photoSuggestion: "Live data graphs and financial dashboard metrics on tablet",
     deliverables: [
       "Custom Python / Node Integration Scripts",
       "Live Profit & Loss / Margin Reporting View",
@@ -263,6 +355,9 @@ export const servicesData: ServiceItem[] = [
     reviewsCount: 50,
     deliveryTime: "24–48h Matching",
     pricingModel: "Custom Scoped Milestone",
+    imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Multidisciplinary specialist team solving acute business challenge",
+    photoSuggestion: "Specialist problem-solving sprint team collaborating in meeting room",
     deliverables: [
       "Pre-Scoped Milestone Deliverables & Timelines",
       "Confidential Direct Specialist Matchmaking",
@@ -288,6 +383,9 @@ export const servicesData: ServiceItem[] = [
     deliveryTime: "Instant Free Access",
     pricingModel: "100% Free Playbook",
     badge: "Top Resource",
+    imageUrl: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Lithium battery cell assembly and modern EV cleanroom facility",
+    photoSuggestion: "EV battery pack assembly or clean energy battery storage factory",
     deliverables: [
       "Detailed Plant CAPEX & OPEX Financial Projections",
       "Equipment Specification & Sourcing Roster",
@@ -310,6 +408,9 @@ export const servicesData: ServiceItem[] = [
     reviewsCount: 78,
     deliveryTime: "Instant Free Access",
     pricingModel: "100% Free Playbook",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Co-founders signing term sheet and reverse-vesting agreement in executive office",
+    photoSuggestion: "Founders signing partnership contract or term sheet with lawyer",
     deliverables: [
       "Milestone-Gated Equity Splitting Frameworks",
       "1-Year Cliff & 4-Year Reverse-Vesting Template",

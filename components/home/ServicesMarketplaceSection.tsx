@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { servicesData, ServiceItem } from "@/data/services";
 import { Badge } from "@/components/brand/Badge";
 import {
@@ -9,15 +10,10 @@ import {
   CheckCircle2,
   ArrowRight,
   Clock,
-  ShieldCheck,
-  Zap,
-  Users,
-  Coins,
-  Layers,
-  Briefcase,
-  BookOpen,
+  Camera,
   X,
   Filter,
+  Sparkles,
 } from "lucide-react";
 
 interface ServicesMarketplaceSectionProps {
@@ -49,11 +45,6 @@ export function ServicesMarketplaceSection({
 
     return matchesCategory && matchesSearch;
   });
-
-  const getCategoryCount = (catId: string) => {
-    if (catId === "all") return servicesData.length;
-    return servicesData.filter((s) => s.category === catId).length;
-  };
 
   return (
     <section id="services-marketplace" className="py-16 sm:py-24 bg-[#F8FAFC]">
@@ -114,33 +105,62 @@ export function ServicesMarketplaceSection({
           </div>
         )}
 
-        {/* Service Cards Grid (Fiverr Gig Card Structure) */}
+        {/* Service Cards Grid (Fiverr Gig Card Structure with Photo Banners) */}
         {filteredServices.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredServices.map((service) => (
               <div
                 key={service.id}
-                className="rounded-3xl bg-white border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-[#CBD5E1] transition-all flex flex-col justify-between overflow-hidden group"
+                className="rounded-3xl bg-white border border-[#E2E8F0] shadow-xs hover:shadow-lg hover:border-[#CBD5E1] transition-all flex flex-col justify-between overflow-hidden group"
               >
-                {/* Card Top: Category Badge, Rating & Star */}
-                <div className="p-6 sm:p-7 space-y-4">
-                  <div className="flex items-center justify-between gap-2">
+                {/* 1. Large 16:9 Visual Photo Banner (Fiverr Gig Thumbnail) */}
+                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#E2E8F0]">
+                  <Image
+                    src={service.imageUrl}
+                    alt={service.imageAlt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+
+                  {/* Category Badge on Photo */}
+                  <div className="absolute top-3 left-3">
                     <span
-                      className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border ${service.categoryBg}`}
+                      className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-2xs border ${service.categoryBg}`}
                     >
                       {service.categoryLabel}
                     </span>
-
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#0A2540]">
-                      <Star className="h-3.5 w-3.5 fill-[#F59E0B] text-[#F59E0B]" />
-                      <span>{service.rating.toFixed(1)}</span>
-                      <span className="text-[#64748B] font-normal">
-                        ({service.reviewsCount})
-                      </span>
-                    </div>
                   </div>
 
-                  {/* Title & Tagline */}
+                  {/* Rating Badge on Photo */}
+                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2 py-0.5 rounded-full flex items-center gap-1 text-xs font-bold text-[#0A2540] shadow-2xs">
+                    <Star className="h-3.5 w-3.5 fill-[#F59E0B] text-[#F59E0B]" />
+                    <span>{service.rating.toFixed(1)}</span>
+                    <span className="text-[#64748B] text-[10px] font-normal">
+                      ({service.reviewsCount})
+                    </span>
+                  </div>
+
+                  {/* Photo Replacement / Suggestion Hint (Hover tooltip) */}
+                  <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white/90">
+                    {service.badge && (
+                      <span className="text-[10px] font-mono font-semibold bg-[#635BFF] text-white px-2 py-0.5 rounded shadow-2xs">
+                        {service.badge}
+                      </span>
+                    )}
+                    <span
+                      className="ml-auto inline-flex items-center gap-1 text-[10px] font-mono bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded text-white/90 truncate max-w-[200px]"
+                      title={`Photo suggestion: ${service.photoSuggestion}`}
+                    >
+                      <Camera className="h-3 w-3 shrink-0" />
+                      <span className="truncate">{service.photoSuggestion}</span>
+                    </span>
+                  </div>
+                </div>
+
+                {/* 2. Card Body: Title, Tagline, and Deliverables Checklist */}
+                <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
                     <h3 className="text-lg sm:text-xl font-bold text-[#0A2540] group-hover:text-[#635BFF] transition-colors leading-snug">
                       {service.title}
@@ -172,7 +192,7 @@ export function ServicesMarketplaceSection({
                   </div>
                 </div>
 
-                {/* Card Footer: Timeline, Pricing Model & Action Button */}
+                {/* 3. Card Footer: Timeline, Pricing Model & Action Button */}
                 <div className="p-5 sm:p-6 bg-[#FAFCFF] border-t border-[#E2E8F0] space-y-3">
                   <div className="flex items-center justify-between text-xs text-[#64748B] font-mono">
                     <div className="flex items-center gap-1.5">

@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import { FiverrHeroSection } from "@/components/home/FiverrHeroSection";
 import { FiverrCategoryBar } from "@/components/home/FiverrCategoryBar";
+import { FiverrFeaturedCategories } from "@/components/home/FiverrFeaturedCategories";
 import { ServicesMarketplaceSection } from "@/components/home/ServicesMarketplaceSection";
 import { CommunityCarousel } from "@/components/home/CommunityCarousel";
 import { FiverrHowItWorksSection } from "@/components/home/FiverrHowItWorksSection";
 import { FiverrValuePropsSection } from "@/components/home/FiverrValuePropsSection";
 import { HomeCtaBanner } from "@/components/home/HomeCtaBanner";
 import { Badge } from "@/components/brand/Badge";
-import { Sparkles } from "lucide-react";
 
 export function HomeMarketplaceClient() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -17,7 +17,6 @@ export function HomeMarketplaceClient() {
 
   const handleSelectCategory = (category: string) => {
     setSelectedCategory(category);
-    // Smooth scroll down to marketplace
     const el = document.getElementById("services-marketplace");
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -36,7 +35,7 @@ export function HomeMarketplaceClient() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* 1. Fiverr-Style Hero with Interactive Search & Tags */}
+      {/* 1. Fiverr-Style Hero with Interactive Search & Visual Photo Showcase */}
       <FiverrHeroSection
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -49,7 +48,12 @@ export function HomeMarketplaceClient() {
         onSelectCategory={handleSelectCategory}
       />
 
-      {/* 3. The Core Marketplace Service Cards Grid */}
+      {/* 3. Visual Photo Categories Grid (Fiverr Popular Services Grid) */}
+      <FiverrFeaturedCategories
+        onSelectCategory={handleSelectCategory}
+      />
+
+      {/* 4. The Core Marketplace Service Cards Grid with 16:9 Photo Banners */}
       <ServicesMarketplaceSection
         selectedCategory={selectedCategory}
         onSelectCategory={handleSelectCategory}
@@ -57,8 +61,11 @@ export function HomeMarketplaceClient() {
         onClearSearch={handleClearSearch}
       />
 
-      {/* 4. Interactive Community Pillars Carousel Showcase */}
-      <section className="py-20 sm:py-28 bg-white border-b border-[#E6E8EB] overflow-hidden">
+      {/* 5. How It Works (3 Steps) */}
+      <FiverrHowItWorksSection />
+
+      {/* 6. Interactive Community Pillars Carousel Showcase */}
+      <section className="py-20 sm:py-28 bg-[#F8FAFC] border-b border-[#E6E8EB] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <Badge variant="indigo" size="sm">
@@ -76,13 +83,10 @@ export function HomeMarketplaceClient() {
         </div>
       </section>
 
-      {/* 5. How It Works (3 Steps) */}
-      <FiverrHowItWorksSection />
-
-      {/* 6. Why Leading Indian Businesses Choose 1008 */}
+      {/* 7. Why Leading Indian Businesses Choose 1008 */}
       <FiverrValuePropsSection />
 
-      {/* 7. Bottom Conversion Banner */}
+      {/* 8. Bottom Conversion Banner */}
       <HomeCtaBanner />
     </div>
   );
