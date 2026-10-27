@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="w-full bg-[#8392EA] min-h-screen">
+    <main className="w-full bg-white min-h-screen">
       <DesignTemplateHome />
     </main>
   );

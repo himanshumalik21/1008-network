@@ -12,22 +12,22 @@ export function DesignTemplateHome() {
   return (
     <div className="w-full font-sans antialiased selection:bg-[#FF3B94] selection:text-white">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (Periwinkle Blue) */}
+      {/* 1. HERO SECTION (Clean White Background) */}
       {/* ============================================================ */}
-      <section className="w-full bg-[#8392EA] text-white pt-24 pb-14 sm:pt-28 sm:pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white text-[#0A2540] pt-28 pb-14 sm:pt-36 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-zinc-100">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
           {/* Main Hero Headline & Business Vision */}
-          <div className="space-y-4 max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-mono font-semibold backdrop-blur-xs">
+          <div className="space-y-5 max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-mono font-semibold border border-zinc-200">
               <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
 
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[1.05] font-sans">
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#0A2540] leading-[1.05] font-sans">
               Helping your Business <br />
               get closer to your Goals.
             </h1>
 
-            <p className="text-white/95 text-lg sm:text-xl font-normal max-w-2xl leading-relaxed">
+            <p className="text-[#425466] text-lg sm:text-xl font-normal max-w-2xl leading-relaxed">
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
 
@@ -35,39 +35,39 @@ export function DesignTemplateHome() {
             <div className="flex flex-wrap gap-2 pt-2 text-xs font-mono font-semibold">
               <Link
                 href="/network"
-                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
               >
-                <Users className="h-3.5 w-3.5" />
+                <Users className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
                 <span>01. Co-Founders & Talent</span>
               </Link>
               <Link
                 href="/capital"
-                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
               >
-                <Coins className="h-3.5 w-3.5" />
+                <Coins className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
                 <span>02. Funding & Investors</span>
               </Link>
               <Link
                 href="/studio"
-                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
               >
-                <Layers className="h-3.5 w-3.5" />
+                <Layers className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
                 <span>03. Outsource Operations</span>
               </Link>
               <Link
                 href="/gigs"
-                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
               >
-                <Briefcase className="h-3.5 w-3.5" />
+                <Briefcase className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
                 <span>04. Project Gigs & Sprints</span>
               </Link>
             </div>
           </div>
 
-          {/* 3 Images Row (Exact from Mockup) */}
+          {/* 3 Images Row */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-2">
             {/* Image 1: Left */}
-            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
+            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-zinc-200/80 bg-zinc-50">
               <Image
                 src="/images/home/hero_1_person.png"
                 alt="Entrepreneur holding phone with business tools"
@@ -79,7 +79,7 @@ export function DesignTemplateHome() {
             </div>
 
             {/* Image 2: Center */}
-            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
+            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-zinc-200/80 bg-zinc-50">
               <Image
                 src="/images/home/hero_2_collaborators.png"
                 alt="Co-founders collaborating over startup growth strategy"
@@ -91,7 +91,7 @@ export function DesignTemplateHome() {
             </div>
 
             {/* Image 3: Right */}
-            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
+            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-zinc-200/80 bg-zinc-50">
               <Image
                 src="/images/home/hero_3_mobile_dashboard.png"
                 alt="Mobile dashboard displaying venture financial metrics"
@@ -260,16 +260,16 @@ export function DesignTemplateHome() {
       </section>
 
       {/* ============================================================ */}
-      {/* 4. TRUSTED BY FOUNDERS (Periwinkle Blue + Pink Gradient Cards) */}
+      {/* 4. TRUSTED BY FOUNDERS (Clean White Background) */}
       {/* ============================================================ */}
-      <section className="w-full bg-[#8392EA] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white text-[#0A2540] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-y border-zinc-100">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* Section Headline */}
           <div className="space-y-2">
-            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-none font-sans">
+            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
               Trusted by founders
             </h2>
-            <p className="text-white/90 text-base sm:text-lg max-w-2xl">
+            <p className="text-[#425466] text-base sm:text-lg max-w-2xl">
               Real perspectives from founders and operators building within the 1008 community.
             </p>
           </div>
@@ -282,7 +282,7 @@ export function DesignTemplateHome() {
                 {/* 5 Stars */}
                 <div className="flex items-center gap-1 text-white">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-white text-white drop-shadow-xs" />
+                    <Star key={i} className="h-5 w-5 fill-[#FF2B93] text-[#FF2B93]" />
                   ))}
                 </div>
 
@@ -316,7 +316,7 @@ export function DesignTemplateHome() {
                 {/* 5 Stars */}
                 <div className="flex items-center gap-1 text-white">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-white text-white drop-shadow-xs" />
+                    <Star key={i} className="h-5 w-5 fill-[#FF2B93] text-[#FF2B93]" />
                   ))}
                 </div>
 

@@ -64,20 +64,16 @@ export function Navbar() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-200",
-          scrolled || !isHome
+          scrolled
             ? "bg-white/95 backdrop-blur-md border-b border-[#E6E8EB] shadow-[0_1px_3px_rgba(0,0,0,0.03)] py-3"
-            : "bg-[#8392EA]/90 backdrop-blur-sm py-4 border-b border-white/10 text-white"
+            : "bg-white/90 backdrop-blur-md py-4 border-b border-[#E6E8EB] text-[#0A2540]"
         )}
       >
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* 1. Brand Logo */}
             <div className="flex items-center gap-3 shrink-0">
-              <Logo
-                size="lg"
-                monochrome={isHome && !scrolled}
-                className={isHome && !scrolled ? "text-white" : undefined}
-              />
+              <Logo size="lg" />
             </div>
 
             {/* 2. Executive Desktop Navigation Links */}
@@ -90,23 +86,14 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "text-xs sm:text-sm font-medium transition-all relative py-1 flex flex-col items-center",
-                      isHome && !scrolled
-                        ? active
-                          ? "text-white font-bold"
-                          : "text-white/85 hover:text-white"
-                        : active
+                      active
                         ? "text-[#635BFF] font-semibold"
                         : "text-[#425466] hover:text-[#0A2540]"
                     )}
                   >
                     <span>{link.label}</span>
                     {active && (
-                      <span
-                        className={cn(
-                          "absolute -bottom-1 left-0 right-0 h-[2px] rounded-full",
-                          isHome && !scrolled ? "bg-white" : "bg-[#635BFF]"
-                        )}
-                      />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-[#635BFF]" />
                     )}
                   </Link>
                 );
@@ -133,12 +120,7 @@ export function Navbar() {
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={cn(
-                  "p-1.5 sm:p-2 rounded-lg transition-colors focus:outline-none shrink-0",
-                  isHome && !scrolled
-                    ? "text-white hover:bg-white/20 border border-white/20"
-                    : "text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB]"
-                )}
+                className="p-1.5 sm:p-2 rounded-lg transition-colors focus:outline-none shrink-0 text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB]"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
