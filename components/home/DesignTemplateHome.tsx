@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { Star, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Star, ArrowRight, CheckCircle2, ShieldCheck, Layers, Users, Coins, Briefcase } from "lucide-react";
 
 export function DesignTemplateHome() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,15 +16,52 @@ export function DesignTemplateHome() {
       {/* ============================================================ */}
       <section className="w-full bg-[#8392EA] text-white pt-24 pb-14 sm:pt-28 sm:pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
-          {/* Main Hero Headline */}
-          <div className="space-y-3">
+          {/* Main Hero Headline & Business Vision */}
+          <div className="space-y-4 max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-mono font-semibold backdrop-blur-xs">
+              <span>1008 Network • The Entrepreneur & Business Community</span>
+            </div>
+
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[1.05] font-sans">
-              Smarter Business <br />
-              Starts Here
+              Helping your Business <br />
+              get closer to your Goals.
             </h1>
-            <p className="text-white/90 text-lg sm:text-xl font-medium max-w-xl">
-              1008 Network • Helping your business get closer to your goals.
+
+            <p className="text-white/95 text-lg sm:text-xl font-normal max-w-2xl leading-relaxed">
+              A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
+
+            {/* Quick Community Pathway Chips */}
+            <div className="flex flex-wrap gap-2 pt-2 text-xs font-mono font-semibold">
+              <Link
+                href="/network"
+                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+              >
+                <Users className="h-3.5 w-3.5" />
+                <span>01. Co-Founders & Talent</span>
+              </Link>
+              <Link
+                href="/capital"
+                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+              >
+                <Coins className="h-3.5 w-3.5" />
+                <span>02. Funding & Investors</span>
+              </Link>
+              <Link
+                href="/studio"
+                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+              >
+                <Layers className="h-3.5 w-3.5" />
+                <span>03. Outsource Operations</span>
+              </Link>
+              <Link
+                href="/gigs"
+                className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] backdrop-blur-xs transition-all flex items-center gap-1.5 shadow-2xs"
+              >
+                <Briefcase className="h-3.5 w-3.5" />
+                <span>04. Project Gigs & Sprints</span>
+              </Link>
+            </div>
           </div>
 
           {/* 3 Images Row (Exact from Mockup) */}
@@ -33,7 +70,7 @@ export function DesignTemplateHome() {
             <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
               <Image
                 src="/images/mockup/hero_1_person.png"
-                alt="Entrepreneur holding phone"
+                alt="Entrepreneur holding phone with business tools"
                 fill
                 priority
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -45,7 +82,7 @@ export function DesignTemplateHome() {
             <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
               <Image
                 src="/images/mockup/hero_2_collaborators.png"
-                alt="Co-founders collaborating over mobile device"
+                alt="Co-founders collaborating over startup growth strategy"
                 fill
                 priority
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -57,7 +94,7 @@ export function DesignTemplateHome() {
             <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
               <Image
                 src="/images/mockup/hero_3_mobile_dashboard.png"
-                alt="Hand holding phone displaying live financial dashboard"
+                alt="Mobile dashboard displaying venture financial metrics"
                 fill
                 priority
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -78,7 +115,7 @@ export function DesignTemplateHome() {
             <div className="relative aspect-[3/4] sm:aspect-[3/4.2] rounded-3xl overflow-hidden shadow-2xl bg-white/10">
               <Image
                 src="/images/mockup/sec2_founders_portrait.png"
-                alt="Co-founders smiling and showing mobile solution"
+                alt="Founders smiling and presenting operational partnership"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
@@ -87,40 +124,73 @@ export function DesignTemplateHome() {
           </div>
 
           {/* Right Column: Small Image + Big Text Headline & Copy */}
-          <div className="md:col-span-7 space-y-8 sm:space-y-12 md:pl-6">
+          <div className="md:col-span-7 space-y-6 sm:space-y-8 md:pl-6">
             {/* Small Collaborating Image */}
             <div className="relative aspect-[16/10] max-w-md rounded-2xl overflow-hidden shadow-xl bg-white/10">
               <Image
                 src="/images/mockup/sec2_hands_devices.png"
-                alt="Hands sharing devices and building together"
+                alt="Partners collaborating and executing milestone sprints"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover"
               />
             </div>
 
-            {/* Text Block */}
+            {/* Text Block: 1008 Four Community Pathways */}
             <div className="space-y-4 max-w-xl">
               <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight font-sans">
-                Powerful tools. <br />
-                Simplified business.
+                One community. <br />
+                Four growth pathways.
               </h2>
-              <p className="text-white/90 text-base sm:text-xl font-normal leading-relaxed">
-                1008 Network simplifies scaling your venture without compromising performance, control, or equity. We connect you with curated co-founders, angel investors, and turnkey operational execution.
+              <p className="text-white/95 text-base sm:text-lg font-normal leading-relaxed">
+                1008 Network simplifies scaling your venture without compromising control or equity. We eliminate friction across four core business objectives:
               </p>
 
-              <div className="pt-2 flex flex-wrap gap-3">
+              {/* 4 Aligned Community Capabilities */}
+              <div className="space-y-3 pt-2 text-xs sm:text-sm text-white/95">
+                <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-xs border border-white/15 flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#FFFDF7] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Co-Founders & Talent Matching:</strong> Have the vision? Find vetted Technical CTOs, GTM heads, or join an ambitious startup for milestone equity.
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-xs border border-white/15 flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#FFFDF7] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Funding & Investor Discovery:</strong> Connect evaluated businesses directly with active angel syndicates and family offices with 0% broker cuts.
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-xs border border-white/15 flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#FFFDF7] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Outsource Operations to 1008:</strong> We act as your hands-on execution arm—engineering production software, deploying ERPNext, and auditing factory vendors.
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-xs border border-white/15 flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#FFFDF7] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Project Gigs & Acute Sprints:</strong> Post urgent project requirements or get hired for specialized 2–4 week milestone deliverables.
+                  </div>
+                </div>
+              </div>
+
+              {/* Buttons */}
+              <div className="pt-3 flex flex-wrap gap-3">
                 <button
                   onClick={() => setModalOpen(true)}
-                  className="px-6 py-3 rounded-full bg-white text-[#EA4899] font-bold text-sm hover:bg-[#FFFDF7] shadow-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+                  className="px-6 py-3 rounded-full bg-white text-[#EA4899] font-bold text-xs sm:text-sm hover:bg-[#FFFDF7] shadow-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer uppercase tracking-wider"
                 >
-                  Explore 1008 Pillars
+                  Work With 1008
                 </button>
                 <Link
-                  href="/studio"
-                  className="px-6 py-3 rounded-full bg-black/25 text-white font-semibold text-sm hover:bg-black/35 backdrop-blur-xs transition-colors"
+                  href="/network"
+                  className="px-6 py-3 rounded-full bg-black/25 text-white font-semibold text-xs sm:text-sm hover:bg-black/35 backdrop-blur-xs transition-colors flex items-center gap-1.5"
                 >
-                  Work With 1008 →
+                  <span>Find a Co-Founder</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </div>
@@ -134,50 +204,55 @@ export function DesignTemplateHome() {
       <section className="w-full bg-[#FFFDF7] text-[#0A2540] py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* Section Headline */}
-          <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
-            Why choose us
-          </h2>
+          <div className="space-y-2">
+            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
+              Why choose us
+            </h2>
+            <p className="text-[#425466] text-base sm:text-lg max-w-2xl">
+              Why founders, operators, and capital partners choose 1008 Network to build real economy and technology ventures.
+            </p>
+          </div>
 
           {/* Wide Panoramic Photo Banner */}
           <div className="relative w-full aspect-[16/6] sm:aspect-[16/5] rounded-3xl overflow-hidden shadow-xl bg-[#F6F9FC]">
             <Image
               src="/images/mockup/sec3_panoramic_team.png"
-              alt="Two collaborators working together with mobile devices"
+              alt="Co-founders and operators collaborating with modern devices"
               fill
               sizes="100vw"
               className="object-cover"
             />
           </div>
 
-          {/* 3 Column Feature Benefits */}
+          {/* 3 Column Feature Benefits Aligned with 1008 Objectives */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
             {/* Col 1 */}
-            <div className="space-y-2">
+            <div className="space-y-2.5">
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#FF2B93] font-sans">
-                Built for modern business needs
+                Zero broker cuts & agency markups
               </h3>
               <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-                Advanced operational frameworks and vetted talent simplify venture building from day one.
+                No recruiter placement agency commissions, no syndication finder cuts. All co-founder pairings and capital discovery happen directly between parties on transparent legal rails.
               </p>
             </div>
 
             {/* Col 2 */}
-            <div className="space-y-2">
+            <div className="space-y-2.5">
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#FF2B93] font-sans">
-                Security at every level
+                Turnkey in-house execution arm
               </h3>
               <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-                Mutual NDAs, standardized reverse-vesting, and 100% Day-1 IP ownership protect your assets.
+                1008 isn't just an advisory network. We step into the trenches—engineering your production software, deploying private cloud ERPs, and auditing factory vendors.
               </p>
             </div>
 
             {/* Col 3 */}
-            <div className="space-y-2">
+            <div className="space-y-2.5">
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#FF2B93] font-sans">
-                Clear insights, better decisions
+                Milestone-gated equity & Day-1 IP
               </h3>
               <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-                Audited unit economics, zero-broker funding discovery, and milestone execution reporting.
+                Every collaboration is protected by mutual NDAs, standardized 4-year reverse-vesting schedules, and 100% Day-1 Intellectual Property ownership for your company.
               </p>
             </div>
           </div>
@@ -185,16 +260,21 @@ export function DesignTemplateHome() {
       </section>
 
       {/* ============================================================ */}
-      {/* 4. TRUSTED BY THOUSANDS (Periwinkle Blue + Pink Gradient Cards) */}
+      {/* 4. TRUSTED BY FOUNDERS (Periwinkle Blue + Pink Gradient Cards) */}
       {/* ============================================================ */}
       <section className="w-full bg-[#8392EA] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* Section Headline */}
-          <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-none font-sans">
-            Trusted by founders
-          </h2>
+          <div className="space-y-2">
+            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-none font-sans">
+              Trusted by founders
+            </h2>
+            <p className="text-white/90 text-base sm:text-lg max-w-2xl">
+              Real perspectives from founders and operators building within the 1008 community.
+            </p>
+          </div>
 
-          {/* 2 Testimonial Cards */}
+          {/* 2 Testimonial Cards Aligned with 1008 Mission */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Testimonial 1 */}
             <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#FFD5DF] to-[#FFE7EE] text-[#0A2540] shadow-xl space-y-6 flex flex-col justify-between">
@@ -208,7 +288,7 @@ export function DesignTemplateHome() {
 
                 {/* Quote */}
                 <p className="text-xl sm:text-2xl font-bold leading-snug text-[#0A2540]">
-                  “Seamless from onboarding to daily use — powerful, not complicated.”
+                  “1008 Network matched me with a domain founder in industrial logistics. We structured a 4-year milestone vesting agreement in days. No recruiters, no games.”
                 </p>
               </div>
 
@@ -225,7 +305,7 @@ export function DesignTemplateHome() {
                 </div>
                 <div>
                   <h4 className="font-bold text-sm sm:text-base text-[#0A2540]">Jordan S.</h4>
-                  <p className="text-xs sm:text-sm text-[#425466]">Sales Professional & GTM Lead</p>
+                  <p className="text-xs sm:text-sm text-[#425466]">Commercial Co-Founder & GTM Lead</p>
                 </div>
               </div>
             </div>
@@ -242,7 +322,7 @@ export function DesignTemplateHome() {
 
                 {/* Quote */}
                 <p className="text-xl sm:text-2xl font-bold leading-snug text-[#0A2540]">
-                  “Instantly simplified our venture ops and connected us to the right technical partner.”
+                  “Instead of burning ₹25L on an IT agency, 1008's studio arm engineered our cloud architecture, deployed our ERP, and helped us present to angels with 0% broker cuts.”
                 </p>
               </div>
 
@@ -259,7 +339,7 @@ export function DesignTemplateHome() {
                 </div>
                 <div>
                   <h4 className="font-bold text-sm sm:text-base text-[#0A2540]">Sarah M.</h4>
-                  <p className="text-xs sm:text-sm text-[#425466]">Marketing & Operating Founder</p>
+                  <p className="text-xs sm:text-sm text-[#425466]">Founder & Operating CEO</p>
                 </div>
               </div>
             </div>
@@ -273,55 +353,69 @@ export function DesignTemplateHome() {
       <section className="w-full bg-[#FFFDF7] text-[#0A2540] py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* Section Headline */}
-          <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
-            How it works
-          </h2>
+          <div className="space-y-2">
+            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
+              How it works
+            </h2>
+            <p className="text-[#425466] text-base sm:text-lg max-w-2xl">
+              From requirement definition to milestone execution—confidential, structured, and aligned with your business goals.
+            </p>
+          </div>
 
-          {/* 3 Step Gradient Cards */}
+          {/* 3 Step Gradient Cards Aligned with 1008 Network */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Step 1 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#8C9DF5] to-[#B8C8FF] text-[#0A2540] shadow-lg flex flex-col justify-between min-h-[280px]">
-              <div className="space-y-2">
+            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#8C9DF5] to-[#B8C8FF] text-[#0A2540] shadow-lg flex flex-col justify-between min-h-[300px]">
+              <div className="space-y-3">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0A2540]/70">
-                  01
+                  01 // DEFINE
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] leading-tight font-sans">
-                  Create your account
+                  Define your need
                 </h3>
+                <p className="text-xs sm:text-sm text-[#0A2540]/85 leading-relaxed pt-2">
+                  Choose your objective: recruit a Technical CTO, pitch angel investors, outsource operations to 1008, or post a project gig request.
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-[#0A2540]/80 leading-relaxed pt-6">
-                Start with a secure setup built for clarity, control, and growth.
-              </p>
+              <div className="pt-4 border-t border-black/10 text-[11px] font-mono text-[#0A2540]/70">
+                Direct Intake Form
+              </div>
             </div>
 
             {/* Step 2 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#8C9DF5] to-[#B8C8FF] text-[#0A2540] shadow-lg flex flex-col justify-between min-h-[280px]">
-              <div className="space-y-2">
+            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#8C9DF5] to-[#B8C8FF] text-[#0A2540] shadow-lg flex flex-col justify-between min-h-[300px]">
+              <div className="space-y-3">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0A2540]/70">
-                  02
+                  02 // MATCH & SCOPE
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] leading-tight font-sans">
-                  Connect and customize
+                  Connect under NDA
                 </h3>
+                <p className="text-xs sm:text-sm text-[#0A2540]/85 leading-relaxed pt-2">
+                  1008 curates high-alignment matches—introducing verified co-founders, accredited capital syndicates, or deploying our dedicated execution pod.
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-[#0A2540]/80 leading-relaxed pt-6">
-                Connect tools and tailor your dashboard for easy workflows.
-              </p>
+              <div className="pt-4 border-t border-black/10 text-[11px] font-mono text-[#0A2540]/70">
+                Mutual NDA Protected
+              </div>
             </div>
 
             {/* Step 3 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#8C9DF5] to-[#B8C8FF] text-[#0A2540] shadow-lg flex flex-col justify-between min-h-[280px]">
-              <div className="space-y-2">
+            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#8C9DF5] to-[#B8C8FF] text-[#0A2540] shadow-lg flex flex-col justify-between min-h-[300px]">
+              <div className="space-y-3">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0A2540]/70">
-                  03
+                  03 // EXECUTE
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] leading-tight font-sans">
-                  Manage with confidence
+                  Deliver with confidence
                 </h3>
+                <p className="text-xs sm:text-sm text-[#0A2540]/85 leading-relaxed pt-2">
+                  Execute on clear milestone gates with 100% Day-1 IP ownership, standardized 4-year reverse-vesting rails, and zero hidden broker markups.
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-[#0A2540]/80 leading-relaxed pt-6">
-                Monitor, optimize, and make informed decisions.
-              </p>
+              <div className="pt-4 border-t border-black/10 text-[11px] font-mono text-[#0A2540]/70">
+                Milestone Verification
+              </div>
             </div>
           </div>
 
@@ -329,7 +423,7 @@ export function DesignTemplateHome() {
           <div className="relative w-full aspect-[16/6] sm:aspect-[16/5] rounded-3xl overflow-hidden shadow-xl bg-[#F6F9FC]">
             <Image
               src="/images/mockup/sec5_panoramic_collab.png"
-              alt="Two partners smiling and collaborating on device"
+              alt="Two partners smiling and collaborating on business dashboard"
               fill
               sizes="100vw"
               className="object-cover"
@@ -339,67 +433,110 @@ export function DesignTemplateHome() {
       </section>
 
       {/* ============================================================ */}
-      {/* 6. OWN YOUR FUTURE (Peach/Coral Gradient Banner + Footer) */}
+      {/* 6. OWN YOUR FUTURE (Peach/Coral Gradient Banner + Directory) */}
       {/* ============================================================ */}
       <section className="w-full bg-gradient-to-r from-[#FFA280] via-[#FF8D6C] to-[#FF7B60] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16">
           {/* Big Headline */}
-          <h2 className="text-6xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-none font-sans">
-            Own your future.
-          </h2>
+          <div className="space-y-3">
+            <h2 className="text-6xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-none font-sans">
+              Own your future.
+            </h2>
+            <p className="text-white/95 text-lg sm:text-xl font-medium max-w-xl">
+              Ready to get your business closer to its goals? Join the 1008 Network community today.
+            </p>
+          </div>
 
-          {/* Footer 4-Col Row (Address, Email, Social, CTA Button) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-end pt-4 border-t border-white/20">
-            {/* Address */}
-            <div className="space-y-1 text-sm text-white/95">
+          {/* Community Directory & Contact Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start pt-6 border-t border-white/20">
+            {/* Community Pathways Directory */}
+            <div className="space-y-2 text-sm text-white/95">
               <span className="font-bold text-xs font-mono uppercase tracking-wider text-white/70 block">
-                Address
+                Community Pathways
               </span>
-              <p>1008 Network</p>
-              <p>Pan-India / Gurgaon, India</p>
+              <ul className="space-y-1.5 text-xs sm:text-sm">
+                <li>
+                  <Link href="/network" className="hover:underline flex items-center gap-1">
+                    <span>Co-Founders & Talent</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/capital" className="hover:underline flex items-center gap-1">
+                    <span>Funding & Investors</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/studio" className="hover:underline flex items-center gap-1">
+                    <span>Outsource Operations</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/gigs" className="hover:underline flex items-center gap-1">
+                    <span>Project Gigs & Sprints</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/knowledge" className="hover:underline flex items-center gap-1">
+                    <span>1008 Playbook</span>
+                  </Link>
+                </li>
+              </ul>
             </div>
 
-            {/* Email */}
+            {/* Direct Contact & HQ */}
             <div className="space-y-1 text-sm text-white/95">
               <span className="font-bold text-xs font-mono uppercase tracking-wider text-white/70 block">
-                Email
+                Contact & HQ
               </span>
-              <p>contact@1008.network</p>
+              <p className="font-semibold">1008 Network</p>
+              <p className="text-xs sm:text-sm text-white/90">Gurgaon, Haryana • Pan-India</p>
+              <p className="pt-2 text-xs sm:text-sm">
+                <a href="mailto:contact@1008.network" className="hover:underline font-mono">
+                  contact@1008.network
+                </a>
+              </p>
             </div>
 
-            {/* Social media */}
+            {/* Social Media */}
             <div className="space-y-1 text-sm text-white/95">
               <span className="font-bold text-xs font-mono uppercase tracking-wider text-white/70 block">
-                Social media
+                Official Channels
               </span>
-              <div className="space-y-0.5">
+              <div className="space-y-1 text-xs sm:text-sm">
                 <a
                   href="https://www.instagram.com/1008_network/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline block"
+                  className="hover:underline block font-mono"
                 >
-                  @1008_network (Instagram)
+                  Instagram: @1008_network
                 </a>
                 <a
                   href="https://www.facebook.com/share/1BpxN8G7VM/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline block"
+                  className="hover:underline block font-mono"
                 >
-                  1008 Network (Facebook)
+                  Facebook: 1008 Network
                 </a>
               </div>
             </div>
 
             {/* Action Pill Button */}
-            <div className="sm:ml-auto">
+            <div className="sm:ml-auto space-y-3 w-full sm:w-auto">
               <button
                 onClick={() => setModalOpen(true)}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer block text-center"
               >
-                BOOK A DEMO
+                WORK WITH 1008
               </button>
+
+              <Link
+                href="/network/join"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] font-bold text-xs tracking-wider uppercase backdrop-blur-xs transition-all block text-center"
+              >
+                Join Talent Pool
+              </Link>
             </div>
           </div>
         </div>
