@@ -69,7 +69,7 @@ export function DesignTemplateHome() {
             {/* Image 1: Left */}
             <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
               <Image
-                src="/images/mockup/hero_1_person.png"
+                src="/images/home/hero_1_person.png"
                 alt="Entrepreneur holding phone with business tools"
                 fill
                 priority
@@ -81,7 +81,7 @@ export function DesignTemplateHome() {
             {/* Image 2: Center */}
             <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
               <Image
-                src="/images/mockup/hero_2_collaborators.png"
+                src="/images/home/hero_2_collaborators.png"
                 alt="Co-founders collaborating over startup growth strategy"
                 fill
                 priority
@@ -93,7 +93,7 @@ export function DesignTemplateHome() {
             {/* Image 3: Right */}
             <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-[#6C7DE4]">
               <Image
-                src="/images/mockup/hero_3_mobile_dashboard.png"
+                src="/images/home/hero_3_mobile_dashboard.png"
                 alt="Mobile dashboard displaying venture financial metrics"
                 fill
                 priority
@@ -114,7 +114,7 @@ export function DesignTemplateHome() {
           <div className="md:col-span-5 relative">
             <div className="relative aspect-[3/4] sm:aspect-[3/4.2] rounded-3xl overflow-hidden shadow-2xl bg-white/10">
               <Image
-                src="/images/mockup/sec2_founders_portrait.png"
+                src="/images/home/sec2_founders_portrait.png"
                 alt="Founders smiling and presenting operational partnership"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -128,7 +128,7 @@ export function DesignTemplateHome() {
             {/* Small Collaborating Image */}
             <div className="relative aspect-[16/10] max-w-md rounded-2xl overflow-hidden shadow-xl bg-white/10">
               <Image
-                src="/images/mockup/sec2_hands_devices.png"
+                src="/images/home/sec2_hands_devices.png"
                 alt="Partners collaborating and executing milestone sprints"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -216,7 +216,7 @@ export function DesignTemplateHome() {
           {/* Wide Panoramic Photo Banner */}
           <div className="relative w-full aspect-[16/6] sm:aspect-[16/5] rounded-3xl overflow-hidden shadow-xl bg-[#F6F9FC]">
             <Image
-              src="/images/mockup/sec3_panoramic_team.png"
+              src="/images/home/sec3_panoramic_team.png"
               alt="Co-founders and operators collaborating with modern devices"
               fill
               sizes="100vw"
@@ -296,7 +296,7 @@ export function DesignTemplateHome() {
               <div className="flex items-center gap-3 pt-4 border-t border-black/10">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-xs bg-white">
                   <Image
-                    src="/images/mockup/avatar_jordan.png"
+                    src="/images/home/avatar_jordan.png"
                     alt="Jordan S."
                     fill
                     sizes="48px"
@@ -330,7 +330,7 @@ export function DesignTemplateHome() {
               <div className="flex items-center gap-3 pt-4 border-t border-black/10">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-xs bg-white">
                   <Image
-                    src="/images/mockup/avatar_sarah.png"
+                    src="/images/home/avatar_sarah.png"
                     alt="Sarah M."
                     fill
                     sizes="48px"
@@ -422,7 +422,7 @@ export function DesignTemplateHome() {
           {/* Panoramic Photo Banner at Bottom of Section */}
           <div className="relative w-full aspect-[16/6] sm:aspect-[16/5] rounded-3xl overflow-hidden shadow-xl bg-[#F6F9FC]">
             <Image
-              src="/images/mockup/sec5_panoramic_collab.png"
+              src="/images/home/sec5_panoramic_collab.png"
               alt="Two partners smiling and collaborating on business dashboard"
               fill
               sizes="100vw"
