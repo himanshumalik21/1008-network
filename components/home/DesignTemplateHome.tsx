@@ -311,66 +311,6 @@ export function DesignTemplateHome() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* 3. WHY CHOOSE US (Warm Cream Background + Hot Pink Text) */}
-      {/* ============================================================ */}
-      <section className="w-full bg-[#FFFDF7] text-[#0A2540] py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
-          {/* Section Headline */}
-          <div className="space-y-2">
-            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
-              Why choose us
-            </h2>
-            <p className="text-[#425466] text-base sm:text-lg max-w-2xl">
-              Why founders, operators, and capital partners choose 1008 Network to build real economy and technology ventures.
-            </p>
-          </div>
-
-          {/* Wide Panoramic Photo Banner */}
-          <div className="relative w-full aspect-[16/6] sm:aspect-[16/5] rounded-3xl overflow-hidden shadow-xl bg-[#F6F9FC]">
-            <Image
-              src="/images/home/sec3_panoramic_team.png"
-              alt="Co-founders and operators collaborating with modern devices"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-
-          {/* 3 Column Feature Benefits Aligned with 1008 Objectives */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
-            {/* Col 1 */}
-            <div className="space-y-2.5">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#FF2B93] font-sans">
-                Zero broker cuts & agency markups
-              </h3>
-              <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-                No recruiter placement agency commissions, no syndication finder cuts. All co-founder pairings and capital discovery happen directly between parties on transparent legal rails.
-              </p>
-            </div>
-
-            {/* Col 2 */}
-            <div className="space-y-2.5">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#FF2B93] font-sans">
-                Turnkey in-house execution arm
-              </h3>
-              <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-                1008 isn't just an advisory network. We step into the trenches—engineering your production software, deploying private cloud ERPs, and auditing factory vendors.
-              </p>
-            </div>
-
-            {/* Col 3 */}
-            <div className="space-y-2.5">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#FF2B93] font-sans">
-                Milestone-gated equity & Day-1 IP
-              </h3>
-              <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-                Every collaboration is protected by mutual NDAs, standardized 4-year reverse-vesting schedules, and 100% Day-1 Intellectual Property ownership for your company.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============================================================ */}
       {/* 4. TRUSTED BY FOUNDERS (Clean White Background) */}
