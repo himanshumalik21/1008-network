@@ -11,12 +11,12 @@ export function DesignTemplateHome() {
   return (
     <div className="w-full font-sans antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (Clean White Background • Distinct & Neat) */}
+      {/* 1. HERO SECTION (Clean White Background • Viewport Aligned) */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-[calc(100vh-4rem)] flex items-center bg-white pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
+      <section className="relative w-full min-h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] flex items-center bg-white pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Left Column: Vision & Typography (7 cols on lg) */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-7">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             {/* Pill Badge with Active Pulse */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
@@ -24,13 +24,13 @@ export function DesignTemplateHome() {
             </div>
 
             {/* Bold Hero Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[62px] xl:text-[70px] font-bold tracking-tight text-[#0A2540] leading-[1.08]">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] xl:text-[68px] font-bold tracking-tight text-[#0A2540] leading-[1.08]">
               Helping your Business <br />
               get closer to your Goals.
             </h1>
 
             {/* Subtitle Description */}
-            <p className="text-[#425466] text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+            <p className="text-[#425466] text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
 
@@ -53,9 +53,9 @@ export function DesignTemplateHome() {
             </div>
           </div>
 
-          {/* Right Column: Distinct, Premium Framed Video Showcase (5 cols on lg) */}
+          {/* Right Column: Viewport-Aligned Video Showcase (5 cols on lg) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] aspect-[9/15] rounded-[32px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950">
+            <div className="relative h-[min(65vh,540px)] aspect-[9/16] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-15px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950">
               <video
                 src="/videos/hero_video.mp4"
                 autoPlay
@@ -66,8 +66,8 @@ export function DesignTemplateHome() {
                 className="w-full h-full object-cover object-[55%_center]"
               />
               {/* Subtle top & bottom ambient vignettes */}
-              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
