@@ -182,11 +182,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="zRGxo0D-z82H3UqxPjmXVcoPIB3yuli6-NgUQFvZ3I4"
-        />
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]`}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -195,10 +193,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-      </head>
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]`}
-      >
         <GoogleAnalytics />
         <Navbar />
         <main className="flex-1">{children}</main>
