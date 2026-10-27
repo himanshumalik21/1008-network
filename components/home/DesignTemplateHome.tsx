@@ -11,46 +11,80 @@ export function DesignTemplateHome() {
   return (
     <div className="w-full font-sans antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (Clean White Background) */}
+      {/* 1. HERO SECTION (Complete Viewport • Blended Video & Text) */}
       {/* ============================================================ */}
-      <section className="w-full bg-white text-[#0A2540] pt-28 pb-8 sm:pt-36 sm:pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Main Hero Headline & Business Vision */}
-          <div className="space-y-5 lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200">
+      <section className="relative w-full min-h-screen flex items-center bg-white overflow-hidden pt-20 sm:pt-24 lg:pt-0 pb-16 lg:pb-0">
+        {/* Full-Height Ambient Video Layer */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[62%] h-full z-0 overflow-hidden pointer-events-none">
+          <video
+            src="/videos/hero_video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover object-[65%_center] opacity-90 lg:opacity-100"
+          />
+
+          {/* Seamless Blending Gradients */}
+          {/* Desktop Left Edge Blend: dissolves video seamlessly into pure white text canvas */}
+          <div className="hidden lg:block absolute inset-y-0 left-0 w-64 xl:w-96 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+
+          {/* Mobile/Tablet Soft Wash: ensures supreme text readability while keeping motion alive */}
+          <div className="lg:hidden absolute inset-0 bg-white/85 backdrop-blur-[1px] z-10" />
+
+          {/* Top blend: dissolves under navbar */}
+          <div className="absolute inset-x-0 top-0 h-32 sm:h-44 bg-gradient-to-b from-white via-white/70 to-transparent z-10" />
+
+          {/* Bottom blend: dissolves smoothly into the pathways section */}
+          <div className="absolute inset-x-0 bottom-0 h-40 sm:h-56 bg-gradient-to-t from-white via-white/85 to-transparent z-10" />
+        </div>
+
+        {/* Foreground Content Container */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-16 lg:py-24">
+          <div className="max-w-2xl lg:max-w-[580px] xl:max-w-[640px] space-y-6 sm:space-y-7">
+            {/* Pill Badge with Active Pulse */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-zinc-800 text-xs font-semibold border border-zinc-200/80 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
               <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#0A2540] leading-[1.1]">
+            {/* Bold Hero Headline */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[76px] font-bold tracking-tight text-[#0A2540] leading-[1.08]">
               Helping your Business <br />
               get closer to your Goals.
             </h1>
 
-            <p className="text-[#425466] text-base sm:text-lg md:text-xl font-normal max-w-xl leading-relaxed">
+            {/* Subtitle Vision */}
+            <p className="text-[#425466] text-base sm:text-lg md:text-xl font-normal leading-relaxed">
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
-          </div>
 
-          {/* Hero Video to the Right of Text */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center pt-2 lg:pt-0">
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[9/16] rounded-[28px] overflow-hidden shadow-2xl border border-zinc-200/80 bg-zinc-950">
-              <video
-                src="/videos/hero_video.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-full object-cover"
-              />
+            {/* Action CTA Buttons */}
+            <div className="pt-2 flex flex-wrap items-center gap-3.5">
+              <button
+                type="button"
+                onClick={() => setModalOpen(true)}
+                className="px-7 py-3.5 rounded-full bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer flex items-center gap-2 group"
+              >
+                <span>Work with 1008</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </button>
+              <a
+                href="#pathways"
+                className="px-6 py-3.5 rounded-full bg-white/95 hover:bg-zinc-50 text-[#0A2540] font-semibold text-sm border border-zinc-200/90 transition-all duration-200 shadow-2xs backdrop-blur-sm"
+              >
+                Explore 5 Pathways
+              </a>
             </div>
           </div>
         </div>
       </section>
+
       {/* ============================================================ */}
       {/* 2. COMMUNITY ECOSYSTEM BENTO GRID (Graphics & Boxes) */}
       {/* ============================================================ */}
-      <section className="w-full bg-white text-[#0A2540] pt-4 pb-16 sm:pt-6 sm:pb-24 px-4 sm:px-6 lg:px-8">
+      <section id="pathways" className="w-full bg-white text-[#0A2540] pt-6 pb-16 sm:pt-8 sm:pb-24 px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* Section Heading */}
           <div className="space-y-3 max-w-3xl">
