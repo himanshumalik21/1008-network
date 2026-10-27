@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import { ArrowRight, Plus } from "lucide-react";
@@ -15,7 +14,7 @@ export function DesignTemplateHome() {
       {/* 1. HERO SECTION (Clean White Background) */}
       {/* ============================================================ */}
       <section className="w-full bg-white text-[#0A2540] pt-28 pb-8 sm:pt-36 sm:pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Main Hero Headline & Business Vision */}
           <div className="space-y-5 lg:col-span-7">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200">
@@ -32,16 +31,17 @@ export function DesignTemplateHome() {
             </p>
           </div>
 
-          {/* Hero Character Mascot Illustration to the Right of Text */}
+          {/* Hero Video to the Right of Text */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end items-center pt-2 lg:pt-0">
-            <div className="relative w-full max-w-[340px] sm:max-w-[400px] aspect-[700/317]">
-              <Image
-                src="/images/home/hero_mascots.png"
-                alt="1008 Network Community Partners & Co-Founders Illustration"
-                fill
-                priority
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 400px"
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[9/16] rounded-[28px] overflow-hidden shadow-2xl border border-zinc-200/80 bg-zinc-950">
+              <video
+                src="/videos/hero_video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
