@@ -11,52 +11,26 @@ export function DesignTemplateHome() {
   return (
     <div className="w-full font-sans antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (Complete Viewport • Blended Video & Text) */}
+      {/* 1. HERO SECTION (Clean White Background • Distinct & Neat) */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-screen flex items-center bg-white overflow-hidden pt-20 sm:pt-24 lg:pt-0 pb-16 lg:pb-0">
-        {/* Full-Height Ambient Video Layer */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[62%] h-full z-0 overflow-hidden pointer-events-none">
-          <video
-            src="/videos/hero_video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="w-full h-full object-cover object-[65%_center] opacity-90 lg:opacity-100"
-          />
-
-          {/* Seamless Blending Gradients */}
-          {/* Desktop Left Edge Blend: dissolves video seamlessly into pure white text canvas */}
-          <div className="hidden lg:block absolute inset-y-0 left-0 w-64 xl:w-96 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-
-          {/* Mobile/Tablet Soft Wash: ensures supreme text readability while keeping motion alive */}
-          <div className="lg:hidden absolute inset-0 bg-white/85 backdrop-blur-[1px] z-10" />
-
-          {/* Top blend: dissolves under navbar */}
-          <div className="absolute inset-x-0 top-0 h-32 sm:h-44 bg-gradient-to-b from-white via-white/70 to-transparent z-10" />
-
-          {/* Bottom blend: dissolves smoothly into the pathways section */}
-          <div className="absolute inset-x-0 bottom-0 h-40 sm:h-56 bg-gradient-to-t from-white via-white/85 to-transparent z-10" />
-        </div>
-
-        {/* Foreground Content Container */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-16 lg:py-24">
-          <div className="max-w-2xl lg:max-w-[580px] xl:max-w-[640px] space-y-6 sm:space-y-7">
+      <section className="relative w-full min-h-[calc(100vh-4rem)] flex items-center bg-white pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
+          {/* Left Column: Vision & Typography (7 cols on lg) */}
+          <div className="lg:col-span-7 space-y-6 sm:space-y-7">
             {/* Pill Badge with Active Pulse */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-zinc-800 text-xs font-semibold border border-zinc-200/80 shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
               <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
 
             {/* Bold Hero Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[76px] font-bold tracking-tight text-[#0A2540] leading-[1.08]">
+            <h1 className="text-4xl sm:text-6xl lg:text-[62px] xl:text-[70px] font-bold tracking-tight text-[#0A2540] leading-[1.08]">
               Helping your Business <br />
               get closer to your Goals.
             </h1>
 
-            {/* Subtitle Vision */}
-            <p className="text-[#425466] text-base sm:text-lg md:text-xl font-normal leading-relaxed">
+            {/* Subtitle Description */}
+            <p className="text-[#425466] text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl">
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
 
@@ -72,10 +46,28 @@ export function DesignTemplateHome() {
               </button>
               <a
                 href="#pathways"
-                className="px-6 py-3.5 rounded-full bg-white/95 hover:bg-zinc-50 text-[#0A2540] font-semibold text-sm border border-zinc-200/90 transition-all duration-200 shadow-2xs backdrop-blur-sm"
+                className="px-6 py-3.5 rounded-full bg-white hover:bg-zinc-50 text-[#0A2540] font-semibold text-sm border border-zinc-200 transition-all duration-200 shadow-2xs"
               >
                 Explore 5 Pathways
               </a>
+            </div>
+          </div>
+
+          {/* Right Column: Distinct, Premium Framed Video Showcase (5 cols on lg) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
+            <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] aspect-[9/15] rounded-[32px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950">
+              <video
+                src="/videos/hero_video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="w-full h-full object-cover object-[55%_center]"
+              />
+              {/* Subtle top & bottom ambient vignettes */}
+              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
