@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { ArrowRight, Layers, Users, Coins, Briefcase, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 
 export function DesignTemplateHome() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -30,38 +30,6 @@ export function DesignTemplateHome() {
             <p className="text-[#425466] text-lg sm:text-xl font-normal max-w-2xl leading-relaxed">
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
-
-            {/* Quick Community Pathway Chips */}
-            <div className="flex flex-wrap gap-2 pt-2 text-xs font-mono font-semibold">
-              <Link
-                href="/network"
-                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
-              >
-                <Users className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
-                <span>01. Co-Founders & Talent</span>
-              </Link>
-              <Link
-                href="/capital"
-                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
-              >
-                <Coins className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
-                <span>02. Funding & Investors</span>
-              </Link>
-              <Link
-                href="/studio"
-                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
-              >
-                <Layers className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
-                <span>03. Outsource Operations</span>
-              </Link>
-              <Link
-                href="/gigs"
-                className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-[#635BFF] hover:text-white text-zinc-800 border border-zinc-200/80 transition-all flex items-center gap-1.5 shadow-2xs group"
-              >
-                <Briefcase className="h-3.5 w-3.5 text-[#635BFF] group-hover:text-white transition-colors" />
-                <span>04. Project Gigs & Sprints</span>
-              </Link>
-            </div>
           </div>
 
           {/* 3 Images Row */}
