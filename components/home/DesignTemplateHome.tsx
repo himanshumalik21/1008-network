@@ -14,8 +14,8 @@ export function DesignTemplateHome() {
       {/* ============================================================ */}
       {/* 1. HERO SECTION (Clean White Background) */}
       {/* ============================================================ */}
-      <section className="w-full bg-white text-[#0A2540] pt-28 pb-14 sm:pt-36 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-zinc-100">
-        <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+      <section className="w-full bg-white text-[#0A2540] pt-28 pb-8 sm:pt-36 sm:pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
           {/* Main Hero Headline & Business Vision */}
           <div className="space-y-5 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-mono font-semibold border border-zinc-200">
@@ -31,52 +31,13 @@ export function DesignTemplateHome() {
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
           </div>
-
-          {/* 3 Images Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-2">
-            {/* Image 1: Left */}
-            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-zinc-200/80 bg-zinc-50">
-              <Image
-                src="/images/home/hero_1_person.png"
-                alt="Entrepreneur holding phone with business tools"
-                fill
-                priority
-                sizes="(max-width: 640px) 100vw, 33vw"
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-
-            {/* Image 2: Center */}
-            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-zinc-200/80 bg-zinc-50">
-              <Image
-                src="/images/home/hero_2_collaborators.png"
-                alt="Co-founders collaborating over startup growth strategy"
-                fill
-                priority
-                sizes="(max-width: 640px) 100vw, 33vw"
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-
-            {/* Image 3: Right */}
-            <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-zinc-200/80 bg-zinc-50">
-              <Image
-                src="/images/home/hero_3_mobile_dashboard.png"
-                alt="Mobile dashboard displaying venture financial metrics"
-                fill
-                priority
-                sizes="(max-width: 640px) 100vw, 33vw"
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
       {/* ============================================================ */}
       {/* 2. COMMUNITY ECOSYSTEM BENTO GRID (Graphics & Boxes) */}
       {/* ============================================================ */}
-      <section className="w-full bg-white text-[#0A2540] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-zinc-100">
+      <section className="w-full bg-white text-[#0A2540] pt-4 pb-16 sm:pt-6 sm:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* Section Heading */}
           <div className="space-y-3 max-w-3xl">
