@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { Star, ArrowRight, CheckCircle2, ShieldCheck, Layers, Users, Coins, Briefcase, Plus } from "lucide-react";
+import { ArrowRight, Layers, Users, Coins, Briefcase, Plus } from "lucide-react";
 
 export function DesignTemplateHome() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -312,93 +312,6 @@ export function DesignTemplateHome() {
       </section>
 
 
-      {/* ============================================================ */}
-      {/* 4. TRUSTED BY FOUNDERS (Clean White Background) */}
-      {/* ============================================================ */}
-      <section className="w-full bg-white text-[#0A2540] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-y border-zinc-100">
-        <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
-          {/* Section Headline */}
-          <div className="space-y-2">
-            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#FF2B93] leading-none font-sans">
-              Trusted by founders
-            </h2>
-            <p className="text-[#425466] text-base sm:text-lg max-w-2xl">
-              Real perspectives from founders and operators building within the 1008 community.
-            </p>
-          </div>
-
-          {/* 2 Testimonial Cards Aligned with 1008 Mission */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {/* Testimonial 1 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#FFD5DF] to-[#FFE7EE] text-[#0A2540] shadow-xl space-y-6 flex flex-col justify-between">
-              <div className="space-y-4">
-                {/* 5 Stars */}
-                <div className="flex items-center gap-1 text-white">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#FF2B93] text-[#FF2B93]" />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <p className="text-xl sm:text-2xl font-bold leading-snug text-[#0A2540]">
-                  “1008 Network matched me with a domain founder in industrial logistics. We structured a 4-year milestone vesting agreement in days. No recruiters, no games.”
-                </p>
-              </div>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-black/10">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-xs bg-white">
-                  <Image
-                    src="/images/home/avatar_jordan.png"
-                    alt="Jordan S."
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm sm:text-base text-[#0A2540]">Jordan S.</h4>
-                  <p className="text-xs sm:text-sm text-[#425466]">Commercial Co-Founder & GTM Lead</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#FFD5DF] to-[#FFE7EE] text-[#0A2540] shadow-xl space-y-6 flex flex-col justify-between">
-              <div className="space-y-4">
-                {/* 5 Stars */}
-                <div className="flex items-center gap-1 text-white">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#FF2B93] text-[#FF2B93]" />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <p className="text-xl sm:text-2xl font-bold leading-snug text-[#0A2540]">
-                  “Instead of burning ₹25L on an IT agency, 1008's studio arm engineered our cloud architecture, deployed our ERP, and helped us present to angels with 0% broker cuts.”
-                </p>
-              </div>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-black/10">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-xs bg-white">
-                  <Image
-                    src="/images/home/avatar_sarah.png"
-                    alt="Sarah M."
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm sm:text-base text-[#0A2540]">Sarah M.</h4>
-                  <p className="text-xs sm:text-sm text-[#425466]">Founder & Operating CEO</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============================================================ */}
       {/* 5. HOW IT WORKS (Soft Cream + Hot Pink Heading + Gradient Cards) */}
