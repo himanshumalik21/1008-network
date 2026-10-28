@@ -289,14 +289,14 @@ export function DesignTemplateHome() {
             <div className="sm:ml-auto space-y-3 w-full sm:w-auto">
               <button
                 onClick={() => setModalOpen(true)}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer block text-center"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-xs sm:text-sm shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer block text-center"
               >
-                WORK WITH 1008
+                Work with 1008
               </button>
 
               <Link
                 href="/network/join"
-                className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] font-semibold text-xs tracking-wider uppercase backdrop-blur-xs transition-all block text-center"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] font-semibold text-xs backdrop-blur-xs transition-all block text-center"
               >
                 Join Talent Pool
               </Link>

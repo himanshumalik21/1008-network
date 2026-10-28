@@ -100,13 +100,13 @@ export function Navbar() {
               })}
             </nav>
 
-            {/* 3. Action Pill Button (Matches HOME.png: GET STARTED) */}
+            {/* 3. Action Pill Button (1008 Brand Indigo) */}
             <div className="hidden md:flex items-center shrink-0">
               <button
                 onClick={handleOpenModal}
-                className="px-6 py-2.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-extrabold text-xs tracking-wider uppercase shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                className="px-5 py-2 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs sm:text-sm shadow-[0_2px_4px_rgba(99,91,255,0.2)] transition-all hover:scale-105 active:scale-95 cursor-pointer"
               >
-                GET STARTED
+                Get Started
               </button>
             </div>
 
@@ -114,9 +114,9 @@ export function Navbar() {
             <div className="flex md:hidden items-center gap-2">
               <button
                 onClick={handleOpenModal}
-                className="px-4 py-1.5 rounded-full bg-[#FF3B94] hover:bg-[#FF2085] text-white font-extrabold text-[11px] tracking-wider uppercase shadow-xs shrink-0 cursor-pointer"
+                className="px-3.5 py-1.5 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs shadow-xs shrink-0 cursor-pointer"
               >
-                GET STARTED
+                Get Started
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
