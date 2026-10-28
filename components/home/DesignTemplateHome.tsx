@@ -13,19 +13,19 @@ export function DesignTemplateHome() {
       {/* ============================================================ */}
       {/* 1. HERO SECTION (Clean White Background • Viewport Aligned) */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] flex items-center bg-white pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
-          {/* Left Column: Vision & Typography (7 cols on lg, 6 on xl) */}
-          <div className="lg:col-span-7 xl:col-span-6 min-w-0 space-y-5 sm:space-y-6">
+      <section className="relative w-full min-h-[calc(100vh-4.5rem)] lg:min-h-[calc(100vh-4.5rem)] lg:max-h-[820px] flex items-center bg-white pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
+          {/* Left Column: Vision & Typography (7 cols on lg & xl) */}
+          <div className="lg:col-span-7 min-w-0 space-y-5 sm:space-y-6">
             {/* Pill Badge with Active Pulse */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
               <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
 
-            {/* Bold Hero Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[66px] font-bold tracking-tight text-[#0A2540] leading-[1.08]">
-              Helping your Business <br />
+            {/* Bold Hero Headline - Balanced 2-Line Layout */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[46px] xl:text-[54px] font-bold tracking-tight text-[#0A2540] leading-[1.12]">
+              Helping your Business <br className="hidden sm:inline" />
               get closer to your Goals.
             </h1>
 
@@ -46,21 +46,27 @@ export function DesignTemplateHome() {
             </div>
           </div>
 
-          {/* Right Column: Viewport-Aligned Video Showcase (5 cols on lg, 6 on xl) */}
-          <div className="lg:col-span-5 xl:col-span-6 min-w-0 flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] h-[min(70vh,560px)] sm:h-[min(74vh,600px)] lg:h-[min(78vh,660px)] rounded-[30px] sm:rounded-[36px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
-              <video
-                src="/videos/hero_video.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-full object-cover object-[55%_center]"
-              />
-              {/* Subtle top & bottom ambient vignettes */}
-              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
-              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
+          {/* Right Column: Viewport-Aligned Video Showcase (5 cols on lg & xl) */}
+          <div className="lg:col-span-5 min-w-0 flex justify-center lg:justify-end items-center">
+            <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] xl:max-w-[440px]">
+              {/* Soft Ambient Brand Glow Behind Video */}
+              <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/12 via-transparent to-[#00D4B2]/12 rounded-[36px] blur-xl opacity-70 -z-10" />
+
+              {/* Video Card Container - Harmonized Height with Text Column */}
+              <div className="relative w-full h-[420px] sm:h-[460px] lg:h-[480px] xl:h-[500px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.16)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
+                <video
+                  src="/videos/hero_video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-full h-full object-cover object-[55%_center]"
+                />
+                {/* Subtle top & bottom ambient vignettes */}
+                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
+              </div>
             </div>
           </div>
         </div>
