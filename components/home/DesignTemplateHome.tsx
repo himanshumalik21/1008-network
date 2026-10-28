@@ -34,21 +34,14 @@ export function DesignTemplateHome() {
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
 
-            {/* Action CTA Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-3.5">
-              <button
-                type="button"
-                onClick={() => setModalOpen(true)}
-                className="px-7 py-3.5 rounded-full bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer flex items-center gap-2 group"
-              >
-                <span>Work with 1008</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-              </button>
+            {/* Action CTA Button (Single Modern Hero Action) */}
+            <div className="pt-2 flex items-center">
               <a
                 href="#pathways"
-                className="px-6 py-3.5 rounded-full bg-white hover:bg-zinc-50 text-[#0A2540] font-semibold text-sm border border-zinc-200 transition-all duration-200 shadow-2xs"
+                className="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-[0_12px_28px_-6px_rgba(99,91,255,0.35)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer inline-flex items-center gap-2.5 group border border-[#0A2540] hover:border-[#635BFF]"
               >
-                Explore 5 Pathways
+                <span>Explore 5 Pathways</span>
+                <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
