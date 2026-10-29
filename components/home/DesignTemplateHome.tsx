@@ -130,28 +130,28 @@ export function DesignTemplateHome() {
               </Link>
             </div>
 
-            {/* Box 5: Playbook (Stripe Royal Sapphire / Deep Ocean Gradient) */}
+            {/* Box 5: Playbook (Deep Obsidian Slate - Non-Bright Executive Foundation) */}
             <Link
               href="/knowledge"
-              className="relative rounded-[22px] bg-gradient-to-r from-[#0C2340] via-[#133D6D] to-[#1C5599] p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(19,61,109,0.4)] shadow-[0_8px_24px_-6px_rgba(19,61,109,0.25)] group"
+              className="relative rounded-[22px] bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.5)] shadow-[0_8px_24px_-6px_rgba(0,0,0,0.3)] group"
             >
               <div className="space-y-1 max-w-xl">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-white/80">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
                     Knowledge Hub
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
-                  <span className="text-xs text-white/70">Founder Playbook</span>
+                  <span className="text-xs text-zinc-400">Founder Playbook</span>
                 </div>
                 <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug">
                   Playbook & Tactical Frameworks
                 </h3>
-                <p className="text-white/85 text-xs sm:text-sm leading-relaxed font-normal">
+                <p className="text-zinc-300/90 text-xs sm:text-sm leading-relaxed font-normal">
                   Standardized founder templates, milestone vesting agreements, cap tables, and regulatory blueprints for Indian ventures.
                 </p>
               </div>
               <div className="shrink-0 self-end sm:self-center">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white/90 flex items-center justify-center group-hover:bg-white group-hover:text-[#0C2340] transition-colors">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#0F172A] transition-all">
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
