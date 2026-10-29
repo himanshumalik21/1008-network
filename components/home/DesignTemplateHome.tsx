@@ -3,13 +3,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
+import { IsometricBackground3D } from "./IsometricBackground3D";
 import { ArrowRight, Plus } from "lucide-react";
 
 export function DesignTemplateHome() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between bg-white font-sans antialiased pt-16 sm:pt-18 lg:pt-16 selection:bg-[#635BFF]/15 selection:text-[#0A2540]">
+    <div className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between bg-white font-sans antialiased pt-16 sm:pt-18 lg:pt-16 selection:bg-[#635BFF]/15 selection:text-[#0A2540] overflow-hidden">
+      {/* 3D Geometric Isometric Wireframe Background (Decagon-style) */}
+      <IsometricBackground3D />
+
       {/* ============================================================ */}
       {/* 1. COMMUNITY ECOSYSTEM (Content on Left • Video on Right) */}
       {/* ============================================================ */}
