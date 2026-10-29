@@ -1,37 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0A2540" />
-      <stop offset="100%" stop-color="#061626" />
+      <stop offset="100%" stop-color="#051322" />
     </linearGradient>
     <linearGradient id="rim" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#635BFF" stop-opacity="0.8" />
       <stop offset="50%" stop-color="#00D4B2" stop-opacity="0.7" />
-      <stop offset="100%" stop-color="#635BFF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#635BFF" stop-opacity="0.35" />
     </linearGradient>
-    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="left0" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8078FF" />
+      <stop offset="60%" stop-color="#635BFF" />
+      <stop offset="100%" stop-color="#00D4B2" />
+    </linearGradient>
+    <linearGradient id="right0" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F5CD" />
-      <stop offset="100%" stop-color="#00A68C" />
+      <stop offset="50%" stop-color="#00D4B2" />
+      <stop offset="100%" stop-color="#FFFFFF" />
     </linearGradient>
+    <filter id="ambient" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
 
-  <rect width="512" height="512" rx="124" fill="url(#bgG)" />
+  <!-- Deep Obsidian Navy Rounded Squircle -->
+  <rect width="512" height="512" rx="124" fill="url(#bg)" />
   <rect x="8" y="8" width="496" height="496" rx="116" fill="none" stroke="url(#rim)" stroke-width="4.5" />
 
-  <!-- Centered Modern 1008 Wordmark Icon -->
-  <g transform="translate(256, 290)">
-    <!-- 1008 in ultra-bold modern typography -->
-    <text x="0" y="0" 
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" 
-          font-size="142" 
-          font-weight="900" 
-          letter-spacing="-0.06em" 
-          text-anchor="middle" 
-          fill="#FFFFFF">
-      1<tspan fill="#635BFF">0</tspan><tspan fill="#00D4B2">0</tspan>8
-    </text>
+  <!-- Luminous Ambient Halo Behind Both Loops -->
+  <circle cx="160" cy="256" r="120" fill="#635BFF" opacity="0.25" filter="url(#ambient)" />
+  <circle cx="352" cy="256" r="120" fill="#00D4B2" opacity="0.22" filter="url(#ambient)" />
+
+  <!-- Large Size "00" Combined As Infinity Sign -->
+  <g transform="translate(256, 256)">
+    <!-- Right "0" Loop (under at center crossover) -->
+    <path d="M 0,0 C 80,118 200,118 200,0 C 200,-118 80,-118 0,0"
+          fill="none" 
+          stroke="url(#right0)" 
+          stroke-width="74" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
     
-    <!-- Modern Tech Accent Pill Bar below -->
-    <rect x="-90" y="32" width="180" height="10" rx="5" fill="url(#dotGrad)" />
+    <!-- Left "0" Loop (over at center crossover for 3D ribbon depth) -->
+    <path d="M 0,0 C -80,-118 -200,-118 -200,0 C -200,118 -80,118 0,0"
+          fill="none" 
+          stroke="url(#left0)" 
+          stroke-width="74" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
   </g>
 </svg>
