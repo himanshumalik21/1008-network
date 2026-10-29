@@ -55,7 +55,7 @@ export function DesignTemplateHome() {
                     Co-Founders & Talent
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Find the right co-founders and talent needed for your business.
+                    Have the business vision. Find talent, co-founders, or join a business.
                   </p>
                 </div>
               </Link>
