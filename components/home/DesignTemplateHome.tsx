@@ -124,7 +124,7 @@ export function DesignTemplateHome() {
                     Gigs & Sprints
                   </h3>
                   <p className="text-[#425466] text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Post your gig/sprint project requirements and find the right freelancer to deliver the work.
+                    Acute project sprints for operating businesses. Delivered by verified specialists.
                   </p>
                 </div>
               </Link>
