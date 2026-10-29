@@ -2,12 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
 import { Mail } from "lucide-react";
 import { LinkedInIcon } from "@/components/brand/LinkedInIcon";
 import { InstagramIcon, FacebookIcon } from "@/components/brand/SocialIcons";
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname === "/") return null;
+
   return (
     <footer className="bg-[#F8FAFC] border-t border-[#E2E8F0] text-[#0A2540] pt-12 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
