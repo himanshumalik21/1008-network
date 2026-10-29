@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import { IsometricBackground3D } from "./IsometricBackground3D";
 import { ArrowRight, Plus } from "lucide-react";
 
 export function DesignTemplateHome() {
-  const [modalOpen, setModalOpen] = useState(false);
-
   return (
     <div className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between bg-white font-sans antialiased pt-16 sm:pt-18 lg:pt-16 selection:bg-[#635BFF]/15 selection:text-[#0A2540] overflow-hidden">
       {/* 3D Geometric Isometric Wireframe Background (Decagon-style) */}
@@ -168,8 +165,8 @@ export function DesignTemplateHome() {
               {/* Soft Ambient Brand Glow Behind Video (Stripe Luminous Ambient Halo) */}
               <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/18 via-[#00A68C]/10 to-[#00D4B2]/18 rounded-[36px] blur-2xl opacity-75 -z-10" />
 
-              {/* Video Card Container - Generous Sizing to Fill Right Column */}
-              <div className="relative w-full min-h-[460px] sm:min-h-[520px] lg:min-h-[560px] xl:min-h-[600px] max-h-[660px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
+              {/* Video Card Container - Generous Sizing to Fill Right Column with Fluid Mobile Scaling */}
+              <div className="relative w-full min-h-[280px] sm:min-h-[360px] md:min-h-[460px] lg:min-h-[560px] xl:min-h-[600px] max-h-[660px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
                 <video
                   src="/videos/hero_video.mp4"
                   autoPlay
@@ -177,6 +174,8 @@ export function DesignTemplateHome() {
                   muted
                   playsInline
                   preload="auto"
+                  aria-label="1008 Network overview video showcase"
+                  title="1008 Network overview video"
                   className="w-full h-full object-cover object-[55%_center]"
                 />
                 {/* Subtle top & bottom ambient vignettes */}
@@ -225,6 +224,7 @@ export function DesignTemplateHome() {
               href="https://www.linkedin.com/company/1008-network/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="1008 Network on LinkedIn"
               className="hover:text-[#0A66C2] transition-colors"
             >
               LinkedIn
@@ -233,6 +233,7 @@ export function DesignTemplateHome() {
               href="https://www.instagram.com/1008_network/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="1008 Network on Instagram"
               className="hover:text-[#E4405F] transition-colors"
             >
               Instagram
@@ -240,12 +241,6 @@ export function DesignTemplateHome() {
           </div>
         </div>
       </footer>
-
-      {/* Global Application Modal */}
-      <StudioApplicationModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
     </div>
   );
 }

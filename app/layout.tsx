@@ -45,6 +45,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.1008.network",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   verification: {
     google: "zRGxo0D-z82H3UqxPjmXVcoPIB3yuli6-NgUQFvZ3I4",
   },
@@ -117,23 +124,14 @@ export default function RootLayout({
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "1008 Network Four Pillars",
+      name: "1008 Network Five Growth Pathways",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Venture Studio",
-            description: "Turnkey operational infrastructure, specialized talent, modern software, and syndicate capital for long-term venture equity.",
-            url: "https://www.1008.network/studio",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Partner Network",
-            description: "Curated co-founder matching and executive talent exchange for shared venture equity.",
+            name: "Co-Founders & Talent",
+            description: "Find trusted co-founders and key team members, or join an ambitious startup.",
             url: "https://www.1008.network/network",
           },
         },
@@ -141,8 +139,8 @@ export default function RootLayout({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Capital Network",
-            description: "Capital discovery connecting promising startups with a curated network of angels, family offices, and eligible capital partners.",
+            name: "Funding & Investors",
+            description: "Connect directly with active angel investors and family offices.",
             url: "https://www.1008.network/capital",
           },
         },
@@ -150,8 +148,26 @@ export default function RootLayout({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Venture Playbook",
-            description: "Tactical operational blueprints, regulatory frameworks, and market playbooks for Indian founders.",
+            name: "Outsource Operations",
+            description: "Let us run your day-to-day operations and tech so you can focus on growing your business.",
+            url: "https://www.1008.network/studio",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Gigs & Sprints",
+            description: "Get short-term 1–4 week projects completed by verified freelancers and specialists.",
+            url: "https://www.1008.network/gigs",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Playbooks & Business Opportunities",
+            description: "Daily market research, validated business ideas, and practical guides on cash flow, legal setups, and fundraising.",
             url: "https://www.1008.network/knowledge",
           },
         },
