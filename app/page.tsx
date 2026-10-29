@@ -46,7 +46,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="w-full bg-white min-h-screen lg:h-screen lg:overflow-hidden">
+    <div className="w-full min-h-screen lg:h-screen lg:overflow-hidden">
       <DesignTemplateHome />
     </div>
   );
