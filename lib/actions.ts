@@ -1,6 +1,6 @@
 "use server";
 
-import { StudioApplicationData, NetworkPostData } from "./types";
+import { StudioApplicationData, NetworkPostData, GigApplicationData } from "./types";
 import {
   sendStudioPitchAlert,
   sendNetworkPostAlert,
@@ -61,6 +61,7 @@ const localSubmissions = {
     notes?: string;
     submittedAt: string;
   }>,
+  gigApplications: [] as Array<GigApplicationData & { id: string; submittedAt: string }>,
   contactInquiries: [] as Array<{ id: string; name: string; email: string; type: string; message: string; submittedAt: string }>,
   newsletterSubscribers: [] as Array<{ email: string; subscribedAt: string }>,
 };
@@ -647,6 +648,65 @@ export async function submitGigRequest(data: Record<string, unknown>): Promise<A
     return {
       success: false,
       message: "Error submitting gig request. Please contact ops@1008.network directly.",
+    };
+  }
+}
+
+export async function applyToGig(payload: GigApplicationData): Promise<ActionResult> {
+  try {
+    const freelancerName = cleanString(payload.freelancerName, 120);
+    const freelancerEmail = cleanString(payload.freelancerEmail, 254);
+    const profileUrl = cleanString(payload.profileUrl, 300);
+    const pitchNote = cleanString(payload.pitchNote, 3000);
+
+    if (!freelancerName || !freelancerEmail || !pitchNote) {
+      return {
+        success: false,
+        message: "Please provide your name, email, and a brief note / pitch.",
+      };
+    }
+
+    if (!isValidEmail(freelancerEmail)) {
+      return {
+        success: false,
+        message: "Please provide a valid work email address.",
+      };
+    }
+
+    const applicationRecord = {
+      ...payload,
+      id: `gig-app-${Date.now()}`,
+      freelancerName,
+      freelancerEmail,
+      profileUrl,
+      pitchNote,
+      freelancerPhone: cleanString(payload.freelancerPhone, 30),
+      proposedTimeline: cleanString(payload.proposedTimeline, 100),
+      expectedPay: cleanString(payload.expectedPay, 100),
+      submittedAt: new Date().toISOString(),
+    };
+
+    localSubmissions.gigApplications.push(applicationRecord);
+
+    // Forward notification to 1008 operations
+    await sendContactAlert({
+      name: `${freelancerName} (Specialist Candidate)`,
+      email: freelancerEmail,
+      type: `Gig Application: ${payload.gigTitle}`,
+      company: payload.businessName,
+      message: `[SPECIALIST INTEREST EXPRESSED FOR GIG]\nGig ID: ${payload.gigId}\nGig Title: ${payload.gigTitle}\nClient: ${payload.businessName}\nSpecialist: ${freelancerName}\nEmail: ${freelancerEmail}\nPhone: ${payload.freelancerPhone || "Not provided"}\nProfile URL: ${profileUrl || "Not provided"}\nTimeline: ${payload.proposedTimeline || "Immediate / As per sprint"}\nProposed Pay: ${payload.expectedPay || "Matches budget"}\n\nPitch & Proof of Work:\n${pitchNote}`,
+    }).catch((err) => {
+      console.error("[Gig Application non-blocking email error]:", err);
+    });
+
+    return {
+      success: true,
+      message: "Interest submitted! 1008 Network ops will assess your profile and introduce you to the business poster within 24-48 hours.",
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: "Error submitting interest. Please contact ops@1008.network directly.",
     };
   }
 }

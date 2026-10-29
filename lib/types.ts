@@ -290,6 +290,11 @@ export interface GigItem {
   contactEmail?: string;
   postedAt: string;
   featured?: boolean;
+  urgency?: "Immediate" | "Within 2 Weeks" | "Flexible";
+  verifiedBusiness?: boolean;
+  experienceLevel?: "Intermediate" | "Expert" | "Any Specialist";
+  escrowProtected?: boolean;
+  proposalsCount?: number;
 }
 
 export interface GigPostData {
@@ -306,5 +311,18 @@ export interface GigPostData {
   goalSummary: string;
   deliverables: string;
   skillsRequired: string;
+}
+
+export interface GigApplicationData {
+  gigId: string;
+  gigTitle: string;
+  businessName: string;
+  freelancerName: string;
+  freelancerEmail: string;
+  freelancerPhone?: string;
+  profileUrl: string;
+  pitchNote: string;
+  proposedTimeline?: string;
+  expectedPay?: string;
 }
 

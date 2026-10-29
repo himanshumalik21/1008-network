@@ -161,11 +161,22 @@ export default function PostGigPage() {
             1008 Community • Post a Gig Request
           </Badge>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Post your business goal or gig requirement.
+            Post your business gig or sprint requirement.
           </h1>
           <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-            Need an ERP audit, cold outreach engine, or technical deliverable? Post your requirement to the 1008 community to connect directly with specialized operators and specialists.
+            Need an ERP audit, cold outreach engine, or technical deliverable? Submit your requirement. All requests are sent directly to the 1008.network team for review, curation, and specialist matching.
           </p>
+        </div>
+
+        {/* Curation Policy Banner */}
+        <div className="p-4 rounded-2xl bg-[#F0FDF4] border border-[#DCFCE7] flex items-start gap-3 text-xs text-[#166534] leading-relaxed">
+          <ShieldCheck className="h-5 w-5 text-[#16A34A] shrink-0 mt-0.5" />
+          <div>
+            <span className="font-bold block text-sm text-[#14532D]">
+              1008 Network Quality & Editorial Review:
+            </span>
+            To maintain zero spam and high standards, there is no unmoderated self-publishing. Your request is sent directly to the 1008.network team. We verify the category, scope of work, and pay, standardize milestone deliverables, and publish it to the active directory within 12–24 hours.
+          </div>
         </div>
 
         {status === "success" ? (
@@ -174,14 +185,14 @@ export default function PostGigPage() {
               <CheckCircle2 className="h-6 w-6" />
             </div>
             <h2 className="text-2xl font-bold text-[#065F46] font-sans">
-              Gig Request Published Successfully!
+              Gig Request Received for Editorial Review!
             </h2>
             <p className="text-sm text-[#047857] max-w-lg mx-auto leading-relaxed">
-              {message}
+              Your gig requirement has been routed directly to the 1008.network team. We will review the scope of work and pay, curate the deliverables, and list it on the marketplace within 12–24 hours while coordinating verified specialists.
             </p>
             <div className="pt-4 flex justify-center gap-3">
               <Button href="/gigs" variant="primary" size="md">
-                Browse All Gigs
+                Browse Active Gigs
               </Button>
               <Button href="/" variant="secondary" size="md">
                 Return to Home
