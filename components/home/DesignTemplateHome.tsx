@@ -83,16 +83,16 @@ export function DesignTemplateHome() {
                 </div>
               </Link>
 
-              {/* Box 3: Outsource Operations (Stripe Deep Slate Navy Gradient) */}
+              {/* Box 3: Outsource Operations (Stripe Luminous Teal/Emerald Gradient) */}
               <Link
                 href="/studio"
-                className="relative rounded-[22px] bg-gradient-to-br from-[#0A2540] via-[#102F54] to-[#183B68] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(10,37,64,0.45)] shadow-[0_8px_20px_-6px_rgba(10,37,64,0.3)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#00A68C] via-[#008F79] to-[#0A6C5B] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(0,166,140,0.4)] shadow-[0_8px_20px_-6px_rgba(0,166,140,0.25)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
                     Turnkey Execution
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-[#00D4B2] flex items-center justify-center text-[#0A2540] shadow-xs group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0A6C5B] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export function DesignTemplateHome() {
                   <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug">
                     Outsource Operations
                   </h3>
-                  <p className="text-white/85 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
+                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
                     1008 as turnkey execution partner—cloud architecture, private ERPs, and factory audits.
                   </p>
                 </div>
@@ -130,10 +130,10 @@ export function DesignTemplateHome() {
               </Link>
             </div>
 
-            {/* Box 5: Playbook (Stripe Signature Midnight-to-Iris Aurora Gradient) */}
+            {/* Box 5: Playbook (Stripe Royal Sapphire / Deep Ocean Gradient) */}
             <Link
               href="/knowledge"
-              className="relative rounded-[22px] bg-gradient-to-r from-[#0A2540] via-[#1B2746] to-[#5851EA] p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(10,37,64,0.35)] shadow-[0_8px_24px_-6px_rgba(10,37,64,0.22)] group"
+              className="relative rounded-[22px] bg-gradient-to-r from-[#0C2340] via-[#133D6D] to-[#1C5599] p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(19,61,109,0.4)] shadow-[0_8px_24px_-6px_rgba(19,61,109,0.25)] group"
             >
               <div className="space-y-1 max-w-xl">
                 <div className="flex items-center gap-2">
@@ -151,7 +151,7 @@ export function DesignTemplateHome() {
                 </p>
               </div>
               <div className="shrink-0 self-end sm:self-center">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white/90 flex items-center justify-center group-hover:bg-white group-hover:text-[#0A2540] transition-colors">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white/90 flex items-center justify-center group-hover:bg-white group-hover:text-[#0C2340] transition-colors">
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
@@ -162,7 +162,7 @@ export function DesignTemplateHome() {
           <div className="lg:col-span-5 xl:col-span-5 min-w-0 flex justify-center lg:justify-end items-stretch pt-2 sm:pt-4 lg:pt-0">
             <div className="relative w-full max-w-[460px] sm:max-w-[500px] lg:max-w-none flex flex-col justify-center">
               {/* Soft Ambient Brand Glow Behind Video (Stripe Luminous Ambient Halo) */}
-              <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/18 via-[#0A2540]/5 to-[#00D4B2]/18 rounded-[36px] blur-2xl opacity-75 -z-10" />
+              <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/18 via-[#00A68C]/10 to-[#00D4B2]/18 rounded-[36px] blur-2xl opacity-75 -z-10" />
 
               {/* Video Card Container - Generous Sizing to Fill Right Column */}
               <div className="relative w-full min-h-[460px] sm:min-h-[520px] lg:min-h-[560px] xl:min-h-[600px] max-h-[660px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
