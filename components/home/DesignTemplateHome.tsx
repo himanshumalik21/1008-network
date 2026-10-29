@@ -12,161 +12,39 @@ export function DesignTemplateHome() {
       <IsometricBackground3D />
 
       {/* ============================================================ */}
-      {/* 1. COMMUNITY ECOSYSTEM (Content on Left • Video on Right) */}
+      {/* 1. COMMUNITY ECOSYSTEM */}
+      {/* Desktop: Content on Left (Rows 1 & 2), Video on Right (Spanning Rows 1 & 2) */}
+      {/* Mobile (< lg): Heading (Order 1) -> Video (Order 2) -> Boxes (Order 3) */}
       {/* ============================================================ */}
       <section
         id="pathways"
         className="flex-1 w-full max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-2 sm:py-3 lg:py-2 z-20"
       >
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12 items-stretch">
-          {/* Left Column: Heading, 2x2 Boxes & Playbook Below (7 cols on lg & xl) */}
-          <div className="lg:col-span-7 xl:col-span-7 min-w-0 space-y-4 sm:space-y-4.5 lg:space-y-5 flex flex-col justify-center">
-            {/* Section Heading */}
-            <div className="space-y-2 sm:space-y-2.5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs sm:text-[13px] font-semibold border border-zinc-200 shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
-                <span>1008 Network • The Entrepreneur & Business Community</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-[#0A2540] leading-[1.12]">
-                One community. <br className="hidden sm:inline" />
-                Five growth pathways.
-              </h1>
-              <p className="text-[#425466] text-sm sm:text-base font-normal leading-relaxed max-w-2xl">
-                Find co-founders, raise angel funding, outsource day-to-day operations, hire project experts, and access practical business playbooks.
-              </p>
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-[auto_1fr] gap-4 sm:gap-5 lg:gap-8 xl:gap-12 items-stretch">
+          
+          {/* Item 1: Heading Block (Order 1 on mobile, Col 1-7 Row 1 on desktop) */}
+          <div className="col-span-1 lg:col-span-7 xl:col-span-7 min-w-0 order-1 lg:order-1 lg:row-start-1 space-y-2 sm:space-y-2.5 flex flex-col justify-center text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs sm:text-[13px] font-semibold border border-zinc-200 shadow-2xs w-fit">
+              <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
+              <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
-
-            {/* 2x2 Compact Boxes Grid (1008 Network Brand Colors) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 lg:gap-4.5">
-              {/* Box 1: Co-Founders & Talent (Stripe Iris / Blurple Gradient) */}
-              <Link
-                href="/network"
-                className="relative rounded-[22px] bg-gradient-to-br from-[#635BFF] via-[#5B52F2] to-[#4F46E5] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(99,91,255,0.4)] shadow-[0_8px_20px_-6px_rgba(99,91,255,0.25)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
-                    Partners & Talent
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#635BFF] shadow-xs group-hover:scale-105 transition-transform">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
-                  </div>
-                </div>
-                <div className="pt-2">
-                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug">
-                    Co-Founders & Talent
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Find trusted co-founders and key team members, or join an ambitious startup.
-                  </p>
-                </div>
-              </Link>
-
-              {/* Box 2: Funding & Investors (Stripe Sunset Coral Gradient) */}
-              <Link
-                href="/capital"
-                className="relative rounded-[22px] bg-gradient-to-br from-[#FF6B4A] via-[#F25A38] to-[#E24A29] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(242,90,56,0.38)] shadow-[0_8px_20px_-6px_rgba(242,90,56,0.25)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
-                    Angel Funding
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E24A29] shadow-xs group-hover:scale-105 transition-transform">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
-                  </div>
-                </div>
-                <div className="pt-2">
-                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug">
-                    Funding & Investors
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Connect directly with active angel investors and family offices.
-                  </p>
-                </div>
-              </Link>
-
-              {/* Box 3: Outsource Operations (Stripe Luminous Teal/Emerald Gradient) */}
-              <Link
-                href="/studio"
-                className="relative rounded-[22px] bg-gradient-to-br from-[#00A68C] via-[#008F79] to-[#0A6C5B] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(0,166,140,0.4)] shadow-[0_8px_20px_-6px_rgba(0,166,140,0.25)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
-                    Operations & Tech
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0A6C5B] shadow-xs group-hover:scale-105 transition-transform">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
-                  </div>
-                </div>
-                <div className="pt-2">
-                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug">
-                    Outsource Operations
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Let us run your day-to-day operations and tech so you can focus on growing your business.
-                  </p>
-                </div>
-              </Link>
-
-              {/* Box 4: Gigs & Sprints (Stripe Clean Pearl Surface) */}
-              <Link
-                href="/gigs"
-                className="relative rounded-[22px] bg-gradient-to-br from-[#FFFFFF] via-[#FBFDFF] to-[#F4F7FB] border border-[#E3E8EE] p-4.5 sm:p-5 flex flex-col justify-between text-[#0A2540] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(10,37,64,0.12)] shadow-[0_4px_12px_rgba(10,37,64,0.04)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#425466]">
-                    Short-Term Projects
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-[#0A2540] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
-                  </div>
-                </div>
-                <div className="pt-2">
-                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-[#0A2540] leading-snug">
-                    Gigs & Sprints
-                  </h3>
-                  <p className="text-[#425466] text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Get short-term 1–4 week projects completed by verified freelancers and specialists.
-                  </p>
-                </div>
-              </Link>
-            </div>
-
-            {/* Box 5: Playbook (Deep Obsidian Slate - Non-Bright Executive Foundation) */}
-            <Link
-              href="/knowledge"
-              className="relative rounded-[22px] bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.5)] shadow-[0_8px_24px_-6px_rgba(0,0,0,0.3)] group"
-            >
-              <div className="space-y-1 max-w-xl xl:max-w-2xl">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Knowledge Hub
-                  </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
-                  <span className="text-xs text-zinc-400">Founder Playbooks</span>
-                </div>
-                <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug">
-                  Playbooks & Business Opportunities
-                </h3>
-                <p className="text-zinc-300/90 text-xs sm:text-[13px] leading-relaxed font-normal">
-                  Daily market research, validated business ideas, and practical guides on cash flow, legal setups, and fundraising.
-                </p>
-              </div>
-              <div className="shrink-0 self-end sm:self-center">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#0F172A] transition-all">
-                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-              </div>
-            </Link>
+            <h1 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-[#0A2540] leading-[1.12] text-left">
+              One community. <br className="hidden sm:inline" />
+              Five growth pathways.
+            </h1>
+            <p className="text-[#425466] text-sm sm:text-base font-normal leading-relaxed max-w-2xl text-left">
+              Find co-founders, raise angel funding, outsource day-to-day operations, hire project experts, and access practical business playbooks.
+            </p>
           </div>
 
-          {/* Right Column: Video Showcase (5 cols on lg & xl) */}
-          <div className="lg:col-span-5 xl:col-span-5 min-w-0 flex justify-center lg:justify-end items-stretch pt-2 sm:pt-4 lg:pt-0">
+          {/* Item 2: Video Showcase (Order 2 on mobile directly below Heading, Col 8-12 Rows 1-2 on desktop) */}
+          <div className="col-span-1 lg:col-span-5 xl:col-span-5 min-w-0 order-2 lg:order-2 lg:row-start-1 lg:row-span-2 flex justify-center lg:justify-end items-stretch pt-1 sm:pt-2 lg:pt-0">
             <div className="relative w-full max-w-[460px] sm:max-w-[500px] lg:max-w-none flex flex-col justify-center">
-              {/* Soft Ambient Brand Glow Behind Video (Stripe Luminous Ambient Halo) */}
+              {/* Soft Ambient Brand Glow Behind Video */}
               <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/18 via-[#00A68C]/10 to-[#00D4B2]/18 rounded-[36px] blur-2xl opacity-75 -z-10" />
 
-              {/* Video Card Container - Generous Sizing to Fill Right Column with Fluid Mobile Scaling */}
-              <div className="relative w-full min-h-[280px] sm:min-h-[360px] md:min-h-[460px] lg:min-h-[560px] xl:min-h-[600px] max-h-[660px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
+              {/* Video Card Container with Fluid Mobile Proportions */}
+              <div className="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[400px] lg:h-full lg:min-h-[540px] xl:min-h-[580px] max-h-[660px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
                 <video
                   src="/videos/hero_video.mp4"
                   autoPlay
@@ -183,6 +61,131 @@ export function DesignTemplateHome() {
                 <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
               </div>
             </div>
+          </div>
+
+          {/* Item 3: Pathway Boxes (Order 3 on mobile below Video, Col 1-7 Row 2 on desktop) */}
+          <div className="col-span-1 lg:col-span-7 xl:col-span-7 min-w-0 order-3 lg:order-3 lg:row-start-2 space-y-3 sm:space-y-3.5 lg:space-y-4 flex flex-col justify-center">
+            {/* 2x2 Compact Boxes Grid (1008 Network Brand Colors) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 lg:gap-4">
+              {/* Box 1: Co-Founders & Talent (Stripe Iris / Blurple Gradient) */}
+              <Link
+                href="/network"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#635BFF] via-[#5B52F2] to-[#4F46E5] p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(99,91,255,0.4)] shadow-[0_8px_20px_-6px_rgba(99,91,255,0.25)] group min-h-[140px] sm:min-h-[148px] lg:min-h-[152px] text-left"
+              >
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white/85 text-left">
+                    Partners & Talent
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#635BFF] shadow-xs group-hover:scale-105 transition-transform shrink-0">
+                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  </div>
+                </div>
+                <div className="pt-2 text-left w-full">
+                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug text-left">
+                    Co-Founders & Talent
+                  </h3>
+                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal text-left">
+                    Find trusted co-founders and key team members, or join an ambitious startup.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Box 2: Funding & Investors (Stripe Sunset Coral Gradient) */}
+              <Link
+                href="/capital"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#FF6B4A] via-[#F25A38] to-[#E24A29] p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(242,90,56,0.38)] shadow-[0_8px_20px_-6px_rgba(242,90,56,0.25)] group min-h-[140px] sm:min-h-[148px] lg:min-h-[152px] text-left"
+              >
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white/85 text-left">
+                    Angel Funding
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E24A29] shadow-xs group-hover:scale-105 transition-transform shrink-0">
+                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  </div>
+                </div>
+                <div className="pt-2 text-left w-full">
+                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug text-left">
+                    Funding & Investors
+                  </h3>
+                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal text-left">
+                    Connect directly with active angel investors and family offices.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Box 3: Outsource Operations (Stripe Luminous Teal/Emerald Gradient) */}
+              <Link
+                href="/studio"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#00A68C] via-[#008F79] to-[#0A6C5B] p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(0,166,140,0.4)] shadow-[0_8px_20px_-6px_rgba(0,166,140,0.25)] group min-h-[140px] sm:min-h-[148px] lg:min-h-[152px] text-left"
+              >
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white/85 text-left">
+                    Operations & Tech
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0A6C5B] shadow-xs group-hover:scale-105 transition-transform shrink-0">
+                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  </div>
+                </div>
+                <div className="pt-2 text-left w-full">
+                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-white leading-snug text-left">
+                    Outsource Operations
+                  </h3>
+                  <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal text-left">
+                    Let us run your day-to-day operations and tech so you can focus on growing your business.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Box 4: Gigs & Sprints (Stripe Clean Pearl Surface) */}
+              <Link
+                href="/gigs"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#FFFFFF] via-[#FBFDFF] to-[#F4F7FB] border border-[#E3E8EE] p-5 flex flex-col justify-between text-[#0A2540] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(10,37,64,0.12)] shadow-[0_4px_12px_rgba(10,37,64,0.04)] group min-h-[140px] sm:min-h-[148px] lg:min-h-[152px] text-left"
+              >
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#425466] text-left">
+                    Short-Term Projects
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-[#0A2540] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform shrink-0">
+                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  </div>
+                </div>
+                <div className="pt-2 text-left w-full">
+                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-[#0A2540] leading-snug text-left">
+                    Gigs & Sprints
+                  </h3>
+                  <p className="text-[#425466] text-xs sm:text-[13px] pt-1 leading-snug font-normal text-left">
+                    Get short-term 1–4 week projects completed by verified freelancers and specialists.
+                  </p>
+                </div>
+              </Link>
+            </div>
+
+            {/* Box 5: Playbook (Deep Obsidian Slate - Non-Bright Executive Foundation) */}
+            <Link
+              href="/knowledge"
+              className="relative rounded-[22px] bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 p-5 flex items-center justify-between gap-4 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.5)] shadow-[0_8px_24px_-6px_rgba(0,0,0,0.3)] group text-left"
+            >
+              <div className="space-y-1 max-w-xl xl:max-w-2xl text-left">
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                    Knowledge Hub
+                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
+                  <span className="text-[11px] sm:text-xs text-zinc-400">Founder Playbooks</span>
+                </div>
+                <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug text-left">
+                  Playbooks & Business Opportunities
+                </h3>
+                <p className="text-zinc-300/90 text-xs sm:text-[13px] leading-relaxed font-normal text-left">
+                  Daily market research, validated business ideas, and practical guides on cash flow, legal setups, and fundraising.
+                </p>
+              </div>
+              <div className="shrink-0 self-center">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#0F172A] transition-all">
+                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
