@@ -11,82 +11,21 @@ export function DesignTemplateHome() {
   return (
     <div className="w-full font-sans antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (Clean White Background • Viewport Aligned) */}
+      {/* 1. COMMUNITY ECOSYSTEM BENTO GRID (The 5 Growth Pathways) */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-4.5rem)] lg:min-h-[660px] lg:max-h-[860px] flex items-center bg-white pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
-          {/* Left Column: Vision & Typography (6 cols on lg & xl) */}
-          <div className="lg:col-span-6 xl:col-span-6 min-w-0 space-y-5 sm:space-y-6">
-            {/* Pill Badge with Active Pulse */}
+      <section id="pathways" className="w-full bg-white text-[#0A2540] pt-24 pb-16 sm:pt-28 sm:pb-24 px-4 sm:px-6 lg:px-8 relative z-20">
+        <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
+          {/* Section Heading */}
+          <div className="space-y-3 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
               <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
-
-            {/* Bold Hero Headline - Balanced 2-Line Layout */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[44px] xl:text-[52px] font-bold tracking-tight text-[#0A2540] leading-[1.12]">
-              Helping your Business <br className="hidden sm:inline" />
-              get closer to your Goals.
-            </h1>
-
-            {/* Subtitle Description */}
-            <p className="text-[#425466] text-base sm:text-lg font-normal leading-relaxed max-w-lg lg:max-w-xl">
-              A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
-            </p>
-
-            {/* Action CTA Button (Single Modern Hero Action) */}
-            <div className="pt-2 flex items-center">
-              <a
-                href="#pathways"
-                className="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-[0_12px_28px_-6px_rgba(99,91,255,0.35)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer inline-flex items-center gap-2.5 group border border-[#0A2540] hover:border-[#635BFF]"
-              >
-                <span>Explore 5 Pathways</span>
-                <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column: Viewport-Aligned Video Showcase (6 cols on lg & xl - Longer & Wider) */}
-          <div className="lg:col-span-6 xl:col-span-6 min-w-0 flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[380px] sm:max-w-[460px] lg:max-w-[520px] xl:max-w-[560px]">
-              {/* Soft Ambient Brand Glow Behind Video */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#635BFF]/15 via-transparent to-[#00D4B2]/15 rounded-[40px] blur-2xl opacity-75 -z-10" />
-
-              {/* Video Card Container - Longer & Wider Frame */}
-              <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[580px] xl:h-[620px] rounded-[30px] sm:rounded-[36px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
-                <video
-                  src="/videos/hero_video.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="w-full h-full object-cover object-[55%_center]"
-                />
-                {/* Subtle top & bottom ambient vignettes */}
-                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
-                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 2. COMMUNITY ECOSYSTEM BENTO GRID (Graphics & Boxes) */}
-      {/* ============================================================ */}
-      <section id="pathways" className="w-full bg-white text-[#0A2540] pt-6 pb-16 sm:pt-8 sm:pb-24 px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
-          {/* Section Heading */}
-          <div className="space-y-3 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200">
-              <span>Community Ecosystem • Pathways & Operations</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#0A2540] leading-tight">
+            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-[#0A2540] leading-[1.08]">
               One community. <br />
               Five growth pathways.
-            </h2>
-            <p className="text-[#425466] text-base sm:text-lg font-normal leading-relaxed">
+            </h1>
+            <p className="text-[#425466] text-base sm:text-lg lg:text-xl font-normal leading-relaxed">
               Explore co-founders, capital discovery, turnkey operational outsourcing, project gigs, and tactical playbooks—backed by standardized legal rails and zero broker markups.
             </p>
           </div>
