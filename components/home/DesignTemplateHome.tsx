@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { ArrowRight, Plus, Users, ShieldCheck } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 
 export function DesignTemplateHome() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -11,21 +11,14 @@ export function DesignTemplateHome() {
   return (
     <div className="w-full font-sans antialiased selection:bg-[#635BFF]/15 selection:text-[#0A2540]">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (Modern Digital Canvas • Rich Atmosphere) */}
+      {/* 1. HERO SECTION (Clean White Background • Viewport Aligned) */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-[calc(100vh-4.5rem)] lg:min-h-[calc(100vh-4.5rem)] lg:max-h-[860px] flex items-center bg-white pt-20 pb-16 sm:pt-24 sm:pb-20 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
-        {/* Modern Canvas Atmosphere: Technical Dot-Matrix Texture */}
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_45%,#000_60%,transparent_100%)] pointer-events-none opacity-75" />
-
-        {/* Ambient Multi-Layer Lighting Blooms */}
-        <div className="absolute -top-24 right-1/4 w-[480px] h-[480px] bg-gradient-to-br from-[#635BFF]/8 via-[#635BFF]/3 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-        <div className="absolute -bottom-24 left-10 w-[420px] h-[420px] bg-gradient-to-tr from-[#00D4B2]/8 via-[#00D4B2]/3 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center relative z-10">
-          {/* Left Column: Vision, Typography & Proof Points (7 cols on lg & xl) */}
+      <section className="relative w-full min-h-[calc(100vh-4.5rem)] lg:min-h-[calc(100vh-4.5rem)] lg:max-h-[820px] flex items-center bg-white pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
+          {/* Left Column: Vision & Typography (7 cols on lg & xl) */}
           <div className="lg:col-span-7 min-w-0 space-y-5 sm:space-y-6">
             {/* Pill Badge with Active Pulse */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100/90 text-zinc-700 text-xs font-semibold border border-zinc-200/90 shadow-2xs backdrop-blur-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
               <span>1008 Network • The Entrepreneur & Business Community</span>
             </div>
@@ -41,8 +34,8 @@ export function DesignTemplateHome() {
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
 
-            {/* Action CTA Row with Micro-Trust Note */}
-            <div className="pt-1 flex flex-wrap items-center gap-4">
+            {/* Action CTA Button (Single Modern Hero Action) */}
+            <div className="pt-2 flex items-center">
               <a
                 href="#pathways"
                 className="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#0A2540] hover:bg-[#635BFF] text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-[0_12px_28px_-6px_rgba(99,91,255,0.35)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer inline-flex items-center gap-2.5 group border border-[#0A2540] hover:border-[#635BFF]"
@@ -50,60 +43,17 @@ export function DesignTemplateHome() {
                 <span>Explore 5 Pathways</span>
                 <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <span className="text-xs text-[#425466] font-medium hidden sm:inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2]" />
-                <span>Direct introductions • Zero markups</span>
-              </span>
-            </div>
-
-            {/* Executive Proof Points Strip (Anchors left column & eliminates empty space) */}
-            <div className="pt-5 sm:pt-6 border-t border-zinc-200/80 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
-              <div>
-                <div className="text-xl sm:text-2xl font-bold tracking-tight text-[#0A2540]">
-                  500+
-                </div>
-                <p className="text-[11px] sm:text-xs text-[#425466] font-medium mt-0.5 leading-snug">
-                  Vetted Operators & Founders
-                </p>
-              </div>
-              <div className="border-l border-zinc-200/80 pl-3 sm:pl-6">
-                <div className="text-xl sm:text-2xl font-bold tracking-tight text-[#0A2540]">
-                  ₹0
-                </div>
-                <p className="text-[11px] sm:text-xs text-[#425466] font-medium mt-0.5 leading-snug">
-                  Brokerage / Middleman Fees
-                </p>
-              </div>
-              <div className="border-l border-zinc-200/80 pl-3 sm:pl-6">
-                <div className="text-xl sm:text-2xl font-bold tracking-tight text-[#0A2540]">
-                  100%
-                </div>
-                <p className="text-[11px] sm:text-xs text-[#425466] font-medium mt-0.5 leading-snug">
-                  Founder IP & Data Ownership
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Right Column: Viewport-Aligned Video Showcase with Floating Context Badges */}
-          <div className="lg:col-span-5 min-w-0 flex justify-center lg:justify-end items-center py-6 sm:py-8 lg:py-4">
+          {/* Right Column: Viewport-Aligned Video Showcase (5 cols on lg & xl) */}
+          <div className="lg:col-span-5 min-w-0 flex justify-center lg:justify-end items-center">
             <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] xl:max-w-[440px]">
               {/* Soft Ambient Brand Glow Behind Video */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#635BFF]/15 via-[#635BFF]/5 to-[#00D4B2]/15 rounded-[36px] blur-2xl opacity-80 -z-10" />
+              <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/12 via-transparent to-[#00D4B2]/12 rounded-[36px] blur-xl opacity-70 -z-10" />
 
-              {/* Floating Badge 1 (Top Left Overlap) */}
-              <div className="absolute -top-4 -left-3 sm:-left-6 z-20 flex items-center gap-2.5 sm:gap-3 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-2xl bg-white/95 backdrop-blur-md border border-zinc-200/90 shadow-[0_12px_28px_-8px_rgba(10,37,64,0.14)]">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[#635BFF]/10 text-[#635BFF] flex items-center justify-center shrink-0">
-                  <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-[#0A2540] leading-tight">Co-Founder Matches</p>
-                  <p className="text-[10px] sm:text-[11px] text-[#425466] leading-tight mt-0.5">Active in Delhi NCR, BLR & Mumbai</p>
-                </div>
-              </div>
-
-              {/* Main Video Card Container */}
-              <div className="relative w-full h-[420px] sm:h-[460px] lg:h-[480px] xl:h-[500px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
+              {/* Video Card Container - Harmonized Height with Text Column */}
+              <div className="relative w-full h-[420px] sm:h-[460px] lg:h-[480px] xl:h-[500px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.16)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
                 <video
                   src="/videos/hero_video.mp4"
                   autoPlay
@@ -114,19 +64,8 @@ export function DesignTemplateHome() {
                   className="w-full h-full object-cover object-[55%_center]"
                 />
                 {/* Subtle top & bottom ambient vignettes */}
-                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/25 to-transparent pointer-events-none" />
-                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-              </div>
-
-              {/* Floating Badge 2 (Bottom Right Overlap) */}
-              <div className="absolute -bottom-4 -right-3 sm:-right-5 z-20 flex items-center gap-2.5 sm:gap-3 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-2xl bg-white/95 backdrop-blur-md border border-zinc-200/90 shadow-[0_12px_28px_-8px_rgba(10,37,64,0.14)]">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[#00D4B2]/15 text-[#00A88D] flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-[#0A2540] leading-tight">Turnkey Execution</p>
-                  <p className="text-[10px] sm:text-[11px] text-[#425466] leading-tight mt-0.5">Zero markups • Legal & vendor rails</p>
-                </div>
+                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
