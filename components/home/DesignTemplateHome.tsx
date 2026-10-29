@@ -31,7 +31,7 @@ export function DesignTemplateHome() {
                 Five growth pathways.
               </h1>
               <p className="text-[#425466] text-sm sm:text-base font-normal leading-relaxed max-w-2xl">
-                Explore co-founders, capital discovery, turnkey operational outsourcing, project gigs, and tactical playbooks—backed by standardized legal rails and zero broker markups.
+                Find co-founders, raise angel funding, outsource day-to-day operations, hire project experts, and access practical business playbooks—with zero middlemen.
               </p>
             </div>
 
@@ -44,7 +44,7 @@ export function DesignTemplateHome() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
-                    Co-Founders & Talent
+                    Partners & Talent
                   </span>
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#635BFF] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
@@ -55,7 +55,7 @@ export function DesignTemplateHome() {
                     Co-Founders & Talent
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Have the business vision. Find talent, co-founders, or join a business.
+                    Find trusted co-founders and key team members, or join an ambitious startup.
                   </p>
                 </div>
               </Link>
@@ -67,7 +67,7 @@ export function DesignTemplateHome() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
-                    Capital Discovery
+                    Angel Funding
                   </span>
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E24A29] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
@@ -78,7 +78,7 @@ export function DesignTemplateHome() {
                     Funding & Investors
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Connect evaluated startups directly with active angels & family offices.
+                    Connect directly with active angel investors and family offices—no brokers.
                   </p>
                 </div>
               </Link>
@@ -90,7 +90,7 @@ export function DesignTemplateHome() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
-                    Turnkey Execution
+                    Operations & Tech
                   </span>
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0A6C5B] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
@@ -101,7 +101,7 @@ export function DesignTemplateHome() {
                     Outsource Operations
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Let 1008 Network handle end-to-end operations while you focus on your idea and expanding business.
+                    Let us run your day-to-day operations and tech so you can focus on growing your business.
                   </p>
                 </div>
               </Link>
@@ -113,7 +113,7 @@ export function DesignTemplateHome() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#425466]">
-                    Project Sprints
+                    Short-Term Projects
                   </span>
                   <div className="w-8 h-8 rounded-full bg-[#0A2540] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
@@ -124,7 +124,7 @@ export function DesignTemplateHome() {
                     Gigs & Sprints
                   </h3>
                   <p className="text-[#425466] text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Acute project sprints for operating businesses. Delivered by verified specialists.
+                    Get short-term 1–4 week projects completed by verified freelancers and specialists.
                   </p>
                 </div>
               </Link>
@@ -141,13 +141,13 @@ export function DesignTemplateHome() {
                     Knowledge Hub
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
-                  <span className="text-xs text-zinc-400">Founder Playbook</span>
+                  <span className="text-xs text-zinc-400">Founder Playbooks</span>
                 </div>
                 <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug">
-                  Practical Playbooks & Business Opportunities
+                  Playbooks & Business Opportunities
                 </h3>
                 <p className="text-zinc-300/90 text-xs sm:text-[13px] leading-relaxed font-normal">
-                  Research-backed industrial and market investigations published daily, alongside practical field manuals on cash-flow architecture, credit rails, and venture governance.
+                  Daily market research, validated business ideas, and practical guides on cash flow, legal setups, and fundraising.
                 </p>
               </div>
               <div className="shrink-0 self-end sm:self-center">
