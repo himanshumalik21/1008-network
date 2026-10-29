@@ -135,7 +135,7 @@ export function DesignTemplateHome() {
               href="/knowledge"
               className="relative rounded-[22px] bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.5)] shadow-[0_8px_24px_-6px_rgba(0,0,0,0.3)] group"
             >
-              <div className="space-y-1 max-w-xl">
+              <div className="space-y-1 max-w-xl xl:max-w-2xl">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
                     Knowledge Hub
@@ -144,10 +144,10 @@ export function DesignTemplateHome() {
                   <span className="text-xs text-zinc-400">Founder Playbook</span>
                 </div>
                 <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug">
-                  Playbook & Tactical Frameworks
+                  Practical Playbooks & Business Opportunities
                 </h3>
-                <p className="text-zinc-300/90 text-xs sm:text-sm leading-relaxed font-normal">
-                  Standardized founder templates, milestone vesting agreements, cap tables, and regulatory blueprints for Indian ventures.
+                <p className="text-zinc-300/90 text-xs sm:text-[13px] leading-relaxed font-normal">
+                  Research-backed industrial and market investigations published daily, alongside practical field manuals on cash-flow architecture, credit rails, and venture governance.
                 </p>
               </div>
               <div className="shrink-0 self-end sm:self-center">
