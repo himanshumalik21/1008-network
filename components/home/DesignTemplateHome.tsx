@@ -101,7 +101,7 @@ export function DesignTemplateHome() {
                     Outsource Operations
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    1008 as turnkey execution partner—cloud architecture, private ERPs, and factory audits.
+                    Let 1008 Network handle end-to-end operations while you focus on your idea and expanding business.
                   </p>
                 </div>
               </Link>
