@@ -31,7 +31,7 @@ export function DesignTemplateHome() {
                 Five growth pathways.
               </h1>
               <p className="text-[#425466] text-sm sm:text-base font-normal leading-relaxed max-w-2xl">
-                Find co-founders, raise angel funding, outsource day-to-day operations, hire project experts, and access practical business playbooks—with zero middlemen.
+                Find co-founders, raise angel funding, outsource day-to-day operations, hire project experts, and access practical business playbooks.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export function DesignTemplateHome() {
                     Funding & Investors
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Connect directly with active angel investors and family offices—no brokers.
+                    Connect directly with active angel investors and family offices.
                   </p>
                 </div>
               </Link>
