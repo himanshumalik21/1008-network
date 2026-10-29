@@ -55,7 +55,7 @@ export function DesignTemplateHome() {
                     Co-Founders & Talent
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Find vetted Technical CTOs, GTM heads, or join an ambitious startup for milestone equity.
+                    We connect the right co-founders and talent needed for your business—entirely on your terms.
                   </p>
                 </div>
               </Link>
