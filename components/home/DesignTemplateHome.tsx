@@ -37,16 +37,16 @@ export function DesignTemplateHome() {
 
             {/* 2x2 Compact Boxes Grid (1008 Network Brand Colors) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 lg:gap-4.5">
-              {/* Box 1: Co-Founders & Talent (Canva Palette #02 "Stone" - Deep Subdued Slate Blue) */}
+              {/* Box 1: Co-Founders & Talent (Stripe Iris / Blurple Gradient) */}
               <Link
                 href="/network"
-                className="relative rounded-[22px] bg-[#336B87] hover:bg-[#2A5971] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#635BFF] via-[#5B52F2] to-[#4F46E5] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(99,91,255,0.4)] shadow-[0_8px_20px_-6px_rgba(99,91,255,0.25)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
                     Co-Founders & Talent
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#336B87] shadow-xs">
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#635BFF] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
                   </div>
                 </div>
@@ -60,16 +60,16 @@ export function DesignTemplateHome() {
                 </div>
               </Link>
 
-              {/* Box 2: Funding & Investors (Canva Palette #02 "Autumn Foliage" - Warm Subdued Terracotta Clay) */}
+              {/* Box 2: Funding & Investors (Stripe Sunset Coral Gradient) */}
               <Link
                 href="/capital"
-                className="relative rounded-[22px] bg-[#7D4F43] hover:bg-[#6C4339] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#FF6B4A] via-[#F25A38] to-[#E24A29] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(242,90,56,0.38)] shadow-[0_8px_20px_-6px_rgba(242,90,56,0.25)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
                     Capital Discovery
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#7D4F43] shadow-xs">
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E24A29] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
                   </div>
                 </div>
@@ -83,16 +83,16 @@ export function DesignTemplateHome() {
                 </div>
               </Link>
 
-              {/* Box 3: Outsource Operations (Canva Palette #02 "Shadow" - Deep Executive Charcoal Slate) */}
+              {/* Box 3: Outsource Operations (Stripe Deep Slate Navy Gradient) */}
               <Link
                 href="/studio"
-                className="relative rounded-[22px] bg-[#2A3132] hover:bg-[#202526] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#0A2540] via-[#102F54] to-[#183B68] p-4.5 sm:p-5 flex flex-col justify-between text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(10,37,64,0.45)] shadow-[0_8px_20px_-6px_rgba(10,37,64,0.3)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/85">
                     Turnkey Execution
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-[#8DA4A6] flex items-center justify-center text-[#2A3132] shadow-xs">
+                  <div className="w-8 h-8 rounded-full bg-[#00D4B2] flex items-center justify-center text-[#0A2540] shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
                   </div>
                 </div>
@@ -106,42 +106,42 @@ export function DesignTemplateHome() {
                 </div>
               </Link>
 
-              {/* Box 4: Gigs & Sprints (Canva Palette #02 "Mist" - Soft Frosted Slate Neutral) */}
+              {/* Box 4: Gigs & Sprints (Stripe Clean Pearl Surface) */}
               <Link
                 href="/gigs"
-                className="relative rounded-[22px] bg-[#F0F4F7] hover:bg-[#E3ECF1] border border-[#CCD8E2] p-4.5 sm:p-5 flex flex-col justify-between text-[#2A3132] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
+                className="relative rounded-[22px] bg-gradient-to-br from-[#FFFFFF] via-[#FBFDFF] to-[#F4F7FB] border border-[#E3E8EE] p-4.5 sm:p-5 flex flex-col justify-between text-[#0A2540] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(10,37,64,0.12)] shadow-[0_4px_12px_rgba(10,37,64,0.04)] group min-h-[136px] sm:min-h-[148px] lg:min-h-[152px]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#5A6E72]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#425466]">
                     Project Sprints
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-[#2A3132] flex items-center justify-center text-white shadow-xs">
+                  <div className="w-8 h-8 rounded-full bg-[#0A2540] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
                     <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
                   </div>
                 </div>
                 <div className="pt-2">
-                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-[#2A3132] leading-snug">
+                  <h3 className="text-base sm:text-lg lg:text-[19px] font-bold text-[#0A2540] leading-snug">
                     Gigs & Sprints
                   </h3>
-                  <p className="text-[#5A6E72] text-xs sm:text-[13px] pt-1 leading-snug font-normal">
+                  <p className="text-[#425466] text-xs sm:text-[13px] pt-1 leading-snug font-normal">
                     Post urgent project requirements or pick up milestone-gated 2–4 week deliverables.
                   </p>
                 </div>
               </Link>
             </div>
 
-            {/* Box 5: Playbook (Canva #02 Subdued Charcoal-to-Steel Gradient) */}
+            {/* Box 5: Playbook (Stripe Signature Midnight-to-Iris Aurora Gradient) */}
             <Link
               href="/knowledge"
-              className="relative rounded-[22px] bg-gradient-to-r from-[#20262A] via-[#2A353B] to-[#334D5C] hover:from-[#1A1F22] hover:to-[#2B424F] p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl group"
+              className="relative rounded-[22px] bg-gradient-to-r from-[#0A2540] via-[#1B2746] to-[#5851EA] p-4.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(10,37,64,0.35)] shadow-[0_8px_24px_-6px_rgba(10,37,64,0.22)] group"
             >
               <div className="space-y-1 max-w-xl">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-semibold uppercase tracking-wider text-white/80">
                     Knowledge Hub
                   </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#8DA4A6]" />
-                  <span className="text-xs text-[#C4D5D7]">Founder Playbook</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
+                  <span className="text-xs text-white/70">Founder Playbook</span>
                 </div>
                 <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug">
                   Playbook & Tactical Frameworks
@@ -151,7 +151,7 @@ export function DesignTemplateHome() {
                 </p>
               </div>
               <div className="shrink-0 self-end sm:self-center">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white/90 flex items-center justify-center group-hover:bg-white group-hover:text-[#20262A] transition-colors">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white/90 flex items-center justify-center group-hover:bg-white group-hover:text-[#0A2540] transition-colors">
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
@@ -161,8 +161,8 @@ export function DesignTemplateHome() {
           {/* Right Column: Video Showcase (5 cols on lg & xl) */}
           <div className="lg:col-span-5 xl:col-span-5 min-w-0 flex justify-center lg:justify-end items-stretch pt-2 sm:pt-4 lg:pt-0">
             <div className="relative w-full max-w-[460px] sm:max-w-[500px] lg:max-w-none flex flex-col justify-center">
-              {/* Soft Ambient Brand Glow Behind Video (Subdued Palette) */}
-              <div className="absolute -inset-3 bg-gradient-to-tr from-[#336B87]/15 via-transparent to-[#8DA4A6]/15 rounded-[36px] blur-2xl opacity-70 -z-10" />
+              {/* Soft Ambient Brand Glow Behind Video (Stripe Luminous Ambient Halo) */}
+              <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/18 via-[#0A2540]/5 to-[#00D4B2]/18 rounded-[36px] blur-2xl opacity-75 -z-10" />
 
               {/* Video Card Container - Generous Sizing to Fill Right Column */}
               <div className="relative w-full min-h-[460px] sm:min-h-[520px] lg:min-h-[560px] xl:min-h-[600px] max-h-[660px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
