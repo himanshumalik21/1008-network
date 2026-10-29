@@ -13,10 +13,10 @@ export function DesignTemplateHome() {
       {/* ============================================================ */}
       {/* 1. HERO SECTION (Clean White Background • Viewport Aligned) */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-[calc(100vh-4.5rem)] lg:min-h-[calc(100vh-4.5rem)] lg:max-h-[820px] flex items-center bg-white pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
-          {/* Left Column: Vision & Typography (7 cols on lg & xl) */}
-          <div className="lg:col-span-7 min-w-0 space-y-5 sm:space-y-6">
+      <section className="relative w-full min-h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-4.5rem)] lg:min-h-[660px] lg:max-h-[860px] flex items-center bg-white pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-0 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+          {/* Left Column: Vision & Typography (6 cols on lg & xl) */}
+          <div className="lg:col-span-6 xl:col-span-6 min-w-0 space-y-5 sm:space-y-6">
             {/* Pill Badge with Active Pulse */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-semibold border border-zinc-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#00D4B2] animate-pulse" />
@@ -24,13 +24,13 @@ export function DesignTemplateHome() {
             </div>
 
             {/* Bold Hero Headline - Balanced 2-Line Layout */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[46px] xl:text-[54px] font-bold tracking-tight text-[#0A2540] leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl lg:text-[44px] xl:text-[52px] font-bold tracking-tight text-[#0A2540] leading-[1.12]">
               Helping your Business <br className="hidden sm:inline" />
               get closer to your Goals.
             </h1>
 
             {/* Subtitle Description */}
-            <p className="text-[#425466] text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
+            <p className="text-[#425466] text-base sm:text-lg font-normal leading-relaxed max-w-lg lg:max-w-xl">
               A collaborative community where you can find co-founders & talent, access funding, outsource operational bottlenecks to 1008 as an execution partner, or post and find project gigs.
             </p>
 
@@ -46,14 +46,14 @@ export function DesignTemplateHome() {
             </div>
           </div>
 
-          {/* Right Column: Viewport-Aligned Video Showcase (5 cols on lg & xl) */}
-          <div className="lg:col-span-5 min-w-0 flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] xl:max-w-[440px]">
+          {/* Right Column: Viewport-Aligned Video Showcase (6 cols on lg & xl - Longer & Wider) */}
+          <div className="lg:col-span-6 xl:col-span-6 min-w-0 flex justify-center lg:justify-end items-center">
+            <div className="relative w-full max-w-[380px] sm:max-w-[460px] lg:max-w-[520px] xl:max-w-[560px]">
               {/* Soft Ambient Brand Glow Behind Video */}
-              <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/12 via-transparent to-[#00D4B2]/12 rounded-[36px] blur-xl opacity-70 -z-10" />
+              <div className="absolute -inset-4 bg-gradient-to-tr from-[#635BFF]/15 via-transparent to-[#00D4B2]/15 rounded-[40px] blur-2xl opacity-75 -z-10" />
 
-              {/* Video Card Container - Harmonized Height with Text Column */}
-              <div className="relative w-full h-[420px] sm:h-[460px] lg:h-[480px] xl:h-[500px] rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.16)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
+              {/* Video Card Container - Longer & Wider Frame */}
+              <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[580px] xl:h-[620px] rounded-[30px] sm:rounded-[36px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(10,37,64,0.18)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
                 <video
                   src="/videos/hero_video.mp4"
                   autoPlay
