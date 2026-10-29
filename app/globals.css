@@ -249,6 +249,123 @@ p {
   scrollbar-width: none;
 }
 
+/* 1008 Brand Logo: Two Zeros Morph to Infinity Loop Animation */
+@keyframes zeroLeftGlide {
+  0%, 22% {
+    transform: translateX(0);
+    opacity: 1;
+    stroke: currentColor;
+  }
+  36% {
+    transform: translateX(13px);
+    opacity: 0.95;
+    stroke: #635BFF;
+  }
+  44% {
+    transform: translateX(16px);
+    opacity: 0;
+    stroke: #635BFF;
+  }
+  70% {
+    transform: translateX(16px);
+    opacity: 0;
+    stroke: #635BFF;
+  }
+  78% {
+    transform: translateX(13px);
+    opacity: 0.95;
+    stroke: #635BFF;
+  }
+  90%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+    stroke: currentColor;
+  }
+}
+
+@keyframes zeroRightGlide {
+  0%, 22% {
+    transform: translateX(0);
+    opacity: 1;
+    stroke: currentColor;
+  }
+  36% {
+    transform: translateX(-13px);
+    opacity: 0.95;
+    stroke: #00D4B2;
+  }
+  44% {
+    transform: translateX(-16px);
+    opacity: 0;
+    stroke: #00D4B2;
+  }
+  70% {
+    transform: translateX(-16px);
+    opacity: 0;
+    stroke: #00D4B2;
+  }
+  78% {
+    transform: translateX(-13px);
+    opacity: 0.95;
+    stroke: #00D4B2;
+  }
+  90%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+    stroke: currentColor;
+  }
+}
+
+@keyframes infinityPulseMorph {
+  0%, 34% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: drop-shadow(0 0 0 rgba(99,91,255,0));
+  }
+  44% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(99,91,255,0.4));
+  }
+  56% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 7px rgba(0,212,178,0.55));
+  }
+  68% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(99,91,255,0.4));
+  }
+  76% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: drop-shadow(0 0 0 rgba(99,91,255,0));
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+.animate-zero-left {
+  animation: zeroLeftGlide 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform-origin: 26px 33px;
+  will-change: transform, opacity, stroke;
+}
+
+.animate-zero-right {
+  animation: zeroRightGlide 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform-origin: 74px 33px;
+  will-change: transform, opacity, stroke;
+}
+
+.animate-infinity-bloom {
+  animation: infinityPulseMorph 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform-origin: 50px 33px;
+  will-change: transform, opacity, filter;
+}
+
 /* Reduced motion accessibility standard across all browsers */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
@@ -258,4 +375,5 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
 
