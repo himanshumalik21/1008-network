@@ -78,7 +78,7 @@ export function DesignTemplateHome() {
                     Funding & Investors
                   </h3>
                   <p className="text-white/90 text-xs sm:text-[13px] pt-1 leading-snug font-normal">
-                    Connect evaluated startups directly with active angels & family offices with 0% broker cuts.
+                    Connect evaluated startups directly with active angels & family offices.
                   </p>
                 </div>
               </Link>
