@@ -80,9 +80,6 @@ export default function NetworkPage() {
             <Badge variant="indigo" size="md" pulse>
               1008 Community • Co-Founders & Talent
             </Badge>
-            <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-3 py-1 rounded-full border border-[#B2F5EA]">
-              Algorithmic Talent Matching
-            </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-tight">
@@ -113,24 +110,6 @@ export default function NetworkPage() {
               <UserCheck className="h-4 w-4 text-[#00A389]" />
               <span>Join Talent Pool (For Individuals)</span>
             </button>
-          </div>
-
-          {/* Quick Value Trust Bar */}
-          <div className="pt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono text-[#627D98]">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-              <span>Matching Engine: <strong>Algorithmic Screening</strong></span>
-            </div>
-            <span className="hidden sm:inline">•</span>
-            <div className="flex items-center gap-1.5">
-              <Send className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>Direct Candidate Profiles to Your Inbox</span>
-            </div>
-            <span className="hidden sm:inline">•</span>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-[#059669]" />
-              <span>Direct Agreement on Personal Terms</span>
-            </div>
           </div>
         </div>
       </section>
