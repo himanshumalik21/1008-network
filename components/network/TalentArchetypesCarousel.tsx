@@ -189,47 +189,61 @@ export function TalentArchetypesCarousel() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
-      {/* Section Header */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
-        <div className="text-center sm:text-left space-y-2 max-w-2xl">
-          <Badge variant="indigo" size="sm">
-            Curated Talent Pool
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
-            Verified Co-Founders & Operating Leads
-          </h2>
-          <p className="text-xs sm:text-sm text-[#425466]">
-            Senior builders, engineers, and commercial leaders actively vetted in the 1008 private talent pool, ready to partner with high-conviction ventures.
-          </p>
-        </div>
+    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Ambient Radiant Glow (Iris & Mint) */}
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[650px] h-96 bg-gradient-to-r from-[#635BFF]/08 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none" />
 
-        {/* Carousel Navigation Controls */}
-        <div className="flex items-center gap-2 shrink-0">
-          <button
-            onClick={() => setIsPaused((prev) => !prev)}
-            className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#627D98] hover:text-[#0A2540] hover:border-[#94A3B8] flex items-center justify-center transition-all shadow-2xs"
-            title={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
-            aria-label={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
-          >
-            {isPaused ? <Play className="h-3.5 w-3.5 ml-0.5" /> : <Pause className="h-3.5 w-3.5" />}
-          </button>
-          <button
-            onClick={handlePrev}
-            className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <button
-            onClick={handleNext}
-            className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs"
-            aria-label="Next Slide"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
-        </div>
+      {/* Decorative 3D Wireframe Arc in Bottom-Left Corner */}
+      <div className="absolute -bottom-16 -left-16 w-72 h-72 pointer-events-none opacity-20">
+        <svg viewBox="0 0 200 200" className="w-full h-full text-[#635BFF]" stroke="currentColor" fill="none">
+          <circle cx="100" cy="100" r="85" strokeWidth="1.6" />
+          <ellipse cx="100" cy="100" rx="65" ry="85" strokeWidth="1.2" />
+          <ellipse cx="100" cy="100" rx="40" ry="85" strokeWidth="1.2" />
+          <ellipse cx="100" cy="100" rx="85" ry="40" strokeWidth="1.2" />
+        </svg>
       </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
+          <div className="text-center sm:text-left space-y-2 max-w-2xl">
+            <Badge variant="indigo" size="sm">
+              Curated Executive Talent
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
+              Verified Co-Founders & Operating Leads
+            </h2>
+            <p className="text-xs sm:text-sm text-[#425466]">
+              Senior builders, engineers, and commercial leaders actively vetted in the 1008 private talent pool, ready to partner with high-conviction business ventures.
+            </p>
+          </div>
+
+          {/* Carousel Navigation Controls */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setIsPaused((prev) => !prev)}
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#627D98] hover:text-[#0A2540] hover:border-[#94A3B8] flex items-center justify-center transition-all shadow-2xs"
+              title={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
+              aria-label={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
+            >
+              {isPaused ? <Play className="h-3.5 w-3.5 ml-0.5" /> : <Pause className="h-3.5 w-3.5" />}
+            </button>
+            <button
+              onClick={handlePrev}
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs"
+              aria-label="Previous Slide"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs"
+              aria-label="Next Slide"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
 
       {/* The Carousel Track */}
       <div
@@ -339,6 +353,7 @@ export function TalentArchetypesCarousel() {
             aria-label={`Go to candidate slide ${idx + 1}`}
           />
         ))}
+      </div>
       </div>
     </section>
   );

@@ -207,47 +207,72 @@ export function BusinessRequirementsCarousel() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
-      {/* Section Header */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
-        <div className="text-center sm:text-left space-y-2 max-w-2xl">
-          <Badge variant="cyan" size="sm">
-            Active Venture Mandates
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
-            What Business Owners Are Building
-          </h2>
-          <p className="text-xs sm:text-sm text-[#425466]">
-            Active requirements submitted by founders and business owners across India looking to match with co-founders, functional leads, and operating partners.
-          </p>
-        </div>
+    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Ambient Radiant Glow (Teal & Iris) */}
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[650px] h-96 bg-gradient-to-r from-[#00D4B2]/08 via-[#635BFF]/06 to-transparent blur-[140px] pointer-events-none" />
 
-        {/* Carousel Navigation Controls */}
-        <div className="flex items-center gap-2 shrink-0">
-          <button
-            onClick={() => setIsPaused((prev) => !prev)}
-            className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#627D98] hover:text-[#0A2540] hover:border-[#94A3B8] flex items-center justify-center transition-all shadow-2xs"
-            title={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
-            aria-label={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
-          >
-            {isPaused ? <Play className="h-3.5 w-3.5 ml-0.5" /> : <Pause className="h-3.5 w-3.5" />}
-          </button>
-          <button
-            onClick={handlePrev}
-            className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#00D4B2] flex items-center justify-center transition-all shadow-2xs"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <button
-            onClick={handleNext}
-            className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#00D4B2] flex items-center justify-center transition-all shadow-2xs"
-            aria-label="Next Slide"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
-        </div>
+      {/* Decorative Halftone Accent in Top Corner */}
+      <div
+        className="absolute -top-12 -right-12 w-64 h-64 pointer-events-none opacity-20"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 200 200" className="w-full h-full text-[#00A389]">
+          <defs>
+            <pattern id="br-tr" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+              <circle cx="6" cy="6" r="2.6" fill="currentColor" />
+            </pattern>
+            <mask id="blob-mask-br">
+              <path
+                d="M130,20 C170,30 190,70 185,120 C180,170 140,195 90,185 C40,175 10,135 25,85 C40,35 90,10 130,20 Z"
+                fill="white"
+              />
+            </mask>
+          </defs>
+          <rect width="200" height="200" fill="url(#br-tr)" mask="url(#blob-mask-br)" />
+        </svg>
       </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
+          <div className="text-center sm:text-left space-y-2 max-w-2xl">
+            <Badge variant="cyan" size="sm">
+              Active Business Mandates
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
+              What Business Owners Are Building
+            </h2>
+            <p className="text-xs sm:text-sm text-[#425466]">
+              Active commercial requirements submitted by business owners and founders across India seeking co-founders, executive leads, and strategic operating partners.
+            </p>
+          </div>
+
+          {/* Carousel Navigation Controls */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setIsPaused((prev) => !prev)}
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#627D98] hover:text-[#0A2540] hover:border-[#94A3B8] flex items-center justify-center transition-all shadow-2xs"
+              title={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
+              aria-label={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
+            >
+              {isPaused ? <Play className="h-3.5 w-3.5 ml-0.5" /> : <Pause className="h-3.5 w-3.5" />}
+            </button>
+            <button
+              onClick={handlePrev}
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#00D4B2] flex items-center justify-center transition-all shadow-2xs"
+              aria-label="Previous Slide"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#00D4B2] flex items-center justify-center transition-all shadow-2xs"
+              aria-label="Next Slide"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
 
       {/* The Carousel Track */}
       <div
@@ -358,6 +383,7 @@ export function BusinessRequirementsCarousel() {
             aria-label={`Go to requirement slide ${idx + 1}`}
           />
         ))}
+      </div>
       </div>
     </section>
   );

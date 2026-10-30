@@ -158,7 +158,7 @@ export function HowWeWorkSection({
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white border-b border-[#E6E8EB]">
+    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
       {/* Background Micro-Dot Pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-50"
