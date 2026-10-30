@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
@@ -47,6 +48,34 @@ export default function NetworkPage() {
         {/* Ambient Brand Atmospheric Halos */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#635BFF]/08 blur-[130px] pointer-events-none" />
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#00D4B2]/08 blur-[130px] pointer-events-none" />
+
+        {/* Left Side Graphic: Co-Founder & Network Connections */}
+        <div
+          className="absolute -left-20 sm:-left-14 lg:-left-8 xl:left-2 2xl:left-12 top-1/2 -translate-y-1/2 w-64 sm:w-72 lg:w-80 xl:w-[360px] pointer-events-none select-none z-0 opacity-20 sm:opacity-30 lg:opacity-45 xl:opacity-60 transition-opacity"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/network/network-brand.png"
+            alt=""
+            width={400}
+            height={400}
+            className="w-full h-auto drop-shadow-[0_20px_40px_rgba(99,91,255,0.12)]"
+          />
+        </div>
+
+        {/* Right Side Graphic: Leadership & Venture Growth */}
+        <div
+          className="absolute -right-20 sm:-right-14 lg:-right-8 xl:right-2 2xl:right-12 top-1/2 -translate-y-1/2 w-56 sm:w-64 lg:w-72 xl:w-[320px] pointer-events-none select-none z-0 opacity-20 sm:opacity-30 lg:opacity-45 xl:opacity-60 transition-opacity"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/network/growth-brand.png"
+            alt=""
+            width={340}
+            height={450}
+            className="w-full h-auto drop-shadow-[0_20px_40px_rgba(0,212,178,0.12)]"
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -163,6 +192,34 @@ export default function NetworkPage() {
       {/* ============================================================ */}
       <div className="relative overflow-hidden py-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-80 bg-gradient-to-r from-[#635BFF]/06 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none" />
+
+        {/* Left Side Graphic: Operator Growth */}
+        <div
+          className="absolute -left-20 sm:-left-14 lg:-left-6 xl:left-4 2xl:left-16 top-1/2 -translate-y-1/2 w-56 sm:w-64 lg:w-72 xl:w-[320px] pointer-events-none select-none z-0 opacity-20 sm:opacity-30 lg:opacity-45 xl:opacity-55 transition-opacity"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/network/growth-brand.png"
+            alt=""
+            width={340}
+            height={450}
+            className="w-full h-auto drop-shadow-[0_20px_40px_rgba(99,91,255,0.12)]"
+          />
+        </div>
+
+        {/* Right Side Graphic: Verified Trust Shield */}
+        <div
+          className="absolute -right-20 sm:-right-14 lg:-right-6 xl:right-4 2xl:right-16 top-1/2 -translate-y-1/2 w-64 sm:w-72 lg:w-80 xl:w-[350px] pointer-events-none select-none z-0 opacity-20 sm:opacity-30 lg:opacity-45 xl:opacity-55 transition-opacity"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/network/trust-brand.png"
+            alt=""
+            width={400}
+            height={440}
+            className="w-full h-auto drop-shadow-[0_20px_40px_rgba(0,163,137,0.12)]"
+          />
+        </div>
         <PillarFAQ
           items={networkFaqs}
           badge="Co-Founders & Talent"
