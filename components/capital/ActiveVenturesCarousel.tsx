@@ -92,7 +92,7 @@ export function ActiveVenturesCarousel() {
       location: "Delhi NCR",
       target: "₹85 Lakh Seed",
       stage: "24 Buses Live • 4 Private School Contracts",
-      unitEcon: "₹4.8L MRR • Hardware + SaaS Subscription",
+      unitEcon: "₹4.8L MRR • SaaS Subscription",
       useOfFunds: "Manufacture 400 AIS-140 GPS-RFID telematics units and deploy parent live-tracking mobile stack.",
       icon: Truck,
       iconColor: "text-[#FF7043]",
@@ -106,7 +106,7 @@ export function ActiveVenturesCarousel() {
       location: "Bengaluru / Mumbai",
       target: "₹1.50 Cr Growth Capital",
       stage: "₹22L/mo Revenue • Zepto/Blinkit Live",
-      unitEcon: "62% Gross Margin • Positive Unit Econ",
+      unitEcon: "62% Margin • Positive Unit Econ",
       useOfFunds: "Inventory production for 120 quick-commerce dark stores across Top 6 metros and trade marketing.",
       icon: Activity,
       iconColor: "text-[#E11D48]",
@@ -120,7 +120,7 @@ export function ActiveVenturesCarousel() {
       location: "Ludhiana, Punjab",
       target: "₹2.00 Cr Capex Expansion",
       stage: "5 Acres Secured • ₹4 Cr Promoters Equity",
-      unitEcon: "100% Off-take Contract with Thermal Power",
+      unitEcon: "100% Off-take • Thermal Power",
       useOfFunds: "Procure 5 TPH industrial rotary drum dryer and high-pressure pelletizer for paddy stubble briquetting.",
       icon: Building2,
       iconColor: "text-[#2563EB]",
@@ -243,14 +243,14 @@ export function ActiveVenturesCarousel() {
                     <div className="p-5 sm:p-5.5 rounded-2xl bg-white border border-[#CBD5E1]/80 space-y-3.5 shadow-xs hover:shadow-md hover:border-[#00D4B2] transition-all h-full flex flex-col justify-between">
                       {/* Top Area: Sector, Source & Title */}
                       <div className="space-y-3">
-                        <div className="flex items-center justify-between gap-1">
+                        <div className="flex items-center justify-between gap-1 h-6">
                           <span
-                            className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor}`}
+                            className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor} truncate`}
                           >
                             {item.sector}
                           </span>
                           <span
-                            className={`text-[9.5px] font-mono px-2 py-0.5 rounded-full border ${item.sourceBadge}`}
+                            className={`text-[9.5px] font-mono px-2 py-0.5 rounded-full border ${item.sourceBadge} shrink-0`}
                           >
                             {item.source}
                           </span>
@@ -260,44 +260,44 @@ export function ActiveVenturesCarousel() {
                           <div className="w-8 h-8 rounded-lg bg-[#F8FAFC] border border-[#E6E8EB] flex items-center justify-center shrink-0 mt-0.5">
                             <IconComponent className={`h-4 w-4 ${item.iconColor}`} />
                           </div>
-                          <div>
-                            <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2">
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2 h-10 sm:h-11 flex items-center">
                               {item.title}
                             </h3>
-                            <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-1 font-mono">
-                              <MapPin className="h-3 w-3 text-[#94A3B8]" />
-                              <span>{item.location}</span>
-                              <span>•</span>
-                              <span className="text-[#059669] font-semibold">{item.stage}</span>
+                            <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-1 font-mono h-5">
+                              <MapPin className="h-3 w-3 text-[#94A3B8] shrink-0" />
+                              <span className="truncate">{item.location}</span>
+                              <span className="shrink-0">•</span>
+                              <span className="text-[#059669] font-semibold truncate">{item.stage}</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Middle Area: Target Capital & Unit Economics */}
-                      <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-2 text-xs">
-                        <div className="flex items-center justify-between">
-                          <span className="text-[#627D98] font-mono text-[11px]">Target Raise:</span>
-                          <span className="font-bold text-[#0A2540] text-xs font-mono">{item.target}</span>
+                      {/* Middle Area: Target Capital & Unit Economics (Locked uniform height) */}
+                      <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-2 text-xs h-[76px] flex flex-col justify-center">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[#627D98] font-mono text-[11px] shrink-0">Target Raise:</span>
+                          <span className="font-bold text-[#0A2540] text-xs font-mono truncate text-right">{item.target}</span>
                         </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-[#627D98] font-mono text-[11px]">Unit Metrics:</span>
-                          <span className="font-semibold text-[#00A389] text-[11.5px] font-mono">{item.unitEcon}</span>
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[#627D98] font-mono text-[11px] shrink-0">Unit Metrics:</span>
+                          <span className="font-semibold text-[#00A389] text-[11.5px] font-mono truncate text-right">{item.unitEcon}</span>
                         </div>
                       </div>
 
-                      {/* Use of Funds Summary */}
-                      <div className="space-y-1.5 text-xs text-[#425466] flex-1">
+                      {/* Use of Funds Summary (Locked uniform min-height) */}
+                      <div className="space-y-1.5 text-xs text-[#425466] flex-1 flex flex-col justify-start">
                         <div className="text-[11px] font-mono font-bold text-[#635BFF] uppercase tracking-wider">
                           Use of Funds:
                         </div>
-                        <p className="text-xs text-[#475569] leading-relaxed line-clamp-3">
+                        <p className="text-xs text-[#475569] leading-relaxed line-clamp-3 min-h-[50px] sm:min-h-[54px]">
                           {item.useOfFunds}
                         </p>
                       </div>
 
-                      {/* Bottom Action Button */}
-                      <div className="pt-3 border-t border-[#F1F4F8]">
+                      {/* Bottom Action Button (Locked to bottom) */}
+                      <div className="pt-3 border-t border-[#F1F4F8] mt-auto">
                         <Link
                           href="/capital/join"
                           className="w-full py-2 px-3 rounded-xl bg-[#00A389]/10 hover:bg-[#00A389] text-[#007A66] hover:text-white font-semibold text-xs transition-all flex items-center justify-center gap-1.5 text-center group"

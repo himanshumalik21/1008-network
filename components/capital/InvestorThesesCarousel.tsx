@@ -225,13 +225,13 @@ export function InvestorThesesCarousel() {
                     <div className="p-5 sm:p-5.5 rounded-2xl bg-white border border-[#CBD5E1]/80 space-y-3.5 shadow-xs hover:shadow-md hover:border-[#635BFF] transition-all h-full flex flex-col justify-between">
                       {/* Top Area: Tag, Icon & Candidate Info */}
                       <div className="space-y-3">
-                        <div className="flex items-center justify-between gap-1">
+                        <div className="flex items-center justify-between gap-1 h-6">
                           <span
-                            className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor}`}
+                            className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor} truncate`}
                           >
                             {item.sector}
                           </span>
-                          <span className="text-[10px] font-mono font-bold text-[#635BFF] bg-[#F0F0FF] border border-[#E0E0FF] px-2 py-0.5 rounded-full">
+                          <span className="text-[10px] font-mono font-bold text-[#635BFF] bg-[#F0F0FF] border border-[#E0E0FF] px-2 py-0.5 rounded-full shrink-0">
                             {item.ticket}
                           </span>
                         </div>
@@ -240,41 +240,41 @@ export function InvestorThesesCarousel() {
                           <div className="w-8 h-8 rounded-lg bg-[#F8FAFC] border border-[#E6E8EB] flex items-center justify-center shrink-0 mt-0.5">
                             <IconComponent className={`h-4 w-4 ${item.iconColor}`} />
                           </div>
-                          <div>
-                            <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-1">
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-1 h-6 sm:h-7 flex items-center">
                               {item.handle}
                             </h3>
-                            <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-0.5 font-mono">
-                              <MapPin className="h-3 w-3 text-[#94A3B8]" />
-                              <span>{item.experience}</span>
+                            <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-0.5 font-mono h-5">
+                              <MapPin className="h-3 w-3 text-[#94A3B8] shrink-0" />
+                              <span className="truncate">{item.experience}</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Middle Area: Value-Add Moat */}
-                      <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs">
-                        <div className="text-[10.5px] font-mono font-bold text-[#0A2540] uppercase tracking-wider flex items-center gap-1">
-                          <CheckCircle2 className="h-3 w-3 text-[#10B981]" />
+                      {/* Middle Area: Value-Add Moat (Locked uniform height) */}
+                      <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs h-[76px] flex flex-col justify-start">
+                        <div className="text-[10.5px] font-mono font-bold text-[#0A2540] uppercase tracking-wider flex items-center gap-1 shrink-0">
+                          <CheckCircle2 className="h-3 w-3 text-[#10B981] shrink-0" />
                           <span>Strategic Value-Add:</span>
                         </div>
-                        <p className="text-xs text-[#475569] leading-relaxed">
+                        <p className="text-xs text-[#475569] leading-relaxed line-clamp-2">
                           {item.moat}
                         </p>
                       </div>
 
-                      {/* Thesis Quote */}
-                      <div className="space-y-1 text-xs text-[#425466] flex-1">
+                      {/* Thesis Quote (Locked uniform min-height) */}
+                      <div className="space-y-1 text-xs text-[#425466] flex-1 flex flex-col justify-start">
                         <div className="text-[11px] font-mono font-bold text-[#635BFF] uppercase tracking-wider">
                           Investment Thesis:
                         </div>
-                        <p className="text-xs text-[#475569] italic leading-relaxed line-clamp-3">
+                        <p className="text-xs text-[#475569] italic leading-relaxed line-clamp-3 min-h-[50px] sm:min-h-[54px]">
                           {item.pitch}
                         </p>
                       </div>
 
-                      {/* Bottom Action Button */}
-                      <div className="pt-3 border-t border-[#F1F4F8]">
+                      {/* Bottom Action Button (Locked to bottom) */}
+                      <div className="pt-3 border-t border-[#F1F4F8] mt-auto">
                         <Link
                           href="/capital/post"
                           className="w-full py-2 px-3 rounded-xl bg-[#635BFF]/10 hover:bg-[#635BFF] text-[#5851EA] hover:text-white font-semibold text-xs transition-all flex items-center justify-center gap-1.5 text-center group"
