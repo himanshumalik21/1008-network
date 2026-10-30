@@ -153,7 +153,7 @@ export function HowWeWorkSection({
         </svg>
       ),
       description:
-        "The business representative connects directly with the candidate to evaluate mutual chemistry and agree on personal terms with zero broker fees.",
+        "The business representative connects directly with the candidate to evaluate mutual chemistry and agree on personal terms.",
     },
   ];
 
