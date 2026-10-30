@@ -226,24 +226,18 @@ export default function NetworkPage() {
       {/* ============================================================ */}
       {/* 6. TRUST & MATCHING FACILITATOR NOTICE */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="rounded-3xl bg-gradient-to-br from-[#F0FDFB]/70 via-white to-[#F7F8FF]/70 border border-[#CBD5E1] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs relative overflow-hidden">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="rounded-3xl bg-gradient-to-br from-[#F0FDFB]/70 via-white to-[#F7F8FF]/70 border border-[#CBD5E1] p-6 sm:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs relative overflow-hidden">
           {/* Ambient radiance */}
           <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-[#00D4B2]/08 blur-3xl pointer-events-none" />
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 relative z-10">
-            {/* Dedicated Trust Graphic: 100% Visible & Brand Harmonized */}
-            <div className="w-24 sm:w-28 shrink-0 flex items-center justify-center p-2 rounded-2xl bg-white border border-[#E2E8F0] shadow-2xs">
-              <Image
-                src="/images/network/trust-brand.png"
-                alt="Verified Trust & Protection"
-                width={120}
-                height={130}
-                className="w-full h-auto object-contain drop-shadow-xs"
-              />
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 relative z-10">
+            {/* Big Trust Shield Icon */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#F0FDFB] via-[#E6FFFA] to-[#F7F8FF] text-[#00A389] flex items-center justify-center border-2 border-[#B2F5EA] shadow-[0_4px_16px_rgba(0,163,137,0.12)]">
+              <ShieldCheck className="h-9 w-9 sm:h-11 sm:w-11 text-[#00A389]" strokeWidth={2.2} />
             </div>
 
-            <div className="space-y-2 text-center sm:text-left">
+            <div className="space-y-1.5 text-center sm:text-left">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] border border-[#FDE68A] text-xs font-semibold">
                 <ShieldCheck className="h-3.5 w-3.5 text-[#D97706]" />
                 <span>Matching Facilitator Notice</span>
@@ -251,7 +245,7 @@ export default function NetworkPage() {
               <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
                 Direct Founder-to-Operator Governance & Transparency
               </h3>
-              <p className="text-xs sm:text-sm text-[#425466] leading-relaxed max-w-3xl">
+              <p className="text-xs sm:text-sm text-[#425466] leading-relaxed max-w-2xl">
                 1008 Network operates as an algorithmic matching and discovery facilitator connecting verified business owners with senior technical and operational leaders. All equity splits, vesting schedules, and personal contracts are negotiated and executed directly between the parties.
               </p>
             </div>
