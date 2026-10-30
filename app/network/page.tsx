@@ -59,151 +59,143 @@ export default function NetworkPage() {
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#635BFF]/08 blur-[130px] pointer-events-none" />
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#00D4B2]/08 blur-[130px] pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto relative z-10 space-y-6">
+        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
           
           {/* Portal 1: For Business Owners / Founders */}
-          <div className="rounded-3xl bg-white border border-[#E6E8EB] relative overflow-hidden shadow-sm hover:border-[#635BFF]/50 hover:shadow-md transition-all group">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-6 sm:p-7 lg:p-8">
-              
-              {/* Left Column: Text & Content */}
-              <div className="lg:col-span-7 space-y-4 sm:space-y-5 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-[#F0F0FF] text-[#635BFF] flex items-center justify-center border border-[#E0E0FF] shrink-0">
-                      <Briefcase className="h-4 w-4" />
-                    </div>
-                    <Badge variant="indigo" size="sm">For Business Owners</Badge>
+          <div className="rounded-3xl bg-white border border-[#E6E8EB] relative overflow-hidden shadow-sm hover:border-[#635BFF]/50 hover:shadow-md transition-all group p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full">
+            <div className="space-y-4 sm:space-y-5 flex-1 flex flex-col">
+              {/* Header: Icon & Badge */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#F0F0FF] text-[#635BFF] flex items-center justify-center border border-[#E0E0FF] shrink-0">
+                    <Briefcase className="h-4 w-4" />
                   </div>
-
-                  <div className="space-y-1.5">
-                    <h2 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
-                      Post Your Business Requirement
-                    </h2>
-                    <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed max-w-xl">
-                      Building an operating venture or scaling an enterprise? Share the specific leadership or technical role you need to fill, and let our matching engine introduce verified talent from our network.
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 pt-1 text-xs sm:text-[12.5px] text-[#425466]">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF] shrink-0" />
-                      <span>Specify role mandates: Technical Co-Founder (CTO), Head of Operations, Commercial Lead, or Fractional CXO</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF] shrink-0" />
-                      <span>1008 algorithm matches against verified operator profiles with proven domain depth</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF] shrink-0" />
-                      <span>Receive curated candidate profiles directly to review without recruiter spam or public job boards</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF] shrink-0" />
-                      <span>Connect directly with candidates to evaluate mutual chemistry and negotiate personal terms</span>
-                    </div>
-                  </div>
+                  <Badge variant="indigo" size="sm">For Business Owners</Badge>
                 </div>
 
-                <div className="pt-1">
-                  <Link
-                    href="/network/post"
-                    className="inline-flex w-full sm:w-auto py-2.5 sm:py-3 px-6 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs sm:text-sm shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98] items-center justify-center gap-2 cursor-pointer text-center"
-                  >
-                    <span>Post Business Requirement</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
+                <div className="space-y-1.5">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
+                    Post Your Business Requirement
+                  </h2>
+                  <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
+                    Building an operating venture or scaling an enterprise? Share the specific leadership or technical role you need to fill, and let our matching engine introduce verified talent from our network.
+                  </p>
                 </div>
               </div>
 
-              {/* Right Column: Graphic Showcase */}
-              <div className="lg:col-span-5 flex items-center justify-center">
-                <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[300px] aspect-square rounded-2xl bg-gradient-to-br from-[#F7F8FF] via-[#FAFAFF] to-[#F0FDFB] border border-[#E6E8EB] flex items-center justify-center p-5 sm:p-6 overflow-hidden group-hover:border-[#635BFF]/30 transition-all">
-                  <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:16px_16px] opacity-40 pointer-events-none" />
-                  <div className="absolute w-40 h-40 bg-[#635BFF]/10 blur-xl rounded-full pointer-events-none" />
-                  <Image
-                    src="/images/network/network-brand.png"
-                    alt="Post Your Business Requirement"
-                    width={260}
-                    height={260}
-                    className="relative z-10 w-auto h-full max-h-48 sm:max-h-52 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
-                    priority
-                  />
-                </div>
+              {/* Graphic Showcase Frame */}
+              <div className="relative w-full h-44 sm:h-48 rounded-2xl bg-gradient-to-br from-[#F7F8FF] via-[#FAFAFF] to-[#F0FDFB] border border-[#E6E8EB] flex items-center justify-center p-4 my-1 overflow-hidden group-hover:border-[#635BFF]/30 transition-all">
+                <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:16px_16px] opacity-40 pointer-events-none" />
+                <div className="absolute w-36 h-36 bg-[#635BFF]/10 blur-xl rounded-full pointer-events-none" />
+                <Image
+                  src="/images/network/network-brand.png"
+                  alt="Post Your Business Requirement"
+                  width={240}
+                  height={240}
+                  className="relative z-10 w-auto h-full max-h-36 sm:max-h-40 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
               </div>
 
+              {/* Verified Checklist */}
+              <div className="space-y-2.5 pt-1 text-xs sm:text-[12.5px] text-[#425466] flex-1">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>Specify role mandates: Technical Co-Founder (CTO), Head of Operations, Commercial Lead, or Fractional CXO</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>1008 algorithm matches against verified operator profiles with proven domain depth</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>Receive curated candidate profiles directly to review without recruiter spam or public job boards</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>Connect directly with candidates to evaluate mutual chemistry and negotiate personal terms</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Action CTA Button */}
+            <div className="pt-6 mt-auto">
+              <Link
+                href="/network/post"
+                className="w-full py-3 px-6 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs sm:text-sm shadow-xs transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer text-center"
+              >
+                <span>Post Business Requirement</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
 
           {/* Portal 2: For Operators & Co-Founders */}
-          <div className="rounded-3xl bg-white border border-[#E6E8EB] relative overflow-hidden shadow-sm hover:border-[#00A389]/50 hover:shadow-md transition-all group">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-6 sm:p-7 lg:p-8">
-              
-              {/* Left Column: Text & Content */}
-              <div className="lg:col-span-7 space-y-4 sm:space-y-5 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-[#E6FFFA] text-[#00A389] flex items-center justify-center border border-[#B2F5EA] shrink-0">
-                      <Users className="h-4 w-4" />
-                    </div>
-                    <Badge variant="cyan" size="sm">For Operators & Co-Founders</Badge>
+          <div className="rounded-3xl bg-white border border-[#E6E8EB] relative overflow-hidden shadow-sm hover:border-[#00A389]/50 hover:shadow-md transition-all group p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full">
+            <div className="space-y-4 sm:space-y-5 flex-1 flex flex-col">
+              {/* Header: Icon & Badge */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#E6FFFA] text-[#00A389] flex items-center justify-center border border-[#B2F5EA] shrink-0">
+                    <Users className="h-4 w-4" />
                   </div>
-
-                  <div className="space-y-1.5">
-                    <h2 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
-                      Join the 1008 Talent Pool
-                    </h2>
-                    <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed max-w-xl">
-                      Are you a senior engineering leader, proven operator, or commercial director? Join our private talent pool to be introduced directly to business owners building high-conviction ventures.
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 pt-1 text-xs sm:text-[12.5px] text-[#425466]">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0" />
-                      <span>Submit your verified pedigree, execution track record, and operational domain expertise</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0" />
-                      <span>Algorithmic matchmaking when business owners post mandates aligned with your background</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0" />
-                      <span>Your profile is presented directly to business owners and decision-makers for consideration</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0" />
-                      <span>Direct introductions with founders to structure equity, milestone vesting, or leadership terms</span>
-                    </div>
-                  </div>
+                  <Badge variant="cyan" size="sm">For Operators & Co-Founders</Badge>
                 </div>
 
-                <div className="pt-1">
-                  <Link
-                    href="/network/join"
-                    className="inline-flex w-full sm:w-auto py-2.5 sm:py-3 px-6 rounded-full bg-[#00A389] hover:bg-[#008F79] text-white font-semibold text-xs sm:text-sm shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98] items-center justify-center gap-2 cursor-pointer text-center"
-                  >
-                    <span>Join the Talent Pool</span>
-                    <UserCheck className="h-3.5 w-3.5" />
-                  </Link>
+                <div className="space-y-1.5">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
+                    Join the 1008 Talent Pool
+                  </h2>
+                  <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
+                    Are you a senior engineering leader, proven operator, or commercial director? Join our private talent pool to be introduced directly to business owners building high-conviction ventures.
+                  </p>
                 </div>
               </div>
 
-              {/* Right Column: Graphic Showcase */}
-              <div className="lg:col-span-5 flex items-center justify-center">
-                <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[300px] aspect-square rounded-2xl bg-gradient-to-br from-[#F0FDFB] via-[#F5FCFB] to-[#F7F8FF] border border-[#E6E8EB] flex items-center justify-center p-5 sm:p-6 overflow-hidden group-hover:border-[#00A389]/30 transition-all">
-                  <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:16px_16px] opacity-40 pointer-events-none" />
-                  <div className="absolute w-40 h-40 bg-[#00D4B2]/12 blur-xl rounded-full pointer-events-none" />
-                  <Image
-                    src="/images/network/growth-brand.png"
-                    alt="Join the 1008 Talent Pool"
-                    width={260}
-                    height={260}
-                    className="relative z-10 w-auto h-full max-h-48 sm:max-h-52 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
-                    priority
-                  />
-                </div>
+              {/* Graphic Showcase Frame */}
+              <div className="relative w-full h-44 sm:h-48 rounded-2xl bg-gradient-to-br from-[#F0FDFB] via-[#F5FCFB] to-[#F7F8FF] border border-[#E6E8EB] flex items-center justify-center p-4 my-1 overflow-hidden group-hover:border-[#00A389]/30 transition-all">
+                <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:16px_16px] opacity-40 pointer-events-none" />
+                <div className="absolute w-36 h-36 bg-[#00D4B2]/12 blur-xl rounded-full pointer-events-none" />
+                <Image
+                  src="/images/network/growth-brand.png"
+                  alt="Join the 1008 Talent Pool"
+                  width={240}
+                  height={240}
+                  className="relative z-10 w-auto h-full max-h-36 sm:max-h-40 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
               </div>
 
+              {/* Verified Checklist */}
+              <div className="space-y-2.5 pt-1 text-xs sm:text-[12.5px] text-[#425466] flex-1">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Submit your verified pedigree, execution track record, and operational domain expertise</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Algorithmic matchmaking when business owners post mandates aligned with your background</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Your profile is presented directly to business owners and decision-makers for consideration</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Direct introductions with founders to structure equity, milestone vesting, or leadership terms</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Action CTA Button */}
+            <div className="pt-6 mt-auto">
+              <Link
+                href="/network/join"
+                className="w-full py-3 px-6 rounded-full bg-[#00A389] hover:bg-[#008F79] text-white font-semibold text-xs sm:text-sm shadow-xs transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer text-center"
+              >
+                <span>Join the Talent Pool</span>
+                <UserCheck className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
         </div>
