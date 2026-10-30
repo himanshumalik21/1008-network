@@ -66,57 +66,9 @@ export default function NetworkPage() {
   ];
 
   return (
-    <div className="pt-24 sm:pt-28 pb-20 bg-[#FDFDFE] min-h-screen font-sans">
-      
+    <div className="pt-16 sm:pt-20 pb-20 bg-[#FDFDFE] min-h-screen font-sans">
       {/* ============================================================ */}
-      {/* 1. HERO HEADER */}
-      {/* ============================================================ */}
-      <section className="relative py-14 sm:py-20 overflow-hidden border-b border-[#E6E8EB] bg-[#F6F9FC]">
-        {/* Ambient Grid Lines & Soft Radiant Glow */}
-        <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-50 pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-80 bg-gradient-to-r from-[#635BFF]/12 via-[#00D4B2]/08 to-[#4F46E5]/06 blur-[120px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 flex-wrap justify-center">
-            <Badge variant="indigo" size="md" pulse>
-              1008 Community • Co-Founders & Talent
-            </Badge>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-tight">
-            Have the business vision.{" "}
-            <br className="hidden sm:inline" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              Find talent, co-founders, or join a business.
-            </span>
-          </h1>
-
-          <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            A business owner can reach out to 1008 Network to post what they are building and what role they need to fill. Individuals can join our curated talent pool. Our algorithm matches requirements and introduces the parties directly.
-          </p>
-
-          {/* Primary Action Buttons (Open Modals or Direct Forms) */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <button
-              onClick={() => setPostModalOpen(true)}
-              className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-[0_4px_14px_rgba(99,91,255,0.28)] transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <PlusCircle className="h-4 w-4" />
-              <span>Post a Requirement (For Business Owners)</span>
-            </button>
-            <button
-              onClick={() => setJoinModalOpen(true)}
-              className="w-full sm:w-auto px-6 py-3 rounded-full bg-white hover:bg-[#F6F9FC] text-[#0A2540] border border-[#CBD5E1] font-semibold text-sm shadow-xs transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <UserCheck className="h-4 w-4 text-[#00A389]" />
-              <span>Join Talent Pool (For Individuals)</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 2. HOW IT WORKS / HOW WE WORK (Modern Lively Section) */}
+      {/* 1. HERO & 2x2 TALENT MATCHING MATRIX (1008 Brand Colors) */}
       {/* ============================================================ */}
       <HowWeWorkSection
         onOpenPostModal={() => setPostModalOpen(true)}
