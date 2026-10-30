@@ -2,15 +2,7 @@
 
 import React from "react";
 import { Badge } from "@/components/brand/Badge";
-import { Button } from "@/components/ui/Button";
 import { CapitalTopographicWave } from "./CapitalTopographicWave";
-import {
-  Rocket,
-  TrendingUp,
-  Target,
-  ShieldCheck,
-  ArrowRight,
-} from "lucide-react";
 
 export function HowCapitalWorksSection() {
   const steps = [
@@ -197,59 +189,6 @@ export function HowCapitalWorksSection() {
         <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
           Whether your business needs growth funding or you are an angel investor looking for vetted high-conviction businesses — the 1008 community connects capital directly.
         </p>
-
-        {/* Ecosystem Flow Formula */}
-        <div className="pt-2 pb-1 inline-flex items-center gap-2 text-xs font-mono text-[#64748B] bg-white/95 px-4 py-2 rounded-full border border-[#E2E8F0] shadow-xs">
-          <span className="text-[#635BFF] font-semibold">Idea</span>
-          <span>→</span>
-          <span className="text-[#00A389] font-semibold">People</span>
-          <span>→</span>
-          <span className="text-[#059669] font-semibold">Capital</span>
-          <span>→</span>
-          <span className="text-[#D94814] font-semibold">Execution</span>
-          <span>→</span>
-          <span className="text-[#0A2540] font-bold">Business</span>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Button
-            href="#for-founders"
-            size="md"
-            variant="primary"
-            rightIcon={<Rocket className="h-4 w-4" />}
-            className="w-full sm:w-auto font-semibold px-6 shadow-sm"
-          >
-            For Founders (Submit Venture)
-          </Button>
-          <Button
-            href="#for-investors"
-            size="md"
-            variant="secondary"
-            rightIcon={<TrendingUp className="h-4 w-4 text-[#00A389]" />}
-            className="w-full sm:w-auto font-semibold"
-          >
-            For Investors (Join Network)
-          </Button>
-        </div>
-
-        {/* Quick Highlights Ribbon */}
-        <div className="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-mono text-[#627D98]">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-            <span>Curated Introductions</span>
-          </div>
-          <span>•</span>
-          <div className="flex items-center gap-1.5">
-            <Target className="h-3.5 w-3.5 text-[#635BFF]" />
-            <span>Transparent Use of Funds</span>
-          </div>
-          <span>•</span>
-          <div className="flex items-center gap-1.5">
-            <ShieldCheck className="h-3.5 w-3.5 text-[#059669]" />
-            <span>Independent Due Diligence</span>
-          </div>
-        </div>
       </div>
 
       {/* ============================================================ */}
