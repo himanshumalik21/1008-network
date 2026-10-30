@@ -193,15 +193,7 @@ export function TalentArchetypesCarousel() {
       {/* Ambient Radiant Glow (Iris & Mint) */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[650px] h-96 bg-gradient-to-r from-[#635BFF]/08 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none" />
 
-      {/* Decorative 3D Wireframe Arc in Bottom-Left Corner */}
-      <div className="absolute -bottom-16 -left-16 w-72 h-72 pointer-events-none opacity-20">
-        <svg viewBox="0 0 200 200" className="w-full h-full text-[#635BFF]" stroke="currentColor" fill="none">
-          <circle cx="100" cy="100" r="85" strokeWidth="1.6" />
-          <ellipse cx="100" cy="100" rx="65" ry="85" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="40" ry="85" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="85" ry="40" strokeWidth="1.2" />
-        </svg>
-      </div>
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}

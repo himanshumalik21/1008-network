@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Badge } from "@/components/brand/Badge";
+import { SpinningGlobe } from "./SpinningGlobe";
 
 interface HowWeWorkSectionProps {
   onOpenPostModal?: () => void;
@@ -214,17 +215,9 @@ export function HowWeWorkSection({
         </svg>
       </div>
 
-      {/* Bottom-Right 3D Isometric Wireframe Sphere */}
-      <div className="absolute -bottom-24 -right-20 w-80 sm:w-96 h-80 sm:h-96 pointer-events-none opacity-30">
-        <svg viewBox="0 0 200 200" className="w-full h-full text-[#0A2540]" stroke="currentColor" fill="none">
-          <circle cx="100" cy="100" r="85" strokeWidth="1.8" />
-          <ellipse cx="100" cy="100" rx="65" ry="85" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="40" ry="85" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="18" ry="85" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="85" ry="65" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="85" ry="40" strokeWidth="1.2" />
-          <ellipse cx="100" cy="100" rx="85" ry="18" strokeWidth="1.2" />
-        </svg>
+      {/* Bottom-Right Complete 3D Wireframe Spinning Globe */}
+      <div className="absolute bottom-0 right-0 sm:bottom-2 sm:right-2 lg:bottom-4 lg:right-6 pointer-events-none opacity-45 sm:opacity-60 z-0">
+        <SpinningGlobe size={360} />
       </div>
 
       {/* ============================================================ */}
