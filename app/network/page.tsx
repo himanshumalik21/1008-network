@@ -8,6 +8,7 @@ import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { networkFaqs } from "@/data/faqs";
 import { PostRequirementModal } from "@/components/network/PostRequirementModal";
 import { JoinTalentPoolModal } from "@/components/network/JoinTalentPoolModal";
+import { HowWeWorkSection } from "@/components/network/HowWeWorkSection";
 import {
   Users,
   Clock,
@@ -115,113 +116,12 @@ export default function NetworkPage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 2. HOW IT WORKS (4-Step Algorithmic Pipeline) */}
+      {/* 2. HOW IT WORKS / HOW WE WORK (Modern Lively Section) */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <Badge variant="cyan" size="sm">How It Works</Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
-            From Requirement to Direct Partnership
-          </h2>
-          <p className="text-sm sm:text-base text-[#425466]">
-            You send the requirement, our algorithm scans the talent pool, and we send matching profiles directly to you to agree on personal terms.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {/* Step 1 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#635BFF]/50 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#F0F0FF] text-[#635BFF] font-mono font-bold text-sm flex items-center justify-center border border-[#E0E0FF]">
-                  01
-                </span>
-                <span className="text-[10px] font-mono font-semibold text-[#635BFF] bg-[#F0F0FF] px-2.5 py-0.5 rounded-full border border-[#E0E0FF]">
-                  Step 1
-                </span>
-              </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
-                Send Your Requirement
-              </h3>
-              <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
-                A business owner reaches out to 1008 Network to share what they are building, the venture vision, and the specific role they are looking to fill (Co-founder, CTO, Head of Operations, GTM Lead, etc.).
-              </p>
-            </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Briefcase className="h-3.5 w-3.5 text-[#635BFF]" /> Detail your venture & role
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#00A389]/50 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#E6FFFA] text-[#00A389] font-mono font-bold text-sm flex items-center justify-center border border-[#B2F5EA]">
-                  02
-                </span>
-                <span className="text-[10px] font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
-                  Step 2
-                </span>
-              </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
-                1008 Algorithm Scans Talent Pool
-              </h3>
-              <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
-                The 1008 matching algorithm actively scans through our verified talent pool, evaluating candidate profiles for domain track record, technical depth, relevant execution experience, and location preferences.
-              </p>
-            </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Search className="h-3.5 w-3.5 text-[#00A389]" /> Smart algorithmic filter
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#FF7043]/50 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#FFF3EE] text-[#FF7043] font-mono font-bold text-sm flex items-center justify-center border border-[#FFE2D6]">
-                  03
-                </span>
-                <span className="text-[10px] font-mono font-semibold text-[#FF7043] bg-[#FFF3EE] px-2.5 py-0.5 rounded-full border border-[#FFE2D6]">
-                  Step 3
-                </span>
-              </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
-                Profile Sent for Consideration
-              </h3>
-              <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
-                If any candidate matches the profile, 1008 sends their verified background and track record directly to the business owner to review and consider.
-              </p>
-            </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Send className="h-3.5 w-3.5 text-[#FF7043]" /> Directly to your inbox
-            </div>
-          </div>
-
-          {/* Step 4 */}
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs relative flex flex-col justify-between space-y-4 hover:border-[#0A2540]/50 transition-all">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="w-9 h-9 rounded-xl bg-[#F8FAFC] text-[#0A2540] font-mono font-bold text-sm flex items-center justify-center border border-[#CBD5E1]">
-                  04
-                </span>
-                <span className="text-[10px] font-mono font-semibold text-[#425466] bg-[#F1F5F9] px-2.5 py-0.5 rounded-full border border-[#E2E8F0]">
-                  Step 4
-                </span>
-              </div>
-              <h3 className="text-base font-bold text-[#0A2540]">
-                Connect Directly & Agree on Terms
-              </h3>
-              <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
-                The business representative can connect directly with the candidate to evaluate chemistry and agree on personal terms (equity, compensation, milestone vesting) with complete mutual freedom.
-              </p>
-            </div>
-            <div className="text-[11px] font-mono text-[#627D98] pt-3 border-t border-[#F1F4F8] flex items-center gap-1.5">
-              <Handshake className="h-3.5 w-3.5 text-[#0A2540]" /> 100% direct terms
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowWeWorkSection
+        onOpenPostModal={() => setPostModalOpen(true)}
+        onOpenJoinModal={() => setJoinModalOpen(true)}
+      />
 
       {/* ============================================================ */}
       {/* 3. DUAL ACTION PORTALS (Business Owners & Individual Talent) */}
