@@ -9,7 +9,6 @@ import { networkFaqs } from "@/data/faqs";
 import { HowWeWorkSection } from "@/components/network/HowWeWorkSection";
 import {
   Users,
-  Clock,
   ArrowRight,
   Sparkles,
   ShieldCheck,
@@ -25,7 +24,6 @@ import {
   Factory,
   Search,
   Send,
-  Handshake,
 } from "lucide-react";
 
 export default function NetworkPage() {
@@ -227,53 +225,7 @@ export default function NetworkPage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* 5. KEY PRINCIPLES OF 1008 NETWORK */}
-      {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="p-8 sm:p-10 rounded-3xl bg-[#F6F9FC] border border-[#E6E8EB] space-y-6">
-          <div className="max-w-2xl space-y-1">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#0A2540]">
-              Key Principles of 1008 Talent Matching
-            </h3>
-            <p className="text-xs sm:text-sm text-[#627D98]">
-              Why business owners and talented operators choose 1008 Network
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
-              <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
-                <Clock className="h-4 w-4 text-[#635BFF]" />
-                <span>Responsive & Active</span>
-              </div>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                Requirements are actively processed by our algorithm so business owners receive profiles quickly, without waiting weeks for sluggish headhunters.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
-              <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
-                <Handshake className="h-4 w-4 text-[#00A389]" />
-                <span>Direct Personal Terms</span>
-              </div>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                No third-party interference. You connect directly with the candidate, negotiate equity, salary, and trial periods, and execute direct agreements.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-white border border-[#E6E8EB] space-y-2">
-              <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm">
-                <CheckCircle2 className="h-4 w-4 text-[#059669]" />
-                <span>Zero Broker Markups</span>
-              </div>
-              <p className="text-xs text-[#425466] leading-relaxed">
-                Both posting a requirement and joining the talent pool are free. We focus on long-term ecosystem alignment, not transactional broker commissions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============================================================ */}
       {/* 6. FAQS */}
