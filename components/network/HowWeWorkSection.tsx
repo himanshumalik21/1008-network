@@ -27,7 +27,7 @@ export function HowWeWorkSection({
       },
       icon: (
         <svg
-          className="w-16 h-16 sm:w-20 sm:h-20 text-[#635BFF]"
+          className="w-12 h-12 sm:w-14 sm:h-14 text-[#635BFF]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -60,7 +60,7 @@ export function HowWeWorkSection({
       },
       icon: (
         <svg
-          className="w-16 h-16 sm:w-20 sm:h-20 text-[#00A389]"
+          className="w-12 h-12 sm:w-14 sm:h-14 text-[#00A389]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -100,7 +100,7 @@ export function HowWeWorkSection({
       },
       icon: (
         <svg
-          className="w-16 h-16 sm:w-20 sm:h-20 text-[#0A2540]"
+          className="w-12 h-12 sm:w-14 sm:h-14 text-[#0A2540]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -136,7 +136,7 @@ export function HowWeWorkSection({
       },
       icon: (
         <svg
-          className="w-16 h-16 sm:w-20 sm:h-20 text-[#635BFF]"
+          className="w-12 h-12 sm:w-14 sm:h-14 text-[#635BFF]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -256,36 +256,36 @@ export function HowWeWorkSection({
       {/* ============================================================ */}
       {/* 2. 2x2 MATRIX OF CARDS (1008 Brand Colors, High Quality Icons, No Arrows, No Links) */}
       {/* ============================================================ */}
-      <div className="max-w-5xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-7">
           {steps.map((step) => (
             <div
               key={step.number}
-              className={`group relative rounded-[28px] sm:rounded-[34px] ${step.theme.cardBg} p-7 sm:p-9 flex flex-col items-center justify-between shadow-[0_8px_24px_rgba(10,37,64,0.06)] border-2 ${step.theme.borderColor} hover:shadow-[0_16px_36px_rgba(10,37,64,0.1)] transition-all duration-300 min-h-[360px] sm:min-h-[390px]`}
+              className={`group relative rounded-[22px] sm:rounded-[26px] ${step.theme.cardBg} p-5 sm:p-6 lg:p-7 flex flex-col items-center justify-between shadow-[0_4px_16px_rgba(10,37,64,0.05)] border-2 ${step.theme.borderColor} hover:shadow-[0_12px_28px_rgba(10,37,64,0.08)] transition-all duration-300 min-h-[290px] sm:min-h-[310px]`}
             >
               {/* Floating Top-Left Number Circle */}
               <div className="w-full flex items-center justify-start">
                 <div
-                  className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full ${step.theme.numberBg} text-white font-black text-lg sm:text-xl flex items-center justify-center shadow-md`}
+                  className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full ${step.theme.numberBg} text-white font-extrabold text-sm sm:text-base flex items-center justify-center shadow-xs`}
                 >
                   {step.number}
                 </div>
               </div>
 
               {/* Bold Center Graphic Icon */}
-              <div className="my-6 flex items-center justify-center py-2 transition-transform duration-300 group-hover:scale-110">
+              <div className="my-3 sm:my-4 flex items-center justify-center py-1 transition-transform duration-300 group-hover:scale-110">
                 {step.icon}
               </div>
 
               {/* Static Artwork Pill (NO LINK) + Explanatory Subtext */}
-              <div className="w-full space-y-3.5 flex flex-col items-center">
+              <div className="w-full space-y-2.5 flex flex-col items-center">
                 <span
-                  className={`w-full max-w-[210px] py-2.5 sm:py-3 px-4 rounded-full ${step.theme.pillBg} text-white font-black text-xs sm:text-[12.5px] tracking-wider uppercase shadow-xs text-center select-none`}
+                  className={`w-full max-w-[185px] py-2 px-3 rounded-full ${step.theme.pillBg} text-white font-black text-[11px] sm:text-[11.5px] tracking-wider uppercase shadow-2xs text-center select-none`}
                 >
                   {step.pillText}
                 </span>
 
-                <p className="text-xs sm:text-[13px] text-[#425466] font-medium text-center leading-relaxed px-2">
+                <p className="text-xs sm:text-[12.5px] text-[#425466] font-medium text-center leading-relaxed px-1 sm:px-2">
                   {step.description}
                 </p>
               </div>
