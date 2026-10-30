@@ -222,7 +222,7 @@ export function TalentArchetypesCarousel() {
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={() => setIsPaused((prev) => !prev)}
-              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#627D98] hover:text-[#0A2540] hover:border-[#94A3B8] flex items-center justify-center transition-all shadow-2xs"
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#627D98] hover:text-[#0A2540] hover:border-[#94A3B8] flex items-center justify-center transition-all shadow-2xs focus-visible:ring-2 focus-visible:ring-[#635BFF] focus-visible:outline-hidden cursor-pointer"
               title={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
               aria-label={isPaused ? "Play Auto-Slide" : "Pause Auto-Slide"}
             >
@@ -230,14 +230,14 @@ export function TalentArchetypesCarousel() {
             </button>
             <button
               onClick={handlePrev}
-              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs"
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs focus-visible:ring-2 focus-visible:ring-[#635BFF] focus-visible:outline-hidden cursor-pointer"
               aria-label="Previous Slide"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={handleNext}
-              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs"
+              className="w-9 h-9 rounded-full bg-white border border-[#CBD5E1] text-[#0A2540] hover:bg-[#F6F9FC] hover:border-[#635BFF] flex items-center justify-center transition-all shadow-2xs focus-visible:ring-2 focus-visible:ring-[#635BFF] focus-visible:outline-hidden cursor-pointer"
               aria-label="Next Slide"
             >
               <ChevronRight className="h-4 w-4" />
@@ -345,7 +345,7 @@ export function TalentArchetypesCarousel() {
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
+            className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#635BFF] ${
               currentIndex === idx
                 ? "w-7 bg-[#635BFF]"
                 : "w-2 bg-[#CBD5E1] hover:bg-[#94A3B8]"

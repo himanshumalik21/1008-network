@@ -59,9 +59,9 @@ export default function NetworkPage() {
                 </div>
                 <div className="space-y-2">
                   <Badge variant="indigo" size="sm">For Business Owners</Badge>
-                  <h3 className="text-2xl font-extrabold text-[#0A2540]">
+                  <h2 className="text-2xl font-extrabold text-[#0A2540]">
                     Post Your Business Requirement
-                  </h3>
+                  </h2>
                   <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
                     Building an operating venture or scaling an enterprise? Share the specific leadership or technical role you need to fill, and let our matching engine introduce verified talent from our network.
                   </p>
@@ -106,9 +106,9 @@ export default function NetworkPage() {
                 </div>
                 <div className="space-y-2">
                   <Badge variant="cyan" size="sm">For Operators & Co-Founders</Badge>
-                  <h3 className="text-2xl font-extrabold text-[#0A2540]">
+                  <h2 className="text-2xl font-extrabold text-[#0A2540]">
                     Join the 1008 Talent Pool
-                  </h3>
+                  </h2>
                   <p className="text-xs sm:text-sm text-[#425466] leading-relaxed">
                     Are you a senior engineering leader, proven operator, or commercial director? Join our private talent pool to be introduced directly to business owners building high-conviction ventures.
                   </p>
