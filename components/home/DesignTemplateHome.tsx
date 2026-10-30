@@ -207,9 +207,6 @@ export function DesignTemplateHome() {
             <Link href="/manifesto" className="hover:text-[#0A2540] transition-colors">
               Manifesto
             </Link>
-            <Link href="/knowledge" className="hover:text-[#0A2540] transition-colors">
-              Playbook
-            </Link>
           </div>
 
           {/* Right Column Links (Google style: Privacy, Terms, Contact, Socials) */}
