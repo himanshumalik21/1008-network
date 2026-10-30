@@ -76,19 +76,7 @@ export function ConnectingNetworkGraphic({
 
       ctx.clearRect(0, 0, size, size);
 
-      // 1. Outer Frame Circle (Complete, clean border with subtle glow)
-      ctx.beginPath();
-      ctx.arc(cx, cy, outerR, 0, Math.PI * 2);
-      ctx.strokeStyle = "rgba(99, 91, 255, 0.22)";
-      ctx.lineWidth = 1.2;
-      ctx.stroke();
 
-      // Atmospheric inner gradient
-      const halo = ctx.createRadialGradient(cx, cy, outerR * 0.4, cx, cy, outerR);
-      halo.addColorStop(0, "rgba(0, 212, 178, 0.03)");
-      halo.addColorStop(1, "rgba(99, 91, 255, 0.05)");
-      ctx.fillStyle = halo;
-      ctx.fill();
 
       // 2. Concentric Radar Track (Subtle dashed reference ring)
       ctx.beginPath();
