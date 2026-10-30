@@ -42,7 +42,17 @@ export default function NetworkPage() {
       <HowWeWorkSection />
 
       {/* ============================================================ */}
-      {/* 2. DUAL ACTION PORTALS (Business Owners & Operators) */}
+      {/* 2. ACTIVE BUSINESS REQUIREMENTS (CAROUSEL) */}
+      {/* ============================================================ */}
+      <BusinessRequirementsCarousel />
+
+      {/* ============================================================ */}
+      {/* 3. ROLES MATCHED BY 1008 ALGORITHM (TALENT ARCHETYPES CAROUSEL) */}
+      {/* ============================================================ */}
+      <TalentArchetypesCarousel />
+
+      {/* ============================================================ */}
+      {/* 4. DUAL ACTION PORTALS (Business Owners & Operators) */}
       {/* ============================================================ */}
       <section className="relative w-full py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Ambient Brand Atmospheric Halos */}
@@ -198,16 +208,6 @@ export default function NetworkPage() {
           </div>
         </div>
       </section>
-
-      {/* ============================================================ */}
-      {/* 3. ACTIVE BUSINESS REQUIREMENTS (CAROUSEL) */}
-      {/* ============================================================ */}
-      <BusinessRequirementsCarousel />
-
-      {/* ============================================================ */}
-      {/* 4. ROLES MATCHED BY 1008 ALGORITHM (TALENT ARCHETYPES CAROUSEL) */}
-      {/* ============================================================ */}
-      <TalentArchetypesCarousel />
 
       {/* ============================================================ */}
       {/* 5. FAQS */}
