@@ -1,375 +1,259 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
-import { Button } from "@/components/ui/Button";
 import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { capitalFaqs } from "@/data/faqs";
+import { HowCapitalWorksSection } from "@/components/capital/HowCapitalWorksSection";
+import { ActiveVenturesCarousel } from "@/components/capital/ActiveVenturesCarousel";
+import { InvestorThesesCarousel } from "@/components/capital/InvestorThesesCarousel";
 import {
-  TrendingUp,
-  ShieldCheck,
-  Building2,
-  CheckCircle2,
-  ArrowRight,
-  Sparkles,
   Rocket,
-  DollarSign,
-  PlusCircle,
-  Coins,
-  Users,
-  FileCheck2,
-  AlertTriangle,
-  FileText,
-  Target,
-  Handshake,
+  TrendingUp,
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Briefcase,
   UserCheck,
-  Layers,
-  Search,
-  BookOpen,
 } from "lucide-react";
 
 export default function CapitalPage() {
-  const founderChecklist = [
-    "Founder & team background",
-    "Business concept & industry sector",
-    "Company stage & current traction",
-    "Problem, product & service model",
-    "Market size & target customer ICP",
-    "Monthly revenue & unit economics",
-    "Capital required & itemized use of funds",
-    "Existing cap table & fundraising status",
-    "Pitch deck & financial projections",
-  ];
-
-  const investorChecklist = [
-    "Name & organisation / entity",
-    "Direct email, phone & location",
-    "Investor type (Angel, Family Office, CXO, Fund)",
-    "Investment interests & sector focus",
-    "Typical ticket / check size (₹5L – ₹5Cr+)",
-    "Geographic & stage preferences",
-    "Accredited / eligible investor status",
-    "LinkedIn profile & verification consent",
-  ];
-
-  const steps = [
-    {
-      num: "01",
-      tag: "Application",
-      title: "Founders Submit Venture & Use of Funds",
-      desc: "Founders outline their product model, unit economics, and precise capital milestones (e.g. setting up machinery, working capital, or hiring key operators).",
-      icon: <FileText className="h-4 w-4 text-[#635BFF]" />,
-      iconBg: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-    },
-    {
-      num: "02",
-      tag: "Curated Review",
-      title: "Thesis Review & Investor Matching",
-      desc: "1008 reviews business feasibility and presents promising ventures directly to aligned angels and family offices based on sector interest and check size.",
-      icon: <Search className="h-4 w-4 text-[#00A389]" />,
-      iconBg: "bg-[#E6FFFA] text-[#007A66] border-[#B2F5EA]",
-    },
-    {
-      num: "03",
-      tag: "Deal Session",
-      title: "Structured Founder-Investor Meetings",
-      desc: "Interested capital partners participate in direct, structured deal calls with founders to evaluate unit metrics, growth milestones, and commercial terms.",
-      icon: <Users className="h-4 w-4 text-[#FF7043]" />,
-      iconBg: "bg-[#FFF3EE] text-[#D94814] border-[#FFD8C9]",
-    },
-    {
-      num: "04",
-      tag: "Direct Execution",
-      title: "Independent Due Diligence & Direct Signing",
-      desc: "Investors execute their independent legal due diligence and contract directly with the company entity. No placement or intermediary fees.",
-      icon: <FileCheck2 className="h-4 w-4 text-[#0A2540]" />,
-      iconBg: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
-    },
-  ];
-
   return (
-    <div className="pt-28 pb-20 bg-[#FDFDFE] min-h-screen">
-      {/* 1. Hero Header Section */}
-      <section className="relative py-14 sm:py-20 overflow-hidden border-b border-[#E6E8EB] bg-[#F6F9FC]">
-        <div className="absolute inset-0 bg-grid-boxes mask-radial-fade opacity-55 pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-80 bg-gradient-to-r from-[#635BFF]/12 via-[#00D4B2]/08 to-[#FF7043]/06 blur-[120px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
-          <div className="inline-flex items-center gap-2 flex-wrap justify-center">
-            <Badge variant="indigo" size="md">
-              1008 Community • Capital & Investors
-            </Badge>
-            <span className="text-xs font-mono font-semibold text-[#007A66] bg-[#E6FFFA] px-3 py-1 rounded-full border border-[#B2F5EA]">
-              Fund a Business / Find Investors
-            </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
-            Businesses find capital.{" "}
-            <br className="hidden sm:inline" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
-              Investors find evaluated businesses.
-            </span>
-          </h1>
-
-          <p className="text-base sm:text-lg md:text-xl text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-            Whether your business needs growth funding or you are an angel investor looking for vetted high-conviction businesses — the 1008 community connects capital directly without broker fees.
-          </p>
-
-          <p className="text-xs sm:text-sm text-[#64748B] font-medium max-w-2xl mx-auto">
-            Businesses bring the vision & traction. Capital partners bring resources. 1008 facilitates direct discovery.
-          </p>
-
-          {/* Ecosystem Flow Formula */}
-          <div className="pt-2 pb-2 inline-flex items-center gap-2 text-xs font-mono text-[#64748B] bg-white/90 px-4 py-2 rounded-full border border-[#E2E8F0] shadow-2xs">
-            <span className="text-[#635BFF] font-semibold">Idea</span>
-            <span>→</span>
-            <span className="text-[#00A389] font-semibold">People</span>
-            <span>→</span>
-            <span className="text-[#059669] font-semibold">Capital</span>
-            <span>→</span>
-            <span className="text-[#D94814] font-semibold">Execution</span>
-            <span>→</span>
-            <span className="text-[#0A2540] font-bold">Business</span>
-          </div>
-
-          <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button
-              href="#for-founders"
-              size="md"
-              variant="primary"
-              rightIcon={<Rocket className="h-4 w-4" />}
-              className="w-full sm:w-auto font-semibold px-6 shadow-sm"
-            >
-              For Founders (Submit Venture)
-            </Button>
-            <Button
-              href="#for-investors"
-              size="md"
-              variant="secondary"
-              rightIcon={<TrendingUp className="h-4 w-4 text-[#00A389]" />}
-              className="w-full sm:w-auto font-semibold"
-            >
-              For Investors (Join Network)
-            </Button>
-          </div>
-
-          {/* Quick Informational Highlights */}
-          <div className="pt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono text-[#627D98]">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-              <span>Curated Network Introductions</span>
-            </div>
-            <span>•</span>
-            <div className="flex items-center gap-1.5">
-              <Target className="h-3.5 w-3.5 text-[#635BFF]" />
-              <span>Transparent Use of Funds</span>
-            </div>
-            <span>•</span>
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="h-3.5 w-3.5 text-[#059669]" />
-              <span>No Placement or Intermediary Fees</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Dual Distinct Journeys: For Founders & For Investors */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2.5">
-          <Badge variant="indigo" size="sm">Two Clear Pathways</Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight font-sans">
-            Choose Your Journey
-          </h2>
-          <p className="text-xs sm:text-base text-[#475569] max-w-xl mx-auto">
-            Whether you need capital for an operating business or are an allocator looking for high-quality opportunities.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Card 1: For Founders */}
-          <div
-            id="for-founders"
-            className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E2E8F0] shadow-xs hover:border-[#635BFF]/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#635BFF] opacity-0 group-hover:opacity-100 transition-opacity" />
-
-            <div className="space-y-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#F0F0FF] text-[#635BFF] flex items-center justify-center border border-[#E0E0FF] group-hover:scale-105 transition-transform shadow-2xs">
-                  <Rocket className="h-6 w-6" />
-                </div>
-                <Badge variant="indigo" size="sm">For Founders</Badge>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] font-sans group-hover:text-[#635BFF] transition-colors">
-                  Need capital?
-                </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">
-                  Submit your business for consideration. We review your model, traction, and unit economics to introduce you to aligned capital partners.
-                </p>
-              </div>
-
-              {/* Information Collected Checklist */}
-              <div className="space-y-3 pt-2">
-                <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#635BFF]">
-                  Information Evaluated:
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#334155]">
-                  {founderChecklist.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2 p-2 rounded-lg bg-[#F8FAFC] border border-[#F1F5F9]">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#635BFF] shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-8 mt-6 border-t border-[#F1F4F8]">
-              <Button
-                href="/capital/post"
-                variant="primary"
-                size="lg"
-                className="w-full justify-center font-semibold shadow-xs text-sm py-3.5"
-                rightIcon={<ArrowRight className="h-4 w-4" />}
-              >
-                Submit Your Venture
-              </Button>
-              <div className="mt-2 text-center text-[11px] text-[#64748B]">
-                Mutual NDA covered • Direct founder review
-              </div>
-            </div>
-          </div>
-
-          {/* Card 2: For Investors */}
-          <div
-            id="for-investors"
-            className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E2E8F0] shadow-xs hover:border-[#00A389]/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00D4B2] opacity-0 group-hover:opacity-100 transition-opacity" />
-
-            <div className="space-y-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#E6FFFA] text-[#00A389] flex items-center justify-center border border-[#B2F5EA] group-hover:scale-105 transition-transform shadow-2xs">
-                  <TrendingUp className="h-6 w-6" />
-                </div>
-                <Badge variant="cyan" size="sm">For Investors</Badge>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] font-sans group-hover:text-[#00A389] transition-colors">
-                  Looking for your next opportunity?
-                </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">
-                  Join the 1008 Capital Network. Tell us your sector preferences and check sizes to receive curated deals with full operational clarity.
-                </p>
-              </div>
-
-              {/* Information Collected Checklist */}
-              <div className="space-y-3 pt-2">
-                <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#00A389]">
-                  Allocator Profile Criteria:
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#334155]">
-                  {investorChecklist.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2 p-2 rounded-lg bg-[#F8FAFC] border border-[#F1F5F9]">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#00A389] shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-8 mt-6 border-t border-[#F1F4F8]">
-              <Button
-                href="/capital/join"
-                variant="secondary"
-                size="lg"
-                className="w-full justify-center font-semibold shadow-xs text-sm py-3.5"
-                rightIcon={<UserCheck className="h-4 w-4 text-[#00A389]" />}
-              >
-                Join the Capital Network
-              </Button>
-              <div className="mt-2 text-center text-[11px] text-[#64748B]">
-                Curated introductions • No placement or intermediary fees
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. The 4-Step Capital Process */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2.5">
-          <Badge variant="cyan" size="sm">The 1008 Capital Process</Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight font-sans">
-            How Capital Introductions Work
-          </h2>
-          <p className="text-xs sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
-            From venture submission to direct founder-investor contract completion.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-          {steps.map((step, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-3.5 hover:border-[#CBD5E1] transition-all"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between gap-2">
-                  <span className={`w-8 h-8 rounded-lg font-mono font-bold text-xs flex items-center justify-center border shrink-0 ${step.iconBg}`}>
-                    {step.num}
-                  </span>
-                  <span className="text-[10px] font-mono font-bold text-[#64748B] bg-[#F1F5F9] px-2 py-0.5 rounded-full">
-                    {step.tag}
-                  </span>
-                </div>
-                <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-xs text-[#475569] leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 4. FAQs Section */}
-      <PillarFAQ
-        items={capitalFaqs}
-        badge="Capital Network FAQs"
-        badgeVariant="cyan"
-        title="Frequently Answered Questions"
-        description="Everything you need to know about submissions, investor criteria, deal calls, and independent due diligence."
+    <div className="relative pt-20 sm:pt-24 pb-20 bg-white min-h-screen font-sans overflow-hidden">
+      {/* Continuous Streamlined Micro-Dot Canvas across entire page */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-50"
+        style={{
+          backgroundImage: "radial-gradient(#CBD5E1 1.8px, transparent 1.8px)",
+          backgroundSize: "28px 28px",
+        }}
+        aria-hidden="true"
       />
 
-      {/* 5. Facilitator & Disclaimer Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="p-6 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#92400E]">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="h-5 w-5 text-[#D97706] shrink-0 mt-0.5" />
-            <div className="space-y-1">
-              <span className="font-bold font-sans text-sm text-[#78350F]">
-                Statutory Notice & Explicit Regulatory Exclusions:
-              </span>
-              <p className="text-xs text-[#A16207] leading-relaxed max-w-4xl">
-                1008 Network operates strictly as a discovery and networking facilitator. 1008 is <strong>not</strong> a stock broker, investment adviser, portfolio manager, Alternative Investment Fund (AIF), mutual fund, merchant banker, custodian, depository, escrow provider, or investment fund. We do not hold investor capital, manage custodial funds, provide financial advice, or guarantee returns. All contracts and due diligence are executed directly between companies and investors.
+      {/* ============================================================ */}
+      {/* 1. HERO & 4-STEP CAPITAL MATCHING MATRIX */}
+      {/* ============================================================ */}
+      <HowCapitalWorksSection />
+
+      {/* ============================================================ */}
+      {/* 2. ACTIVE CAPITAL MANDATES (CAROUSEL) */}
+      {/* ============================================================ */}
+      <ActiveVenturesCarousel />
+
+      {/* ============================================================ */}
+      {/* 3. CURATED ALLOCATORS & INVESTMENT THESES (CAROUSEL) */}
+      {/* ============================================================ */}
+      <InvestorThesesCarousel />
+
+      {/* ============================================================ */}
+      {/* 4. DUAL ACTION PORTALS (Founders & Investors) */}
+      {/* ============================================================ */}
+      <section className="relative w-full py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Ambient Brand Atmospheric Halos */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#635BFF]/08 blur-[130px] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#00D4B2]/08 blur-[130px] pointer-events-none" />
+
+        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+          
+          {/* Portal 1: For Business Owners / Founders */}
+          <div
+            id="for-founders"
+            className="rounded-3xl bg-white border border-[#E6E8EB] relative overflow-hidden shadow-sm hover:border-[#635BFF]/50 hover:shadow-md transition-all group p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full"
+          >
+            <div className="space-y-4 sm:space-y-5 flex-1 flex flex-col">
+              {/* Header: Icon & Badge */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#F0F0FF] text-[#635BFF] flex items-center justify-center border border-[#E0E0FF] shrink-0">
+                    <Rocket className="h-4 w-4" />
+                  </div>
+                  <Badge variant="indigo" size="sm">For Business Owners</Badge>
+                </div>
+
+                <div className="space-y-1.5">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
+                    Raise Capital for Your Venture
+                  </h2>
+                  <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
+                    Building an operating venture or scaling an enterprise? Submit your business model, current traction, and use of funds to connect directly with aligned angel investors and family offices.
+                  </p>
+                </div>
+              </div>
+
+              {/* Graphic Showcase Frame */}
+              <div className="relative w-full h-44 sm:h-48 rounded-2xl bg-gradient-to-br from-[#F7F8FF] via-[#FAFAFF] to-[#F0FDFB] border border-[#E6E8EB] flex items-center justify-center p-4 my-1 overflow-hidden group-hover:border-[#635BFF]/30 transition-all">
+                <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:16px_16px] opacity-40 pointer-events-none" />
+                <div className="absolute w-36 h-36 bg-[#635BFF]/10 blur-xl rounded-full pointer-events-none" />
+                <Image
+                  src="/images/network/network-brand.png"
+                  alt="Raise Capital for Your Venture"
+                  width={240}
+                  height={240}
+                  className="relative z-10 w-auto h-full max-h-36 sm:max-h-40 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
+              </div>
+
+              {/* Verified Checklist */}
+              <div className="space-y-2.5 pt-1 text-xs sm:text-[12.5px] text-[#425466] flex-1">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>Specify fundraising mandates: Seed, Pre-Series A, Capex Expansion, or Working Capital</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>1008 evaluates venture viability and matches against angels with domain interest</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>Receive curated allocator introductions directly without public pitch blasts or broker spam</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
+                  <span>Participate in structured deal sessions to discuss metrics and negotiate commercial terms</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Action CTA Button */}
+            <div className="pt-6 mt-auto">
+              <Link
+                href="/capital/post"
+                className="w-full py-3 px-6 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs sm:text-sm shadow-xs transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer text-center"
+              >
+                <span>Submit Your Venture</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Portal 2: For Investors & Allocators */}
+          <div
+            id="for-investors"
+            className="rounded-3xl bg-white border border-[#E6E8EB] relative overflow-hidden shadow-sm hover:border-[#00A389]/50 hover:shadow-md transition-all group p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full"
+          >
+            <div className="space-y-4 sm:space-y-5 flex-1 flex flex-col">
+              {/* Header: Icon & Badge */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#E6FFFA] text-[#00A389] flex items-center justify-center border border-[#B2F5EA] shrink-0">
+                    <TrendingUp className="h-4 w-4" />
+                  </div>
+                  <Badge variant="cyan" size="sm">For Angels & Family Offices</Badge>
+                </div>
+
+                <div className="space-y-1.5">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#0A2540] tracking-tight">
+                    Join the 1008 Capital Network
+                  </h2>
+                  <p className="text-xs sm:text-[13px] text-[#425466] leading-relaxed">
+                    Looking for high-conviction operating businesses? Join our private allocator network to receive curated deal teasers with complete operational clarity and transparent unit economics.
+                  </p>
+                </div>
+              </div>
+
+              {/* Graphic Showcase Frame */}
+              <div className="relative w-full h-44 sm:h-48 rounded-2xl bg-gradient-to-br from-[#F0FDFB] via-[#F5FCFB] to-[#F7F8FF] border border-[#E6E8EB] flex items-center justify-center p-4 my-1 overflow-hidden group-hover:border-[#00A389]/30 transition-all">
+                <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:16px_16px] opacity-40 pointer-events-none" />
+                <div className="absolute w-36 h-36 bg-[#00D4B2]/12 blur-xl rounded-full pointer-events-none" />
+                <Image
+                  src="/images/network/growth-brand.png"
+                  alt="Join the 1008 Capital Network"
+                  width={240}
+                  height={240}
+                  className="relative z-10 w-auto h-full max-h-36 sm:max-h-40 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
+              </div>
+
+              {/* Verified Checklist */}
+              <div className="space-y-2.5 pt-1 text-xs sm:text-[12.5px] text-[#425466] flex-1">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Define your sector moats, stage preferences, and check size (₹5L to ₹2Cr+)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Algorithmic discovery when operating businesses match your investment thesis</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Direct, structured deal calls with founders to evaluate unit metrics and expansion moats</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
+                  <span>Independent legal due diligence and direct contract execution with zero intermediary fees</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Action CTA Button */}
+            <div className="pt-6 mt-auto">
+              <Link
+                href="/capital/join"
+                className="w-full py-3 px-6 rounded-full bg-[#00A389] hover:bg-[#008F79] text-white font-semibold text-xs sm:text-sm shadow-xs transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer text-center"
+              >
+                <span>Join the Capital Network</span>
+                <UserCheck className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 5. FAQS */}
+      {/* ============================================================ */}
+      <div className="relative overflow-hidden py-6">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-80 bg-gradient-to-r from-[#635BFF]/06 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none" />
+        <PillarFAQ
+          items={capitalFaqs}
+          badge="Capital Network FAQs"
+          badgeVariant="cyan"
+          title="Frequently Asked Questions"
+          description="Everything founders and capital partners need to know about submissions, investor criteria, deal calls, and independent due diligence."
+        />
+      </div>
+
+      {/* ============================================================ */}
+      {/* 6. STATUTORY NOTICE & REGULATORY FACILITATOR NOTICE */}
+      {/* ============================================================ */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="rounded-3xl bg-gradient-to-br from-[#F0FDFB]/70 via-white to-[#F7F8FF]/70 border border-[#CBD5E1] p-6 sm:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs relative overflow-hidden">
+          {/* Ambient radiance */}
+          <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-[#00D4B2]/08 blur-3xl pointer-events-none" />
+
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 relative z-10">
+            {/* Big Trust Shield Icon */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#F0FDFB] via-[#E6FFFA] to-[#F7F8FF] text-[#00A389] flex items-center justify-center border-2 border-[#B2F5EA] shadow-[0_4px_16px_rgba(0,163,137,0.12)]">
+              <ShieldCheck className="h-9 w-9 sm:h-11 sm:w-11 text-[#00A389]" strokeWidth={2.2} />
+            </div>
+
+            <div className="space-y-1.5 text-center sm:text-left">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FFFBEB] text-[#92400E] border border-[#FDE68A] text-xs font-semibold">
+                <ShieldCheck className="h-3.5 w-3.5 text-[#D97706]" />
+                <span>Statutory Notice & Regulatory Exclusions</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-[#0A2540]">
+                Direct Discovery & Non-Broker Facilitator Governance
+              </h3>
+              <p className="text-xs sm:text-sm text-[#425466] leading-relaxed max-w-2xl">
+                1008 Network operates strictly as a discovery and networking facilitator. 1008 is not a stock broker, investment adviser, portfolio manager, Alternative Investment Fund (AIF), mutual fund, merchant banker, custodian, or escrow provider. We do not hold investor capital, manage custodial funds, provide financial advice, or guarantee returns. All contracts and due diligence are executed directly between companies and investors.
               </p>
             </div>
           </div>
-          <Link
-            href="/terms#regulatory-disclaimer"
-            className="text-xs font-mono font-bold text-[#D97706] hover:underline whitespace-nowrap shrink-0 self-start md:self-auto"
-          >
-            Review Disclaimers →
-          </Link>
+
+          <div className="shrink-0 relative z-10 w-full md:w-auto">
+            <Link
+              href="/terms#regulatory-disclaimer"
+              className="w-full md:w-auto py-2.5 px-5 rounded-full bg-white hover:bg-[#F8FAFC] border border-[#CBD5E1] text-[#0A2540] hover:text-[#635BFF] hover:border-[#635BFF] text-xs font-semibold transition-all shadow-2xs flex items-center justify-center gap-1.5 whitespace-nowrap"
+            >
+              <span>Review Disclaimers</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>
