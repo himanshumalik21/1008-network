@@ -189,15 +189,19 @@ export function TalentArchetypesCarousel() {
   };
 
   return (
-    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative w-full py-10 sm:py-14 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Ambient Radiant Glow (Iris & Mint) */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[650px] h-96 bg-gradient-to-r from-[#635BFF]/08 via-[#00D4B2]/06 to-transparent blur-[140px] pointer-events-none" />
 
-
-
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
+        {/* Enclosing Card Container Box */}
+        <div className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-b from-[#F7F8FF]/80 via-white to-white border border-[#E0E0FF] p-6 sm:p-8 lg:p-10 shadow-[0_4px_24px_rgba(99,91,255,0.06)] relative overflow-hidden">
+          {/* Subtle ambient radiant glow inside the box */}
+          <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#635BFF]/08 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-[#00D4B2]/05 blur-3xl pointer-events-none" />
+
+          {/* Section Header */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4 relative z-10">
           <div className="text-center sm:text-left space-y-2 max-w-2xl">
             <Badge variant="indigo" size="sm">
               Curated Executive Talent
@@ -261,7 +265,7 @@ export function TalentArchetypesCarousel() {
                 }}
                 className="px-2.5 shrink-0"
               >
-                <div className="p-5 sm:p-5.5 rounded-2xl bg-white border border-[#E6E8EB] space-y-3.5 shadow-2xs hover:shadow-md hover:border-[#635BFF]/40 transition-all h-full flex flex-col justify-between">
+                <div className="p-5 sm:p-5.5 rounded-2xl bg-white border border-[#CBD5E1]/80 space-y-3.5 shadow-xs hover:shadow-md hover:border-[#635BFF] transition-all h-full flex flex-col justify-between">
                   {/* Top Area: Tag, Icon & Candidate Info */}
                   <div className="space-y-3">
                     <div className="flex items-center justify-between gap-1">
@@ -346,6 +350,7 @@ export function TalentArchetypesCarousel() {
           />
         ))}
       </div>
+        </div>
       </div>
     </section>
   );
