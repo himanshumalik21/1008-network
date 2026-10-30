@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/brand/Badge";
-import { Button } from "@/components/ui/Button";
 import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { networkFaqs } from "@/data/faqs";
 import { HowWeWorkSection } from "@/components/network/HowWeWorkSection";
@@ -13,13 +12,10 @@ import { TalentArchetypesCarousel } from "@/components/network/TalentArchetypesC
 import {
   Users,
   ArrowRight,
-  Sparkles,
   ShieldCheck,
   CheckCircle2,
   Briefcase,
-  PlusCircle,
   UserCheck,
-  AlertTriangle,
 } from "lucide-react";
 
 export default function NetworkPage() {
