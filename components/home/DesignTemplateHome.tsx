@@ -43,8 +43,8 @@ export function DesignTemplateHome() {
               {/* Soft Ambient Brand Glow Behind Video */}
               <div className="absolute -inset-3 bg-gradient-to-tr from-[#635BFF]/18 via-[#00A68C]/10 to-[#00D4B2]/18 rounded-[36px] blur-2xl opacity-75 -z-10" />
 
-              {/* Video Card Container with Fluid Mobile Proportions */}
-              <div className="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[400px] lg:h-full lg:min-h-[540px] xl:min-h-[580px] max-h-[660px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
+              {/* Video Card Container with Fluid Mobile Proportions (Extended Mobile Height) */}
+              <div className="relative w-full h-[340px] sm:h-[400px] md:h-[460px] lg:h-full lg:min-h-[540px] xl:min-h-[580px] max-h-[660px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-12px_rgba(10,37,64,0.22)] border border-zinc-200/90 bg-zinc-950 isolate transform-gpu">
                 <video
                   src="/videos/hero_video.mp4"
                   autoPlay
