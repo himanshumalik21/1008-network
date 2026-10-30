@@ -66,7 +66,7 @@ export default function NetworkPage() {
   ];
 
   return (
-    <div className="pt-16 sm:pt-20 pb-20 bg-[#FDFDFE] min-h-screen font-sans">
+    <div className="pt-16 pb-20 bg-[#FDFDFE] min-h-screen font-sans">
       {/* ============================================================ */}
       {/* 1. HERO & 2x2 TALENT MATCHING MATRIX (1008 Brand Colors) */}
       {/* ============================================================ */}
