@@ -75,11 +75,11 @@ export function HowCapitalWorksSection() {
       },
       icon: (
         <svg
-          className="w-10 h-10 sm:w-12 sm:h-12 text-[#635BFF]"
+          className="w-10 h-10 sm:w-13 sm:h-13 text-[#635BFF]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.3"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -111,11 +111,11 @@ export function HowCapitalWorksSection() {
       },
       icon: (
         <svg
-          className="w-10 h-10 sm:w-12 sm:h-12 text-[#00A389]"
+          className="w-10 h-10 sm:w-13 sm:h-13 text-[#00A389]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.3"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -153,11 +153,11 @@ export function HowCapitalWorksSection() {
       },
       icon: (
         <svg
-          className="w-10 h-10 sm:w-12 sm:h-12 text-[#0A2540]"
+          className="w-10 h-10 sm:w-13 sm:h-13 text-[#0A2540]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.3"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -194,11 +194,11 @@ export function HowCapitalWorksSection() {
         "Investors execute their independent due diligence and contract directly with the company entity. Direct facilitation with 100% operational transparency.",
       icon: (
         <svg
-          className="w-10 h-10 sm:w-12 sm:h-12 text-[#635BFF]"
+          className="w-10 h-10 sm:w-13 sm:h-13 text-[#635BFF]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.3"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -307,9 +307,9 @@ export function HowCapitalWorksSection() {
 
                 {/* Card Header: Icon + Title */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-4 pr-24 sm:pr-36">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3.5 sm:gap-4.5">
                     <div
-                      className={`w-11 h-11 sm:w-13 sm:h-13 rounded-2xl ${step.theme.iconBg} flex items-center justify-center p-2 shrink-0 border border-black/5 shadow-2xs transition-transform duration-300 group-hover:scale-105`}
+                      className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-[22px] ${step.theme.iconBg} flex items-center justify-center p-2.5 sm:p-3 shrink-0 border-2 border-black/5 shadow-xs transition-transform duration-300 group-hover:scale-105`}
                     >
                       {step.icon}
                     </div>
