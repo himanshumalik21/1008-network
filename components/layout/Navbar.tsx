@@ -4,11 +4,10 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
-import { Button } from "@/components/ui/Button";
 import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
 import { trackStudioModalOpen } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -154,17 +153,6 @@ export function Navbar() {
                   </Link>
                 );
               })}
-            </div>
-
-            <div className="pt-2 border-t border-[#E6E8EB]">
-              <Button
-                variant="primary"
-                size="lg"
-                className="w-full justify-center text-sm font-semibold"
-                onClick={handleOpenModal}
-              >
-                Apply to Build With Us
-              </Button>
             </div>
           </div>
         )}
