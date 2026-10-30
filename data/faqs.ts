@@ -93,8 +93,8 @@ export const capitalFaqs: FAQItem[] = [
     category: "general",
   },
   {
-    question: "Does 1008 Network charge brokerage fees or hold custodial funds?",
-    answer: "No. 1008 Network operates strictly as a discovery and networking facilitator with zero intermediary or broker fees. We do not hold custodial funds or manage investor capital. All contracts and fund transfers are executed directly between the company and investors.",
+    question: "Does 1008 Network hold custodial funds or manage investor capital?",
+    answer: "No. 1008 Network operates strictly as a discovery and networking facilitator. We do not hold custodial funds, manage investor capital, or operate an investment scheme. All contracts, due diligence, and capital allocations are executed directly between the company and participating investors.",
     category: "equity",
   },
   {

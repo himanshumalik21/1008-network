@@ -3,8 +3,7 @@
 import React from "react";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
-import { SpinningGlobe } from "@/components/network/SpinningGlobe";
-import { ConnectingNetworkGraphic } from "@/components/network/ConnectingNetworkGraphic";
+import { CapitalTopographicWave } from "./CapitalTopographicWave";
 import {
   Rocket,
   TrendingUp,
@@ -155,34 +154,24 @@ export function HowCapitalWorksSection() {
         </svg>
       ),
       description:
-        "Investors execute their independent due diligence and contract directly with the company entity. Zero placement or intermediary fees.",
+        "Investors execute their independent due diligence and contract directly with the company entity.",
     },
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
-      {/* Background Micro-Dot Pattern */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-50"
-        style={{
-          backgroundImage: "radial-gradient(#CBD5E1 1.8px, transparent 1.8px)",
-          backgroundSize: "28px 28px",
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Ambient Radial Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-r from-[#635BFF]/10 via-[#00D4B2]/08 to-[#4F46E5]/06 blur-[130px] pointer-events-none" />
-
-      {/* Top-Left Complete 3D Connecting Orbital Nexus */}
-      <div className="absolute top-4 left-0 sm:top-6 sm:left-2 lg:top-8 lg:left-6 pointer-events-none opacity-40 sm:opacity-55 z-0">
-        <ConnectingNetworkGraphic size={340} />
+    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-transparent">
+      {/* Dynamic 3D Undulating Topographical Mesh (Slide 1 & Slide 14 Inspired) */}
+      <div className="absolute -top-10 -right-16 sm:top-2 sm:-right-8 lg:top-4 lg:right-0 w-[420px] sm:w-[620px] lg:w-[760px] h-[340px] sm:h-[440px] lg:h-[480px] pointer-events-none opacity-60 sm:opacity-80 z-0">
+        <CapitalTopographicWave />
       </div>
 
-      {/* Bottom-Right Complete 3D Wireframe Spinning Globe */}
-      <div className="absolute bottom-0 right-0 sm:bottom-2 sm:right-2 lg:bottom-4 lg:right-6 pointer-events-none opacity-45 sm:opacity-60 z-0">
-        <SpinningGlobe size={360} />
+      {/* Symmetrical Subtle Lower Wave Accent */}
+      <div className="absolute -bottom-16 -left-20 w-[380px] sm:w-[500px] h-[300px] sm:h-[380px] pointer-events-none opacity-35 sm:opacity-50 z-0">
+        <CapitalTopographicWave intensity="subtle" />
       </div>
+
+      {/* Ambient Radial Radiance */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-r from-[#00D4B2]/10 via-[#00A389]/06 to-[#635BFF]/08 blur-[130px] pointer-events-none" />
 
       {/* ============================================================ */}
       {/* 1. HEADER & BADGES */}
@@ -200,13 +189,13 @@ export function HowCapitalWorksSection() {
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans leading-tight">
           Businesses find capital.{" "}
           <br className="hidden sm:inline" />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#635BFF] via-[#00D4B2] to-[#635BFF]">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A389] via-[#00D4B2] to-[#635BFF]">
             Investors find evaluated businesses.
           </span>
         </h1>
 
         <p className="text-base sm:text-lg text-[#425466] leading-relaxed max-w-3xl mx-auto font-normal">
-          Whether your business needs growth funding or you are an angel investor looking for vetted high-conviction businesses — the 1008 community connects capital directly without broker fees.
+          Whether your business needs growth funding or you are an angel investor looking for vetted high-conviction businesses — the 1008 community connects capital directly.
         </p>
 
         {/* Ecosystem Flow Formula */}
@@ -258,7 +247,7 @@ export function HowCapitalWorksSection() {
           <span>•</span>
           <div className="flex items-center gap-1.5">
             <ShieldCheck className="h-3.5 w-3.5 text-[#059669]" />
-            <span>Zero Broker Fees</span>
+            <span>Independent Due Diligence</span>
           </div>
         </div>
       </div>

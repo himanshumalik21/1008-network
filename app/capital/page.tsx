@@ -9,6 +9,7 @@ import { capitalFaqs } from "@/data/faqs";
 import { HowCapitalWorksSection } from "@/components/capital/HowCapitalWorksSection";
 import { ActiveVenturesCarousel } from "@/components/capital/ActiveVenturesCarousel";
 import { InvestorThesesCarousel } from "@/components/capital/InvestorThesesCarousel";
+import { CapitalBackgroundCanvas } from "@/components/capital/CapitalBackgroundCanvas";
 import {
   Rocket,
   TrendingUp,
@@ -22,15 +23,8 @@ import {
 export default function CapitalPage() {
   return (
     <div className="relative pt-20 sm:pt-24 pb-20 bg-white min-h-screen font-sans overflow-hidden">
-      {/* Continuous Streamlined Micro-Dot Canvas across entire page */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-50"
-        style={{
-          backgroundImage: "radial-gradient(#CBD5E1 1.8px, transparent 1.8px)",
-          backgroundSize: "28px 28px",
-        }}
-        aria-hidden="true"
-      />
+      {/* Topographical & Isometric Vector Background Canvas (Slide 1 & Slide 14 Inspired) */}
+      <CapitalBackgroundCanvas />
 
       {/* ============================================================ */}
       {/* 1. HERO & 4-STEP CAPITAL MATCHING MATRIX */}
@@ -108,7 +102,7 @@ export default function CapitalPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span>Receive curated allocator introductions directly without public pitch blasts or broker spam</span>
+                  <span>Receive curated allocator introductions directly without public pitch blasts</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
@@ -184,7 +178,7 @@ export default function CapitalPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
-                  <span>Independent legal due diligence and direct contract execution with zero intermediary fees</span>
+                  <span>Independent legal due diligence and direct contract execution</span>
                 </div>
               </div>
             </div>

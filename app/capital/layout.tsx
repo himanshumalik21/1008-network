@@ -78,7 +78,7 @@ export default function CapitalLayout({
       audienceType: "Angel Investors, Family Offices, Working Professionals, Startup Founders",
     },
     description:
-      "Target-based startup capital rounds connecting high-conviction businesses with accredited co-investors. Features itemized use of funds, combined deal meetings, and zero intermediary fees.",
+      "Target-based startup capital rounds connecting high-conviction businesses with accredited co-investors. Features itemized use of funds and combined deal meetings.",
   };
 
   const faqJsonLd = {
