@@ -106,7 +106,7 @@ export default function CapitalPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#635BFF] shrink-0 mt-0.5" />
-                  <span>Participate in structured deal sessions to discuss metrics and negotiate commercial terms</span>
+                  <span>Participate in structured deal meetings to discuss metrics and negotiate commercial terms</span>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function CapitalPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
-                  <span>Direct, structured deal calls with founders to evaluate unit metrics and expansion moats</span>
+                  <span>Direct, structured deal meetings with founders to evaluate unit metrics and expansion moats</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0 mt-0.5" />
@@ -207,7 +207,7 @@ export default function CapitalPage() {
           badge="Capital Network FAQs"
           badgeVariant="cyan"
           title="Frequently Asked Questions"
-          description="Everything founders and capital partners need to know about submissions, investor criteria, deal calls, and independent due diligence."
+          description="Everything founders and capital partners need to know about submissions, investor criteria, deal meetings, and independent due diligence."
         />
       </div>
 

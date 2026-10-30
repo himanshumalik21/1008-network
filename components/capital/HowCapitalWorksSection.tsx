@@ -60,23 +60,19 @@ export function HowCapitalWorksSection() {
     {
       number: "1",
       title: "Submit Venture & Use of Funds",
-      pillText: "SUBMIT VENTURE",
+      badge: {
+        label: "Submit Venture",
+        color: "bg-[#635BFF] text-white border border-[#5349DF]",
+        rotation: "-rotate-2",
+      },
       numberFill: "#635BFF",
       nodeColor: "bg-[#635BFF]",
       theme: {
         cardBg: "bg-gradient-to-br from-[#F7F8FF] via-white to-[#FAF5FF]",
         borderColor: "border-[#E0E0FF] hover:border-[#635BFF]/50",
-        pillBg: "bg-[#635BFF] text-white",
         iconColor: "text-[#635BFF]",
         iconBg: "bg-[#F0F0FF]",
       },
-      tapes: [
-        {
-          label: "Cap Sheet & Capex",
-          color: "bg-[#EAE8FF] text-[#4F46E5] border border-[#D5D0FF]",
-          rotation: "-rotate-2",
-        },
-      ],
       icon: (
         <svg
           className="w-10 h-10 sm:w-12 sm:h-12 text-[#635BFF]"
@@ -100,29 +96,19 @@ export function HowCapitalWorksSection() {
     {
       number: "2",
       title: "Thesis Review & Allocation Match",
-      pillText: "THESIS MATCH",
+      badge: {
+        label: "Thesis Match",
+        color: "bg-[#00A389] text-white border border-[#008F77]",
+        rotation: "rotate-2",
+      },
       numberFill: "#00A389",
       nodeColor: "bg-[#00A389]",
       theme: {
         cardBg: "bg-gradient-to-br from-[#F0FDFB] via-white to-[#E6FFFA]",
         borderColor: "border-[#B2F5EA] hover:border-[#00A389]/60",
-        pillBg: "bg-[#00A389] text-white",
         iconColor: "text-[#00A389]",
         iconBg: "bg-[#E6FFFA]",
       },
-      // Two overlapping sticky tapes matching reference design ("Surveys" & "Interviews")
-      tapes: [
-        {
-          label: "Sector Moats",
-          color: "bg-[#FEF08A]/95 text-[#854D0E] border border-[#FDE047]",
-          rotation: "rotate-3",
-        },
-        {
-          label: "₹5L – ₹2Cr+ Check Size",
-          color: "bg-[#CCFBF1] text-[#0F766E] border border-[#99F6E4]",
-          rotation: "-rotate-2",
-        },
-      ],
       icon: (
         <svg
           className="w-10 h-10 sm:w-12 sm:h-12 text-[#00A389]"
@@ -151,24 +137,20 @@ export function HowCapitalWorksSection() {
     },
     {
       number: "3",
-      title: "Structured Deal Calls",
-      pillText: "DEAL SESSIONS",
+      title: "Structured Deal Meetings",
+      badge: {
+        label: "Deal Meetings",
+        color: "bg-[#0A2540] text-white border border-black/20",
+        rotation: "-rotate-1",
+      },
       numberFill: "#0A2540",
       nodeColor: "bg-[#0A2540]",
       theme: {
         cardBg: "bg-gradient-to-br from-[#F8FAFC] via-white to-[#F1F5F9]",
         borderColor: "border-[#E2E8F0] hover:border-[#0A2540]/50",
-        pillBg: "bg-[#0A2540] text-white",
         iconColor: "text-[#0A2540]",
         iconBg: "bg-[#F1F5F9]",
       },
-      tapes: [
-        {
-          label: "1-on-1 Founder Sessions",
-          color: "bg-[#E2E8F0] text-[#334155] border border-[#CBD5E1]",
-          rotation: "rotate-2",
-        },
-      ],
       icon: (
         <svg
           className="w-10 h-10 sm:w-12 sm:h-12 text-[#0A2540]"
@@ -189,18 +171,21 @@ export function HowCapitalWorksSection() {
         </svg>
       ),
       description:
-        "Interested capital partners participate in direct, structured deal calls with founders to evaluate unit economics, expansion milestones, and commercial terms.",
+        "Interested capital partners participate in direct, structured deal meetings with founders to evaluate unit economics, expansion milestones, and commercial terms.",
     },
     {
       number: "4",
       title: "Direct Contract Execution",
-      pillText: "DIRECT CONTRACT",
+      badge: {
+        label: "Direct Contract",
+        color: "bg-gradient-to-r from-[#635BFF] to-[#00A389] text-white border border-[#635BFF]/30",
+        rotation: "rotate-2",
+      },
       numberFill: "#00D4B2",
       nodeColor: "bg-gradient-to-r from-[#635BFF] to-[#00A389]",
       theme: {
         cardBg: "bg-gradient-to-br from-[#F7F8FF] via-white to-[#F0FDFB]",
         borderColor: "border-[#CBD5E1] hover:border-[#00D4B2]",
-        pillBg: "bg-gradient-to-r from-[#635BFF] to-[#00A389] text-white",
         iconColor: "text-[#635BFF]",
         iconBg: "bg-[#F0F0FF]",
       },
@@ -311,22 +296,17 @@ export function HowCapitalWorksSection() {
               <div
                 className={`flex-1 rounded-[24px] sm:rounded-[32px] ${step.theme.cardBg} border-2 ${step.theme.borderColor} shadow-[0_4px_20px_rgba(10,37,64,0.06)] hover:shadow-[0_12px_32px_rgba(10,37,64,0.09)] transition-all duration-300 p-5 sm:p-7 relative overflow-hidden`}
               >
-                {/* Washi Tape Stickers (Top-right corner accents matching reference image) */}
-                {step.tapes && step.tapes.length > 0 && (
-                  <div className="absolute top-3 sm:top-4 right-3 sm:right-5 flex flex-col sm:flex-row items-end sm:items-center gap-1.5 z-20 pointer-events-none">
-                    {step.tapes.map((tape, idx) => (
-                      <span
-                        key={idx}
-                        className={`inline-block px-2.5 sm:px-3 py-1 rounded-xs font-mono font-bold text-[10.5px] sm:text-xs shadow-2xs select-none ${tape.color} ${tape.rotation} transition-transform duration-300 group-hover:rotate-0`}
-                      >
-                        {tape.label}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                {/* Washi Tape Badge (Top-right corner accent matching reference image) */}
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-5 z-20 pointer-events-none">
+                  <span
+                    className={`inline-block px-3 py-1 rounded-xs font-mono font-bold text-xs sm:text-[12.5px] shadow-xs select-none uppercase tracking-wider ${step.badge.color} ${step.badge.rotation} transition-transform duration-300 group-hover:rotate-0`}
+                  >
+                    {step.badge.label}
+                  </span>
+                </div>
 
-                {/* Card Header: Icon + Title + Pill Badge */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-4 pr-16 sm:pr-24">
+                {/* Card Header: Icon + Title */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-4 pr-24 sm:pr-36">
                   <div className="flex items-center gap-3">
                     <div
                       className={`w-11 h-11 sm:w-13 sm:h-13 rounded-2xl ${step.theme.iconBg} flex items-center justify-center p-2 shrink-0 border border-black/5 shadow-2xs transition-transform duration-300 group-hover:scale-105`}
@@ -337,11 +317,6 @@ export function HowCapitalWorksSection() {
                       <h2 className="text-lg sm:text-2xl font-extrabold text-[#0A2540] tracking-tight leading-snug">
                         {step.title}
                       </h2>
-                      <span
-                        className={`inline-block mt-1 py-0.5 px-2.5 rounded-full ${step.theme.pillBg} font-black text-[10px] sm:text-[11px] tracking-wider uppercase shadow-2xs select-none`}
-                      >
-                        {step.pillText}
-                      </span>
                     </div>
                   </div>
                 </div>
