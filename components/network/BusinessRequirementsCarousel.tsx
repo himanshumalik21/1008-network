@@ -211,26 +211,7 @@ export function BusinessRequirementsCarousel() {
       {/* Ambient Radiant Glow (Teal & Iris) */}
       <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[650px] h-96 bg-gradient-to-r from-[#00D4B2]/08 via-[#635BFF]/06 to-transparent blur-[140px] pointer-events-none" />
 
-      {/* Decorative Halftone Accent in Top Corner */}
-      <div
-        className="absolute -top-12 -right-12 w-64 h-64 pointer-events-none opacity-20"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 200 200" className="w-full h-full text-[#00A389]">
-          <defs>
-            <pattern id="br-tr" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-              <circle cx="6" cy="6" r="2.6" fill="currentColor" />
-            </pattern>
-            <mask id="blob-mask-br">
-              <path
-                d="M130,20 C170,30 190,70 185,120 C180,170 140,195 90,185 C40,175 10,135 25,85 C40,35 90,10 130,20 Z"
-                fill="white"
-              />
-            </mask>
-          </defs>
-          <rect width="200" height="200" fill="url(#br-tr)" mask="url(#blob-mask-br)" />
-        </svg>
-      </div>
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}

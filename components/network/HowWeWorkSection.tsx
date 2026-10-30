@@ -3,6 +3,7 @@
 import React from "react";
 import { Badge } from "@/components/brand/Badge";
 import { SpinningGlobe } from "./SpinningGlobe";
+import { ConnectingNetworkGraphic } from "./ConnectingNetworkGraphic";
 
 interface HowWeWorkSectionProps {
   onOpenPostModal?: () => void;
@@ -173,46 +174,9 @@ export function HowWeWorkSection({
       {/* Ambient Radial Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-r from-[#635BFF]/10 via-[#00D4B2]/08 to-[#4F46E5]/06 blur-[130px] pointer-events-none" />
 
-      {/* Top-Right Halftone Stipple Pattern */}
-      <div
-        className="absolute -top-10 -right-10 w-72 sm:w-96 h-72 sm:h-96 pointer-events-none opacity-30"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 200 200" className="w-full h-full text-[#635BFF]">
-          <defs>
-            <pattern id="hw-tr" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-              <circle cx="6" cy="6" r="2.6" fill="currentColor" />
-            </pattern>
-            <mask id="blob-mask-tr">
-              <path
-                d="M130,20 C170,30 190,70 185,120 C180,170 140,195 90,185 C40,175 10,135 25,85 C40,35 90,10 130,20 Z"
-                fill="white"
-              />
-            </mask>
-          </defs>
-          <rect width="200" height="200" fill="url(#hw-tr)" mask="url(#blob-mask-tr)" />
-        </svg>
-      </div>
-
-      {/* Bottom-Left Halftone Stipple Pattern */}
-      <div
-        className="absolute -bottom-16 -left-16 w-80 sm:w-96 h-80 sm:h-96 pointer-events-none opacity-25"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 200 200" className="w-full h-full text-[#00A389]">
-          <defs>
-            <pattern id="hw-bl" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-              <circle cx="6" cy="6" r="2.6" fill="currentColor" />
-            </pattern>
-            <mask id="blob-mask-bl">
-              <path
-                d="M70,15 C120,5 175,40 165,95 C155,150 115,185 65,175 C15,165 5,120 15,70 C25,20 20,25 70,15 Z"
-                fill="white"
-              />
-            </mask>
-          </defs>
-          <rect width="200" height="200" fill="url(#hw-bl)" mask="url(#blob-mask-bl)" />
-        </svg>
+      {/* Top-Left Complete 3D Connecting Orbital Nexus (Theme: Connecting Founders & Talent) */}
+      <div className="absolute top-4 left-0 sm:top-6 sm:left-2 lg:top-8 lg:left-6 pointer-events-none opacity-40 sm:opacity-55 z-0">
+        <ConnectingNetworkGraphic size={340} />
       </div>
 
       {/* Bottom-Right Complete 3D Wireframe Spinning Globe */}

@@ -103,8 +103,8 @@ export function SpinningGlobe({ className = "", size = 360 }: SpinningGlobeProps
       lastTime = now;
 
       if (!prefersReducedMotion) {
-        // Slow majestic rotation: 1 full 360° revolution every ~45 seconds
-        currentAngle += (2 * Math.PI * delta) / 45;
+        // Calm majestic slow-motion rotation: 1 full 360° revolution every ~80 seconds
+        currentAngle += (2 * Math.PI * delta) / 80;
       }
 
       ctx.clearRect(0, 0, size, size);
