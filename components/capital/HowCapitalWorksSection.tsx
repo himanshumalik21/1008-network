@@ -4,23 +4,82 @@ import React from "react";
 import { Badge } from "@/components/brand/Badge";
 import { CapitalTopographicWave } from "./CapitalTopographicWave";
 
+// Large stylized illustrated number component matching reference image style
+function StylizedNumber({
+  num,
+  fill,
+  strokeColor = "#0A2540",
+  shadowColor = "rgba(10,37,64,0.18)",
+}: {
+  num: string;
+  fill: string;
+  strokeColor?: string;
+  shadowColor?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 76 96"
+      className="w-12 h-16 sm:w-16 sm:h-20 md:w-20 md:h-24 select-none shrink-0 drop-shadow-sm transition-transform duration-300 hover:scale-105"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label={`Step ${num}`}
+    >
+      <defs>
+        <filter id={`num-shadow-${num}`} x="-20%" y="-20%" width="150%" height="150%">
+          <feDropShadow dx="3" dy="4" stdDeviation="0" floodColor={shadowColor} />
+        </filter>
+        {num === "4" && (
+          <linearGradient id="grad-num-4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#635BFF" />
+            <stop offset="100%" stopColor="#00A389" />
+          </linearGradient>
+        )}
+      </defs>
+      <text
+        x="38"
+        y="76"
+        textAnchor="middle"
+        fontFamily="'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        fontWeight="900"
+        fontSize="78"
+        fill={num === "4" ? "url(#grad-num-4)" : fill}
+        stroke={strokeColor}
+        strokeWidth="6"
+        strokeLinejoin="round"
+        paintOrder="stroke fill"
+        filter={`url(#num-shadow-${num})`}
+      >
+        {num}
+      </text>
+    </svg>
+  );
+}
+
 export function HowCapitalWorksSection() {
   const steps = [
     {
       number: "1",
       title: "Submit Venture & Use of Funds",
       pillText: "SUBMIT VENTURE",
+      numberFill: "#635BFF",
+      nodeColor: "bg-[#635BFF]",
       theme: {
-        cardBg: "bg-[#F7F8FF]",
-        borderColor: "border-[#635BFF]/30 hover:border-[#635BFF]",
-        numberBg: "bg-[#635BFF]",
-        pillBg: "bg-[#635BFF]",
+        cardBg: "bg-gradient-to-br from-[#F7F8FF] via-white to-[#FAF5FF]",
+        borderColor: "border-[#E0E0FF] hover:border-[#635BFF]/50",
+        pillBg: "bg-[#635BFF] text-white",
         iconColor: "text-[#635BFF]",
         iconBg: "bg-[#F0F0FF]",
       },
+      tapes: [
+        {
+          label: "Cap Sheet & Capex",
+          color: "bg-[#EAE8FF] text-[#4F46E5] border border-[#D5D0FF]",
+          rotation: "-rotate-2",
+        },
+      ],
       icon: (
         <svg
-          className="w-12 h-12 sm:w-14 sm:h-14 text-[#635BFF]"
+          className="w-10 h-10 sm:w-12 sm:h-12 text-[#635BFF]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -31,7 +90,6 @@ export function HowCapitalWorksSection() {
           {/* Business Pitch & Cap Sheet Document */}
           <rect x="10" y="6" width="28" height="36" rx="5" className="fill-[#635BFF]/08 stroke-[#635BFF]" strokeWidth="2.4" />
           <path d="M16 14h16M16 20h10M16 26h6" stroke="#635BFF" strokeWidth="2.4" />
-          {/* Capital growth coin badge */}
           <circle cx="32" cy="30" r="7" className="fill-white stroke-[#635BFF]" strokeWidth="2.2" />
           <path d="M32 26v8M30 28h3.5a1.5 1.5 0 0 1 0 3H30.5a1.5 1.5 0 0 0 0 3H34" stroke="#635BFF" strokeWidth="2" />
         </svg>
@@ -43,17 +101,31 @@ export function HowCapitalWorksSection() {
       number: "2",
       title: "Thesis Review & Allocation Match",
       pillText: "THESIS MATCH",
+      numberFill: "#00A389",
+      nodeColor: "bg-[#00A389]",
       theme: {
-        cardBg: "bg-[#F0FDFB]",
-        borderColor: "border-[#00D4B2]/40 hover:border-[#00A389]",
-        numberBg: "bg-[#00A389]",
-        pillBg: "bg-[#00A389]",
+        cardBg: "bg-gradient-to-br from-[#F0FDFB] via-white to-[#E6FFFA]",
+        borderColor: "border-[#B2F5EA] hover:border-[#00A389]/60",
+        pillBg: "bg-[#00A389] text-white",
         iconColor: "text-[#00A389]",
         iconBg: "bg-[#E6FFFA]",
       },
+      // Two overlapping sticky tapes matching reference design ("Surveys" & "Interviews")
+      tapes: [
+        {
+          label: "Sector Moats",
+          color: "bg-[#FEF08A]/95 text-[#854D0E] border border-[#FDE047]",
+          rotation: "rotate-3",
+        },
+        {
+          label: "₹5L – ₹2Cr+ Check Size",
+          color: "bg-[#CCFBF1] text-[#0F766E] border border-[#99F6E4]",
+          rotation: "-rotate-2",
+        },
+      ],
       icon: (
         <svg
-          className="w-12 h-12 sm:w-14 sm:h-14 text-[#00A389]"
+          className="w-10 h-10 sm:w-12 sm:h-12 text-[#00A389]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -64,12 +136,10 @@ export function HowCapitalWorksSection() {
           {/* Radar allocation chip */}
           <rect x="11" y="11" width="26" height="26" rx="5" className="fill-[#00D4B2]/10 stroke-[#00A389]" strokeWidth="2.4" />
           <circle cx="24" cy="24" r="5" className="fill-[#00A389] stroke-[#00A389]" />
-          {/* Scan coordinates */}
           <line x1="24" y1="4" x2="24" y2="11" stroke="#00A389" strokeWidth="2.4" />
           <line x1="24" y1="37" x2="24" y2="44" stroke="#00A389" strokeWidth="2.4" />
           <line x1="4" y1="24" x2="11" y2="24" stroke="#00A389" strokeWidth="2.4" />
           <line x1="37" y1="24" x2="44" y2="24" stroke="#00A389" strokeWidth="2.4" />
-          {/* Aligned capital nodes */}
           <circle cx="16" cy="16" r="2" className="fill-[#00D4B2]" />
           <circle cx="32" cy="32" r="2" className="fill-[#00D4B2]" />
           <circle cx="16" cy="32" r="2" className="fill-[#00D4B2]" />
@@ -83,17 +153,25 @@ export function HowCapitalWorksSection() {
       number: "3",
       title: "Structured Deal Calls",
       pillText: "DEAL SESSIONS",
+      numberFill: "#0A2540",
+      nodeColor: "bg-[#0A2540]",
       theme: {
-        cardBg: "bg-[#F8FAFC]",
-        borderColor: "border-[#0A2540]/25 hover:border-[#0A2540]",
-        numberBg: "bg-[#0A2540]",
-        pillBg: "bg-[#0A2540]",
+        cardBg: "bg-gradient-to-br from-[#F8FAFC] via-white to-[#F1F5F9]",
+        borderColor: "border-[#E2E8F0] hover:border-[#0A2540]/50",
+        pillBg: "bg-[#0A2540] text-white",
         iconColor: "text-[#0A2540]",
         iconBg: "bg-[#F1F5F9]",
       },
+      tapes: [
+        {
+          label: "1-on-1 Founder Sessions",
+          color: "bg-[#E2E8F0] text-[#334155] border border-[#CBD5E1]",
+          rotation: "rotate-2",
+        },
+      ],
       icon: (
         <svg
-          className="w-12 h-12 sm:w-14 sm:h-14 text-[#0A2540]"
+          className="w-10 h-10 sm:w-12 sm:h-12 text-[#0A2540]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -105,9 +183,7 @@ export function HowCapitalWorksSection() {
           <rect x="8" y="9" width="32" height="30" rx="5" className="fill-[#0A2540]/06 stroke-[#0A2540]" strokeWidth="2.4" />
           <circle cx="19" cy="20" r="4.5" stroke="#0A2540" strokeWidth="2.2" />
           <path d="M12 31c0-3.5 3-5.5 7-5.5s7 2 7 5.5" stroke="#0A2540" strokeWidth="2.2" />
-          {/* Growth chart line */}
           <polyline points="27,27 31,23 35,25 39,19" stroke="#0A2540" strokeWidth="2.2" />
-          {/* Verified green delivery badge */}
           <circle cx="36" cy="32" r="5" className="fill-[#10B981] stroke-white" strokeWidth="2" />
           <path d="M34.5 32l1 1 2.5-2.5" stroke="white" strokeWidth="1.8" />
         </svg>
@@ -119,17 +195,21 @@ export function HowCapitalWorksSection() {
       number: "4",
       title: "Direct Contract Execution",
       pillText: "DIRECT CONTRACT",
+      numberFill: "#00D4B2",
+      nodeColor: "bg-gradient-to-r from-[#635BFF] to-[#00A389]",
       theme: {
         cardBg: "bg-gradient-to-br from-[#F7F8FF] via-white to-[#F0FDFB]",
-        borderColor: "border-[#635BFF]/35 hover:border-[#00D4B2]",
-        numberBg: "bg-gradient-to-r from-[#635BFF] to-[#00A389]",
-        pillBg: "bg-gradient-to-r from-[#635BFF] to-[#00A389]",
+        borderColor: "border-[#CBD5E1] hover:border-[#00D4B2]",
+        pillBg: "bg-gradient-to-r from-[#635BFF] to-[#00A389] text-white",
         iconColor: "text-[#635BFF]",
         iconBg: "bg-[#F0F0FF]",
       },
+      hasStickyNote: true,
+      stickyNoteText:
+        "Investors execute their independent due diligence and contract directly with the company entity. Direct facilitation with 100% operational transparency.",
       icon: (
         <svg
-          className="w-12 h-12 sm:w-14 sm:h-14 text-[#635BFF]"
+          className="w-10 h-10 sm:w-12 sm:h-12 text-[#635BFF]"
           viewBox="0 0 48 48"
           fill="none"
           stroke="currentColor"
@@ -141,7 +221,6 @@ export function HowCapitalWorksSection() {
           <path d="M16 26l6-6a4 4 0 0 1 5.6 0l2.5 2.5a4 4 0 0 1 0 5.6L24 34l-8-8z" className="fill-[#635BFF]/10 stroke-[#635BFF]" strokeWidth="2.4" />
           <path d="M26 18l4.5-4.5a3 3 0 0 1 4.2 0l3 3a3 3 0 0 1 0 4.2L33 25" stroke="#635BFF" strokeWidth="2.2" />
           <path d="M8 20l6-6a3 3 0 0 1 4.2 0l2 2" stroke="#635BFF" strokeWidth="2.2" />
-          {/* Mutual trust spark */}
           <circle cx="24" cy="9" r="3" className="fill-[#00D4B2]" />
         </svg>
       ),
@@ -151,8 +230,11 @@ export function HowCapitalWorksSection() {
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-transparent">
-      {/* Dynamic 3D Undulating Topographical Mesh (Slide 1 & Slide 14 Inspired) */}
+    <section className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-transparent">
+      {/* Background Dot-Grid Texture (Inspired by Reference Image Design) */}
+      <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[size:24px_24px] opacity-40 pointer-events-none" />
+
+      {/* Dynamic 3D Undulating Topographical Mesh */}
       <div className="absolute -top-10 -right-16 sm:top-2 sm:-right-8 lg:top-4 lg:right-0 w-[420px] sm:w-[620px] lg:w-[760px] h-[340px] sm:h-[440px] lg:h-[480px] pointer-events-none opacity-60 sm:opacity-80 z-0">
         <CapitalTopographicWave />
       </div>
@@ -168,13 +250,19 @@ export function HowCapitalWorksSection() {
       {/* ============================================================ */}
       {/* 1. HEADER & BADGES */}
       {/* ============================================================ */}
-      <div className="max-w-5xl mx-auto relative z-10 text-center mb-12 sm:mb-16 space-y-4">
-        <div className="inline-flex items-center gap-2 flex-wrap justify-center">
+      <div className="max-w-4xl mx-auto relative z-10 text-center mb-14 sm:mb-20 space-y-4">
+        {/* Top Floating Badge Row */}
+        <div className="inline-flex items-center gap-2.5 flex-wrap justify-center">
           <Badge variant="indigo" size="md" pulse>
             1008 Community • Capital & Investors
           </Badge>
           <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-3 py-1 rounded-full border border-[#B2F5EA]">
             Curated Direct Discovery
+          </span>
+
+          {/* Reference Image Signature: Tilted "4 steps" Tape Badge */}
+          <span className="inline-flex items-center text-xs font-mono font-extrabold uppercase px-3 py-1 rounded-xs bg-[#635BFF] text-white shadow-xs -rotate-2 select-none border border-[#5349DF]">
+            4 steps
           </span>
         </div>
 
@@ -192,40 +280,106 @@ export function HowCapitalWorksSection() {
       </div>
 
       {/* ============================================================ */}
-      {/* 2. 2x2 PROTOCOL MATRIX (1008 Brand Colors) */}
+      {/* 2. REDESIGNED VERTICAL TIMELINE PROCESS (Reference Image Style) */}
       {/* ============================================================ */}
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-7">
+        {/* Continuous Connecting Timeline Spine (Dark connecting line from Step 1 to Step 4) */}
+        <div
+          className="absolute left-[7px] sm:left-[9px] md:left-[11px] top-10 sm:top-12 bottom-16 sm:bottom-20 w-[3px] sm:w-[3.5px] bg-[#0A2540] rounded-full z-0 pointer-events-none"
+          aria-hidden="true"
+        />
+
+        <div className="space-y-8 sm:space-y-12">
           {steps.map((step) => (
             <div
               key={step.number}
-              className={`group relative rounded-[22px] sm:rounded-[26px] ${step.theme.cardBg} p-5 sm:p-6 lg:p-7 flex flex-col items-center justify-between shadow-[0_4px_16px_rgba(10,37,64,0.05)] border-2 ${step.theme.borderColor} hover:shadow-[0_12px_28px_rgba(10,37,64,0.08)] transition-all duration-300 min-h-[290px] sm:min-h-[310px]`}
+              className="relative flex items-start gap-3 sm:gap-6 lg:gap-8 group"
             >
-              {/* Floating Top-Left Number Circle */}
-              <div className="w-full flex items-center justify-start">
+              {/* Left Column: Timeline Node Dot + Big Stylized Number */}
+              <div className="flex items-center gap-2 sm:gap-4 shrink-0 pt-2 sm:pt-4 z-10">
+                {/* Colored Node Circle centered right over the vertical track line */}
                 <div
-                  className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full ${step.theme.numberBg} text-white font-extrabold text-sm sm:text-base flex items-center justify-center shadow-xs`}
-                >
-                  {step.number}
+                  className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full ${step.nodeColor} ring-4 ring-white shadow-xs shrink-0 transition-transform duration-300 group-hover:scale-125`}
+                  aria-hidden="true"
+                />
+
+                {/* Big Stylized Number (Hand-drawn / comic display contour style from reference image) */}
+                <StylizedNumber num={step.number} fill={step.numberFill} />
+              </div>
+
+              {/* Right Column: Soft Rounded Process Card */}
+              <div
+                className={`flex-1 rounded-[24px] sm:rounded-[32px] ${step.theme.cardBg} border-2 ${step.theme.borderColor} shadow-[0_4px_20px_rgba(10,37,64,0.06)] hover:shadow-[0_12px_32px_rgba(10,37,64,0.09)] transition-all duration-300 p-5 sm:p-7 relative overflow-hidden`}
+              >
+                {/* Washi Tape Stickers (Top-right corner accents matching reference image) */}
+                {step.tapes && step.tapes.length > 0 && (
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-5 flex flex-col sm:flex-row items-end sm:items-center gap-1.5 z-20 pointer-events-none">
+                    {step.tapes.map((tape, idx) => (
+                      <span
+                        key={idx}
+                        className={`inline-block px-2.5 sm:px-3 py-1 rounded-xs font-mono font-bold text-[10.5px] sm:text-xs shadow-2xs select-none ${tape.color} ${tape.rotation} transition-transform duration-300 group-hover:rotate-0`}
+                      >
+                        {tape.label}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Card Header: Icon + Title + Pill Badge */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-4 pr-16 sm:pr-24">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-11 h-11 sm:w-13 sm:h-13 rounded-2xl ${step.theme.iconBg} flex items-center justify-center p-2 shrink-0 border border-black/5 shadow-2xs transition-transform duration-300 group-hover:scale-105`}
+                    >
+                      {step.icon}
+                    </div>
+                    <div>
+                      <h2 className="text-lg sm:text-2xl font-extrabold text-[#0A2540] tracking-tight leading-snug">
+                        {step.title}
+                      </h2>
+                      <span
+                        className={`inline-block mt-1 py-0.5 px-2.5 rounded-full ${step.theme.pillBg} font-black text-[10px] sm:text-[11px] tracking-wider uppercase shadow-2xs select-none`}
+                      >
+                        {step.pillText}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              {/* Bold Center Graphic Icon */}
-              <div className="my-3 sm:my-4 flex items-center justify-center py-1 transition-transform duration-300 group-hover:scale-110">
-                {step.icon}
-              </div>
-
-              {/* Static Artwork Pill + Explanatory Subtext */}
-              <div className="w-full space-y-2.5 flex flex-col items-center">
-                <span
-                  className={`w-full max-w-[195px] py-2 px-3 rounded-full ${step.theme.pillBg} text-white font-black text-[11px] sm:text-[11.5px] tracking-wider uppercase shadow-2xs text-center select-none`}
-                >
-                  {step.pillText}
-                </span>
-
-                <p className="text-xs sm:text-[12.5px] text-[#425466] font-medium text-center leading-relaxed px-1 sm:px-2">
+                {/* Step Description */}
+                <p className="text-xs sm:text-[14.5px] text-[#425466] font-medium leading-relaxed max-w-2xl">
                   {step.description}
                 </p>
+
+                {/* Step 4 Specific: Signature Pinned Sticky Note (Reference Image Step 3 Style) */}
+                {step.hasStickyNote && (
+                  <div className="relative mt-5 sm:mt-6 pt-3">
+                    <div className="relative rounded-2xl bg-gradient-to-br from-[#FEFCE8] via-[#FFFBEB] to-[#FEF9C3] border-2 border-[#FDE047] p-4 sm:p-5 shadow-sm max-w-xl rotate-[-0.8deg] transition-transform duration-300 group-hover:rotate-0">
+                      {/* Left Translucent Frosted Washi Tape Strip */}
+                      <div
+                        className="absolute -top-2.5 left-6 w-12 sm:w-14 h-4 sm:h-5 bg-white/70 backdrop-blur-xs border border-white/80 shadow-2xs -rotate-12 rounded-2xs pointer-events-none"
+                        aria-hidden="true"
+                      />
+                      {/* Right Translucent Frosted Washi Tape Strip */}
+                      <div
+                        className="absolute -top-2.5 right-6 w-12 sm:w-14 h-4 sm:h-5 bg-white/70 backdrop-blur-xs border border-white/80 shadow-2xs rotate-12 rounded-2xs pointer-events-none"
+                        aria-hidden="true"
+                      />
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="w-2 h-2 rounded-full bg-[#00A389] mt-1.5 shrink-0" />
+                        <div>
+                          <p className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#854D0E] mb-1">
+                            Direct &amp; Non-Custodial Facilitation
+                          </p>
+                          <p className="text-xs sm:text-[13px] text-[#713F12] leading-relaxed font-medium">
+                            {step.stickyNoteText}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
