@@ -194,13 +194,13 @@ export function TalentArchetypesCarousel() {
       <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
         <div className="text-center sm:text-left space-y-2 max-w-2xl">
           <Badge variant="indigo" size="sm">
-            Vetted Talent Pool
+            Curated Talent Pool
           </Badge>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
-            Real Operators Seeking Co-Founder Roles
+            Verified Co-Founders & Operating Leads
           </h2>
           <p className="text-xs sm:text-sm text-[#425466]">
-            Verified engineers, commercial leads, and operators from r/developersIndia, LinkedIn, and startup networks ready to partner with business founders.
+            Senior builders, engineers, and commercial leaders actively vetted in the 1008 private talent pool, ready to partner with high-conviction ventures.
           </p>
         </div>
 

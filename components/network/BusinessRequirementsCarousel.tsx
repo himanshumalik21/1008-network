@@ -29,7 +29,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "AI Clinical Simulation for MBBS Doctors",
       sector: "HealthTech & AI",
-      source: "r/StartUpIndia Verified",
+      source: "Verified Founder Mandate",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       location: "Delhi NCR",
@@ -44,7 +44,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Lithium EV Battery Pack Assembly",
       sector: "CleanTech / EV",
-      source: "Direct 1008 Submission",
+      source: "Direct 1008 Mandate",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       location: "Pune (Chakan Industrial Belt)",
@@ -74,7 +74,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "School Bus Tracking & Child Safety IoT",
       sector: "Hardware & IoT",
-      source: "r/IndianStartups Verified",
+      source: "Active Founder Listing",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
       location: "Delhi NCR",
@@ -89,7 +89,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Clean Hydration & Electrolyte Brand",
       sector: "Consumer & D2C",
-      source: "LinkedIn Founder Post",
+      source: "Direct Founder Mandate",
       sourceBadge: "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]",
       badgeColor: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3]",
       location: "Bengaluru, Karnataka",
@@ -104,7 +104,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "GST & E-Way Bill Reconciliation SaaS",
       sector: "Fintech & B2B SaaS",
-      source: "Direct 1008 Submission",
+      source: "1008 Network Mandate",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
       location: "Mumbai / Pune",
@@ -119,7 +119,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Agro-Residue Biomass Pellet Plant",
       sector: "Clean Energy & Biofuels",
-      source: "Industrial Network Mandate",
+      source: "Industrial Venture Mandate",
       sourceBadge: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
       location: "Ludhiana, Punjab",
@@ -134,7 +134,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Point-of-Care Microfluidic Diagnostics",
       sector: "MedTech / DeepTech",
-      source: "Incubator Backed (IIT-M)",
+      source: "DeepTech Founder Mandate",
       sourceBadge: "bg-[#F5F3FF] text-[#6D28D9] border-[#DDD6FE]",
       badgeColor: "bg-[#F5F3FF] text-[#7C3AED] border-[#DDD6FE]",
       location: "Chennai, Tamil Nadu",
@@ -149,7 +149,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Campus Electric Scooter Fleet & App",
       sector: "Urban Mobility",
-      source: "r/StartUpIndia Verified",
+      source: "Active Founder Listing",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       location: "Bengaluru, Karnataka",
@@ -212,13 +212,13 @@ export function BusinessRequirementsCarousel() {
       <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between mb-8 gap-4">
         <div className="text-center sm:text-left space-y-2 max-w-2xl">
           <Badge variant="cyan" size="sm">
-            Active Founder Searches
+            Active Venture Mandates
           </Badge>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
-            What Real Business Owners Are Building
+            What Business Owners Are Building
           </h2>
           <p className="text-xs sm:text-sm text-[#425466]">
-            Sourced from verified founder submissions, LinkedIn network requests, and Indian startup communities looking for immediate co-founders and leadership.
+            Active requirements submitted by founders and business owners across India looking to match with co-founders, functional leads, and operating partners.
           </p>
         </div>
 
