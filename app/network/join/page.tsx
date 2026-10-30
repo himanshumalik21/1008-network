@@ -437,7 +437,7 @@ export default function RegisterProfilePage() {
               </div>
             </div>
 
-            {/* Legal Consent & DPDP Notice */}
+            {/* Legal Notice */}
             <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs text-[#627D98]">
               <div className="flex items-start gap-2">
                 <ShieldCheck className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
@@ -446,28 +446,23 @@ export default function RegisterProfilePage() {
                   <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
                     Terms & Mutual NDA
                   </Link>{" "}
-                  and consent under the{" "}
+                  and{" "}
                   <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
-                    DPDP Act 2023 Privacy Policy
-                  </Link>{" "}
-                  to process your professional profile for confidential co-founder matching.
+                    Privacy Policy
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-mono">
-                <ShieldCheck className="h-4 w-4 text-[#059669]" />
-                <span>Zero fees • Intros only with your explicit consent</span>
-              </div>
-
+            <div className="pt-4 border-t border-[#E6E8EB] flex justify-end">
               <Button
                 type="submit"
                 variant="primary"
                 size="lg"
                 isLoading={status === "submitting"}
                 rightIcon={<ArrowRight className="h-4 w-4" />}
-                className="font-semibold text-sm px-8 shadow-sm bg-[#00A389] hover:bg-[#008770] border-[#00A389]"
+                className="w-full sm:w-auto font-semibold text-sm px-8 shadow-sm bg-[#00A389] hover:bg-[#008770] border-[#00A389]"
               >
                 Register Profile (Confidential)
               </Button>

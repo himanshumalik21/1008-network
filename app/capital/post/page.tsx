@@ -283,9 +283,9 @@ export default function PostCapitalRequirementPage() {
                     <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
                       Terms of Service & Mutual NDA
                     </Link>
-                    , acknowledge that 1008 Network operates as a non-broker discovery facilitator, and consent to processing under our{" "}
+                    , acknowledge that 1008 Network operates as a non-broker discovery facilitator, and our{" "}
                     <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
-                      Privacy Policy (DPDP Act 2023)
+                      Privacy Policy
                     </Link>
                     .
                   </p>

@@ -538,7 +538,7 @@ export default function PostOpportunityPage() {
               </div>
             </div>
 
-            {/* Legal Consent & Terms Notice */}
+            {/* Legal Notice */}
             <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs text-[#627D98]">
               <div className="flex items-start gap-2">
                 <ShieldCheck className="h-4 w-4 text-[#059669] shrink-0 mt-0.5" />
@@ -547,9 +547,9 @@ export default function PostOpportunityPage() {
                   <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
                     Terms & Mutual NDA
                   </Link>{" "}
-                  (including 12-month non-circumvention terms), and consent to our{" "}
+                  (including 12-month non-circumvention terms), and our{" "}
                   <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
-                    DPDP Privacy Policy
+                    Privacy Policy
                   </Link>
                   .
                 </p>

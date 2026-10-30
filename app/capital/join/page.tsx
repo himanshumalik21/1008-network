@@ -343,9 +343,9 @@ export default function RegisterInvestorPage() {
                     <Link href="/terms" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
                       Terms of Service & Mutual NDA
                     </Link>
-                    , and consent to processing under our{" "}
+                    , and our{" "}
                     <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
-                      DPDP Privacy Policy
+                      Privacy Policy
                     </Link>
                     .
                   </p>

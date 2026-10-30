@@ -248,9 +248,9 @@ export const InvestIn1008Modal: React.FC<InvestIn1008ModalProps> = ({
                 <Link href="/terms#regulatory-disclaimer" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
                   Terms & Regulatory Exclusions
                 </Link>{" "}
-                and consent to processing under our{" "}
+                and our{" "}
                 <Link href="/privacy" className="text-[#635BFF] font-semibold hover:underline" target="_blank">
-                  DPDP Privacy Policy
+                  Privacy Policy
                 </Link>.
               </span>
             </div>

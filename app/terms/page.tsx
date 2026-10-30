@@ -380,7 +380,7 @@ export default function TermsPage() {
             href="/privacy"
             className="text-[#635BFF] hover:underline font-semibold"
           >
-            ← Review Privacy Policy & DPDP Data Governance
+            ← Review Privacy Policy
           </Link>
           <Link
             href="/"

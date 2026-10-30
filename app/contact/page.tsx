@@ -222,8 +222,8 @@ export default function ContactPage() {
                   <span>
                     Communications are protected under our{" "}
                     <Link href="/terms" className="text-[#635BFF] hover:underline font-medium">Mutual NDA</Link>{" "}
-                    and processed in accordance with our{" "}
-                    <Link href="/privacy" className="text-[#635BFF] hover:underline font-medium">DPDP Privacy Policy</Link>.
+                    and our{" "}
+                    <Link href="/privacy" className="text-[#635BFF] hover:underline font-medium">Privacy Policy</Link>.
                   </span>
                 </div>
 
