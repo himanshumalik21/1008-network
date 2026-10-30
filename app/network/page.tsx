@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { networkFaqs } from "@/data/faqs";
 import { HowWeWorkSection } from "@/components/network/HowWeWorkSection";
+import { TalentArchetypesCarousel } from "@/components/network/TalentArchetypesCarousel";
 import {
   Users,
   ArrowRight,
@@ -15,48 +16,11 @@ import {
   CheckCircle2,
   Briefcase,
   PlusCircle,
-  Cpu,
-  TrendingUp,
   UserCheck,
-  FileCheck2,
   AlertTriangle,
-  Layers,
-  Factory,
-  Search,
-  Send,
 } from "lucide-react";
 
 export default function NetworkPage() {
-  const matchedRoles = [
-    {
-      title: "Technical Co-Founder (CTO)",
-      tag: "Technology & AI",
-      badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
-      icon: Cpu,
-      description: "Senior engineering leaders, architects, and technical builders to design systems, build MVPs, and scale core technology.",
-    },
-    {
-      title: "Operations & Supply Chain Lead",
-      tag: "Operations & Execution",
-      badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
-      icon: Layers,
-      description: "Hands-on COOs and operating specialists managing procurement, logistics, vendor networks, and daily business delivery.",
-    },
-    {
-      title: "Go-to-Market & Sales Partner",
-      tag: "Revenue & Growth",
-      badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
-      icon: TrendingUp,
-      description: "Enterprise sales leaders and commercial directors with established industry relationships, distribution channels, and B2B pipelines.",
-    },
-    {
-      title: "Manufacturing & Factory Setup Head",
-      tag: "Industrial & Plants",
-      badgeColor: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
-      icon: Factory,
-      description: "Industrial veterans experienced in machinery procurement, factory licensing, site execution, and quality control.",
-    },
-  ];
 
   return (
     <div className="pt-20 sm:pt-24 pb-20 bg-[#FDFDFE] min-h-screen font-sans">
@@ -184,46 +148,9 @@ export default function NetworkPage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 4. ROLES MATCHED BY 1008 ALGORITHM */}
+      {/* 3. ROLES MATCHED BY 1008 ALGORITHM (CAROUSEL) */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
-          <Badge variant="indigo" size="sm">Talent Archetypes</Badge>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540] tracking-tight">
-            Roles We Match For Businesses
-          </h2>
-          <p className="text-xs sm:text-sm text-[#425466]">
-            Whether you need a full-time co-founder or an operational lead, our talent pool covers critical execution pillars.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {matchedRoles.map((role) => {
-            const Icon = role.icon;
-            return (
-              <div
-                key={role.title}
-                className="p-5.5 rounded-2xl bg-white border border-[#E6E8EB] space-y-3 hover:shadow-sm transition-all"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="w-9 h-9 rounded-xl bg-[#F6F9FC] flex items-center justify-center text-[#0A2540] border border-[#E2E8F0]">
-                    <Icon className="h-5 w-5 text-[#635BFF]" />
-                  </div>
-                  <span className={`text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full border ${role.badgeColor}`}>
-                    {role.tag}
-                  </span>
-                </div>
-                <h3 className="text-base font-bold text-[#0A2540]">
-                  {role.title}
-                </h3>
-                <p className="text-xs text-[#425466] leading-relaxed">
-                  {role.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <TalentArchetypesCarousel />
 
 
 
