@@ -159,7 +159,7 @@ export default function PostOpportunityPage() {
         replyTo: sanitizeInput(formData.founderEmail),
         botcheck: formData._hp_trap,
         data: {
-          actionRequired: "Manual editorial review and publishing approval for 60-day listing",
+          actionRequired: "Manual editorial review and publishing approval for listing",
           founderName: formData.founderName,
           founderEmail: formData.founderEmail,
           founderLinkedin: formData.founderLinkedin,
@@ -200,7 +200,7 @@ export default function PostOpportunityPage() {
       setStatus("success");
       setMessage(
         res?.message ||
-          "Your opportunity requirement has been received and routed to join@1008.network for editorial review. Once approved, your 60-day listing will be activated on the network board."
+          "Your opportunity requirement has been received and routed to join@1008.network for editorial review. Once approved, your listing will be activated on the network board."
       );
     } catch {
       setStatus("error");
@@ -226,7 +226,7 @@ export default function PostOpportunityPage() {
             Find Your Co-Founder or Startup Partner
           </h1>
           <p className="text-sm sm:text-base text-[#425466] leading-relaxed">
-            Submit your venture requirement confidentially. Requirements are sent to <span className="font-mono font-semibold text-[#0A2540]">join@1008.network</span> for review. Approved listings run for 60 days across the 1008 operator network.
+            Submit your venture requirement confidentially. Requirements are sent to <span className="font-mono font-semibold text-[#0A2540]">join@1008.network</span> for review.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ export default function PostOpportunityPage() {
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] text-xs text-[#627D98] max-w-md mx-auto space-y-1">
                 <div className="font-semibold text-[#0A2540]">What happens next?</div>
                 <div>1. Our editorial partner reviews the domain credentials and opportunity details.</div>
-                <div>2. Your 60-day listing will be published on the active network board.</div>
+                <div>2. Your listing will be published on the active network board.</div>
                 <div>3. Candidate applications will be forwarded directly to your email.</div>
               </div>
             </div>
@@ -556,19 +556,14 @@ export default function PostOpportunityPage() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#E6E8EB] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-1.5 text-xs text-[#627D98] font-mono">
-                <ShieldCheck className="h-4 w-4 text-[#059669]" />
-                <span>Zero placement fees • Direct matching review</span>
-              </div>
-
+            <div className="pt-4 border-t border-[#E6E8EB] flex justify-end">
               <Button
                 type="submit"
                 variant="primary"
                 size="lg"
                 isLoading={status === "submitting"}
                 rightIcon={<ArrowRight className="h-4 w-4" />}
-                className="font-semibold text-sm px-8 shadow-sm"
+                className="w-full sm:w-auto font-semibold text-sm px-8 shadow-sm"
               >
                 Submit Requirement for Review
               </Button>

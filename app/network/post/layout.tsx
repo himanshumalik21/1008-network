@@ -4,7 +4,7 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Post Co-Founder & Executive Talent Requirement | 1008 Partner Network",
   description:
-    "Founders can publish curated Co-Founder, CTO, or Head of Department roles for shared equity. Zero placement fees, direct candidate review, and curated founder introductions.",
+    "Founders can publish curated Co-Founder, CTO, or Head of Department roles for shared equity with direct candidate review and curated founder introductions.",
   keywords: [
     "Post Co-Founder Requirement India",
     "Find CTO for Startup",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Post Co-Founder & Executive Talent Requirement | 1008 Partner Network",
     description:
-      "Find your Technical Co-Founder, Operations Head, or GTM Sales Partner for shared equity. Zero placement fees.",
+      "Find your Technical Co-Founder, Operations Head, or GTM Sales Partner for shared equity with direct matching review.",
     url: "https://www.1008.network/network/post",
     siteName: "1008.network",
     type: "website",
