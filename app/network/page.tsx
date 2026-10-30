@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { PillarFAQ } from "@/components/ui/PillarFAQ";
 import { networkFaqs } from "@/data/faqs";
 import { HowWeWorkSection } from "@/components/network/HowWeWorkSection";
+import { BusinessRequirementsCarousel } from "@/components/network/BusinessRequirementsCarousel";
 import { TalentArchetypesCarousel } from "@/components/network/TalentArchetypesCarousel";
 import {
   Users,
@@ -148,7 +149,12 @@ export default function NetworkPage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 3. ROLES MATCHED BY 1008 ALGORITHM (CAROUSEL) */}
+      {/* 3. ACTIVE BUSINESS REQUIREMENTS (CAROUSEL) */}
+      {/* ============================================================ */}
+      <BusinessRequirementsCarousel />
+
+      {/* ============================================================ */}
+      {/* 4. ROLES MATCHED BY 1008 ALGORITHM (TALENT ARCHETYPES CAROUSEL) */}
       {/* ============================================================ */}
       <TalentArchetypesCarousel />
 
