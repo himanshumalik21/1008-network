@@ -146,20 +146,18 @@ export function TalentArchetypesCarousel() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount, setVisibleCount] = useState(3);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const updateVisible = () => {
       if (typeof window === "undefined") return;
-      if (window.innerWidth >= 1024) {
-        setVisibleCount(4);
-      } else if (window.innerWidth >= 768) {
-        setVisibleCount(3);
-      } else if (window.innerWidth >= 640) {
+      if (window.innerWidth < 640) {
+        setVisibleCount(1);
+      } else if (window.innerWidth < 1024) {
         setVisibleCount(2);
       } else {
-        setVisibleCount(1);
+        setVisibleCount(3);
       }
     };
 
@@ -241,16 +239,16 @@ export function TalentArchetypesCarousel() {
           </div>
         </div>
 
-      {/* The Carousel Track */}
+      {/* Carousel Viewport */}
       <div
-        className="relative overflow-hidden -mx-2.5 py-1"
+        className="overflow-hidden relative z-10"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
       >
         <div
-          className="flex transition-transform duration-500 ease-out"
+          className="flex transition-transform duration-500 ease-out -mx-2.5"
           style={{
             transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
           }}
@@ -261,63 +259,65 @@ export function TalentArchetypesCarousel() {
               <div
                 key={cand.handle}
                 style={{
-                  flex: `0 0 ${100 / visibleCount}%`,
+                  width: `${100 / visibleCount}%`,
                 }}
                 className="px-2.5 shrink-0"
               >
                 <div className="p-5 sm:p-5.5 rounded-2xl bg-white border border-[#CBD5E1]/80 space-y-3.5 shadow-xs hover:shadow-md hover:border-[#635BFF] transition-all h-full flex flex-col justify-between">
                   {/* Top Area: Tag, Icon & Candidate Info */}
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between gap-1">
+                    <div className="flex items-center justify-between gap-1 h-8">
                       <span
-                        className={`text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full border ${cand.badgeColor}`}
+                        className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${cand.badgeColor} truncate`}
                       >
                         {cand.tag}
                       </span>
-                      <div className="w-8 h-8 rounded-xl bg-[#F6F9FC] flex items-center justify-center text-[#0A2540] border border-[#E2E8F0] shadow-2xs">
+                      <div className="w-8 h-8 rounded-xl bg-[#F6F9FC] flex items-center justify-center text-[#0A2540] border border-[#E2E8F0] shadow-2xs shrink-0">
                         <Icon className={`h-4 w-4 ${cand.iconColor}`} />
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-[14px] sm:text-[15px] font-bold text-[#0A2540] leading-snug line-clamp-1">
+                      <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2 h-10 sm:h-11 flex items-center">
                         {cand.handle}
                       </h3>
-                      <div className="flex items-center gap-1.5 text-[11px] text-[#627D98] pt-1">
+                      <div className="flex items-center gap-1.5 text-xs text-[#627D98] pt-1 font-mono h-5">
                         <MapPin className="h-3 w-3 shrink-0 text-[#635BFF]" />
-                        <span>{cand.experience}</span>
+                        <span className="truncate">{cand.experience}</span>
                       </div>
                     </div>
 
-                    {/* Seeking Role & Track Record Container */}
-                    <div className="p-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-1">
-                      <div className="text-[10px] font-mono uppercase tracking-wider text-[#635BFF] font-semibold flex items-center gap-1">
-                        <UserCheck className="h-3 w-3" />
-                        <span>Seeking</span>
+                    {/* Seeking Role & Track Record Container (Locked uniform height) */}
+                    <div className="p-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-1 h-[88px] sm:h-[92px] flex flex-col justify-between">
+                      <div>
+                        <div className="text-[10px] font-mono uppercase tracking-wider text-[#635BFF] font-semibold flex items-center gap-1">
+                          <UserCheck className="h-3 w-3 shrink-0" />
+                          <span>Seeking</span>
+                        </div>
+                        <div className="text-xs font-bold text-[#0A2540] leading-tight line-clamp-1">
+                          {cand.roleSeeking}
+                        </div>
                       </div>
-                      <div className="text-xs font-bold text-[#0A2540] leading-tight">
-                        {cand.roleSeeking}
-                      </div>
-                      <div className="text-[10.5px] text-[#475569] leading-snug pt-0.5">
+                      <div className="text-[10.5px] text-[#475569] leading-tight truncate">
                         <span className="font-semibold text-[#0A2540]">Track Record:</span> {cand.trackRecord}
                       </div>
-                      <div className="text-[10px] text-[#475569] pt-0.5">
+                      <div className="text-[10px] text-[#475569] truncate">
                         Terms: <span className="font-semibold text-[#635BFF]">{cand.terms}</span>
                       </div>
                     </div>
 
-                    {/* Authentic Candidate Pitch */}
-                    <div className="relative pl-2.5 border-l-2 border-[#CBD5E1]">
-                      <p className="text-[11.5px] text-[#334155] leading-relaxed italic line-clamp-4">
+                    {/* Authentic Candidate Pitch (Locked uniform min-height) */}
+                    <div className="relative pl-2.5 border-l-2 border-[#CBD5E1] min-h-[68px] sm:min-h-[74px] flex items-start">
+                      <p className="text-[11.5px] text-[#334155] leading-relaxed italic line-clamp-3">
                         {cand.pitch}
                       </p>
                     </div>
                   </div>
 
-                  {/* Bottom Action Footer */}
-                  <div className="pt-2.5 border-t border-[#F1F5F9] flex items-center justify-between">
+                  {/* Bottom Action Footer (Locked to bottom) */}
+                  <div className="pt-2.5 border-t border-[#F1F5F9] mt-auto flex items-center justify-between">
                     <span className="text-[10.5px] font-medium text-[#15803D] flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse shrink-0" />
                       Available to Partner
                     </span>
                     <Link
