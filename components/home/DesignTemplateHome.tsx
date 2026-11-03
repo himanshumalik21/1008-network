@@ -204,9 +204,6 @@ export function DesignTemplateHome() {
             <Link href="/about" className="hover:text-[#0A2540] transition-colors">
               About
             </Link>
-            <Link href="/manifesto" className="hover:text-[#0A2540] transition-colors">
-              Manifesto
-            </Link>
           </div>
 
           {/* Right Column Links (Google style: Privacy, Terms, Contact, Socials) */}

@@ -93,11 +93,6 @@ export function Footer() {
                   Gigs & Sprints
                 </Link>
               </li>
-              <li>
-                <Link href="/readiness" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
-                  Readiness Diagnostic
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -110,11 +105,6 @@ export function Footer() {
               <li>
                 <Link href="/knowledge" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
                   Playbook
-                </Link>
-              </li>
-              <li>
-                <Link href="/manifesto" className="text-[#64748B] hover:text-[#635BFF] transition-colors">
-                  Insights & Manifesto
                 </Link>
               </li>
             </ul>

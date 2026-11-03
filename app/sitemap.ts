@@ -90,24 +90,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/readiness`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
   ];
 
   // Tier 3: Supporting Company Pages (Priority 0.7 & 0.5)
   const supportingRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/manifesto`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
