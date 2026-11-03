@@ -108,6 +108,7 @@ export function VexonHaloBackground() {
       const speed = radialSpread < 0 ? baseSpeed * 1.15 : baseSpeed * 0.9;
 
       particles.push({
+        colorType,
         baseAngle: Math.random() * Math.PI * 2,
         speed,
         radialDist: radialSpread,
