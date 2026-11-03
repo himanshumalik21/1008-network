@@ -150,8 +150,8 @@ export function GigCard({ gig, onApply }: GigCardProps) {
             </span>
           </div>
           <span className="text-[10px] text-[#64748B] flex items-center gap-1 font-mono">
-            <ShieldCheck className="h-3 w-3 text-[#00D4B2]" />
-            1008 Escrow • Milestone Sign-off
+            <CheckCircle2 className="h-3 w-3 text-[#00A389]" />
+            Milestone Sign-off • Verified Payout
           </span>
         </div>
 

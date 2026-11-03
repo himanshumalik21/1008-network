@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { initialGigs } from "@/data/gigs";
 import { GigItem, GigCategory } from "@/lib/types";
@@ -8,6 +8,7 @@ import { GigCard } from "@/components/gigs/GigCard";
 import { GigApplicationModal } from "@/components/gigs/GigApplicationModal";
 import { Badge } from "@/components/brand/Badge";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 import {
   Search,
   X,
@@ -27,6 +28,9 @@ import {
   Scale,
   Palette,
   Megaphone,
+  ChevronLeft,
+  ChevronRight,
+  LayoutGrid,
 } from "lucide-react";
 
 export default function GigsPage() {
@@ -35,6 +39,33 @@ export default function GigsPage() {
   const [selectedWorkMode, setSelectedWorkMode] = useState<string>("all");
   const [selectedDuration, setSelectedDuration] = useState<string>("all");
   const [selectedGigForApply, setSelectedGigForApply] = useState<GigItem | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState<number>(4);
+  const [deviceAutoCalculated, setDeviceAutoCalculated] = useState(true);
+
+  // Responsive device-based itemsPerPage detection
+  useEffect(() => {
+    const handleResize = () => {
+      if (!deviceAutoCalculated) return;
+      const width = typeof window !== "undefined" ? window.innerWidth : 1200;
+      if (width < 640) {
+        setItemsPerPage(2);
+      } else if (width < 1024) {
+        setItemsPerPage(4);
+      } else {
+        setItemsPerPage(4);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize, { passive: true });
+    window.addEventListener("orientationchange", handleResize, { passive: true });
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+    };
+  }, [deviceAutoCalculated]);
 
   // Category definitions with icons
   const categoryFilters = [
@@ -85,6 +116,35 @@ export default function GigsPage() {
     });
   }, [searchQuery, selectedCategory, selectedWorkMode, selectedDuration]);
 
+  // Reset to page 1 whenever filters or itemsPerPage change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, selectedWorkMode, selectedDuration, searchQuery, itemsPerPage]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredGigs.length / itemsPerPage));
+  const validPage = Math.min(Math.max(1, currentPage), totalPages);
+
+  const startIndex = (validPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, filteredGigs.length);
+
+  const paginatedGigs = useMemo(() => {
+    return filteredGigs.slice(startIndex, endIndex);
+  }, [filteredGigs, startIndex, endIndex]);
+
+  const handlePageChange = (newPage: number) => {
+    const targetPage = Math.max(1, Math.min(newPage, totalPages));
+    setCurrentPage(targetPage);
+    const gridElem = document.getElementById("browse-gigs");
+    if (gridElem) {
+      gridElem.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleCustomPageSize = (size: number) => {
+    setDeviceAutoCalculated(false);
+    setItemsPerPage(size);
+  };
+
   return (
     <div className="pt-24 pb-20 bg-[#FDFDFE] min-h-screen">
       {/* 1. Marketplace Top Hero */}
@@ -97,9 +157,6 @@ export default function GigsPage() {
             <Badge variant="indigo" size="md">
               1008 Community • Gigs & Project Sprints
             </Badge>
-            <span className="text-xs font-mono font-semibold text-[#00A389] bg-[#E6FFFA] px-2.5 py-0.5 rounded-full border border-[#B2F5EA]">
-              Fiverr & Upwork Curated Model
-            </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A2540] font-sans">
@@ -156,19 +213,6 @@ export default function GigsPage() {
             >
               Explore Active Sprints ({initialGigs.length} Live)
             </Button>
-          </div>
-
-          {/* Trust Value Props */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs text-[#64748B] font-mono">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="h-4 w-4 text-[#00D4B2]" /> 1008 Milestone Escrow
-            </span>
-            <span>•</span>
-            <span>Committed INR Budgets</span>
-            <span>•</span>
-            <span>1008 Curation & Review</span>
-            <span>•</span>
-            <span>Zero Agency Retainers</span>
           </div>
         </div>
       </section>
@@ -274,14 +318,117 @@ export default function GigsPage() {
 
         {/* Gigs Grid */}
         {filteredGigs.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {filteredGigs.map((gig) => (
-              <GigCard
-                key={gig.id}
-                gig={gig}
-                onApply={(g) => setSelectedGigForApply(g)}
-              />
-            ))}
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {paginatedGigs.map((gig) => (
+                <GigCard
+                  key={gig.id}
+                  gig={gig}
+                  onApply={(g) => setSelectedGigForApply(g)}
+                />
+              ))}
+            </div>
+
+            {/* Pagination & Device Display Controls */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E6E8EB] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+              {/* Status Info */}
+              <div className="flex items-center gap-2 text-xs text-[#425466] font-medium">
+                <span>
+                  Showing <strong className="text-[#0A2540]">{filteredGigs.length === 0 ? 0 : startIndex + 1}–{endIndex}</strong> of <strong className="text-[#0A2540]">{filteredGigs.length}</strong> sprints
+                </span>
+                {totalPages > 1 && (
+                  <span className="text-[11px] font-mono text-[#627D98] bg-[#F6F9FC] px-2 py-0.5 rounded border border-[#E6E8EB]">
+                    Page {validPage} of {totalPages}
+                  </span>
+                )}
+              </div>
+
+              {/* Page Controls & Navigation */}
+              <div className="flex items-center gap-1.5 flex-wrap justify-center">
+                {/* Previous Button */}
+                <button
+                  onClick={() => handlePageChange(validPage - 1)}
+                  disabled={validPage <= 1}
+                  aria-label="Previous page"
+                  className={cn(
+                    "px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1 border transition-all cursor-pointer",
+                    validPage <= 1
+                      ? "bg-[#F8FAFC] text-[#CBD5E1] border-[#E2E8F0] cursor-not-allowed"
+                      : "bg-white text-[#0A2540] border-[#E6E8EB] hover:border-[#635BFF] hover:text-[#635BFF] shadow-2xs"
+                  )}
+                >
+                  <ChevronLeft className="h-3.5 w-3.5" />
+                  <span className="hidden sm:inline">Prev</span>
+                </button>
+
+                {/* Page Number Buttons */}
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => {
+                  const isCurrent = pageNum === validPage;
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => handlePageChange(pageNum)}
+                      aria-current={isCurrent ? "page" : undefined}
+                      className={cn(
+                        "w-8 h-8 rounded-xl text-xs font-semibold transition-all border cursor-pointer flex items-center justify-center",
+                        isCurrent
+                          ? "bg-[#0A2540] text-white border-[#0A2540] shadow-xs"
+                          : "bg-white text-[#425466] border-[#E6E8EB] hover:text-[#0A2540] hover:border-[#CBD5E1]"
+                      )}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+
+                {/* Next Button */}
+                <button
+                  onClick={() => handlePageChange(validPage + 1)}
+                  disabled={validPage >= totalPages}
+                  aria-label="Next page"
+                  className={cn(
+                    "px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1 border transition-all cursor-pointer",
+                    validPage >= totalPages
+                      ? "bg-[#F8FAFC] text-[#CBD5E1] border-[#E2E8F0] cursor-not-allowed"
+                      : "bg-white text-[#0A2540] border-[#E6E8EB] hover:border-[#635BFF] hover:text-[#635BFF] shadow-2xs"
+                  )}
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <ChevronRight className="h-3.5 w-3.5" />
+                </button>
+              </div>
+
+              {/* Viewport Density Quick Switcher */}
+              <div className="flex items-center gap-1.5 text-xs text-[#627D98] border-t sm:border-t-0 pt-2 sm:pt-0 w-full sm:w-auto justify-between sm:justify-start">
+                <span className="text-[11px] font-mono flex items-center gap-1">
+                  <LayoutGrid className="h-3 w-3" /> Per page:
+                </span>
+                <div className="flex items-center gap-1 bg-[#F6F9FC] p-0.5 rounded-lg border border-[#E6E8EB]">
+                  {[
+                    { label: "2", value: 2 },
+                    { label: "4", value: 4 },
+                    { label: "6", value: 6 },
+                    { label: "8", value: 8 },
+                  ].map((option) => {
+                    const isSelected = itemsPerPage === option.value;
+                    return (
+                      <button
+                        key={option.label}
+                        onClick={() => handleCustomPageSize(option.value)}
+                        className={cn(
+                          "px-2 py-0.5 rounded text-[11px] font-mono font-semibold transition-all cursor-pointer",
+                          isSelected
+                            ? "bg-white text-[#635BFF] shadow-2xs border border-[#E0E0FF]"
+                            : "text-[#64748B] hover:text-[#0A2540]"
+                        )}
+                      >
+                        {option.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="p-12 rounded-3xl bg-white border border-[#E2E8F0] text-center space-y-4">
@@ -386,7 +533,7 @@ export default function GigsPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
-                  <span>1008 Network escrow protection on all milestones</span>
+                  <span>Direct milestone approvals & verified payout protection</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#00A389] shrink-0" />
