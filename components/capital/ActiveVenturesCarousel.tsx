@@ -275,9 +275,11 @@ export function ActiveVenturesCarousel() {
                             <IconComponent className={`h-4 w-4 ${item.iconColor}`} />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2 h-10 sm:h-11 flex items-center">
-                              {item.title}
-                            </h3>
+                            <div className="h-10 sm:h-11 flex items-center">
+                              <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2">
+                                {item.title}
+                              </h3>
+                            </div>
                             <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-1 font-mono h-5">
                               <MapPin className="h-3 w-3 text-[#94A3B8] shrink-0" />
                               <span className="truncate">{item.location}</span>

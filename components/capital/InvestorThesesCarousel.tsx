@@ -31,7 +31,7 @@ export function InvestorThesesCarousel() {
   const investors = [
     {
       handle: "Rajeev K. • Ex-Tier 1 Auto MD",
-      experience: "24 yrs mfg exp • Pune & Manesar",
+      experience: "24 yrs exp • Pune & Manesar",
       sector: "Industrial & Precision Mfg",
       badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
       icon: Factory,
@@ -45,8 +45,8 @@ export function InvestorThesesCarousel() {
     },
     {
       handle: "Nidhi S. • Ex-Fintech VP & Active Angel",
-      experience: "12 yrs product & GTM • Bengaluru",
-      sector: "B2B SaaS, Invoicing & GST",
+      experience: "12 yrs exp • Bengaluru",
+      sector: "B2B SaaS & Invoicing",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       icon: Coins,
       iconColor: "text-[#00A389]",
@@ -60,7 +60,7 @@ export function InvestorThesesCarousel() {
     {
       handle: "Mehta Multi-Family Office",
       experience: "2nd-Gen Allocators • Ahmedabad",
-      sector: "Industrial Capex & Agri Export",
+      sector: "Industrial Capex & Export",
       badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
       icon: Scale,
       iconColor: "text-[#D97706]",
@@ -73,8 +73,8 @@ export function InvestorThesesCarousel() {
     },
     {
       handle: "Arjun V. • Ex-Supply Chain VP",
-      experience: "15 yrs logistics ops • Delhi NCR",
-      sector: "Supply Chain & Cold Logistics",
+      experience: "15 yrs ops • Delhi NCR",
+      sector: "Supply Chain & Logistics",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
       icon: Truck,
       iconColor: "text-[#FF7043]",
@@ -87,7 +87,7 @@ export function InvestorThesesCarousel() {
     },
     {
       handle: "Dr. Sandeep B. • MedTech Syndicate",
-      experience: "19 yrs clinical & healthtech • Hyderabad",
+      experience: "19 yrs clinical • Hyderabad",
       sector: "Healthcare Devices & AI",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       icon: Cpu,
@@ -101,8 +101,8 @@ export function InvestorThesesCarousel() {
     },
     {
       handle: "Pooja T. • Ex-FMCG Category Director",
-      experience: "13 yrs brand merchandising • Mumbai",
-      sector: "Consumer Brands & Q-Commerce",
+      experience: "13 yrs brand exp • Mumbai",
+      sector: "Consumer Brands & Q-Comm",
       badgeColor: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3]",
       icon: ShoppingBag,
       iconColor: "text-[#E11D48]",
@@ -115,8 +115,8 @@ export function InvestorThesesCarousel() {
     },
     {
       handle: "Kunal R. • 2x Exited SaaS Founder",
-      experience: "14 yrs engineering & founder • Bengaluru",
-      sector: "Developer Tools & Vertical SaaS",
+      experience: "14 yrs engineering • Bengaluru",
+      sector: "Developer Tools & SaaS",
       badgeColor: "bg-[#F0FDF4] text-[#16A34A] border-[#BBF7D0]",
       icon: Sparkles,
       iconColor: "text-[#16A34A]",
@@ -129,8 +129,8 @@ export function InvestorThesesCarousel() {
     },
     {
       handle: "Singhania Syndicate • Export Allocators",
-      experience: "28 yrs industrial export • Surat & Mumbai",
-      sector: "Specialty Chem & Engineering",
+      experience: "28 yrs export ops • Surat & Mumbai",
+      sector: "Specialty Chem & Exports",
       badgeColor: "bg-[#FAF5FF] text-[#9333EA] border-[#E9D5FF]",
       icon: Building2,
       iconColor: "text-[#9333EA]",
@@ -271,26 +271,31 @@ export function InvestorThesesCarousel() {
                         </div>
 
                         <div className="flex items-start gap-2.5">
-                          <div className="w-8 h-8 rounded-lg bg-[#F8FAFC] border border-[#E6E8EB] flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-8 h-8 rounded-lg bg-[#F8FAFC] border border-[#E6E8EB] flex items-center justify-center shrink-0 mt-1">
                             <IconComponent className={`h-4 w-4 ${item.iconColor}`} />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-1 h-6 sm:h-7 flex items-center">
-                              {item.handle}
-                            </h3>
-                            <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-0.5 font-mono h-5">
-                              <MapPin className="h-3 w-3 text-[#94A3B8] shrink-0" />
-                              <span className="truncate">{item.experience}</span>
-                              <span className="text-[#CBD5E1] shrink-0">•</span>
-                              <ShieldCheck className="h-3 w-3 text-[#00A389] shrink-0" />
-                              <span className="text-[11px] font-bold text-[#008770] truncate">{item.sourceBadge}</span>
+                            <div className="h-10 sm:h-11 flex items-center">
+                              <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2">
+                                {item.handle}
+                              </h3>
+                            </div>
+                            <div className="flex flex-col gap-1 mt-1 font-mono text-xs">
+                              <div className="flex items-center gap-1.5 text-[#627D98] h-4">
+                                <MapPin className="h-3 w-3 text-[#94A3B8] shrink-0" />
+                                <span className="truncate">{item.experience}</span>
+                              </div>
+                              <div className="flex items-center gap-1 text-[11px] font-semibold text-[#00A389] h-4">
+                                <ShieldCheck className="h-3.5 w-3.5 text-[#00A389] shrink-0" />
+                                <span className="truncate">{item.sourceBadge}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       {/* Middle Area: Value-Add Moat (Locked uniform height) */}
-                      <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs h-[76px] flex flex-col justify-start">
+                      <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E6E8EB] space-y-1.5 text-xs h-[88px] sm:h-[92px] flex flex-col justify-center">
                         <div className="text-[10.5px] font-mono font-bold text-[#0A2540] uppercase tracking-wider flex items-center gap-1 shrink-0">
                           <CheckCircle2 className="h-3 w-3 text-[#10B981] shrink-0" />
                           <span>Strategic Value-Add:</span>
@@ -305,7 +310,7 @@ export function InvestorThesesCarousel() {
                         <div className="text-[11px] font-mono font-bold text-[#635BFF] uppercase tracking-wider">
                           Investment Thesis:
                         </div>
-                        <p className="text-xs text-[#475569] italic leading-relaxed line-clamp-3 min-h-[50px] sm:min-h-[54px]">
+                        <p className="text-xs text-[#475569] italic leading-relaxed line-clamp-3 min-h-[56px] sm:min-h-[60px]">
                           {item.pitch}
                         </p>
                       </div>

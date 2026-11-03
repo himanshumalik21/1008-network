@@ -283,9 +283,11 @@ export function BusinessRequirementsCarousel() {
                     </div>
 
                     <div>
-                      <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2 h-10 sm:h-11 flex items-center">
-                        {req.venture}
-                      </h3>
+                      <div className="h-10 sm:h-11 flex items-center">
+                        <h3 className="text-sm sm:text-base font-bold text-[#0A2540] leading-snug line-clamp-2">
+                          {req.venture}
+                        </h3>
+                      </div>
                       <div className="flex items-center gap-1.5 text-xs text-[#627D98] pt-1 font-mono h-5">
                         <MapPin className="h-3 w-3 shrink-0 text-[#00A389]" />
                         <span className="truncate">{req.location}</span>
