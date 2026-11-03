@@ -30,82 +30,116 @@ import {
 export function InvestorThesesCarousel() {
   const investors = [
     {
-      handle: "Rajeev K. • Ex-Industrial CXO & Angel",
-      experience: "22 yrs industry exp • Mumbai",
-      sector: "Industrial & Manufacturing",
+      handle: "Rajeev K. • Ex-Tier 1 Auto MD",
+      experience: "24 yrs mfg exp • Pune & Manesar",
+      sector: "Industrial & Precision Mfg",
       badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
       icon: Factory,
       iconColor: "text-[#635BFF]",
       ticket: "₹25L – ₹75L Check Size",
-      moat: "Direct buyer introductions with Tier 1 auto OEMs and precision machine tool vendors.",
+      sourceBadge: "ACMA Verified Angel",
+      moat: "Direct buyer introductions with Tier 1 auto OEMs (Maruti, Tata Motors, M&M) and precision machine tool vendors.",
       pitch:
         "“Looking for capital-efficient manufacturing and hardware startups with physical plant models. Can open doors with Tier 1 automotive and heavy engineering OEMs across Pune and export buyers.”",
       terms: "Angel Equity / Convertible Note",
     },
     {
       handle: "Nidhi S. • Ex-Fintech VP & Active Angel",
-      experience: "12 yrs exp • Bengaluru",
-      sector: "Fintech, Lending & B2B SaaS",
+      experience: "12 yrs product & GTM • Bengaluru",
+      sector: "B2B SaaS, Invoicing & GST",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       icon: Coins,
       iconColor: "text-[#00A389]",
       ticket: "₹15L – ₹40L Check Size",
-      moat: "Account Aggregator architecture, NBFC co-lending partnerships, and RBI compliance.",
+      sourceBadge: "LinkedIn Verified",
+      moat: "Bank API sandbox access, Account Aggregator architecture, and NBFC co-lending partnerships.",
       pitch:
         "“Interested in vertical SaaS and workflow reconciliation software solving real accounting or invoice friction for MSMEs. Looking for high gross margin software with near-zero churn.”",
       terms: "Lead Angel / Advisory Board",
     },
     {
-      handle: "Mehta Family Office • 2nd Gen Allocator",
-      experience: "Multi-Family Office • Ahmedabad",
-      sector: "Textiles, Agri & Industrial Capex",
+      handle: "Mehta Multi-Family Office",
+      experience: "2nd-Gen Allocators • Ahmedabad",
+      sector: "Industrial Capex & Agri Export",
       badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
       icon: Scale,
       iconColor: "text-[#D97706]",
       ticket: "₹50L – ₹2.5 Cr Check Size",
-      moat: "Industrial warehouse land, port container logistics, and commercial debt syndication.",
+      sourceBadge: "MCA RoC Verified",
+      moat: "Port logistics access at Mundra, warehouse land leases, and working capital debt syndication.",
       pitch:
         "“We back profitable physical businesses transitioning from unorganized to modern branded operations. Focus on sustainable agro-processing, industrial packaging, and export manufacturing.”",
       terms: "Growth Equity / Structured Debt",
     },
     {
-      handle: "Arjun V. • Ex-Logistics COO & Angel",
-      experience: "14 yrs exp • Delhi NCR",
+      handle: "Arjun V. • Ex-Supply Chain VP",
+      experience: "15 yrs logistics ops • Delhi NCR",
       sector: "Supply Chain & Cold Logistics",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
       icon: Truck,
       iconColor: "text-[#FF7043]",
       ticket: "₹20L – ₹50L Check Size",
-      moat: "Inter-state fleet management, micro dark stores, and cold-chain route optimization.",
+      sourceBadge: "Verified Operator",
+      moat: "Inter-state truck fleet tie-ups, micro-hub dark stores, and cold-chain route density optimization.",
       pitch:
         "“Looking for logistics infrastructure, EV commercial fleets, and cold-chain temperature monitoring startups. I help optimize operational cost per delivery run and unit economics.”",
       terms: "Operator Angel / Board Advisor",
     },
     {
       handle: "Dr. Sandeep B. • MedTech Syndicate",
-      experience: "18 yrs Clinical & Ventures • Hyderabad",
-      sector: "Healthcare & Diagnostic Hardware",
+      experience: "19 yrs clinical & healthtech • Hyderabad",
+      sector: "Healthcare Devices & AI",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       icon: Cpu,
       iconColor: "text-[#2563EB]",
       ticket: "₹30L – ₹1.0 Cr Check Size",
-      moat: "Hospital procurement committees, CDSCO clearance, and live clinical pilot beds.",
+      sourceBadge: "IMA Verified Lead",
+      moat: "Hospital procurement committees, CDSCO clearance navigation, and live clinical pilot beds across 9 hospital networks.",
       pitch:
-        "“We back clinical simulation, low-cost diagnostic hardware, and assistive healthcare technology. We provide pilot testing beds across 8 partner hospital networks in South India.”",
+        "“We back clinical simulation, low-cost diagnostic hardware, and assistive healthcare technology. We provide pilot testing beds across 9 partner hospital networks in South India.”",
       terms: "Syndicate Equity / Milestone Tranches",
     },
     {
       handle: "Pooja T. • Ex-FMCG Category Director",
-      experience: "11 yrs exp • Mumbai / Bengaluru",
+      experience: "13 yrs brand merchandising • Mumbai",
       sector: "Consumer Brands & Q-Commerce",
       badgeColor: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3]",
       icon: ShoppingBag,
       iconColor: "text-[#E11D48]",
-      ticket: "₹25L – ₹60L Check Size",
-      moat: "Zepto/Blinkit buyer access, packaging supplier terms, and retail distributor margins.",
+      ticket: "₹15L – ₹35L Check Size",
+      sourceBadge: "Verified FMCG Lead",
+      moat: "Direct listing acceleration on Blinkit/Zepto/Instamart and modern trade distributor tie-ups.",
       pitch:
         "“Seeking high-margin functional food, clean beverage, and personal care brands with genuine repeat purchase rates. I assist with distributor terms, channel margins, and retail listing.”",
       terms: "Angel Equity + Growth Mentorship",
+    },
+    {
+      handle: "Kunal R. • 2x Exited SaaS Founder",
+      experience: "14 yrs engineering & founder • Bengaluru",
+      sector: "Developer Tools & Vertical SaaS",
+      badgeColor: "bg-[#F0FDF4] text-[#16A34A] border-[#BBF7D0]",
+      icon: Sparkles,
+      iconColor: "text-[#16A34A]",
+      ticket: "₹25L – ₹60L Check Size",
+      sourceBadge: "Exited Founder",
+      moat: "US/Europe GTM playbooks, AWS credits, and technical architecture advisory for global scale.",
+      pitch:
+        "“Scaling from zero to first $1M ARR in US/Europe enterprise markets. Looking for engineering-led teams building devtools, API infrastructure, or deep workflow SaaS.”",
+      terms: "Direct Angel Equity / SAFE Note",
+    },
+    {
+      handle: "Singhania Syndicate • Export Allocators",
+      experience: "28 yrs industrial export • Surat & Mumbai",
+      sector: "Specialty Chem & Engineering",
+      badgeColor: "bg-[#FAF5FF] text-[#9333EA] border-[#E9D5FF]",
+      icon: Building2,
+      iconColor: "text-[#9333EA]",
+      ticket: "₹50L – ₹1.5 Cr Check Size",
+      sourceBadge: "Export Council Verified",
+      moat: "Export buyer contracts in Germany, US & Japan; environmental clearance and industrial plant advisory.",
+      pitch:
+        "“We syndicate capital for precision chemicals, industrial catalysts, and export-oriented fabrication units. We provide captive buyer off-take agreements in European and Japanese markets.”",
+      terms: "Syndicate Equity / Pre-IPO Tranche",
     },
   ];
 
@@ -247,6 +281,9 @@ export function InvestorThesesCarousel() {
                             <div className="flex items-center gap-1.5 text-xs text-[#627D98] mt-0.5 font-mono h-5">
                               <MapPin className="h-3 w-3 text-[#94A3B8] shrink-0" />
                               <span className="truncate">{item.experience}</span>
+                              <span className="text-[#CBD5E1] shrink-0">•</span>
+                              <ShieldCheck className="h-3 w-3 text-[#00A389] shrink-0" />
+                              <span className="text-[11px] font-bold text-[#008770] truncate">{item.sourceBadge}</span>
                             </div>
                           </div>
                         </div>

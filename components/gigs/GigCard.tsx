@@ -58,7 +58,7 @@ export function GigCard({ gig, onApply }: GigCardProps) {
             {gig.verifiedBusiness && (
               <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#00A389] bg-[#E6FFFA] px-2 py-0.5 rounded-full border border-[#B2F5EA]">
                 <ShieldCheck className="h-3 w-3 text-[#00A389]" />
-                Verified Business
+                {gig.verificationBadge || "Verified Business"}
               </span>
             )}
 

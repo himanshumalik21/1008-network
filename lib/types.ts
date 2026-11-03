@@ -292,6 +292,7 @@ export interface GigItem {
   featured?: boolean;
   urgency?: "Immediate" | "Within 2 Weeks" | "Flexible";
   verifiedBusiness?: boolean;
+  verificationBadge?: string;
   experienceLevel?: "Intermediate" | "Expert" | "Any Specialist";
   escrowProtected?: boolean;
   proposalsCount?: number;
