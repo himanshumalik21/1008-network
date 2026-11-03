@@ -4,8 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
-import { StudioApplicationModal } from "@/components/studio/StudioApplicationModal";
-import { trackStudioModalOpen } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
@@ -13,7 +11,6 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,12 +45,6 @@ export function Navbar() {
       return pathname === "/knowledge" || pathname.startsWith("/knowledge");
     }
     return pathname === href;
-  };
-
-  const handleOpenModal = () => {
-    trackStudioModalOpen("navbar_cta");
-    setModalOpen(true);
-    setMobileMenuOpen(false);
   };
 
   const isHome = pathname === "/";
@@ -101,22 +92,23 @@ export function Navbar() {
 
             {/* 3. Action Pill Button (1008 Brand Indigo) */}
             <div className="hidden md:flex items-center shrink-0">
-              <button
-                onClick={handleOpenModal}
-                className="px-5 py-2 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs sm:text-sm shadow-[0_2px_4px_rgba(99,91,255,0.2)] transition-all hover:scale-105 active:scale-95 cursor-pointer"
+              <Link
+                href="/get-started"
+                className="px-5 py-2 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs sm:text-sm shadow-[0_2px_4px_rgba(99,91,255,0.2)] transition-all hover:scale-105 active:scale-95 cursor-pointer inline-flex items-center justify-center"
               >
                 Get Started
-              </button>
+              </Link>
             </div>
 
             {/* Mobile / Tablet Actions & Hamburger */}
             <div className="flex md:hidden items-center gap-2">
-              <button
-                onClick={handleOpenModal}
-                className="px-3.5 py-1.5 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs shadow-xs shrink-0 cursor-pointer"
+              <Link
+                href="/get-started"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3.5 py-1.5 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-xs shadow-xs shrink-0 cursor-pointer inline-flex items-center justify-center"
               >
                 Get Started
-              </button>
+              </Link>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-1.5 sm:p-2 rounded-lg transition-colors focus:outline-none shrink-0 text-[#0A2540] hover:bg-[#F6F9FC] border border-[#E6E8EB]"
@@ -154,15 +146,19 @@ export function Navbar() {
                 );
               })}
             </div>
+
+            <div className="pt-2 border-t border-[#E6E8EB]">
+              <Link
+                href="/get-started"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 rounded-full bg-[#635BFF] hover:bg-[#5851EA] text-white font-semibold text-sm shadow-sm flex items-center justify-center text-center transition-all"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         )}
       </header>
-
-      {/* Global Application Modal */}
-      <StudioApplicationModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
     </>
   );
 }
