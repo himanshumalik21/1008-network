@@ -2,14 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { IsometricBackground3D } from "./IsometricBackground3D";
+import { VexonHaloBackground } from "./VexonHaloBackground";
 import { ArrowRight, Plus } from "lucide-react";
 
 export function DesignTemplateHome() {
   return (
     <div className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between font-sans antialiased pt-16 sm:pt-18 lg:pt-16 selection:bg-[#635BFF]/15 selection:text-[#0A2540] overflow-hidden">
-      {/* 3D Geometric Isometric Wireframe Background (Decagon-style) */}
-      <IsometricBackground3D />
+      {/* Vexon-style Solar Halo Particle Background (GetLayers Inspiration) */}
+      <VexonHaloBackground />
 
       {/* ============================================================ */}
       {/* 1. COMMUNITY ECOSYSTEM */}

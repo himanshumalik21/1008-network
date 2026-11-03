@@ -12,10 +12,8 @@ import {
   HelpCircle,
   CheckCircle2,
   ArrowRight,
-  ShieldCheck,
   Sparkles,
   ChevronRight,
-  Clock,
   Phone,
   Mail,
   User,
@@ -463,20 +461,6 @@ export default function GetStartedPage() {
                       </>
                     )}
                   </button>
-
-                  <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] text-[#64748B] text-center pt-1 font-mono">
-                    <span className="flex items-center gap-1">
-                      <ShieldCheck className="h-3.5 w-3.5 text-[#00A389]" />
-                      <span>Zero Broker Fees</span>
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="h-3.5 w-3.5 text-[#635BFF]" />
-                      <span>24-Hour Review & Response</span>
-                    </span>
-                    <span>•</span>
-                    <span>Confidential</span>
-                  </div>
                 </div>
               </form>
             </div>
