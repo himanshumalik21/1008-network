@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { VexonHaloBackground } from "./VexonHaloBackground";
 import { ArrowRight, Plus } from "lucide-react";
 
@@ -76,8 +77,14 @@ export function DesignTemplateHome() {
                   <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white/85 text-left">
                     Partners & Talent
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#635BFF] shadow-xs group-hover:scale-105 transition-transform shrink-0">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 relative shrink-0">
+                    <Image
+                      src="/images/3dicons/rocket-dynamic-gradient.png"
+                      alt="Co-Founders & Talent 3D Icon"
+                      width={44}
+                      height={44}
+                      className="w-full h-full object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.22)] group-hover:scale-115 group-hover:-translate-y-1 transition-transform duration-300 pointer-events-none"
+                    />
                   </div>
                 </div>
                 <div className="pt-2 text-left w-full">
@@ -99,8 +106,14 @@ export function DesignTemplateHome() {
                   <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white/85 text-left">
                     Angel Funding
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E24A29] shadow-xs group-hover:scale-105 transition-transform shrink-0">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 relative shrink-0">
+                    <Image
+                      src="/images/3dicons/3d-coin-dynamic-gradient.png"
+                      alt="Funding & Investors 3D Icon"
+                      width={44}
+                      height={44}
+                      className="w-full h-full object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.22)] group-hover:scale-115 group-hover:-translate-y-1 transition-transform duration-300 pointer-events-none"
+                    />
                   </div>
                 </div>
                 <div className="pt-2 text-left w-full">
@@ -122,8 +135,14 @@ export function DesignTemplateHome() {
                   <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white/85 text-left">
                     Operations & Tech
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0A6C5B] shadow-xs group-hover:scale-105 transition-transform shrink-0">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 relative shrink-0">
+                    <Image
+                      src="/images/3dicons/setting-dynamic-gradient.png"
+                      alt="Outsource Operations 3D Icon"
+                      width={44}
+                      height={44}
+                      className="w-full h-full object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.22)] group-hover:scale-115 group-hover:-translate-y-1 transition-transform duration-300 pointer-events-none"
+                    />
                   </div>
                 </div>
                 <div className="pt-2 text-left w-full">
@@ -145,8 +164,14 @@ export function DesignTemplateHome() {
                   <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#425466] text-left">
                     Short-Term Projects
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-[#0A2540] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform shrink-0">
-                    <Plus className="h-4 w-4 stroke-[2.5] group-hover:rotate-90 transition-transform duration-300" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 relative shrink-0">
+                    <Image
+                      src="/images/3dicons/flash-dynamic-gradient.png"
+                      alt="Gigs & Sprints 3D Icon"
+                      width={44}
+                      height={44}
+                      className="w-full h-full object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] group-hover:scale-115 group-hover:-translate-y-1 transition-transform duration-300 pointer-events-none"
+                    />
                   </div>
                 </div>
                 <div className="pt-2 text-left w-full">
@@ -165,20 +190,31 @@ export function DesignTemplateHome() {
               href="/knowledge"
               className="relative rounded-[22px] bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 p-5 flex items-center justify-between gap-4 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.5)] shadow-[0_8px_24px_-6px_rgba(0,0,0,0.3)] group text-left"
             >
-              <div className="space-y-1 max-w-xl xl:max-w-2xl text-left">
-                <div className="flex items-center gap-2">
-                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Knowledge Hub
-                  </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
-                  <span className="text-[11px] sm:text-xs text-zinc-400">Founder Playbooks</span>
+              <div className="flex items-center gap-4 sm:gap-5 min-w-0">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 relative shrink-0">
+                  <Image
+                    src="/images/3dicons/notebook-dynamic-gradient.png"
+                    alt="Playbooks & Research 3D Icon"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.5)] group-hover:scale-115 group-hover:-translate-y-1 transition-transform duration-300 pointer-events-none"
+                  />
                 </div>
-                <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug text-left">
-                  Playbooks & Business Opportunities
-                </h3>
-                <p className="text-zinc-300/90 text-xs sm:text-[13px] leading-relaxed font-normal text-left">
-                  Daily market research, validated business ideas, and practical guides on cash flow, legal setups, and fundraising.
-                </p>
+                <div className="space-y-1 max-w-xl xl:max-w-2xl text-left">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                      Knowledge Hub
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00D4B2] animate-pulse" />
+                    <span className="text-[11px] sm:text-xs text-zinc-400">Founder Playbooks</span>
+                  </div>
+                  <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-white leading-snug text-left">
+                    Playbooks & Business Opportunities
+                  </h3>
+                  <p className="text-zinc-300/90 text-xs sm:text-[13px] leading-relaxed font-normal text-left">
+                    Daily market research, validated business ideas, and practical guides on cash flow, legal setups, and fundraising.
+                  </p>
+                </div>
               </div>
               <div className="shrink-0 self-center">
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#0F172A] transition-all">

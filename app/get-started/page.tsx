@@ -2,14 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { submitToWeb3Forms } from "@/lib/client-submit";
 import {
-  Users,
-  Coins,
-  Cog,
-  Zap,
-  BookOpen,
-  HelpCircle,
   CheckCircle2,
   ArrowRight,
   Sparkles,
@@ -47,7 +42,7 @@ export default function GetStartedPage() {
       id: "network" as PillarId,
       name: "Co-Founders & Talent",
       tagline: "Find a co-founder, hire executive leads, or join a venture",
-      icon: Users,
+      icon3d: "/images/3dicons/rocket-dynamic-gradient.png",
       color: "text-[#635BFF]",
       badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
       selectedBorder: "border-[#635BFF] bg-[#F7F8FF]/80 ring-2 ring-[#635BFF]/20",
@@ -57,7 +52,7 @@ export default function GetStartedPage() {
       id: "capital" as PillarId,
       name: "Funding & Investors",
       tagline: "Raise angel capital (₹5L - ₹2 Cr+) from operating syndicates",
-      icon: Coins,
+      icon3d: "/images/3dicons/3d-coin-dynamic-gradient.png",
       color: "text-[#FF6B4A]",
       badgeColor: "bg-[#FFF3EE] text-[#FF6B4A] border-[#FFE2D6]",
       selectedBorder: "border-[#FF6B4A] bg-[#FFF8F5]/80 ring-2 ring-[#FF6B4A]/20",
@@ -67,7 +62,7 @@ export default function GetStartedPage() {
       id: "studio" as PillarId,
       name: "Outsource Operations",
       tagline: "Turnkey tech setup, ERP workflows, and day-to-day operations",
-      icon: Cog,
+      icon3d: "/images/3dicons/setting-dynamic-gradient.png",
       color: "text-[#00A389]",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       selectedBorder: "border-[#00A389] bg-[#F0FDFB]/80 ring-2 ring-[#00A389]/20",
@@ -77,7 +72,7 @@ export default function GetStartedPage() {
       id: "gigs" as PillarId,
       name: "Gigs & Sprints",
       tagline: "Hire vetted specialists for focused 1–4 week project sprints",
-      icon: Zap,
+      icon3d: "/images/3dicons/flash-dynamic-gradient.png",
       color: "text-[#0A2540]",
       badgeColor: "bg-[#F1F5F9] text-[#0A2540] border-[#E2E8F0]",
       selectedBorder: "border-[#0A2540] bg-[#F8FAFC] ring-2 ring-[#0A2540]/20",
@@ -87,7 +82,7 @@ export default function GetStartedPage() {
       id: "knowledge" as PillarId,
       name: "Playbooks & Research",
       tagline: "Access unsexy business opportunities, models, and legal playbooks",
-      icon: BookOpen,
+      icon3d: "/images/3dicons/notebook-dynamic-gradient.png",
       color: "text-[#0F172A]",
       badgeColor: "bg-[#F1F5F9] text-[#475569] border-[#CBD5E1]",
       selectedBorder: "border-[#0F172A] bg-[#F8FAFC] ring-2 ring-[#0F172A]/20",
@@ -97,7 +92,7 @@ export default function GetStartedPage() {
       id: "general" as PillarId,
       name: "General Community / Exploring",
       tagline: "Not sure yet or need guidance on multiple pathways",
-      icon: HelpCircle,
+      icon3d: "/images/3dicons/chat-dynamic-gradient.png",
       color: "text-[#64748B]",
       badgeColor: "bg-[#F8FAFC] text-[#64748B] border-[#E2E8F0]",
       selectedBorder: "border-[#64748B] bg-[#F8FAFC] ring-2 ring-[#64748B]/20",
@@ -273,7 +268,6 @@ export default function GetStartedPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {pillars.map((p) => {
-                      const Icon = p.icon;
                       const isSelected = selectedPillar === p.id;
                       return (
                         <button
@@ -287,11 +281,17 @@ export default function GetStartedPage() {
                           }`}
                         >
                           <div
-                            className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
-                              isSelected ? "bg-white shadow-xs" : "bg-[#F1F5F9]"
+                            className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5 p-1 ${
+                              isSelected ? "bg-white shadow-xs" : "bg-[#F8FAFC]"
                             }`}
                           >
-                            <Icon className={`h-4.5 w-4.5 ${p.color}`} />
+                            <Image
+                              src={p.icon3d}
+                              alt={p.name}
+                              width={36}
+                              height={36}
+                              className="w-full h-full object-contain drop-shadow-xs"
+                            />
                           </div>
                           <div className="min-w-0 flex-1">
                             <div className="flex items-center justify-between gap-1">
