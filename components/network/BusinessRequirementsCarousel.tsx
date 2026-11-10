@@ -27,6 +27,36 @@ import {
 export function BusinessRequirementsCarousel() {
   const requirements = [
     {
+      venture: "AI Diabetology & Clinical Decision Support",
+      sector: "HealthTech & AI",
+      source: "Verified Consultant Physician • Diabetologist",
+      sourceBadge: "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]",
+      badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
+      location: "Chhatrapati Sambhajinagar / Pune",
+      stage: "Clinical Discovery • Early MVP",
+      seekingRole: "Technical Co-Founder (CTO / AI & Full-Stack)",
+      terms: "25% - 35% Equal Equity Split",
+      icon: Activity,
+      iconColor: "text-[#2563EB]",
+      quote:
+        "“Practicing Consultant Physician and Diabetologist with direct clinical insights into patient care and follow-up challenges. Building an AI-assisted diagnostic & continuous care system. Seeking a technical co-founder (AI/LLM pipelines, Python, React/Mobile) to validate hypotheses and co-build the MVP.”",
+    },
+    {
+      venture: "Indiafy – Unified Digital Commerce Ecosystem",
+      sector: "B2B Commerce & Supply Chain",
+      source: "Commerce Venture Registration • Noida",
+      sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
+      badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
+      location: "Noida / Delhi NCR",
+      stage: "Architecture & MVP Phase",
+      seekingRole: "Technical & Supply Chain Co-Founders",
+      terms: "Co-Founder Equity + Milestone Split",
+      icon: Truck,
+      iconColor: "text-[#FF7043]",
+      quote:
+        "“Unifying traditional wholesale markets with modern digital commerce across B2B wholesale, B2C e-commerce, and quick-commerce fulfillment. Seeking technical and operations co-founders to build the multi-vendor catalog engine and coordinate regional logistics.”",
+    },
+    {
       venture: "AI Clinical Simulation for Post-MBBS Residents",
       sector: "HealthTech & AI",
       source: "DPIIT #DIPP104822",

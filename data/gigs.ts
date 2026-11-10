@@ -2,6 +2,70 @@ import { GigItem } from "@/lib/types";
 
 export const initialGigs: GigItem[] = [
   {
+    "id": "gig-ai-health-diabetology",
+    "title": "Prototype AI-Assisted Clinical Decision Support & Glucose Telemetry MVP",
+    "businessName": "Dr. Saurabh Baheti HealthTech",
+    "category": "Tech & Cloud Development",
+    "budgetINR": "₹65,000 Fixed",
+    "duration": "2 - 4 Weeks (Sprint)",
+    "location": "Pune",
+    "workMode": "Remote",
+    "goalSummary": "Practicing Consultant Physician & Diabetologist building an AI-enabled clinical workflow and patient monitoring platform. Seeking a specialist full-stack AI engineer to build the clinical intake, continuous glucose telemetry logging, and prompt pipeline MVP.",
+    "deliverables": [
+      "Secure patient intake & continuous glucose telemetry logging dashboard with CSV/PDF clinical export",
+      "LLM clinical prompt pipeline with guideline-based diabetes management guardrails",
+      "Clinician web portal with patient risk stratification and review queues"
+    ],
+    "skillsRequired": [
+      "Python",
+      "FastAPI",
+      "React Native",
+      "Next.js",
+      "LLM Pipelines",
+      "HealthTech"
+    ],
+    "postedAt": "Just now",
+    "featured": true,
+    "urgency": "Immediate",
+    "verifiedBusiness": true,
+    "verificationBadge": "Consultant Physician & Diabetologist",
+    "experienceLevel": "Expert",
+    "escrowProtected": false,
+    "proposalsCount": 4
+  },
+  {
+    "id": "gig-commerce-indiafy-b2b",
+    "title": "Architect Multi-Vendor B2B Wholesale & Quick-Commerce Catalog Engine",
+    "businessName": "Indiafy Commerce Technologies",
+    "category": "Tech & Cloud Development",
+    "budgetINR": "₹75,000 Fixed",
+    "duration": "2 - 4 Weeks (Sprint)",
+    "location": "Delhi NCR",
+    "workMode": "Hybrid",
+    "goalSummary": "Indiafy is an emerging digital commerce venture connecting manufacturers, wholesalers, retailers, and consumers. Need an experienced architect to build the unified multi-tenant catalog and order dispatching engine bridging B2B wholesale with quick-commerce fulfillment.",
+    "deliverables": [
+      "Multi-tier vendor registration, catalog upload, and inventory synchronization schema",
+      "B2B bulk pricing tier engine and location-based quick-commerce dispatch API",
+      "Technical architecture blueprint and working MVP backend on Node.js/PostgreSQL"
+    ],
+    "skillsRequired": [
+      "PostgreSQL",
+      "Node.js",
+      "Next.js",
+      "Multi-Tenant Architecture",
+      "B2B Wholesale",
+      "Inventory APIs"
+    ],
+    "postedAt": "Just now",
+    "featured": true,
+    "urgency": "Immediate",
+    "verifiedBusiness": true,
+    "verificationBadge": "Commerce Venture • Noida Tech Hub",
+    "experienceLevel": "Expert",
+    "escrowProtected": false,
+    "proposalsCount": 3
+  },
+  {
     "id": "gig-erp-gst-auto",
     "title": "Migrate Legacy Tally to Self-Hosted ERPNext & Automate NIC GST E-Invoicing",
     "businessName": "Varun Precision Auto-Components",

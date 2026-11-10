@@ -27,6 +27,20 @@ import {
 export function TalentArchetypesCarousel() {
   const candidates = [
     {
+      handle: "Arin D. • Founder & Tech Lead, Cybs Innovations",
+      experience: "3 yrs exp • Bengaluru / Delhi NCR • LinkedIn Verified",
+      roleSeeking: "Technical Co-Founder (CTO) — HealthTech & AI",
+      tag: "AI & Full-Stack Systems",
+      badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
+      icon: Cpu,
+      iconColor: "text-[#635BFF]",
+      trackRecord:
+        "Shipped Vexron (LLM/RAG copilot with telemetry forecasting) & Zapnexa (6-module industrial ERP). Full-stack Python, Next.js, ChromaDB.",
+      pitch:
+        "“Built and shipped production AI and ERP systems at Cybs Innovations. Looking to partner full-time as Technical Co-Founder (CTO) with a clinical or domain-expert founder to architect the AI engine, telemetry pipelines, and backend for a high-impact HealthTech venture.”",
+      terms: "25% - 35% Co-Founder Equity",
+    },
+    {
       handle: "Rohit K. • Ex-Swiggy / Razorpay",
       experience: "9 yrs exp • Bengaluru • LinkedIn Verified",
       roleSeeking: "Founding Tech Lead / CTO",
