@@ -19,7 +19,7 @@ export const initialDealCards: DealCard[] = [
       { metric: "Monthly ARR Run-rate", value: "₹28 Lakhs", growth: "3.2x QoQ" },
       { metric: "Sample Loss Rate", value: "<0.02%", growth: "vs 4.2% industry avg" },
     ],
-    thesis: "Led by an 18-year ex-Fortis/Dr. Reddy's supply chain director. Commercial exclusivity signed across 3 major Indian hospital networks with high regulatory barrier to entry.",
+    thesis: "Led by an 18-year ex-Fortis/Dr. Reddy's supply chain director. CDSCO & DPIIT Recognized #DIPP88102. Commercial exclusivity signed across 3 major Indian hospital networks with high regulatory barrier to entry.",
     founders: [
       { role: "CEO / Domain Veteran", background: "Ex-Director Supply Chain, Fortis Healthcare (18 yrs)" },
       { role: "CTO / Technical Co-Founder", background: "Ex-Staff Architect, Distributed IoT Systems (9 yrs)" },
@@ -45,7 +45,7 @@ export const initialDealCards: DealCard[] = [
       { metric: "Tooling Delivery SLA", value: "48 Hours", growth: "vs 14 days baseline" },
       { metric: "Tier-2 Machine Shops", value: "85 Onboarded Units", growth: "Pune & Chakan" },
     ],
-    thesis: "Solving the ₹18L/hr machine downtime problem for Tier-2 automotive manufacturers with automated CAD-to-CNC bidding and guaranteed 48-hour delivery.",
+    thesis: "Solving the ₹18L/hr machine downtime problem for Tier-2 automotive manufacturers with automated CAD-to-CNC bidding and guaranteed 48-hour delivery. Udyam #UDYAM-MH-26-0048190 & ACMA Associate.",
     founders: [
       { role: "CEO", background: "Former VP Operations, Bharat Forge & Cummins (16 yrs)" },
       { role: "COO / Commercial Co-Founder", background: "Ex-Category Lead, Industrial B2B Unicorn (8 yrs)" },
@@ -71,7 +71,7 @@ export const initialDealCards: DealCard[] = [
       { metric: "Distributor Partners", value: "38 Active Networks", growth: "Western India" },
       { metric: "Underwriting TAT", value: "<180 Seconds", growth: "Instant Bank API" },
     ],
-    thesis: "Led by 15-year ex-HDFC Bank SME risk head. Instant credit scoring leveraging Account Aggregator + GSTN ledger integration, capturing 1.8% take-rate.",
+    thesis: "Led by 15-year ex-HDFC Bank SME risk head. GSTN Authorized Integration & RBI Account Aggregator participant, capturing 1.8% take-rate.",
     founders: [
       { role: "CEO", background: "Ex-Credit Risk Head (SME Lending), Tier-1 Private Bank (15 yrs)" },
       { role: "CTO", background: "Ex-Senior Engineering Lead, Razorpay/Cashfree (10 yrs)" },

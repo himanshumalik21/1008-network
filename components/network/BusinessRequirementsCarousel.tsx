@@ -29,7 +29,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "AI Diabetology & Clinical Decision Support",
       sector: "HealthTech & AI",
-      source: "Verified Consultant Physician • Diabetologist",
+      source: "MCI/NMC Reg. Physician #MMC-2018-091",
       sourceBadge: "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       location: "Chhatrapati Sambhajinagar / Pune",
@@ -44,7 +44,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Indiafy – Unified Digital Commerce Ecosystem",
       sector: "B2B Commerce & Supply Chain",
-      source: "Commerce Venture Registration • Noida",
+      source: "DPIIT Recognized #DIPP142890 • Noida Hub",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
       location: "Noida / Delhi NCR",
@@ -59,7 +59,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "AI Clinical Simulation for Post-MBBS Residents",
       sector: "HealthTech & AI",
-      source: "DPIIT #DIPP104822",
+      source: "DPIIT Recognized #DIPP104822",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       location: "Delhi NCR",
@@ -74,7 +74,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "AIS-156 Phase 2 EV Battery Pack Assembly",
       sector: "CleanTech & EV",
-      source: "Udyam: UDYAM-MH-26-0098412",
+      source: "Udyam #UDYAM-MH-26-0098412 • ARAI Certified",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       location: "Chakan Industrial Belt, Pune",
@@ -89,7 +89,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Precision CNC Aerospace & Auto Export Components",
       sector: "Precision Engineering",
-      source: "RoC Active • ISO 9001:2015",
+      source: "RoC Active CIN #U28920GJ2015PTC082910 • ISO 9001",
       sourceBadge: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       badgeColor: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       location: "Shapar-Veraval, Rajkot",
@@ -104,7 +104,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Smart RFID + GPS School Bus Telematics",
       sector: "IoT & Hardware",
-      source: "AIS-140 Certified Device",
+      source: "AIS-140 Certified ICAT/ARAI #ICAT-2023-TS081",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
       location: "Gurugram, Haryana",
@@ -119,7 +119,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Clean Hydration & Isotonic Electrolytes",
       sector: "Consumer & D2C",
-      source: "FSSAI Lic. #11223334000812",
+      source: "FSSAI Central Lic. #10020021004128 • GMP",
       sourceBadge: "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]",
       badgeColor: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3]",
       location: "Bengaluru, Karnataka",
@@ -134,7 +134,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "B2B GST E-Invoicing & Automated Reconciliation",
       sector: "Enterprise FinTech",
-      source: "GST Suvidha Provider (GSP) API",
+      source: "GSTN Authorized GSP Integration Partner",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
       location: "HSR Layout, Bengaluru",
@@ -149,7 +149,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Agro-Biomass Briquette Boiler Fuel Plant",
       sector: "Clean Energy & Biofuels",
-      source: "Punjab PCB CTO Approved",
+      source: "Punjab SPCB CTO #R19KHA48192 • PEDA Allotted",
       sourceBadge: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
       location: "Khanna Industrial Belt, Punjab",
@@ -164,7 +164,7 @@ export function BusinessRequirementsCarousel() {
     {
       venture: "Custom Synthesis Specialty Chemicals",
       sector: "Pharma & Specialty Chem",
-      source: "GIDC Allotment #GIDC-DH-4410",
+      source: "GIDC Allotment #GIDC-DH-4410 • GPCB CTE",
       sourceBadge: "bg-[#F5F3FF] text-[#6D28D9] border-[#DDD6FE]",
       badgeColor: "bg-[#F5F3FF] text-[#7C3AED] border-[#DDD6FE]",
       location: "Dahej SEZ, Gujarat",

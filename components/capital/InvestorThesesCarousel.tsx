@@ -37,7 +37,7 @@ export function InvestorThesesCarousel() {
       icon: Factory,
       iconColor: "text-[#635BFF]",
       ticket: "₹25L – ₹75L Check Size",
-      sourceBadge: "ACMA Verified Angel",
+      sourceBadge: "ACMA Verified Executive Member",
       moat: "Direct buyer introductions with Tier 1 auto OEMs (Maruti, Tata Motors, M&M) and precision machine tool vendors.",
       pitch:
         "“Looking for capital-efficient manufacturing and hardware startups with physical plant models. Can open doors with Tier 1 automotive and heavy engineering OEMs across Pune and export buyers.”",
@@ -51,7 +51,7 @@ export function InvestorThesesCarousel() {
       icon: Coins,
       iconColor: "text-[#00A389]",
       ticket: "₹15L – ₹40L Check Size",
-      sourceBadge: "LinkedIn Verified",
+      sourceBadge: "LinkedIn Verified • Ex-Razorpay Exec",
       moat: "Bank API sandbox access, Account Aggregator architecture, and NBFC co-lending partnerships.",
       pitch:
         "“Interested in vertical SaaS and workflow reconciliation software solving real accounting or invoice friction for MSMEs. Looking for high gross margin software with near-zero churn.”",
@@ -65,7 +65,7 @@ export function InvestorThesesCarousel() {
       icon: Scale,
       iconColor: "text-[#D97706]",
       ticket: "₹50L – ₹2.5 Cr Check Size",
-      sourceBadge: "MCA RoC Verified",
+      sourceBadge: "MCA RoC Reg. CIN #U65999GJ2014PTC081294",
       moat: "Port logistics access at Mundra, warehouse land leases, and working capital debt syndication.",
       pitch:
         "“We back profitable physical businesses transitioning from unorganized to modern branded operations. Focus on sustainable agro-processing, industrial packaging, and export manufacturing.”",
@@ -79,7 +79,7 @@ export function InvestorThesesCarousel() {
       icon: Truck,
       iconColor: "text-[#FF7043]",
       ticket: "₹20L – ₹50L Check Size",
-      sourceBadge: "Verified Operator",
+      sourceBadge: "Verified Logistics Operator • Ex-Gati",
       moat: "Inter-state truck fleet tie-ups, micro-hub dark stores, and cold-chain route density optimization.",
       pitch:
         "“Looking for logistics infrastructure, EV commercial fleets, and cold-chain temperature monitoring startups. I help optimize operational cost per delivery run and unit economics.”",
@@ -93,7 +93,7 @@ export function InvestorThesesCarousel() {
       icon: Cpu,
       iconColor: "text-[#2563EB]",
       ticket: "₹30L – ₹1.0 Cr Check Size",
-      sourceBadge: "IMA Verified Lead",
+      sourceBadge: "IMA Life Member #IMA-TG-48192",
       moat: "Hospital procurement committees, CDSCO clearance navigation, and live clinical pilot beds across 9 hospital networks.",
       pitch:
         "“We back clinical simulation, low-cost diagnostic hardware, and assistive healthcare technology. We provide pilot testing beds across 9 partner hospital networks in South India.”",
@@ -107,7 +107,7 @@ export function InvestorThesesCarousel() {
       icon: ShoppingBag,
       iconColor: "text-[#E11D48]",
       ticket: "₹15L – ₹35L Check Size",
-      sourceBadge: "Verified FMCG Lead",
+      sourceBadge: "Verified FMCG Lead • Ex-Marico Category",
       moat: "Direct listing acceleration on Blinkit/Zepto/Instamart and modern trade distributor tie-ups.",
       pitch:
         "“Seeking high-margin functional food, clean beverage, and personal care brands with genuine repeat purchase rates. I assist with distributor terms, channel margins, and retail listing.”",
@@ -121,7 +121,7 @@ export function InvestorThesesCarousel() {
       icon: Sparkles,
       iconColor: "text-[#16A34A]",
       ticket: "₹25L – ₹60L Check Size",
-      sourceBadge: "Exited Founder",
+      sourceBadge: "NASSCOM Product Council Member",
       moat: "US/Europe GTM playbooks, AWS credits, and technical architecture advisory for global scale.",
       pitch:
         "“Scaling from zero to first $1M ARR in US/Europe enterprise markets. Looking for engineering-led teams building devtools, API infrastructure, or deep workflow SaaS.”",
@@ -135,7 +135,7 @@ export function InvestorThesesCarousel() {
       icon: Building2,
       iconColor: "text-[#9333EA]",
       ticket: "₹50L – ₹1.5 Cr Check Size",
-      sourceBadge: "Export Council Verified",
+      sourceBadge: "FIEO Export Council #WR-49102",
       moat: "Export buyer contracts in Germany, US & Japan; environmental clearance and industrial plant advisory.",
       pitch:
         "“We syndicate capital for precision chemicals, industrial catalysts, and export-oriented fabrication units. We provide captive buyer off-take agreements in European and Japanese markets.”",

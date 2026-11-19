@@ -12,7 +12,7 @@ export const initialInvestorCards: InvestorCard[] = [
     location: "Delhi NCR",
     bio: "Looking to co-invest in high-margin industrial manufacturing units, precision engineering, and cold-chain infrastructure across North India with hands-on operational management.",
     strategicValue: "Direct industrial land leasing, equipment vendor credit lines, and OEM procurement relationships.",
-    badge: "Industrial Allocator",
+    badge: "ACMA Executive Member • Verified",
     availableCapital: true,
   },
   {
@@ -26,7 +26,7 @@ export const initialInvestorCards: InvestorCard[] = [
     location: "Mumbai",
     bio: "Seeking revenue-generating diagnostic clinic networks, specialized tertiary care centers, and high-efficiency healthcare supply chains with predictable unit cashflows.",
     strategicValue: "Clinical regulatory pathways, NABH hospital accreditations, and medical director networks.",
-    badge: "Healthcare Syndicate Lead",
+    badge: "IMA & NABH Board Member • Verified",
     availableCapital: true,
   },
   {
@@ -40,7 +40,7 @@ export const initialInvestorCards: InvestorCard[] = [
     location: "Bengaluru",
     bio: "Backing high-conviction technical founders building enterprise workflows, lending infrastructure, and AI-enabled distribution platforms for shared equity upside.",
     strategicValue: "Tech architecture auditing, enterprise client introductions, and engineering hiring pipelines.",
-    badge: "Tech Operator Angel",
+    badge: "NASSCOM Product Council • Verified",
     availableCapital: true,
   },
   {
@@ -54,7 +54,7 @@ export const initialInvestorCards: InvestorCard[] = [
     location: "Delhi NCR",
     bio: "Investing in operationally disciplined consumer brands and retail food chains with proven unit profitability and pan-India franchise expansion potential.",
     strategicValue: "Prime retail real estate access, national distributor networks, and institutional working capital credit.",
-    badge: "Family Office Principal",
+    badge: "MCA RoC Reg. Family Office CIN #U65999GJ2014PTC081294",
     availableCapital: true,
   },
 ];

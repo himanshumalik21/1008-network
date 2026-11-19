@@ -30,7 +30,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "AIS-156 EV Battery Assembly & Testing",
       sector: "CleanTech & EV",
-      source: "ARAI Test Lab Allotment",
+      source: "ARAI Test Lab Allotment #ARAI-2024-EV09",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
       location: "Chakan Industrial Belt, Pune",
@@ -44,7 +44,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "5-Axis Precision Auto Component MSME",
       sector: "Precision Manufacturing",
-      source: "Udyam: UDYAM-GJ-24-0012891",
+      source: "Udyam: UDYAM-GJ-24-0012891 • ISO 9001",
       sourceBadge: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       badgeColor: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       location: "Shapar-Veraval, Rajkot",
@@ -58,7 +58,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "Cold Chain & Solar Tunnel Dehydrated Veg",
       sector: "AgriTech & Food Processing",
-      source: "APEDA Registered Exporter",
+      source: "APEDA Reg. Exporter #APEDA-MH-4401",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
       location: "Nashik Industrial Corridor",
@@ -72,7 +72,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "B2B Factory E-Way Bill & Compliance SaaS",
       sector: "Enterprise FinTech",
-      source: "DPIIT #DIPP91283",
+      source: "DPIIT Recognized #DIPP91283",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
       location: "HSR Layout, Bengaluru",
@@ -86,7 +86,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "Smart School Bus Fleet Telematics",
       sector: "IoT & Hardware Telematics",
-      source: "AIS-140 Certified Device",
+      source: "AIS-140 Certified ICAT/ARAI #ICAT-2023-TS081",
       sourceBadge: "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
       location: "Gurugram, Haryana",
@@ -100,7 +100,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "Low-GI Ayurvedic Functional Nutrition",
       sector: "Consumer D2C & Wellness",
-      source: "FSSAI & GMP Certified Plant",
+      source: "FSSAI Central Lic. #10020021004128 • GMP",
       sourceBadge: "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]",
       badgeColor: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3]",
       location: "Mumbai / Bengaluru",
@@ -114,7 +114,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "Enterprise Contract Review & Legal AI",
       sector: "LegalTech & Enterprise AI",
-      source: "NASSCOM 10k Incubated",
+      source: "NASSCOM 10k Incubated #N10K-DEL-892",
       sourceBadge: "bg-[#F5F3FF] text-[#6D28D9] border-[#DDD6FE]",
       badgeColor: "bg-[#F5F3FF] text-[#7C3AED] border-[#DDD6FE]",
       location: "Gurugram, Haryana",
@@ -128,7 +128,7 @@ export function ActiveVenturesCarousel() {
     {
       title: "Paddy Straw Biomass Briquetting Plant",
       sector: "Clean Energy & Biofuels",
-      source: "Punjab PCB CTO Approved",
+      source: "Punjab SPCB CTO #CTO-KHA-9941 • PEDA Allotted",
       sourceBadge: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
       badgeColor: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
       location: "Khanna Industrial Belt, Punjab",

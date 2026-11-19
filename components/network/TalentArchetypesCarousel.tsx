@@ -28,7 +28,7 @@ export function TalentArchetypesCarousel() {
   const candidates = [
     {
       handle: "Arin D. • Founder & Tech Lead, Cybs Innovations",
-      experience: "3 yrs exp • Bengaluru / Delhi NCR • LinkedIn Verified",
+      experience: "3 yrs exp • Bengaluru • Cybs Innovations (Vexron/Zapnexa) • LinkedIn Verified",
       roleSeeking: "Technical Co-Founder (CTO) — HealthTech & AI",
       tag: "AI & Full-Stack Systems",
       badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
@@ -41,8 +41,8 @@ export function TalentArchetypesCarousel() {
       terms: "25% - 35% Co-Founder Equity",
     },
     {
-      handle: "Rohit K. • Ex-Swiggy / Razorpay",
-      experience: "9 yrs exp • Bengaluru • LinkedIn Verified",
+      handle: "Rohit K. • Ex-Staff Architect @ Swiggy & Razorpay",
+      experience: "9 yrs exp • Bengaluru • Razorpay Alumni #RZP-ENG-491 • LinkedIn Verified",
       roleSeeking: "Founding Tech Lead / CTO",
       tag: "Technology & Backend",
       badgeColor: "bg-[#F0F0FF] text-[#635BFF] border-[#E0E0FF]",
@@ -54,8 +54,8 @@ export function TalentArchetypesCarousel() {
       terms: "Equity + Low Burn Stipend",
     },
     {
-      handle: "Ananya M. • Ex-Freshworks / Zoho",
-      experience: "11 yrs exp • Chennai / Remote • LinkedIn Verified",
+      handle: "Ananya M. • Ex-Sales Director @ Freshworks & Zoho",
+      experience: "11 yrs exp • Chennai • Freshworks Alumni • LinkedIn Verified",
       roleSeeking: "B2B Commercial Co-Founder",
       tag: "Enterprise Sales & GTM",
       badgeColor: "bg-[#FFF3EE] text-[#FF7043] border-[#FFE2D6]",
@@ -67,8 +67,8 @@ export function TalentArchetypesCarousel() {
       terms: "Significant Co-Founder Equity",
     },
     {
-      handle: "Vikram S. • Ex-Blinkit / Delhivery",
-      experience: "8 yrs exp • Delhi NCR • 1008 Verified Lead",
+      handle: "Vikram S. • Ex-VP Ground Logistics @ Delhivery",
+      experience: "8 yrs exp • Delhi NCR • Delhivery Operations • Verified Lead",
       roleSeeking: "Operating Co-Founder & COO",
       tag: "Operations & Dark Stores",
       badgeColor: "bg-[#E6FFFA] text-[#00A389] border-[#B2F5EA]",
@@ -80,8 +80,8 @@ export function TalentArchetypesCarousel() {
       terms: "Operating Partner Equity",
     },
     {
-      handle: "CA Aman G. • Ex-PwC / Grant Thornton",
-      experience: "8 yrs exp • Mumbai • ICAI #541982",
+      handle: "CA Aman G. • Ex-Manager @ PwC & Grant Thornton",
+      experience: "8 yrs exp • Mumbai • ICAI Fellow Reg. #541982",
       roleSeeking: "Fractional CFO / Finance Partner",
       tag: "Finance & Debt Facilities",
       badgeColor: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
@@ -93,8 +93,8 @@ export function TalentArchetypesCarousel() {
       terms: "Fractional CXO / Advisory Equity",
     },
     {
-      handle: "Karthik R. • 3x National Hackathon Winner",
-      experience: "5 yrs exp • Bengaluru • GitHub Verified",
+      handle: "Karthik R. • Full-Stack Engineer & Hackathon Winner",
+      experience: "5 yrs exp • Bengaluru • GitHub Top 1% Verified • Next.js 15",
       roleSeeking: "Full-Stack & Mobile Co-Founder",
       tag: "Full-Stack & Mobile",
       badgeColor: "bg-[#F5F3FF] text-[#7C3AED] border-[#DDD6FE]",
@@ -106,8 +106,8 @@ export function TalentArchetypesCarousel() {
       terms: "Equal 50/50 Equity",
     },
     {
-      handle: "Sneha P. • Ex-Sugar Cosmetics / D2C",
-      experience: "7 yrs exp • Gurugram • Meta Certified",
+      handle: "Sneha P. • Ex-Head of Growth @ Sugar Cosmetics",
+      experience: "7 yrs exp • Gurugram • Meta Certified Media Buyer #MC-84192",
       roleSeeking: "D2C Growth & E-Commerce Partner",
       tag: "D2C & Performance",
       badgeColor: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3]",
@@ -119,8 +119,8 @@ export function TalentArchetypesCarousel() {
       terms: "Equity + Rev Share",
     },
     {
-      handle: "Harpreet S. • Ex-Bharat Forge / Endurance",
-      experience: "14 yrs exp • Pune / Chakan • COEP Mechanical",
+      handle: "Harpreet S. • Ex-Plant Operations Head @ Bharat Forge",
+      experience: "14 yrs exp • Pune / Chakan • COEP Mechanical • Six Sigma",
       roleSeeking: "Plant Setup & Manufacturing Head",
       tag: "Industrial & Manufacturing",
       badgeColor: "bg-[#F8FAFC] text-[#0A2540] border-[#CBD5E1]",
@@ -132,8 +132,8 @@ export function TalentArchetypesCarousel() {
       terms: "Co-Director / Equity",
     },
     {
-      handle: "Devika N. • Ex-CRED / Swiggy Design",
-      experience: "6 yrs exp • Bengaluru • Verified Design Lead",
+      handle: "Devika N. • Ex-Lead Product Designer @ CRED & Swiggy",
+      experience: "6 yrs exp • Bengaluru • ADPList Verified Design Lead",
       roleSeeking: "Founding Product & UX Co-Founder",
       tag: "Product & UI/UX Design",
       badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
