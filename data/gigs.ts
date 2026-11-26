@@ -2,6 +2,101 @@ import { GigItem } from "@/lib/types";
 
 export const initialGigs: GigItem[] = [
   {
+    "id": "gig-ai-indic-bharat-bolo",
+    "title": "Architect Multilingual Indic Conversational AI & Speech Recognition Engine",
+    "businessName": "Bharat Bolo AI Technologies",
+    "category": "Tech & Cloud Development",
+    "budgetINR": "₹70,000 Fixed",
+    "duration": "2 - 4 Weeks (Sprint)",
+    "location": "Mumbai",
+    "workMode": "Remote",
+    "goalSummary": "Bharat Bolo is building an AI platform enabling Indians to communicate and transact across native Indian languages. We need a specialist engineer to build the conversational prompt pipeline, Hindi/Marathi speech-to-text integration, and high-performance FastAPI backend.",
+    "deliverables": [
+      "FastAPI conversational backend with latency-optimized Indic speech-to-text integration",
+      "Multilingual prompt routing and translation pipeline for Hindi, Marathi, and English",
+      "Initial web demonstration interface on Next.js 15 with voice input and audio playback"
+    ],
+    "skillsRequired": [
+      "Python",
+      "FastAPI",
+      "Indic NLP",
+      "Speech Recognition",
+      "Next.js",
+      "LLM APIs"
+    ],
+    "postedAt": "Just now",
+    "featured": true,
+    "urgency": "Immediate",
+    "verifiedBusiness": true,
+    "verificationBadge": "Enterprise AI Founder • Mumbai Hub",
+    "experienceLevel": "Expert",
+    "escrowProtected": false,
+    "proposalsCount": 2
+  },
+  {
+    "id": "gig-health-poriseba-ops",
+    "title": "Structure Clinical Home Care SOPs & Tertiary Hospital Discharge Partnerships",
+    "businessName": "Poriseba Healthcare Services",
+    "category": "Operations & Process Automation",
+    "budgetINR": "₹50,000 Fixed",
+    "duration": "2 - 4 Weeks (Sprint)",
+    "location": "Other Location",
+    "workMode": "Hybrid",
+    "goalSummary": "Poriseba Healthcare is scaling bedside elderly and post-operative patient care in Kolkata. We need an experienced healthcare operations lead to standardize clinical home care SOPs and establish formal discharge tie-up templates with private tertiary hospital networks.",
+    "deliverables": [
+      "Standardized clinical caregiver operational manual and medication compliance SOPs",
+      "Hospital discharge coordinator partnership protocol and referral intake workflow",
+      "Caregiver digital scheduling and patient status reporting checklists"
+    ],
+    "skillsRequired": [
+      "Healthcare Operations",
+      "Hospital Partnerships",
+      "SOP Development",
+      "Elderly Care",
+      "Clinical Coordination"
+    ],
+    "postedAt": "Just now",
+    "featured": true,
+    "urgency": "Immediate",
+    "verifiedBusiness": true,
+    "verificationBadge": "RoC Active MSME • Kolkata Network",
+    "experienceLevel": "Expert",
+    "escrowProtected": false,
+    "proposalsCount": 3
+  },
+  {
+    "id": "gig-commerce-ple-logistics",
+    "title": "Architect SpeedZeel Logistics Dispatch & Real-Time Tracking APIs for Electronics E-Store",
+    "businessName": "People's League of Electronics Pvt. Ltd.",
+    "category": "Tech & Cloud Development",
+    "budgetINR": "₹75,000 Fixed",
+    "duration": "2 - 4 Weeks (Sprint)",
+    "location": "Other Location",
+    "workMode": "Remote",
+    "goalSummary": "PLE is developing an integrated electronics commerce platform with SpeedZeel logistics. We need a backend architect to design and implement the dispatching engine, automated consignment manifest generation, and real-time delivery status tracking APIs.",
+    "deliverables": [
+      "RESTful logistics dispatch and courier routing API with status webhooks",
+      "Automated shipping label, packing slip, and E-Way bill generation service",
+      "Vendor dashboard dispatch module with barcode scanning and shipment confirmation"
+    ],
+    "skillsRequired": [
+      "Node.js",
+      "PostgreSQL",
+      "Logistics APIs",
+      "REST Architecture",
+      "E-Commerce Dispatch",
+      "AWS"
+    ],
+    "postedAt": "Just now",
+    "featured": true,
+    "urgency": "Immediate",
+    "verifiedBusiness": true,
+    "verificationBadge": "RoC Active CIN #U51909KA2023PTC174812",
+    "experienceLevel": "Expert",
+    "escrowProtected": false,
+    "proposalsCount": 4
+  },
+  {
     "id": "gig-ai-health-diabetology",
     "title": "Prototype AI-Assisted Clinical Decision Support & Glucose Telemetry MVP",
     "businessName": "Dr. Saurabh Baheti HealthTech",

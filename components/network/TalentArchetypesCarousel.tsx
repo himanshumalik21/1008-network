@@ -27,6 +27,20 @@ import {
 export function TalentArchetypesCarousel() {
   const candidates = [
     {
+      handle: "CA Vishal B. • Credit & Risk Underwriting Lead",
+      experience: "8 yrs exp • Delhi NCR • ICAI & Commercial Credit Verified",
+      roleSeeking: "Finance & Credit Risk Co-Founder",
+      tag: "Credit Underwriting & Risk",
+      badgeColor: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
+      icon: Coins,
+      iconColor: "text-[#059669]",
+      trackRecord:
+        "8 years commercial credit underwriting, financial statement analysis, GST/ROC statutory compliance, and B2B vendor risk management.",
+      pitch:
+        "“Chartered Accountant with extensive hands-on experience as Credit Manager evaluating SME financials and risk exposure. Looking to partner full-time as Finance & Credit Risk Co-Founder with an early-stage FinTech, B2B marketplace, or industrial venture.”",
+      terms: "Equity-Led Co-Founder Partnership",
+    },
+    {
       handle: "Arin D. • Founder & Tech Lead, Cybs Innovations",
       experience: "3 yrs exp • Bengaluru • Cybs Innovations (Vexron/Zapnexa) • LinkedIn Verified",
       roleSeeking: "Technical Co-Founder (CTO) — HealthTech & AI",
