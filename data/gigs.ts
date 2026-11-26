@@ -2,6 +2,37 @@ import { GigItem } from "@/lib/types";
 
 export const initialGigs: GigItem[] = [
   {
+    "id": "gig-design-turnkey-boq",
+    "title": "Prepare Standardized Commercial BOQ Estimation & Turnkey Fit-Out Costing Model",
+    "businessName": "Pacific Designs",
+    "category": "Operations & Process Automation",
+    "budgetINR": "₹45,000 Fixed",
+    "duration": "2 - 4 Weeks (Sprint)",
+    "location": "Pan-India / Remote",
+    "workMode": "Remote",
+    "goalSummary": "Pacific Designs is restarting its turnkey corporate fit-out practice. We need a commercial estimator / cost engineer to build automated Bill of Quantities (BOQ) spreadsheets and rate-analysis templates covering civil, MEP, false ceiling, and joinery works.",
+    "deliverables": [
+      "Master commercial BOQ template with auto-updating material and labour rate indices",
+      "Standard rate analysis for civil, modular furniture, electrical, and HVAC packages",
+      "Client proposal presentation format with automated gross margin calculations"
+    ],
+    "skillsRequired": [
+      "BOQ Estimation",
+      "Rate Analysis",
+      "Interior Fit-Outs",
+      "Cost Engineering",
+      "Commercial Contracting"
+    ],
+    "postedAt": "Just now",
+    "featured": true,
+    "urgency": "Immediate",
+    "verifiedBusiness": true,
+    "verificationBadge": "Interior Design Veteran • 100+ Projects",
+    "experienceLevel": "Expert",
+    "escrowProtected": false,
+    "proposalsCount": 1
+  },
+  {
     "id": "gig-ai-indic-bharat-bolo",
     "title": "Architect Multilingual Indic Conversational AI & Speech Recognition Engine",
     "businessName": "Bharat Bolo AI Technologies",

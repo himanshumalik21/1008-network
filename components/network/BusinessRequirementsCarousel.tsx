@@ -102,6 +102,21 @@ export function BusinessRequirementsCarousel() {
         "“Integrated electronics commerce and procurement platform connecting retail buyers, enterprise procurement, and vendors with dedicated SpeedZeel logistics. Seeking a Founding CTO to lead system architecture and scalable cloud infrastructure.”",
     },
     {
+      venture: "Pacific Designs – Turnkey Fit-Outs Reboot",
+      sector: "PropTech & Design-Build",
+      source: "15+ Years Domain Veteran • 100+ Projects",
+      sourceBadge: "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]",
+      badgeColor: "bg-[#FFFBEB] text-[#D97706] border-[#FDE68A]",
+      location: "Pan-India / Remote",
+      stage: "Restart Phase • Up to 50% Equity",
+      seekingRole: "Commercial Co-Founder / Capital Partner",
+      terms: "Up to 50% Founding Equity Split",
+      icon: Building2,
+      iconColor: "text-[#D97706]",
+      quote:
+        "“15+ years experience and 100+ executed interior turnkey fit-out projects. Restarting Pacific Designs to capture commercial and corporate renovation demand. Seeking an entrepreneurial commercial/capital partner for an equal equity partnership (up to 50%) to lead business development and finance.”",
+    },
+    {
       venture: "AI Clinical Simulation for Post-MBBS Residents",
       sector: "HealthTech & AI",
       source: "DPIIT Recognized #DIPP104822",
